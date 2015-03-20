@@ -1,0 +1,509 @@
+\everymath{\displaystyle}
+\documentclass{beamer}
+%\usepackage[pdftex]{color,graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+
+
+
+\mode<presentation>
+{
+  % \usetheme{Darmstadt}
+  % \usetheme[hideothersubsections]{Hannover}
+  % \usetheme[hideothersubsections]{Goettingen}
+  \usetheme[hideothersubsections, right]{Berkeley}
+
+  \usecolortheme{seahorse}
+  % \usecolortheme{dolphin}
+  \usecolortheme{rose}
+  % \usecolortheme{orchid}
+
+  \useinnertheme[shadow]{rounded}
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\usepackage[brazilian]{babel}
+% or whatever
+
+% \usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{times}
+%\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+\title%[Estatística Descritiva] % (optional, use only with long paper titles)
+{Estatística Descritiva II}
+
+\subtitle
+{Medidas sumárias} % (optional)
+
+\author%[] % (optional, use only with lots of authors)
+{Felipe Figueiredo}% \and S.~Another\inst{2}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[INTO] % (optional, but mostly needed)
+{
+Instituto Nacional de Traumatologia e Ortopedia}
+  % \inst{1}%
+  % Department of Computer Science\\
+  % University of Somewhere
+  % \and
+  % \inst{2}%
+  % Department of Theoretical Philosophy\\
+  % University of Elsewhere}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date%[Março de 2015] % (optional)
+{}
+
+% \subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+\pgfdeclareimage[height=1.2cm]{university-logo}{../Into}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+%\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Sumário}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Sumário}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+% \section{Análise Descritiva}
+
+% \begin{frame}{Análise Descritiva}
+%   \begin{itemize}
+%   \item Distribuição de Frequências
+%   \item Medidas de Tendência Central
+%   \item Medidas de Dispersão
+%   \item Medidas de Posição
+%   \end{itemize}
+
+% \end{frame}
+
+
+
+\begin{frame}{Medidas Sumárias}
+  \begin{itemize}
+  \item Medidas sumárias resumem a informação contida nos dados em um
+    pequeno conjunto de números.
+  \item Medidas sumárias de \alert{populações} se chamam
+    \alert{parâmetros}, e são representadas por letras gregas ($\mu$,
+    $\sigma$, etc).
+  \item Medidas sumárias de \alert{amostras} se chamam \alert{estatísticas} e são representadas por letras comuns ($\bar{x}$,
+    $s$, etc).
+  \item Geralmente trabalhamos com estatísticas descritivas.
+  \end{itemize}
+\end{frame}
+
+\section{Medidas de Tendência Central}
+
+\subsection{Média}
+\begin{frame}{Média}
+  \begin{itemize}
+  \item A média (aritmética) leva em conta todos os dados disponíveis,
+    e indica (em muitas situações) o ponto de maior acumulação de
+    dados.
+  \item Notação: média populacional ($\mu$)
+$$\mu = \sum_{j=1}^N \frac{ x_j}{N}$$
+  \item Notação: média amostral ($\bar{x}$)
+$$ \bar{x} = \sum_{i=1}^n\frac{ x_i}{n}$$
+% \item Por usar todos os dados, está sujeita a distorções por {\it
+%     outliers} (valores discrepantes).
+  \item Nem sempre pertence ao dataset.
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Média}
+  \begin{example}
+    Foram observados os seguintes níveis de colesterol de uma amostra
+    de pacientes. Qual é o nível médio de colesterol nestes pacientes?
+
+    \begin{columns}<1>
+      \begin{column}{5cm}<1>
+        \begin{tabular}{ccc}
+          $x_1$ &=&142\\
+          $x_2$ &=&144\\
+          $x_3$ &=&176\\
+          $x_4$ &=&203\\
+          $x_5$ &=&134\\
+          $x_6$ &=&191\\
+        \end{tabular}
+      \end{column}
+      \begin{column}{5cm}<1>
+        $\bar{x} = \frac{\sum x_i}{n} = \frac{990}{6} = 165$
+      \end{column}
+    \end{columns}
+  \end{example}
+\end{frame}
+\subsection{Mediana}
+\begin{frame}{Mediana}
+\begin{definition}
+A mediana é o dado que ocupa a \alert{posição central} nos dados
+    ordenados.
+  \end{definition}
+  \begin{itemize}
+  \item Notação: $M_d$
+  \item Divide o dataset ao meio
+  % \item Mais robusta que a média na presença de {\it outliers}
+  \item Costuma pertencer ao dataset
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mediana}
+  \begin{itemize}
+  \item Para se calcular a mediana, deve-se ordenar os dados.
+  \item Encontrar o valor do meio se $n$ for ímpar.
+  \item Encontrar a média dos dois valores do meio se $n$ for par.
+  \end{itemize}
+  \begin{example}
+Conforme no exemplo anterior
+    \begin{columns}
+      \begin{column}{5cm}
+        \begin{tabular}{ccc}
+          $x_5$ &=&134\\
+          $x_1$ &=&142\\
+          $x_2$ &=&\alert{144}\\
+          $x_3$ &=&\alert{176}\\
+          $x_6$ &=&191\\
+          $x_4$ &=&203\\
+        \end{tabular}
+      \end{column}
+      \begin{column}{5cm}
+        $M_d = \frac{144+176}{2}=160$
+      \end{column}
+    \end{columns}
+    
+  \end{example}
+
+\end{frame}
+
+\subsection{Moda}
+\begin{frame}{Moda}
+  \begin{definition}
+    A moda é o dado que ocorre com \alert{maior frequência}.
+  \end{definition}
+  \begin{itemize}
+  \item Notação: $M_o$
+  \item Sempre pertence ao dataset.
+  % \item Assim como a mediana, também é menos suscetível a distorções
+  %   por {\it outliers}.
+  \item Não é necessariamente única: o dataset pode ser
+    \alert{bimodal}, ou mesmo \alert{multimodal}.
+  \item Não necessariamente existe: \alert{amodal}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Moda}
+  \begin{figure}
+    \centering
+    % \pgfuseimage{moda}
+    \includegraphics[height=0.7\textheight]{moda}
+    \caption{Diagrama de pontos para dados (a) unimodal, (b) bimodal
+      (Fonte: Reis, Reis, 2002)}
+  \end{figure}
+  % \begin{figure}
+  %   \centering
+  %   \pgfuseimage{moda2}
+  % \end{figure}
+\end{frame}
+
+\subsection[Comparação]{Comparação entre as Medidas Centrais}
+
+\begin{frame}
+  % \begin{figure}
+  %   \includegraphics[height=0.3\textheight]{medidas1}
+  %   \caption{Simétrica}
+  % \end{figure}
+  % \begin{figure}
+  %   \includegraphics[height=0.3\textheight]{medidas2}
+  %   \caption{Assimétrica à esquerda}
+  % \end{figure}
+  % \begin{figure}
+  %   \includegraphics[height=0.3\textheight]{medidas3}
+  %   \caption{Assimétrica à direita}
+  % \end{figure}
+    \includegraphics[height=0.4\textheight]{medidas1}
+    \includegraphics[height=0.4\textheight]{medidas2}
+    \includegraphics[height=0.4\textheight]{medidas3}
+\begin{figure}
+  \caption{(a) Simétrica, (b) Assimétrica à esquerda, (c) Assimétrica
+    à direita (Fonte: Reis, Reis 2002)}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Robustez da Média}
+  \begin{itemize}
+  \item<1> A média é mais usada, mas não é \alert{robusta}.
+  \item<1> É distorcida na presença de {\it outliers} (valores
+    discrepantes, extremos)
+%  \item<1> O que fazer nesta situação?
+  \end{itemize}
+  
+\end{frame}
+\begin{frame}{Comparação entre as Medidas Centrais}
+  \begin{Example}Considere o seguinte dataset $$\{ 1,1,2,4,7\}$$
+  \begin{itemize}
+  \item $N=5$
+  \item As medidas descritivas centrais para estes dados são:
+  \item $\mu = \frac{1+1+2+4+7}{5} = \frac{15}{5}= 3$
+  \item $M_d = 2$
+  \item $M_o = 1$
+  \end{itemize}
+\end{Example}
+\end{frame}
+
+\begin{frame}{Comparação entre as Medidas Centrais}
+  \begin{example}Considere agora este outro dataset $$\{
+    1,1,2,4,32 \}$$
+  \begin{itemize}
+  \item $N=5$
+  \item As medidas descritivas centrais para estes dados são:
+  \item $\mu = \frac{1+1+2+4+32}{5} = \frac{40}{5}= 8$
+  \item $M_d = 2$
+  \item $M_o = 1$
+  \end{itemize}
+\end{example}
+\end{frame}
+
+%\subsection{Exercícios}
+\begin{frame}{Exercícios}
+  \begin{block}{Exercício}
+    Um pesquisador observou as seguintes idades (anos) para uma amostra:
+    35, 33, 37, 33, 34.
+    
+    Determine:
+    \begin{enumerate}
+    \item<1-> A média amostral ($\bar{x}$)
+    \item<1-> A mediana ($M_d$)
+    \item<1-> A moda ($M_o$)
+    \end{enumerate}
+  \end{block}
+  
+  \begin{block}{Solução}
+    \begin{enumerate}
+    \item $\bar{x} = \frac{35+33+37+33+34}{5} = 34.4$
+    \item $M_d = 34$
+    \item $M_o = 33$
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Resumo}
+  \begin{itemize}
+  \item Média mais usual
+  \item Mediana na presença de {\it outliers}
+  \item Moda quando a distribuição das frequências for bimodal ou multimodal.
+  \end{itemize}
+  
+\end{frame}
+
+\section{Medidas de Dispersão}
+
+\begin{frame}{Variabilidade em Medições}
+  \begin{figure}
+    \includegraphics[height=0.7\textheight]{variancia}
+    \caption{Variabilidade da medição de uma esfera metálica de
+      1000g. Balança A, ``imprecisão'' de 50g, balança B,
+      ``imprecisão'' de 100g (Fonte: Reis, Reis, 2002)}
+  \end{figure}
+\end{frame}
+\subsection{Amplitude}
+\begin{frame}{Amplitude}
+  A amplitude dos dados identifica o intervalo de ocorrência de todos
+  os dados observados
+  \begin{itemize}
+  \item $A = x_{max} - x_{min}$
+  \end{itemize}
+\end{frame}
+
+\subsection{Desvios em relação à media}
+\begin{frame}{Desvios em relação à média}
+  \begin{itemize}
+  \item Uma maneira de entender a variabilidade do dataset é analisar
+    os desvios em relação à média.
+  \item O desvio é a diferença entre o valor do dado
+  \item $D = x_i - \mu$ ou $D= x_i - \bar{x}$
+  \end{itemize}
+\end{frame}
+
+
+\subsection{Variância}
+\begin{frame}{Variância}
+A variância é a média dos desvios quadráticos
+  \begin{itemize}
+  \item Variância populacional
+$$\sigma^2 = \frac{\sum (x_i - \mu)^2}{N}$$
+\item Variância amostral
+$$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
+\item É uma medida conveniente do ponto de vista matemático (boas
+  propriedades algébricas e analíticas).
+\item Como ela usa uma unidade quadrática, é pouco intuitiva do ponto
+  de vista de interpretação para resultados.
+  \end{itemize}
+\end{frame}
+
+\subsection{Desvio Padrão}
+\begin{frame}{Desvio Padrão}
+  O desvio padrão é a 
+  \begin{itemize}
+  \item Desvio padrão populacional
+    $$ \sigma = \sqrt{ \sigma^2 } = \sqrt{ \frac{\sum (x_i - \mu)^2}{N} } $$
+  \item Desvio padrão amostral
+    $$ s = \sqrt{s^2 } = \sqrt{ \frac{\sum (x_i - \bar{x})^2}{n-1} } $$
+  \item É a medida mais usual para mensurar a variabilidade dos dados,
+    por estar na mesma escala (unidade) destes.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Desvio Padrão}
+  \begin{itemize}
+  \item 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Desvio Padrão}
+  \begin{itemize}
+  \item 
+  \end{itemize}
+\end{frame}
+
+%\subsection{Exercícios}
+\begin{frame}{Exercícios}
+  \begin{block}{Exercício}
+    Um pesquisador observou as seguintes idades (anos) para uma amostra:
+    35, 33, 37, 33, 34.
+    
+    Determine:
+    \begin{enumerate}
+    \item<1-> A variância amostral ($s^2$)
+    \item<1-> O desvio padrão amostral ($s$)
+    \end{enumerate}
+  \end{block}
+  
+  \begin{block}{Solução}
+    Lembrando que $\bar{x} = 34.4$, temos:
+    \begin{enumerate}
+    \item $s^2 =
+      % \frac{(35-34.4)^2+(33-34.4)^2+(37-34.4)^2+(33-34.4)^2+(34-34.4)^2}{5-1}
+      \frac{(35-34.4)^2+(33-34.4)^2+\ldots}{5-1}$
+      $=\frac{0.36+1.96+6.76+1.96+0.16}{4}=2.8$
+    \item $s = \sqrt{2.8} = 1.67 $
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+
+\subsection{Coeficiente de Variação}
+\begin{frame}{Coeficiente de Variação}
+  \begin{definition}
+    $CV = \frac{\sigma}{\mu}$
+  \end{definition}
+  \begin{itemize}
+  \item Normaliza a variabilidade em relação à média
+  \item Permite comparar a variabilidade de datasets não relacionados
+    (mesmo que não usem a mesma unidade)
+  \end{itemize}
+  \begin{example}
+    
+  \end{example}
+\end{frame}
+
+
+\section{Medidas de Posição}
+
+\begin{frame}{Medidas de Posição}
+  \begin{itemize}
+  \item Permitem estabelecer informações quantitativas relativas à
+    ordem dos dados
+  \item
+  \end{itemize}
+\end{frame}
+
+\subsection{Quartis}
+\begin{frame}{Quartis}
+  \begin{definition}
+    Dividem o dataset em quatro partes, cada uma com 25\% dos dados
+  \end{definition}
+  \begin{itemize}
+  \item $Q_1$, primeiro quartil, representa os primeiros 25\% dos dados
+  \item $Q_2$, segundo quartil, representa os primeiros 50\% dos dados
+  \item $Q_3$, terceiro quartil, representa os primeiros 75\% dos dados
+  \end{itemize}
+  \begin{block}{Pergunta}
+    O que podemos dizer sobre o segundo quartil ($Q_2$)?    
+  \end{block}
+\end{frame}
+
+\begin{frame}{Quartis}
+  \begin{example}
+    Os pesos de $102$ bebês nascidos em uma certa maternidade ao longo
+    de um ano foram anotados e ordenados. Um certo bebê ocupa o $Q_3$
+    deste dataset.
+
+    \begin{itemize}
+    \item Isto significa que aproximadamente 75\% dos bebês nascidos nesta
+    maternidade tem peso menor ou igual a ele (Mazel Tov!).
+  \end{itemize}
+\end{example}
+\end{frame}
+
+\subsection{Percentis}
+\begin{frame}{Percentis}
+  \begin{itemize}
+  \item 
+  \end{itemize}
+\end{frame}
+
+\subsection{Escore padrão}
+\begin{frame}{Escore padrão}
+  \begin{itemize}
+  \item 
+  \end{itemize}
+\end{frame}
+
+
+
+
+\end{document}
+
