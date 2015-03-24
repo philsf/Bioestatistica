@@ -250,7 +250,7 @@ Conforme no exemplo anterior
 
 \subsection[Comparação]{Comparação entre as Medidas Centrais}
 
-\begin{frame}
+\begin{frame}{Comparação entre as Medidas Centrais}
   % \begin{figure}
   %   \includegraphics[height=0.3\textheight]{medidas1}
   %   \caption{Simétrica}
@@ -348,6 +348,7 @@ Conforme no exemplo anterior
       ``imprecisão'' de 100g (Fonte: Reis, Reis, 2002)}
   \end{figure}
 \end{frame}
+
 \subsection{Amplitude}
 \begin{frame}{Amplitude}
   A amplitude dos dados identifica o intervalo de ocorrência de todos
@@ -355,6 +356,13 @@ Conforme no exemplo anterior
   \begin{itemize}
   \item $A = x_{max} - x_{min}$
   \end{itemize}
+  \begin{example}
+    Seja o dataset $\{21, 12, 20, 4, 75, 40, 39, 63 \}$
+    Então, a amplitude é:
+    % \begin{displaymath}
+      A = 75 - 4 = 71
+    % \end{displaymath}
+  \end{example}
 \end{frame}
 
 \subsection{Desvios em relação à media}
@@ -362,30 +370,165 @@ Conforme no exemplo anterior
   \begin{itemize}
   \item Uma maneira de entender a variabilidade do dataset é analisar
     os desvios em relação à média.
-  \item O desvio é a diferença entre o valor do dado
-  \item $D = x_i - \mu$ ou $D= x_i - \bar{x}$
+  \item Cada desvio é a diferença entre o valor do dado e a média.
+  % \item $D_j = x_j - \mu$ ou $D_i = x_i - \bar{x}$
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Desvios em relação à média}
+  Mas os desvios...
+  \begin{enumerate}
+  \item são tão numerosos quanto os dados
+  \item têm sinal (direção do desvio)
+  \item têm soma \alert{nula}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Desvios em relação à média}
+\begin{example}
+  \begin{displaymath}
+    \{1,2,3,4,5\}
+  \end{displaymath}
+
+  \begin{columns}
+    \begin{column}{5cm}
+  \begin{itemize}
+  \item $N=5$
+  \item $\bar{x} = 3$
+  \end{itemize}
+\end{column}
+\begin{column}{5cm}
+  \begin{enumerate}
+  \item $D_1 = 1-3 = -2$
+  \item $D_2 = 2-3 = -1$
+  \item $D_3 = 3-3 = 0$
+  \item $D_4 = 4-3 = 1$
+  \item $D_5 = 5-3 = 2$
+  \end{enumerate}
+\end{column}
+\end{columns}
+\end{example}
+\end{frame}
+
+\begin{frame}{Soma dos desvios}
+  \begin{example}
+    Somando tudo:
+    \begin{displaymath}
+    D_1 + D_2 + D_3 + D_4 + D_5 =
+  \end{displaymath}
+  \begin{displaymath}
+    (-2) + (-1) + 0 + 1 + 2 = 0
+  \end{displaymath}
+  \end{example}
+\end{frame}
+
+\begin{frame}{Como proceder?}
+  \begin{itemize}
+  \item Como extrair alguma informação útil (e sumária!) dos desvios?
+  \item Problema: sinais
+  \end{itemize}
+  \begin{block}{Pergunta}
+    Como tirar os sinais dos desvios?
+  \end{block}
+\end{frame}
+
+\begin{frame}{Desvios absolutos}
+  Tomando-se o módulo dos desvios temos:
+  % \item Idéia matemática de ``tamanho''
+
+  \begin{definition}
+    Desvio médio absoluto (MAD) é a média dos desvios absolutos
+  \end{definition}
+
+  \begin{itemize}
+  \item É uma medida de dispersão robusta (pouco influenciada por
+    outliers)
+  \item Não tem boas propriedades matemáticas (analíticas e
+    algébricas).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Desvio médio absoluto (MAD)}
+  \begin{example}
+  \begin{displaymath}
+    \{1,2,3,4,5\}, \bar{x} = 3
+  \end{displaymath}
+  \begin{columns}
+    \begin{column}{5cm}<1->
+      \begin{enumerate}
+      \item $|D_1| = |1-3| = 2$
+      \item $|D_2| = |2-3| = 1$
+      \item $|D_3| = |3-3| = 0$
+      \item $|D_4| = |4-3| = 1$
+      \item $|D_5| = |5-3| = 2$
+      \end{enumerate}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{displaymath}
+        \mathrm{MAD } = \frac{\sum D_i}{5} = 2
+      \end{displaymath}
+    \end{column}
+  \end{columns}
+  \end{example}
+\end{frame}
+
+\begin{frame}{Uma proposta ``melhor''}
+  \begin{itemize}
+  \item Uma outra maneira de eliminar os sinais é elevar ao quadrado
+    cada desvio.
+  \item Preserva boas propriedades matemáticas
+  \item Calculando a média dos quadrados dos desvios (desvios
+    quadráticos) temos \ldots
+  \end{itemize}
+\end{frame}
 
 \subsection{Variância}
 \begin{frame}{Variância}
-A variância é a média dos desvios quadráticos
+  \begin{definition}
+    A variância é a média dos desvios quadráticos.
+  \end{definition}
   \begin{itemize}
   \item Variância populacional
-$$\sigma^2 = \frac{\sum (x_i - \mu)^2}{N}$$
+$\sigma^2 = \frac{\sum (x_j - \mu)^2}{N}$
 \item Variância amostral
-$$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
-\item É uma medida conveniente do ponto de vista matemático (boas
-  propriedades algébricas e analíticas).
-\item Como ela usa uma unidade quadrática, é pouco intuitiva do ponto
-  de vista de interpretação para resultados.
+$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$
+\item Conveniente do ponto de vista matemático (boas propriedades
+  algébricas e analíticas).
+\item Unidade quadrática, pouco intuitiva para interpretação de
+  resultados.
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Variância}
+  \begin{example}
+      \begin{displaymath}
+    \{1,2,3,4,5\}, \bar{x} = 3
+  \end{displaymath}
+  \begin{columns}
+    \begin{column}{6cm}<1->
+      \begin{enumerate}
+      \item $D_1^2 = (1-3)^2 = (-2)^2 = 4$
+      \item $D_2^2 = (2-3)^2 = (-1)^2 = 1$
+      \item $D_3^2 = (3-3)^2 = 0^2 =0$
+      \item $D_4^2 = (4-3)^2 = 1^2 = 1$
+      \item $D_5^2 = (5-3)^2 = 2^2 = 4 $
+      \end{enumerate}
+    \end{column}
+    \begin{column}{4cm}
+      \begin{displaymath}
+        s^2 = \frac{\sum D_i^2}{4} = 2.5
+      \end{displaymath}
+    \end{column}
+  \end{columns}
+  \end{example}
+\end{frame}
+
+
 \subsection{Desvio Padrão}
 \begin{frame}{Desvio Padrão}
-  O desvio padrão é a 
+  \begin{definition}
+    O desvio padrão é a raiz quadrada da variância.
+  \end{definition}
   \begin{itemize}
   \item Desvio padrão populacional
     $$ \sigma = \sqrt{ \sigma^2 } = \sqrt{ \frac{\sum (x_i - \mu)^2}{N} } $$
@@ -397,18 +540,20 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 \end{frame}
 
 \begin{frame}{Desvio Padrão}
-  \begin{itemize}
-  \item 
-  \end{itemize}
+  \begin{example}
+      \begin{displaymath}
+    \{1,2,3,4,5\}, \bar{x} = 3
+  \end{displaymath}
+      \begin{displaymath}
+        s^2 = 2.5
+      \end{displaymath}
+    \begin{displaymath}
+        s = \sqrt{s^2} = \sqrt{2.5} = 1.58
+    \end{displaymath}
+  \end{example}
 \end{frame}
 
-\begin{frame}{Desvio Padrão}
-  \begin{itemize}
-  \item 
-  \end{itemize}
-\end{frame}
-
-%\subsection{Exercícios}
+\subsection{Exercícios}
 \begin{frame}{Exercícios}
   \begin{block}{Exercício}
     Um pesquisador observou as seguintes idades (anos) para uma amostra:
@@ -437,18 +582,89 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 \subsection{Coeficiente de Variação}
 \begin{frame}{Coeficiente de Variação}
   \begin{definition}
-    $CV = \frac{\sigma}{\mu}$
+    $$CV = \frac{\sigma}{\mu}$$
   \end{definition}
   \begin{itemize}
   \item Normaliza a variabilidade em relação à média
   \item Permite comparar a variabilidade de datasets não relacionados
     (mesmo que não usem a mesma unidade)
+  \item Só deve ser usado para grandezas em escala (i.e. possui um
+    ``zero'' não arbitrário, ou ``zero absoluto'')
   \end{itemize}
-  \begin{example}
-    
-  \end{example}
 \end{frame}
 
+\begin{frame}{Coeficiente de Variação}
+  \begin{example}
+    \begin{columns}<1->
+      \begin{column}{5cm}<1->
+
+        $x=$ Estatura e $y=$ Perímetro abdominal.
+
+        \begin{tabular}{cc}
+          $x=$ &$y=$\\
+          \hline
+          181.2 &76.3\\
+          173.7&66.7\\
+          169.0&73.3\\
+          184.1&74.8\\
+          174.4&82.7\\
+          172.6&79.6\\
+        \end{tabular}
+      \end{column}
+      \begin{column}{5cm}<1->
+
+        Qual das duas amostras tem maior variabilidade?
+
+        \begin{enumerate}
+        \item Calcular a média $\bar{x}$
+        \item Calcular a variância $s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$
+        \item Calcular o desvio padrão $s = \sqrt{s^2 }$
+        \item $CV = \frac{s}{\bar{x}}$
+        \end{enumerate}
+      \end{column}
+    \end{columns}
+  \end{example}
+
+\end{frame}
+
+\begin{frame}{Coeficiente de Variação}
+  \begin{example}
+    \begin{columns}<1>
+      \begin{column}{5cm}<1>
+
+        $x=$ Estatura e $y=$ Perímetro abdominal.
+
+        \begin{tabular}{cc}
+          $x=$ &$y=$\\
+          \hline
+          181.2 &76.3\\
+          173.7&66.7\\
+          169.0&73.3\\
+          184.1&74.8\\
+          174.4&82.7\\
+          172.6&79.6\\
+        \end{tabular}
+      \end{column}
+      \begin{column}{5cm}<1>
+        $\bar{x} = 175.8$
+        $s_x = 5.7$
+
+        $\bar{y} = 75.7$
+        $s_y = 5.5$
+
+        \alert{$CV_x = % \frac{5.7}{175.8} =
+          3.24\%$}
+
+        \alert{$CV_y = % \frac{5.5}{75.7} =
+          7.27\%$}
+
+        Resposta: O perímetro abdominal tem maior variabilidade que a
+        altura.
+      \end{column}
+    \end{columns}
+  \end{example}
+
+\end{frame}
 
 \section{Medidas de Posição}
 
@@ -490,20 +706,115 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 
 \subsection{Percentis}
 \begin{frame}{Percentis}
+  \begin{definition}
+    O percentil de ordem $k$ (onde $k$ é qualquer valor entre 0 e
+    100), denotado por $P_k$ , é o valor tal que $k\%$ dos valores do
+    dataset são menores ou iguais a ele.
+  \end{definition}
+
   \begin{itemize}
-  \item 
+  \item Generaliza a idéia dos quartis
+  \item Maior granularidade na ordem
+  \item \alert{Decis}: dividem o dataset em 10 partes iguais.
   \end{itemize}
 \end{frame}
 
-\subsection{Escore padrão}
-\begin{frame}{Escore padrão}
+% \subsection{Escore padrão}
+% \begin{frame}{Escore padrão}
+%   \begin{definition}
+%   \end{definition}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+% \end{frame}
+
+\section{Boxplot}
+\begin{frame}{O Boxplot}
   \begin{itemize}
-  \item 
+  \item Gráfico que ilustra a dispersão dos dados pelos quartis
+  \item Retângulo que representa a Distância Interquartílica ($DQ =
+    Q_3-Q_1$)
+  \item Barra interna que representa a mediana ($Q_2$)
+  \item Limite superior (barra vertical): $Q_3 + 1.5 \cdot DQ$
+  \item Limite inferior (barra vertical): $Q_1 - 1.5\cdot DQ$
+  \item Outliers como pontos, círculos ou estrelas
+  \item Conveniente para comparar vários grupos ou amostras
   \end{itemize}
 \end{frame}
 
+\begin{frame}{O Boxplot}
+  \begin{example}
+    Dataset
+    \begin{columns}
+      \begin{column}{5cm}
+        \begin{displaymath}
+          \{1,2,3,4,5\}
+        \end{displaymath}
+        \begin{displaymath}
+          \bar{x} = 3, M_d = 3
+        \end{displaymath}
+        \begin{displaymath}
+          Q_1= 2, Q_3 = 4
+        \end{displaymath}
+      \end{column}
+      \begin{column}{5cm}
+        \includegraphics[height=0.6\textheight]{boxplot1}
+      \end{column}
+    \end{columns}
+  \end{example}
+\end{frame}
 
+\begin{frame}{O Boxplot}
+  \begin{example}
+    \begin{columns}
+      \begin{column}{5cm}
+        Exemplo do colesterol
+        \begin{tabular}{ccc}
+          $x_1$ &=&142\\
+          $x_2$ &=&144\\
+          $x_3$ &=&176\\
+          $x_4$ &=&203\\
+          $x_5$ &=&134\\
+          $x_6$ &=&191\\
+        \end{tabular}
+        $\bar{x}=165, M_d=160$
+      \end{column}
+      \begin{column}{5cm}
+        \includegraphics[height=0.6\textheight]{boxplot2}
+      \end{column}
+    \end{columns}
+  \end{example}
+\end{frame}
 
+\begin{frame}{Boxplot: duas amostras}
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.7\textheight]{boxplot3}
+    \caption{Boxplots para dois grupos de dados (Fonte: Reis, Reis,
+      2002)}
+  \end{figure}
+\end{frame}
+
+\section{Resumo}
+
+\begin{frame}{Análise Exploratória de Dados (EDA)}
+  Ao iniciar sua Análise Exploratória de Dados (EDA), você pode
+  visualizar sua amostra com:
+  \begin{enumerate}
+  \item Resumo dos cinco números
+    \begin{itemize}
+    \item Valor mínimo
+    \item Primeiro quartil $Q_1$
+    \item Mediana (e/ou média)
+    \item Terceiro quartil $Q_3$
+    \item Valor máximo
+    \end{itemize}
+  \item Boxplot
+  \end{enumerate}
+  \begin{center}
+  \includegraphics[height=0.2\textheight]{protip}
+  \end{center}
+\end{frame}
 
 \end{document}
 
