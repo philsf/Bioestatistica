@@ -1,9 +1,8 @@
 \everymath{\displaystyle}
 \documentclass{beamer}
+% \documentclass[handout]{beamer}
 %\usepackage[pdftex]{color,graphicx}
 \usepackage{amsmath,amssymb,amsfonts}
-
-
 
 \mode<presentation>
 {
@@ -23,6 +22,11 @@
   % or whatever (possibly just delete it)
 }
 
+\mode<handout>{
+  \setbeamercolor{background canvas}{bg=black!5}
+  \usepackage{pgfpages}
+  \pgfpagesuselayout{2 on 1}[a4paper,border shrink=5mm]
+}
 
 \usepackage[brazilian]{babel}
 % or whatever
