@@ -1,5 +1,6 @@
 \everymath{\displaystyle}
 \documentclass{beamer}
+% \documentclass[handout]{beamer}
 
 %\usepackage[pdftex]{color,graphicx}
 \usepackage{amsmath,amssymb,amsfonts}
@@ -143,25 +144,177 @@
 \section{Variáveis Aleatórias}
 
 \subsection{Tipos de Variáveis}
+\begin{frame}{Variáveis Aleatórias}
+\begin{definition}
+  % Valor numérico associado a um experimento aleatório
+  Uma \alert{variável aleatória} é uma variável (tipicamente
+  representada por $x$) que tem um único valor numérico associada a um
+  experimento aleatório
+\end{definition}
+\begin{itemize}
+\item Discretas% (quantidade contável de valores)
+\item Contínuas% (escala contínua de valores)
+\end{itemize}
+\end{frame}
 
 \subsection{Variáveis Discretas}
+\begin{frame}{Variáveis Discretas}
+  \begin{definition}
+    Uma variável aleatória \alert{discreta} pode assumir uma
+    quantidade contável de valores
+  \end{definition}
+  \begin{example}
+    \begin{itemize}
+    \item Número de filhos em uma família
+    \item Quantidade de pacientes em um dia no consultório
+    \end{itemize}
+  \end{example}
+\end{frame}
+
+\begin{frame}{Representação em tabela}
+  \begin{example}
+    Seja x o número de filhos em uma família. 
+
+    \begin{tabular}{c|ccccc}
+      x & 0 & 1 & 2 & 3 & 4\\
+      \hline
+      P(x) & 0.15 & 0.30  & 0.40 & 0.10 & 0.05\\
+    \end{tabular}
+
+    O valor esperado $E[x]$ (de filhos por família) é:
+    \begin{displaymath}
+      \sum x P(x) = 0 \times 0.15 + 1 \times 0.30 + 2 \times 0.40
+      \ldots = 1.6
+    \end{displaymath}
+  \end{example}
+\end{frame}
+
+\begin{frame}{Representação gráfica}
+  \begin{figure}
+    \centering
+    \includegraphics[height=0.6\textheight]{discreta}    
+    \caption{A distribuição de uma variável discreta (Fonte: Triola,
+      2004}
+  \end{figure}
+\end{frame}
 
 \subsection{Variáveis Contínuas}
+\begin{frame}{Variáveis Contínuas}
+  \begin{definition}
+    Uma variável aleatória \alert{contínua} pode ser associada a
+    medições em uma escala contínua (e infinita) de valores
+  \end{definition}
+  \begin{example}
+    \begin{itemize}
+    \item Quantidade de leite produzido por uma vaca em um dia
+    \item Expectativa de vida de um paciente terminal
+    \end{itemize}    
+  \end{example}
+\end{frame}
 
+% \begin{frame}{Representação gráfica}
 
-\section{Funções de Probabilidade}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+% \end{frame}
 
-\section{Distribuições Discretas}
+\section{Distribuições de Probabilidade}
+\begin{frame}{Distribuições de Probabilidade}
+  \begin{definition}
+    Uma \alert{distribuição de probabilidade} é um gráfico, tabela ou
+    fórmula que relaciona a cada valor que a variável aleatória pode
+    assumir a sua probabilidade
+  \end{definition}
+  Os pré-requisitos para uma função ser uma Função de Probabilidade
+  são:
+  \begin{itemize}
+  \item $\sum P(x) = 1$, onde $x$ percorre todos os valores possíveis
+  \item $0 \le P(x) \le 1$, para todo $x$
+  \end{itemize}
+\end{frame}
 
-\subsection{Bernoulli}
+\subsection{Distribuições Discretas}
 
-\subsection{Binomial}
+% \subsection{Bernoulli}
+\begin{frame}{A distribuição de Bernoulli}
+  \begin{itemize}
+  \item Um ensaio de Bernoulli é teste com desfecho 0 ou 1 (negativo
+    ou positivo)
+  \item Probabilidade de sucesso $p$
+  \item Probabilidade de fracasso $1-p$
+  \item Notação: $X \sim Bern(p)$
+  \item Valor esperado: $E[x] = p$
+  \end{itemize}
+\end{frame}
 
+% \subsection{Binomial}
+\begin{frame}{A distribuição Binomial}
+  \begin{itemize}
+  \item Quando executamos $n$ ensaios de Bernoulli
+    \alert{independentes}, encontramos a distribuição Binomial
+  \item Com $n$ ensaios (cada um com prob. $p$), temos a contagem $x$
+    de sucessos (desfecho = 1)
+  \item Notação $X \sim Bin(n,p)$
+  \item Valor esperado: $E[x]=np$
+  \end{itemize}
+\end{frame}
 
+\begin{frame}{A distribuição Binomial}
+\includegraphics[width=\textwidth]{binomial}
+\end{frame}
 
-\section{Distribuições Contínuas}
+\begin{frame}{Aumentando o tamanho da amostra}
+  \begin{itemize}
+  \item Quanto maior o tamanho $n$ da amostra, mais ``suave'' a
+    distribuição binomial, e mais simétrica
+  \item O histograma vai ficando cada vez mais parecido com uma curva
+  % \item https://www.youtube.com/watch?v=6YDHBFVIvIs (Galton board)
+  % \item https://www.youtube.com/watch?v=9xUBhhM4vbM (Galton machine)
+  \end{itemize}
+  \includegraphics[width=\textwidth]{binomial2}
 
-\subsection{Normal}
+\end{frame}
+
+\begin{frame}{Aumentando o tamanho da amostra}
+  \includegraphics[width=\textwidth]{aproximacao}
+
+  (Vídeos: Galton board e Galton machine)
+\end{frame}
+
+\subsection{Distribuições Contínuas}
+% \subsection{Normal}
+
+\begin{frame}{A distribuição Normal}
+  \begin{itemize}
+  \item Simétrica
+  \item Forma de sino
+  \item Assíntotas
+  \end{itemize}
+
+  \begin{center}
+    \includegraphics[height=0.6\textheight]{normal}
+  \end{center}
+\end{frame}
+
+\begin{frame}{A distribuição Normal Padrão}
+
+  Considere uma variável aleatória $X$ com distribuição normal com
+  média $\mu$ e desvio padrão $\sigma$, isto é, $X \sim N(\mu,
+  \sigma)$.
+
+  \begin{itemize}
+  \item Para simplificar as análises, trabalhamos com a normal padrão
+  \item A normal padrão tem média 0 e desvio-padrão 1
+  \item Padronização:
+    \begin{displaymath}
+      Z = \frac{X - \mu}{\sigma}
+    \end{displaymath}
+  \item $Z \sim N(0,1)$
+  \item Seus valores podem ser consultados em uma tabela
+  \end{itemize}
+\end{frame}
+
 
 
 
