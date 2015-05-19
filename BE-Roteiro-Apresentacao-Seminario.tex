@@ -1,0 +1,141 @@
+\everymath{\displaystyle}
+%\documentclass[pdftex,a4paper]{article}
+\documentclass[a4paper]{article}
+%%classes: article, report, book, proc, amsproc
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Misc
+% para acertar os acentos
+\usepackage[brazilian]{babel} 
+%\usepackage[portuguese]{babel} 
+% \usepackage[english]{babel}
+% \usepackage[T1]{fontenc}
+% \usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{fullpage}
+% \usepackage{graphicx} %See PDF section
+\usepackage{multicol}
+\setlength{\columnseprule}{0.5pt}
+\setlength{\columnsep}{20pt}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% PDF support
+
+\usepackage[pdftex]{color,graphicx}
+% %% Hyper-refs
+\usepackage[pdftex]{hyperref} % for printing
+% \usepackage[pdftex,bookmarks,colorlinks]{hyperref} % for screen
+
+%% \newif\ifPDF
+%% \ifx\pdfoutput\undefined\PDFfalse
+%% \else\ifnum\pdfoutput > 0\PDFtrue
+%%      \else\PDFfalse
+%%      \fi
+%% \fi
+
+%% \ifPDF
+%%   \usepackage[T1]{fontenc}
+%%   \usepackage{aeguill}
+%%   \usepackage[pdftex]{graphicx,color}
+%%   \usepackage[pdftex]{hyperref}
+%% \else
+%%   \usepackage[T1]{fontenc}
+%%   \usepackage[dvips]{graphicx}
+%%   \usepackage[dvips]{hyperref}
+%% \fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Math
+\usepackage{amsmath,amsfonts,amssymb}
+% para usar R de Real do jeito que o povo gosta
+\usepackage{amsfonts} % \mathbb
+% para usar as letras frescas como L de Espaco das Transf Lineares
+% \usepackage{mathrsfs} % \mathscr
+
+% Oferecer seno e tangente em pt, com os comandos usuais.
+\providecommand{\sin}{} \renewcommand{\sin}{\hspace{2pt}\mathrm{sen}}
+\providecommand{\tan}{} \renewcommand{\tan}{\hspace{2pt}\mathrm{tg}}
+
+% dt of integrals = \ud t
+\newcommand{\ud}{\mathrm{\ d}}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%% Título e cabeçalho
+%\noindent\parbox[c]{.15\textwidth}{\includegraphics[width=.15\textwidth]{logo}}\hfill
+\parbox[c]{.825\textwidth}{\raggedright%
+  \sffamily {\LARGE
+
+Bioestatística: Roteiro para apresentação dos seminários
+
+\par\bigskip}
+{Prof: Felipe Figueiredo\par}
+{\url{http://sites.google.com/site/proffelipefigueiredo}\par}
+}
+
+Versão: \verb|20150518|
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Roteiro para apresentação dos seminários}
+
+Como forma de avaliação da disciplina de Bioestatística, os alunos
+devem interpretar criticamente a análise estatística empregada em um
+artigo de pesquisa a ser selecionado de uma lista. Os alunos podem
+sugerir artigos que estejam dentro do escopo da ementa da disciplina,
+ou selcionar um artigo da lista providenciada pelo Docente. A lista de
+artigos sugeridos, suas referências e links para o PDF serão
+disponibilizadas em
+\url{https://sites.google.com/site/proffelipefigueiredo/into/bioestatistica}.
+
+Os alunos deverão preparar uma apresentação em dupla do estudo
+selecionado. O objetivo da avaliação é que os alunos façam uma síntese
+crítica da análise estatística utilizada neste estudo à luz dos
+conteúdos vistos ao longo da disciplina \footnote{Declaração: O
+  roteiro acima foi desenvolvido baseado na atividade de fim de curso
+  da prof. Emília Sakurai (RTE-02/2003 - UFMG).}.
+
+Cada dupla deve observar as questões a seguir na elaboração de suas
+apresentações.
+
+\begin{itemize}
+\item Os objetivos do artigo selecionado. Estão declarados de forma
+  clara no estudo?
+\item Como você classificaria o tipo do estudo (observacional,
+  experimental, etc)?
+\item Os elementos de análise estatística descritiva utilizados
+  (média, desvio-padrão, etc.)
+\item Qual é a variável resposta (dependente) do estudo? Como você as
+  classificaria? Qual a unidade desta variável?
+\item Qual ou quais são as variáveis explicativas (independentes) do
+  estudo. Como você as classificaria? Quais as unidades destas
+  variáveis?
+\item Os elementos de análise inferencial, caso seja aplicável
+  (intervalos de confiança, etc). Os testes estatísticos utilizados
+  adequados para o tamanho da amostra e para o tipo da variável?
+\item Foi feito um teste de hipóteses no artigo? As hipóteses estão
+  descritas de forma clara e precisa?
+\item Os resultados são estatisticamente significativos? Os autores
+  apresentam o p-valor, ou apenas identificam a significância? O nível
+  de significância está explícito no artigo?
+\end{itemize}
+
+A dupla deve iniciar com a referência completa do artigo, e discutir a
+pertinência do título: este é informativo? Ele resume bem os objetivos
+e resultados do estudo?
+
+Cada dupla será avaliada durante 30 minutos, sendo 20 minutos para
+apresentação do artigo e 10 minutos para discussão e arguição.
+
+\end{document}
