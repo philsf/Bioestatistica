@@ -29,7 +29,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 Livro texto:
 
-* Motulsky, Harvey J. (1995) **Intuitive Biostatistics**, 1st ed - Oxford Press.
+* Motulsky, Harvey J. (1995) *Intuitive Biostatistics*, 1st ed - Oxford Press.
 
 Outros livros recomendados
 
@@ -39,18 +39,19 @@ Outros livros recomendados
 Online:
 
 - Estatística Descritiva
-	- Reis, E. A.; Reis, I. A. (2001) **Análise Descritiva de Dados: Tabelas e Gráficos**, Relatório Técnico (RTE-04/2001) Dept Estatística UFMG, ([PDF][ufmg-desc-tab]).
-	- Reis, E. A.; Reis, I. A. (2002) **Análise Descritiva de Dados: Síntese Numérica**, Relatório Técnico (RTE-02/2002) Dept Estatística UFMG, ([PDF][ufmg-desc-num]).
+	- Reis, E. A.; Reis, I. A. (2001) *Análise Descritiva de Dados: Tabelas e Gráficos*, Relatório Técnico (RTE-04/2001) Dept Estatística UFMG, ([PDF][ufmg-desc-tab]).
+	- Reis, E. A.; Reis, I. A. (2002) *Análise Descritiva de Dados: Síntese Numérica*, Relatório Técnico (RTE-02/2002) Dept Estatística UFMG, ([PDF][ufmg-desc-num]).
 
 - Interpretação de resultados que não são estatisticamente significativos
-	 - Motulsky, Harvey J. (2014) *Intuitive Biostatistics*, Oxford Press, chap 19 "**Interpreting a Result That Is Not Statistically Significant**" ([PDF][motulsky-ch19]).
+	 - Motulsky, Harvey J. (2014) *Intuitive Biostatistics*, Oxford Press, chap 19 *Interpreting a Result That Is Not Statistically Significant* ([PDF][motulsky-ch19]).
 
 - O p-valor
-  - Dorey, F (2010) **In Brief: The P Value: What Is It and What Does It Tell You?**, Clin Orthop Relat Res. ([Link][dorey2010])
-  - Dorey, F (2011) **Statistics in Brief: Interpretation and Use of p Values: All p Values Are Not Equal**, Clin Orthop Relat Res. ([Link][dorey2011], [Vídeo do autor][dorey2011-vid])
+  - Dorey, F (2010) *In Brief: The P Value: What Is It and What Does It Tell You?*, Clin Orthop Relat Res. ([Link][dorey2010])
+  - Dorey, F (2011) *Statistics in Brief: Interpretation and Use of p Values: All p Values Are Not Equal*, Clin Orthop Relat Res. ([Link][dorey2011], [Vídeo do autor][dorey2011-vid])
+
 - Alternativas ao uso do p-valor
-  - Gardner, MJ; Altman, DG (1986) **Confidence intervals rather than P values: estimation rather than hypothesis testing**, BMJ ([Link][gardner1986]).
-  - Goodman, SN (1999) **Toward evidence-based medical statistics. 1: The P value fallacy**, Annals of internal medicine ([Link][goodman1999], [PDF][goodman1999-pdf]).
+  - Gardner, MJ; Altman, DG (1986) *Confidence intervals rather than P values: estimation rather than hypothesis testing*, BMJ ([Link][gardner1986]).
+  - Goodman, SN (1999) *Toward evidence-based medical statistics. 1: The P value fallacy*, Annals of internal medicine ([Link][goodman1999], [PDF][goodman1999-pdf]).
 
 [ufmg-desc-tab]: http://www.est.ufmg.br/portal/arquivos/rts/rte0104.pdf
 [ufmg-desc-num]: http://www.est.ufmg.br/portal/arquivos/rts/rte0202.pdf
