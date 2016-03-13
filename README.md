@@ -2,7 +2,7 @@
 
 Este é o repositório da disciplina de Bioestatística do professor Felipe Figueiredo.
 
-A digulgação do material para os alunos é feita pelo endereço: https://sites.google.com/site/proffelipefigueiredo/into/bioestatística
+A digulgação do material para os alunos é feita pelo endereço: https://sites.google.com/site/proffelipefigueiredo/into/bioestatistica
 
 ##Planejamento de aulas de conteúdo
 
