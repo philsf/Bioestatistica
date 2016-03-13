@@ -25,19 +25,19 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 - Testes não-paramétricos
 
 [Cronograma]: https://docs.google.com/document/d/1xb7Yqxae8sbbbkPYjg5ZGhxJ8NFfxOURBISeWVHkjUE
-[Introdução]: Aulas/BE-Intro.pdf
-[Análise Descritiva I]: Aulas/BE-Descritiva_I.pdf
-[Análise Descritiva II]: Aulas/BE-Descritiva_II.pdf
-[Probabilidades I]: Aulas/BE-Prob_I_Basica.pdf
-[Probabilidades II]: Aulas/BE-Prob_II_Distrib.pdf
-[Inferência I]: Aulas/BE-Inferencia_I.pdf
-[Inferência II]: Aulas/BE-Inferencia_II.pdf
-[Testes de Hipóteses I]: Aulas/BE-TesteHipotese_I.pdf
-[Testes de Hipóteses II]: Aulas/BE-TesteHipotese_II.pdf
-[Tabelas de Contingência]: Aulas/BE-Tabelas_de_Contingencia.pdf
-[Correlação e Regressão]: Aulas/BE-Associacao.pdf
-[Tutorial - Descritiva]: Aulas/BE-Pratica_Descritiva.pdf
-[Tutorial - Correlação e Regressão]: Aulas/BE-Pratica_Associacao.pdf
+[Introdução]: Aulas/BE-Intro_4em1.pdf
+[Análise Descritiva I]: Aulas/BE-Descritiva_I_4em1.pdf
+[Análise Descritiva II]: Aulas/BE-Descritiva_II_4em1.pdf
+[Probabilidades I]: Aulas/BE-Prob_I_Basica_4em1.pdf
+[Probabilidades II]: Aulas/BE-Prob_II_Distrib_4em1.pdf
+[Inferência I]: Aulas/BE-Inferencia_I_4em1.pdf
+[Inferência II]: Aulas/BE-Inferencia_II_4em1.pdf
+[Testes de Hipóteses I]: Aulas/BE-TesteHipotese_I_4em1.pdf
+[Testes de Hipóteses II]: Aulas/BE-TesteHipotese_II_4em1.pdf
+[Tabelas de Contingência]: Aulas/BE-Tabelas_de_Contingencia_4em1.pdf
+[Correlação e Regressão]: Aulas/BE-Associacao_4em1.pdf
+[Tutorial - Descritiva]: Aulas/BE-Pratica_Descritiva_4em1.pdf
+[Tutorial - Correlação e Regressão]: Aulas/BE-Pratica_Associacao_4em1.pdf
 
 ##Bibliografia
 
