@@ -10,20 +10,34 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Cronograma][]
 
 - Introdução
-- Análise Descritiva I
-- Análise Descritiva II
-- Probabilidades I
-- Probabilidades II
-- Inferência I
-- Inferência II
-- Testes de Hipóteses I
-- Testes de Hipóteses II
+- [Análise Descritiva I][]
+- [Análise Descritiva II][]
+- [Probabilidades I][]
+- [Probabilidades II][]
+- [Inferência I][]
+- [Inferência II][]
+- [Testes de Hipóteses I][]
+- [Testes de Hipóteses II][]
 - ANOVA
-- Tabelas de Contingência
-- Correlação e Regressão
+- [Tabelas de Contingência][]
+- [Correlação e Regressão][]
+- [Tutorial - Descritiva][]
+- [Tutorial - Correlação e Regressão][]
 - Testes não-paramétricos
 
 [Cronograma]: https://docs.google.com/document/d/1xb7Yqxae8sbbbkPYjg5ZGhxJ8NFfxOURBISeWVHkjUE
+[Análise Descritiva I]: Aulas/BE-Descritiva_I.pdf
+[Análise Descritiva II]: Aulas/BE-Descritiva_I.pdf
+[Probabilidades I]: Aulas/BE-Prob_I_Basica.pdf
+[Probabilidades II]: Aulas/BE-Prob_II_Distrib.pdf
+[Inferência I]: Aulas/BE-Inferencia_I.pdf
+[Inferência II]: Aulas/BE-Inferencia_II.pdf
+[Testes de Hipóteses I]: Aulas/BE-TesteHipotese_I.pdf
+[Testes de Hipóteses II]: Aulas/BE-TesteHipotese_II.pdf
+[Tabelas de Contingência]: Aulas/BE-Tabelas_de_Contingencia.pdf
+[Correlação e Regressão]: Aulas/BE-Associacao.pdf
+[Tutorial - Descritiva]: Aulas/BE-Pratica_Descritiva.pdf
+[Tutorial - Correlação e Regressão]: Aulas/BE-Pratica_Associacao.pdf
 
 ##Bibliografia
 
@@ -69,7 +83,7 @@ A avaliação final da disciplina consistirá na apresentação de um seminário
 
 É recomendado que seja seguido o seguinte [Roteiro para a elaboração do seminário][] (versão 20150518).
 
-[Roteiro para a elaboração do seminário]: Seminarios/BE-Roteiro-Apresentacao-Seminario.pdf
+[Roteiro para a elaboração do seminário]: Trabalhos/BE-Roteiro-Apresentacao-Seminario.pdf
 
 ## Licença
 Todo o material contido aqui é distribuído sob a licença [Creative Commons Atribuição](http://creativecommons.org/licenses/by/4.0/deed.pt_BR)
