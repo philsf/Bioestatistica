@@ -9,7 +9,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 [Cronograma][]
 
-- Introdução
+- [Introdução][]
 - [Análise Descritiva I][]
 - [Análise Descritiva II][]
 - [Probabilidades I][]
@@ -26,6 +26,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 - Testes não-paramétricos
 
 [Cronograma]: https://docs.google.com/document/d/1xb7Yqxae8sbbbkPYjg5ZGhxJ8NFfxOURBISeWVHkjUE
+[Introdução]: Aulas/BE-Intro.pdf
 [Análise Descritiva I]: Aulas/BE-Descritiva_I.pdf
 [Análise Descritiva II]: Aulas/BE-Descritiva_I.pdf
 [Probabilidades I]: Aulas/BE-Prob_I_Basica.pdf
