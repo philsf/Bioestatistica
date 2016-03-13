@@ -69,7 +69,7 @@ A avaliação final da disciplina consistirá na apresentação de um seminário
 
 É recomendado que seja seguido o seguinte [Roteiro para a elaboração do seminário][] (versão 20150518).
 
-[Roteiro para a elaboração do seminário]: Seminarios/BE-Roteiro-Apresentacao-Seminario.pdf
+[Roteiro para a elaboração do seminário]: Trabalhos/BE-Roteiro-Apresentacao-Seminario.pdf
 
 ## Licença
 Todo o material contido aqui é distribuído sob a licença [Creative Commons Atribuição](http://creativecommons.org/licenses/by/4.0/deed.pt_BR)
