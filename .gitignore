@@ -111,6 +111,3 @@ sympy-plots-for-*.tex/
 ## Emacs temp files (philsf)
 **/auto/
 *~
-
-## RStudio (philsf)
-.Rproj.user
