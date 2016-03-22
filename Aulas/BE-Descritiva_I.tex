@@ -375,21 +375,22 @@ Variáveis quantitativas se subdividem em
         \hline
         $x_i$ & $F_i$ & $f_i$ & $F_a$ & $f_a$\\
         \hline
-        1 & 3 & \alert{\only<2>{0.25}} & & \\
+        1 & \only<1>{\alert{3}}\only<2->{3} & \alert{\only<2->{0.25}} & & \\
         \hline
-        2 & 1 & \alert{\only<2>{0.08}} & & \\
+        2 & 1 & \alert{\only<3->{0.08}} & & \\
         \hline
-        3 & 5 & \alert{\only<2>{0.42}} & & \\
+        3 & 5 & \alert{\only<3->{0.42}} & & \\
         \hline
-        4 & 1 & \alert{\only<2>{0.08}} & & \\
+        4 & 1 & \alert{\only<3->{0.08}} & & \\
         \hline
-        5 & 2 & \alert{\only<2>{0.17}} & & \\
+        5 & 2 & \alert{\only<3->{0.17}} & & \\
         \hline
         \hline
-        Total & 12 & \alert{\only<2>{1}} & & \\
+        Total & \only<1>{\alert{12}}\only<2->{12} & \alert{\only<3->{1}} & & \\
         \hline
       \end{tabular}
-      Total de dados: N = 12
+      \only<1-2>{\alert{$\frac{3}{12}=0.25$}}
+      \only<3->{Total de dados: N = 12}
     \end{center}
   \end{example}
 \end{frame}
