@@ -442,7 +442,7 @@ Conforme no exemplo anterior
     outliers)
   \item Módulo não tem boas propriedades matemáticas (analíticas e
     algébricas).
-  \item Pouco usado para inferência (baixa eficiência)
+  \item Pouco usado para inferência (apesar da robustez)
   \end{itemize}
 \end{frame}
 
@@ -463,7 +463,7 @@ Conforme no exemplo anterior
     \end{column}
     \begin{column}{5cm}
       \begin{displaymath}
-        \mathrm{MAD } = \frac{\sum D_i}{5} = \frac{6}{5} = 1.2
+        \mathrm{MAD } = \frac{\sum |D_i|}{5} = \frac{6}{5} = 1.2
       \end{displaymath}
     \end{column}
   \end{columns}
@@ -570,8 +570,32 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
     \end{enumerate}
   \end{block}
   
+  \begin{block}{Formulário}
+$$ \bar{x} = \frac{\sum x_i}{n} $$
+$$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
+$$s = \sqrt{s^2} $$
+    % \begin{enumerate}
+    % \item $s^2 = $
+    %   $=\frac{0.36+1.96+6.76+1.96+0.16}{4}=2.8$
+    % \item $s = \sqrt{2.8} = 1.67 $
+    % \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Exercícios}
+  \begin{block}{Exercício}
+    Um pesquisador observou as seguintes idades (anos) para uma amostra:
+    35, 33, 37, 33, 34.
+
+    Determine:
+    \begin{enumerate}
+    \item<1-> A variância amostral ($s^2$)
+    \item<1-> O desvio padrão amostral ($s$)
+    \end{enumerate}
+  \end{block}
+
   \begin{block}{Solução}
-    Lembrando que $\bar{x} = 34.4$, temos:
+    Como $\bar{x} = 34.4$, temos:
     \begin{enumerate}
     \item $s^2 =
       % \frac{(35-34.4)^2+(33-34.4)^2+(37-34.4)^2+(33-34.4)^2+(34-34.4)^2}{5-1}
@@ -585,7 +609,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 \subsection{Coeficiente de Variação}
 \begin{frame}{Coeficiente de Variação}
   \begin{definition}
-    $$CV = \frac{\sigma}{\mu}$$
+    $$CV = \frac{s}{\bar{x}}$$
   \end{definition}
   \begin{itemize}
   \item Normaliza a variabilidade em relação à média
@@ -736,12 +760,12 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 \begin{frame}{O Boxplot}
   \begin{itemize}
   \item Gráfico que ilustra a dispersão dos dados pelos quartis
-  \item Retângulo que representa a Distância Interquartílica ($DQ =
+  \item Retângulo que representa a Amplitude Interquartílica ($AIQ =
     Q_3-Q_1$)
   \item Barra interna que representa a mediana ($Q_2$)
-  \item Limite superior (barra vertical): $Q_3 + 1.5 \cdot DQ$
-  \item Limite inferior (barra vertical): $Q_1 - 1.5\cdot DQ$
-  \item Outliers como pontos, círculos ou estrelas
+  \item Limite superior (barra vertical): $Q_3 + 1.5 \times AIQ$
+  \item Limite inferior (barra vertical): $Q_1 - 1.5 \times AIQ$
+  \item Outliers como pontos, círculos ou estrelas, etc.
   \item Conveniente para comparar vários grupos ou amostras
   \end{itemize}
 \end{frame}
