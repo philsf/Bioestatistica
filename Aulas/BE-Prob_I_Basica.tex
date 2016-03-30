@@ -457,47 +457,47 @@ Probabilidade de sortear um ás no baralho
   \end{block}
 \end{frame}
 
-\begin{frame}{Exercícios}
-  \begin{block}{Exercício}
+\begin{frame}{Pergunta 1 (lembra?)}
+  \begin{example}
     \begin{columns}
-      \begin{column}{5cm}<1-> Considere 4 tipos de sintomas (S) e dois
-        estágios de doença: terminal (T) e não terminal (N).
+      \begin{column}{5cm}<1->
+        4 sintomas e estágios terminal e não terminal (T/N).
 
-        Qual é a probabilidade de um paciente ter o sintoma 3 ou ser um
-        paciente terminal?
+        \smallskip
+        Qual é a probabilidade de um paciente ter náusea {\bf ou} ser terminal?
       \end{column}
       \begin{column}{5cm}<1->
         \begin{tabular}{ccc|c}
-          S & N & T & total\\
+          Sintoma & T & N & total\\
           \hline
-          1 & 4 & 3 & 7\\
-          2 & 0 & 5 & 5\\
-          3 & 8 & 4 & 12\\
-          4 & 12 & 0 & 12\\
+          febre & 3 & 4 & 7\\
+          diarréia & 5 & 0 & 5\\
+          náusea & \alert<9>{4} & 8 & \alert<5>{12}\\
+          vômito & 0 & 12 & 12\\
           \hline
-          total & 24 & 12 & 36\\
+          total & \alert<6>{12} & 24 & \alert<5,6,9>{36}\\
         \end{tabular}
       \end{column}
     \end{columns}
-  \end{block}
+  \end{example}
   \begin{block}{Solução}
-    \begin{tabular}{l}
-      A = sintoma 3\\
-      B = paciente T\\
-    \end{tabular}
     \begin{columns}
-      \begin{column}{5cm}
-        \begin{tabular}{l}
-          P(A) = $\frac{12}{36} = \frac{1}{3}$\\
-          P(B) = $\frac{12}{36} = \frac{1}{3}$\\
-        \end{tabular}
+      \begin{column}{4cm}<5->
+        \alert<5>{A = náusea}
+
+        \alert<6>{B = terminal}
+
+        \smallskip
+        \only<7->{P(A) = $\frac{12}{36} = \frac{1}{3}$}
+
+        \only<7->{P(B) = $\frac{12}{36} = \frac{1}{3}$}
       \end{column}
-      \begin{column}{5cm}
-        \begin{tabular}{l}
-          P(A e B) = $\frac{4}{36} = \frac{1}{9}$\\
-          \\
-          P(A ou B) = $\frac{1}{3} + \frac{1}{3} - \frac{1}{9} = \frac{5}{9}$\\
-        \end{tabular}
+      \begin{column}{6cm}<8->
+        \begin{itemize}
+        \item<8-> P(A) = $\frac{1}{3}$, P(B) = $\frac{1}{3}$
+        \item<9-> P(A e B) = $\alert<9>{\frac{4}{36}} = \frac{1}{9}$
+        \item<10-> P(A ou B) = $\frac{1}{3} + \frac{1}{3} - \frac{1}{9} = \frac{5}{9}$
+        \end{itemize}
       \end{column}
     \end{columns}
   \end{block}
