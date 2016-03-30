@@ -635,8 +635,8 @@ Probabilidade de sortear um ás no baralho
 % \begin{frame}{Eventos dependentes}
 % \end{frame}
 
-\begin{frame}{Exercício}
-  \begin{block}{Exercício}
+\begin{frame}{Mais exemplos}
+  \begin{example}
     \begin{tabular}{ccc|c}
       QI & possui o gene & não possui o gene & total\\
       elevado & 33 & 19 & 52\\
@@ -649,31 +649,38 @@ Probabilidade de sortear um ás no baralho
     \item Qual é a probabilidade de uma criança não ter o gene, dado
       que ela tem o QI normal?
     \end{enumerate}
-  \end{block}
+  \end{example}
 \end{frame}
 
-\begin{frame}{Exercício}
+\begin{frame}{Mais exemplos}
+  \begin{example}
+    \begin{tabular}{ccc|c}
+      QI & possui o gene & não possui o gene & total\\
+      elevado & 33 & 19 & 52\\
+      normal & 39 & \alert<10>{11} & \alert<10>{50}\\
+      \hline
+      total & 72 & \alert<5>{30} & 102\\
+    \end{tabular}
+  \end{example}
   \begin{block}{Solução}
-  \begin{tabular}{ccc|c}
-    QI & possui o gene & não possui o gene & total\\
-    elevado & 33 & 19 & 52\\
-    normal & 39 & 11 & 50\\
-    \hline
-    total & 72 & 30 & 102\\
-  \end{tabular}
-    \begin{enumerate}
-    \item $P(\bar{G}) = \frac{30}{102}$
-    \item $P(\bar{G}|N) = P(N)P(\bar{G} \text{ e } N)$
-      \begin{displaymath}
-        P(N) = \frac{50}{102}
-      \end{displaymath}
-      \begin{displaymath}
-        P(\bar{G} \text{ e } N) = \frac{11}{102}
-      \end{displaymath}
-      \begin{displaymath}
-        P(\bar{G}|N) = \frac{11}{50}
-      \end{displaymath}
-    \end{enumerate}
+    \begin{columns}
+      \begin{column}{4cm}
+        \begin{enumerate}
+        \item $P(\bar{G}) = \alert<5>{\frac{30}{102}}$
+        \item $P(\bar{G}|N) = \frac{P(\bar{G} \text{ e } N)}{P(N)}$
+          \begin{itemize}
+          \item $P(\bar{G} \text{ e } N) = \frac{11}{102}$
+          \item $P(N) = \frac{50}{102}$
+          \end{itemize}
+        \end{enumerate}
+      \end{column}
+      \begin{column}{6cm}
+        Logo:
+        \begin{displaymath}
+          P(\bar{G}|N) = \frac{\frac{11}{102}}{\frac{50}{102}} = \alert<10>{\frac{11}{50}}
+        \end{displaymath}
+      \end{column}
+    \end{columns}
   \end{block}
 \end{frame}
 
