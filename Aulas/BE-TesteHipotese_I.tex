@@ -184,7 +184,7 @@
   \item O nível de significância
   \item A estatística de teste
   \item A região crítica
-  \item 
+%  \item 
   \end{itemize}
 \end{frame}
 
@@ -214,6 +214,15 @@
   \item A hipótese alternativa ($H_1$ ou $H_a$) é o complementar da
     hipótese nula.
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Identificando hipóteses}
+  \begin{block}{Atenção}
+    A lógica do teste de hipóteses é o \alert{inverso} do que se esperaria, ou seja, ao invés de testar a hipótese de interesse, vamos {\em testar a hipótese nula} -- e tentar rejeitá-la.
+
+\bigskip
+{\bf Mantenha isso em mente daqui a para a frente.}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Identificando hipóteses}
@@ -309,8 +318,11 @@
       ($H_0$). Como 52 é próximo de 50, não deveríamos concluir que o
       produto é eficaz.
     \item É muito pouco provável o nascimento de 97 meninas em
-      100. Isso poderia ser explicado como (a) um evento {\em
-        extremamente} raro ocorrer ao acaso ou (b) o produto é eficaz.
+      100. Isso poderia ser explicado como
+      \begin{enumerate}
+      \item um evento {\em extremamente} raro ocorrer ao acaso ou
+      \item o produto é eficaz.
+      \end{enumerate}
     \end{enumerate}
   \end{example}
 \end{frame}
@@ -528,7 +540,7 @@
   \begin{itemize}
   \item Para testar essa hipótese usaremos o teste t pois a amostra é
     pequena ($n=18$) com \alert{$gl=17$} graus de liberdade.
-  \item Como o teste é unicaudal (à esquerda), consultamos a
+  \item Como o teste é unicaudal (à esquerda), consultamos a tabela para a
     significância $\alpha = 0.05$.
   \item Consultando a tabela t, encontramos o valor crítico
     \alert{$t_{(17,0.05)} = 1.74$}.
@@ -664,7 +676,7 @@
         \begin{itemize}
         \item $IC_{0.95} = (5.2 \pm 1.96 \times \frac{0.7}{\sqrt{40}})$
         \item $IC_{0.95} = (5.2 \pm 0.2)$
-        \item $IC_{0.95} = (5.0 , 5.4)$
+        \item $IC_{0.95} = \alert{(5.0 , 5.4)}$
         \end{itemize}
       \end{column}
     \end{columns}
