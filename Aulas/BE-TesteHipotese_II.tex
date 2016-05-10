@@ -264,6 +264,13 @@ Fonte: Khan Academy
   \end{example}
 \end{frame}
 
+\begin{frame}{Tabela Z}
+  \begin{figure}
+    \centering
+      \includegraphics[height=0.9\textheight]{TH_II/z_table}
+  \end{figure}
+\end{frame}
+
 \begin{frame}{O p-valor}
   Cuidado! O p-valor \alert{não é}:
   \begin{itemize}
@@ -307,6 +314,8 @@ Fonte: Rumsey, D. (Statistics for Dummies, 2nd ed.)
 \end{frame}
 
 \section{Testes com duas amostras}
+
+\subsection{Duas amostras grandes e independentes}
 
 \begin{frame}{Testes com duas amostras}
   \begin{itemize}
@@ -388,7 +397,7 @@ Mas usaremos uma versão simplificada\ldots
     \item $H_1: \mu_1 - \mu_2 > 0$ (teste unicaudal à direita)
     \item $\bar{x_1}-\bar{x_2}=1.91$
     \item $\sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma^2_2}{n_2}} =
-      \sqrt{\frac{4.67^2}{100} + \frac{4.04^2}{100}} \approx 0.617$
+      \sqrt{\frac{4.67^2}{100} + \frac{4.04^2}{100}} \approx \alert{0.617}$
     \item Estatística de teste
       \begin{displaymath}
         \alert{z} = \frac{\bar{x_1}-\bar{x_2}}{\sqrt{\frac{\sigma_1^2}{n_1} +
@@ -398,12 +407,19 @@ Mas usaremos uma versão simplificada\ldots
   \end{example}
 \end{frame}
 
+\begin{frame}{Tabela Z}
+  \begin{figure}
+    \centering
+      \includegraphics[height=0.9\textheight]{TH_II/z_table}
+  \end{figure}
+\end{frame}
+
 \begin{frame}{Exemplo}
   \begin{example}
     \begin{itemize}
     \item Encontramos a estatística de teste $z=3.09$
     \item Consultando a tabela Z, a probabilidade correspondente é
-      $p=0.001$
+      \alert{$p=0.001$}
     \item Como $p<0.05$, concluímos que há evidências para rejeitar $H_0$
     \item Assim, há evidências de que a nova dieta resulta em perda de
       peso
@@ -411,29 +427,63 @@ Mas usaremos uma versão simplificada\ldots
   \end{example}
 \end{frame}
 
-% \begin{frame}{Estatísticas de teste para duas amostras}
-%   Duas amostras grandes e independentes (teste Z):
-%   \begin{displaymath}
-%     z = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
-%     }{\sigma_{(\bar{x_1} - \bar{x_2})}}
-%   \end{displaymath}
+\subsection{Amostras pequenas e independentes}
 
-%   Duas amostras pequenas e independentes (teste t):
-%   \begin{displaymath}
-%     t = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
-%     }{\sigma_{(\bar{x_1} - \bar{x_2})}}
-%   \end{displaymath}
+\begin{frame}{Amostras pequenas e independentes}
+  \begin{itemize}
+  \item Caso uma das amostras seja pequena ($n\le30$), deve-se usar o teste t ao invés de teste z.
+  \item A estatística de teste é
+    $t = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
+    }{\sigma_{(\bar{x_1} - \bar{x_2})}}$
+  \item Cada amostra, $n_1$ e $n_2$ tem seus respectivos graus de liberdade
+  \item Consulta-se a tabela t, usando o menor destes valores
+  \end{itemize}
+\end{frame}
 
-% % Duas proporções:
-% % \begin{displaymath}
-% %   z = \frac{(\hat{p_1} - \hat{p_2}) - (p_1-p_2) }{\}
-% % \end{displaymath}
+\subsection{Duas amostras dependentes (pareadas)}
 
-% % Duas amostras dependentes (ou emparelhadas):
-% % \begin{displaymath}
-% % t = \frac{\bar{d} - \mu_d}{\frac{s_d}{\sqrt{n}}}
-% % \end{displaymath}
-% \end{frame}
+\begin{frame}{Duas amostras pareadas}
+  \begin{block}{}
+  Se duas amostras são pareadas (o \alert{mesmo} indivíduo, antes e depois da intervenção), calculamos a diferença \alert{por indivíduo}, e não a diferença entre as médias de cada grupo.
+  \end{block}
+
+  \begin{itemize}
+  \item Calcula-se a diferença $d$ entre os valores de cada indivíduo
+ \item Considera-se a amostra deste ``novo dado'', $H_0: d=0$
+  \item A estatística de teste é
+    $t = \frac{\bar{d} - \mu_d}{\frac{s_d}{\sqrt{n}}}$
+  \item Cada amostra, $n_1$ e $n_2$ tem seus respectivos graus de liberdade
+  \item Consulta-se a tabela t, usando o menor destes valores.
+  \end{itemize}
+\end{frame}
+
+\subsection{Resumo}
+
+\begin{frame}{Estatísticas de teste para duas amostras}
+  Duas amostras grandes e independentes (teste Z):
+  \begin{displaymath}
+    z = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
+    }{\sigma_{(\bar{x_1} - \bar{x_2})}}
+  \end{displaymath}
+
+  Duas amostras pequenas e independentes (teste t):
+  \begin{displaymath}
+    t = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
+    }{\sigma_{(\bar{x_1} - \bar{x_2})}}
+  \end{displaymath}
+
+  % Duas proporções:
+  % \begin{displaymath}
+  %   z = \frac{(\hat{p_1} - \hat{p_2}) - (p_1-p_2) }{\}
+  %   \end{displaymath}
+
+    Duas amostras dependentes (pareadas):
+    \begin{displaymath}
+      t = \frac{\bar{d} - \mu_d}{\frac{s_d}{\sqrt{n}}}
+    \end{displaymath}
+    
+  \end{frame}
+
 
 \end{document}
 
