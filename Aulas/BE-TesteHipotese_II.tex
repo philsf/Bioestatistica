@@ -315,6 +315,8 @@ Fonte: Rumsey, D. (Statistics for Dummies, 2nd ed.)
 
 \section{Testes com duas amostras}
 
+\subsection{Duas amostras grandes e independentes}
+
 \begin{frame}{Testes com duas amostras}
   \begin{itemize}
   \item Frequentemente precisamos dividir os dados em dois grupos e
@@ -425,29 +427,63 @@ Mas usaremos uma versão simplificada\ldots
   \end{example}
 \end{frame}
 
-% \begin{frame}{Estatísticas de teste para duas amostras}
-%   Duas amostras grandes e independentes (teste Z):
-%   \begin{displaymath}
-%     z = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
-%     }{\sigma_{(\bar{x_1} - \bar{x_2})}}
-%   \end{displaymath}
+\subsection{Amostras pequenas e independentes}
 
-%   Duas amostras pequenas e independentes (teste t):
-%   \begin{displaymath}
-%     t = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
-%     }{\sigma_{(\bar{x_1} - \bar{x_2})}}
-%   \end{displaymath}
+\begin{frame}{Amostras pequenas e independentes}
+  \begin{itemize}
+  \item Caso uma das amostras seja pequena ($n\le30$), deve-se usar o teste t ao invés de teste z.
+  \item A estatística de teste é
+    $t = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
+    }{\sigma_{(\bar{x_1} - \bar{x_2})}}$
+  \item Cada amostra, $n_1$ e $n_2$ tem seus respectivos graus de liberdade
+  \item Consulta-se a tabela t, usando o menor destes valores
+  \end{itemize}
+\end{frame}
 
-% % Duas proporções:
-% % \begin{displaymath}
-% %   z = \frac{(\hat{p_1} - \hat{p_2}) - (p_1-p_2) }{\}
-% % \end{displaymath}
+\subsection{Duas amostras dependentes (pareadas)}
 
-% % Duas amostras dependentes (ou emparelhadas):
-% % \begin{displaymath}
-% % t = \frac{\bar{d} - \mu_d}{\frac{s_d}{\sqrt{n}}}
-% % \end{displaymath}
-% \end{frame}
+\begin{frame}{Duas amostras pareadas}
+  \begin{block}{}
+  Se duas amostras são pareadas (o \alert{mesmo} indivíduo, antes e depois da intervenção), calculamos a diferença \alert{por indivíduo}, e não a diferença entre as médias de cada grupo.
+  \end{block}
+
+  \begin{itemize}
+  \item Calcula-se a diferença $d$ entre os valores de cada indivíduo
+ \item Considera-se a amostra deste ``novo dado'', $H_0: d=0$
+  \item A estatística de teste é
+    $t = \frac{\bar{d} - \mu_d}{\frac{s_d}{\sqrt{n}}}$
+  \item Cada amostra, $n_1$ e $n_2$ tem seus respectivos graus de liberdade
+  \item Consulta-se a tabela t, usando o menor destes valores.
+  \end{itemize}
+\end{frame}
+
+\subsection{Resumo}
+
+\begin{frame}{Estatísticas de teste para duas amostras}
+  Duas amostras grandes e independentes (teste Z):
+  \begin{displaymath}
+    z = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
+    }{\sigma_{(\bar{x_1} - \bar{x_2})}}
+  \end{displaymath}
+
+  Duas amostras pequenas e independentes (teste t):
+  \begin{displaymath}
+    t = \frac{ (\bar{x_1} - \bar{x_2}) - (\mu_1 - \mu_2)
+    }{\sigma_{(\bar{x_1} - \bar{x_2})}}
+  \end{displaymath}
+
+  % Duas proporções:
+  % \begin{displaymath}
+  %   z = \frac{(\hat{p_1} - \hat{p_2}) - (p_1-p_2) }{\}
+  %   \end{displaymath}
+
+    Duas amostras dependentes (pareadas):
+    \begin{displaymath}
+      t = \frac{\bar{d} - \mu_d}{\frac{s_d}{\sqrt{n}}}
+    \end{displaymath}
+    
+  \end{frame}
+
 
 \end{document}
 
