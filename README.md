@@ -34,8 +34,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Inferência II]: Aulas/BE-Inferencia_II_4em1.pdf
 [Testes de Hipóteses I]: Aulas/BE-TesteHipotese_I_4em1.pdf
 [Testes de Hipóteses II]: Aulas/BE-TesteHipotese_II_4em1.pdf
-[Tabelas de Contingência]: Aulas/BE-Tabelas_de_Contingencia_4em1.pdf
-[Correlação e Regressão]: Aulas/BE-Associacao_4em1.pdf
+[Tabelas de Contingência]: Aulas/BE-Associacao_I_4em1.pdf
+[Correlação e Regressão]: Aulas/BE-Associacao_II_4em1.pdf
 [Tutorial - Descritiva]: Aulas/BE-Pratica_Descritiva_4em1.pdf
 [Tutorial - Correlação e Regressão]: Aulas/BE-Pratica_Associacao_4em1.pdf
 
