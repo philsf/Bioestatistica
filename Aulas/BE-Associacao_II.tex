@@ -303,8 +303,8 @@
 \begin{frame}{Exemplo}
  \begin{example}
    Pesquisadores queriam entender por que a insulina varia tanto entre
-   indivíduos. Imaginaram que a composição lipídica das células do
-   músculo afetam a sensibilidade do músculo para a insulina. Para
+   indivíduos. Imaginaram que a \alert<2>{composição lipídica} das células do
+   músculo afetam a \alert<3>{sensibilidade do músculo para a insulina}. Para
    isto, eles injetaram insulina em 13 jovens adultos, e determinaram
    quanta glicose eles precisariam injetar nos sujeitos para manter o
    nível de glicose sanguínea constante. A quantidade de glicose
@@ -502,7 +502,7 @@
   \begin{itemize}
   \item Relembrando: a equação de uma reta é definida pela fórmula
     \begin{displaymath}
-      \hat{y} = a x + b
+      \hat{y} = \alert{a} x + \alert{b}
     \end{displaymath}
   \item No caso da reta regressora:
     \begin{itemize}
@@ -512,7 +512,7 @@
     \item $b$ é o intercepto
     \end{itemize}
   \item Assim, o objetivo da análise de regressão é encontrar os
-    valores $a$ e $b$
+    valores \alert{$a$} e \alert{$b$}
   \end{itemize}
 \end{frame}
 
@@ -525,6 +525,41 @@
   \item o tamanho da amostra $n$
   \item \ldots e algumas operações entre estes termos
   \end{itemize}
+\end{frame}
+
+\subsection{A regressão}
+
+\begin{frame}{Exemplo}
+  \begin{example}
+    Voltemos ao exemplo de associar a composição lipídica com a sensibilidade a insulina.    
+  \end{example}
+  \begin{block}{Pergunta}
+    Qual é o acréscimo na sensibilidade à insulina, para cada unidade aumentada na composição lipídica?
+  \end{block}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \centering
+  \includegraphics[width=.9\textwidth]{Assoc/regressao1}
+
+  \vfill
+  Fonte: Motulsky, 1995
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \centering
+  \includegraphics[width=1.2\textwidth]{Assoc/regressao2}
+\end{frame}
+
+\begin{frame}{Interpretação}
+  \begin{itemize}
+  \item O p-valor é significativo.
+  \item A inclinação é $\approx \alert{37.2}$
+  \item Isto significa que:
+  \end{itemize}
+  \begin{block}{}
+    para cada unidade aumentada no \%C20--22, teremos um aumento proporcional de aproximadamente 37.2 mg/m$^2$/min na sensibilidade à insulina
+  \end{block}
 \end{frame}
 
 \begin{frame}{Análise de Regressão}
@@ -542,20 +577,6 @@
 
   % Encontrando a inclinação e o intercepto da reta, podemos estimar
   % $\hat{Y}$ para valores arbitrários de $X$.
-
-% \subsection{}
-
-% \begin{frame}{}
-%   \begin{itemize}
-%   \item 
-%   \end{itemize}
-% \end{frame}
-
-% \begin{frame}{}
-%   \begin{itemize}
-%   \item 
-%   \end{itemize}
-% \end{frame}
 
 \subsection[$R^2$]{Coeficiente de Determinação $r^2$}
 

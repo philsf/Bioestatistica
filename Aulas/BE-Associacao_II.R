@@ -9,3 +9,9 @@ legend("topleft",legend = leg.txt, border = "")
 
 cor(x,y)
 cor.test(x,y)
+
+## Regressão ####
+reta <- lm(y ~ x)
+summary(reta)
+abline(reta, lwd = 2, col = "blue")
+>>>>>>> iss55
