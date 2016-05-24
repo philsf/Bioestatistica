@@ -8,3 +8,4 @@ leg.txt <- paste("r = ", round(cor(x,y), digits = 2))
 legend("topleft",legend = leg.txt, border = "")
 
 cor(x,y)
+cor.test(x,y)
