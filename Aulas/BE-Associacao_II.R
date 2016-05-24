@@ -8,3 +8,8 @@ leg.txt <- paste("r = ", round(cor(x,y), digits = 2))
 legend("topleft",legend = leg.txt, border = "")
 
 cor(x,y)
+
+## Regressão ####
+reta <- lm(y ~ x)
+summary(reta)
+abline(reta, lwd = 2, col = "blue")
