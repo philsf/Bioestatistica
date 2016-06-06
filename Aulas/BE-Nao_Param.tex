@@ -177,11 +177,26 @@
 
 \subsection{Revisão}
 
-\subsection[1 média]{Teste para 1 média}
+\subsection[1 amostra]{Teste para 1 amostra}
 
-\subsection[2 médias]{Teste para 2 médias}
+\subsection[2 médias]{Testes para 2 amostras}
 
-\subsection[3+ médias]{Teste para 3 ou mais médias}
+\begin{frame}{Testes para 2 amostras}
+  \begin{block}{Dados normais}
+    \begin{itemize}
+    \item amostras independentes $\Rightarrow$ t-teste não-pareado
+    \item amostras pareadas $\Rightarrow$ t-teste pareado
+    \end{itemize}
+  \end{block}
+  \begin{block}{Dados não-normais}
+    \begin{itemize}
+    \item amostras independentes $\Rightarrow$ Wilcoxon (signed rank test)
+    \item amostras pareadas $\Rightarrow$ Mann-Whitney \footnote{Também conhecido como Wilcoxon (rank sum test)}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\subsection[3+ amostras]{Teste para 3 ou mais amostras}
 
 \subsection[Correlação]{Teste de correlação}
 
