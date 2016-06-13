@@ -248,6 +248,52 @@
   \end{block}
 \end{frame}
 
+\begin{frame}{Exemplo}
+P: Estas amostras são significativamente diferentes?
+
+  \centering
+  \includegraphics[height=\textheight]{Nao_Param/2samples-bp}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{itemize}
+  \item Assumindo\footnote{pelo desenho experimental} que elas são independentes, poderíamos fazer um teste t não-pareado.
+  \item Resultado: p-valor = \alert{0.259}
+  \item Então elas não são diferentes?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Histogramas}
+  \includegraphics[width=\textwidth]{Nao_Param/2samples-h}
+
+%p-valores Shapiro-Wilk: (x) =  5.515e-16, (y) = 5.274e-09
+\end{frame}
+
+\begin{frame}{QQ-plots}
+ \includegraphics[width=\textwidth]{Nao_Param/2samples-qq}
+
+%p-valores Shapiro-Wilk: (x) =  5.515e-16, (y) = 5.274e-09
+\end{frame}
+
+\begin{frame}{Shapiro-Wilk}
+  \begin{block}{Teste t}
+    p-valor = 0.259 (não são diferentes)
+  \end{block}
+  \begin{itemize}
+  \item<2-> Aplicando o teste de Shapiro-Wilk em x e y
+    \begin{itemize}
+    \item<2-> x: p-valor = 5.515e-16
+    \item<2-> y: p-valor = 5.274e-09
+    \end{itemize}
+  \item Devemos rejeitar a hipótese de normalidade.
+  \item Então o teste t \alert{não é} apropriado!
+  \item Substituto: teste de Mann-Whitney
+  \end{itemize}
+  \begin{block}{Teste de Mann-Whitney}
+    p-value = \alert{0.0001346} (são diferentes)
+  \end{block}
+\end{frame}
+
 \subsection[3+ amostras]{Teste para 3 ou mais amostras}
 
 \subsection[Correlação]{Teste de correlação}
