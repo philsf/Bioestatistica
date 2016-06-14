@@ -414,6 +414,22 @@ P: Estas amostras são significativamente diferentes?
   \includegraphics[height=.9\textheight]{Nao_Param/3samples-bp}
 \end{frame}
 
+\begin{frame}{Kruskal-Wallis}
+  \begin{block}{ANOVA}
+    p-valor = 0.0776 (não significativo)
+  \end{block}
+  \begin{itemize}
+  \item Shapiro-Wilk (Ozônio): p-value = 2.79e-08
+  \item Devemos rejeitar a hipótese de normalidade.
+  \item Então o ANOVA \alert{não é} apropriado!
+  \item Substituto: teste de Kruskal-Wallis
+  \end{itemize}
+  \begin{block}{Teste de Kruskal-Wallis}
+    p-value = \alert{6.901e-06} (significativo)
+  \end{block}
+\end{frame}
+
+
 \subsection[Correlação]{Teste de correlação}
 
 \section{Resumo}
@@ -437,3 +453,9 @@ P: Estas amostras são significativamente diferentes?
 \end{frame}
 
 \end{document}
+% \begin{frame}{Relembrando}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+% \end{frame}
+
