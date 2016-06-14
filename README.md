@@ -4,7 +4,7 @@ Este é o repositório da disciplina de Bioestatística do professor Felipe Figu
 
 A digulgação do material para os alunos é feita pelo endereço: https://sites.google.com/site/proffelipefigueiredo/into/bioestatistica
 
-##Planejamento de aulas de conteúdo
+## Planejamento de aulas de conteúdo
 
 [Cronograma][]
 
@@ -22,7 +22,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 - [Correlação e Regressão][]
 - [Tutorial - Descritiva][]
 - [Tutorial - Correlação e Regressão][]
-- Testes não-paramétricos
+- [Métodos não-paramétricos][]
 
 [Cronograma]: https://docs.google.com/document/d/1xb7Yqxae8sbbbkPYjg5ZGhxJ8NFfxOURBISeWVHkjUE
 [Introdução]: Aulas/BE-Intro_4em1.pdf
@@ -38,8 +38,10 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Correlação e Regressão]: Aulas/BE-Associacao_II_4em1.pdf
 [Tutorial - Descritiva]: Aulas/BE-Pratica_Descritiva_4em1.pdf
 [Tutorial - Correlação e Regressão]: Aulas/BE-Pratica_Associacao_4em1.pdf
+[Métodos não-paramétricos]: Aulas/BE-Nao_Param_4em1.pdf
 
-##Bibliografia
+
+## Bibliografia
 
 Livro texto:
 
@@ -77,7 +79,7 @@ Online:
 [goodman1999]: http://annals.org/article.aspx?articleid=712762
 [goodman1999-pdf]: http://www.perfendo.org/docs/bayesprobability/5.3_goodmanannintmed99all.pdf
 
-##Avaliação
+## Avaliação
 
 A avaliação final da disciplina consistirá na apresentação de um seminário, sobre um estudo publicado em um journal. Os alunos deverão preparar e apresentar o  seminário em dupla. O objetivo da avaliação é que os alunos façam uma síntese crítica da análise estatística utilizada neste estudo à luz dos conteúdos vistos ao longo da disciplina.
 

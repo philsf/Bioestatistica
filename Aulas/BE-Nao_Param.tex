@@ -1,0 +1,465 @@
+\everymath{\displaystyle}
+\documentclass{beamer}
+% \documentclass[handout]{beamer}
+
+%\usepackage[pdftex]{color,graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+
+\mode<presentation>
+{
+  % \usetheme{Darmstadt}
+  % \usetheme[hideothersubsections]{Hannover}
+  % \usetheme[hideothersubsections]{Goettingen}
+  \usetheme[hideothersubsections, right]{Berkeley}
+
+  \usecolortheme{seahorse}
+  % \usecolortheme{dolphin}
+  \usecolortheme{rose}
+  % \usecolortheme{orchid}
+
+  \useinnertheme[shadow]{rounded}
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+\mode<handout>{
+  \setbeamercolor{background canvas}{bg=black!5}
+  \usepackage{pgfpages}
+  \pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm, landscape]
+}
+
+\usepackage[brazilian]{babel}
+% or whatever
+
+% \usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{times}
+%\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+\title%[] % (optional, use only with long paper titles)
+{Métodos não-paramétricos}
+
+\subtitle
+{Ou: o que fazer caso seus dados não sejam normais?} % (optional)
+
+\author%[] % (optional, use only with lots of authors)
+{Felipe Figueiredo}% \and S.~Another\inst{2}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[INTO] % (optional, but mostly needed)
+{Instituto Nacional de Traumatologia e Ortopedia
+}
+  % \inst{1}%
+  % Department of Computer Science\\
+  % University of Somewhere
+  % \and
+  % \inst{2}%
+  % Department of Theoretical Philosophy\\
+  % University of Elsewhere}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date%[] % (optional)
+{}
+
+% \subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+\pgfdeclareimage[height=1.6cm]{university-logo}{../logo}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+%\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Sumário}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Sumário}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+%% Template
+% \section{}
+
+% \subsection{}
+
+% \begin{frame}{}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+% \end{frame}
+
+% \begin{frame}
+%   \begin{columns}
+%     \begin{column}{5cm}
+%     \end{column}
+%     \begin{column}{5cm}
+%     \end{column}
+%   \end{columns}
+% \end{frame}
+
+% \begin{frame}{}
+%   \includegraphics[height=0.4\textheight]{file1}
+%   \includegraphics[height=0.4\textheight]{file2}
+%   \includegraphics[height=0.4\textheight]{file3}
+%   \begin{figure}
+%     \caption{}
+%   \end{figure}
+% \end{frame}
+
+% \begin{frame}{}
+%   \begin{definition}
+%   \end{definition}
+%   \begin{example}
+%   \end{example}
+%   \begin{block}{Exercício}
+%   \end{block}
+% \end{frame}
+
+\section{Normalidade}
+
+\begin{frame}{A hipótese da normalidade}
+  \begin{itemize}
+  \item Todos os métodos que vimos até aqui presumem que os dados são normalmente distribuídos
+  \item Desvios da normalidade precisam ser contornados\footnote{há controvérsias: \url{http://www.r-bloggers.com/normality-tests-don\%E2\%80\%99t-do-what-you-think-they-do/}}
+  \item Veremos duas maneiras: transformações e alternativas
+  \item Mas antes, como identificar essa necessidade?
+  \end{itemize}
+
+\end{frame}
+
+\subsection{Visualização}
+
+\begin{frame}{Visualização - Histograma}
+  \centering
+  \includegraphics[width=.7\textwidth]{Nao_Param/normal1-h}
+
+  Dados normais
+\end{frame}
+
+\begin{frame}{Visualização - Histograma}
+  \centering
+  \includegraphics[width=.7\textwidth]{Nao_Param/lognormal1-h}
+
+  Dados não-normais
+\end{frame}
+
+\begin{frame}{Visualização - Histograma}
+  \centering
+  \includegraphics[width=.7\textwidth]{Nao_Param/normal2-h}
+
+  Dados normais
+\end{frame}
+
+\begin{frame}{Visualização - Histograma}
+  \centering
+  \includegraphics[width=.7\textwidth]{Nao_Param/lognormal2-h}
+
+  Dados não-normais
+\end{frame}
+
+\begin{frame}{Visualização - Histograma}
+  \centering
+  \includegraphics[width=.5\textwidth]{Nao_Param/normal2-h}
+  \includegraphics[width=.5\textwidth]{Nao_Param/lognormal2-h}
+\end{frame}
+
+\begin{frame}{Visualização - boxplot}
+  \centering
+  \includegraphics[width=.5\textwidth]{Nao_Param/normal1-h}
+  \includegraphics[width=.5\textwidth]{Nao_Param/lognormal1-h}
+
+  \includegraphics[width=.5\textwidth]{Nao_Param/normal-bp}
+  \includegraphics[width=.5\textwidth]{Nao_Param/lognormal-bp}
+\end{frame}
+
+\begin{frame}{O Q-Q plot}
+  \begin{itemize}
+  \item Gráfico que compara os quantis da amostra com os quantis teóricos
+  \item Adicionalmente uma reta ``ideal'' é sobreposta, como referência
+  \item Dados normalmente distribuídos, ficam próximos da reta
+  \item Quanto maior o desvio da normalidade, maior a distância à reta
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Visualização - QQ plot}
+  \centering
+  \includegraphics[width=.5\textwidth]{Nao_Param/normal1-h}
+  \includegraphics[width=.5\textwidth]{Nao_Param/lognormal1-h}
+
+  \includegraphics[width=.5\textwidth]{Nao_Param/normal-qq}
+  \includegraphics[width=.5\textwidth]{Nao_Param/lognormal-qq}
+\end{frame}
+
+\subsection[Normalidade]{Testes contra a normalidade}
+
+\begin{frame}
+  \begin{itemize}
+  \item Objetivo: é possível \alert{determinar} se uma amostra veio de uma população normalmente distribuída?
+  \item Resposta curta: \alert<3->{NÃO}.
+  \item<4> Resposta longa: podemos examinar se há evidências para ``aceitar'' esta hipótese\footnote{Lembre que {\bf nunca} aceitamos uma hipótese -- apenas deixamos de rejeitar sua recíproca.}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Alguns testes de normalidade}
+  \begin{itemize}
+  \item<1-> \alert<2>{Shapiro-Wilk}
+  \item<1-> Anderson-Darling
+  \item<1-> Kolmogorov-Smirnov
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Shapiro-Wilk}
+  \centering
+  \includegraphics[width=.8\textwidth]{Nao_Param/normal1-h}
+
+  p-value = 0.7766
+\end{frame}
+
+
+\begin{frame}{Shapiro-Wilk}
+  \centering
+  \includegraphics[width=.8\textwidth]{Nao_Param/lognormal1-h}
+
+  p-value = 1.657e-09
+\end{frame}
+
+\section{Transformações}
+
+\subsection{Transformações}
+
+\begin{frame}{Transformações}
+  \begin{itemize}
+  \item Algumas vezes, podemos aplicar uma transformação nos dados, para que eles se adequem às premissas requeridas
+  \item Transformações comuns incluem:
+    \begin{itemize}
+    \item<2-> logaritmo
+    \item<2-> exponencial
+    \item<2-> raiz quadrada
+    \item<2-> potências
+    \end{itemize}
+  \item Geralmente envolve tentativa e erro
+  \item Hipóteses sobre o problema ou desenho experimental ajudam
+  \end{itemize}
+\end{frame}
+
+\subsection{Exemplo}
+
+\begin{frame}{Exemplo}
+  \centering
+  \includegraphics[width=.8\textwidth]{Nao_Param/lognormal1-h}
+
+Transformação sugerida: logaritmo.
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \centering
+  \includegraphics[width=\textwidth]{Nao_Param/transf-h}
+
+Dados normais x dados transformados (log)
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \centering
+  \includegraphics[width=\textwidth]{Nao_Param/transf-qq}
+
+Dados normais x dados transformados (log)
+\end{frame}
+
+\section{Métodos não-paramétricos}
+
+\subsection[1 amostra]{Teste para 1 amostra}
+
+\begin{frame}{Teste para 1 amostra}
+  \begin{itemize}
+  \item Desvios da normalidade severos impactam os testes paramétricos
+  \item Nesses casos, deve-se transformar os dados, se possível
+  \item Caso não seja, deve-se usar um teste não-paramétrico
+  \end{itemize}
+  \begin{block}{Teste para uma amostra}
+    Ao invés do teste t, usar o teste de Wilcoxon
+  \end{block}
+\end{frame}
+
+\subsection[2 médias]{Testes para 2 amostras}
+
+\begin{frame}{Testes para 2 amostras}
+  \begin{block}{Dados normais}
+    \begin{itemize}
+    \item amostras independentes $\Rightarrow$ t-teste não-pareado
+    \item amostras pareadas $\Rightarrow$ t-teste pareado
+    \end{itemize}
+  \end{block}
+  \begin{block}{Dados não-normais}
+    \begin{itemize}
+    \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} \footnote{Também conhecido como Wilcoxon (rank sum test)}
+    \item amostras pareadas $\Rightarrow$ Wilcoxon (signed rank test)
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Em termos práticos...}
+P: Estas amostras são significativamente diferentes?
+
+  \centering
+  \includegraphics[height=\textheight]{Nao_Param/2samples-bp}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{itemize}
+  \item<1-> Assumindo\footnote{pelo desenho experimental} que elas são
+    \begin{itemize}
+    \item<1-> \alert<3>{normalmente distribuídas}, e
+    \item<1-> independentes,
+    \end{itemize}
+poderíamos fazer um teste t não-pareado.
+
+  \item<2-> Resultado: p-valor = \alert{0.259}
+  \begin{block}{Pergunta}
+    Isto significa que as amostras não são significativamente diferentes?
+  \end{block}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Novamente...}
+  \centering
+  \includegraphics[height=\textheight]{Nao_Param/2samples-bp}
+\end{frame}
+
+\begin{frame}{Histogramas}
+  \includegraphics[width=\textwidth]{Nao_Param/2samples-h}
+
+%p-valores Shapiro-Wilk: (x) =  5.515e-16, (y) = 5.274e-09
+\end{frame}
+
+\begin{frame}{QQ-plots}
+ \includegraphics[width=\textwidth]{Nao_Param/2samples-qq}
+
+%p-valores Shapiro-Wilk: (x) =  5.515e-16, (y) = 5.274e-09
+\end{frame}
+
+\begin{frame}{Mann-Whitney}
+  \begin{block}{Teste t}
+    p-valor = 0.259 (não significativo)
+  \end{block}
+  \begin{itemize}
+  \item<2-> Aplicando o teste de Shapiro-Wilk em x e y
+    \begin{itemize}
+    \item<2-> x: p-valor = 5.515e-16
+    \item<2-> y: p-valor = 5.274e-09
+    \end{itemize}
+  \item Devemos rejeitar a hipótese de normalidade.
+  \item Então o teste t \alert{não é} apropriado!
+  \item Substituto: teste de Mann-Whitney
+  \end{itemize}
+  \begin{block}{Teste de Mann-Whitney}
+    p-value = \alert{0.0001346} (significativo)
+  \end{block}
+\end{frame}
+
+\subsection[3+ amostras]{Teste para 3 ou mais amostras}
+
+\begin{frame}{Relembrando}
+  \begin{itemize}
+  \item Para testar se há diferença significativa em 3 ou mais amostras
+    \begin{itemize}
+    \item Análise de Variâncias (ANOVA)
+    \item Leva em conta as variâncias entre os grupos (\alert{inter})
+    \item Leva em conta a variância em cada grupo (\alert{intra})
+    \item $H_0:$ Todos os grupos são $=$
+    \item $H_1:$ pelo menos um grupo é significativamente $\ne$
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Em termos práticos...}
+P: Estas amostras são significativamente diferentes?
+
+  \centering
+  \includegraphics[height=.9\textheight]{Nao_Param/3samples-bp}
+\end{frame}
+
+\begin{frame}{Kruskal-Wallis}
+  \begin{block}{ANOVA}
+    p-valor = 0.0776 (não significativo)
+  \end{block}
+  \begin{itemize}
+  \item Shapiro-Wilk (Ozônio): p-value = 2.79e-08
+  \item Devemos rejeitar a hipótese de normalidade.
+  \item Então o ANOVA \alert{não é} apropriado!
+  \item Substituto: teste de Kruskal-Wallis
+  \end{itemize}
+  \begin{block}{Teste de Kruskal-Wallis}
+    p-value = \alert{6.901e-06} (significativo)
+  \end{block}
+\end{frame}
+
+\subsection{Correlação}
+
+\begin{frame}{Relembrando}
+  \begin{itemize}
+  \item A correlação de Pearson associa dados numéricos
+  \item Mede a direção e força desta associação
+  \end{itemize}
+  \begin{block}{Correlação}
+    Ao invés da correlação linear de Pearson, usar a correlação de ranks de Spearman
+  \end{block}
+\end{frame}
+
+\section{Resumo}
+
+\begin{frame}{Resumo}
+  \begin{block}{}
+      \begin{tabular}{||l||l||}
+    \hline
+    Paramétrico & Não-paramétrico\\
+    \hline
+    \hline
+    t-teste pareado & Wilcoxon\\
+    \hline
+    t-teste não-pareado & Mann-Whitney\\
+    \hline
+    ANOVA 1 fator & Kruskal-Wallis\\
+    \hline
+    Correlação de Pearson & Correlação de Spearman\\
+    \hline
+  \end{tabular}
+  \end{block}
+\end{frame}
+
+\end{document}
