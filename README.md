@@ -22,7 +22,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 - [Correlação e Regressão][]
 - [Tutorial - Descritiva][]
 - [Tutorial - Correlação e Regressão][]
-- Testes não-paramétricos
+- [Métodos não-paramétricos][]
 
 [Cronograma]: https://docs.google.com/document/d/1xb7Yqxae8sbbbkPYjg5ZGhxJ8NFfxOURBISeWVHkjUE
 [Introdução]: Aulas/BE-Intro_4em1.pdf
@@ -38,6 +38,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Correlação e Regressão]: Aulas/BE-Associacao_II_4em1.pdf
 [Tutorial - Descritiva]: Aulas/BE-Pratica_Descritiva_4em1.pdf
 [Tutorial - Correlação e Regressão]: Aulas/BE-Pratica_Associacao_4em1.pdf
+[Métodos não-paramétricos]: Aulas/BE-Nao_Param_4em1.pdf
+
 
 ##Bibliografia
 
