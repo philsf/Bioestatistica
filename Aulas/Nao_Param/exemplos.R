@@ -39,6 +39,8 @@ detach(twosamples)
 rm(twosamples)
 
 ## 3 amostras ####
+par(mfrow = c(1,1))
+boxplot(Ozone ~ Month, data = airquality, xlab="Mês", ylab="Ozônio", main="Medições de qualidade do ar em NY")
 m.p <- aov(Ozone ~ Month, data = airquality)
 m.np <- kruskal.test(Ozone ~ Month, data = airquality)
 m.ols <- lm(Ozone ~ Month, data = airquality)
