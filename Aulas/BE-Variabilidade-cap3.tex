@@ -226,7 +226,7 @@
 \subsection{Média e a mediana}
 
 \begin{frame}{Média}
-  \begin{example}
+  \begin{exampleblock}{Exemplo}
     Foram observados os seguintes níveis de colesterol de uma amostra
     de pacientes. Qual é o nível médio de colesterol nestes pacientes?
 
@@ -242,32 +242,30 @@
         \end{tabular}
       \end{column}
       \begin{column}{5cm}<1>
-        $\bar{x} = \frac{\sum x_i}{n} = \frac{990}{6} = 165$
+        $\bar{x} = \frac{990}{6} = 165$
       \end{column}
     \end{columns}
-  \end{example}
+  \end{exampleblock}
 \end{frame}
 
-
-\begin{frame}{Mediana}
-\begin{definition}
-A mediana é o dado que ocupa a \alert{posição central} nos dados
-    ordenados.
+\begin{frame}{Percentis e a Mediana}
+  \begin{definition}
+    A mediana é o dado que ocupa o percentil de 50\% dados (\alert{posição central}).
   \end{definition}
   \begin{itemize}
-  \item Notação: $M_d$
-  \item Divide o dataset ao meio
-  % \item Mais robusta que a média na presença de {\it outliers}
-  \item Costuma pertencer ao dataset
+  \item Para se calcular a mediana, deve-se ordenar os dados.
+  \item Encontrar o valor do \alert{meio} se $n$ for ímpar.
+  \item Encontrar a média dos dois valores do \alert{meio} se $n$ for par.
   \end{itemize}
+  % \begin{itemize}
+  % \item Notação: $M_d$
+  % \item Divide o dataset ao meio
+  % % \item Mais robusta que a média na presença de {\it outliers}
+  % \item Costuma pertencer ao dataset
+  % \end{itemize}
 \end{frame}
 
 \begin{frame}{Mediana}
-  \begin{itemize}
-  \item Para se calcular a mediana, deve-se ordenar os dados.
-  \item Encontrar o valor do meio se $n$ for ímpar.
-  \item Encontrar a média dos dois valores do meio se $n$ for par.
-  \end{itemize}
   \begin{example}
 Conforme no exemplo anterior
     \begin{columns}
