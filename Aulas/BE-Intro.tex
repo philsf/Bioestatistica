@@ -171,10 +171,16 @@
   \end{block}
 \end{frame}
 
+\begin{frame}{Objetivos de aprendizagem}
+  \begin{block}{}
+    Interpretar criticamente dados e resultados de artigos científicos.
+  \end{block}
+\end{frame}
+
 \begin{frame}{Avaliação}
   \begin{itemize}
-  \item {\bf Objetivo:} interpretar criticamente um paper (à escolha da dupla)
-  \item Seminário em duplas
+  \item {\bf Objetivo:} interpretar criticamente um paper
+  \item Seminário (grupo)
   \item Dois últimos encontros
   \item Roteiro disponível para auxiliar a elaboração.
   \end{itemize}
@@ -188,9 +194,9 @@
   \end{itemize}
 \end{frame}
 
-\section{Métodos Científico e Estatístico}
+\section{Bioestatística}
 
-\begin{frame}
+\begin{frame}{O que é}
   \begin{columns}
     \begin{column}{7cm}
       \begin{block}{}
@@ -201,9 +207,8 @@
           Carlos A.  Pereira.}
       \end{block}
       \begin{block}{}
-        {\scriptsize ``{\em A Estatística é a arte de torturar os
-            dados até que eles confessem a verdade.}'' - Autor
-          desconhecido}
+        {\scriptsize ``{\em Se você torturar os dados o suficiente,
+            eles confessarão o que você quiser.}'' - Ronald H. Coase}
       \end{block}
 
     \end{column}
@@ -248,15 +253,15 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Método Estatístico}
-  \begin{enumerate}
-  \item Planejamento do experimento
-  \item Coleta/aquisição dos dados
-  \item Organização e descrição dos dados
-  \item Análise/interpretação
-  \item Informação/tomada de decisão
-  \end{enumerate}
-\end{frame}
+% \begin{frame}{Método Estatístico}
+%   \begin{enumerate}
+%   \item Planejamento do experimento
+%   \item Coleta/aquisição dos dados
+%   \item Organização e descrição dos dados
+%   \item Análise/interpretação
+%   \item Informação/tomada de decisão
+%   \end{enumerate}
+% \end{frame}
 
 \begin{frame}{Áreas da Estatística}
   \begin{itemize}
@@ -267,55 +272,85 @@
   \end{itemize}
 \end{frame}
 
-\section{Trailer do curso}
-
-\begin{frame}{Descrição dos Dados}
+\begin{frame}{Para que serve}
   \begin{itemize}
-  \item Organização/visualização
-    \begin{itemize}
-    \item Tabelas
-    \item Gráficos
-    \end{itemize}
-  \item Medidas sumárias
-    \begin{itemize}
-    \item Medidas de tendência central
-    \item Medidas de dispersão
-    \end{itemize}
+  \item Estimação estatística
+  \item Teste de hipótese estatístico
+  \item Modelagem estatística
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Trailer do curso}
-  \begin{columns}
-    \begin{column}{5cm}
-      \begin{center}
-        \includegraphics[width=.9\textwidth]{Intro/bar-chart-vs-histogram}
+% \section{Trailer do curso}
 
-      \bigskip
-      \bigskip
-      \includegraphics[width=.9\textwidth]{Intro/mean-sea-level-line}
-      \end{center}
-    \end{column}
-    \begin{column}{6cm}
-      \begin{center}
-        \includegraphics[width=.7\textwidth]{Intro/boxplot}
+% \begin{frame}{Dados}
+%   \begin{itemize}
+%   \item Qualitativos (contagens/proporções)
+%   \item Quantitativos (medidas/mensurações)
+%   \end{itemize}
+% \end{frame}
 
-      \includegraphics[width=.9\textwidth]{Intro/table}
-%[height=.5\textheight]
-      \end{center}
-    \end{column}
-  \end{columns}
+\begin{frame}{Tipos de Dados}
+Dados podem ser classificadas em duas principais categorias
+  \begin{itemize}
+  \item Qualitativos (categóricos)
+  \item Quantitativos (numéricos)
+  \end{itemize}
+  \begin{example}
+    Pressão sistólica (mmHg), altura (cm), sexo (M ou F), grau de
+    satisfação com atendimento médico (escore de 1 a 5), perímetro
+    abdominal (cm), contagem de leucócitos, número de pessoas na
+    família, cor da pele (branco, negro, pardo), etc.
+  \end{example}
+
 \end{frame}
 
-\begin{frame}{Trailer do curso}
-Vamos fazer um pequeno experimento didático
+% \begin{frame}{Descrição dos Dados}
+%   \begin{itemize}
+%   \item Organização/visualização
+%     \begin{itemize}
+%     \item Tabelas
+%     \item Gráficos
+%     \end{itemize}
+%   \item Medidas sumárias
+%     \begin{itemize}
+%     \item Medidas de tendência central
+%     \item Medidas de dispersão
+%     \end{itemize}
+%   \end{itemize}
+% \end{frame}
 
-  \begin{block}{Dados necessários}
-    \begin{itemize}
-    \item Sexo
-    \item Altura (cm)
-    \item Tamanho do sapato
-    \end{itemize}
-  \end{block}
-\end{frame}
+% \begin{frame}{Trailer do curso}
+%   \begin{columns}
+%     \begin{column}{5cm}
+%       \begin{center}
+%         \includegraphics[width=.9\textwidth]{Intro/bar-chart-vs-histogram}
+
+%       \bigskip
+%       \bigskip
+%       \includegraphics[width=.9\textwidth]{Intro/mean-sea-level-line}
+%       \end{center}
+%     \end{column}
+%     \begin{column}{6cm}
+%       \begin{center}
+%         \includegraphics[width=.7\textwidth]{Intro/boxplot}
+
+%       \includegraphics[width=.9\textwidth]{Intro/table}
+% %[height=.5\textheight]
+%       \end{center}
+%     \end{column}
+%   \end{columns}
+% \end{frame}
+
+% \begin{frame}{Trailer do curso}
+% Vamos fazer um pequeno experimento didático
+
+%   \begin{block}{Dados necessários}
+%     \begin{itemize}
+%     \item Sexo
+%     \item Altura (cm)
+%     \item Tamanho do sapato
+%     \end{itemize}
+%   \end{block}
+% \end{frame}
 
 \end{document}
