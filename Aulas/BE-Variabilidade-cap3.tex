@@ -225,6 +225,69 @@
 
 \subsection{Média e a mediana}
 
+\begin{frame}{Média}
+  \begin{example}
+    Foram observados os seguintes níveis de colesterol de uma amostra
+    de pacientes. Qual é o nível médio de colesterol nestes pacientes?
+
+    \begin{columns}<1>
+      \begin{column}{5cm}<1>
+        \begin{tabular}{ccc}
+          $x_1$ &=&142\\
+          $x_2$ &=&144\\
+          $x_3$ &=&176\\
+          $x_4$ &=&203\\
+          $x_5$ &=&134\\
+          $x_6$ &=&191\\
+        \end{tabular}
+      \end{column}
+      \begin{column}{5cm}<1>
+        $\bar{x} = \frac{\sum x_i}{n} = \frac{990}{6} = 165$
+      \end{column}
+    \end{columns}
+  \end{example}
+\end{frame}
+
+
+\begin{frame}{Mediana}
+\begin{definition}
+A mediana é o dado que ocupa a \alert{posição central} nos dados
+    ordenados.
+  \end{definition}
+  \begin{itemize}
+  \item Notação: $M_d$
+  \item Divide o dataset ao meio
+  % \item Mais robusta que a média na presença de {\it outliers}
+  \item Costuma pertencer ao dataset
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mediana}
+  \begin{itemize}
+  \item Para se calcular a mediana, deve-se ordenar os dados.
+  \item Encontrar o valor do meio se $n$ for ímpar.
+  \item Encontrar a média dos dois valores do meio se $n$ for par.
+  \end{itemize}
+  \begin{example}
+Conforme no exemplo anterior
+    \begin{columns}
+      \begin{column}{5cm}
+        \begin{tabular}{ccc}
+          $x_5$ &=&134\\
+          $x_1$ &=&142\\
+          $x_2$ &=&\alert{144}\\
+          $x_3$ &=&\alert{176}\\
+          $x_6$ &=&191\\
+          $x_4$ &=&203\\
+        \end{tabular}
+      \end{column}
+      \begin{column}{5cm}
+        $M_d = \frac{144+176}{2}=160$
+      \end{column}
+    \end{columns}
+  \end{example}
+\end{frame}
+
 \subsection{Quantificando com percentis}
 
 \begin{frame}{O boxplot}
