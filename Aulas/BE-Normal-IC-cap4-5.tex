@@ -158,7 +158,7 @@
     \begin{column}{5cm}
       \begin{itemize}
       \item (aula passada)
-      \item Pressão sanguínea de todos os 100 alunos de uma sala
+      \item Pressão sanguínea (PS) de todos os 100 alunos de uma sala
       \item Visualização da média e variabilidade dos dados
       \end{itemize}
     \end{column}
@@ -170,31 +170,146 @@
 
 \subsection{Distribuições de probabilidade}
 
-\begin{frame}{}
-  \begin{itemize}
-  \item 
-  \end{itemize}
+\begin{frame}[label=exemplo5.1]{Distribuições de dados ``reais''}
+  \begin{exampleblock}{Exemplo 5.1}
+    No exemplo, a PS dos 100 alunos (a turma inteira) foi visualizada em um histograma.
+
+    Calculando a média, encontramos 123,4 mmHg.
+
+    Calculando o DP, encontramos 14,0 mmHg.
+  \end{exampleblock}
+  \begin{block}{Pense...}
+    \begin{itemize}
+    \item Se a população for a turma, sabemos a média e o DP {\bf com certeza}
+    \item Se a turma é uma amostra de uma população maior, como podemos {\em inferir} os parâmetros da população (digamos, com 95\% de confiança)?
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Distribuições de dados ``reais''}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+      \item Média = 123,4 mmHg, DP = 14,0 mmHg
+      \item Você  {\em vê} a média?
+      \item Você  {\em vê} o DP?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap4/normal1}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Observações importantes}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+      \item Muitas medições próximas da média
+      \item Poucas medições de PS muito baixas
+      \item Poucas medições de PS muito altas
+      \item Aprox. simétrica em torno da média
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap4/normal1}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \subsection{A distribuição Normal}
 
-\begin{frame}{}
-  \begin{itemize}
-  \item 
-  \end{itemize}
+
+\begin{frame}{Distribuição Normal}
+  \begin{center}
+    \includegraphics[height=\textheight]{Cap4/normal2}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Distribuição Normal, com DP}
+  \begin{center}
+    \includegraphics[height=\textheight]{Cap4/normal4}
+  \end{center}
+\end{frame}
+
+\begin{frame}{E esta?}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+      \item Muitas medições próximas da média?
+      \item Poucas medições de PS muito baixas?
+      \item Poucas medições de PS muito altas?
+      \item Aprox. simétrica em torno da média?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap4/lognormal}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{E esta?}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+      \item Muitas medições próximas da média?
+      \item Poucas medições de PS muito baixas?
+      \item Poucas medições de PS muito altas?
+      \item Aprox. simétrica em torno da média?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap4/poisson}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{E esta?}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+      \item Muitas medições próximas da média?
+      \item Poucas medições de PS muito baixas?
+      \item Poucas medições de PS muito altas?
+      \item Aprox. simétrica em torno da média?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap4/uniforme}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \subsection{Inferências}
 
-\begin{frame}{}
+\begin{frame}{A regra empírica}
   \begin{itemize}
-  \item 
+  \item (aula passada)
+  \item ``mais da metade'' dos dados estão a 1 DP da média
+  \item ``quase todos'' os dados estão a 2 DPs da média
   \end{itemize}
+\end{frame}
+
+\begin{frame}{A regra empírica}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+      \item 68\% a até 1 DP da média
+      \item 95\% a até 2 DP da média
+      \item 99,7\% a até 3 DP da média
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap4/empirica}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \section{IC da média}
 
 \subsection{Interpretação}
+
+\againframe{exemplo5.1}
 
 \begin{frame}{}
   \begin{itemize}
