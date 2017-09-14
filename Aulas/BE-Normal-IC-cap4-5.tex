@@ -354,10 +354,45 @@
 
 \subsection{O Erro Padrão}
 
-\begin{frame}{}
+\begin{frame}{Teorema do Limite Central}
+  Vídeo
+\end{frame}
+
+\begin{frame}{O Erro Padrão}
+  \begin{displaymath}
+    SEM = \frac{DP}{\sqrt{N}}
+  \end{displaymath}
   \begin{itemize}
-  \item 
+  \item SEM = Erro Padrão da Média (em inglês)
+  \item Conforme N aumenta, SEM diminui
+  \item Conforme N aumenta, SEM aproxima DP da população
   \end{itemize}
+\end{frame}
+
+\begin{frame}{O Erro Padrão}
+  \begin{displaymath}
+    IC: M \pm t* \times SEM
+  \end{displaymath}
+  \begin{itemize}
+  \item M = média
+  \item Para 95\% de confiança, t* $\approx$ 2.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{O Erro Padrão}
+  \begin{displaymath}
+    IC: M \pm t* \times SEM
+  \end{displaymath}
+  \begin{exampleblock}{Exemplo 5.1}
+    \begin{itemize}
+    \item DP = 14,0
+    \item N = 100
+    \item $SEM = \frac{14}{\sqrt{100}} = 1.4$
+    \item IC = M $\pm 2\times $ SEM
+    \item IC $\approx$ [120.6, 126.2]
+    \end{itemize}
+
+  \end{exampleblock}
 \end{frame}
 
 \section{Encerramento}
