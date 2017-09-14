@@ -1,5 +1,6 @@
-
-
+# setup -------------------------------------------------------------------
+set.seed(20) # exemplo reprodutível
+par(mfrow = c(2,2))
 
 # Normal ------------------------------------------------------------------
 
@@ -27,7 +28,7 @@ dev.off()
 h <- hist(la <- rlnorm(100, 5), main = "", xlab = "")
 
 png("Aulas/Cap4/lognormal.png")
-plot(h, xlim = range(la)*c(.9,1.1), main = "", xlab = "", ylim = c(0, round(max(h$counts)*1.2)))
+plot(h, xlim = range(la)*c(.9,1.2), main = "", xlab = "", ylim = c(0, round(max(h$counts)*1.2)))
 dev.off()
 
 
