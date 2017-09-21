@@ -218,18 +218,53 @@
 %   \end{center}
 % \end{frame}
 
+
+\begin{frame}{IC da média (aula passada)}
+  \begin{exampleblock}{ICs dos exemplos}
+    \begin{itemize}
+    \item IC do ex. 5.1 (PS de 100 alunos): [120.6, 126.2] mmHg
+    \item IC do ex. 5.2 (PS de   5 alunos): [79.2, 118.8] mmHg
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{Pense...}
+    Observe os tamanhos dos ICs.
+  \end{block}
+\end{frame}
+
 \begin{frame}{Alguns valores de t, para diferentes graus de liberdade}
   \begin{itemize}
-  \item $N = 5 \Rightarrow t = 2.776$
-  \item $N = 10 \Rightarrow t = 2.262$
-  \item $N = 15 \Rightarrow t = 2.145$
-  \item $N = 20 \Rightarrow t = 2.093$
-  \item $N = 30 \Rightarrow t = 2.045$
+  \item $N = 5\ (df = 4) \Rightarrow t = 2.776$
+  \item $N = 10\ (df = 9) \Rightarrow t = 2.262$
+  \item $N = 15\ (df = 14) \Rightarrow t = 2.145$
+  \item $N = 20\ (df = 19) \Rightarrow t = 2.093$
+  \item $N = 30\ (df = 29) \Rightarrow t = 2.045$
   \end{itemize}
-  \begin{block}{}<2->
+  \begin{block}{Pense...}
+    Qual é a relação entre N e o tamanho do IC?
+
+    % \begin{displaymath}
+    %   IC: \bar{x} \pm t^{*} \times SEM
+    % \end{displaymath}
+    \begin{displaymath}
+      \left[ \bar{x} - t^{*} SEM,\ \ \bar{x} + t^{*} SEM \right]
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Alguns valores de t, para diferentes graus de liberdade}
+  \begin{itemize}
+  \item $N = 5\ (df = 4) \Rightarrow t = 2.776$
+  \item $N = 10\ (df = 9) \Rightarrow t = 2.262$
+  \item $N = 15\ (df = 14) \Rightarrow t = 2.145$
+  \item $N = 20\ (df = 19) \Rightarrow t = 2.093$
+  \item $N = 30\ (df = 29) \Rightarrow t = 2.045$
+  \end{itemize}
+  \begin{block}{Observe que...}
     \begin{itemize}
+    \item $df = N - 1$
     \item Para N  grande, $t \rightarrow 1.960$
     \end{itemize}
+    Por isso usamos o valor aproximado $2$ no primeiro exemplo.
   \end{block}
 \end{frame}
 
