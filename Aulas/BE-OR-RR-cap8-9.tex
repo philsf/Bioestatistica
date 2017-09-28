@@ -152,28 +152,350 @@
 %   \end{block}
 % \end{frame}
 
-\section{Tipos de Estudos}
+\section{Intro}
+
+\begin{frame}{Exemplos}
+  \begin{exampleblock}{8.1 AZT em HIV-positivos assintomáticos}<1>
+    Cooper, {\em et al.} estudaram se o AZT diminuía a taxa de progressão da doença em pacientes assintomáticos.
+    Participantes adultos, HIV positivos e assintomáticos.
+    Participantes distribuídos aleatoriamente em dois grupos que receberam AZT ou um placebo.
+    Desfecho de interesse: progressão ou não da síndrome após 3 anos.
+  \end{exampleblock}
+  \begin{exampleblock}{9.1 Doença da arranhadura de gato}<2>
+    Zangwill {\em et al.} estudaram se a doença é mais frequente em donos de gatos que possuem pulgas?
+    Cartas a diversos clínicos da região pedindo para relatar casos da doença no último ano.
+    Participantes aleatórios (por tel.) que não haviam tido a doença.
+    Perguntaram a todos os participantes se seus gatos tinham ou não pulgas.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[label=exemplos8.1-9.1]{Exemplos}
+  \begin{exampleblock}{8.1 AZT em HIV-positivos assintomáticos}
+    Cooper, {\em et al.} estudaram se o AZT diminuía a taxa de progressão da doença em pacientes assintomáticos.
+    Participantes adultos, HIV positivos e assintomáticos.
+    Participantes distribuídos aleatoriamente em dois grupos que receberam AZT ou um placebo.
+    Desfecho de interesse: progressão ou não da síndrome após 3 anos.
+  \end{exampleblock}
+  \begin{exampleblock}{9.1 Doença da arranhadura de gato}
+    Zangwill {\em et al.} estudaram se a doença é mais frequente em donos de gatos que possuem pulgas?
+    Cartas a diversos clínicos da região pedindo para relatar casos da doença no último ano.
+    Participantes aleatórios (por tel.) que não haviam tido a doença.
+    Perguntaram a todos os participantes se seus gatos tinham ou não pulgas.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Análises de dados categóricos}
+  \begin{itemize}
+  \item Podemos avaliar as proporções do desfecho de interesse de ambos os estudos
+  \item Podemos ainda avaliar estas proporções para cada grupo selecionado
+  \item Como comparar estas proporções, em cada caso?
+  \item Veremos que são necessárias técnicas distintas!
+  \item Mas como decidir qual a técnica apropriada?
+  \end{itemize}
+\end{frame}
+
+\subsection{Tipos de Estudos}
+
+\begin{frame}{Tipos de estudos}
+  \begin{enumerate}
+  \item Restrospectivo
+  \item Prospectivo
+  \item Transversal
+  \item Experimental
+  \end{enumerate}
+  \begin{block}{}
+    Cada tipo de estudo consiste em uma série de escolhas metodológicas que restringem como a análise de dados pode ser feita.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Tipos de estudos}
+  \begin{block}{Retrospectivo (ou caso-controle)}
+    \begin{itemize}
+    \item Parte do desfecho e procuram a causa.
+    \item 2 grupos de participantes: 1 com a doença (casos) e 1 sem a doença (controles) - ambos semelhantes nos outros aspectos.
+    \item Objetivo: comparar se houve, no passado, exposição diferenciada ao fator de risco considerado.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Prospectivo}<2->
+    \begin{itemize}
+    \item Parte da exposição e procuram o desfecho.
+    \item 2 grupos de participantes: 1 exposto ao fator de risco, e 1 sem exposição.
+    \item Objetivo: comparar se haverá diferenciação nas incidências.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Tipos de estudos}
+  \begin{block}{Transversal ({\em cross-sectional})}
+    \begin{itemize}
+    \item Parte de uma amostra de participantes, sem considerar exposição a fator, ou presença do desfecho.
+    \item Divide-se a amostra em 2 grupos baseado na exposição prévia ao fator.
+    \item Objetivo: observar a prevalência nos 2 grupos.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Experimental}
+    \begin{itemize}
+    \item Parte de uma amostra de participantes.
+    \item Divide-se a amostra em 2 grupos e administra o tratamento a 1 deles.
+    \item Objetivo: observar a incidência nos 2 grupos.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 \section{Analisando proporções}
 
+\begin{frame}{Tipos de estudos}
+  \begin{block}{}
+    Classifique os estudos dos exemplos do início da aula
+
+    \begin{itemize}
+    \item Observacional ou experimental?
+    \item Parte do risco ou do desfecho?
+    \item Avalia o passado, presente ou o futuro?
+    \item O que mais você pode dizer sobre esses estudos?
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\againframe{exemplos8.1-9.1}
+
+\begin{frame}{Características dos estudos dos exemplos}
+  \begin{block}{Sobre o estudo do AZT}
+    \begin{itemize}
+    \item 
+    \end{itemize}
+  \end{block}
+  \begin{block}{Sobre o estudo da Doença da arranhadura de gatos}
+    \begin{itemize}
+    \item 
+    \end{itemize}
+  \end{block}
+\end{frame}
+
 \subsection{Tabelas de Contingência}
 
-\subsection{Risco Relativo}
+\begin{frame}{Dados categóricos}
+  \begin{itemize}
+  \item Vamos analisar contagens de dados categóricos (nominais)
+  \item Para estas variáveis qualitativas não existe ordenação inerente
+  \item Observamos apenas as frequências (contagens) destes dados na amostra.
+  \end{itemize}
+  \begin{exampleblock}{Exemplos}
+    doente/sadio, fumante/não fumante, masculino/feminino, olhos
+    castanhos/azuis/verdes, etc.
+  \end{exampleblock}
+\end{frame}
 
-\subsection{Razão de Chances}
+% \begin{frame}{Eventos independentes}
+%   Conforme vimos na aula de Probabilidades:
+%   \begin{itemize}
+%   \item Dois eventos são independentes se a ocorrência do primeiro não
+%     afeta a ocorrência do segundo
+%   \item Isto significa que a probabilidade da ocorrência do segundo
+%     não é condicional em relação ao primeiro
+%   \item Em relação aos dados de uma amostra: a frequência observada
+%     para cada categoria indica que estas são independentes?
+%   \end{itemize}
+% \end{frame}
 
-\section{Estudos prospectivos}
+\begin{frame}{Objetivo}
+  \begin{exampleblock}{Exemplo 8.1 - apenas contagens}
+    Frequências observadas:
+    \begin{tabular}{c|c|c}
+      & doença progrediu & doença não progrediu\\
+      \hline
+      AZT & 76 & 399 \\
+      \hline
+      Placebo & 129 & 332 \\
+    \end{tabular}
+  \end{exampleblock}
+  \begin{block}{Pergunta}
+    A partir destes dados é possível determinar se existe alguma relação entre as variáveis?
 
-\section{Estudos caso-controle}
+    Isto é: {\bf as proporções de progressão são diferentes nos dois grupos?}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Tabela de contingência}
+  \begin{exampleblock}{Exemplo 8.1 - apenas contagens}
+    Frequências observadas:
+    \begin{tabular}{c|c|c}
+      & doença progrediu & doença não progrediu\\
+      \hline
+      AZT & 76 & 399 \\
+      \hline
+      Placebo & 129 & 332 \\
+    \end{tabular}
+  \end{exampleblock}
+  \begin{block}{Definição}
+    Uma \alert{tabela de contingência} mostra as frequências
+    observadas para as exposições/tratamentos (linhas) nos desfechos estudados (colunas).
+  \end{block}
+\end{frame}
+
+\begin{frame}{Tabela de contingência}
+  É conveniente considerar a tabela, expandida com os totais de linhas e colunas.
+    \begin{exampleblock}{Exemplo 8.1 - totais preenchidos}
+    Frequências observadas:
+    \begin{tabular}{c|c|c|c}
+      & progrediu & não progrediu & total\\
+      \hline
+      AZT & 76 & 399 & 475\\
+      \hline
+      Placebo & 129 & 332 & 461\\
+      \hline
+      total & 205 & 731 & 936\\
+    \end{tabular}
+  \end{exampleblock}
+  \begin{itemize}
+  \item Aprendemos a interpretar os ICs de cada proporção
+  \item Progressão (AZT): 76/475 = 16\% (IC 95\%: [13\%, 20\%])
+  \item Progressão (placebo): 28\% (IC 95\%: [24\%, 32\%])
+  \item Como comparar as duas proporções?
+  \end{itemize}
+\end{frame}
+
+\section{Risco Relativo}
+
+\subsection{Risco Relativo (RR)}
+
+\begin{frame}{Risco Relativo (RR)}
+  \begin{block}{Definição}
+    Risco relativo (relative risk, RR) é a razão entre os riscos absolutos (proporções), relativos à exposição.
+  \end{block}
+  \begin{itemize}
+  \item RR $> 1 \Rightarrow$ risco aumentado
+  \item RR $< 1 \Rightarrow$ risco diminuído
+  \item RR $\approx 1 \Rightarrow$ risco semelhante
+  \end{itemize}
+  \begin{exampleblock}{No exemplo, a progressão foi:}
+    \begin{itemize}
+    \item 16\% sob AZT e 23\% sob placebo
+    \item RR = 16/28 = 0.57 (interprete)
+    \item<2-> IC 95\%: [0.44, 0.75] (interprete)
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Risco Relativo}
+  \begin{exampleblock}{No exemplo, a progressão foi:}
+    \begin{itemize}
+    \item 16\% sob AZT e 23\% sob placebo
+    \item RR = 16/28 = 0.57 (interprete)
+    \item IC 95\%: [0.44, 0.75] (interprete)
+    \end{itemize}
+  \end{exampleblock}
+  \begin{itemize}
+  % \item O RR é a comparação entre os dois riscos
+  \item Sua interpretação \alert{não é} quanto um risco é maior que o outro.
+  \item O correto é concluir qual é o RR \alert{entre} os dois fatores.
+  \item Concluímos que {\bf participantes tratados com AZT são 57\% tão suscetíveis à progressão... em relação ao placebo}.
+  \item A RR real (população) deve estar entre 44\% e 75\% (baseado nesta amostra).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Observação}
+  \begin{block}{Note que...}
+    O RR pode ser calculado como exposto/controle ou controle/exposto.
+  \end{block}
+  \begin{exampleblock}{AZT}
+    \begin{itemize}
+%    \item tratam./controle = 0.57
+    \item controle/tratam. = 28/16 = 1.75
+    \item {\bf Pacientes que receberam placebo foram 1.75 mais suscetíveis à progressão...}
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{Atenção}
+    Sempre diga explicitamente qual é a RR que você está considerando!
+  \end{block}
+\end{frame}
+
+\subsection{Premissas}
+
+\begin{frame}{Premissas da RR}
+  Em um estudo prospectivo ou experimental, assumimos:
+  \begin{enumerate}
+  \item Participantes aleatoriamente amostrados da população (ou pelo menos representativos)
+  \item Cada participante é independente dos outros
+  \item Única diferença entre os grupos: exposição ao fator de risco
+  \end{enumerate}
+\end{frame}
+
+\section{Razão de Chances}
+
+\subsection{Razão de Chances (OR)}
+
+\begin{frame}{Chances}
+  \begin{block}{Probabilidade}
+    Proporção das vezes em que você espera observar um evento, em vários experimentos.
+  \end{block}
+  \begin{block}{Chance (Odds)}
+    Probabilidade de que um evento vai ocorrer, dividida pela probabilidade de que o evento não vai ocorrer.
+    \begin{displaymath}
+      Odds = \frac{Prob}{1- Prob}
+    \end{displaymath}
+  \end{block}
+  \begin{exampleblock}{AZT, chances de progressão}
+    \begin{itemize}
+    \item AZT = 0.19
+    \item Placebo = 0.39
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Razão de chances (OR)}
+  \begin{block}{Definição}
+    Razão de chances (odds ratio, OR) é a razão entre as chances do grupo exposto/tratado e o grupo não exposto/não tratado.
+  \end{block}
+  \begin{itemize}
+  \item OR $> 1 \Rightarrow$ exposição aumenta chances do desfecho
+  \item OR $< 1 \Rightarrow$ exposição diminui chances do desfecho
+  \item OR $\approx 1 \Rightarrow$ exposição não afeta o desfecho
+  \end{itemize}
+  \begin{exampleblock}{No exemplo, a progressão foi:}
+    \begin{itemize}
+    \item 16\% sob AZT e 39\% sob placebo
+    \item RR = 19/39 = 0.49 (interprete)
+    \item<2-> IC 95\%: [0.36, 0.67] (interprete)
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Razão de Chances (OR)}
+  \begin{exampleblock}{No exemplo, a progressão foi:}
+    \begin{itemize}
+    \item 16\% sob AZT e 39\% sob placebo
+    \item OR = 19/39 = 0.49 (interprete)
+    \item IC 95\%: [0.36, 0.67] (interprete)
+    \end{itemize}
+  \end{exampleblock}
+  \begin{itemize}
+  % \item O RR é a comparação entre os dois riscos
+  % \item Sua interpretação \alert{não é} quanto um risco é maior que o outro.
+  % \item O correto é concluir qual é o RR \alert{entre} os dois fatores.
+  \item Interpretação semelhante à RR.
+  \item Concluímos que {\bf participantes tratados com AZT têm 49\% menos chances de progressão... em relação ao placebo}.
+  \item A OR real (população) deve estar entre 36\% e 67\% (baseado nesta amostra).
+  \end{itemize}
+\end{frame}
 
 \section{Encerramento}
 
 \begin{frame}{Leitura pós-aula e exercícios selecionados}
   \begin{block}{Leitura obrigatória}
+    \begin{itemize}
+    \item Capítulo 8. Pular as seções: RR de estudos de sobrevivência, Calculando os ICs.
+    \item Capítulo 9. Pular a seção: Cálculo do IC da OR.
+    \item Ler \alert{atentamente} a discussão sobre quando usar RR e quando usar OR!
+    \end{itemize}
+  \end{block}
+  \begin{block}{Exercícios selecionados}
+  \begin{itemize}
+  \item Cap 8: 1, 2, 4 e 5.
+  \item Cap 9: 1 e 2.
+  \end{itemize}
 
   \end{block}
-  \begin{itemize}
-  \end{itemize}
 \end{frame}
 
 \end{document}
