@@ -411,17 +411,36 @@ Fonte: Khan Academy
 \end{frame}
 
 \begin{frame}{Exemplo}
+  \begin{block}{Pense...}
+    \begin{itemize}
+    \item A hipótese científica é que a droga diminui o tempo de resposta.
+    \item Como você formularia a hipótese estatística ($H_1$)?
+      \begin{enumerate}
+      \item $H_0: \mu = 1.2, H_1: \mu \ge 1.2$ (teste unicaudal à direita)
+      \item $H_0: \mu = 1.2, H_1: \mu < 1.2$ (teste unicaudal à esquerda)
+      \item $H_0: \mu = 1.2, H_1: \mu \ne 1.2$ (teste bicaudal)
+      \item $H_0: \mu \ge 1.2, H_1: \mu = 1.2$ (teste unicaudal à esquerda)
+      \end{enumerate}
+
+      Resposta: \only<2->{\bf Opção 2}
+%    \item Qual seria a hipótese nula ($H_0$) a ser rejeitada, caso a droga seja eficaz?
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Exemplo}
   \begin{example}
     \begin{itemize}
     \item Dados: $\mu = 1.2, \bar{x} = 1.05, s = 0.5, n=100$
     \item $H_0: \mu = 1.2, H_1: \mu < 1.2$ (teste unicaudal à esquerda)
-    \item $n$ é grande ($n > 30$), então usamos $\sigma \approx s$ , e
-      fazemos o teste Z:
-    \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
-    \item Consultando a tabela Z, observamos que este Z-escore
-      corresponde à probabilidade $p=0.0013$
-    \item Como $p < 0.05$, concluímos que há evidência para rejeitar
+    % \item $n$ é grande ($n > 30$), então usamos $\sigma \approx s$ , e
+    %   fazemos o teste Z:
+    % \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
+    \item O teste Z aplicado a este problema retorna $p=0.0013$
+    \item<2-> Como $p < 0.05$, concluímos que há evidência para rejeitar
       $H_0$.
+    \item<2-> {\bf Resultado: O tempo de resposta médio é significativamente menor.}
+    \item<2-> {\bf Conclusão: \only<3->{há evidências que a droga diminui o tempo de resposta}}
     \end{itemize}
   \end{example}
 \end{frame}
