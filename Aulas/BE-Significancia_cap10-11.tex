@@ -152,9 +152,189 @@
 %   \end{block}
 % \end{frame}
 
-\section{O p-valor}
+% \section{O p-valor}
 
 \section{Testes de Hipóteses}
+
+\begin{frame}{Testes de Hipóteses}
+\subsection{Hipóteses}
+
+  \begin{itemize}
+  \item Podemos tomar decisões baseado nos dados de um experimento
+    (amostra).
+  \item Para isto, precisamos de um critério sistemático e rigoroso
+    que possa aferir o quanto os dados suportam esta decisão.
+  \item Usando os conceitos de probabilidades, poderemos ainda
+    calcular a probabilidade de que esta decisão esteja errada.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Testes de Hipóteses}
+  \begin{definition}
+    Em Estatística, uma \alert{hipótese} é uma afirmação sobre uma
+    característica de uma população, tipicamente o valor de um
+    parâmetro.
+  \end{definition}
+  \begin{definition}
+    Um \alert{teste de hipótese} (ou teste de significância) é um
+    procedimento sistemático para testar uma afirmação sobre uma
+    característica de uma população.
+  \end{definition}
+\end{frame}
+
+\begin{frame}{Componentes de um testes de hipóteses}
+  São necessários para um teste de hipóteses:
+  \begin{itemize}
+  \item As hipóteses nula e alternativa
+  \item O nível de significância
+  \item A estatística de teste
+  \item A região crítica
+%  \item 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Identificando hipóteses}
+  \begin{itemize}
+  \item Uma hipótese estatística deve ser testável frente a dados
+    obtidos de um experimento.
+  \end{itemize}
+  \begin{example}
+    Um jornalista alega que a maior parte dos motoristas atravessa o
+    sinal vermelho.
+  \end{example}
+  \begin{example}
+    Pesquisadores afirmam que a temperatura corporal média de adultos
+    sadios não ultrapassa 37$^o$C.
+  \end{example}
+\end{frame}
+
+\begin{frame}{Identificando hipóteses}
+  \begin{itemize}
+  \item Para efetuar um teste de hipóteses é necessária a formulação
+    de uma \alert{hipótese nula} e uma \alert{hipótese alternativa}.
+  \item A hipótese nula ($H_0$) é uma hipótese que contém uma
+    afirmação de igualdade.
+  \item A hipótese alternativa ($H_1$ ou $H_a$) é o complementar da
+    hipótese nula.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Identificando hipóteses}
+  \begin{block}{Atenção}
+    A lógica do teste de hipóteses é o \alert{inverso} do que se esperaria, ou seja, ao invés de testar a hipótese de interesse, vamos {\em testar a hipótese nula} -- e tentar rejeitá-la.
+
+\bigskip
+{\bf Mantenha isso em mente daqui a para a frente.}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Identificando hipóteses}
+  \begin{block}{Roteiro}
+    \begin{enumerate}
+    \item Identificar a afirmação a ser testada e expressá-la em forma simbólica
+    \item Expressar em forma simbólica a afirmação que deve ser
+      verdadeira, caso a afirmação de interesse seja falsa
+    \item Das duas expressões obtidas, a hipótese $H_0$ será a que
+      contém igualdade $=$, enquanto a $H_1$ será a que contém um
+      sinal de $<$, $>$ ou $\ne$.
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Identificando hipóteses}
+  \begin{example}
+    Formulação verbal:\\
+    A proporção de motoristas que admitem atravessar o sinal vermelho
+    é maior que 50\%.\\
+    \bigskip
+    Formulação matemática:\\
+    \begin{displaymath}
+      H_0: p=0.5
+    \end{displaymath}
+    \begin{displaymath}
+      H_1: p>0.5
+    \end{displaymath}
+  \end{example}
+\end{frame}
+
+\begin{frame}{Identificando hipóteses}
+  \begin{example}
+    Formulação verbal:\\
+    A altura média de jogadores profissionais de basquete é de no
+    máximo 2.20m.\\
+    \bigskip
+    Formulação matemática:\\
+    \begin{displaymath}
+      H_0: \mu = 2.20
+    \end{displaymath}
+    \begin{displaymath}
+      H_1: \mu < 2.20
+    \end{displaymath}
+  \end{example}
+\end{frame}
+
+\begin{frame}{Identificando hipóteses}
+  \begin{example}
+    Formulação verbal:\\
+    A dose média contida em um comprimido de paracetamol é de 750mg.\\
+    \bigskip
+    Formulação matemática:\\
+    \begin{displaymath}
+      H_0: \mu = 750
+    \end{displaymath}
+    \begin{displaymath}
+      H_1: \mu \ne 750
+    \end{displaymath}
+  \end{example}
+\end{frame}
+
+\subsection{Significância}
+
+\begin{frame}{Tipos de erros em testes de hipóteses}
+  \begin{definition}
+    Um \alert{erro do tipo I} ocorre se a hipótese nula for rejeitada
+    quando é verdadeira.
+  \end{definition}
+  \begin{definition}
+    Um \alert{erro do tipo II} ocorre se a hipótese não for rejeitada
+    quando for falsa.
+  \end{definition}
+\end{frame}
+
+\begin{frame}{Tipos de erros em testes de hipóteses}
+  \begin{tabular}{c||c|c}
+    Decisão & $H_0$ é verdadeira & $H_0$ é falsa \\
+    \hline
+    \hline
+    Não rejeitar $H_0$ & Decisão correta & Erro do tipo II\\
+    \hline
+    Rejeitar $H_0$ & Erro do tipo I & Decisão correta\\
+  \end{tabular}
+\end{frame}
+
+\begin{frame}{Rejeitar hipóteses}
+  \begin{block}{Importante}
+    Observe que o teste de hipótese nunca deve \alert{aceitar} uma
+    hipótese nula, apenas rejeitá-la ou deixar de rejeitá-la.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Nível de significância}
+  \begin{definition}
+    O \alert{nível de significância} de um teste de hipótese é sua
+    probabilidade máxima admissível para cometer um erro do tipo
+    I. Ele é denotado por $\alpha$.
+  \end{definition}
+  \begin{definition}
+    A probabilidade de se cometer um erro do tipo II é denotada por
+    $\beta$.
+  \end{definition}
+  % \begin{itemize}
+  % % \item O valor $1-\beta$ é chamado o \alert{poder do teste}.
+  % % \item Devemos controlar o erro do tipo I, isto é, 
+  % % \item Quando você decresce $\alpha$, você provavelmente aumentará $\beta$.
+  % \end{itemize}
+\end{frame}
 
 \section{Encerramento}
 
