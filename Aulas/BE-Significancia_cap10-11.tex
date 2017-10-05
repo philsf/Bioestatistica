@@ -345,6 +345,109 @@
   % \end{itemize}
 \end{frame}
 
+\subsection{O p-valor}
+
+\begin{frame}{O p-valor}
+  \begin{definition}
+    Assumindo que a hipótese nula seja verdadeira, o \alert{p-valor}
+    de um teste de hipóteses é a probabilidade de se obter uma
+    estatística amostral com valores tão extremos, ou mais extremos
+    que aquele observado.
+  \end{definition}
+
+O p-valor \alert{é}:
+  \begin{itemize}
+  \item Uma estatística (i.e., depende da amostra - dados e tamanho)
+  \item A probabilidade (condicional) de se observar o resultado ao
+    acaso \alert{dado que} a $H_0$ é verdadeira.
+  \item Uma medida da força da evidência contra a $H_0$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{O p-valor}
+  \begin{block}{Como utilizar}
+    \begin{itemize}
+    \item Quanto menor o p-valor, mais evidências para rejeitar a
+      hipótese nula.
+    \item O ponto de corte mais utilizado é a significância de 5\%
+    \item Assim, qualquer $p \le 0.05$ é estatisticamente significante.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{O p-valor}
+  \begin{block}{Como calcular}
+    \begin{itemize}
+    \item calcular a estatística de teste apropriada para a situação
+      (teste Z, teste t, etc.)
+    \item encontrar a probabilidade $p$ correspondente a esta
+      estatística (por exemplo, na tabela apropriada, ou com uma
+      ferramenta computacional)
+    \item comparar o p-valor encontrado com a significância do estudo
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{O p-valor}
+  \begin{figure}
+    \centering
+      \includegraphics[height=0.9\textheight]{TH_II/z_table}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{example}
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico. Para isto, ele injeta
+    uma dose da droga em \alert{100} ratos, cria os estímulos
+    neurológicos e observa o tempo de resposta em cada animal. O
+    neurologista sabe que o tempo de resposta médio de ratos que não
+    receberam a droga é de \alert{1.2 segundos}. O tempo de resposta
+    médio dos ratos injetados foi de \alert{1.05 segundos}, com desvio
+    padrão amostral de \alert{0.5 segundos}. Você acha que a droga tem
+    efeito no tempo de resposta do estímulo?
+  \end{example}
+Fonte: Khan Academy
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{example}
+    \begin{itemize}
+    \item Dados: $\mu = 1.2, \bar{x} = 1.05, s = 0.5, n=100$
+    \item $H_0: \mu = 1.2, H_1: \mu < 1.2$ (teste unicaudal à esquerda)
+    \item $n$ é grande ($n > 30$), então usamos $\sigma \approx s$ , e
+      fazemos o teste Z:
+    \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
+    \item Consultando a tabela Z, observamos que este Z-escore
+      corresponde à probabilidade $p=0.0013$
+    \item Como $p < 0.05$, concluímos que há evidência para rejeitar
+      $H_0$.
+    \end{itemize}
+  \end{example}
+\end{frame}
+
+\begin{frame}{O p-valor}
+  Cuidado! O p-valor \alert{não é}:
+  \begin{itemize}
+  \item a probabilidade de que a hipótese nula seja verdadeira
+  \item a probabilidade de que a diferença observada seja devido ao
+    acaso
+  \end{itemize}
+  \begin{block}{}
+    Estes são erros comuns de interpretação.
+
+    O p-valor assume que (1) a hipótese é verdadeira, e (2) que a
+    única causa da diferença é devida ao acaso, portanto não pode ser
+    usado para concluir suas próprias premissas.
+  \end{block}
+  \begin{block}{}
+    ``The concept of a p value is not simple and any statements
+    associated with it must be considered cautiously.''
+
+    Dorey, F. 2010 Clin Orthop Relat Res.
+  \end{block}
+\end{frame}
+
 \section{Encerramento}
 
 \begin{frame}{Leitura pós-aula e exercícios selecionados}
