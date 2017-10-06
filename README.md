@@ -6,13 +6,13 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 ## Planejamento de aulas de conteúdo
 
-1. Introdução (cap 1)
-2. IC de uma proporção (cap 2)
-3. Variabilidade (cap 3)
-4. Distribuição Normal + IC da média (cap 4, 5)
-5. IC da diferença entre médias (cap 7)
-6. Comparando ICs de proporções (cap 8, 9)
-7. Significância (cap 10, 11)
+1. [Introdução][] (cap 1)
+2. [IC de uma proporção][] (cap 2)
+3. [Variabilidade][] (cap 3)
+4. [Distribuição Normal + IC da média][] (cap 4, 5)
+5. [IC da diferença entre médias][] (cap 7)
+6. [Comparando ICs de proporções][] (cap 8, 9)
+7. [Significância][] (cap 10, 11)
 8. Correlação (cap 17)
 9. Regressão linear simples (cap 18, 19)
 10. 2 médias (cap 23 e 25)
@@ -21,6 +21,14 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 13. Fechamento (Cap 38)
 14. Avaliações
 15. Avaliações
+
+[Introdução]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro.pdf
+[IC de uma proporção]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
+[Variabilidade]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
+[Distribuição Normal + IC da média]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
+[IC da diferença entre médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap7
+[Comparando ICs de proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
+[Significância]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11.pdf
 
 ## Exercícios selecionados por aula
 
