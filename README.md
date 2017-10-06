@@ -11,22 +11,31 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 3. Variabilidade (cap 3)
 4. Distribuição Normal + IC da média (cap 4, 5)
 5. IC da diferença entre médias (cap 7)
-6. Prospectivos (cap 8)
-7. Caso controle (cap 9)
-8. P-valor + TH (cap 10, 11)
-9. Correlação (cap 17)
-10. Regressão linear simples (cap 18, 19)
-11. 2 médias (cap 23, 25)
-12. 2 proporções (cap 26, 27)
-13. Fechamento (cap 38)
-14. Avaliações I
-15. Avaliações II
+6. Comparando ICs de proporções (cap 8, 9)
+7. Significância (cap 10, 11)
+8. Correlação (cap 17)
+9. Regressão linear simples (cap 18, 19)
+10. 2 médias (cap 23 e 25)
+11. 2 proporções (cap 26 e 27)
+12. "Tópicos avançados"
+13. Fechamento (Cap 38)
+14. Avaliações
+15. Avaliações
 
 ## Exercícios selecionados por aula
 
 1. Cap 1: não há exercícios.
 2. Cap 2: 1,2 e 4.
 3. Cap 3: todos. 1. Para 3 e 4, no Excel use o commando `=DESVPAD()`.
+4. Cap 4: Exercícios 1, 2 e 3. Cap 5: Exercícios 1, 3, 7 e 9.
+5. Cap 7: Em breve
+6. Cap 8: Exercícios 1, 2, 4 e 5. Cap 9: Exercícios 1 e 2.
+7. Cap 10: todos. Cap 11: todos.
+8. Cap 17:
+9. Cap 18: . Cap 19:
+10. Cap 23: . Cap 25:
+11. Cap 26: . Cap 27:
+12. 
 
 ## Licença
 Todo o material contido aqui é distribuído sob a licença [Creative Commons Atribuição](http://creativecommons.org/licenses/by/4.0/deed.pt_BR)
