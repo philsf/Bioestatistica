@@ -256,6 +256,82 @@ Quando faz sentido parear indivíduos de dois grupos?
   \end{itemize}
 \end{frame}
 
+\subsection{Exercício}
+
+\begin{frame}{Exercício}
+  \begin{exampleblock}{Exercício}
+    Queremos avaliar a eficiência de uma nova dieta reduzida em
+    gordura no tratamento de obesidade. Selecionamos aleatoriamente
+    100 pessoas obesas para o grupo 1, que receberão a dieta com pouca
+    gordura. Selecionamos outras 100 pessoas obesas para o grupo 2 que
+    receberão a mesma quantidade de comida, com proporção normal de
+    gordura. Após 4 meses, a perda de peso média no grupo 1 foi de
+    9.33 lbs (s=4.72) e no grupo 2 foi de 7.58 lbs (s=3.90). Você acha
+    que essa nova dieta é eficaz na perda de peso?
+  \end{exampleblock}
+  Fonte: Khan Academy
+\end{frame}
+
+\begin{frame}[label=perguntas]{Perguntas}
+  \begin{itemize}
+  \item Para este estudo, qual dos dois testes é o mais apropriado?
+  \item Qual é a hipótese nula?
+  \item Qual é a hipótese alternativa?
+  \item O que você usaria como critério de decisão?
+  \item Qual é o resultado?
+  \item Qual é a conclusão?
+  \item O que significam valores negativos neste caso?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Visualização (independentes)}
+  \includegraphics[height=\textheight]{Teste_t/2-amostras-independentes}
+\end{frame}
+
+\begin{frame}{Visualização (pareados)}
+    \includegraphics[height=\textheight]{Teste_t/2-amostras-pareadas}
+  \end{frame}
+
+\againframe{perguntas}
+
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{block}{Teste t, amostras independentes}
+    \begin{verbatim}
+	Two Sample t-test
+
+data:  dados$Grupo1 and dados$Grupo2
+t = 2.871, df = 198, p-value = 0.004537
+alternative hypothesis: true difference 
+ in means is not equal to 0
+95 percent confidence interval:
+ 0.5506833 2.9667462
+sample estimates:
+mean of x mean of y 
+ 9.334005  7.575291
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{block}{Teste t, amostras pareadas}
+    \begin{verbatim}
+	Paired t-test
+
+data:  dados$Grupo1 and dados$Grupo2
+t = 2.9545, df = 99, p-value = 0.003913
+alternative hypothesis: true difference 
+ in means is not equal to 0
+95 percent confidence interval:
+ 0.5775744 2.9398551
+sample estimates:
+mean of the differences 
+               1.758715
+    \end{verbatim}
+  \end{block}
+\end{frame}
+
+\againframe{perguntas}
+
 \section{Resumo}
 
 \subsection{Encerramento}
