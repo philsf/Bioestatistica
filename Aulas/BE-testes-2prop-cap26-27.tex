@@ -152,4 +152,498 @@
 %   \end{block}
 % \end{frame}
 
+\section{Observação x expectativa}
+
+\subsection{Revisão}
+
+\begin{frame}{Dados categóricos}
+  \begin{itemize}
+  \item Vamos analisar contagens de dados categóricos (ou nominais)
+  \item Para estas variáveis qualitativas não existe ordenação interente
+  \item Observamos apenas as contagens e frequências destes dados em
+    uma amostra.
+  \end{itemize}
+  \begin{exampleblock}{Exemplo}
+    doente/sadio, fumante/não fumante, masculino/feminino, olhos
+    castanhos/olhos azuis/olhos verdes, etc.
+  \end{exampleblock}{Exemplo}
+\end{frame}
+
+\begin{frame}{Eventos independentes}
+  Conforme vimos na aula de Probabilidades:
+  \begin{itemize}
+  \item Dois eventos são independentes se a ocorrência do primeiro não
+    afeta a ocorrência do segundo
+  \item Isto significa que a probabilidade da ocorrência do segundo
+    não é condicional em relação ao primeiro
+  \item Em relação aos dados de uma amostra: a frequência observada
+    para cada categoria indica que estas são independentes?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Objetivo}
+Considere a seguinte tabela:
+  \begin{exampleblock}{Exemplo}
+    \begin{tabular}{c|c|c}
+      Resultado & Alongou-se & Não se alongou\\
+      \hline
+      Lesão & 18 & 22\\
+      \hline
+      Não tem lesão & 211 & 189\\
+    \end{tabular}
+
+    (Fonte: Larson \& Farber 2013)
+  \end{exampleblock}{Exemplo}
+
+    Pergunta: a partir destes dados é possível determinar se existe
+    alguma relação entre as variáveis? Isto é: as variáveis são independentes?
+\end{frame}
+
+\subsection{Analisando dados de contagens}
+
+\begin{frame}{Exemplo}
+  \begin{exampleblock}{Exemplo}
+    Considere que 10\% dos pacientes morrem após uma operação
+    arriscada. Em uma amostra de 75 pacientes, observou-se que 16
+    pacientes morreram após a operação.
+
+    Como comparar o número de óbitos osbervado e o número esperado?
+
+    Fonte: Motulsky, 1995
+  \end{exampleblock}{Exemplo}
+  \begin{itemize}
+  \item O número observado de óbitos em 75 pacientes foi 16.
+  \item O número esperado seria $75 \times 10\% = 7.5$
+  \item A discrepância nos óbitos foi $16-7.5 = 8.5$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Questões}
+  \begin{itemize}
+  \item Esse aumento reflete uma mudança real na mortalidade?
+  \item Em uma amostra qualquer com 75 pacientes esperaríamos observar $7.5$ óbitos
+  \item Em uma amostra específica poderíamos observar mais ou menos
+    que isso
+  \item Provavelmente algo próximo de $7.5$
+  \end{itemize}
+
+  \begin{block}{Pergunta}
+    Se a mortalidade for 10\%, qual é a probabilidade de se observar
+    16 ou mais óbitos em uma amostra de 75 pacientes?
+  \end{block}
+\end{frame}
+
+\begin{frame}{Roteiro}
+  \begin{itemize}
+  \item Podemos representar as contagens observadas e esperadas em uma tabela
+  \item A hipótese $H_0$ é que \alert{observamos uma amostra de uma
+      população com $10\%$ de mortalidade}.
+  \item As diferenças entre os dados observados e os esperados tem
+    distribuição aproximadamente $\chi^2$ (qui-quadrado)
+  \item Fazendo o teste $\chi^2$ podemos testar a hipótese $H_0$
+  \item Estatística de teste: $\chi^2 = \frac{\sum (\text{observado} - \text{esperado})^2 }{\text{esperado}}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tabela de frequências}
+  \begin{exampleblock}{Exemplo}
+    \begin{tabular}{c|c|c}
+      & Observado & Esperado\\
+      \hline
+      Óbito & 16 & 7.5 \\
+      \hline
+      Vivo & 59 & 67.5 \\
+      \hline
+      Total & 75 & 75\\
+    \end{tabular}
+  \end{exampleblock}{Exemplo}
+
+Estatística de teste:
+  \begin{displaymath}
+    \chi^2 = \frac{(16 - 7.5)^2}{7.5} + \frac{(59 - 67.5)^2}{67.5} \approx \alert{10.70}
+  \end{displaymath}
+\end{frame}
+
+\begin{frame}{A tabela Qui-Quadrado}
+\includegraphics[height=\textheight]{TC/qui-quadrado1}
+\end{frame}
+
+\begin{frame}{Comparando as frequências}
+  \begin{itemize}
+  \item Assumos a hipótese $H_0$ de que não houve aumento da
+    mortalidade do procedimento.
+  \item Encontramos a estatística de teste $\chi^2 = 10.7$ para a
+    amostra.
+  \item Fazendo o teste $\chi^2$, encontramos $p=0.0011$.
+  \item Como $p=0.0011 < 0.05$, decidimos \alert{rejeitar} $H_0$.
+  \item Conclusão: rejeitamos a hipótese de que não houve aumento na
+    mortalidade, ao nível de significância de 5\%.
+  \end{itemize}
+\end{frame}
+
+\section{Tabelas de Contingência}
+
+\subsection{Tabelas 2x2}
+
+\begin{frame}{Tabelas de Contingência}
+  \begin{definition}
+    Uma \alert{tabela de contingência} mostra as frequências
+    observadas para duas ou mais variáveis complementares.
+  \end{definition}
+  \begin{itemize}
+  \item Podemos calcular as frequências esperadas, baseado no tamanho
+    das amostras
+  \item Comparamos assim a frequência observada com a frequência
+    esperada
+  \item Obs: a tabela do exemplo anterior (óbitos) \alert{não é} uma
+    tabela de contingência! (Por que?)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tabelas de contingência 2x2}
+  \begin{exampleblock}{Exemplo}
+    Frequências observadas:
+    \begin{tabular}{c|c|c}
+      & doença progrediu & doença não progrediu\\
+      \hline
+      AZT & 76 & 399 \\
+      \hline
+      Placebo & 129 & 332 \\
+    \end{tabular}
+  \end{exampleblock}{Exemplo}
+  \begin{itemize}
+  \item Existe relação entre o uso do AZT e a progressão da doença?
+  \item Ou: nessa amostra o AZT foi mais eficiente que o placebo
+    (rejeitar $H_0$)?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tabelas de contingência 2x2}
+  \begin{itemize}
+  \item $H_0$: o AZT não é mais eficaz que o placebo
+  \item Pergunta: assumindo a $H_0$, qual seria a frequência esperada
+    para a progressão da doença?
+  \item Em outras palavras: quantos pacientes tiveram progressão na
+    doença, em relação ao total?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tabelas de contingência 2x2}
+  \begin{exampleblock}{Exemplo}
+    Frequências observadas:
+    \begin{tabular}{c|c|c|c}
+      & progrediu & não progrediu & total\\
+      \hline
+      AZT & 76 & 399 & 475\\
+      \hline
+      Placebo & 129 & 332 & 461\\
+      \hline
+      total & \alert{205} & 731 & \alert{936}\\
+    \end{tabular}
+  \end{exampleblock}{Exemplo}
+  \begin{itemize}
+  \item Frequência esperada $E = \frac{205}{936} \approx 0.2190 = \alert{21.90\%}$
+  \item Número esperado: $475 \times 0.2190 = 104.025 \approx \alert{104.0}$
+    pacientes
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tabelas de contingência 2x2}
+  \begin{itemize}
+  \item Se a $H_0$ fosse verdadeira, esperaríamos que $104.0$ tivessem
+    a progressão da doença, usando o AZT.
+  \item Mas observamos 76.
+  \item Discrepância $|104.0 - 76| = 28$ pacientes
+  \item Procedendo de maneira análoga, podemos descobrir todos os
+    valores esperados, para cada categoria da tabela
+  \item Para simplificar a interpretação, podemos usar a seguinte fórmula:
+  \begin{displaymath}
+    E = \frac{ \text{total por linha} \times \text{total por coluna}
+    }{ \text{total da tabela} }
+  \end{displaymath}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tabelas de contingência 2x2}
+  \begin{exampleblock}{Exemplo}
+    Frequências observadas:
+    \begin{tabular}{c|c|c|c}
+      & progrediu & não progrediu & total\\
+      \hline
+      AZT & 76 & 399 & 475\\
+      \hline
+      Placebo & 129 & 332 & 461\\
+      \hline
+      total & 205 & 731 & 936\\
+    \end{tabular}
+  \end{exampleblock}{Exemplo}
+  \begin{itemize}
+  \item AZT + Progressão = $\frac{205 \times 475}{936} = 104.0$
+  \item AZT + Não progressão = $\frac{731 \times 475}{936} = 371.0$
+  \item Placebo + Progressão = $\frac{205 \times 461}{936} = 101.0$
+  \item Placebo + Não progressão = $\frac{731 \times 461}{936} = 360.0$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tabelas de contingência 2x2}
+Colocando os valores em uma tabela semelhante:
+  \begin{exampleblock}{Exemplo}
+    Frequências esperadas:
+    \begin{tabular}{c|c|c|c}
+      & progrediu & não progrediu & total\\
+      \hline
+      AZT & 104.0 & 371.0 & 475.0\\
+      \hline
+      Placebo & 101.0 & 360.0 & 461.0\\
+      \hline
+      total & 205.0 & 731.0 & 936.0\\
+    \end{tabular}
+  \end{exampleblock}{Exemplo}
+Observe que os totais esperados devem ser iguais aos observados!
+\end{frame}
+
+\begin{frame}{Teste de Hipótese}
+  \begin{itemize}
+  \item $H_0$ não há relação entre o uso do AZT e a progressão da doença.
+  \item Determinamos as diferenças quadráticas entre o valor observado
+    e o esperado como fizemos anteriormente
+    \begin{displaymath}
+      \chi^2 = \frac{\sum (\text{observado} - \text{esperado})^2 }{\text{esperado}}
+    \end{displaymath}
+  \item Fazemos o teste $\chi^2$ e julgamos a hipótese $H_0$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Teste de Hipótese}
+  \begin{exampleblock}{Exemplo}
+    \begin{itemize}
+    \item AZT + P = $\frac{(76 - 104.0)^2}{104.0} = \frac{28^2}{104.0}
+      \approx 7.54$
+    \item AZT + NP = $\frac{(399 - 371.0)^2}{371.0} =
+      \frac{28^2}{371.0} \approx 2.11$
+    \item Placebo + P = $\frac{(129 - 101.0)^2}{101.0} =
+      \frac{28^2}{101.0} \approx 7.76$
+    \item Placebo + NP = $\frac{(332 - 360.0)^2}{360.0} =
+      \frac{28^2}{360.0} \approx 2.18$
+    \item $\chi^2 = 7.54 + 2.11 + 7.76 + 2.18 = \alert{19.59}$
+    \end{itemize}
+  \end{exampleblock}{Exemplo}
+\end{frame}
+
+\begin{frame}{O teste Qui-Quadrado}
+  \begin{itemize}
+  \item Quanto \alert{maior} for o valor da estatística de teste,
+    \alert{menor} será o valor-p.
+  \item Calculamos a estatística de teste para a amostra e encontramos
+    $\chi^2 = 19.59$
+  \item Qual é o p-valor desta análise?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{A tabela Qui-Quadrado}
+\includegraphics[height=\textheight]{TC/qui-quadrado1}
+\end{frame}
+
+\begin{frame}{O teste Qui-Quadrado}
+  \begin{itemize}
+  \item Consultando a tabela $\chi^2$, encontramos um $p<0.0001$
+  \item Interpretação: Se a $H_0$ for verdadeira, temos uma
+    chance menor que $0.01\%$ de observar uma discrepância tão grande
+    entre os valores observados e os esperados.
+  \item Conclusão: devemos \alert{rejeitar} a $H_0$
+  \end{itemize}
+  \begin{block}{Interpretação}
+    Rejeitamos a hipótese de que o AZT não é mais eficiente que o
+    placebo.
+  \end{block}
+\end{frame}
+
+\begin{frame}{O teste Qui-Quadrado}
+  \begin{itemize}
+  \item O teste $\chi^2$ é apenas uma aproximação da distribuição dos
+    dados, que pode ser usado para amostras grandes.
+  \item Vantagem: simples de consultar na tabela
+  \item Desvantagem: a aproximação é ruim para amostras pequenas
+  \item Nunca usar se alguma célula da tabela tiver valor \alert{$<5$}
+  \item O teste indicado para este tipo de cenário é o \alert{teste
+      exato de Fisher}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{O teste de Fisher (teste F)}
+  \begin{itemize}
+  \item Para as seguintes situações deve-se usar o teste exato de
+    Fisher:
+    \begin{enumerate}
+    \item Quando se tem amostras pequenas
+    \item Quanto se tem amostras de tamanho moderado, e se tiver uma
+      ferramenta computacional disponível
+    \end{enumerate}
+  \item Se sua amostra for enorme (milhares de dados), prefira o teste
+    $\chi^2$, pois:
+    \begin{enumerate}
+    \item o cálculo do teste F pode ser lento
+    \item a aproximação será boa
+    \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+\subsection{Tabelas maiores}
+
+\begin{frame}{Tabelas de Contingência maiores}
+  \begin{itemize}
+  \item E quando temos mais do que duas categorias complementares?
+  \item Resposta: procedemos como no caso anterior, mas precisamos
+    considerar os \alert{graus de liberdade} do teste $\chi^2$
+    \begin{displaymath}
+        gl = (l-1)(c-1) = (\text{linhas} -1)\times (\text{colunas}-1)
+    \end{displaymath}
+  \item Obs: no caso $2 \times 2$ temos $gl = (2-1) \times (2-1)=1
+    \times 1 = 1$
+  \end{itemize}
+\end{frame}
+
+% \begin{frame}{Tabelas de Contingência maiores}
+%   \begin{exampleblock}{Exemplo}
+%     Comparação entre tratamentos com medicamento de marca, medicamento
+%     genérico e placebo.
+
+%     Valores \alert{observados}
+
+%     \begin{tabular}{c|c|c|c}
+%       & Marca & Genérico & Placebo\\
+%       \hline
+%       Melhora & 24 & 21 & 10\\
+%       \hline
+%       Não melhora & 12 & 13 & 45\\
+%     \end{tabular}
+
+%     (Fonte: Larson \& Farber 2013)
+%   \end{exampleblock}{Exemplo}
+%   \begin{itemize}
+%   \item Graus de liberdade:
+%     \begin{displaymath}
+%       (l -1)\times (c-1) = (2-1) \times (3-1)
+%       = 1 \times 2 = \alert{2}
+%     \end{displaymath}
+%   \end{itemize}
+% \end{frame}
+
+\begin{frame}{Tabelas de Contingência maiores}
+  \begin{exampleblock}{Exemplo}
+    Em dois hospitais, os resultados de 575 autópsias
+    foram comparados com as causas de morte listadas nos
+    atestados. Um dos hospitais que participou do estudo era
+    comunitário (A); o outro era universitário (B).
+
+    % \begin{tabular}{c|c{5cm}|c{5cm}|c{5cm}}%{\textwidth}{@{} Y c c c c @{}}
+    \begin{tabular}{c|p{2cm}|p{2cm}|p{2cm}}
+      Hospital & Precisão confirmada & Falta de informações &
+      Recodificação incorreta \\
+      \hline
+      A & 157 & 18 & 54 \\
+      \hline
+      B & 268 & 44 & 34 \\
+    \end{tabular}
+
+    Os resultados sugerem práticas diferentes no preenchimento de
+    atestados de óbito nos dois hospitais?
+  \end{exampleblock}{Exemplo}
+  Fonte: Aula Hacker \& Simões (2008 - Fiocruz)
+\end{frame}
+
+\begin{frame}{Tabelas de Contingência maiores}
+  \begin{itemize}
+  \item $H_0$: Dentro de cada categoria do status do atestado, as
+    proporções de atestados de óbitos no hospital A são idênticas ao
+    hospital B.
+  \item $H_1$: As proporções não são idênticas
+  \item Graus de liberdade:
+    \begin{displaymath}
+      (l -1)\times (c-1) = (2-1) \times (3-1)
+      = 1 \times 2 = \alert{2}
+    \end{displaymath}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Tabelas de contingência maiores}
+  Preenchendo os totais por linha e coluna:
+  \begin{exampleblock}{Exemplo}
+    \begin{tabular}{c|c|c|c|c}
+      Hospital & Confirmada & Incompleta &
+      Incorreta & total\\
+      \hline
+      A & 157 & 18 & 54 & 229\\
+      \hline
+      B & 268 & 44 & 34 & 346\\
+      \hline
+      total & 425 & 62 & 88 & 575\\
+    \end{tabular}
+  \end{exampleblock}{Exemplo}
+\end{frame}
+
+\begin{frame}{Tabelas de contingência maiores}
+  Incluindo os valores esperados em parênteses temos:
+  \begin{exampleblock}{Exemplo}
+    \begin{tabular}{c|c|c|c|c}
+      Hospital & Confirmada & Incompleta &
+      Incorreta & total\\
+      \hline
+      A & 157 (169.3) & 18 (24.7) & 54 (35.0) & 229\\
+      \hline
+      B & 268 (255.7) & 44 (37.3) & 34 (53.0) & 346\\
+      \hline
+      total & 425 & 62 & 88 & 575\\
+    \end{tabular}
+  \end{exampleblock}{Exemplo}
+\end{frame}
+
+\begin{frame}{Tabelas de Contingência maiores}
+
+  Calculando a estatística de teste $\chi^2$:
+
+  \begin{itemize}
+  \item $\chi^2 = \frac{(157 - 169.3)^2}{169.3} +
+  \frac{(18-24.7)^2}{24.7}  + \ldots$
+\item $\chi^2 = 21.62$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{A tabela Qui-Quadrado}
+  \includegraphics[height=\textheight]{TC/qui-quadrado2}
+\end{frame}
+
+\begin{frame}{Tabelas de Contingência maiores}
+  \begin{itemize}
+  \item Calculamos a estatística de teste $\chi^2 = 21.62$
+  \item Encontramos um p-valor $p<0.001$ (valor fora da tabela)
+  \item Rejeitamos $H_0$ ao nível de significância de $\alpha = 0.05$.
+  \item Conclusão: Há associação entre o hospital e o status do atestado.
+  \item Parece que o hospital A tem maior proporção de atestados incorretos.
+  \end{itemize}
+\end{frame}
+
+% \begin{frame}{Tabelas de Contingência maiores}
+%   \begin{exampleblock}{Exemplo}
+%     Comparação entre tratamentos com medicamento de marca, medicamento
+%     genérico e placebo.
+
+%     Valores \alert{observados (esperados)}
+
+%     \begin{tabular}{c|c|c|c|c}
+%       & Marca & Genérico & Placebo & total\\
+%       \hline
+%       Melhora & 24 (15.84)& 21 (14.96)) & 10 (24.20) & 55\\
+%       \hline
+%       Não melhora & 12 (20.16) & 13 (19.04) & 45 (30.80) & 70\\
+%       \hline
+%       Total & 36 & 34 & 55 & 125\\
+%     \end{tabular}
+
+%   \end{exampleblock}{Exemplo}
+%   \begin{itemize}
+%   \item Estatística de teste: $\chi^2 = $
+%   \end{itemize}
+% \end{frame}
+
 \end{document}
