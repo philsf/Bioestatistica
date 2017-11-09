@@ -42,6 +42,9 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
+\usepackage{animate}
+
+\usepackage{soul} % underline \ul
 
 \title%[] % (optional, use only with long paper titles)
 {Correlação Linear}
@@ -152,6 +155,133 @@
 %   \end{block}
 % \end{frame}
 
+\section{Covariância}
+
+\subsection[Covariância]{Covariância entre duas amostras}
+
+\begin{frame}{Variância (Revisão)}
+  \begin{itemize}
+  \item Relembrando: a variância (assim como o desvio-padrão) é uma
+    medida da dispersão da amostra
+  \item Medida sumária que resume o quanto os dados se desviam da
+    média
+  \item Podemos usar um raciocínio análogo para comparar quanto uma
+    amostra se desvia em relação à outra
+  % \item Isto é, quanto uma 
+  \end{itemize}
+  \begin{block}{Interpretação}
+    Quanto maior a variância, maior a dispersão em relação ao centro.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``pequena''}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-P}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``média''}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-M}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``grande''}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-G}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Variância em cada eixo}
+  \begin{itemize}
+  \item Como vamos medir a variância {\bf entre} duas variáveis, devemos considerar a variância de cada uma delas
+  \item Exemplos anteriores, variância no eixo horizontal
+  \item Vamos rever, agora na vertical
+  \item (e aproveitar para incrementar a visualização de {\bf uma} variância)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``pequena'' - boxplot}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-box-P}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``média'' - boxplot}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-box-M}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``grande'' - boxplot}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-box-G}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância entre duas amostras}
+  \begin{definition}
+    A covariância entre duas variáveis X e Y é uma medida de quanto
+    ambas variam juntas (uma em relação à outra).
+  \end{definition}
+  \begin{itemize}
+  \item Um único número que representa a variação conjunta entre as duas variáveis
+  \item Pode assumir qualquer valor (positivo, negativo, etc)
+  \item Magnitude absoluta (desconsiderando o sinal) indica o grau de dependência
+  \item Obs: duas variáveis independentes tem covariância igual a zero!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Covariância}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-0}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-1}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-2}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-3}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância - amostras independentes}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-n}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Luz.. Câmera... Ação!}
+  \begin{center}
+    \animategraphics[controls,loop,height=.8\textheight]{3}{Cap17/anim-}{0}{3}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Normalização}
+  \begin{block}{Teoria x Prática}
+    A covariância é útil para entender a força (e direção) da associação entre duas variáveis, mas {\em o fato de ela não ter uma escala definida a torna difícil de usar na prática}.
+
+    \bigskip
+    Precisamos de uma medida semelhante de associação, mas que fique em uma escala restrita (digamos, sempre entre -1 e 1).
+  \end{block}
+
+  \bigskip
+  O nome desta solução é \alert{coeficiente de correlação} $r$.
+  
+\end{frame}
+
+
 \section{Correlação}
 
 \subsection[Associação]{Associação entre duas variáveis}
@@ -204,41 +334,6 @@
 
   (Fonte: Triola)
 \end{frame}
-
-\subsection[Covariância]{Covariância entre duas amostras}
-
-\begin{frame}{Variância}
-  \begin{itemize}
-  \item Relembrando: a variância (assim como o desvio-padrão) é uma
-    medida da dispersão da amostra
-  \item Medida sumária que resume o quanto os dados se desviam da
-    média
-  \item Podemos usar um raciocínio análogo para comparar quanto uma
-    amostra se desvia em relação à outra
-  % \item Isto é, quanto uma 
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Covariância entre duas amostras}
-  \begin{definition}
-    A covariância entre duas variáveis X e Y é uma medida de quanto
-    ambas variam juntas (uma em relação à outra).
-  \end{definition}
-  \begin{itemize}
-  \item Obs: duas variáveis independentes tem covariância igual a zero!
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Correlação}
-  \begin{definition}
-    A correlação é a associação estatística entre duas variáveis.
-  \end{definition}
-  
-  Para medir essa associação, calculamos o \alert{coeficiente de
-    correlação} $r$.
-  
-\end{frame}
-
 
 % \begin{frame}{}
 %   \begin{itemize}
