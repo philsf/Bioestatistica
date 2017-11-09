@@ -44,6 +44,8 @@
 
 \usepackage{animate}
 
+\usepackage{soul} % underline \ul
+
 \title%[] % (optional, use only with long paper titles)
 {Correlação Linear}
 
@@ -305,7 +307,7 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Covariância}
+\begin{frame}{Covariância - amostras independentes}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-n}
   \end{center}
@@ -317,13 +319,16 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Correlação}
-  \begin{definition}
-    A correlação é a associação estatística entre duas variáveis.
-  \end{definition}
-  
-  Para medir essa associação, calculamos o \alert{coeficiente de
-    correlação} $r$.
+\begin{frame}{Normalização}
+  \begin{block}{Teoria x Prática}
+    A covariância é útil para entender a força (e direção) da associação entre duas variáveis, mas {\em o fato de ela não ter uma escala definida a torna difícil de usar na prática}.
+
+    \bigskip
+    Precisamos de uma medida semelhante de associação, mas que fique em uma escala restrita (digamos, sempre entre -1 e 1).
+  \end{block}
+
+  \bigskip
+  O nome desta solução é \alert{coeficiente de correlação} $r$.
   
 \end{frame}
 
