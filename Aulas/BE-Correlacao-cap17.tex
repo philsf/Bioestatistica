@@ -1,0 +1,856 @@
+\everymath{\displaystyle}
+\documentclass{beamer}
+% \documentclass[handout]{beamer}
+
+%\usepackage[pdftex]{color,graphicx}
+\usepackage{amsmath,amssymb,amsfonts}
+
+\mode<presentation>
+{
+  % \usetheme{Darmstadt}
+  % \usetheme[hideothersubsections]{Hannover}
+  % \usetheme[hideothersubsections]{Goettingen}
+  \usetheme[hideothersubsections, right]{Berkeley}
+
+  \usecolortheme{seahorse}
+  % \usecolortheme{dolphin}
+  \usecolortheme{rose}
+  % \usecolortheme{orchid}
+
+  \useinnertheme[shadow]{rounded}
+
+  % \setbeamercovered{transparent}
+  \setbeamercovered{invisible}
+  % or whatever (possibly just delete it)
+}
+
+\mode<handout>{
+  \setbeamercolor{background canvas}{bg=black!5}
+  \usepackage{pgfpages}
+  \pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm, landscape]
+}
+
+\usepackage[brazilian]{babel}
+% or whatever
+
+% \usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{times}
+%\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\usepackage{animate}
+
+\usepackage{soul} % underline \ul
+
+\title%[] % (optional, use only with long paper titles)
+{Correlação Linear}
+
+\subtitle
+{Associação de duas amostras (quantitativa)} % (optional)
+
+\author%[] % (optional, use only with lots of authors)
+{Felipe Figueiredo}% \and S.~Another\inst{2}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[INTO] % (optional, but mostly needed)
+{Instituto Nacional de Traumatologia e Ortopedia
+}
+  % \inst{1}%
+  % Department of Computer Science\\
+  % University of Somewhere
+  % \and
+  % \inst{2}%
+  % Department of Theoretical Philosophy\\
+  % University of Elsewhere}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date%[] % (optional)
+{}
+
+% \subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+\pgfdeclareimage[height=1.6cm]{university-logo}{../logo}
+\logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+%\AtBeginSection[]
+{
+  \begin{frame}<beamer>{Sumário}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+% \beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Sumário}
+  \tableofcontents
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+
+%% Template
+% \section{}
+
+% \subsection{}
+
+% \begin{frame}{}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+% \end{frame}
+
+% \begin{frame}
+%   \begin{columns}
+%     \begin{column}{5cm}
+%     \end{column}
+%     \begin{column}{5cm}
+%     \end{column}
+%   \end{columns}
+% \end{frame}
+
+% \begin{frame}{}
+%   \includegraphics[height=0.4\textheight]{file1}
+%   \includegraphics[height=0.4\textheight]{file2}
+%   \includegraphics[height=0.4\textheight]{file3}
+%   \begin{figure}
+%     \caption{}
+%   \end{figure}
+% \end{frame}
+
+% \begin{frame}{}
+%   \begin{definition}
+%   \end{definition}
+%   \begin{example}
+%   \end{example}
+%   \begin{block}{Exercício}
+%   \end{block}
+% \end{frame}
+
+\section{Covariância}
+
+\subsection[Covariância]{Covariância entre duas amostras}
+
+\begin{frame}{Variância (Revisão)}
+  \begin{itemize}
+  \item Relembrando: a variância (assim como o desvio-padrão) é uma
+    medida da dispersão da amostra
+  \item Medida sumária que resume o quanto os dados se desviam da
+    média
+  \item Podemos usar um raciocínio análogo para comparar quanto uma
+    amostra se desvia em relação à outra
+  % \item Isto é, quanto uma 
+  \end{itemize}
+  \begin{block}{Interpretação}
+    Quanto maior a variância, maior a dispersão em relação ao centro.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``pequena''}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-P}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``média''}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-M}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``grande''}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-G}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Variância em cada eixo}
+  \begin{itemize}
+  \item Como vamos medir a variância {\bf entre} duas variáveis, devemos considerar a variância de cada uma delas
+  \item Exemplos anteriores, variância no eixo horizontal
+  \item Vamos rever, agora na vertical
+  \item (e aproveitar para incrementar a visualização de {\bf uma} variância)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``pequena'' - boxplot}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-box-P}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``média'' - boxplot}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-box-M}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Visualização - Variância ``grande'' - boxplot}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/dot-box-G}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância entre duas amostras}
+  \begin{definition}
+    A covariância entre duas variáveis X e Y é uma medida de quanto
+    ambas variam juntas (uma em relação à outra).
+  \end{definition}
+  \begin{itemize}
+  \item Um único número que representa a variação conjunta entre as duas variáveis
+  \item Pode assumir qualquer valor (positivo, negativo, etc)
+  \item Magnitude absoluta (desconsiderando o sinal) indica o grau de dependência
+  \item Obs: duas variáveis independentes tem covariância igual a zero!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Covariância}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-0}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-1}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-2}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-3}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Covariância - amostras independentes}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-n}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Luz.. Câmera... Ação!}
+  \begin{center}
+    \animategraphics[controls,loop,height=.8\textheight]{3}{Cap17/anim-}{0}{3}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Normalização}
+  \begin{block}{Teoria x Prática}
+    A covariância é útil para entender a força (e direção) da associação entre duas variáveis, mas {\em o fato de ela não ter uma escala definida a torna difícil de usar na prática}.
+
+    \bigskip
+    Precisamos de uma medida semelhante de associação, mas que fique em uma escala restrita (digamos, sempre entre -1 e 1).
+  \end{block}
+
+  \bigskip
+  O nome desta solução é \alert{coeficiente de correlação} $r$.
+  
+\end{frame}
+
+
+\section{Correlação}
+
+\subsection[Associação]{Associação entre duas variáveis}
+
+\begin{frame}{Tipos de variáveis envolvidas}
+  \begin{itemize}
+  \item Considere duas amostras X e Y, de dados numéricos contínuos.
+  \item Vamos representar os dados em pares ordenados (x,y) onde:
+    \begin{itemize}
+    \item X: variável independente (ou variável explanatória)
+    \item Y: variável dependente (ou variável resposta)
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Medidas de associação}
+  \begin{itemize}
+  \item Como definir (e mensurar!) o grau de associação entre duas amostras?
+  \item Se uma amostra é dependente de outra, é razoável assumir que isso
+    possa ser observável por estatísticas sumárias
+  \item Como resumir esta informação em uma única grandeza numérica?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Medidas de associação}
+  \begin{itemize}
+  \item Quando uma associação é forte, podemos identificá-la
+    subjetivamente
+  \item Para isto, analisamos o gráfico de dispersão dos pares (x,y)
+  \item Um gráfico deste tipo é feito simplesmente plotando os pontos
+    no plano cartesiano
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \includegraphics[height=0.6\textheight]{Assoc/positive}
+
+  (Fonte: Triola)
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \includegraphics[height=0.6\textheight]{Assoc/negative}
+
+  (Fonte: Triola)
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \includegraphics[height=0.6\textheight]{Assoc/other}
+
+  (Fonte: Triola)
+\end{frame}
+
+% \begin{frame}{}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+% \end{frame}
+
+\subsection[Pearson]{Coeficiente de correlação de Pearson}
+
+\begin{frame}{Coeficiente de correlação}
+  \begin{definition}
+    O coeficiente de correlação $r$ é a medida da direção e força da
+    associação entre duas variáveis.
+  \end{definition}
+  Propriedades:
+  \begin{itemize}
+  \item É um número entre $-1$ e $1$.
+  \item Mede a associação \alert{linear} entre duas variáveis.
+    \begin{itemize}
+    \item Diretamente proporcional, inversamente proporcional, ou
+      ausência de proporcionalidade.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% \begin{frame}{Coeficiente de correlação}
+%   \begin{itemize}
+%   \item O coeficiente de correlação de Pearson é a covariância
+%     normalizada
+%   \item Pode ser calculado para populações ($\rho$) ou amostras ($r$)
+%   \item População
+%     \begin{displaymath}
+%       \rho = \frac{\text{Cov(X,Y)}}{\sigma_X \sigma_Y}
+%     \end{displaymath}
+%   \item Utilizando uma fórmula semelhante, encontramos o coeficiente
+%     $r$ para uma amostra
+%   \end{itemize}
+% \end{frame}
+
+\begin{frame}{Correlação}
+  \begin{block}{}
+    \begin{itemize}
+    \item Uma forte associação \alert<2>{positiva} corresponde a uma correlação
+      próxima de \alert<2>{1}.
+    \item Uma forte associação \alert<3>{negativa} corresponde a uma correlação
+      próxima de \alert<3>{-1}.
+    \item A \alert<4>{ausência} de associação corresponde a uma
+      correlação próxima de \alert<4>{0}.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{IC e Teste de significância}
+  \begin{itemize}
+  \item Se tivéssemos os dados de toda a \alert<1>{população}, poderíamos
+    calcular o \alert<1>{parâmetro} $\rho$
+  \item Na prática, só podemos calcular a \alert<2>{estatística} $r$ da \alert<2>{amostra}
+  \item Utilizamos $r$ como estimador para $\rho$, e testamos a
+    significância estatística da forma usual
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{block}{}
+              \tiny
+      	Pearson's product-moment correlation
+
+        data:  G and G
+        
+        t = 355110000, df = 28, p-value $<$ 2.2e-16
+        
+        alternative hypothesis: true correlation is not equal to 0
+        
+        95 percent confidence interval:
+        
+        1 1
+        
+        sample estimates:
+        
+        cor
+
+        1 
+      \end{block}
+   \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[height=.8\textheight]{Cap17/anim-0}
+      \end{center}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{block}{}
+        \tiny
+        Pearson's product-moment correlation
+       
+         data:  G and GP
+                
+t = 28.803, df = 28, p-value $<$ 2.2e-16
+                
+                alternative hypothesis: true correlation is not equal to 0
+                
+                95 percent confidence interval:
+                
+                0.9653236 0.992e2253
+                
+                sample estimates:
+                
+                cor
+                
+0.9835406 
+      \end{block}
+   \end{column}
+    \begin{column}{5cm}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-1}
+  \end{center}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{block}{}
+        \tiny
+        Pearson's product-moment correlation
+
+        data:  G and GM
+        
+        t = 5.6488, df = 28, p-value = 4.727e-06
+        
+        alternative hypothesis: true correlation is not equal to 0
+        
+        95 percent confidence interval:
+        
+        0.5013686 0.8631382
+        
+        sample estimates:
+        
+        cor
+        
+        0.7298133
+      \end{block}
+   \end{column}
+    \begin{column}{5cm}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-2}
+  \end{center}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{block}{}
+        \tiny
+        Pearson's product-moment correlation
+
+        data:  G and GG
+        
+        t = 2.6943, df = 28, p-value = 0.01179
+        
+        alternative hypothesis: true correlation is not equal to 0
+        
+        95 percent confidence interval:
+        
+        0.1117472 0.6996458
+        
+        sample estimates:
+        
+        cor
+        
+        0.4537489
+        
+      \end{block}
+   \end{column}
+    \begin{column}{5cm}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-3}
+  \end{center}
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Exemplo - amostras independentes}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{block}{}
+              \tiny
+      Pearson's product-moment correlation
+
+        data:  G and seq(1, 30)
+        
+        t = -0.64301, df = 28, p-value = 0.5254
+        
+        alternative hypothesis: true correlation is not equal to 0
+        
+        95 percent confidence interval:
+        
+        -0.4608704  0.2505266
+        
+        sample estimates:
+        
+        cor
+        
+-0.1206304 
+      \end{block}
+   \end{column}
+    \begin{column}{5cm}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-n}
+  \end{center}
+    \end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Exemplo}
+ \begin{example}
+   Pesquisadores queriam entender por que a insulina varia tanto entre
+   indivíduos. Imaginaram que a \alert<2>{composição lipídica} das células do
+   músculo afetam a \alert<3>{sensibilidade do músculo para a insulina}. Para
+   isto, eles injetaram insulina em 13 jovens adultos, e determinaram
+   quanta glicose eles precisariam injetar nos sujeitos para manter o
+   nível de glicose sanguínea constante. A quantidade de glicose
+   injetada para manter o nível sanguíneo constante é, então, uma
+   medida da sensibilidade à insulina.
+
+ % Eles só precisavam injetar
+   % muita glicose quando o músculo era muito sensível à insulina.
+
+    (Fonte: Motulsky, 1995)
+  \end{example}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{example}
+    Os pesquisadores fizeram uma pequena biópsia nos músculos para
+    aferir a fração de ácidos graxos poli-insaturados que tem entre 20
+    e 22 carbonos (\%C20-22). Como variável resposta, mediram o índice
+    de sensibilidade à insulina.
+    % \begin{itemize}
+    % \item A variável independente (X) é a quantidade de ácidos graxos
+    % \item A variável dependente (Y) é o índice de insulina medido
+    % \end{itemize}
+  \end{example}
+  Valores tabelados a seguir.
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{center}
+      \includegraphics[height=0.8\textheight]{Assoc/table}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Exemplo: Diagrama de dispersão dos dados}
+  \includegraphics[width=\textwidth]{Assoc/scatter}
+
+  Obs: na verdade, $r=0.77$.
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+      \item O tamanho da amostra foi $n=13$
+      \item (Antigamente) consultáva-se o valor crítico de $r$ na tabela
+      \item $H_0$ : não há relação entre as variáveis na população ($H_0: \rho = 0$).
+      \item Observe: Quais são as informações necessárias para se consultar a tabela?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[height=0.8\textheight]{Assoc/test}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{itemize}
+  \item O valor crítico da tabela para uma amostra de tamanho 13 é
+    $r_c = 0.553$
+  \item A correlação calculada para esta amostra foi $r=0.77$
+  \item Como a correlação é maior que o valor crítico, a relação é
+    estatisticamente significativa
+  \item Conclusão: há evidências para rejeitar a $H_0$ que não há
+    relação entre as variáveis.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{itemize}
+  \item Pode-se também calcular o p-valor para o coeficiente de
+    correlação $r$.
+  \item Para este exemplo, teríamos $p=0.0021$.
+  \item Interpretação: se não houver relação entre as variáveis
+    ($H_0$), existe apenas 0.21\% de chance de observamos uma
+    correlação tão forte com um estudo deste tamanho
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  Por que as duas variáveis são tão correlacionadas? Considere 4
+  possibilidades:
+  \begin{enumerate}
+  \item o conteúdo lipídico das membranas \alert<1>{determina} a
+    sensibilidade à insulina
+  \item A sensibilidade à insulina de alguma forma \alert<2>{afeta} o conteúdo lipídico
+  \item tanto o conteúdo lipídico quanto a sensibilidade à insulina
+    estão sob o efeito de \alert<3>{algum outro} fator (talvez algum hormônio)
+  \item as duas variáveis não são correlacionados na população, e a
+    estimativa observada nessa amostra é \alert<4>{mera coincidência}
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Interpretando o $r$}
+  \begin{itemize}
+  \item Nunca devemos ignorar a última possibilidade (erro tipo I)!
+  \item o p-valor indica quão rara é essa coincidência
+  \item neste caso, em apenas 0.21\% dos experimentos não haveria uma
+    correlação real, e estaríamos cometendo um erro de interpretação
+  \end{itemize}
+\end{frame}
+
+% \begin{frame}{Elevando o $r$ ao quadrado}
+%   \begin{itemize}
+%   \item Relembrando: calculamos a variância de uma amostra para saber
+%     a dispersão dos dados
+%   \item Sua interpretação é confusa, portanto preferimos usar o
+%     desvio-padrão
+%   \item No caso do $r$ é o contrário: a interpretação de $r^2$ é mais simples
+%   \item Obs: o valor $r^2$ também é chamado \alert{coeficiente de
+%       determinação}, como veremos a seguir.
+%   \end{itemize}
+% \end{frame}
+
+% \begin{frame}{Interpretando o $r^2$}
+%   \begin{itemize}
+%   \item No exemplo anterior, $r^2 = 0.59$
+%   \item no caso, 59\% da variabilidade da tolerância à insulina pode
+%     ser explicada pelo conteúdo lipídico
+%   \item Ou seja: conhecer o conteúdo lipídico permite explicar 59\%
+%     da variância na sensibilidade à insulina
+%   \item Isto deixa 41\% da variância que pode ser explicada por outros
+%     fatores ou erros de medição
+%   \item E este valor ($r^2$) também é utilizado na Regressão!
+%   \end{itemize}
+% \end{frame}
+
+% \subsection[IC]{Intervalo de Confiança}
+
+% \begin{frame}{Intervalo de confiança em torno de $r$}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+%   \begin{example}
+    
+%   \end{example}
+% \end{frame}
+
+% \begin{frame}{Intervalo de confiança em torno de $r^2$}
+%   \begin{itemize}
+%   \item Com o IC em torno de $r$, podemos obter o IC em torno de $r^2$
+%   \item Para isto, basta elevar cada extremo do IC ao quadrado
+%   \end{itemize}
+%   \begin{example}
+    
+%   \end{example}
+% \end{frame}
+
+
+\subsection{Interpretação}
+% \subsection{Interpretação}
+
+\begin{frame}{Interpretação}
+  \begin{itemize}
+  \item Se a correlação é 0, então X e Y não variam juntos (independentes)
+  \item Se a correlação é positiva, então quando uma aumenta, a outra
+    aumenta em proporção direta (linear)
+  \item Se a correlação é negativa, então quando uma aumenta, a outra
+    diminui em proporção inversa (linear)
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Cuidado!}
+  \begin{itemize}
+  \item Duas variáveis podem \alert{parecer} correlacionadas pois são
+    influenciadas por uma terceira variável
+  \item Ex: em alguns países a mortalidade infantil é negativamente
+    correlacionada com o número de telefones per capita
+  \item Mas comprar mais telefones não vai salvar crianças!
+  \item Explicação alternativa: a melhoria da condições financeiras
+    pode afetar ambas as variáveis
+% tanto a quantidade de telefones, quanto a longevidade
+    % infantil
+  \end{itemize}
+\end{frame}
+
+\section{Causalidade}
+% \subsection{Causalidade}
+
+
+\begin{frame}{Causa x efeito}
+  \begin{itemize}
+  \item Se há uma relação de causalidade entre as duas variáveis, a
+    correlação será não nula (positiva ou negativa)
+  \item Quanto maior for a relação de dependência entre as variáveis,
+    maior será o módulo da correlação.
+  \item Se as variáveis não são relacionadas, a correlação será nula.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Causalidade?}
+  \begin{itemize}
+  \item Mas não podemos inverter a afirmativa lógica do slide
+    anterior!
+  \item Isto é, ao observar uma forte correlação, gostaríamos de
+    concluir que uma variável \alert{causa} este efeito na outra
+  \item Infelizmente isto não é possível!
+  \item Lembre-se: a significância do teste indica a probabilidade de
+    se cometer um erro do tipo I (falso positivo).
+  \end{itemize}
+  \begin{block}{Repita várias vezes mentalmente}
+    Correlação não implica em causalidade.
+  \end{block}
+\end{frame}
+
+% \begin{frame}{}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+% \end{frame}
+
+\begin{frame}{Exemplo}
+  Gasto com C\&T (EUA) x Suicídios por enforcamento
+  \includegraphics[width=\textwidth]{Assoc/us-spending-on-science-space-and-technology_suicides-by-hanging-strangulation-and-suffocation}
+
+  Correlação: 0.992082
+
+  (Fonte: Spurious correlations)
+\end{frame}
+
+\begin{frame}{Exemplo}
+  Produção de mel x Prisões por posse de maconha
+  \includegraphics[width=\textwidth]{Assoc/honey-producing-bee-colonies-us_juvenile-arrests-for-possession-of-marijuana-us}
+
+  Correlação: -0.933389
+
+  (Fonte: Spurious correlations)
+\end{frame}
+
+\begin{frame}{Exemplo}
+  Afogamentos em piscina x Filmes com Nicholas Cage
+  \includegraphics[width=\textwidth]{Assoc/number-people-who-drowned-by-falling-into-a-swimming-pool_number-of-films-niclas-cage-appeared-in}
+
+  Correlação: 0.666004
+
+  (Fonte: Spurious correlations)
+\end{frame}
+
+\begin{frame}{Causa e efeito}
+
+  Ao encontrar uma forte correlação, deve-se sempre se perguntar:
+
+  \begin{enumerate}
+  \item Há uma relação direta de causa e efeito entre as variáveis? (X
+    causa Y?)
+
+  \item Há uma relação inversa de causa e efeito entre as variáveis?
+    (Y causa X?)
+
+  \item É possível que a relação entre as variáveis possa ser causada
+    por uma terceira variável (ou mais) que não foi analisada?
+
+  \item É possível que a relação entre duas variáveis seja uma
+    coincidência?
+  \end{enumerate}
+\end{frame}
+
+\section{Resumo}
+\begin{frame}{Resumo}
+  \begin{itemize}
+  \item É necessário investigar a relação entre as variáveis!
+  \item O que pode explicar a relação observada?
+  \item Qual proporção (porcentagem) da variabilidade pode ser
+    explicada pelas variáveis analisadas?
+  \item Quão bem a reta regressora se ajusta aos dados?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Leitura pós-aula e exercícios selecionados}
+  \begin{block}{Leitura obrigatória}
+    \begin{itemize}
+    \item Capítulo 17, pular as seções:
+      \begin{itemize}
+      \item cálculo do r, do IC, do p-valor
+      \item correlação de Spearman, e seu cálculo
+      \item Interpretação do $r^2$
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+  \begin{block}{Exercícios}
+    Capítulo 17, problemas {\bf 1}, {\bf 3} e {\bf 5}.
+
+    Problema {\bf 6}, usar:
+
+    $r=0.8868,\ IC95\%=[0.4856, 0.9794],\ p = 0.0033.$ \alert{$r^2$=?}
+  \end{block}
+  \begin{block}{Leitura recomendada}
+    Capítulo 17: Interpretação do $r^2$ e Correlação de Spearman
+  \end{block}
+\end{frame}
+
+\end{document}
