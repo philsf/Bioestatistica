@@ -13,10 +13,10 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 5. [IC da diferença entre médias][] (cap 7)
 6. [Comparando ICs de proporções][] (cap 8, 9)
 7. [Significância][] (cap 10, 11)
-8. Correlação (cap 17)
-9. Regressão linear simples (cap 18, 19)
-10. 2 médias (cap 23 e 25)
-11. 2 proporções (cap 26 e 27)
+8. [2 médias][] (cap 23 e 25)
+9. [2 proporções][] (cap 26 e 27)
+10. [Correlação][] (cap 17)
+11. Regressão linear simples (cap 18, 19)
 12. "Tópicos avançados"
 13. Fechamento (Cap 38)
 14. Avaliações
@@ -29,6 +29,10 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [IC da diferença entre médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap7.pdf
 [Comparando ICs de proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
 [Significância]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11.pdf
+[2 médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25.pdf
+[2 proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
+[Correlação]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
+
 
 ## Exercícios selecionados por aula
 
