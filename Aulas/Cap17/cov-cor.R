@@ -1,6 +1,5 @@
 library(philsfmisc)
 
-
 # dados -------------------------------------------------------------------
 
 set.seed(1)
@@ -69,3 +68,8 @@ cor.test(G,GP)
 cor.test(G,GM)
 cor.test(G,GG)
 cor.test(G,seq(1,30))
+
+# Problema 6
+serotonin <- c(2,5, 6, 10, 15, 60, 65, 165)
+cross.sec <- c(4, 7, 28, 26, 30, 34, 35, 42)
+cor.test(log(serotonin), cross.sec)
