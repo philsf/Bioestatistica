@@ -152,4 +152,221 @@
 %   \end{block}
 % \end{frame}
 
+\section{Modelagem}
+
+\subsection{Modelos em geral}
+
+\begin{frame}{Modelos}
+  \centering
+  \includegraphics[height=\textheight]{modelos/gi}
+\end{frame}
+
+\begin{frame}{Modelos animais}
+  \centering
+  \includegraphics[width=\textwidth]{modelos/Fatmouse}
+\end{frame}
+
+\begin{frame}{Modelos animais}
+  \centering
+  \includegraphics[width=\textwidth]{modelos/GFP_hiir}
+\end{frame}
+
+\subsection{Modelos estatísticos}
+
+\begin{frame}{Modelos estatísticos}
+  Modelos servem para:
+  \begin{itemize}
+  \item representar de forma simplificada fenômenos, experimentos,
+    dados, etc;
+  \item possibilitar análise em cenários controlados, menos complexos
+    que a realidade;
+  \item extrapolar resultados e conclusões.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Modelos estatísticos}
+  Ao ajustar um modelo aos dados, podemos:
+  \begin{itemize}
+  \item fazer predições dentro do intervalo observado para dados que
+    não foram obtidos (interpolação)
+  \item fazer predições fora do intervalo observado (extrapolação)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Para todos os gostos...}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{modelos/modelos-table1}
+  \end{center}
+\end{frame}
+
+\section[Regressão]{Regressão Linear Simples}
+
+\begin{frame}{Reta de regressão}
+  \begin{definition}
+    Uma \alert{reta de regressão} (também chamada de reta de melhor
+    ajuste) é a reta para a qual a soma dos erros quadráticos dos
+    resíduos é o mínimo.
+  \end{definition}
+  \begin{itemize}
+  \item É a reta que melhor se ajusta aos dados
+  \item Minimiza os resíduos
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Resíduos}
+  \begin{center}
+      \includegraphics[height=0.6\textheight]{Assoc/residuos}
+  \end{center}
+
+  \begin{definition}
+    Resíduos são a distância entre o dado observado e a reta estimada
+    (modelo).
+  \end{definition}
+\end{frame}
+
+\begin{frame}{Elementos da reta de regressão}
+  \begin{itemize}
+  \item Relembrando: a equação de uma reta é definida pela fórmula
+    \begin{displaymath}
+      \hat{y} = \alert{a} x + \alert{b}
+    \end{displaymath}
+  \item No caso da reta regressora:
+    \begin{itemize}
+    \item $y$ é a variável dependente
+    \item $x$ é a variável independente
+    \item $a$ é a inclinação
+    \item $b$ é o intercepto
+    \end{itemize}
+  \item Assim, o objetivo da análise de regressão é encontrar os
+    valores \alert{$a$} e \alert{$b$}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Análise de Regressão}
+  Para determinar a inclinação e o intercepto, usamos:
+  \begin{itemize}
+  \item as médias de $X$ e $Y$
+  \item as variâncias de $X$ e $Y$
+  \item o coeficiente de correlação $r$ entre $X$ e $Y$
+  \item o tamanho da amostra $n$
+  \item \ldots e algumas operações entre estes termos
+  \end{itemize}
+\end{frame}
+
+\subsection{A regressão}
+
+\begin{frame}{Exemplo}
+  \begin{example}
+    Voltemos ao exemplo de associar a composição lipídica com a sensibilidade a insulina.    
+  \end{example}
+  \begin{block}{Pergunta}
+    Qual é o acréscimo na sensibilidade à insulina, para cada unidade aumentada na composição lipídica?
+  \end{block}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \centering
+  \includegraphics[width=.9\textwidth]{Assoc/regressao1}
+
+  \vfill
+  Fonte: Motulsky, 1995
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \centering
+  \includegraphics[width=1.2\textwidth]{Assoc/regressao2}
+\end{frame}
+
+\begin{frame}{Interpretação}
+  \begin{itemize}
+  \item O p-valor é significativo.
+  \item A inclinação é $\approx \alert{37.2}$
+  \item Isto significa que:
+  \end{itemize}
+  \begin{block}{}
+    para cada unidade aumentada no \%C20--22, teremos um aumento proporcional de aproximadamente 37.2 mg/m$^2$/min na sensibilidade à insulina
+  \end{block}
+\end{frame}
+
+\begin{frame}{Análise de Regressão}
+  \begin{center}
+      \includegraphics[height=0.6\textheight]{Assoc/residuos2}
+  \end{center}
+
+  \begin{itemize}
+  \item A qualidade do ajuste do modelo de regressão é determinado
+    pelo \alert{coeficiente de determinação} $r^2$
+  % \item A semelhança de nomenclatura com o coeficiente $r$ não é mera
+  %   coincidência.
+  \end{itemize}
+\end{frame}
+
+  % Encontrando a inclinação e o intercepto da reta, podemos estimar
+  % $\hat{Y}$ para valores arbitrários de $X$.
+
+\subsection[$R^2$]{Coeficiente de Determinação $r^2$}
+
+\begin{frame}{Coeficiente de Determinação $r^2$}
+  \begin{definition}
+    O \alert{coeficiente de determinação} $r^2$ é a relação da
+    variação explicada com a variação total.
+  \end{definition}
+  \begin{displaymath}
+    r^2 = \frac{\text{variação explicada}}{\text{variação total}}
+  \end{displaymath}
+  \begin{itemize}
+  \item Lembrando: $r^2$ é o quadrado de $r$!
+  % \item Este valor tem uma interpretação prática mais fácil, que
+  %   veremos em breve
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Coeficiente de Determinação $r^2$}
+  \begin{itemize}
+  % \item A variância dos dados pode ser explicada de várias formas
+  \item Qual é a porcentagem da variação dos dados pode ser explicada
+    pela reta regressora?
+  \item O coeficiente $r^2$ é a fração da variância que é
+    compartilhada entre $X$ e $Y$.
+  \item Como $r$ está sempre entre -1 e 1, $r^2$ está sempre entre 0 e
+    1.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Coeficiente de Determinação $r^2$}
+  \begin{itemize}
+  \item Além disso, $r^2 \le |r|$
+  \item Por que?
+  \end{itemize}
+  \begin{block}{}
+    Compare os seguintes números entre 0 e 1:
+    \begin{displaymath}
+      \frac{1}{2} \text{ e } \left(\frac{1}{2}\right)^2=\frac{1}{4} \Rightarrow
+      \frac{1}{4} \le \frac{1}{2}
+    \end{displaymath}
+    \begin{displaymath}
+      \frac{1}{3} \text{ e } \left(\frac{1}{3}\right)^2=\frac{1}{9} \Rightarrow
+      \frac{1}{9} \le \frac{1}{3}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+
+% \begin{frame}{Coeficiente de Determinação $r^2$}
+%   \begin{itemize}
+%   \item 
+%   \end{itemize}
+% \end{frame}
+
+\section{Resumo}
+\begin{frame}{Resumo}
+  \begin{itemize}
+  \item É necessário investigar a relação entre as variáveis!
+  \item O que pode explicar a relação observada?
+  \item Qual proporção (porcentagem) da variabilidade pode ser
+    explicada pelas variáveis analisadas?
+  \item Quão bem a reta regressora se ajusta aos dados?
+  \end{itemize}
+\end{frame}
+
 \end{document}
