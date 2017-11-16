@@ -28,6 +28,7 @@ pred28 <- predict(modelo, newdata = data.frame(BMI=28))
 library(ggplot2)
 b <- ggplot(dados, aes(BMI,BMD)) +
   geom_point() +
+  xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   ggtitle("BMI x BMD")
 ggsave("Aulas/modelos/pratica-plot1.png")
 

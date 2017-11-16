@@ -42,6 +42,7 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
+\usepackage{ulem}
 
 \title%[] % (optional, use only with long paper titles)
 {Regressão Linear Simples}
@@ -224,6 +225,29 @@
   \end{center}
 \end{frame}
 
+\begin{frame}{Depois dos comerciais...}
+  \begin{center}
+    \includegraphics[width=1.175\textwidth]{modelos/bmi-bmd-abstract}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Na prática...}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+      \item Dados simulados, inspirados no paper.
+      \item Existe uma tendência? Ela é linear?
+      \item Podemos predizer a osteoporose a partir do IMC?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=\textwidth]{modelos/pratica-plot1}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
 \begin{frame}{Reta de regressão}
   \begin{definition}
     Uma \alert{reta de regressão} (também chamada de reta de melhor
@@ -245,6 +269,14 @@
     Resíduos são a distância entre o dado observado e a reta estimada
     (modelo).
   \end{definition}
+\end{frame}
+
+\begin{frame}{Atenção}
+  \begin{itemize}
+  \item Para muitos testes presume-se que os dados vem de uma distribuição normal
+  \item Neste caso, não é necessário que os {\bf dados} sejam normais
+  \item {\bf É necessário que os resíduos sejam normais}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Elementos da reta de regressão}
@@ -381,6 +413,8 @@
 %   \end{itemize}
 % \end{frame}
 
+\subsection{Exercício}
+
 \begin{frame}{Na prática...}
   \begin{center}
     \includegraphics[width=\textwidth]{modelos/bmi-bmd-title}
@@ -390,6 +424,18 @@
 \begin{frame}{Na prática...}
   \begin{center}
     \includegraphics[width=1.175\textwidth]{modelos/bmi-bmd-abstract}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Na prática...}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{modelos/pratica-plot1}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Na prática...}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{modelos/pratica-plot2}
   \end{center}
 \end{frame}
 
@@ -417,23 +463,14 @@ F-statistic: 261.5 on 1 and 198 DF,  p-value: < 2.2e-16
 
 \begin{frame}{Na prática...}
   \begin{center}
-    \includegraphics[height=\textheight]{modelos/pratica-plot1}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Na prática...}
-  \begin{center}
-    \includegraphics[height=\textheight]{modelos/pratica-plot2}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Na prática...}
-  \begin{center}
-    \includegraphics[height=\textheight]{modelos/pratica-plot3}
+    \includegraphics[height=.9\textheight]{modelos/pratica-plot3}
   \end{center}
 \end{frame}
 
 \section{Resumo}
+
+\subsection{Resumo}
+
 \begin{frame}{Resumo}
   \begin{itemize}
   \item É necessário investigar a relação entre as variáveis!
@@ -442,6 +479,15 @@ F-statistic: 261.5 on 1 and 198 DF,  p-value: < 2.2e-16
     explicada pelas variáveis analisadas?
   \item Quão bem a reta regressora se ajusta aos dados?
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Pós-aula}
+  Schneider A, Hommel G, Blettner M%:
+  % Linear regression analysis—part 14 of a series on evaluation of scientific publications.
+  Dtsch Arztebl Int 2010; 107(44): 776–82.
+
+  % DOI: 10.3238/arztebl.2010.0776
+  \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2992018/}
 \end{frame}
 
 \end{document}
