@@ -32,7 +32,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [2 médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25.pdf
 [2 proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
 [Correlação]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
-[Regressão linear simples]: Aulas/BE-Regressao-cap18-19.pdf
+[Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
 
 
 ## Exercícios selecionados por aula
