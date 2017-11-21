@@ -4,6 +4,10 @@ library(tidyr)
 cenario1 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 4, 1), Trat.B = rnorm(8, 4, 1))
 cenario1.long <- gather(cenario1, Grupo, y)
 
+format.pval(with(cenario1, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario1, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario1, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+
 baseplot <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
   scale_x_discrete(labels = NULL) +
@@ -18,6 +22,10 @@ ggsave("Aulas/Topicos_adv/cenario1_medias.png")
 
 cenario2 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 6, 1), Trat.B = rnorm(8, 6, 1))
 cenario2.long <- gather(cenario2, Grupo, y)
+
+format.pval(with(cenario2, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario2, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario2, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
 
 baseplot2 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
