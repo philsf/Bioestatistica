@@ -42,8 +42,8 @@ ggsave("Aulas/Topicos_adv/cenario2_medias.png")
 anova1 <- aov(y ~ Grupo, cenario1.long)
 anova2 <- aov(y ~ Grupo, cenario2.long)
 
-anova1.p.bonf <- with(dados2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
-anova2.p.bonf <- with(dados2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+anova1.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+anova2.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
 anova1.p.tukey <- TukeyHSD(anova1)
 anova2.p.tukey <- TukeyHSD(anova2)
 
