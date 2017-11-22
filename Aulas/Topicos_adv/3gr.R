@@ -11,7 +11,7 @@ format.pval(with(cenario1, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scien
 baseplot <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
   scale_x_discrete(labels = NULL) +
-  scale_y_continuous(limits = c(0,10)) +
+  scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 1") +
   theme(legend.position = "bottom")
 ggsave("Aulas/Topicos_adv/cenario1.png")
@@ -30,7 +30,7 @@ format.pval(with(cenario2, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scien
 baseplot2 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
   scale_x_discrete(labels = NULL) +
-  scale_y_continuous(limits = c(0,10)) +
+  scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 2") +
   theme(legend.position = "bottom")
 ggsave("Aulas/Topicos_adv/cenario2.png")
