@@ -722,6 +722,133 @@
   \end{center}
 \end{frame}
 
+\section{Exercício}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 1 - ANOVA}
+    \tiny
+\begin{verbatim}
+            Df Sum Sq Mean Sq F value Pr(>F)  
+Grupo        2  3.753  1.8763   3.025 0.0701 .
+Residuals   21 13.026  0.6203                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+\end{verbatim}
+    \begin{center}
+      \includegraphics[height=.5\textheight]{Topicos_adv/cenario1}
+    \end{center}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 2 - ANOVA}
+    \tiny
+\begin{verbatim}
+            Df Sum Sq Mean Sq F value Pr(>F)  
+Grupo        2  9.499   4.749   4.775 0.0195 *
+Residuals   21 20.889   0.995                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+\end{verbatim}
+    \begin{center}
+      \includegraphics[height=.5\textheight]{Topicos_adv/cenario2}
+    \end{center}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 2 - Tukey}
+    \tiny
+\begin{verbatim}
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = y ~ Grupo, data = cenario2.long)
+
+$Grupo
+                     diff        lwr      upr     p adj
+Trat.A-Placebo 1.29615978  0.0392117 2.553108 0.0424949
+Trat.B-Placebo 1.36988994  0.1129419 2.626838 0.0311078
+Trat.B-Trat.A  0.07373016 -1.1832179 1.330678 0.9880276
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 4 - ANOVA two-way (sem interações)}
+    \tiny
+\begin{verbatim}
+            Df Sum Sq Mean Sq F value Pr(>F)  
+Grupo        2  9.499   4.749   4.548 0.0236 *
+Genero       1  0.002   0.002   0.002 0.9690  
+Residuals   20 20.887   1.044                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+\end{verbatim}
+    \begin{center}
+      \includegraphics[height=.5\textheight]{Topicos_adv/cenario22}
+    \end{center}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 4 - ANOVA two-way (com interações)}
+    \tiny
+\begin{verbatim}
+             Df Sum Sq Mean Sq F value  Pr(>F)   
+Grupo         2 20.001  10.000   9.935 0.00124 **
+Genero        1  3.665   3.665   3.641 0.07246 . 
+Grupo:Genero  2  3.157   1.579   1.568 0.23557   
+Residuals    18 18.119   1.007                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+\end{verbatim}
+    \begin{center}
+      \includegraphics[height=.5\textheight]{Topicos_adv/cenario22}
+    \end{center}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 4 - ANOVA two-way (com interações)}
+    \tiny
+\begin{verbatim}
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = y ~ Grupo * Genero, data = cenario2.long)
+
+$Grupo
+                    diff        lwr      upr     p adj
+Trat.A-Placebo 1.5514853  0.2712011 2.831770 0.0164455
+Trat.B-Placebo 2.1703237  0.8900395 3.450608 0.0011265
+Trat.B-Trat.A  0.6188384 -0.6614458 1.899123 0.4494538
+
+$Genero
+         diff         lwr      upr     p adj
+M-F 0.8071626 -0.08158125 1.695906 0.0724633
+
+$`Grupo:Genero`
+                          diff        lwr      upr     p adj
+Trat.A:F-Placebo:F   2.1160544 -0.4873461 4.719455 0.1523427
+Trat.B:F-Placebo:F   1.5879521 -1.0154484 4.191353 0.4122593
+Placebo:M-Placebo:F  0.7976679 -1.5308843 3.126220 0.8795976
+Trat.A:M-Placebo:F   2.0104118 -0.3181404 4.338964 0.1143524
+Trat.B:M-Placebo:F   3.3174146  0.9888624 5.645967 0.0030192
+Trat.B:F-Trat.A:F   -0.5281023 -3.1315028 2.075298 0.9857698
+Placebo:M-Trat.A:F  -1.3183865 -3.6469387 1.010166 0.4902167
+Trat.A:M-Trat.A:F   -0.1056426 -2.4341948 2.222910 0.9999896
+Trat.B:M-Trat.A:F    1.2013602 -1.1271920 3.529912 0.5849474
+Placebo:M-Trat.B:F  -0.7902842 -3.1188364 1.538268 0.8835616
+Trat.A:M-Trat.B:F    0.4224597 -1.9060925 2.751012 0.9913898
+Trat.B:M-Trat.B:F    1.7294625 -0.5990897 4.058015 0.2216761
+Trat.A:M-Placebo:M   1.2127439 -0.8038415 3.229329 0.4270508
+Trat.B:M-Placebo:M   2.5197467  0.5031614 4.536332 0.0098078
+Trat.B:M-Trat.A:M    1.3070028 -0.7095825 3.323588 0.3496917
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
 \section{Encerramento}
 
 % \subsection{Resumo}
