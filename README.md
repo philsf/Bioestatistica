@@ -17,7 +17,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 9. [2 proporções][] (cap 26 e 27)
 10. [Correlação][] (cap 17)
 11. [Regressão linear simples][] (cap 18, 19)
-12. "Tópicos avançados"
+12. ["Tópicos avançados"][] (cap 13, 30)
 13. Fechamento (Cap 38)
 14. Avaliações
 15. Avaliações
@@ -33,6 +33,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [2 proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
 [Correlação]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
 [Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
+["Tópicos avançados"]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Topicos-Avancados.pdf
 
 
 ## Exercícios selecionados por aula
