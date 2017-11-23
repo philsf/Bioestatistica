@@ -45,11 +45,11 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 5. Cap 7: Em breve
 6. Cap 8: Exercícios 1, 2, 4 e 5. Cap 9: Exercícios 1 e 2.
 7. Cap 10: todos. Cap 11: todos.
-8. Cap 17:
-9. Cap 18: . Cap 19:
-10. Cap 23: . Cap 25:
-11. Cap 26: . Cap 27:
-12. 
+8. Cap 23: . Cap 25: -
+9. Cap 26: 1. Cap 27: -.
+10. Cap 17: 1,3 e 5. Para o 6, usar r = 0:8868; IC95% = [0:4856; 0:9794]; p = 0:0033: r 2=?
+11. Cap 19: Todos menos o 5.
+12. Cap 13: 1. Cap 30: -
 
 ## Licença
 Todo o material contido aqui é distribuído sob a licença [Creative Commons Atribuição](http://creativecommons.org/licenses/by/4.0/deed.pt_BR)
