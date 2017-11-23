@@ -67,19 +67,19 @@ anova22.p.tukey <- TukeyHSD(anova22)
 
 baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
-  scale_x_discrete(labels = NULL) +
+  # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 3") +
   theme(legend.position = "bottom")
 ggsave("Aulas/Topicos_adv/cenario12.png", height = 7, width = 7)
 
-baseplot +
+baseplot12 +
   geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
 ggsave("Aulas/Topicos_adv/cenario12_medias.png", height = 7, width = 7)
 
 baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
-  scale_x_discrete(labels = NULL) +
+  # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 4") +
   theme(legend.position = "bottom")
