@@ -415,29 +415,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Exemplo}
-  \begin{exampleblock}{Exemplo 13.5}
-    \begin{center}
-      \includegraphics[width=.6\textwidth]{Topicos_adv/exemplo13_5-3}
-    \end{center}
-  \begin{itemize}
-  \item Razão entre as variâncias: $F = 0.4634/0.0814 = 5.69 >> 1$ {\tiny (mesmo considerando o $n$ de cada grupo)}
-  \item $p=0.0039$
-  \item Como você redigiria este resultado?
-  \end{itemize}
-  \end{exampleblock}
-\end{frame}
-
-\begin{frame}{}
-  \begin{block}{Resposta}
-    Sabemos apenas que pelo menos um dos grupos é diferente dos outros.
-    Mas qual(is)?
-
-    \bigskip
-    Ainda não estamos prontos para redigir o resultado!
-  \end{block}
-\end{frame}
-
 % > summary(anova1)
 %             Df Sum Sq Mean Sq F value Pr(>F)  
 % Grupo        2  3.753  1.8763   3.025 0.0701 .
@@ -623,6 +600,39 @@
 % \end{frame}
 
 \subsection{O teste F}
+
+\begin{frame}{O teste F}
+  \begin{itemize}
+  \item Se as médias forem iguais, a variância intra-grupo deve ser ``igual'' à variância inter-grupo
+  \item Calculando-se a {\em razão} entre a variância, esperamos que seja próximo de 1
+  \item razão = $F = \frac{\text{Entre grupos}}{\text{Intra grupos}}$
+  \item Uma razão muito maior que 1 indica que há mais variância entre os grupos do que o esperado
+  \item Obs: o teste leva em conta os graus de liberdade do numerador e denominador
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{exampleblock}{Exemplo 13.5}
+    \begin{center}
+      \includegraphics[width=.6\textwidth]{Topicos_adv/exemplo13_5-3}
+    \end{center}
+  \begin{itemize}
+  \item Razão entre as variâncias: $F = 0.4634/0.0814 = 5.69 >> 1$ {\tiny (mesmo considerando o $n$ de cada grupo)}
+  \item $p=0.0039$
+  \item Pergunta:  Como você redigiria este resultado?
+  \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{}
+  \begin{block}{Resposta}
+    Sabemos apenas que pelo menos um dos grupos é diferente dos outros.
+    Mas qual(is)?
+
+    \bigskip
+    Ainda não estamos prontos para redigir o resultado!
+  \end{block}
+\end{frame}
 
 \subsection{Pós teste}
 
