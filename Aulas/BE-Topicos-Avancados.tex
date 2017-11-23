@@ -376,6 +376,22 @@
 
 % P value adjustment method: bonferroni 
 
+% > summary(aov(y ~ Grupo + Genero, cenario2.long))
+%             Df Sum Sq Mean Sq F value Pr(>F)  
+% Grupo        2  9.499   4.749   4.548 0.0236 *
+% Genero       1  0.002   0.002   0.002 0.9690  
+% Residuals   20 20.887   1.044                 
+% ---
+% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+% > summary(aov(y ~ Grupo * Genero, cenario2.long))
+%              Df Sum Sq Mean Sq F value Pr(>F)  
+% Grupo         2  9.499   4.749   4.707 0.0227 *
+% Genero        1  0.002   0.002   0.002 0.9685  
+% Grupo:Genero  2  2.725   1.362   1.350 0.2842  
+% Residuals    18 18.163   1.009                 
+% ---
+% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
 % \begin{frame}{3 grupos - cenário 1}
 %   \begin{center}
 %     \includegraphics[height=.9\textheight]{Topicos_adv/cenario1}

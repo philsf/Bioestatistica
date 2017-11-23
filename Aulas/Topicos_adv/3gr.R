@@ -88,3 +88,6 @@ ggsave("Aulas/Topicos_adv/cenario22.png", height = 7, width = 7)
 baseplot22 +
   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
 ggsave("Aulas/Topicos_adv/cenario22_medias.png", height = 7, width = 7)
+
+summary(aov(y ~ Grupo + Genero, cenario2.long))
+summary(aov(y ~ Grupo * Genero, cenario2.long))
