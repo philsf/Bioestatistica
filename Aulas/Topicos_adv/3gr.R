@@ -11,9 +11,6 @@ cenario1.long <- gather(cenario1, Grupo, y)
 
 
 
-format.pval(with(cenario1, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-format.pval(with(cenario1, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-format.pval(with(cenario1, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
 
 # DataViz -----------------------------------------------------------------
 
@@ -32,10 +29,6 @@ ggsave("Aulas/Topicos_adv/cenario1_medias.png", height = 7, width = 7)
 cenario2 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 6, 1), Trat.B = rnorm(8, 6, 1))
 cenario2.long <- gather(cenario2, Grupo, y)
 
-format.pval(with(cenario2, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-format.pval(with(cenario2, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-format.pval(with(cenario2, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-
 baseplot2 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
   scale_x_discrete(labels = NULL) +
@@ -50,6 +43,15 @@ ggsave("Aulas/Topicos_adv/cenario2_medias.png", height = 7, width = 7)
 
 # testes t sem correcao ---------------------------------------------------
 
+# cenario 1
+format.pval(with(cenario1, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario1, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario1, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+
+# cenario 2
+format.pval(with(cenario2, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario2, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario2, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
 
 # 1-way -------------------------------------------------------------------
 
@@ -62,9 +64,6 @@ anova1.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method =
 anova2.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
 anova1.p.tukey <- TukeyHSD(anova1)
 anova2.p.tukey <- TukeyHSD(anova2)
-
-# format.pval(la$p.value, scientific =F, eps = 1e-4, digits = 4)
-# format.pval(la$p.value, scientific =F, eps = 1e-4, digits = 4)
 
 # 2-way -------------------------------------------------------------------
 
