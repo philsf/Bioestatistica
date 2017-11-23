@@ -1,12 +1,21 @@
+# setup -------------------------------------------------------------------
+
 set.seed(2)
 library(ggplot2)
 library(tidyr)
+
+# dados -------------------------------------------------------------------
+
 cenario1 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 4, 1), Trat.B = rnorm(8, 4, 1))
 cenario1.long <- gather(cenario1, Grupo, y)
+
+
 
 format.pval(with(cenario1, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
 format.pval(with(cenario1, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
 format.pval(with(cenario1, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+
+# DataViz -----------------------------------------------------------------
 
 baseplot <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
@@ -39,8 +48,15 @@ baseplot2 +
   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
 ggsave("Aulas/Topicos_adv/cenario2_medias.png", height = 7, width = 7)
 
+# testes t sem correcao ---------------------------------------------------
+
+
+# 1-way -------------------------------------------------------------------
+
 anova1 <- aov(y ~ Grupo, cenario1.long)
 anova2 <- aov(y ~ Grupo, cenario2.long)
+
+# testes t com correcao ---------------------------------------------------
 
 anova1.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
 anova2.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
