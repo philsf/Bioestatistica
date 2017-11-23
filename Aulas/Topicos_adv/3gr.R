@@ -14,11 +14,11 @@ baseplot <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 1") +
   theme(legend.position = "bottom")
-ggsave("Aulas/Topicos_adv/cenario1.png")
+ggsave("Aulas/Topicos_adv/cenario1.png", height = 7, width = 7)
 
 baseplot +
   geom_hline(yintercept = apply(cenario1, 2, mean), lty = 2, lwd = .3)
-ggsave("Aulas/Topicos_adv/cenario1_medias.png")
+ggsave("Aulas/Topicos_adv/cenario1_medias.png", height = 7, width = 7)
 
 cenario2 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 6, 1), Trat.B = rnorm(8, 6, 1))
 cenario2.long <- gather(cenario2, Grupo, y)
@@ -33,11 +33,11 @@ baseplot2 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 2") +
   theme(legend.position = "bottom")
-ggsave("Aulas/Topicos_adv/cenario2.png")
+ggsave("Aulas/Topicos_adv/cenario2.png", height = 7, width = 7)
 
 baseplot2 +
   geom_hline(yintercept = apply(cenario2, 2, mean), lty = 2, lwd = .3)
-ggsave("Aulas/Topicos_adv/cenario2_medias.png")
+ggsave("Aulas/Topicos_adv/cenario2_medias.png", height = 7, width = 7)
 
 anova1 <- aov(y ~ Grupo, cenario1.long)
 anova2 <- aov(y ~ Grupo, cenario2.long)
