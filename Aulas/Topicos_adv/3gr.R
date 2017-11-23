@@ -80,22 +80,28 @@ format.pval(with(cenario2, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scien
 anova1 <- aov(y ~ Grupo, cenario1.long)
 anova2 <- aov(y ~ Grupo, cenario2.long)
 
-# testes t com correcao ---------------------------------------------------
-
+# Bonferroni
 anova1.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
 anova2.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+
+# Tukey
 anova1.p.tukey <- TukeyHSD(anova1)
 anova2.p.tukey <- TukeyHSD(anova2)
 
 # 2-way -------------------------------------------------------------------
 
+# sem interacao
 anova12 <- aov(y ~ Grupo + Genero, cenario1.long)
 anova22 <- aov(y ~ Grupo + Genero, cenario2.long)
 
-anova12.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
-anova22.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+# Bonferroni
+# anova12.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+# anova22.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+
+# Tukey
 anova12.p.tukey <- TukeyHSD(anova12)
 anova22.p.tukey <- TukeyHSD(anova22)
 
+# com interacao
 summary(aov(y ~ Grupo + Genero, cenario2.long))
 summary(aov(y ~ Grupo * Genero, cenario2.long))
