@@ -7,10 +7,11 @@ library(tidyr)
 # dados -------------------------------------------------------------------
 
 cenario1 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 4, 1), Trat.B = rnorm(8, 4, 1))
-cenario1.long <- gather(cenario1, Grupo, y)
-
-
-
+cenario2 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 6, 1), Trat.B = rnorm(8, 6, 1))
+cenario1 <- cbind(cenario1, Genero = sample(c("M", "F"), 8, replace = T))
+cenario2 <- cbind(cenario2, Genero = sample(c("M", "F"), 8, replace = T))
+cenario1.long <- gather(cenario1, Grupo, y, -Genero)
+cenario2.long <- gather(cenario2, Grupo, y, -Genero)
 
 # DataViz -----------------------------------------------------------------
 
@@ -25,9 +26,6 @@ ggsave("Aulas/Topicos_adv/cenario1.png", height = 7, width = 7)
 baseplot +
   geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
 ggsave("Aulas/Topicos_adv/cenario1_medias.png", height = 7, width = 7)
-
-cenario2 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 6, 1), Trat.B = rnorm(8, 6, 1))
-cenario2.long <- gather(cenario2, Grupo, y)
 
 baseplot2 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
@@ -66,11 +64,6 @@ anova1.p.tukey <- TukeyHSD(anova1)
 anova2.p.tukey <- TukeyHSD(anova2)
 
 # 2-way -------------------------------------------------------------------
-
-cenario1 <- cbind(cenario1, Genero = sample(c("M", "F"), 8, replace = T))
-cenario2 <- cbind(cenario2, Genero = sample(c("M", "F"), 8, replace = T))
-cenario1.long <- gather(cenario1, Grupo, y, -Genero)
-cenario2.long <- gather(cenario2, Grupo, y, -Genero)
 
 anova12 <- aov(y ~ Grupo + Genero, cenario1.long)
 anova22 <- aov(y ~ Grupo + Genero, cenario2.long)
