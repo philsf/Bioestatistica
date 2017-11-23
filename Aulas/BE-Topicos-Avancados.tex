@@ -636,6 +636,50 @@
 
 \subsection{Pós teste}
 
+\begin{frame}{Testes {\em post-hoc}}
+  \begin{itemize}
+  \item O teste de ANOVA é apenas a primeira parte!\footnote{Está com saudade do teste t?}
+  \item O p-valor do teste F indica o quão raro é encontrar uma discrepância tão grande (ou maior) entre as médias dos grupos, ao acaso
+  \item Mas isso não nos ajuda a saber qual grupo é diferente dos outros.
+  \item Para esta outra pergunta, precisamos de outro método
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Testes {\em post-hoc}}
+  \begin{itemize}
+  \item Como vimos, não podemos simplesmente fazer vários testes t
+  \item Mas podemos {\em ajustar} os p-valores destes testes, para compensar a {\em inflação} destes resultados
+  \item Isso pode ser feito de várias maneiras
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Testes {\em post-hoc}}
+  \begin{itemize}
+  \item {\bf Correção de Bonferroni}
+  \item Correção para tendências
+  \item {\bf Teste ``honesto'' das diferenças, de Tukey (HSD)}
+  \item Método de Scheffe
+  \item Teste de Dunnet
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Testes {\em post-hoc}}
+  \begin{itemize}
+  \item Os dois mais usados são Bonferroni e Tukey
+%  \item O teste de Bonferroni é mais simples, e tem mais sensibilidade (com menos especificidade)
+%  \item O teste de Tukey tem mais especificidade, mas menos sensibilidade
+ \item O teste de Bonferroni ajusta o p-valor dividindo pelo número de comparações, mas seus ICs são muito grandes
+ \item O teste de Tukey é mais conservador, mas pode acusar diferenças significativas com mais frequência
+ \item Infelizmente não há consenso sobre critérios de escolha
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{exampleblock}{Exemplo 13.5}
+    \includegraphics[width=\textwidth]{Topicos_adv/exemplo13_5-4}
+  \end{exampleblock}
+\end{frame}
+
 \subsection{Two-way ANOVA}
 
 \section{Resumo}
