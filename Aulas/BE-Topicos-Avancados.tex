@@ -270,6 +270,112 @@
 
 \subsection{Comparação de 3 (ou mais) grupos}
 
+% > summary(anova1)
+%             Df Sum Sq Mean Sq F value Pr(>F)  
+% Grupo        2  3.753  1.8763   3.025 0.0701 .
+% Residuals   21 13.026  0.6203                 
+% ---
+% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+% > summary(anova12)
+%             Df Sum Sq Mean Sq F value Pr(>F)  
+% Grupo        2  3.753  1.8763   3.064 0.0691 .
+% Genero       1  0.779  0.7792   1.272 0.2727  
+% Residuals   20 12.247  0.6123                 
+% ---
+% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+% > summary(anova2)
+%             Df Sum Sq Mean Sq F value Pr(>F)  
+% Grupo        2  9.499   4.749   4.775 0.0195 *
+% Residuals   21 20.889   0.995                 
+% ---
+% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+% > summary(anova22)
+%             Df Sum Sq Mean Sq F value Pr(>F)  
+% Grupo        2  9.499   4.749   4.548 0.0236 *
+% Genero       1  0.002   0.002   0.002 0.9690  
+% Residuals   20 20.887   1.044                 
+% ---
+% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+% > TukeyHSD(anova1)
+%   Tukey multiple comparisons of means
+%     95% family-wise confidence level
+
+% Fit: aov(formula = y ~ Grupo, data = cenario1.long)
+
+% $Grupo
+%                      diff       lwr        upr     p adj
+% Trat.A-Placebo -0.9593453 -1.951928 0.03323713 0.0593745
+% Trat.B-Placebo -0.3641649 -1.356747 0.62841756 0.6310533
+% Trat.B-Trat.A   0.5951804 -0.397402 1.58776285 0.3059643
+
+% > TukeyHSD(anova12)
+%   Tukey multiple comparisons of means
+%     95% family-wise confidence level
+
+% Fit: aov(formula = y ~ Grupo + Genero, data = cenario1.long)
+
+% $Grupo
+%                      diff        lwr        upr     p adj
+% Trat.A-Placebo -0.9593453 -1.9492340 0.03054344 0.0585261
+% Trat.B-Placebo -0.3641649 -1.3540536 0.62572388 0.6277051
+% Trat.B-Trat.A   0.5951804 -0.3947083 1.58506917 0.3025618
+
+% $Genero
+%          diff       lwr      upr     p adj
+% M-F 0.4161096 -0.353374 1.185593 0.2726642
+
+% > TukeyHSD(anova2)
+%   Tukey multiple comparisons of means
+%     95% family-wise confidence level
+
+% Fit: aov(formula = y ~ Grupo, data = cenario2.long)
+
+% $Grupo
+%                      diff        lwr      upr     p adj
+% Trat.A-Placebo 1.29615978  0.0392117 2.553108 0.0424949
+% Trat.B-Placebo 1.36988994  0.1129419 2.626838 0.0311078
+% Trat.B-Trat.A  0.07373016 -1.1832179 1.330678 0.9880276
+
+% > TukeyHSD(anova22)
+%   Tukey multiple comparisons of means
+%     95% family-wise confidence level
+
+% Fit: aov(formula = y ~ Grupo + Genero, data = cenario2.long)
+
+% $Grupo
+%                      diff          lwr      upr     p adj
+% Trat.A-Placebo 1.29615978  0.003412143 2.588907 0.0493258
+% Trat.B-Placebo 1.36988994  0.077142303 2.662638 0.0366413
+% Trat.B-Trat.A  0.07373016 -1.219017478 1.366478 0.9885936
+
+% $Genero
+%            diff        lwr       upr     p adj
+% M-F -0.01696485 -0.9157828 0.8818531 0.9689844
+
+% > anova1.p.bonf
+
+% 	Pairwise comparisons using t tests with pooled SD 
+
+% data:  y and Grupo 
+
+%        Placebo Trat.A
+% Trat.A 0.072   -     
+% Trat.B 1.000   0.437 
+
+% P value adjustment method: bonferroni 
+% > anova2.p.bonf
+
+% 	Pairwise comparisons using t tests with pooled SD 
+
+% data:  y and Grupo 
+
+%        Placebo Trat.A
+% Trat.A 0.050   -     
+% Trat.B 0.036   1.000 
+
+% P value adjustment method: bonferroni 
+
 % \begin{frame}{3 grupos - cenário 1}
 %   \begin{center}
 %     \includegraphics[height=.9\textheight]{Topicos_adv/cenario1}
