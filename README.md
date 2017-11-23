@@ -17,7 +17,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 9. [2 proporções][] (cap 26 e 27)
 10. [Correlação][] (cap 17)
 11. [Regressão linear simples][] (cap 18, 19)
-12. "Tópicos avançados"
+12. ["Tópicos avançados"][] (cap 13, 30)
 13. Fechamento (Cap 38)
 14. Avaliações
 15. Avaliações
@@ -33,6 +33,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [2 proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
 [Correlação]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
 [Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
+["Tópicos avançados"]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Topicos-Avancados.pdf
 
 
 ## Exercícios selecionados por aula
@@ -44,11 +45,11 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 5. Cap 7: Em breve
 6. Cap 8: Exercícios 1, 2, 4 e 5. Cap 9: Exercícios 1 e 2.
 7. Cap 10: todos. Cap 11: todos.
-8. Cap 17:
-9. Cap 18: . Cap 19:
-10. Cap 23: . Cap 25:
-11. Cap 26: . Cap 27:
-12. 
+8. Cap 23: . Cap 25: -
+9. Cap 26: 1. Cap 27: -.
+10. Cap 17: 1,3 e 5. Para o 6, usar r = 0:8868; IC95% = [0:4856; 0:9794]; p = 0:0033: r 2=?
+11. Cap 19: Todos menos o 5.
+12. Cap 13: 1. Cap 30: -
 
 ## Licença
 Todo o material contido aqui é distribuído sob a licença [Creative Commons Atribuição](http://creativecommons.org/licenses/by/4.0/deed.pt_BR)
