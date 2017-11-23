@@ -353,6 +353,66 @@
 
 \subsection{ANOVA um fator (One-way ANOVA)}
 
+\begin{frame}[label=exemplo13.5]{Exemplo}
+  \begin{exampleblock}{Exemplo 13.5}
+    Hetland, et. al (1993) pesquisaram alterações hormonais em mulheres corredoras.
+    Mediram o nível de hormônio luteinizante (LH) em três grupos:
+    \begin{enumerate}
+    \item sedentárias
+    \item corredoras recreacionais
+    \item corredoras de elite
+    \end{enumerate}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{exampleblock}{Exemplo 13.5}
+    \begin{center}
+      \includegraphics[width=.6\textwidth]{Topicos_adv/exemplo13_5-1}
+    \end{center}
+  \begin{itemize}
+  \item Com estas informações, podemos construir uma tabela ANOVA
+  \item $H_0$: todas as médias são iguais
+  \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{exampleblock}{Exemplo 13.5}
+    \begin{center}
+      \includegraphics[width=.6\textwidth]{Topicos_adv/exemplo13_5-2}
+    \end{center}
+  \begin{itemize}
+  \item A razão entre as Somas dos Quadrados: $0.93/17.38 = 5.3\%$
+  \item $5.3\%$ da variabilidade pode ser explicada pelas diferenças {\em entre os grupos}
+  \item (lembra do $r^2?)$
+  \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Exemplo}
+  \begin{exampleblock}{Exemplo 13.5}
+    \begin{center}
+      \includegraphics[width=.6\textwidth]{Topicos_adv/exemplo13_5-3}
+    \end{center}
+  \begin{itemize}
+  \item Razão entre as variâncias: $F = 0.4634/0.0814 = 5.69 >> 1$ {\tiny (mesmo considerando o $n$ de cada grupo)}
+  \item $p=0.0039$
+  \item Como você redigiria este resultado?
+  \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{}
+  \begin{block}{Resposta}
+    Sabemos apenas que pelo menos um dos grupos é diferente dos outros.
+    Mas qual(is)?
+
+    \bigskip
+    Ainda não estamos prontos para redigir o resultado!
+  \end{block}
+\end{frame}
+
 % > summary(anova1)
 %             Df Sum Sq Mean Sq F value Pr(>F)  
 % Grupo        2  3.753  1.8763   3.025 0.0701 .
