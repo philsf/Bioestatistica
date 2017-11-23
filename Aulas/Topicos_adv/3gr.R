@@ -15,7 +15,7 @@ cenario2.long <- gather(cenario2, Grupo, y, -Genero)
 
 # DataViz -----------------------------------------------------------------
 
-baseplot <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
+baseplot11 <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
   scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
@@ -23,11 +23,11 @@ baseplot <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Topicos_adv/cenario1.png", height = 7, width = 7)
 
-baseplot +
+baseplot11 +
   geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
 ggsave("Aulas/Topicos_adv/cenario1_medias.png", height = 7, width = 7)
 
-baseplot2 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
+baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
   scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
@@ -35,9 +35,33 @@ baseplot2 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Topicos_adv/cenario2.png", height = 7, width = 7)
 
-baseplot2 +
+baseplot21 +
   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
 ggsave("Aulas/Topicos_adv/cenario2_medias.png", height = 7, width = 7)
+
+baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
+  geom_point() +
+  # scale_x_discrete(labels = NULL) +
+  scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
+  ggtitle("Cenário 3") +
+  theme(legend.position = "bottom")
+ggsave("Aulas/Topicos_adv/cenario12.png", height = 7, width = 7)
+
+baseplot12 +
+  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
+ggsave("Aulas/Topicos_adv/cenario12_medias.png", height = 7, width = 7)
+
+baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
+  geom_point() +
+  # scale_x_discrete(labels = NULL) +
+  scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
+  ggtitle("Cenário 4") +
+  theme(legend.position = "bottom")
+ggsave("Aulas/Topicos_adv/cenario22.png", height = 7, width = 7)
+
+baseplot22 +
+  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
+ggsave("Aulas/Topicos_adv/cenario22_medias.png", height = 7, width = 7)
 
 # testes t sem correcao ---------------------------------------------------
 
@@ -72,30 +96,6 @@ anova12.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method 
 anova22.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
 anova12.p.tukey <- TukeyHSD(anova12)
 anova22.p.tukey <- TukeyHSD(anova22)
-
-baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
-  geom_point() +
-  # scale_x_discrete(labels = NULL) +
-  scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
-  ggtitle("Cenário 3") +
-  theme(legend.position = "bottom")
-ggsave("Aulas/Topicos_adv/cenario12.png", height = 7, width = 7)
-
-baseplot12 +
-  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
-ggsave("Aulas/Topicos_adv/cenario12_medias.png", height = 7, width = 7)
-
-baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
-  geom_point() +
-  # scale_x_discrete(labels = NULL) +
-  scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
-  ggtitle("Cenário 4") +
-  theme(legend.position = "bottom")
-ggsave("Aulas/Topicos_adv/cenario22.png", height = 7, width = 7)
-
-baseplot22 +
-  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
-ggsave("Aulas/Topicos_adv/cenario22_medias.png", height = 7, width = 7)
 
 summary(aov(y ~ Grupo + Genero, cenario2.long))
 summary(aov(y ~ Grupo * Genero, cenario2.long))
