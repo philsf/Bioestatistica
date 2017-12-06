@@ -39,6 +39,8 @@ detach(twosamples)
 rm(twosamples)
 
 ## 3 amostras ####
+airquality <- data.table::data.table(airquality)
+airquality[, .(SW = format.pval(shapiro.test(Ozone)$p.value, scientific = F, eps = .0001)), by = Month]
 par(mfrow = c(1,1))
 boxplot(Ozone ~ Month, data = airquality, xlab="Mês", ylab="Ozônio", main="Medições de qualidade do ar em NY")
 m.p <- aov(Ozone ~ Month, data = airquality)

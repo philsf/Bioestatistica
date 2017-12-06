@@ -18,7 +18,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 10. [Correlação][] (cap 17)
 11. [Regressão linear simples][] (cap 18, 19)
 12. ["Tópicos avançados"][] (cap 13, 30)
-13. Fechamento (Cap 38)
+13. [Fechamento][] (Cap 37, 38)
 14. Avaliações
 15. Avaliações
 
@@ -34,6 +34,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Correlação]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
 [Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
 ["Tópicos avançados"]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Topicos-Avancados.pdf
+[Fechamento]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param.pdf
 
 
 ## Exercícios selecionados por aula

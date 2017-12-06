@@ -19,7 +19,8 @@
 
   \useinnertheme[shadow]{rounded}
 
-  \setbeamercovered{transparent}
+  % \setbeamercovered{transparent}
+  \setbeamercovered{invisible}
   % or whatever (possibly just delete it)
 }
 
@@ -98,7 +99,7 @@
 % If you wish to uncover everything in a step-wise fashion, uncomment
 % the following command: 
 
-\beamerdefaultoverlayspecification{<+->}
+% \beamerdefaultoverlayspecification{<+->}
 
 
 \begin{document}
@@ -156,7 +157,7 @@
 \begin{frame}{A hipótese da normalidade}
   \begin{itemize}
   \item Todos os métodos que vimos até aqui presumem que os dados são normalmente distribuídos
-  \item Desvios da normalidade precisam ser contornados\footnote{há controvérsias: \url{http://www.r-bloggers.com/normality-tests-don\%E2\%80\%99t-do-what-you-think-they-do/}}
+  \item Desvios da normalidade precisam ser contornados\footnote{há controvérsias: \url{https://www.r-bloggers.com/normality-tests-don't-do-what-you-think-they-do/}}
   \item Veremos duas maneiras: transformações e alternativas
   \item Mas antes, como identificar essa necessidade?
   \end{itemize}
@@ -231,8 +232,8 @@
 \begin{frame}
   \begin{itemize}
   \item Objetivo: é possível \alert{determinar} se uma amostra veio de uma população normalmente distribuída?
-  \item Resposta curta: \alert<3->{NÃO}.
-  \item<4> Resposta longa: podemos examinar se há evidências para ``aceitar'' esta hipótese\footnote{Lembre que {\bf nunca} aceitamos uma hipótese -- apenas deixamos de rejeitar sua recíproca.}
+  \item<2-> Resposta curta: \alert<3->{NÃO}.
+  \item<4-> Resposta longa: podemos examinar se há evidências para ``aceitar'' esta hipótese\footnote{Lembre que {\bf nunca} aceitamos uma hipótese -- apenas deixamos de rejeitar sua recíproca.}
   \end{itemize}
 \end{frame}
 
@@ -268,12 +269,12 @@
   \item Algumas vezes, podemos aplicar uma transformação nos dados, para que eles se adequem às premissas requeridas
   \item Transformações comuns incluem:
     \begin{itemize}
-    \item<2-> logaritmo
-    \item<2-> exponencial
-    \item<2-> raiz quadrada
-    \item<2-> potências
+    \item logaritmo
+    \item exponencial
+    \item raiz quadrada
+    \item potências
     \end{itemize}
-  \item Geralmente envolve tentativa e erro
+  \item Geralmente envolve tentativa e erro \footnote{Mas a transformação de Box-Cox pode ajudar!}
   \item Hipóteses sobre o problema ou desenho experimental ajudam
   \end{itemize}
 \end{frame}
@@ -312,7 +313,7 @@ Dados normais x dados transformados (log)
   \item Caso não seja, deve-se usar um teste não-paramétrico
   \end{itemize}
   \begin{block}{Teste para uma amostra}
-    Ao invés do teste t, usar o teste de Wilcoxon
+    Ao invés do teste t, usar o teste de Wilcoxon (Capítulo 25)
   \end{block}
 \end{frame}
 
@@ -327,8 +328,8 @@ Dados normais x dados transformados (log)
   \end{block}
   \begin{block}{Dados não-normais}
     \begin{itemize}
-    \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} \footnote{Também conhecido como Wilcoxon (rank sum test)}
-    \item amostras pareadas $\Rightarrow$ Wilcoxon (signed rank test)
+    \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} (Capítulo 24)%\footnote{Também conhecido como Wilcoxon (rank sum test)}
+    \item amostras pareadas $\Rightarrow$ Wilcoxon (Capítulo 25)
     \end{itemize}
   \end{block}
 \end{frame}
@@ -350,9 +351,9 @@ P: Estas amostras são significativamente diferentes?
 poderíamos fazer um teste t não-pareado.
 
   \item<2-> Resultado: p-valor = \alert{0.259}
-  \begin{block}{Pergunta}
+  \begin{exampleblock}{Pergunta}
     Isto significa que as amostras não são significativamente diferentes?
-  \end{block}
+  \end{exampleblock}
   \end{itemize}
 \end{frame}
 
@@ -374,9 +375,9 @@ poderíamos fazer um teste t não-pareado.
 \end{frame}
 
 \begin{frame}{Mann-Whitney}
-  \begin{block}{Teste t}
+  \begin{exampleblock}{Teste t}
     p-valor = 0.259 (não significativo)
-  \end{block}
+  \end{exampleblock}
   \begin{itemize}
   \item<2-> Aplicando o teste de Shapiro-Wilk em x e y
     \begin{itemize}
@@ -387,9 +388,9 @@ poderíamos fazer um teste t não-pareado.
   \item Então o teste t \alert{não é} apropriado!
   \item Substituto: teste de Mann-Whitney
   \end{itemize}
-  \begin{block}{Teste de Mann-Whitney}
+  \begin{exampleblock}{Teste de Mann-Whitney}
     p-value = \alert{0.0001346} (significativo)
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \subsection[3+ amostras]{Teste para 3 ou mais amostras}
@@ -415,18 +416,18 @@ P: Estas amostras são significativamente diferentes?
 \end{frame}
 
 \begin{frame}{Kruskal-Wallis}
-  \begin{block}{ANOVA}
+  \begin{exampleblock}{ANOVA}
     p-valor = 0.0776 (não significativo)
-  \end{block}
+  \end{exampleblock}
   \begin{itemize}
-  \item Shapiro-Wilk (Ozônio): p-value = 2.79e-08
+  \item Shapiro-Wilk (Ozônio por mês): $< 0.0001,\ 0.0628,\ 0.86689,\ 0.090325,\ < 0.0001$
   \item Devemos rejeitar a hipótese de normalidade.
   \item Então o ANOVA \alert{não é} apropriado!
-  \item Substituto: teste de Kruskal-Wallis
+  \item Substituto: teste de Kruskal-Wallis (Capítulo 30)
   \end{itemize}
-  \begin{block}{Teste de Kruskal-Wallis}
+  \begin{exampleblock}{Teste de Kruskal-Wallis}
     p-value = \alert{6.901e-06} (significativo)
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \subsection{Correlação}
@@ -437,28 +438,61 @@ P: Estas amostras são significativamente diferentes?
   \item Mede a direção e força desta associação
   \end{itemize}
   \begin{block}{Correlação}
-    Ao invés da correlação linear de Pearson, usar a correlação de ranks de Spearman
+    Ao invés da correlação linear de Pearson, usar a correlação de ranks de Spearman (Capítulo 17).
   \end{block}
 \end{frame}
 
 \section{Resumo}
 
-\begin{frame}{Resumo}
-  \begin{block}{}
-      \begin{tabular}{||l||l||}
-    \hline
-    Paramétrico & Não-paramétrico\\
-    \hline
-    \hline
-    t-teste pareado & Wilcoxon\\
-    \hline
-    t-teste não-pareado & Mann-Whitney\\
-    \hline
-    ANOVA 1 fator & Kruskal-Wallis\\
-    \hline
-    Correlação de Pearson & Correlação de Spearman\\
-    \hline
-  \end{tabular}
+\begin{frame}{Número de resultados no PUBMED}
+  \begin{itemize}
+  \item t-test: 61488
+  \item ANOVA: 431252
+  \item Wilcoxon: 19881
+  \item Mann-Whitney: 25571
+  \item Kruskal-Wallis: 11943
+  \item Shapiro-Wilk: 519
+  \item Kolmongorov-Smirnoff: 0
+  \item Anderson-Darling: 49
+  \item Chi-Square: 107277
+  \item OR: 221034
+  \item RR: 344996
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Resumo (teste oftálmico)}
+  % \begin{block}{}
+  %     \begin{tabular}{||l||l||}
+  %   \hline
+  %   Paramétrico & Não-paramétrico\\
+  %   \hline
+  %   \hline
+  %   t-teste pareado & Wilcoxon\\
+  %   \hline
+  %   t-teste não-pareado & Mann-Whitney\\
+  %   \hline
+  %   ANOVA 1 fator & Kruskal-Wallis\\
+  %   \hline
+  %   Correlação de Pearson & Correlação de Spearman\\
+  %   \hline
+  % \end{tabular}
+  % \end{block}
+  \includegraphics[width=\textwidth]{Nao_Param/metodos1}
+\end{frame}
+
+\begin{frame}{Resumo (agora sim)}
+  \includegraphics[width=\textwidth]{Nao_Param/metodos2}
+\end{frame}
+
+\begin{frame}{Pós-aula}
+  \begin{block}{Leitura obrigatória}
+    \begin{itemize}
+    \item Capítulo 37
+    \item Capítulo 38
+    \end{itemize}
+  \end{block}
+  \begin{block}{Leitura recomendada}
+    Seções de métodos não-paramétricos dos capítulos mencionados na aula.
   \end{block}
 \end{frame}
 
