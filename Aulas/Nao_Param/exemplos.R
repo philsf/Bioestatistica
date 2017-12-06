@@ -19,6 +19,7 @@ hist(x2); hist(log(x2))
 hist(x2); qqnorm(log(x2)); qqline(log(x2))
 hist(log(x2)); qqnorm(log(x2)); qqline(log(x2))
 qqnorm(x2, main = "Dados originais"); qqline(x2); qqnorm(log(x2), main = "Dados (log)"); qqline(log(x2))
+shapiro.test(x2)
 shapiro.test(log(x2))
 
 detach(nl)
