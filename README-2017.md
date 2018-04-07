@@ -22,19 +22,19 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 14. Avaliações
 15. Avaliações
 
-[Introdução]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro.pdf
-[IC de uma proporção]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
-[Variabilidade]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
-[Distribuição Normal + IC da média]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
-[IC da diferença entre médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap7.pdf
-[Comparando ICs de proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
-[Significância]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11.pdf
-[2 médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25.pdf
-[2 proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
-[Correlação]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
-[Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
-["Tópicos avançados"]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Topicos-Avancados.pdf
-[Fechamento]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param.pdf
+[Introdução]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-Intro.pdf
+[IC de uma proporção]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-IC-prop-cap2.pdf
+[Variabilidade]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-Variabilidade-cap3.pdf
+[Distribuição Normal + IC da média]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-Normal-IC-cap4-5.pdf
+[IC da diferença entre médias]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-diferenca-IC-media-cap7.pdf
+[Comparando ICs de proporções]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-OR-RR-cap8-9.pdf
+[Significância]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-Significancia_cap10-11.pdf
+[2 médias]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-testes-2medias-cap23-25.pdf
+[2 proporções]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-testes-2prop-cap26-27.pdf
+[Correlação]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-Correlacao-cap17.pdf
+[Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-Regressao-cap18-19.pdf
+["Tópicos avançados"]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-Topicos-Avancados.pdf
+[Fechamento]: https://github.com/philsf/Bioestatistica/raw/v2017.1-INTO/Aulas/BE-Nao_Param.pdf
 
 
 ## Exercícios selecionados por aula
