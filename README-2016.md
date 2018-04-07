@@ -17,29 +17,27 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 - [Inferência II][]
 - [Testes de Hipóteses I][]
 - [Testes de Hipóteses II][]
-- ANOVA
-- [Tabelas de Contingência][]
-- [Correlação e Regressão][]
+- [Associação I][]
+- [Associação II][]
 - [Tutorial - Descritiva][]
 - [Tutorial - Correlação e Regressão][]
 - [Métodos não-paramétricos][]
 
 [Cronograma]: https://docs.google.com/document/d/1xb7Yqxae8sbbbkPYjg5ZGhxJ8NFfxOURBISeWVHkjUE
-[Introdução]: Aulas/BE-Intro_4em1.pdf
-[Análise Descritiva I]: Aulas/BE-Descritiva_I_4em1.pdf
-[Análise Descritiva II]: Aulas/BE-Descritiva_II_4em1.pdf
-[Probabilidades I]: Aulas/BE-Prob_I_Basica_4em1.pdf
-[Probabilidades II]: Aulas/BE-Prob_II_Distrib_4em1.pdf
-[Inferência I]: Aulas/BE-Inferencia_I_4em1.pdf
-[Inferência II]: Aulas/BE-Inferencia_II_4em1.pdf
-[Testes de Hipóteses I]: Aulas/BE-TesteHipotese_I_4em1.pdf
-[Testes de Hipóteses II]: Aulas/BE-TesteHipotese_II_4em1.pdf
-[Tabelas de Contingência]: Aulas/BE-Associacao_I_4em1.pdf
-[Correlação e Regressão]: Aulas/BE-Associacao_II_4em1.pdf
-[Tutorial - Descritiva]: Aulas/BE-Pratica_Descritiva_4em1.pdf
-[Tutorial - Correlação e Regressão]: Aulas/BE-Pratica_Associacao_4em1.pdf
-[Métodos não-paramétricos]: Aulas/BE-Nao_Param_4em1.pdf
-
+[Introdução]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Intro_4em1.pdf
+[Análise Descritiva I]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Descritiva_I_4em1.pdf
+[Análise Descritiva II]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Descritiva_II_4em1.pdf
+[Probabilidades I]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Prob_I_Basica_4em1.pdf
+[Probabilidades II]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Prob_II_Distrib_4em1.pdf
+[Inferência I]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Inferencia_I_4em1.pdf
+[Inferência II]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Inferencia_II_4em1.pdf
+[Testes de Hipóteses I]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-TesteHipotese_I_4em1.pdf
+[Testes de Hipóteses II]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-TesteHipotese_II_4em1.pdf
+[Associação I]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Associacao_I_4em1.pdf
+[Associação II]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Associacao_II_4em1.pdf
+[Tutorial - Descritiva]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Pratica_Descritiva_4em1.pdf
+[Tutorial - Correlação e Regressão]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Pratica_Associacao_4em1.pdf
+[Métodos não-paramétricos]: https://github.com/philsf/Bioestatistica/raw/v2016.1-INTO/Aulas/BE-Nao_Param_4em1.pdf
 
 ## Bibliografia
 
