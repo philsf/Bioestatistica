@@ -1,0 +1,14 @@
+O objetivo desta tarefa é representar uma taxa de prevalência como proporção.
+Esta tarefa é pré-requisito para o bom entendimento da próxima aula.
+
+Adquira o artigo disponível no link abaixo.
+Na tabela 2 são apresentadas as taxas de prevalência (por 100,000 pessoas) de "stroke" na província de Hunan, China (2018).
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6060238/
+
+Considere apenas a prevalence rate na coluna TOTAL (tabela 2).
+1- Quais são as proporções (em %), dos três primeiros grupos etários da tabela (20-29, 30-39 e 40-49)?
+2- Aplique o mesmo procedimento acima nos valores da coluna 95% CI. Quais são as proporções obtidas?
+
+Para concluir esta tarefa, você deve anexar um arquivo com suas respostas dentro do prazo estabelecido.
+
