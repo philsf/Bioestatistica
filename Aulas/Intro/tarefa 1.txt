@@ -11,10 +11,10 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6060238/
 Na tabela 2 são apresentadas as taxas de prevalência (por 100,000 pessoas) de "stroke" na província de Hunan, China (2018).
 
 Considere apenas a "prevalence rate" na coluna TOTAL (tabela 2).
-Esta coluna é dividida em 3 colunas: número de "strokes", "Prevalence" (taxa), e uma terceira coluna chamada "95% CI" (duas taxas - mínima e máxima).
+Esta coluna é dividida em 3 colunas: "número de strokes", "Prevalence" (taxa), e uma terceira coluna chamada "95% CI" (duas taxas - mínima e máxima).
 
-1- Quais são as proporções (em %), dos três primeiros grupos etários da tabela (20-29, 30-39 e 40-49)?
-2- Aplique o mesmo procedimento acima nos valores nos valores da coluna 95% CI. Quais são as proporções obtidas?
+1- Quais são as proporções (em %), dos três primeiros grupos etários da coluna "Prevalence" (20-29, 30-39 e 40-49)?
+2- Aplique o mesmo procedimento acima nos valores nos valores da coluna "95% CI". Quais são as proporções obtidas?
 3- Por que você acha que estes resultados foram apresentadas da forma como consta no artigo, e não como proporção?
 
 Para concluir esta tarefa, você deve anexar um arquivo com suas respostas dentro do prazo estabelecido.
