@@ -3,12 +3,15 @@ Representando taxas como proporções
 O objetivo desta tarefa é interpretar uma taxa como proporção, e apresentá-la como porcentagem (%).
 Esta tarefa vai prepará-lo(a) para a próxima aula.
 
-Adquira o artigo disponível no link abaixo.
-Na tabela 2 são apresentadas as taxas de prevalência (por 100,000 pessoas) de "stroke" na província de Hunan, China (2018).
+Acesse o artigo disponível no link abaixo.
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6060238/
 
-Considere apenas a prevalence rate na coluna TOTAL (tabela 2).
+Na tabela 2 são apresentadas as taxas de prevalência (por 100,000 pessoas) de "stroke" na província de Hunan, China (2018).
+
+Considere apenas a "prevalence rate" na coluna TOTAL (tabela 2).
+Esta coluna é dividida em 3 colunas: número de "strokes", "Prevalence" (taxa), e uma terceira coluna chamada "95% CI" (que contém duas taxas semelhantes).
+
 1- Quais são as proporções (em %), dos três primeiros grupos etários da tabela (20-29, 30-39 e 40-49)?
 2- Aplique o mesmo procedimento acima nos valores nos valores da coluna 95% CI. Quais são as proporções obtidas?
 3- Por que você acha que estes resultados foram apresentadas da forma como consta no artigo, e não como proporção?
