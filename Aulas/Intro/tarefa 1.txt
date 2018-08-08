@@ -1,3 +1,5 @@
+Representando taxas e proporções como porcentagens
+
 O objetivo desta tarefa é representar uma taxa de prevalência como proporção.
 Esta tarefa é pré-requisito para o bom entendimento da próxima aula.
 
@@ -11,4 +13,3 @@ Considere apenas a prevalence rate na coluna TOTAL (tabela 2).
 2- Aplique o mesmo procedimento acima nos valores da coluna 95% CI. Quais são as proporções obtidas?
 
 Para concluir esta tarefa, você deve anexar um arquivo com suas respostas dentro do prazo estabelecido.
-
