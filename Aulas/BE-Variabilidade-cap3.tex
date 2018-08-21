@@ -187,12 +187,14 @@
   \end{center}
 
   \begin{block}{}
-    A idade média (desvio padrão) do grupo DMD é 7.7 $\pm$ 3.0.
+    A idade média $\pm$ desvio padrão do grupo DMD é 7.7 $\pm$ 3.0.
 
-    \bigksip
     \begin{itemize}
     \item O que significa este 3.0?
     \item Como estas descrições se comparam com as do grupo controle?
+    \item \alert{Os grupos têm medidas médias diferentes?}
+    \item \alert{Os grupos têm variabilidades diferentes?}
+    \item Que outras informações você precisa para responder?
     \end{itemize}
   \end{block}
 \end{frame}
@@ -431,15 +433,32 @@ Conforme no exemplo anterior
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Desvios em relação à média}
-  Mas os desvios...
-  \begin{enumerate}
-  \item são tão numerosos quanto os dados
-  \item têm sinal (direção do desvio)
-  \item SEMPRE têm soma \alert{nula}, portanto o desvio médio é sempre 0
-  \end{enumerate}
-  \begin{block}{Pense...}
-    Uma fórmula que dá o mesmo resultado para qualquer dataset... serve para resumir seus dados?
+\begin{frame}{A seguir, você verá...}
+  \begin{itemize}
+  \item  uma cadência de ideias (todas relacionadas)
+  \item o que uma significa em relação à próxima.
+  \item prós e contras de cada uma
+  \item do mais \alert{simples}, ao mais \alert{aplicado}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{De volta ao exemplo}
+  \begin{center}
+    \includegraphics[width=1.2\textwidth]{Cap3/DP1}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Dados}
+  \begin{block}{medida do músculo (N = 32, média = 90)}
+\begin{verbatim}
+"91.84" "89.33" "88.99" "83.59" "91.71"
+"90.30" "81.25" "93.80" "93.33" "90.65"
+"90.30" "87.10" "90.83" "99.40" "91.84"
+"83.74" "85.85" "85.87" "89.03" "89.40"
+"89.35" "96.48" "97.20" "91.00" "90.04"
+"86.98" "93.12" "93.72" "85.37" "96.26"
+"91.33" "83.32"
+\end{verbatim}
   \end{block}
 \end{frame}
 
@@ -467,6 +486,35 @@ Conforme no exemplo anterior
 \end{column}
 \end{columns}
 \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Desvios em relação à média}
+  \begin{block}{medida do músculo (N = 32, média = 90)}
+\begin{verbatim}
+"91.84" "89.33" "88.99" "83.59" "91.71"
+"90.30" "81.25" "93.80" "93.33" "90.65"
+...
+\end{verbatim}
+  \end{block}
+  \begin{block}{Desvios em relação à média}
+\begin{verbatim}
+"1.77"  "-0.74" "-1.08" "-6.49" "1.63"
+"0.23"  "-8.83" "3.73"  "3.25"  "0.58"
+...
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Desvios em relação à média}
+  Mas os desvios...
+  \begin{enumerate}
+  \item são tão numerosos quanto os dados
+  \item têm sinal (direção do desvio)
+  \item SEMPRE têm soma \alert{nula}, portanto o desvio médio é sempre 0
+  \end{enumerate}
+  \begin{block}{Pense...}
+    Uma fórmula que dá o mesmo resultado para qualquer dataset... serve para resumir seus dados?
+  \end{block}
 \end{frame}
 
 \begin{frame}{Soma dos desvios}
@@ -532,7 +580,10 @@ Conforme no exemplo anterior
       \end{displaymath}
     \end{column}
   \end{columns}
-  \end{exampleblock}
+\end{exampleblock}
+\begin{block}{No exemplo do paper}
+  MAD = 3.24
+\end{block}
 \end{frame}
 
 \begin{frame}{Uma proposta ``melhor''}
@@ -583,6 +634,9 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
     \end{column}
   \end{columns}
   \end{exampleblock}
+  \begin{block}{No exemplo do paper}
+    VAR = 18.14
+  \end{block}
 \end{frame}
 
 \begin{frame}{Desvio Padrão}
@@ -618,6 +672,45 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
         s = \sqrt{s^2} = \sqrt{2.5} = 1.58
     \end{displaymath}
   \end{example}
+  \begin{block}{No exemplo do paper}
+    DP = 4.26
+  \end{block}
+\end{frame}
+
+\begin{frame}{Como comparar o DP de dois grupos?}
+  \begin{block}{}
+    Não podemos comparar diretamente o \alert{valor} do DP de dois grupos.
+
+    \bigskip
+    Por que?
+  \end{block}
+\end{frame}
+
+\begin{frame}{O Desvio Padrão Relativo}
+  \begin{block}{Desvio Padrão Relativo}
+    O desvio padrão relativo é uma medida de dispersão \alert{normalizada}.
+
+    \bigskip
+    Ela ignora a escala da mensuração.
+
+    $$DPR = \frac{DP}{\bar{x}}$$
+  \end{block}
+  \begin{exampleblock}{Sinônimos}
+    \begin{itemize}
+    \item Desvio padrão relativo (DPR)
+    \item Coeficiente de Variação (CV)
+    \item {\em Relative Standard Deviation} (RSD)
+  \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{O Desvio Padrão Relativo}
+  \begin{center}
+    \includegraphics[width=\textwidth]{Cap3/RSD1}
+  \end{center}
+  \begin{exampleblock}{Dos nossos dados}
+    CV = 4.7\%
+  \end{exampleblock}
 \end{frame}
 
 \subsection{N ou N-1?}
