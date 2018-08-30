@@ -359,14 +359,84 @@
   \begin{itemize}
   \item $x_1$ Hormônio não grávidas
   \item $x_2$ Hormônio grávidas (até 3 meses)
-  \item Queremos ``explicar'' a ``relação'' entre o hormônio de $x_2$ sabendo o hormônio de $x_1$
+  \item Duas variáveis explícitas
   \end{itemize}
+  \begin{block}{Primeira alternativa}
+    \begin{enumerate}
+    \item Queremos ``explicar'' a ``relação'' entre o hormônio de $x_2$ sabendo o hormônio de $x_1$
+    \item Comparar $x_2$ com a referência ($x_1$)\footnote{valor médio!}
+    \end{enumerate}
+  \end{block}
   \begin{block}{Esta relação pode ser expressa como}
     \begin{displaymath}
       x_2 \sim x _1
     \end{displaymath}
   \end{block}
+\end{frame}
 
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item $x_1$ Hormônio não grávidas
+  \item $x_2$ Hormônio grávidas (até 3 meses)
+  \item $d = x_2 - x _1$ (uma variável)
+  \end{itemize}
+  \begin{block}{Segunda alternativa (método da aula passada)}
+    \begin{enumerate}
+    \item Queremos ``explicar'' a ``relação'' entre a diferença e a referência ({\bf zero})
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      d \sim 0
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Uma breve interrupção para mini-pânico}
+  \begin{block}{Se você prestou atenção até aqui...}
+    Temos \alert{duas} variáveis.
+
+    Portanto temos duas médias (trivial).
+
+    \bigskip
+    Mas também temos \alert{dois SEM}!
+  \end{block}
+  \begin{block}{Estratégia proposta}
+    Para considerar a diferença, precisamos do {\em SEM da diferença}.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Uma breve interrupção para mini-pânico}
+  \begin{block}{Se você prestou atenção até aqui...}
+    Temos \alert{duas} variáveis.
+
+    Portanto temos duas médias (trivial).
+
+    \bigskip
+    Mas também temos \alert{dois SEM}!
+  \end{block}
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{horm. grávidas} \sim \text{horm. não grávidas}
+    \end{displaymath}
+  \end{block}
+  \begin{block}{Mais precisamente}
+    \begin{displaymath}
+      \text{horm. grávid.} = \text{horm. não grávid.} + \text{Erro}_1 + \text{Erro}_2
+    \end{displaymath}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}{Uma breve interrupção para mini-pânico}
+  \begin{center}
+    \includegraphics[height=.7\textheight]{Cap7/ogrito}
+  \end{center}
+    \begin{block}{Estratégia proposta}
+      \begin{center}
+        {\em SEM da diferença}.
+      \end{center}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Erro padrão da diferença}
@@ -381,6 +451,12 @@
     SE = \sqrt{SEM_1^2 + SEM_2^2}
   \end{displaymath}
   \end{block}
+\end{frame}
+
+\begin{frame}{De volta à programação normal}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap7/naoentreempanico}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Premissas}
