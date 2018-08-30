@@ -173,7 +173,7 @@
     \item o erro padrão da média (SEM)
     \item um tal de $t^{*}$, que depende de $n$
     \end{itemize}
-  \item Como N era grande, utilizamos $t^{*} \approx 2$
+  \item Quando N era grande, utilizamos $t^{*} \approx 2$
     \bigskip
   \item Mas de onde vem esse $t^{*}$? Qual seria o valor correto?
   \end{itemize}
@@ -216,7 +216,7 @@
   \item A distribuição tem forma de sino (simétrica, assim como a
     distribuição Normal)
   \item Reflete a maior variabilidade inerente às amostras pequenas
-  \item O formato da curva depende do tamanho da amostra $n$
+  \item O formato da curva depende do tamanho da amostra $n$\footnote{A distr. Normal depende apenas de $\mu$ e $\sigma$}
   \item Quanto mais graus de liberdade (df $\approx$ dados), mais a distribuição
     $t$ se parece com a distribuição Normal
   \end{itemize}
@@ -239,15 +239,19 @@
   \begin{block}{Pense...}
     Observe os tamanhos dos ICs.
   \end{block}
+  \begin{block}{Lembrete}<2->
+    Para o 5.1, usamos $t^{*} \approx$ 2, e esta aproximação não era apropriada no 5.2
+  \end{block}
+
 \end{frame}
 
-\begin{frame}{Alguns valores de t, para diferentes graus de liberdade}
+\begin{frame}{Alguns valores de $t^{*}$, para diferentes graus de liberdade}
   \begin{itemize}
-  \item $N = 5\ (df = 4) \Rightarrow t = 2.776$
-  \item $N = 10\ (df = 9) \Rightarrow t = 2.262$
-  \item $N = 15\ (df = 14) \Rightarrow t = 2.145$
-  \item $N = 20\ (df = 19) \Rightarrow t = 2.093$
-  \item $N = 30\ (df = 29) \Rightarrow t = 2.045$
+  \item $N = 5\ (df = 4) \Rightarrow t^{*} = 2.776$
+  \item $N = 10\ (df = 9) \Rightarrow t^{*} = 2.262$
+  \item $N = 15\ (df = 14) \Rightarrow t^{*} = 2.145$
+  \item $N = 20\ (df = 19) \Rightarrow t^{*} = 2.093$
+  \item $N = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Pense...}
     Qual é a relação entre N e o tamanho do IC?
@@ -261,20 +265,20 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Alguns valores de t, para diferentes graus de liberdade}
+\begin{frame}{Alguns valores de $t^{*}$, para diferentes graus de liberdade}
   \begin{itemize}
-  \item $N = 5\ (df = 4) \Rightarrow t = 2.776$
-  \item $N = 10\ (df = 9) \Rightarrow t = 2.262$
-  \item $N = 15\ (df = 14) \Rightarrow t = 2.145$
-  \item $N = 20\ (df = 19) \Rightarrow t = 2.093$
-  \item $N = 30\ (df = 29) \Rightarrow t = 2.045$
+  \item $N = 5\ (df = 4) \Rightarrow t^{*} = 2.776$
+  \item $N = 10\ (df = 9) \Rightarrow t^{*} = 2.262$
+  \item $N = 15\ (df = 14) \Rightarrow t^{*} = 2.145$
+  \item $N = 20\ (df = 19) \Rightarrow t^{*} = 2.093$
+  \item $N = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Observe que...}
     \begin{itemize}
     \item $df = N - 1$
-    \item Para N  grande, $t \rightarrow 1.960$
+    \item Para N  grande, $t^{*} \rightarrow 1.960$
     \end{itemize}
-    Por isso usamos o valor aproximado $2$ no primeiro exemplo.
+    {\em Por isso} usamos o valor aproximado $2$ no primeiro exemplo.
   \end{block}
 \end{frame}
 
@@ -282,17 +286,20 @@
   \begin{exampleblock}{Exercício 4 do cap 5}
     Os níveis de soro (fator Y) foram medidos em 100 mulheres não-grávidas, e 100 mulheres com até 3 meses de gravidez. Os ICs dos valores dos soros em ambos os grupos são:
     \begin{itemize}
-    \item Não-grávidas: [90.0, 96.0]
     \item Grávidas: [105.4, 114.6]
+    \item Não grávidas: [90.0, 96.0]
     \end{itemize}
 
     \bigskip
     {\bf O fator Y médio é diferente em mulheres grávidas e não-grávidas?}
   \end{exampleblock}
+  \begin{block}{Requisito}<2->
+    Pelas premissas do IC da média, você tem informações suficientes para calcular/interpretar cada um destes ICs?
+  \end{block}
 \end{frame}
 
 \begin{frame}{Pense}
-  \begin{exampleblock}{}
+  \begin{exampleblock}{Exercício 5.4}
     \begin{itemize}
     \item Não-grávidas: [90.0, 96.0]
     \item Grávidas: [105.4, 114.6]
@@ -321,20 +328,37 @@
 
 \begin{frame}{Diferença entre 2 médias}
   \begin{itemize}
-  \item Para comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença $\bar{x_1} - \bar{x_2}$
-  \item Raciocínio: se as médias forem aproximadamente iguais, a
-    diferença será aproximadamente zero
-  \item Além disso, se $\bar{x_1}$ for maior que $\bar{x_2}$, a diferença será positiva
-  \item Analogamente, se $\bar{x_1}$ for menor que $\bar{x_2}$, a diferença será negativa
+  \item Para comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença $\bar{x_d} = \bar{x_1} - \bar{x_2}$
+    \begin{block}{Intuição}
+      Raciocínio: se as médias forem aproximadamente iguais, a
+      diferença média ($\bar{x_d}$) será aproximadamente zero
+    \end{block}
+  \item Além disso, se $\bar{x_1}$ for maior que $\bar{x_2}$, a diferença média será positiva
+  \item Analogamente, se $\bar{x_1}$ for menor que $\bar{x_2}$, a diferença média será negativa
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Duas opções}
+  \begin{exampleblock}{Exercício 5.4}
+    \begin{itemize}
+    \item Não grávidas: [90.0, 96.0]
+    \item Grávidas: [105.4, 114.6]
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{Difícil}
+    Calcular os dois ICs ($x_1$ e $x_2$), e compará-los diretamente
+  \end{block}
+  \begin{block}{Moleza}
+    Calcular o IC da diferença ($x_d$) usando o método da aula passada
+  \end{block}
 \end{frame}
 
 \begin{frame}{Erro padrão da diferença}
   \begin{itemize}
-  \item Lembre-se que para cada grupo: $SEM = \frac{DP}{\sqrt{N}}$
+  \item Lembre-se que para cada grupo: $SEM = \frac{s}{\sqrt{n}}$
   \item Para a diferença entre 2 grupos, ``somamos'' os SEM
   \item Mas esta ``soma'' não é direta!
-  \item É preciso levar em conta o uso do quadrado/raiz quadrada do DP (aula de variabilidade)
+  \item É preciso levar em conta o uso do quadrado/raiz quadrada do DP (aula de variabilidade\footnote{não podemos somar DPs, mas podemos somar variâncias})
   \end{itemize}
   \begin{block}{}
       \begin{displaymath}
@@ -406,7 +430,7 @@
 \begin{frame}{Grupos pareados}
 Quando faz sentido parear indivíduos de dois grupos?
   \begin{itemize}
-  \item Mensurar o \alert{mesmo} individuo antes e depois do procedimento
+  \item Mensurar o \alert{mesmo} individuo antes e depois do procedimento ({\em baseline} x intervenção)
   \item Recrutamento aos pares, quando o par tem a(o) mesma(o)
     \begin{itemize}
     \item idade/faixas etária
