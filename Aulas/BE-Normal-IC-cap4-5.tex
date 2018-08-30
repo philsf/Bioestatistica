@@ -151,7 +151,19 @@
 %   \end{block}
 % \end{frame}
 
+\section{Discussão da aula passada}
+
+\subsection{Discussão da aula passada}
+
+\begin{frame}{Discussão da aula passada}
+  \begin{block}{}
+    Discussão da leitura obrigatória da aula passada
+  \end{block}
+\end{frame}
+
 \section{A distribuição Normal}
+
+\subsection{Distribuições de probabilidade}
 
 \begin{frame}{Recapitulando}
   \begin{columns}
@@ -168,15 +180,23 @@
   \end{columns}
 \end{frame}
 
-\subsection{Distribuições de probabilidade}
+\begin{frame}{Distribuições de probabilidade - Por que?}
+  \begin{itemize}
+  \item Distribuições teóricas = \alert{modelos} da realidade
+  \item Aprender com os modelos $\Rightarrow$ ferramenta
+  \end{itemize}
+  \begin{block}{Na vida real}
+    Distribuição ``próxima'' de um modelo $\Rightarrow$ metodologia
+  \end{block}
+\end{frame}
 
 \begin{frame}[label=exemplo5.1]{Distribuições de dados ``reais''}
   \begin{exampleblock}{Exemplo 5.1}
     No exemplo, a PS dos 100 alunos (a turma inteira) foi visualizada em um histograma.
 
-    Calculando a média, encontramos 123,4 mmHg.
+    Calculando a média, encontramos $\bar{x}$ = 123,4 mmHg.
 
-    Calculando o DP, encontramos 14,0 mmHg.
+    Calculando o DP, encontramos $s$ = 14,0 mmHg.
   \end{exampleblock}
   \begin{block}{Pense...}
     \begin{itemize}
@@ -189,11 +209,18 @@
 \begin{frame}{Distribuições de dados ``reais''}
   \begin{columns}
     \begin{column}{5cm}
-      \begin{itemize}
-      \item Média = 123,4 mmHg, DP = 14,0 mmHg
-      \item Você  {\em vê} a média?
-      \item Você  {\em vê} o DP?
-      \end{itemize}
+      \begin{exampleblock}{Exemplo 5.1}
+        \begin{itemize}
+        \item $\bar{x}$ = 123,4 mmHg
+        \item $s$ = 14,0 mmHg
+        \end{itemize}
+      \end{exampleblock}
+      \begin{block}{}
+        \begin{itemize}
+        \item Você  {\em vê} a média?
+        \item Você  {\em vê} o DP?
+        \end{itemize}
+      \end{block}
     \end{column}
     \begin{column}{5cm}
       \includegraphics[width=\textwidth]{Cap4/normal1}
@@ -309,6 +336,12 @@
 
 \subsection{Interpretação}
 
+\begin{frame}{Exemplos}
+  \begin{center}
+    Vamos recapitular o exemplo 5.1, antes de introduzir outro.
+  \end{center}
+\end{frame}
+
 \againframe{exemplo5.1}
 
 \begin{frame}{Distribuições de dados ``reais''}
@@ -317,9 +350,9 @@
 
     Valores aproximados: 120, 80, 90, 110 e 95 mmHg.
 
-    Calculando a média, encontramos 99,0 mmHg.
+    Calculando a média, encontramos $\bar{x}$ = 99,0 mmHg.
 
-    Calculando o DP, encontramos 15,97 mmHg.
+    Calculando o DP, encontramos $s$ = 15,97 mmHg.
   \end{exampleblock}
   \begin{block}{Pense...}
     \begin{itemize}
@@ -358,20 +391,38 @@
   Vídeo
 \end{frame}
 
-\begin{frame}{O Erro Padrão}
+\begin{frame}{ Variabilidade x Erro Padrão}
+  \begin{block}{Variabilidade}
+    A variabilidade nos informa sobre a dispersão da amostra/população.
+  \end{block}
+  \begin{block}{O erro padrão}
+    O Erro Padrão nos informa quão boa é nossa \alert{estimativa} da média.
+  \end{block}
+\end{frame}
+
+\begin{frame}{O Erro Padrão - definição}
   \begin{displaymath}
-    SEM = \frac{DP}{\sqrt{N}}
+    SEM = \frac{s}{\sqrt{N}}
   \end{displaymath}
   \begin{itemize}
   \item SEM = Erro Padrão da Média (em inglês)
   \item Conforme N aumenta, SEM diminui
-  \item Conforme N aumenta, SEM aproxima DP da população
+  \item Conforme N aumenta, $\bar{x}$ se aproxima média da população
   \end{itemize}
+\end{frame}
+
+\begin{frame}{O Erro Padrão - Interpretação}
+  \begin{block}{Interpretação}
+    Quando queremos {\bf inferir} a média da população a partir de uma amostra, qual é a incerteza associada a esta estimativa?
+  \end{block}
+  \begin{block}{Pense...}<2->
+    E o desvio-padrão $s$?
+  \end{block}
 \end{frame}
 
 \begin{frame}{O Erro Padrão}
   \begin{displaymath}
-    IC: M \pm t^{*} \times SEM
+    IC: \bar{x} \pm t^{*} \times SEM
   \end{displaymath}
   \begin{itemize}
   \item M = média
@@ -379,48 +430,75 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{O Erro Padrão}
+\begin{frame}{O Erro Padrão - IC da média}
   \begin{displaymath}
-    IC: M \pm 2 \times SEM
+    IC: \bar{x} \pm 2 \times SEM
   \end{displaymath}
   \begin{exampleblock}{Exemplo 5.1}
     \begin{itemize}
-    \item DP = 14,0
-    \item N = 100
+    \item $s$ = 14,0 e N = 100
     \item $SEM = \frac{14}{\sqrt{100}} = 1.4$
     \item IC =  $123.4 \pm 2 \times 1.4$
+    \item IC =  $123.4 \pm 2.8$
+    \bigskip
     \item IC $\approx$ [120.6, 126.2]
     \end{itemize}
   \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Pense...}
-  \begin{block}{Pergunta}
+  \begin{exampleblock}{}
+    \begin{itemize}
+    \item {\bf Ex. 5.1:} $\bar{x}$ = 123,4 e $s$ = 14,0 mmHg ($N=100$)
+    \item {\bf Ex. 5.2:} $\bar{x}$ = 99,0 e $s$ = 15,97 mmHg ($N=5$)
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{Pergunta - podemos reproduzir o mesmo método?}
   \begin{itemize}
   \item SEM do exemplo 5.1 = 1,4
   \item SEM do exemplo 5.2 = 6,3?
   \end{itemize}
   \end{block}
-  \begin{block}{Resposta}<2->
+\end{frame}
+
+\begin{frame}{}
+    \begin{block}{Pergunta - podemos reproduzir o mesmo método?}
+  \begin{itemize}
+  \item SEM do exemplo 5.1 = 1,4
+  \item SEM do exemplo 5.2 = 6,3?
+  \end{itemize}
+  \end{block}
+  \begin{block}{Resposta}
     Não! Pois N=5 não é grande!
 
     \bigskip
     Isso faz com que o SEM do exemplo 5.2 seja muito maior (como vimos).
   \end{block}
+  \begin{exampleblock}{ICs dos exemplos}
+    \begin{itemize}
+    \item O IC do exemplo 5.1: 120,6 até 126,2 mmHg
+    \item O IC do exemplo 5.2: 79,2 até 118,8 mmHg
+    \end{itemize}
+  \end{exampleblock}
 \end{frame}
 
-\section{Encerramento}
+\section{Aprofundamento}
 
-\begin{frame}{Leitura pós-aula e exercícios selecionados}
+\subsection{Aprofundamento}
+
+\begin{frame}{Aprofundamento}
   \begin{block}{Leitura obrigatória}
     Capítulo 4. Pular a seção {\bf Intervalo de Predição}.
 
     Capítulo 5. Pular as seções:
     \begin{itemize}
     \item Calculando o IC da média
-    \item A distribuição {\em t}
+    \item A distribuição {\em t} (será abordado na próxima aula)
     \end{itemize}
 
+  \end{block}
+  \begin{block}{Leitura recomendada}
+    Capítulo 4. seção {\bf Intervalo de Predição}.
   \end{block}
   \begin{itemize}
   \item Cap 4: Exercícios 1, 2 e 3.
