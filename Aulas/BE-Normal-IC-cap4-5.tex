@@ -412,6 +412,12 @@
   \item Conforme $n$ aumenta $\Rightarrow$ SEM diminui
   \item Conforme $n$ aumenta $\Rightarrow$ $\bar{x}$ ``próximo'' de $\mu$
   \end{itemize}
+  \begin{block}{Lembrete}
+    \begin{itemize}
+    \item $\bar{x}$ -- média da amostra (resultado/possível)
+    \item $\mu$ -- média da população (objetivo/inferência)
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}{O Erro Padrão - Interpretação}
@@ -435,7 +441,20 @@
 
 \begin{frame}{O Erro Padrão - IC da média}
   \begin{displaymath}
-    IC: \bar{x} \pm 2 \times SEM
+    IC: \bar{x} \pm t^{*} \times SEM
+  \end{displaymath}
+  \begin{block}{Perguntas}
+    \begin{enumerate}
+    \item<1-> Se $s$ aumenta, o SEM aumenta ou diminui?
+    \item<2-> Se $s$ aumenta, o IC aumenta ou diminui?
+    \item<3-> Se $t^{*}$ aumenta, o IC aumenta ou diminui?
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{O Erro Padrão}
+  \begin{displaymath}
+    IC: \bar{x} \pm 2\footnote{$t^{*} \approx$ 2} \times SEM
   \end{displaymath}
   \begin{exampleblock}{Exemplo 5.1}
     \begin{itemize}
