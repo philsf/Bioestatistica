@@ -175,7 +175,6 @@
       \item $s^2$/$s$ = Variância/DP {\tiny (tendência de dispersão)}
       \end{itemize}
     \end{itemize}
-
     \begin{center}
       $\Rightarrow$ Forma independe do $n$
     \end{center}
@@ -184,25 +183,25 @@
 
 \begin{frame}{Recapitulando}
   \begin{itemize}
-  \item Vimos que o IC é composto de 3 componentes
+  \item Vimos que o IC {\tiny(da média)} é composto por 3 componentes
     \begin{itemize}
-    \item a média $\bar{x}$ (tendência central)
-    \item o erro padrão da média (SEM)
-    \item um tal de $t^{*}$, que depende de $n$
+    \item a média $\bar{x}$ {\tiny(centro)}
+    \item o erro padrão da média -- SEM {\tiny(incerteza)}
+    \item {\em um tal} de t$^{*}$, que depende de $n$
     \end{itemize}
-  \item Quando N era grande, utilizamos $t^{*} \approx 2$
+  \item Quando $n$ era grande, utilizamos $t^{*} \approx 2$
     \bigskip
-  \item Mas de onde vem esse $t^{*}$? Qual seria o valor correto?
+  \item Mas de onde vem esse $t^{*}$? Qual seria o valor \alert{correto}?
   \end{itemize}
 \end{frame}
 
-\begin{frame}{A distribuição T de Student}
+\begin{frame}{A distribuição t de Student}
   \begin{center}
     \includegraphics[height=\textheight]{Cap5/Guinness}
   \end{center}
 \end{frame}
 
-\begin{frame}{A distribuição T de Student}
+\begin{frame}{A distribuição t de Student}
   \begin{center}
     \includegraphics[height=\textheight]{Cap5/Student-Guinness}
   \end{center}
@@ -225,7 +224,7 @@
 \begin{frame}{A distribuição t de Student}
   \begin{figure}
     \includegraphics[height=0.7\textheight]{Inf_II/t_graph}
-    \caption{A distribuição t de Student}
+    \caption{\footnotesize Duas distribuições t de Student, e a Normal padrão}
   \end{figure}
 \end{frame}
 
@@ -258,46 +257,65 @@
     Observe os tamanhos dos ICs.
   \end{block}
   \begin{block}{Lembrete}<2->
-    Para o 5.1, usamos $t^{*} \approx$ 2, e esta aproximação não era apropriada no 5.2
+    Para o 5.1, usamos $t^{*} \approx$ 2.
+
+    \bigskip
+    Vimos que esta aproximação \alert{não era apropriada} no 5.2
   \end{block}
 
 \end{frame}
 
 \begin{frame}{Alguns valores de $t^{*}$, para diferentes graus de liberdade}
   \begin{itemize}
-  \item $N = 5\ (df = 4) \Rightarrow t^{*} = 2.776$
-  \item $N = 10\ (df = 9) \Rightarrow t^{*} = 2.262$
-  \item $N = 15\ (df = 14) \Rightarrow t^{*} = 2.145$
-  \item $N = 20\ (df = 19) \Rightarrow t^{*} = 2.093$
-  \item $N = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
+  \item $n = 5\ (df = 4) \Rightarrow t^{*} = 2.776$
+  \item $n = 10\ (df = 9) \Rightarrow t^{*} = 2.262$
+  \item $n = 15\ (df = 14) \Rightarrow t^{*} = 2.145$
+  \item $n = 20\ (df = 19) \Rightarrow t^{*} = 2.093$
+  \item $n = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Pense...}
-    Qual é a relação entre N e o tamanho do IC?
+    Qual é a relação entre $n$ e o tamanho do IC?
 
     % \begin{displaymath}
     %   IC: \bar{x} \pm t^{*} \times SEM
     % \end{displaymath}
     \begin{displaymath}
-      \left[ \bar{x} - t^{*} SEM,\ \ \bar{x} + t^{*} SEM \right]
+      IC = \left[ \bar{x} - t^{*} SEM,\ \ \bar{x} + t^{*} SEM \right]
     \end{displaymath}
   \end{block}
 \end{frame}
 
 \begin{frame}{Alguns valores de $t^{*}$, para diferentes graus de liberdade}
   \begin{itemize}
-  \item $N = 5\ (df = 4) \Rightarrow t^{*} = 2.776$
-  \item $N = 10\ (df = 9) \Rightarrow t^{*} = 2.262$
-  \item $N = 15\ (df = 14) \Rightarrow t^{*} = 2.145$
-  \item $N = 20\ (df = 19) \Rightarrow t^{*} = 2.093$
-  \item $N = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
+  \item $n = 5\ (df = 4) \Rightarrow t^{*} = 2.776$
+  \item $n = 10\ (df = 9) \Rightarrow t^{*} = 2.262$
+  \item $n = 15\ (df = 14) \Rightarrow t^{*} = 2.145$
+  \item $n = 20\ (df = 19) \Rightarrow t^{*} = 2.093$
+  \item $n = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Observe que...}
     \begin{itemize}
-    \item $df = N - 1$
-    \item Para N  grande, $t^{*} \rightarrow 1.960$
+    \item $df = n - 1$
+    \item Para $n$ grande, $t^{*} \rightarrow 1.960$
     \end{itemize}
     {\em Por isso} usamos o valor aproximado $2$ no primeiro exemplo.
   \end{block}
+\end{frame}
+
+\begin{frame}{Na prática...}
+  \begin{block}{Distribuição Normal - Z}
+    \small
+    {\em Gostaríamos} de poder usar sempre Z como \alert{modelo} para o formato dos nossos dados experimentais.
+  \end{block}
+  \begin{block}{Distribuição t de Student}
+    \small
+    \begin{itemize}
+    \item t é uma aproximação da Normal (Z)
+    \item apropriada para $n$ pequeno
+    \item Com $n$ grande (df $\ge 30$) ela {\em se confunde} com Z.
+    \end{itemize}
+  \end{block}
+
 \end{frame}
 
 \begin{frame}[label=exercicio5.4]{Exercício 4 (cap 5)}
@@ -324,11 +342,16 @@
     \item Grávidas: [105.4, 114.6]
     \end{itemize}
   \end{exampleblock}
+  Observações:
   \begin{itemize}
-  \item o SEM informa quão bem você conhece a média de cada grupo
-  \item Os ICs não tem sobreposição $\Rightarrow$ 2 populações diferentes
-  \item Como comparar estes dois grupos?
+  \item {\small O SEM informa {\em quão bem você estimou a média} de cada grupo}
+  \item {\small Os ICs não tem sobreposição $\Rightarrow$ 2 populações diferentes}
   \end{itemize}
+  \begin{block}{Pense...}
+    \begin{center}
+      Como comparar estes dois grupos?
+    \end{center}
+  \end{block}
 \end{frame}
 
 \section[IC diferença 2 médias]{Intervalo de Confiança da diferença entre duas médias}
@@ -339,8 +362,12 @@
   \begin{itemize}
   \item Frequentemente precisamos dividir os dados em dois grupos e
     comparar as médias.
+
+    \bigskip
   \item Isto pode ser usado para se estudar o efeito de um tratamento
     em relação a um grupo controle
+
+    \bigskip
   \item ou mesmo para se comparar dois tratamentos diferentes.
   \end{itemize}
 \end{frame}
@@ -354,9 +381,10 @@
   \item Duas variáveis explícitas
   \end{itemize}
   \begin{block}{Primeira alternativa}
+    \small
     \begin{enumerate}
-    \item Queremos ``explicar'' a ``relação'' entre o hormônio $x_2$  o hormônio $x_1$ como ``referência''
-    \item Comparar $x_2$ com a referência ($x_1$)\footnote{valor médio!}
+    \item``Explicar'' a ``relação'' entre o hormônio $x_2$ e o hormônio $x_1$% como ``referência''
+    \item Comparar $x_2$ (grupo de interesse) com $x_1$ (referência)%\footnote{valor médio!}
     \end{enumerate}
   \end{block}
   \begin{block}{Esta relação pode ser expressa como}
@@ -435,18 +463,22 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{2 grupos {\em for dummies}}
+\begin{frame}{2 grupos {\em for dummies} \textregistered}
   \begin{block}{Diferença entre 2 médias}
+    \small
     \begin{itemize}
-    \item Para comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença média $\bar{x_d} = \bar{x_2} - \bar{x_1}$
-    \item Além disso, se $\bar{x_2}$ for maior que $\bar{x_1}$, a diferença média será positiva
-    \item Analogamente, se $\bar{x_2}$ for menor que $\bar{x_1}$, a diferença média será negativa
+    \item Comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença média $\bar{x_d} = \bar{x_2} - \bar{x_1}$
+    \item Se $\bar{x_2}$ for maior que $\bar{x_1}$  $\Rightarrow$ diferença média é positiva
+    \item Se $\bar{x_2}$ for menor que $\bar{x_1}$  $\Rightarrow$ a diferença média é negativa
     \end{itemize}
   \end{block}
   \begin{block}{Intuição}
     Raciocínio: se as médias forem aproximadamente iguais, {\bf a
     diferença média ($\bar{x_d}$) será próxima de zero}
   \end{block}
+  \begin{center}
+    {\em Pense em \alert{saldo}}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Quais são as variáveis?}
@@ -456,9 +488,8 @@
   \item $d = x_2 - x _1$ (uma variável)
   \end{itemize}
   \begin{block}{Segunda alternativa (método da aula passada)}
-    \begin{enumerate}
-    \item Queremos ``explicar'' a ``relação'' entre a diferença $d$ e a referência ({\bf zero})
-    \end{enumerate}
+    \small
+    ``Explicar'' a ``relação'' entre a diferença $d$ e a referência ({\bf zero})
   \end{block}
   \begin{block}{Esta relação pode ser expressa como}
     \begin{displaymath}
@@ -478,6 +509,9 @@
       moleza!
     \end{center}
   \end{block}
+  \begin{center}
+    O que falta?
+  \end{center}
   \begin{block}{O que falta?}<2->
     ... precisamos do {\em SEM da diferença}.
   \end{block}
