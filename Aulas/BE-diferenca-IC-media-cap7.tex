@@ -571,33 +571,74 @@
 
 \againframe{exercicio5.4}
 
-\begin{frame}{Cálculo exercício 5.4/7.1}
+\begin{frame}{{\small Bastidores do exercício 5.4/7.1}}
   \begin{exampleblock}{Diferenças: Exercício 5.4 (e 7.1)}
+    \begin{exampleblock}{}
+      \begin{itemize}
+      \item {\scriptsize Média grávidas: $\bar{x_1} = 110$ unidades/ml}
+      \item {\scriptsize Média não grávidas: $\bar{x_2} = 93$ unidades/ml}
+      \item Diferença entre as médias: $\bar{x_d} = \alert{17}$ unidades/ml
+      \end{itemize}
+    \end{exampleblock}
+    \begin{exampleblock}{}
+      \begin{itemize}
+      \item SEM da diferença: \alert{2.75} unidades/ml
+      \end{itemize}
+    \end{exampleblock}
+    \begin{exampleblock}{}
+      \begin{itemize}
+      \item {\scriptsize $n_1$ = 100, $n_2$ = 100}
+      \item df = (100 -1) + (100 - 1) = \alert{198}
+      \end{itemize}
+    \end{exampleblock}
+    \begin{exampleblock}{}
+      \begin{itemize}
+      \item $t^{*} = \alert{1.97}$ {\tiny(valor crítico tabelado)}
+      \end{itemize}
+    \end{exampleblock}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{{\small Solução do exercício 5.4/7.1}}
+  \begin{exampleblock}{Bastidores: Exercício 5.4 (e 7.1)}
+    \tiny
     \begin{itemize}
     \item Média grávidas: $\bar{x_1} = 110$ unidades/ml
     \item Média não grávidas: $\bar{x_2} = 93$ unidades/ml
     \item Diferença entre as médias: $\bar{x_d} = \alert{17}$ unidades/ml
     \item SEM da diferença: \alert{2.75} unidades/ml
-    \item $N_1=100, N_2=100 \Rightarrow df = (100 -1) + (100 - 1) = \alert{198}$
-    \item $t^{*} = \alert{1.97}$
+    \item $n_1$ = 100, $n_2$ = 100
+    \item df = (100 -1) + (100 - 1) = \alert{198}
+    \item $t^{*} = \alert{1.97}$ {\tiny(valor crítico tabelado)}
     \end{itemize}
   \end{exampleblock}
-  \begin{exampleblock}{IC}
+  \begin{exampleblock}{Resultado: IC da diferença}
     \centering
-    [11.6, 22.4] unidades/ml
+    {\bf [11.6, 22.4] unidades/ml}
   \end{exampleblock}
-  E o que significa isso?
+  \begin{center}
+    \small
+    {\em E o que isso significa?}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Solução}
-    \begin{exampleblock}{IC}
-    \centering
-    [11.6, 22.4] unidades/ml
+  %   \begin{exampleblock}{IC}
+  %   \centering
+  %   [11.6, 22.4] unidades/ml
+  % \end{exampleblock}
+  \begin{exampleblock}{Interpretação}
+    Estamos 95\% {\em confiantes} que a diferença \alert{real} entre os grupos está entre 11,6 e 22,4.
   \end{exampleblock}
-  \begin{itemize}
-  \item Estamos 95\% certos que a diferença real entre os grupos está entre 11.6 e 22.4
-  \item Conclusão: o fator Y de uma mulher grávida entre 11.6 e 22.4 unidades/ml maior que em uma mulher não grávida
-  \end{itemize}
+
+  \bigskip
+  \begin{exampleblock}{Conclusão {(\em ``nossos dados indicam que...'')}}
+    \small
+    o (...) fator Y de uma (...) grávida é (...) 17 unidades/ml maior que uma (...) não grávida (variando entre 11,6 e 22,4 unidades/ml).
+  \end{exampleblock}
+  \begin{block}{Pense...}<2->
+    Preencha as lacunas acima.
+  \end{block}
 \end{frame}
 
 \subsection{Participantes: pareados ou não pareados?}
