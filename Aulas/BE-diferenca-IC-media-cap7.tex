@@ -214,11 +214,25 @@
   \item Distribuição {\bf t} ({\footnotesize baseada na distribuição Normal})
   \item Melhor se aproxima dos dados de {\em amostras pequenas}
 %  \item É semelhante à Normal padrão, mas tem variância maior
-  \item Inclui um 3$^o$ parâmetro \alert{graus de liberdade} ({\em df} em inglês) {\footnotesize vinculado ao tamanho da amostra $n$}.
+  \item 3$^o$ parâmetro \alert{graus de liberdade}\footnote{df em inglês} {\footnotesize vinculado ao tamanho da amostra $n$}.
     % \begin{displaymath}
     %   gl = n-1
     % \end{displaymath}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Propriedades da distribuição t}
+  \begin{itemize}
+  \item A distribuição tem forma de sino {\footnotesize(simétrica, como a Normal)}
+  \item Reflete a maior variabilidade \alert{inerente} às amostras pequenas\footnote{graus de liberdade (df) $\approx$ $n$}
+  \item Formato {\em depende} do tamanho da amostra ($n$) %\footnote{A distr. Normal depende apenas de $\mu$ e $\sigma$}
+  \end{itemize}
+  \begin{block}{Isto é}
+    Quanto mais graus de liberdade, mais a distribuição $t$ se parece com a distribuição Normal ($Z$)
+  \end{block}
+  \begin{block}{Pense...}<2->
+    O que deve acontecer com \alert{menos} graus de liberdade?
+  \end{block}
 \end{frame}
 
 \begin{frame}{A distribuição t de Student}
@@ -226,17 +240,6 @@
     \includegraphics[height=0.7\textheight]{Inf_II/t_graph}
     \caption{\footnotesize Duas distribuições t de Student, e a Normal padrão}
   \end{figure}
-\end{frame}
-
-\begin{frame}{Propriedades da distribuição t}
-  \begin{itemize}
-  \item A distribuição tem forma de sino (simétrica, assim como a
-    distribuição Normal)
-  \item Reflete a maior variabilidade inerente às amostras pequenas
-  \item O formato da curva depende do tamanho da amostra $n$\footnote{A distr. Normal depende apenas de $\mu$ e $\sigma$}
-  \item Quanto mais graus de liberdade (df $\approx$ dados), mais a distribuição
-    $t$ se parece com a distribuição Normal
-  \end{itemize}
 \end{frame}
 
 % \begin{frame}{A tabela t}
