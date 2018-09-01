@@ -317,7 +317,7 @@
 
 \subsection{Interpretação}
 
-\begin{frame}{Diferença entre 2 médias}
+\begin{frame}{Comparações entre 2 médias}
   \begin{itemize}
   \item Frequentemente precisamos dividir os dados em dois grupos e
     comparar as médias.
@@ -327,16 +327,66 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Diferença entre 2 médias}
+\againframe{exercicio5.4}
+
+\begin{frame}{Quais são as variáveis?}
   \begin{itemize}
-  \item Para comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença $\bar{x_d} = \bar{x_1} - \bar{x_2}$
-    \begin{block}{Intuição}
-      Raciocínio: se as médias forem aproximadamente iguais, a
-      diferença média ($\bar{x_d}$) será aproximadamente zero
-    \end{block}
-  \item Além disso, se $\bar{x_1}$ for maior que $\bar{x_2}$, a diferença média será positiva
-  \item Analogamente, se $\bar{x_1}$ for menor que $\bar{x_2}$, a diferença média será negativa
+  \item $x_1$ Hormônio não grávidas
+  \item $x_2$ Hormônio grávidas (até 3 meses)
+  \item Duas variáveis explícitas
   \end{itemize}
+  \begin{block}{Primeira alternativa}
+    \begin{enumerate}
+    \item Queremos ``explicar'' a ``relação'' entre o hormônio $x_2$  o hormônio $x_1$ como ``referência''
+    \item Comparar $x_2$ com a referência ($x_1$)\footnote{valor médio!}
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      x_2 \sim x _1
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Uma breve interrupção para mini-pânico}
+  \vfill
+  \vfill
+  \vfill
+  \vfill
+  \vfill
+  \hfill \small Suspense dramático...
+\end{frame}
+
+\begin{frame}{Uma breve interrupção para mini-pânico}
+  \begin{block}{Se você prestou atenção até aqui...}
+    Temos \alert{duas} variáveis.
+
+    Portanto temos duas médias (trivial).
+
+    \bigskip
+    Mas também temos \alert{dois SEM}!
+  \end{block}
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{horm. grávidas} \sim \text{horm. não grávidas}
+    \end{displaymath}
+  \end{block}
+  \begin{block}{Mais precisamente}
+    \begin{displaymath}
+      \text{horm. grávid.} = \text{horm. não grávid.} + \alert{\text{Erro}_1 + \text{Erro}_2}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Uma breve interrupção para mini-pânico}
+  \begin{center}
+    \includegraphics[height=.7\textheight]{Cap7/ogrito}
+  \end{center}
+  \begin{block}{}
+    \begin{center}
+      Duas médias, e dois erros?
+    \end{center}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Duas opções}
@@ -350,7 +400,85 @@
     Calcular os dois ICs ($x_1$ e $x_2$), e compará-los diretamente
   \end{block}
   \begin{block}{Moleza}
-    Calcular o IC da diferença ($x_d$) usando o método da aula passada
+    \only<1>{Calcular o IC da diferença ($x_d$) usando o método da aula passada}
+    \only<2>{\bf Calcular o IC da diferença ($x_d$) usando o método da aula passada}
+  \end{block}
+\end{frame}
+
+\begin{frame}{}
+  \begin{block}{}
+    \large
+    Neste caso podemos usar um truque para \alert{trocar} um problema de 2 variáveis por outro de 1 variável.
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{center}
+    \includegraphics[width=.6\textwidth]{Cap7/magic}
+  \end{center}
+\end{frame}
+
+\begin{frame}{2 grupos {\em for dummies}}
+  \begin{block}{Diferença entre 2 médias}
+    \begin{itemize}
+    \item Para comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença média $\bar{x_d} = \bar{x_2} - \bar{x_1}$
+    \item Além disso, se $\bar{x_2}$ for maior que $\bar{x_1}$, a diferença média será positiva
+    \item Analogamente, se $\bar{x_2}$ for menor que $\bar{x_1}$, a diferença média será negativa
+    \end{itemize}
+  \end{block}
+  \begin{block}{Intuição}
+    Raciocínio: se as médias forem aproximadamente iguais, {\bf a
+    diferença média ($\bar{x_d}$) será próxima de zero}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item $x_1$ Hormônio não grávidas
+  \item $x_2$ Hormônio grávidas (até 3 meses)
+  \item $d = x_2 - x _1$ (uma variável)
+  \end{itemize}
+  \begin{block}{Segunda alternativa (método da aula passada)}
+    \begin{enumerate}
+    \item Queremos ``explicar'' a ``relação'' entre a diferença $d$ e a referência ({\bf zero})
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      d \sim 0
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Uma breve interrupção para mini-pânico}
+  \begin{block}{Estratégia proposta}
+    Temos duas variáveis.
+
+    \bigskip
+    Calculamos a \alert{diferença} entre as médias e aplicamos o método da aula passada -- IC de {\bf uma} média.
+
+    \begin{center}
+      moleza!
+    \end{center}
+  \end{block}
+  \begin{block}{O que falta?}<2->
+    ... precisamos do {\em SEM da diferença}.
+  \end{block}
+  \begin{block}{Ou seja...}<3->
+    \begin{displaymath}
+      d = 0 + \alert{Erro_d}
+    \end{displaymath}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}{Uma breve interrupção para mini-pânico}
+  \begin{center}
+    \includegraphics[height=.7\textheight]{Cap7/ogrito}
+  \end{center}
+  \begin{block}{}
+    \begin{center}
+      SEM da diferença?
+    \end{center}
   \end{block}
 \end{frame}
 
@@ -365,6 +493,17 @@
       \begin{displaymath}
     SE = \sqrt{SEM_1^2 + SEM_2^2}
   \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{De volta à programação normal}
+  \begin{center}
+    \includegraphics[height=.7\textheight]{Cap7/naoentreempanico}
+  \end{center}
+    \begin{block}{Estratégia proposta}
+      \begin{center}
+        {\em SEM da diferença}.
+      \end{center}
   \end{block}
 \end{frame}
 
@@ -387,7 +526,7 @@
     \item Média não grávidas: $\bar{x_2} = 93$ unidades/ml
     \item Diferença entre as médias: $\bar{x_d} = \alert{17}$ unidades/ml
     \item SEM da diferença: \alert{2.75} unidades/ml
-    \item $N_1=100, N_2=100 \Rightarrow df = (100 -1) + 1(00 - 1) = \alert{198}$
+    \item $N_1=100, N_2=100 \Rightarrow df = (100 -1) + (100 - 1) = \alert{198}$
     \item $t^{*} = \alert{1.97}$
     \end{itemize}
   \end{exampleblock}
@@ -443,7 +582,7 @@ Quando faz sentido parear indivíduos de dois grupos?
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Qual das estimativas é mais precisa?}
   \begin{exampleblock}{Exemplo 7.2}
     \footnotesize
     Ye e Grantham (1993) estudaram o mecanismo de absorção de fluido em cistos renais removidos de pacientes com doença renal policística.
@@ -467,11 +606,17 @@ Quando faz sentido parear indivíduos de dois grupos?
   \end{exampleblock}
 \end{frame}
 
+\begin{frame}{IPC}
+  \begin{block}{}
+    A escolha entre grupos pareados e grupos não pareados é estratégica (planejamento do estudo), e não uma questão de ``preferência''.
+  \end{block}
+\end{frame}
 \section{Aprofundamento}
 
 \subsection{Aprofundamento}
 
 \begin{frame}{Aprofundamento}
+  \small
   \begin{block}{Leitura obrigatória}
     Capítulo 5. Seção: A distribuição {\em t}
 
@@ -482,16 +627,30 @@ Quando faz sentido parear indivíduos de dois grupos?
     \end{itemize}
   \end{block}
   \begin{block}{Exercícios de fixação}
+  \footnotesize
     \begin{itemize}
-    \item Cap 5: Exercício 4, 5 itens A (IC = [1200.7, 1205.3]), D (IC =[1201.1, 1204.9]). Interprete ambos.
+    \item Cap 5: Exercício 4, 5 itens:
+      \begin{itemize}
+        \footnotesize
+      \item A (IC = [1200.7, 1205.3])
+      \item D (IC =[1201.1, 1204.9]). Interprete ambos.
+      \end{itemize}
     \item Cap 7: exercícios 1, 2 (IC = [5.271, 10.129]).
     \end{itemize}
   \end{block}
+\end{frame}
+
+\begin{frame}{Aprofundamento}
   \begin{block}{Leitura recomendada}
     {\bf ICH} - {\bf E10} Choice of Control Group in Clinical Trials
+    \begin{itemize}
+    \item Seção {\bf 2.1} ({\em\footnotesize Placebo Control})
+    \item Cap. {\bf 3} ({\em\footnotesize CHOOSING THE CONCURRENT CONTROL GROUP})
+    \end{itemize}
 
+    \bigskip
     \href{http://www.ich.org/products/guidelines/efficacy/efficacy-single/article/choice-of-control-group-and-related-issues-in-clinical-trials.html}{http://www.ich.org} {\tiny (este link é clicável)}
-  \end{block}
+  \end{block}  
 \end{frame}
 
 \end{document}
