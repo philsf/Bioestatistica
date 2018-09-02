@@ -10,31 +10,31 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 2. [IC de uma proporção][] (cap 2)
 3. [Variabilidade][] (cap 3)
 4. [Distribuição Normal + IC da média][] (cap 4, 5)
-5. [IC da diferença entre médias][] (cap 7)
+5. [IC da diferença entre médias][] (cap 5, 7)
 6. [Comparando ICs de proporções][] (cap 8, 9)
 7. [Significância][] (cap 10, 11)
 8. [2 médias][] (cap 23 e 25)
 9. [2 proporções][] (cap 26 e 27)
 10. [Correlação][] (cap 17)
 11. [Regressão linear simples][] (cap 18, 19)
-12. ["Tópicos avançados"][] (cap 13, 30)
-13. [Fechamento][] (Cap 37, 38)
+12. [Comparações múltiplas e ANOVA][] (cap 13, 30)
+13. [Métodos não-paramétricos][] (Cap 37, 38)
 14. Avaliações
 15. Avaliações
 
-[Introdução]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro.pdf
+[Introdução]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1.pdf
 [IC de uma proporção]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
 [Variabilidade]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
 [Distribuição Normal + IC da média]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
-[IC da diferença entre médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap7.pdf
+[IC da diferença entre médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7.pdf
 [Comparando ICs de proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
 [Significância]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11.pdf
 [2 médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25.pdf
 [2 proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
 [Correlação]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
 [Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
-["Tópicos avançados"]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Topicos-Avancados.pdf
-[Fechamento]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param.pdf
+[Comparações múltiplas e ANOVA]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30.pdf
+[Métodos não-paramétricos]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
 
 
 ## Exercícios selecionados por aula
