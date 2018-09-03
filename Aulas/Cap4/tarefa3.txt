@@ -1,0 +1,46 @@
+Erro padrão
+
+O objetivo desta tarefa é consolidar a compreensão da diferença entre o Desvio Padrão e o Erro padrão.
+Vamos deixar de pensar de forma descritiva e começar a pensar de forma inferencial.
+
+Baixe o artigo disponível no link abaixo:
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5764290/
+
+Os autores executaram dois ensaios clínicos (que denominaram Study 1027 e Study 1043), nos quais avaliaram diversos parâmetros e contextos.
+Os objetivos eram demonstrar a segurança e eficácia de um tratamento para com osteoartrite no joelho ou quadril.
+
+== O que você precisa ler ==
+
+Para esta tarefa, bastam dois resultados de um dos parâmetros do Study 1027: a queda do índice WOMAC de dor após 8 semanas.
+Os dois resultados que nos interessam estão no abstract do artigo, e reproduzidos abaixo.
+Você também lerá um parágrafo dos Materiais e Métodos.
+
+== Resultados do estudo ==
+
+Vamos nos concentrar em apenas 2 resultados, apresentados como média (SE):
+
+- Queda do índice de dor no grupo de tratamento: −3.59 (0.26)
+- Queda do índice de dor no grupo placebo: −2.74 (0.25)
+
+== N ==
+Os autores planejaram coletar dados de 850 pacientes (para 5 grupos estudados, incluindo o placebo).
+Eles só conseguiram 379 pacientes (45% do planejado).
+
+== População ==
+
+Os autores descrevem explicitamente a população do estudo.
+Leia o primeiro parágrafo da seção dos métodos chamada "Study Population" (segundo parágrafo da página 152, que inicia com "Patients in Study 1027 were aged ≥18 years with a diagnosis of OA on the knee (...)".
+
+== Perguntas ==
+
+1- Por que os autores optaram por reportar estes resultados com a média e SE ao invés de média e DP?
+
+2- Se ambos os grupos tivessem EXATAMENTE o mesmo N, qual é o grupo que tem IC mais preciso? Justifique.
+(a) o grupo de tratamento
+(b) o grupo placebo
+(c) ambos teriam ICs com precisão semelhante
+
+3- Mesma pergunta anterior, agora sabendo que o grupo placebo tem N=70 e o grupo de tratamento tem N=63. Sua resposta muda? Justifique.
+
+4- Pelo que vimos nas aulas, e no parágrafo selecionado para leitura: os autores descreveram a população a amostra do estudo? Justifique.
