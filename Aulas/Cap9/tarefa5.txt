@@ -12,3 +12,5 @@ Interprete estes resultados
 2- No terceiro resultado do quadro de highlight o valor da OR é 0.84 (o menor de todos). Mesmo assim, os autores concluíram que não há associação entre autismo e a vacinação com MMR (vacina tríplice viral - sarampo, caxumba e rubéola). Esta conclusão está correta? Justifique.
 
 3- No abstract, eles detalham resultados sobre thimerosal e mercúrio, com OR de 0.85 quando agrupada por tipo de exposição.
+(a) Interprete este resultado de forma independente, e escreva a conclusão (i.e. sem levar em conta o objetivo do artigo).
+(b) Justifique a diferença (ou falta de) entre a sua conclusão, e a do abstract.
