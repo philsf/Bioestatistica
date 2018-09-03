@@ -37,3 +37,5 @@ Leia o primeiro parágrafo da seção dos métodos chamada "Study Population" (s
 (c) ambos teriam ICs com precisão semelhante
 
 3- Mesma pergunta anterior, agora sabendo que o grupo placebo tem N=70 e o grupo de tratamento tem N=63. Sua resposta muda? Justifique.
+
+4- Pelo que vimos nas primeiras aulas, e no parágrafo selecionado acima: você concorda que os autores descreveram a população, ou acha que eles descreveram a amostra estudada? Justifique
