@@ -5,3 +5,9 @@ Baixe o artigo no link abaixo:
 http://www.scielo.br/scielo.php?pid=S0482-50042004000300002&script=sci_abstract
 
 Leia o último parágrafo na página 188, que inicia com "Os resultados do questionário mostram no pré-operatório uma média de 39,7 pontos (...)".
+
+Neste parágrafo, os autores declaram a média e o DP do pré- e pós- operatório de 12 pacientes com osteoartrose de quadril submetidos à artroplastia total.
+
+1- Os autores reportam que a diferença média entre o pós-op. e o pré-op. é -35 (IC -44,2 a -24,7). Interprete este resultado.
+2- Este resultado foi gerado usando o IC para diferença de grupos independentes (não pareados). Se tivessem usado grupos pareados, o IC seria maior, menor ou igual?
+3- Você concorda com a escolha metodológica dos autores? Justifique sua resposta
