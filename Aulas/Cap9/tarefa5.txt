@@ -1,0 +1,17 @@
+OR
+
+Leia os Highlights e o abstract do artigo disponível no link a seguir:
+
+https://www.sciencedirect.com/science/article/pii/S0264410X14006367
+
+Nesta meta-análise, os autores avaliaram 5 estudos de coorte (N agregado maior que 1 milhão de crianças) e 5 casos-controle (N agregado maior que 9000 crianças).
+Eles buscavam confirmar ou refutar a hipótese de associação entre o aumento de ocorrência de autismo em crianças vacinadas.
+
+1- Nos dois primeiros resultados do quadro de highlight, os valores da OR são 0.92 e 0.91, respectivamente. É correto concluir que estes resultados indicam que não há associação entre vacinação e autismo?
+Interprete estes resultados
+
+2- No terceiro resultado do quadro de highlight o valor da OR é 0.84 (o menor de todos). Mesmo assim, os autores concluíram que não há associação entre autismo e a vacinação com MMR (vacina tríplice viral - sarampo, caxumba e rubéola). Esta conclusão está correta? Justifique.
+
+3- No abstract, quando a análise é agrupada por tipo de exposição, os resultados sobre thimerosal e mercúrio são OR: 0.85 (IC de 0.76 até 0.95).
+(a) Interprete este resultado de forma independente, e escreva a conclusão (i.e. sem levar em conta o objetivo do artigo).
+(b) Justifique a diferença (ou falta de) entre a sua conclusão, e a do abstract.
