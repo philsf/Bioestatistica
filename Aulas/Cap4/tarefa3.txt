@@ -11,7 +11,8 @@ Os autores executaram dois ensaios clínicos (que denominaram Study 1027 e Study
 Os objetivos eram demonstrar a segurança e eficácia de um tratamento para com osteoartrite no joelho ou quadril.
 
 == O que você precisa ler ==
-Para esta tarefa, bastam dois resultados de um dos objetivos do Study 1027: o índice WOMAC de dor.
+
+Para esta tarefa, bastam dois resultados de um dos parâmetros do Study 1027: a queda do índice WOMAC de dor após 8 semanas.
 Os dois resultados que nos interessam estão no abstract do artigo, e reproduzidos abaixo.
 Você também lerá um parágrafo dos Materiais e Métodos.
 
@@ -27,6 +28,7 @@ Os autores planejaram coletar dados de 850 pacientes (para 5 grupos estudados, i
 Eles só conseguiram 379 pacientes (45% do planejado).
 
 == População ==
+
 Os autores descrevem explicitamente a população do estudo.
 Leia o primeiro parágrafo da seção dos métodos chamada "Study Population" (segundo parágrafo da página 152, que inicia com "Patients in Study 1027 were aged ≥18 years with a diagnosis of OA on the knee (...)".
 
