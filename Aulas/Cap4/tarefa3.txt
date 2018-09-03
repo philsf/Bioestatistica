@@ -7,9 +7,18 @@ Baixe o artigo disponível no link abaixo:
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5764290/
 
+== O que você precisa ler ==
 Os autores fizeram dois estudos clínicos (que denominaram Study 1027 e Study 1043).
-Para esta tarefa, nos basta as informações do Study 1027.
+Para esta tarefa, nos basta as informações do Study 1027, e apenas um resultaldo: o índice WOMAC de dor.
+Os resultados que nos interessam estão no abstract do artigo.
 
-Leia o primeiro parágrafo da seção dos métodos chamada "Study Population".
+== População ==
+Os autores descrevem explicitamente a população do estudo.
+Leia o primeiro parágrafo da seção dos métodos chamada "Study Population" (segundo parágrafo da página 152, que inicia com "Patients in Study 1027 were aged ≥18 years with a diagnosis of OA on the knee (...)".
 
+== N ==
+Os autores planejaram coletar dados de 850 pacientes, mas só conseguiram 379 (45% do planejado).
 
+== Resultados do estudo ==
+
+== Perguntas ==
