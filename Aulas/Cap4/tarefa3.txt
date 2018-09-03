@@ -21,4 +21,9 @@ Os autores planejaram coletar dados de 850 pacientes, mas só conseguiram 379 (4
 
 == Resultados do estudo ==
 
+Vamos nos concentrar em 2 resultados, apresentados como média (SE):
+
+- Queda do índice de dor no grupo de tratamento: −3.59 (0.26)
+- Queda do índice de dor no grupo placebo: −2.74 (0.25)
+
 == Perguntas ==
