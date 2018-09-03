@@ -12,6 +12,6 @@ Neste parágrafo, os autores declaram a média e o DP do pré- e pós- operatór
 
 2- Este resultado foi gerado usando o IC para diferença de grupos independentes (não pareados).
 (a) Eles poderiam ter comparado grupos pareados neste caso? Justifique sua resposta
-(b) Se pudessem e tivessem usado grupos pareados, o IC seria maior, menor ou igual?
+(b) Se pudessem e tivessem usado grupos pareados, a expectativa é de que o IC fosse maior, menor ou igual?
 
 3- Você concorda com a escolha metodológica dos autores? Justifique sua resposta.
