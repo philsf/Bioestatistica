@@ -4,3 +4,7 @@ Leia o abstract do artigo disponível no link a seguir:
 
 https://www.sciencedirect.com/science/article/pii/S0264410X14006367
 
+1- Nos dois primeiros resultados, os valores da OR são 0.92 e 0.91, respectivamente. É correto concluir que estes resultados indicam que não há associação entre vacinação e autismo?
+Interprete estes resultados
+
+2- No terceiro resultado o valor da OR é 0.84 (o menor de todos). Mesmo assim, os autores concluíram que não há associação entre autismo e a vacinação com MMR (vacina tríplice viral - sarampo, caxumba e rubéola). Esta conclusão está correta? Justifique.
