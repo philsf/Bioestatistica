@@ -30,7 +30,7 @@ Vamos nos concentrar em 2 resultados, apresentados como média (SE):
 
 1- Por que os autores optaram por reportar estes resultados com a média e SE ao invés de média e DP?
 
-2- Se ambos os grupos tivessem EXATAMENTE o mesmo N, qual é a sua expectativa sobre o grupo que tem maior IC? Justifique.
+2- Se ambos os grupos tivessem EXATAMENTE o mesmo N, qual é o grupo que tem IC mais preciso? Justifique.
 (a) o grupo de tratamento
 (b) o grupo placebo
 (c) ambos teriam ICs com precisão semelhante
