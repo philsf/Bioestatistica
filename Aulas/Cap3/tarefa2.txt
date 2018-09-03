@@ -1,0 +1,13 @@
+Variabilidade
+
+O objetivo desta tarefa é consolidar a análise descritiva de dados quantitativos, com média e DP.
+Para isto, você vai precisar pensar na diferença entre a amostra estudada e a população pretendida.
+Você vai precisar consultar os slides das aulas de Variabilidade (Capítulo 3).
+
+O primeiro artigo usado como exemplo na aula de variabilidade apresenta como abertura da seção dos resultados que "a idade média +/- DP é 7.7 +/- 3.0 anos para os meninos com DMD, e 7.1 +/- 3.2 anos para os meninos saudáveis".
+
+1- Encontre a faixa de idades determinada por "média +/- DP" na frase citada acima para cada grupo de meninos (portadores de DMD, e saudáveis)?
+
+2- Determine o CV de cada grupo e conclua qual é o grupo com maior variabilidade relativa.
+
+3- Qual é (aproximadamente) a proporção da população de meninos portadores de DMD que se encontram na faixa de idades que você determinou no item 1?
