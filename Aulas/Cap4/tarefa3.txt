@@ -34,3 +34,5 @@ Vamos nos concentrar em 2 resultados, apresentados como média (SE):
 (a) o grupo de tratamento
 (b) o grupo placebo
 (c) ambos teriam ICs com precisão semelhante
+
+3- Mesma pergunta anterior, agora sabendo que o grupo placebo tem N=70 e o grupo de tratamento tem N=63. Sua resposta muda? Justifique.
