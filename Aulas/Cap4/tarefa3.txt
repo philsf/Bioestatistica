@@ -9,8 +9,9 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5764290/
 
 == O que você precisa ler ==
 Os autores fizeram dois estudos clínicos (que denominaram Study 1027 e Study 1043).
-Para esta tarefa, nos basta as informações do Study 1027, e apenas um resultaldo: o índice WOMAC de dor.
-Os resultados que nos interessam estão no abstract do artigo.
+Para esta tarefa, bastam dois resultados de um dos objetivos do Study 1027: o índice WOMAC de dor.
+Os dois resultados que nos interessam estão no abstract do artigo, e reproduzidos abaixo.
+Você também lerá um parágrafo dos Materiais e Métodos.
 
 == Resultados do estudo ==
 
