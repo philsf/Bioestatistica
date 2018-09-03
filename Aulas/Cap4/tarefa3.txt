@@ -3,6 +3,6 @@ Erro padrão
 O objetivo desta tarefa é consolidar a compreensão da diferença entre o Desvio Padrão e o Erro padrão.
 Vamos deixar de pensar de forma descritiva e começar a pensar de forma inferencial.
 
-Leia o abstract do artigo disponível no link abaixo:
+Baixe o artigo disponível no link abaixo:
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5764290/
