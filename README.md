@@ -42,7 +42,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 1. Cap 1: não há exercícios.
 2. Cap 2: 1,2 e 4.
 3. Cap 3: todos. 1. Para 3 e 4, no Excel use o commando `=DESVPAD()`.
-4. Cap 4: Exercícios 1, 2 e 3. Cap 5: Exercícios 1, 3, 7 e 9.
+4. Cap 4: Exercícios 1 e 2. Cap 5: Exercícios 1, 3, 7 e 9.
 5. Cap 7: Em breve
 6. Cap 8: Exercícios 1, 2, 4 e 5. Cap 9: Exercícios 1 e 2.
 7. Cap 10: todos. Cap 11: todos.
