@@ -326,6 +326,21 @@
   \end{block}
 \end{frame}
 
+\begin{frame}{Quais são as variáveis?}
+
+  \begin{block}{Duas variáveis categóricas (binárias)}
+  \begin{itemize}
+  \item {\bf Desfecho} = Progrediu ou Não progrediu
+  \item {\bf Grupo de tratamento} = AZT ou Placebo
+  \end{itemize}
+  \end{block}
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{Desfecho} \sim \text{Grupo de tratamento}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
 \begin{frame}{Tabela de contingência}
   \begin{exampleblock}{Exemplo 8.1 - apenas contagens}
     Frequências observadas:
@@ -380,8 +395,8 @@
   \end{itemize}
   \begin{exampleblock}{No exemplo, a progressão foi:}
     \begin{itemize}
-    \item 16\% sob AZT e 23\% sob placebo
-    \item RR = 16/28 = 0.57 (interprete)
+    \item 16\% sob AZT e 28\% sob placebo
+    \item RR = 0.16/0.28 = 0.57 (interprete)
     \item<2-> IC 95\%: [0.44, 0.75] (interprete)
     \end{itemize}
   \end{exampleblock}
@@ -390,18 +405,33 @@
 \begin{frame}{Risco Relativo}
   \begin{exampleblock}{No exemplo, a progressão foi:}
     \begin{itemize}
-    \item 16\% sob AZT e 23\% sob placebo
-    \item RR = 16/28 = 0.57 (interprete)
+    \item 16\% sob AZT e 28\% sob placebo
+    \item RR = 0.16/0.28 = 0.57 (interprete)
     \item IC 95\%: [0.44, 0.75] (interprete)
     \end{itemize}
   \end{exampleblock}
-  \begin{itemize}
-  % \item O RR é a comparação entre os dois riscos
-  \item Sua interpretação \alert{não é} quanto um risco é maior que o outro.
-  \item O correto é concluir qual é o RR \alert{entre} os dois fatores.
-  \item Concluímos que {\bf participantes tratados com AZT são 57\% tão suscetíveis à progressão... em relação ao placebo}.
-  \item A RR real (população) deve estar entre 44\% e 75\% (baseado nesta amostra).
-  \end{itemize}
+  \begin{block}{O RR é a comparação entre os dois riscos}
+    \small
+    \begin{itemize}
+    \item Sua interpretação \alert{não é} quanto um risco é maior que o outro.
+    \item O correto é concluir qual é o RR \alert{entre} os dois fatores.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Risco Relativo}
+  \begin{exampleblock}{Resultados}
+    \begin{itemize}
+      \footnotesize
+    \item RR = 0.57
+    \item IC 95\%: [0.44, 0.75]
+    \end{itemize}
+  \end{exampleblock}
+
+  \bigskip
+  \begin{exampleblock}{Conclusão}
+    ... participantes tratados com AZT são 57\% (IC: 44\% a 75\%) tão suscetíveis à progressão... em relação ao placebo
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Observação}
@@ -411,7 +441,7 @@
   \begin{exampleblock}{AZT}
     \begin{itemize}
 %    \item tratam./controle = 0.57
-    \item controle/tratam. = 28/16 = 1.75
+    \item controle/tratam. = 0.28/0.16 = 1.75
     \item {\bf Pacientes que receberam placebo foram 1.75 mais suscetíveis à progressão...}
     \end{itemize}
   \end{exampleblock}
@@ -465,28 +495,26 @@
   \begin{exampleblock}{No exemplo, a progressão foi:}
     \begin{itemize}
     \item 19\% sob AZT e 39\% sob placebo
-    \item OR = 19/39 = 0.49 (interprete)
+    \item OR = 0.19/0.39 = 0.49 (interprete)
     \item<2-> IC 95\%: [0.36, 0.67] (interprete)
     \end{itemize}
   \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Razão de Chances (OR)}
-  \begin{exampleblock}{No exemplo, a progressão foi:}
+  \begin{exampleblock}{Resultados}
     \begin{itemize}
-    \item 19\% sob AZT e 39\% sob placebo
-    \item OR = 19/39 = 0.49 (interprete)
-    \item IC 95\%: [0.36, 0.67] (interprete)
+      \footnotesize
+    \item OR = 0.49
+    \item IC 95\%: [0.36, 0.67]
     \end{itemize}
   \end{exampleblock}
-  \begin{itemize}
-  % \item O RR é a comparação entre os dois riscos
-  % \item Sua interpretação \alert{não é} quanto um risco é maior que o outro.
-  % \item O correto é concluir qual é o RR \alert{entre} os dois fatores.
-  \item Interpretação semelhante à RR.
-  \item Concluímos que {\bf participantes tratados com AZT têm 49\% menos chances de progressão... em relação ao placebo}.
-  \item A OR real (população) deve estar entre 36\% e 67\% (baseado nesta amostra).
-  \end{itemize}
+  \begin{center}
+    Interpretação semelhante à RR.
+  \end{center}
+  \begin{exampleblock}{Conclusão}
+    ... participantes tratados com AZT têm 49\% (IC: 36\% a 67\%)menos chances de progressão... em relação ao placebo.
+  \end{exampleblock}
 \end{frame}
 
 \section{Aprofundamento}
