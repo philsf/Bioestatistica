@@ -23,6 +23,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 15. Avaliações
 
 [Introdução-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1.pdf
+[Introdução-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
 [IC de uma proporção]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
 [Variabilidade]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
 [Distribuição Normal + IC da média]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
