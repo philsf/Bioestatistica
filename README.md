@@ -6,7 +6,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 ## Planejamento de aulas de conteúdo
 
-1. [Introdução][] (cap 1)
+1. Introdução [Introdução-pdf][PDF] [Introdução-handout][Handout] (cap 1)
 2. [IC de uma proporção][] (cap 2)
 3. [Variabilidade][] (cap 3)
 4. [Distribuição Normal + IC da média][] (cap 4, 5)
@@ -22,7 +22,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 14. Avaliações
 15. Avaliações
 
-[Introdução]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1.pdf
+[Introdução-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1.pdf
 [IC de uma proporção]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
 [Variabilidade]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
 [Distribuição Normal + IC da média]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
