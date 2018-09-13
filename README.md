@@ -7,7 +7,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 ## Planejamento de aulas de conteúdo
 
 1. Introdução [PDF][Introdução-pdf] [Handout][Introdução-handout] (cap 1)
-2. [IC de uma proporção][] (cap 2)
+2. [IC de uma proporção][] [PDF][IC-prop-pdf] [Handout][IC-prop-handout] (cap 2)
 3. [Variabilidade][] (cap 3)
 4. [Distribuição Normal + IC da média][] (cap 4, 5)
 5. [IC da diferença entre médias][] (cap 5, 7)
@@ -24,7 +24,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 [Introdução-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1.pdf
 [Introdução-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
-[IC de uma proporção]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
+[IC-prop-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
+[IC-prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2_4em1.pdf
 [Variabilidade]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
 [Distribuição Normal + IC da média]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
 [IC da diferença entre médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7.pdf
