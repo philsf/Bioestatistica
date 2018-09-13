@@ -6,7 +6,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 ## Planejamento de aulas de conteúdo
 
-1. Introdução [Introdução-pdf][PDF] [Introdução-handout][Handout] (cap 1)
+1. Introdução [PDF][Introdução-pdf] [Handout][Introdução-handout] (cap 1)
 2. [IC de uma proporção][] (cap 2)
 3. [Variabilidade][] (cap 3)
 4. [Distribuição Normal + IC da média][] (cap 4, 5)
