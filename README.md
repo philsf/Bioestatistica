@@ -9,7 +9,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 1. Introdução ([PDF][Intro-pdf], [Handout][Intro-handout]) (cap 1)
 2. IC de uma proporção ([PDF][IC-prop-pdf], [Handout][IC-prop-handout]) (cap 2)
 3. Variabilidade ([PDF][Var-pdf], [Handout][Var-handout]) (cap 3)
-4. [Distribuição Normal + IC da média][] (cap 4, 5)
+4. Distribuição Normal + IC da média ([PDF][normal-pdf], [Handout][normal-handout]) (cap 4, 5)
 5. [IC da diferença entre médias][] (cap 5, 7)
 6. [Comparando ICs de proporções][] (cap 8, 9)
 7. [Significância][] (cap 10, 11)
@@ -26,7 +26,6 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Intro-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
 [IC-prop-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
 [IC-prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2_4em1.pdf
-[Distribuição Normal + IC da média]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
 [IC da diferença entre médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7.pdf
 [Comparando ICs de proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
 [Significância]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11.pdf
@@ -38,6 +37,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Métodos não-paramétricos]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
 [Var-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
 [Var-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3_4em1.pdf
+[normal-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
+[normal-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5_4em1.pdf
 
 
 ## Exercícios selecionados por aula
