@@ -11,7 +11,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 3. Variabilidade ([PDF][Var-pdf], [Handout][Var-handout]) (cap 3)
 4. Distribuição Normal + IC da média ([PDF][normal-pdf], [Handout][normal-handout]) (cap 4, 5)
 5. IC da diferença entre médias ([PDF][IC-2m-pdf], [Handout][IC-2m-handout]) (cap 5, 7)
-6. [Comparando ICs de proporções][] (cap 8, 9)
+6. Comparando ICs de proporções ([PDF][OR-pdf], [Handout][OR-handout]) (cap 8, 9)
 7. [Significância][] (cap 10, 11)
 8. [2 médias][] (cap 23 e 25)
 9. [2 proporções][] (cap 26 e 27)
@@ -26,7 +26,6 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Intro-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
 [IC-prop-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
 [IC-prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2_4em1.pdf
-[Comparando ICs de proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
 [Significância]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11.pdf
 [2 médias]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25.pdf
 [2 proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
@@ -40,6 +39,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [normal-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5_4em1.pdf
 [IC-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7.pdf
 [IC-2m-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7_4em1.pdf
+[OR-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
+[OR-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
 
 
 ## Exercícios selecionados por aula
