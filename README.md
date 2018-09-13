@@ -6,8 +6,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 ## Planejamento de aulas de conteúdo
 
-1. Introdução [PDF][Intro-pdf] [Handout][Intro-handout] (cap 1)
-2. IC de uma proporção [PDF][IC-prop-pdf] [Handout][IC-prop-handout] (cap 2)
+1. Introdução ([PDF][Intro-pdf], [Handout][Intro-handout]) (cap 1)
+2. IC de uma proporção ([PDF][IC-prop-pdf], [Handout][IC-prop-handout]) (cap 2)
 3. [Variabilidade][] (cap 3)
 4. [Distribuição Normal + IC da média][] (cap 4, 5)
 5. [IC da diferença entre médias][] (cap 5, 7)
