@@ -16,7 +16,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 8. Testes 2 médias ([PDF][teste-2m-pdf], [Handout][teste-2m-handout]) (cap 23 e 25)
 9. Testes 2 proporções ([PDF][teste-2prop-pdf], [Handout][teste-2prop-handout]) (cap 26 e 27)
 10. Correlação ([PDF][cor-pdf], [Handout][cor-handout]) (cap 17)
-11. [Regressão linear simples][] (cap 18, 19)
+11. Regressão linear simples ([PDF][lm-pdf], [Handout][lm-handout]) (cap 18, 19)
 12. [Comparações múltiplas e ANOVA][] (cap 13, 30)
 13. [Métodos não-paramétricos][] (Cap 37, 38)
 14. Avaliações
@@ -26,7 +26,6 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Intro-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
 [IC-prop-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
 [IC-prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2_4em1.pdf
-[Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
 [Comparações múltiplas e ANOVA]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30.pdf
 [Métodos não-paramétricos]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
 [Var-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
@@ -45,6 +44,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [teste-2prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27_4em1.pdf
 [cor-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
 [cor-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17_4em1.pdf
+[lm-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
+[lm-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19_4em1.pdf
 
 
 ## Exercícios selecionados por aula
