@@ -9,7 +9,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 1. Introdução ([PDF][Intro-pdf], [Handout][Intro-handout]) (cap 1)
 2. IC de uma proporção ([PDF][IC-prop-pdf], [Handout][IC-prop-handout]) (cap 2)
 3. Variabilidade ([PDF][Var-pdf], [Handout][Var-handout]) (cap 3)
-4. Distribuição Normal + IC da média ([PDF][normal-pdf], [Handout][normal-handout]) (cap 4, 5)
+4. Distribuição Normal + IC da média ([PDF][IC-1m-pdf], [Handout][IC-1m-handout]) (cap 4, 5)
 5. IC da diferença entre médias ([PDF][IC-2m-pdf], [Handout][IC-2m-handout]) (cap 5, 7)
 6. Comparando ICs de proporções ([PDF][OR-pdf], [Handout][OR-handout]) (cap 8, 9)
 7. Significância ([PDF][signif-pdf], [Handout][signif-handout]) (cap 10, 11)
@@ -31,8 +31,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Métodos não-paramétricos]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
 [Var-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
 [Var-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3_4em1.pdf
-[normal-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
-[normal-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5_4em1.pdf
+[IC-1m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
+[IC-1m-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5_4em1.pdf
 [IC-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7.pdf
 [IC-2m-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7_4em1.pdf
 [OR-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
