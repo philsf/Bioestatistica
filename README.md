@@ -14,7 +14,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 6. Comparando ICs de proporções ([PDF][OR-pdf], [Handout][OR-handout]) (cap 8, 9)
 7. Significância ([PDF][signif-pdf], [Handout][signif-handout]) (cap 10, 11)
 8. 2 médias ([PDF][teste-2m-pdf], [Handout][teste-2m-handout]) (cap 23 e 25)
-9. [2 proporções][] (cap 26 e 27)
+9. 2 proporções ([PDF][teste-2prop-pdf], [Handout][teste-2prop-handout]) (cap 26 e 27)
 10. [Correlação][] (cap 17)
 11. [Regressão linear simples][] (cap 18, 19)
 12. [Comparações múltiplas e ANOVA][] (cap 13, 30)
@@ -26,7 +26,6 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [Intro-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
 [IC-prop-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
 [IC-prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2_4em1.pdf
-[2 proporções]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
 [Correlação]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
 [Regressão linear simples]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
 [Comparações múltiplas e ANOVA]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30.pdf
@@ -43,6 +42,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [signif-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11_4em1.pdf
 [teste-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25.pdf
 [teste-2m-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25_4em1.pdf
+[teste-2prop-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
+[teste-2prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27_4em1.pdf
 
 
 ## Exercícios selecionados por aula
