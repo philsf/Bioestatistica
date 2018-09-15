@@ -33,7 +33,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [IC-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7.pdf
 [IC-2m-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7_4em1.pdf
 [OR-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
-[OR-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
+[OR-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9_4em1.pdf
 [signif-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11.pdf
 [signif-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11_4em1.pdf
 [teste-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25.pdf
