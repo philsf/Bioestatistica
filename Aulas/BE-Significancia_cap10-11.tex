@@ -415,15 +415,18 @@
     A dose média contida em um comprimido de paracetamol é de 750mg.\\
     \bigskip
     Formulação matemática:\\
-    \begin{displaymath}
+    \only<1>{\begin{displaymath}
       H_0: \mu = 750
-    \end{displaymath}
+    \end{displaymath}}
+    \only<2>{\alert{\begin{displaymath}
+      H_0: \mu = 750
+    \end{displaymath}}}
     \begin{displaymath}
       H_1: \mu \ne 750
     \end{displaymath}
   \end{exampleblock}
   \begin{center}
-      \only<2->{\includegraphics[height=2cm]{Jackie-Chan-WTF}}
+      \uncover<2->{\includegraphics[height=2cm]{Jackie-Chan-WTF}}
   \end{center}
 \end{frame}
 
