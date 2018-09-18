@@ -763,6 +763,121 @@
     \end{center}
   \end{block}
 \end{frame}
+
+\begin{frame}{Exemplo 2}
+  \begin{example}
+    Uma indústria farmacêutica especifica que em certo analgésico a
+    quantidade média de ácido acetil salicílico deve ser 5.5 gramas
+    por comprimido. A indústria suspeita que houve problemas na
+    produção de um determinado lote e que, nesse lote, a quantidade
+    média dessa substância está diferente da especificada. Para
+    verificar essa suspeita, a indústria selecionou uma amostra
+    aleatória de 40 comprimidos desse lote, observando uma quantidade
+    média de ácido acetil salicílico igual a 5.2 gramas e um desvio
+    padrão de 0.7 gramas.
+  \end{example}
+\end{frame}
+
+\begin{frame}{Exemplo 2}
+  \begin{itemize}
+  % \item Para testar essa hipótese usaremos o teste Z pois a amostra é
+  %   grande ($n=40$).
+  \item O teste é bicaudal, portanto consultamos a significância
+    \alert{$\frac{\alpha}{2} = 0.025$}.
+  \item Consultando a tabela Z, encontramos o valor crítico
+    \alert{$z_{0.025} = 1.96$}.
+  \item Após calcular a estatística de teste, devemos comparar com o
+    valor crítico $z_c$ para verificar se ela está contida na região
+    de rejeição.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo 2}
+  \begin{block}{Solução}
+    \begin{itemize}
+    \item Hipóteses
+      \begin{displaymath}
+        H_0: \mu = 5.5
+      \end{displaymath}
+      \begin{displaymath}
+        H_1: \mu \ne 5.5
+      \end{displaymath}
+    \item Região crítica: $z<-z_{0.025}$ ou $z>z_{0.025}$ (ou seja,
+      \alert{$z<-1.96$ ou $z>1.96$}).
+    \item Dados
+      \begin{displaymath}
+        n=40, \bar{x} = 5.2, s = 0.7
+      \end{displaymath}
+    \item Estatística de teste
+      \begin{displaymath}
+        z = \frac{5.2 - 5.5}{\frac{0.7}{\sqrt{1000}}} = \alert{-2.71}
+      \end{displaymath}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Exemplo 2}
+  \begin{itemize}
+  \item O valor $z=-2.71$ está dentro da região crítica ($z=-2.71 < -1.96$).
+  \item Como a estatística de teste está dentro da região crítica,
+    rejeitamos $H_0$ ao nível de significância de 5\%.
+  \item Conclusão: rejeitamos a hipótese de que a quantidade média de
+    ácido acetil salicílico (gramas por comprimido) de certo
+    analgésico é igual a 5.5 gramas ao nível de significância de 5\%
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Bônus: Intervalo de Confiança}
+  \begin{itemize}
+  \item Nessa situação, podemos usar o intervalo de confiança para
+    realizar o teste de hipóteses, pois a hipótese alternativa é
+    bilateral.
+  \item Como queremos um teste a 5\% de significância, calcularemos um
+    intervalo de 95\% de confiança para a quantidade média de ácido
+    acetil salicílico, por comprimido.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo 2 (a revanche)}
+  \begin{example}
+    \begin{columns}
+      \begin{column}{5cm}
+        \begin{itemize}
+        \item $IC_{0.95} = (\bar{x} \pm E)$
+        \item $1-\alpha = 0.95$
+        \item $\alpha = 0.05$
+        \item $\frac{\alpha}{2} = 0.025$
+        \item $z_c = z_{0.025} = 1.96$
+        \end{itemize}
+      \end{column}
+      \begin{column}{5cm}
+        \begin{itemize}
+        \item $IC_{0.95} = (5.2 \pm 1.96 \times \frac{0.7}{\sqrt{40}})$
+        \item $IC_{0.95} = (5.2 \pm 0.2)$
+        \item $IC_{0.95} = \alert{(5.0 , 5.4)}$
+        \end{itemize}
+      \end{column}
+    \end{columns}
+  \end{example}
+
+  Lembrete da margem de erro: $E = z_c \times\frac{s}{\sqrt{n}}$
+\end{frame}
+
+\begin{frame}{Interpretação do IC}
+  \begin{block}{Interpretação}
+    A quantidade média de ácido acetil salicílico, por comprimido,
+    está entre 5,0 e 5,4 gramas, com 95\% de confiança.
+  \end{block}
+  \begin{itemize}
+  \item Teste de hipóteses baseado no intervalo de confiança: o valor
+    5.5 não pertence ao intervalo de 95\% de confiança para a
+    quantidade média de ácido acetil salicílico, por comprimido.
+  \item Conclusão: rejeitamos a hipótese de que a quantidade média de
+    ácido acetil salicílico de certo analgésico é igual a 5.5 gramas
+    ao nível de significância de 5\%.
+  \end{itemize}
+\end{frame}
+
 \section{Aprofundamento}
 
 \subsection{Aprofundamento}
