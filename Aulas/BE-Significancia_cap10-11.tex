@@ -646,18 +646,19 @@
 
 \begin{frame}{O p-valor}
   \begin{block}{Definição}
-    Assumindo que a hipótese nula seja verdadeira, o \alert{p-valor}
-    de um teste de hipóteses é a probabilidade de se obter uma
-    estatística amostral com valores tão extremos, ou mais extremos
-    que aquele observado.
+    Assumindo que a hipótese nula seja verdadeira, o {\bf p-valor} de
+    um teste de hipóteses é a probabilidade de se obter uma
+    estatística amostral com valores \alert{tão extremos, ou mais
+      extremos} que aquele observado.
   \end{block}
 
-O p-valor \alert{é}:
+  O p-valor \alert{é}:
   \begin{itemize}
-  \item Uma estatística (i.e., depende da amostra - dados e tamanho)
+    \footnotesize
+  % \item Uma estatística (i.e., depende da amostra - dados e tamanho)
   \item A probabilidade (condicional) de se observar o resultado ao
     acaso \alert{dado que} a $H_0$ é verdadeira.
-  \item Uma medida da força da evidência contra a $H_0$.
+  \item Uma medida da força da evidência \alert{contra} a $H_0$.
   \end{itemize}
 \end{frame}
 
@@ -728,28 +729,43 @@ O p-valor \alert{é}:
    % \hfill{\scriptsize teste Z calculado em \url{https://mathcracker.com/z-test-for-one-mean.php}
 \end{frame}
 
-\begin{frame}{O p-valor}
-  Cuidado! O p-valor \alert{não é}:
-  \begin{itemize}
-  \item a probabilidade de que a hipótese nula seja verdadeira
-  \item a probabilidade de que a diferença observada seja devido ao
-    acaso
-  \end{itemize}
-  \begin{block}{}
-    Estes são erros comuns de interpretação.
-
-    O p-valor assume que (1) a hipótese é verdadeira, e (2) que a
-    única causa da diferença é devida ao acaso, portanto não pode ser
-    usado para concluir suas próprias premissas.
-  \end{block}
-  \begin{block}{}
-    ``The concept of a p value is not simple and any statements
-    associated with it must be considered cautiously.''
-
-    Dorey, F. 2010 Clin Orthop Relat Res.
+\begin{frame}{Cuidados com o p-valor}
+    \begin{block}{{\small DOREY, F. 2010 Clin Orthop Relat Res.}}
+    \small
+    {\em ``The concept of a p value is not simple and any statements
+    associated with it must be considered cautiously.''}
   \end{block}
 \end{frame}
 
+\begin{frame}{Cuidado!}
+  \small
+  \begin{block}{O p-valor \alert{não é}}
+    \begin{itemize}
+      \footnotesize
+    \item a probabilidade de que a hipótese nula seja verdadeira
+    \item a probabilidade de que a diferença observada seja devido ao
+      acaso
+    \end{itemize}
+  \end{block}
+  \begin{center}
+    Estes são erros comuns de interpretação
+  \end{center}
+\end{frame}
+
+\begin{frame}{O p-valor}
+  \begin{block}{O p-valor assume que...}
+    \small
+    \begin{enumerate}
+      \footnotesize
+    \item a hipótese é verdadeira
+    \item que a \alert{única} causa da diferença é devida ao acaso,
+    \end{enumerate}
+    \begin{center}
+      Portanto não pode ser usado para concluir suas próprias
+      premissas.
+    \end{center}
+  \end{block}
+\end{frame}
 \section{Aprofundamento}
 
 \subsection{Aprofundamento}
