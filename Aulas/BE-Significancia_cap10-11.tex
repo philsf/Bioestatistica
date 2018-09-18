@@ -701,7 +701,7 @@
 \end{frame}
 
 \begin{frame}{Exemplo 1}
-  \begin{exampleblock}{Exemplo 1}
+  % \begin{exampleblock}{Exemplo 1}
     \begin{itemize}
       \scriptsize
     \item Dados: $\mu = 1.2, \bar{x} = 1.05, s = 0.5, n=100$
@@ -711,12 +711,12 @@
     % \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
       \begin{itemize}
         \scriptsize
-      \item O teste Z retorna $p = 0.0027$ (para $n$ grande)
-      \item O teste t retorna $p = 0.0034$ (em geral)
+      \item O teste Z retorna $p = 0.0027$\footnote{Premissas fortes: Normal, N grande, $\sigma$ conhecido, etc.}
+      \item O teste t retorna $p = 0.0034$\footnote{Usado em geral, menos premissas}
       \end{itemize}
     \item<2-> Como $p < 0.05$, há evidências para rejeitar \alert<2->{$H_0$}.
     \end{itemize}
-  \end{exampleblock}
+  % \end{exampleblock}
   \begin{exampleblock}{Resultado}<3->
     \small
     O tempo de resposta médio é \alert{significativamente} diferente de 1.2 s ({\footnotesize p = 0.0034}).
