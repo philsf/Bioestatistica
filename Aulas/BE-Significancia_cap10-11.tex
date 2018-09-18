@@ -702,21 +702,29 @@ O p-valor \alert{é}:
 \begin{frame}{Exemplo 1}
   \begin{exampleblock}{Exemplo 1}
     \begin{itemize}
+      \scriptsize
     \item Dados: $\mu = 1.2, \bar{x} = 1.05, s = 0.5, n=100$
-    \item $H_0: \mu = 1.2, H_1: \mu \ne 1.2$ (teste bicaudal)
+    \item $\alert<2->{H_0: \mu = 1.2}, H_1: \mu \ne 1.2$ (teste bicaudal)
     % \item $n$ é grande ($n > 30$), então usamos $\sigma \approx s$ , e
     %   fazemos o teste Z:
     % \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
       \begin{itemize}
+        \scriptsize
       \item O teste Z retorna $p = 0.0027$ (para $n$ grande)
       \item O teste t retorna $p = 0.0034$ (em geral)
       \end{itemize}
-    \item<2-> Como $p < 0.05$, concluímos que há evidência para rejeitar
-      $H_0$.
-    \item<2-> {\bf Resultado: O tempo de resposta médio é \alert{significativamente} diferente de 1.2 s.}
-    \item<2-> {\bf Conclusão: \uncover<3->{há evidências que a droga altera o tempo (...)  de resposta (...)}}
+    \item<2-> Como $p < 0.05$, há evidências para rejeitar \alert<2->{$H_0$}.
     \end{itemize}
   \end{exampleblock}
+  \begin{exampleblock}{Resultado}<2->
+    \small
+    O tempo de resposta médio é \alert{significativamente} diferente de 1.2 s ({\footnotesize p = 0.0034}).
+  \end{exampleblock}
+  \begin{exampleblock}{Conclusão}<3->
+    \small
+    (...) há evidências que a droga altera o tempo (...)  de resposta (...).
+  \end{exampleblock}
+
    % \hfill{\scriptsize teste Z calculado em \url{https://mathcracker.com/z-test-for-one-mean.php}
 \end{frame}
 
