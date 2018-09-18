@@ -765,7 +765,8 @@
 \end{frame}
 
 \begin{frame}{Exemplo 2}
-  \begin{example}
+  \begin{exampleblock}{Exemplo 2}
+    \footnotesize
     Uma indústria farmacêutica especifica que em certo analgésico a
     quantidade média de ácido acetil salicílico deve ser 5.5 gramas
     por comprimido. A indústria suspeita que houve problemas na
@@ -775,26 +776,27 @@
     aleatória de 40 comprimidos desse lote, observando uma quantidade
     média de ácido acetil salicílico igual a 5.2 gramas e um desvio
     padrão de 0.7 gramas.
-  \end{example}
+  \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Exemplo 2}
-  \begin{itemize}
-  % \item Para testar essa hipótese usaremos o teste Z pois a amostra é
-  %   grande ($n=40$).
-  \item O teste é bicaudal, portanto consultamos a significância
-    \alert{$\frac{\alpha}{2} = 0.025$}.
-  \item Consultando a tabela Z, encontramos o valor crítico
-    \alert{$z_{0.025} = 1.96$}.
-  \item Após calcular a estatística de teste, devemos comparar com o
-    valor crítico $z_c$ para verificar se ela está contida na região
-    de rejeição.
-  \end{itemize}
-\end{frame}
+% \begin{frame}{Exemplo 2}
+%   \begin{itemize}
+%   % \item Para testar essa hipótese usaremos o teste Z pois a amostra é
+%   %   grande ($n=40$).
+%   \item O teste é bicaudal, portanto consultamos a significância
+%     \alert{$\frac{\alpha}{2} = 0.025$}.
+%   \item Consultando a tabela Z, encontramos o valor crítico
+%     \alert{$z_{0.025} = 1.96$}.
+%   \item Após calcular a estatística de teste, devemos comparar com o
+%     valor crítico $z_c$ para verificar se ela está contida na região
+%     de rejeição.
+%   \end{itemize}
+% \end{frame}
 
 \begin{frame}{Exemplo 2}
-  \begin{block}{Solução}
+  \begin{exampleblock}{Solução}
     \begin{itemize}
+    \footnotesize
     \item Hipóteses
       \begin{displaymath}
         H_0: \mu = 5.5
@@ -802,22 +804,23 @@
       \begin{displaymath}
         H_1: \mu \ne 5.5
       \end{displaymath}
-    \item Região crítica: $z<-z_{0.025}$ ou $z>z_{0.025}$ (ou seja,
-      \alert{$z<-1.96$ ou $z>1.96$}).
+    % \item Região crítica: $z<-z_{0.025}$ ou $z>z_{0.025}$ (ou seja,
+    %   \alert{$z<-1.96$ ou $z>1.96$}).
     \item Dados
       \begin{displaymath}
         n=40, \bar{x} = 5.2, s = 0.7
       \end{displaymath}
-    \item Estatística de teste
-      \begin{displaymath}
-        z = \frac{5.2 - 5.5}{\frac{0.7}{\sqrt{1000}}} = \alert{-2.71}
-      \end{displaymath}
+    % \item Estatística de teste
+    %   \begin{displaymath}
+    %     z = \frac{5.2 - 5.5}{\frac{0.7}{\sqrt{1000}}} = \alert{-2.71}
+    %   \end{displaymath}
     \end{itemize}
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Exemplo 2}
   \begin{itemize}
+    \footnotesize
   \item O valor $z=-2.71$ está dentro da região crítica ($z=-2.71 < -1.96$).
   \item Como a estatística de teste está dentro da região crítica,
     rejeitamos $H_0$ ao nível de significância de 5\%.
