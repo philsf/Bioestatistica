@@ -703,17 +703,21 @@ O p-valor \alert{é}:
   \begin{exampleblock}{Exemplo 1}
     \begin{itemize}
     \item Dados: $\mu = 1.2, \bar{x} = 1.05, s = 0.5, n=100$
-    \item $H_0: \mu = 1.2, H_1: \mu < 1.2$ (teste unicaudal à esquerda)
+    \item $H_0: \mu = 1.2, H_1: \mu \ne 1.2$ (teste bicaudal)
     % \item $n$ é grande ($n > 30$), então usamos $\sigma \approx s$ , e
     %   fazemos o teste Z:
     % \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
-    \item O teste Z aplicado a este problema retorna $p=0.0013$
+      \begin{itemize}
+      \item O teste Z retorna $p = 0.0027$ (para $n$ grande)
+      \item O teste t retorna $p = 0.0034$ (em geral)
+      \end{itemize}
     \item<2-> Como $p < 0.05$, concluímos que há evidência para rejeitar
       $H_0$.
-    \item<2-> {\bf Resultado: O tempo de resposta médio é \alert{significativamente} menor.}
-    \item<2-> {\bf Conclusão: \only<3->{há evidências que a droga diminui o tempo de resposta (...)}}
+    \item<2-> {\bf Resultado: O tempo de resposta médio é \alert{significativamente} diferente de 1.2 s.}
+    \item<2-> {\bf Conclusão: \uncover<3->{há evidências que a droga altera o tempo (...)  de resposta (...)}}
     \end{itemize}
   \end{exampleblock}
+   % \hfill{\scriptsize teste Z calculado em \url{https://mathcracker.com/z-test-for-one-mean.php}
 \end{frame}
 
 \begin{frame}{O p-valor}
