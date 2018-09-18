@@ -42,6 +42,7 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
+\usepackage[normalem]{ulem}
 
 \title[Significância] % (optional, use only with long paper titles)
 {Significância Estatística}
@@ -757,7 +758,7 @@
     % \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
       \begin{itemize}
         \scriptsize
-      \item O teste Z retorna $p = 0.0027$\footnote{Premissas fortes: Normal, N grande, $\sigma$ conhecido, etc.}
+      \item \sout{O teste Z retorna $p = 0.0027$}\footnote{Premissas fortes: Normal, N grande, $\sigma$ conhecido, etc.}
       \item O teste t retorna $p = 0.0034$\footnote{Usado em geral, menos premissas}
       \end{itemize}
     \item<2-> Como $p < 0.05$, há evidências para rejeitar \alert<2->{$H_0$}.
