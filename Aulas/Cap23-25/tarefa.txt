@@ -1,0 +1,66 @@
+Desempenho de duas técnicas de transferência de tendão FDL
+
+== Artigo ==
+
+https://www.ncbi.nlm.nih.gov/pubmed/29627930
+
+O número inicial de cadáveres foi igual em cada grupo, e os autores fizeram uma análise de poder antes do estudo.
+Eles optaram por fazer uma análise de grupos independentes, tanto para os testes de ciclos, quanto para o teste de carga até a falha.
+
+== Perguntas ==
+
+1) Identifique e classifique as variáveis envolvidas:
+a) No teste de ciclos? No teste de carga até a falha?
+b) Por que os pesquisadores podem usar o teste t no teste de carga até a falha, mas não podem no teste de ciclos?
+
+2) Com os resultados apresentados para o teste de carga até a falha, é possível aplicar o teste t e obter p = 0.0022, confirmando o resultado do artigo.
+a) É razoável supor que o teste de carga até a falha atende à premissa de independência do teste t?
+b) É razoável supor que o teste de carga até a falha atende à premissa de variabilidade do teste?
+c) Eles poderiam ter feito uma análise pareada no teste de carga até a falha? Justifique.
+
+== não postar no GC ==
+Resultados do graphpad
+
+- Teste dos ciclos
+
+P value and statistical significance: 
+  The two-tailed P value equals 0.8624 
+  By conventional criteria, this difference is considered to be not statistically significant. 
+
+Confidence interval: 
+  The mean of TT minus ISF equals 0.100 
+  95% confidence interval of this difference: From -1.085 to 1.285 
+
+Intermediate values used in calculations: 
+  t = 0.1755 
+  df = 21 
+  standard error of difference = 0.570 
+
+Review your data: 
+  Group	  TT  	  ISF  
+Mean	1.900	1.800
+SD	1.200	1.500
+SEM	0.362	0.433
+N	11     	12     
+
+- Teste de carga até a falha
+
+P value and statistical significance: 
+  The two-tailed P value equals 0.0022 
+  By conventional criteria, this difference is considered to be very statistically significant. 
+
+Confidence interval: 
+  The mean of TT minus ISF equals 132.00 
+  95% confidence interval of this difference: From 53.79 to 210.21 
+
+Intermediate values used in calculations: 
+  t = 3.5206 
+  df = 20 
+  standard error of difference = 37.494 
+
+Review your data: 
+  Group	  TT  	  ISF  
+Mean	459.00	327.00
+SD	96.00	76.00
+SEM	27.71	24.03
+N	12    	10  
