@@ -10,43 +10,43 @@ Resultados do graphpad
 - Teste dos ciclos
 
 P value and statistical significance: 
-  The two-tailed P value equals 0.8585 
+  The two-tailed P value equals 0.8624 
   By conventional criteria, this difference is considered to be not statistically significant. 
 
 Confidence interval: 
   The mean of TT minus ISF equals 0.100 
-  95% confidence interval of this difference: From -1.050 to 1.250 
+  95% confidence interval of this difference: From -1.085 to 1.285 
 
 Intermediate values used in calculations: 
-  t = 0.1803 
-  df = 22 
-  standard error of difference = 0.555
+  t = 0.1755 
+  df = 21 
+  standard error of difference = 0.570 
 
 Review your data: 
   Group	  TT  	  ISF  
 Mean	1.900	1.800
 SD	1.200	1.500
-SEM	0.346	0.433
-N	12     	12     
+SEM	0.362	0.433
+N	11     	12     
 
 - Teste de carga até a falha
 
 P value and statistical significance: 
-  The two-tailed P value equals 0.0011 
+  The two-tailed P value equals 0.0022 
   By conventional criteria, this difference is considered to be very statistically significant. 
 
 Confidence interval: 
   The mean of TT minus ISF equals 132.00 
-  95% confidence interval of this difference: From 58.70 to 205.30 
+  95% confidence interval of this difference: From 53.79 to 210.21 
 
 Intermediate values used in calculations: 
-  t = 3.7345 
-  df = 22 
-  standard error of difference = 35.346
+  t = 3.5206 
+  df = 20 
+  standard error of difference = 37.494 
 
 Review your data: 
   Group	  TT  	  ISF  
 Mean	459.00	327.00
 SD	96.00	76.00
-SEM	27.71	21.94
-N	12    	12    
+SEM	27.71	24.03
+N	12    	10  
