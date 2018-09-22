@@ -11,9 +11,9 @@ https://www.ncbi.nlm.nih.gov/pubmed/29627930
 Eles optaram por fazer uma análise de grupos independentes.
 Eles poderiam ter feito uma análise pareada neste caso? Justifique.
 
-2)
-a)
-b)
+2) Com os resultados apresentados para o teste de carga até a falha, é possível aplicar o teste t e obter p = 0.0022, confirmando o resultado do artigo.
+a) É razoável supor que o teste de carga até a falha atende à premissa de independência do teste t?
+b) É razoável supor que o teste de carga até a falha atende à premissa de variabilidade do teste?
 
 3)
 
