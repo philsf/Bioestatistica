@@ -4,12 +4,13 @@ Desempenho de duas técnicas de transferência de tendão FDL
 
 https://www.ncbi.nlm.nih.gov/pubmed/29627930
 
+O número inicial de cadáveres foi igual em cada grupo, e os autores fizeram uma análise de poder antes do estudo.
+Eles optaram por fazer uma análise de grupos independentes, tanto para os testes de ciclos, quanto para o teste de carga até a falha.
 
 == Perguntas ==
 
-1) O número inicial de cadáveres foi igual em cada grupo, e os autores fizeram uma análise de poder antes do estudo.
-Eles optaram por fazer uma análise de grupos independentes, tanto para os testes de ciclos, quanto para o teste de carga até a falha.
-a) Eles poderiam ter feito uma análise pareada no teste de ciclos? Justifique.
+1) Suponha que os autores tivessem ignorado o fator número de ciclos, e comparassem apenas o "displacement" em milímetros e o método de transferência de tendão FDL.
+a) Eles poderiam ter feito uma análise pareada no teste de ciclos? Em caso negativo, o que poderia ser modificado na metodologia para o pareamento?
 b) Eles poderiam ter feito uma análise pareada no teste de carga até a falha? Justifique.
 
 2) Com os resultados apresentados para o teste de carga até a falha, é possível aplicar o teste t e obter p = 0.0022, confirmando o resultado do artigo.
