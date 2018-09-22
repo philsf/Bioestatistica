@@ -3,3 +3,8 @@ Artigo
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1940935/
 
 1000 participantes foram recrutados, resultando em N = 818 (após critérios de exclusão).
+
+407 tomaram 4g de vitamina C, e 411 tomaram placebo.
+
+Dos participantes que tomaram vitamina C, 105 permaneceram livres de sintomas respiratórios.
+Dos participantes do grupo placebo, 76 permaneceram livres de sintomas.
