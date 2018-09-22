@@ -1,8 +1,21 @@
+Desempenho de duas técnicas de transferência de tendão FDL
 
-Artigo
+== Artigo ==
 
 https://www.ncbi.nlm.nih.gov/pubmed/29627930
 
+
+== Perguntas ==
+
+1) O número de cadáveres foi igual em cada grupo, e os autores fizeram uma análise de poder antes do estudo.
+Eles optaram por fazer uma análise de grupos independentes.
+Eles poderiam ter feito uma análise pareada neste caso? Justifique.
+
+2)
+a)
+b)
+
+3)
 
 == não postar no GC ==
 Resultados do graphpad
