@@ -8,3 +8,17 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1940935/
 
 Dos participantes que tomaram vitamina C, 105 permaneceram livres de sintomas respiratórios.
 Dos participantes do grupo placebo, 76 permaneceram livres de sintomas.
+
+== Perguntas ==
+
+1) Você tem informações suficientes para construir uma tabela de contingência?
+Em caso afirmativo, crie-a.
+Em caso negativo, o que falta?
+
+2) Os pesquisadores usaram o teste Qui-quadrado com correção de Yates, obtendo p = 0.01497.
+a) O que significa este p-valor, no contexto do estudo?
+b) Escreva uma conclusão com base neste resultado.
+
+3) Usando o teste exato de Fisher, obtemos p = 0.01444.
+a) Este teste pode ser aplicado neste problema? Justifique
+b) Como este resultado mudaria a conclusão que você escreveu na pergunta 2?
