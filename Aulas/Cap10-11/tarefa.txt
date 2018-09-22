@@ -2,9 +2,15 @@
 
 Considere os dois estudos abaixo:
 
-Estudo 1 - Um método padrão para identificação de bactérias em hemoculturas vem sendo utilizado há muitos anos e seu tempo médio de execução (desde a etapa de preparo das amostras até a identificação do gênero e espécie) é de 40,5 horas. Um microbiologista propôs uma nova técnica que ele afirma ter menor tempo de execução que o método padrão. A nova técnica foi aplicada em uma amostra de 18 hemoculturas e para cada uma mediu-se o tempo de execução. A média amostral foi 39,42 horas e o desvio padrão amostral foi 1,96 horas.
+Estudo 1 - Um método padrão para identificação de bactérias em hemoculturas vem sendo utilizado há muitos anos.
+O tempo médio de execução deste método (desde a etapa de preparo das amostras até a identificação do gênero e espécie) é de 40,5 horas.
+Um microbiologista propôs uma nova técnica que ele afirma ter menor tempo de execução que o método padrão.
+A nova técnica foi aplicada em uma amostra de 18 hemoculturas e para cada uma mediu-se o tempo de execução.
+A média amostral foi 39,42 horas e o desvio padrão amostral foi 1,96 horas.
 
-Estudo 2 - Estudos sobre mortalidade de homens com idade superior a 65 anos de uma cidade mostram que 4% deles morrem dentro de um ano. Num grupo de 1000 indivíduos selecionados dessa população, 60 morreram no período de um ano. Suspeita-se de que houve um aumento da mortalidade anual nessa população.
+Estudo 2 - Estudos sobre mortalidade de homens com idade superior a 65 anos de uma cidade mostram que 4% deles morrem dentro de um ano.
+Num grupo de 1000 indivíduos selecionados dessa população, 60 morreram no período de um ano.
+Suspeita-se de que houve um aumento da mortalidade anual nessa população.
 
 == Perguntas ==
 
