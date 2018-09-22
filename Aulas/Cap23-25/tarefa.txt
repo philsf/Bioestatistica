@@ -2,3 +2,29 @@
 Artigo
 
 https://www.ncbi.nlm.nih.gov/pubmed/29627930
+
+
+== não postar no GC ==
+Resultados do graphpad
+
+- Teste dos ciclos
+
+P value and statistical significance: 
+  The two-tailed P value equals 0.8585 
+  By conventional criteria, this difference is considered to be not statistically significant. 
+
+Confidence interval: 
+  The mean of TT minus ISF equals 0.100 
+  95% confidence interval of this difference: From -1.050 to 1.250 
+
+Intermediate values used in calculations: 
+  t = 0.1803 
+  df = 22 
+  standard error of difference = 0.555
+
+Review your data: 
+  Group	  TT  	  ISF  
+Mean	1.900	1.800
+SD	1.200	1.500
+SEM	0.346	0.433
+N	12     	12     
