@@ -10,9 +10,8 @@ Eles optaram por fazer uma análise de grupos independentes, tanto para os teste
 == Perguntas ==
 
 1) Identifique e classifique as variáveis envolvidas:
-a) No teste de ciclos?
-b) No teste de carga até a falha?
-c) Por que os pesquisadores não podem usar o teste t no teste de ciclos?
+a) No teste de ciclos? No teste de carga até a falha?
+b) Por que os pesquisadores podem usar o teste t no teste de carga até a falha, mas não podem no teste de ciclos?
 
 2) Com os resultados apresentados para o teste de carga até a falha, é possível aplicar o teste t e obter p = 0.0022, confirmando o resultado do artigo.
 a) É razoável supor que o teste de carga até a falha atende à premissa de independência do teste t?
