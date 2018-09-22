@@ -11,7 +11,7 @@ Uma superdose de vitamina C ajuda a previnir resfriados?
 
 Para testar esta hipótese, os pesquisadores realizaram um estudo clínico duplo-cego.
 
-1000 participantes foram recrutados, resultando em N = 818 (após critérios de exclusão).
+1000 participantes foram recrutados, com N final de 818, após aplicação dos critérios de exclusão.
 407 tomaram 4g de vitamina C, e 411 tomaram placebo.
 
 Dos participantes que tomaram vitamina C, 105 permaneceram livres de sintomas respiratórios.
