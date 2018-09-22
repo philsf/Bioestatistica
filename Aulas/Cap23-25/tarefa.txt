@@ -9,8 +9,10 @@ Eles optaram por fazer uma análise de grupos independentes, tanto para os teste
 
 == Perguntas ==
 
-1) Suponha que os autores tivessem ignorado o fator número de ciclos, e comparassem apenas o "displacement" em milímetros e o método de transferência de tendão FDL.
-a) Eles poderiam ter feito uma análise pareada no teste de ciclos? Em caso negativo, o que poderia ser modificado na metodologia para o pareamento?
+1) Identifique e classifique as variáveis envolvidas:
+a) No teste de ciclos?
+b) No teste de carga até a falha?
+c) Por que os pesquisadores não podem usar o teste t no teste de ciclos?
 
 2) Com os resultados apresentados para o teste de carga até a falha, é possível aplicar o teste t e obter p = 0.0022, confirmando o resultado do artigo.
 a) É razoável supor que o teste de carga até a falha atende à premissa de independência do teste t?
