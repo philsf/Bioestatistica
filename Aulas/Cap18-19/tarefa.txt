@@ -7,3 +7,5 @@ https://www.ncbi.nlm.nih.gov/pubmed/30179212
 Vamos nos ater às figuras 1, 2, 3 e 4, e os resultados relacionados.
 
 == Perguntas ==
+
+1) Visualmente, há evidências de a dispersão dos pontos em torno da reta seja aleatória? Comente em sua resposta sobre a premissa da normalidade dos resíduos.
