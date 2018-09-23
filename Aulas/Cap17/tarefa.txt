@@ -1,6 +1,8 @@
-Artigo
+== Artigo ==
 
 https://www.ncbi.nlm.nih.gov/pubmed/30179212
+
+== Contexto ==
 
 Vamos nos ater aos resultados da seção entitulada "Correlation analyses of 24hndb and inflammatory cytokines(CRP, TNF-α, and IL-6) with BMD"
 
@@ -12,6 +14,7 @@ O autor reporta correlações negativas sifnificativas entre o BMD e
 - IL-6 (r=-0.793, p<0.001)
 
 Ele apresenta argumentos
+== Perguntas ==
 
 Com base no cap 17 e na discussão do artigo reflita:
 
