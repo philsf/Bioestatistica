@@ -44,7 +44,7 @@
 
 
 \title%[] % (optional, use only with long paper titles)
-{Métodos não-paramétricos}
+{Métodos não paramétricos}
 
 \subtitle
 {Ou: o que fazer caso seus dados não sejam normais?} % (optional)
@@ -187,7 +187,7 @@
   \centering
   \includegraphics[width=.7\textwidth]{Cap37-38/lognormal1-h}
 
-  Dados não-normais
+  Dados não normais
 \end{frame}
 
 \begin{frame}{Visualização - Histograma}
@@ -201,7 +201,7 @@
   \centering
   \includegraphics[width=.7\textwidth]{Cap37-38/lognormal2-h}
 
-  Dados não-normais
+  Dados não normais
 \end{frame}
 
 \begin{frame}{Visualização - Histograma}
@@ -276,7 +276,7 @@
 
 \begin{frame}{Transformações}
   \begin{itemize}
-  \item Algumas vezes, podemos aplicar uma transformação nos dados, para que eles se adequem às premissas requeridas
+  \item Algumas vezes, podemos aplicar uma transformação nos dados, para que eles se aproximem das premissas requeridas
   \item Transformações comuns incluem:
     \begin{itemize}
     \item logaritmo
@@ -312,7 +312,7 @@ Dados normais x dados transformados (log)
 Dados normais (p-valor Shapiro-Wilk: 1.657e-09) x dados log-transformados (p-valor Shapiro-Wilk: 0.05032)
 \end{frame}
 
-\section{Métodos não-paramétricos}
+\section{Métodos não paramétricos}
 
 \subsection[1 amostra]{Teste para 1 amostra}
 
@@ -320,7 +320,7 @@ Dados normais (p-valor Shapiro-Wilk: 1.657e-09) x dados log-transformados (p-val
   \begin{itemize}
   \item Desvios da normalidade severos impactam os testes paramétricos
   \item Nesses casos, deve-se transformar os dados, se possível
-  \item Caso não seja, deve-se usar um teste não-paramétrico
+  \item Caso não seja, deve-se usar um teste não paramétrico
   \end{itemize}
   \begin{block}{Teste para uma amostra}
     Ao invés do teste t, usar o teste de Wilcoxon (Capítulo 25)
@@ -352,11 +352,11 @@ Dados normais (p-valor Shapiro-Wilk: 1.657e-09) x dados log-transformados (p-val
 \begin{frame}{Testes para 2 amostras}
   \begin{block}{Dados normais}
     \begin{itemize}
-    \item amostras independentes $\Rightarrow$ t-teste não-pareado
+    \item amostras independentes $\Rightarrow$ t-teste não pareado
     \item amostras pareadas $\Rightarrow$ t-teste pareado
     \end{itemize}
   \end{block}
-  \begin{block}{Dados não-normais}
+  \begin{block}{Dados não normais}
     \begin{itemize}
     \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} (Capítulo 24)%\footnote{Também conhecido como Wilcoxon (rank sum test)}
     \item amostras pareadas $\Rightarrow$ Wilcoxon (Capítulo 25)
@@ -404,7 +404,7 @@ P: Estas amostras são significativamente diferentes?
     \item<1-> \alert<3>{normalmente distribuídas}, e
     \item<1-> independentes,
     \end{itemize}
-poderíamos fazer um teste t não-pareado.
+poderíamos fazer um teste t não pareado.
 
   \item<2-> Resultado: p-valor = \alert{0.259}
   \begin{exampleblock}{Pergunta}
@@ -544,12 +544,12 @@ P: Estas amostras são significativamente diferentes?
   % \begin{block}{}
   %     \begin{tabular}{||l||l||}
   %   \hline
-  %   Paramétrico & Não-paramétrico\\
+  %   Paramétrico & não paramétrico\\
   %   \hline
   %   \hline
   %   t-teste pareado & Wilcoxon\\
   %   \hline
-  %   t-teste não-pareado & Mann-Whitney\\
+  %   t-teste não pareado & Mann-Whitney\\
   %   \hline
   %   ANOVA 1 fator & Kruskal-Wallis\\
   %   \hline
