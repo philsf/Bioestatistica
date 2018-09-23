@@ -1,1 +1,3 @@
 Ideia: Apresentar histogramas e formular perguntas sobre usar método paramétrico ou não paramétrico.
+
+Criar um exemplo com dados simulados. Gerar um PDF.
