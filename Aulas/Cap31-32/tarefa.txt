@@ -8,4 +8,6 @@ Vamos nos ater à tabela V, e aos resultados relacionados.
 
 == Perguntas ==
 
-1) Cada uma das variáveis enumeradas na coluna Factor foi interpretada como variável dependente ou independente?
+1) Observe as variáveis enumeradas na coluna "Factor"
+a) Cada uma delas foi interpretada como variável dependente ou independente?
+b) Qual é a outra variável? Em outras palavras, se você respondeu independente acima, qual é a dependente (e vice versa)?
