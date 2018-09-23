@@ -1,10 +1,6 @@
-Ideia: pegadinhas sobre causalidade
-
 Artigo
 
 https://www.ncbi.nlm.nih.gov/pubmed/30179212
-
-Interpretar as 4 possibilidades do frame de causalidade
 
 Vamos nos ater aos resultados da seção entitulada "Correlation analyses of 24hndb and inflammatory cytokines(CRP, TNF-α, and IL-6) with BMD"
 
