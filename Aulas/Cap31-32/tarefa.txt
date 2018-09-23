@@ -14,4 +14,4 @@ b) Qual é a outra variável? Em outras palavras, se você respondeu independent
 
 2) O autor criou um modelo logístico com vários preditores ou vários modelos logísticos com um preditor? Justifique.
 
-3) Qual das variáveis está mais fortemente associada com o BMD?
+3) Qual das variáveis está mais fortemente associada com o BMD? Qual é a evidência para embasar sua resposta?
