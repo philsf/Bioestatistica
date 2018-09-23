@@ -4,7 +4,10 @@ https://www.ncbi.nlm.nih.gov/pubmed/30179212
 
 == Contexto ==
 
-Vamos nos ater aos resultados da seção entitulada "Correlation analyses of 24hndb and inflammatory cytokines(CRP, TNF-α, and IL-6) with BMD"
+Vamos nos ater aos resultados das análises de correlação.
+Eles se encontram na seção entitulada "Correlation analyses of 24hndb and inflammatory cytokines(CRP, TNF-α, and IL-6) with BMD".
+As figuras 1 a 4 também podem ajudar na interpretação.
+A discussão do artigo será importante.
 
 O autor reporta correlações negativas sifnificativas entre o BMD e
 
