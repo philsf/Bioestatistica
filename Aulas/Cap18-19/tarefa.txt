@@ -11,6 +11,7 @@ Vamos nos ater às figuras 1, 2, 3 e 4, e os resultados relacionados.
 1) Interprete visualmente as 4 figuras.
 a) Há evidências de a dispersão dos pontos em torno da reta seja aleatória?
 b) Qual é a relação entre sua resposta anterior e a premissa da normalidade dos resíduos?
+c) Qual das 4 figuras parece ter o pior caso, neste aspecto, e por que?
 
 2) Observe a figura 2 atentamente.
 a) Qual é a variável dependente (resposta) e qual é a variável independente (preditor) do modelo de regressão?
