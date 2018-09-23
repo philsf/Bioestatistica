@@ -10,4 +10,6 @@ Vamos nos ater às figuras 1, 2, 3 e 4, e os resultados relacionados.
 
 1) Visualmente, há evidências de a dispersão dos pontos em torno da reta seja aleatória? Comente em sua resposta sobre a premissa da normalidade dos resíduos.
 
-2) Por inspeção visual da figura 2, qual é aproximadamente o valor predito de BMD para CRP = 0.5?
+2) Observe a figura 2 atentamente.
+a) Qual é a variável dependente (resposta) e qual é a variável independente (preditor) do modelo de regressão?
+b) Por inspeção visual, qual é aproximadamente o valor predito pelo modelo para CRP = 0.5?
