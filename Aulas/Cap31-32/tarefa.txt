@@ -12,6 +12,6 @@ Vamos nos ater à tabela V ("Logistic regression analysis of risk factor predict
 a) Cada uma delas foi interpretada como variável dependente ou independente no modelo logístico?
 b) Qual é a outra variável? Em outras palavras, se você respondeu independente acima, qual é a dependente (e vice versa)?
 
-2) O autor criou um modelo logístico com vários preditores ou vários modelos logísticos com um preditor? Justifique.
+2) O autor criou um modelo logístico com vários preditores ou vários modelos logísticos com um preditor? Em que você se baseou para concluir isto?
 
 3) Qual das variáveis está mais fortemente associada com o BMD? Qual é a evidência para embasar sua resposta?
