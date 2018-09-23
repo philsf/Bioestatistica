@@ -1,5 +1,5 @@
 ## normal x lognormal ####
-nl <- read.table("Aulas/Nao_Param/normal-lognormal.dat")
+nl <- read.table("Aulas/Cap37-38/normal-lognormal.dat")
 attach(nl)
 
 par(mfrow = c(1,2))
@@ -26,7 +26,7 @@ detach(nl)
 rm(nl)
 
 ## 2 amostras ####
-twosamples <- read.table("Aulas/Nao_Param/2samples.dat")
+twosamples <- read.table("Aulas/Cap37-38/2samples.dat")
 attach(twosamples)
 
 par(mfrow = c(1,1))
