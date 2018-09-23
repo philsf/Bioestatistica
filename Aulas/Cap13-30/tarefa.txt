@@ -1,0 +1,4 @@
+Ideia (ANOVA):
+
+1way - problema com mensuração de 2 tratamentos x controle
+2way - controlar por pré e pós operatório
