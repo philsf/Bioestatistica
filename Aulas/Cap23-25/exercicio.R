@@ -2,12 +2,12 @@ ob <- read.csv("Aulas/Cap23-25/obesidade-teste-t.csv")
 
 ob2 <- tidyr::gather(ob, Grupo, Perda)
 
-png("Aulas/Cap23-25/2-amostras-independentes.png")
+png("Aulas/Cap23-25/obesidade-independentes.png")
 boxplot(Perda ~ Grupo, data = ob2, ylab = "Perda de peso (lbs)", col = "gray")
 abline(h = 0, lty = 2)
 dev.off()
 
-png("Aulas/Cap23-25/2-amostras-pareadas.png")
+png("Aulas/Cap23-25/obesidade-pareadas.png")
 with(ob,
      plot(Grupo1, Grupo2,
           xlab = "Perda de peso (lbs) Grupo 1",
