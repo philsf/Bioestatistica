@@ -1,0 +1,18 @@
+== Artigo ==
+
+https://www.ncbi.nlm.nih.gov/pubmed/30179212
+
+== Contexto ==
+
+Vamos nos ater às figuras 1, 2, 3 e 4, e os resultados relacionados.
+
+== Perguntas ==
+
+1) Interprete visualmente as 4 figuras.
+a) Há evidências de a dispersão dos pontos em torno da reta seja aleatória?
+b) Qual é a relação entre sua resposta anterior e a premissa da normalidade dos resíduos da regressão linear simples?
+c) Neste contexto, qual das 4 figuras parece ser o pior caso, e qual parece ser o melhor caso? Por que?
+
+2) Observe a figura 2 atentamente.
+a) Qual é a variável dependente (resposta) e qual é a variável independente (preditor) do modelo de regressão?
+b) Por inspeção visual, qual é aproximadamente o valor predito pelo modelo para CRP = 0.5?
