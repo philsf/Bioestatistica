@@ -1,0 +1,33 @@
+== Contexto ==
+
+O impacto econômico das faltas ao trabalho por resfriados no Canadá, conforme reportado em 1972:
+
+"(...) the disability from acute (mainly respiratory) illness in Canada amounts to approximately 1.5 days per person each year.
+In terms of total personal income (approximately 66 billion dollars in 1970) this is equivalent to a loss of approximately 270 million dollars annually (...)."
+
+== Artigo ==
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1940935/
+
+Uma superdose de vitamina C ajuda a prevenir resfriados?
+Para testar esta hipótese, os pesquisadores realizaram um estudo clínico duplo-cego.
+
+1000 participantes foram recrutados, com N final de 818, após aplicação dos critérios de exclusão.
+407 tomaram 4g de vitamina C, e 411 tomaram placebo.
+
+Dos participantes que tomaram vitamina C, 105 permaneceram livres de sintomas respiratórios.
+Dos participantes do grupo placebo, 76 permaneceram livres de sintomas.
+
+== Perguntas ==
+
+1) Você tem informações suficientes para construir uma tabela de contingência?
+Em caso afirmativo, crie-a.
+Em caso negativo, o que falta?
+
+2) Os pesquisadores usaram o teste Qui-quadrado com correção de Yates, obtendo p = 0.01497.
+a) O que significa este p-valor, no contexto do estudo?
+b) Escreva uma conclusão com base neste resultado.
+
+3) Usando o teste exato de Fisher, obtemos p = 0.01444.
+a) Este teste pode ser aplicado neste problema? Justifique
+b) Como este resultado mudaria a conclusão que você escreveu na pergunta 2?

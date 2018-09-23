@@ -1,13 +1,13 @@
 ## normal x lognormal ####
-nl <- read.table("Aulas/Nao_Param/normal-lognormal.dat")
+nl <- read.table("Aulas/Cap37-38/normal-lognormal.dat")
 attach(nl)
 
 par(mfrow = c(1,2))
 hist(x1, main = "")
 hist(x2, main = "")
 par(mfrow = c(1,1))
-boxplot(x1)
-boxplot(x2)
+boxplot(x1, horizontal = TRUE)
+boxplot(x2, horizontal = TRUE)
 par(mfrow = c(1,2))
 qqnorm(x1); qqline(x1); qqnorm(x2); qqline(x2)
 shapiro.test(x1)
@@ -26,7 +26,7 @@ detach(nl)
 rm(nl)
 
 ## 2 amostras ####
-twosamples <- read.table("Aulas/Nao_Param/2samples.dat")
+twosamples <- read.table("Aulas/Cap37-38/2samples.dat")
 attach(twosamples)
 
 par(mfrow = c(1,1))

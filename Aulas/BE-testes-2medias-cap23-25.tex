@@ -152,32 +152,54 @@
 %   \end{block}
 % \end{frame}
 
+\section{Discussão da aula passada}
+
+\subsection{Discussão da aula passada}
+
+\begin{frame}{Discussão da aula passada}
+  \begin{block}{}
+    Discussão da leitura obrigatória da aula passada
+  \end{block}
+\end{frame}
+
 \section{Revisão}
+
+\subsection{Revisão}
 
 \begin{frame}{Revisão: hipótese nula}
   \begin{block}{Conceito da hipótese nula}
-    {\bf A hipótese de que não há efeito no tratamento.}
+    \begin{center}
+      {\bf A hipótese de que não há efeito no tratamento.}
+    \end{center}
 
     \bigskip
-    O objetivo do estudo é providenciar evidências suficientes para rejeitar esta hipótese, provando assim a eficácia do tratamento.
+    \small
+    O objetivo do estudo é providenciar evidências suficientes para rejeitar esta hipótese, ``provando'' assim a eficácia do tratamento.
   \end{block}
   \begin{exampleblock}{Exemplo}
+    \small
     {\bf Hipótese do estudo:} um certo tratamento de fisioterapia diminui o tempo de recuperação após uma artroplastia total do joelho.
 
     \bigskip
-    {\bf Hipótese nula: não há alteração no tempo de recuperação.}
+    {\bf Hipótese nula:} não há alteração no tempo de recuperação.
   \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Revisão: p-valor}
   \begin{block}{Conceito do p-valor}
-    Assumindo que não há efeito real (hipótese nula), e você observou uma aparente diferença... qual é a probabilidade de você ter observado essa diferença ao acaso?
+    Assumindo que não há efeito real (hipótese nula), e você observou uma aparente diferença...
+
+    \bigskip
+    \begin{block}{}
+      ... qual é a probabilidade de você ter observado essa diferença ao acaso?
+    \end{block}
   \end{block}
 \end{frame}
 
 \begin{frame}{Revisão: p-valor}
 \begin{block}{Interpretação do p-valor}
   \begin{itemize}
+    \small
   \item Um valor pequeno para o p-valor (tipicamente $p \le 0.05$)
     representa forte evidência para rejeitar a hipótese nula, então
     deve-se rejeitá-la.
@@ -196,10 +218,12 @@ Fonte: Rumsey, D. (Statistics for Dummies, 2nd ed.)
 \section{Testes paramétricos para médias}
 
 \begin{frame}{Testes estatísticos}
-Testes estatísticos sempre seguem o mesmo roteiro
+  Testes estatísticos sempre seguem o mesmo roteiro
   \begin{enumerate}
+  \small
+  \item A região crítica é escolhida (bilateral ou unilateral)?
   \item As estatísticas sumárias são calculadas a partir da amostra
-  \item Estas são usadas para calcular uma {\bf estatística de teste}
+  \item Estas são usadas para calcular uma estatística de teste
   \item O valor da estatística de teste é o critério de decisão:
     \begin{itemize}
     \item Pode ser comparado com um valor crítico, da distribuição de probabilidades; OU
@@ -212,7 +236,7 @@ Testes estatísticos sempre seguem o mesmo roteiro
   \begin{itemize}
   \item Existe uma infinidade de testes estatísticos (cada qual com sua hipótese nula)
   \item São divididos em dois grandes grupos: paramétricos e não paramétricos
-  \item {\bf Os testes paramétricos assumem que a amostra vem de uma \alert{distribuição Normal}}
+  \item Os testes paramétricos assumem que a amostra vem de uma \alert{distribuição Normal}
   \item Os testes não-paramétricos não presumem nenhuma forma para a distribuição dos dados
   \end{itemize}
   \begin{block}{Atenção}
@@ -234,23 +258,92 @@ Testes estatísticos sempre seguem o mesmo roteiro
   \begin{itemize}
   \item Os dois grupos foram coletados independentemente (inter-grupo)
   \item Todas as observações em cada grupo são independentes entre si (intra-grupo)
-  \item {\bf Todos os dados foram amostrados de populações Normalmente distribuídas (aprox.)}
+  \item Todos os dados foram amostrados de populações Normalmente distribuídas (aprox.)
   \item O DP das duas populações são idênticos \footnote{uma violação desta premissa não é grave - buscar aproximação de Welch.}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{}
+  \begin{block}{O teste t de Student}
+      Assumindo duas populações Normais com DPs semelhantes, o teste t pode detectar diferença nas médias das populações.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Exemplo 1}
   \begin{exampleblock}{Exemplo 23.2}
+    \small
     Motulsky, {\em et al.} (1983) investigaram se pessoas com hipertensão tem alteração nos níveis de receptores adrenérgicos $\alpha_2$ em suas plaquetas.
-    Selecionaram 18 homens hipertensos, e 17 controles da mesma faixa etária.
 
-    As plaquetas dos hipertensos tiveram 257 $\pm$ 14 receptores por plaqueta (média $\pm$ SEM).
+    \bigskip
+    {\footnotesize
+      Selecionaram 18 homens hipertensos, e 17 controles da mesma faixa etária.
+      Os resultados estão descritos como média $\pm$ SEM.
+    }
 
-    As plaquetas dos controles tiveram 263 $\pm$ 21 receptores por plaqueta (média $\pm$ SEM).
+    \begin{exampleblock}{}
+      \footnotesize
+      As plaquetas dos hipertensos tiveram 257 $\pm$ 14 receptores por plaqueta.
 
+      As plaquetas dos controles tiveram 263 $\pm$ 21 receptores por plaqueta.
+    \end{exampleblock}
     \bigskip
     Os autores concluíram que não havia diferença significativa entre as médias dos grupos.
   \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{exampleblock}{Teste t, amostras independentes}
+    \footnotesize
+\begin{verbatim}
+P value and statistical significance: 
+  The two-tailed P value equals 0.8116 
+  By conventional criteria, this difference
+ is considered to be not statistically significant. 
+
+Confidence interval: 
+  The mean of Controle minus Hipertensos equals 6.00 
+  95% confidence interval of this difference:
+ From -44.81 to 56.81 
+
+Intermediate values used in calculations: 
+  t = 0.2403 
+  df = 33 
+  standard error of difference = 24.973 
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+% Review your data: 
+%   Group	  Controle  	  Hipertensos  
+% Mean	263.00	257.00
+% SD	86.59	59.40
+% SEM	21.00	14.00
+% N	17    	18    
+
+\begin{frame}{Quais são as variáveis?}
+  \begin{block}{Interpretação típica}
+    \begin{itemize}
+    \item Grupo Hipertensos: contínua (mensuração)
+    \item Grupo Controle: contínua (mensuração)
+    \end{itemize}
+  \end{block}
+  \vfill
+  \begin{block}{}<2>
+    Ou, podemos pensar em termos de modelagem
+  \end{block}
+\end{frame}
+
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: níveis de receptores (contínua)
+  \item Independente: grupo (categórica binária)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{níveis de receptores} \sim \text{grupo}
+    \end{displaymath}
+  \end{block}
 \end{frame}
 
 \subsection{Dois grupos pareados}
@@ -284,24 +377,76 @@ Quando faz sentido parear indivíduos de dois grupos?
   \item Os pares amostrados aleatoriamente de uma mesma população (ou representativa)
   \item Os participantes são pareados - o primeiro do grupo A com o primeiro do grupo B, etc.
   \item Cada par é independente de todos os outros
-  \item {\bf A distribuição das diferenças, na população, é Normalmente distribuída (aprox.)}
+  \item A distribuição das diferenças, na população, é Normalmente distribuída (aprox.)
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Exemplo 2}
+  \begin{exampleblock}{Exercício 25.1}
+    \small
+    Os pesquisadores compararam o número de receptores beta-adrenérgicos nos linfócitos de um grupo de participantes, antes e após a administração de uma droga.
+
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{exampleblock}{Teste t, amostras pareadas}
+    \footnotesize
+\begin{verbatim}
+	Paired t-test
+
+data:  Receptors by Group
+t = 6.9636, df = 5, p-value = 0.000939
+alternative hypothesis: true difference
+ in means is not equal to 0
+95 percent confidence interval:
+ 145.7279 316.2721
+sample estimates:
+mean of the differences 
+                    231
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: número de receptores (contínua)
+  \item Independente: grupo (categórica binária)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{número de receptores} \sim \text{grupo}
+    \end{displaymath}
+  \end{block}
 \end{frame}
 
 \subsection{Exercício}
 
 \begin{frame}{Exercício}
-  \begin{exampleblock}{Exercício}
+  \begin{exampleblock}{}
+    \small
     Queremos avaliar a eficiência de uma nova dieta reduzida em
-    gordura no tratamento de obesidade. Selecionamos aleatoriamente
-    100 pessoas obesas para o grupo 1, que receberão a dieta com pouca
-    gordura. Selecionamos outras 100 pessoas obesas para o grupo 2 que
-    receberão a mesma quantidade de comida, com proporção normal de
-    gordura. Após 4 meses, a perda de peso média no grupo 1 foi de
-    9.33 lbs (s=4.72) e no grupo 2 foi de 7.58 lbs (s=3.90). Você acha
-    que essa nova dieta é eficaz na perda de peso?
+    gordura no tratamento de obesidade.
+
+    \bigskip
+    {\footnotesize
+      Selecionamos aleatoriamente 100 pessoas obesas para o grupo 1, que receberão a dieta com pouca gordura.
+      Selecionamos outras 100 pessoas obesas para o grupo 2 que receberão a mesma quantidade de comida, com proporção normal de gordura.
+      O estudo durou 4 meses.
+    }
+
+    \bigskip
+    \begin{exampleblock}{}
+      \footnotesize
+      A perda de peso média no grupo 1 foi de 9.33 lbs
+      (s=4.72) e no grupo 2 foi de 7.58 lbs (s=3.90).
+    \end{exampleblock}
   \end{exampleblock}
-  Fonte: Khan Academy
+  \begin{block}{}
+    Essa nova dieta é eficaz na perda de peso?
+  \end{block}
+  \hfill {\footnotesize Fonte: Khan Academy}
 \end{frame}
 
 \begin{frame}[label=perguntas]{Perguntas}
@@ -317,75 +462,164 @@ Quando faz sentido parear indivíduos de dois grupos?
 \end{frame}
 
 \begin{frame}{Visualização (independentes)}
-  \includegraphics[height=\textheight]{Cap23-25/2-amostras-independentes}
+  \begin{center}
+    \includegraphics[height=\textheight]{Cap23-25/obesidade-independentes}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Visualização (pareados)}
-    \includegraphics[height=\textheight]{Cap23-25/2-amostras-pareadas}
-  \end{frame}
+  \begin{center}
+    \includegraphics[height=\textheight]{Cap23-25/obesidade-pareadas}
+  \end{center}
+\end{frame}
 
 \againframe{perguntas}
 
-\begin{frame}[fragile]{Saída típica de um programa}
+\begin{frame}[fragile, label=t-indep]{Saída típica de um programa}
   \begin{block}{Teste t, amostras independentes}
+    \footnotesize
     \begin{verbatim}
 	Two Sample t-test
 
-data:  dados$Grupo1 and dados$Grupo2
+data:  Perda by Grupo
 t = 2.871, df = 198, p-value = 0.004537
-alternative hypothesis: true difference 
+alternative hypothesis: true difference
  in means is not equal to 0
 95 percent confidence interval:
  0.5506833 2.9667462
 sample estimates:
-mean of x mean of y 
- 9.334005  7.575291
-    \end{verbatim}
+mean in group Grupo1 mean in group Grupo2 
+            9.334005             7.575291 
+\end{verbatim}
   \end{block}
 \end{frame}
 
 \begin{frame}[fragile]{Saída típica de um programa}
   \begin{block}{Teste t, amostras pareadas}
+    \footnotesize
     \begin{verbatim}
 	Paired t-test
 
-data:  dados$Grupo1 and dados$Grupo2
+data:  Perda by Grupo
 t = 2.9545, df = 99, p-value = 0.003913
-alternative hypothesis: true difference 
+alternative hypothesis: true difference
  in means is not equal to 0
 95 percent confidence interval:
  0.5775744 2.9398551
 sample estimates:
 mean of the differences 
                1.758715
-    \end{verbatim}
+\end{verbatim}
   \end{block}
 \end{frame}
 
 \againframe{perguntas}
 
-\section{Resumo e encerramento}
+\begin{frame}{}
+  \begin{block}{Pergunta}
+    Todas as premissas do teste que você selecionou são satisfeitas?
+  \end{block}
+\end{frame}
+
+\begin{frame}{Distribuição (independentes)}
+  \begin{center}
+    \includegraphics[height=\textheight]{Cap23-25/obesidade-hist2}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Distribuição (pareados)}
+  \begin{center}
+    \includegraphics[height=\textheight]{Cap23-25/obesidade-hist1}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Caso de você tenha escolhido grupos independentes...}
+    Os dois grupos tem variabilidades semelhantes?
+  \end{block}
+\end{frame}
+
+\againframe{t-indep}
+
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{block}{Teste t, amostras independentes, com correção de Welch}
+    \footnotesize
+\begin{verbatim}
+	Welch Two Sample t-test
+
+data:  Perda by Grupo
+t = 2.871, df = 191.12, p-value = 0.004554
+alternative hypothesis: true difference
+ in means is not equal to 0
+95 percent confidence interval:
+ 0.550416 2.967014
+sample estimates:
+mean in group Grupo1 mean in group Grupo2 
+            9.334005             7.575291
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Quais são as variáveis?}
+  \begin{block}{}
+    Escreva a relação entre
+    \medskip
+    \begin{itemize}
+    \item a variável dependente
+    \item a variável independente
+    \end{itemize}
+  \end{block}
+  \bigskip
+  \begin{block}{P:}
+    Qual delas varia em função da outra?
+  \end{block}
+\end{frame}
+
+\subsection{Resumo}
 
 \begin{frame}{Resumo}
   \begin{itemize}
-  \item O teste t é um teste paramétrico (assume dados Normalmente distribuídos)
-  \item O teste t para dois grupos independentes assume independência inter- e intra-grupo
-  \item O teste t para dois grupos pareados assume independência entre os pares
-  % \item 
+    \small
+  \item Teste paramétrico (assume dados Normalmente distribuídos)
+  \item Para dois grupos independentes assume independência inter- e intra-grupo, e DPs semelhantes
+  \item Para dois grupos pareados assume independência entre os pares
+  \item Esta decisão \alert{não} deve ser tomada após a coleta dos dados.
+  \item Variáveis:
+    \begin{itemize}
+    \item Dependente: contínua
+    \item Independente: categórica binária (2 grupos)
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Leitura pós-aula e exercícios selecionados}
+\section{Aprofundamento}
+
+\subsection{Aprofundamento}
+
+\begin{frame}{Aprofundamento}
   \begin{block}{Leitura obrigatória}
     \begin{itemize}
-    \item Capítulo 23, pular as seções: Cálculo do teste t em uma tabela, Cálculo do poder.
-    \item Capítulo 25, pular as seções: Teste t de uma razão, Teste de Wilcoxon
+      \small
+    \item Capítulo 23, pular as seções:
+      \begin{itemize}
+        \scriptsize
+      \item Cálculo do teste t em uma tabela
+      \item Cálculo do poder.
+      \end{itemize}
+    \item Capítulo 25, pular as seções:
+      \begin{itemize}
+        \scriptsize
+      \item Teste t de uma razão
+      \item Teste de Wilcoxon
+      \end{itemize}
     \end{itemize}
   \end{block}
-  \begin{block}{Exercícios}
+  \begin{block}{Exercícios selecionados}
+    \footnotesize
     Não há exercícios.
   \end{block}
   \begin{block}{Leitura recomendada}
+    \footnotesize
     Capítulo 25: seção teste t de uma razão (para projetos experimentais)
   \end{block}
 \end{frame}

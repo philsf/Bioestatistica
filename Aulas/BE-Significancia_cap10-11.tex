@@ -42,6 +42,7 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
+\usepackage[normalem]{ulem}
 
 \title[Significância] % (optional, use only with long paper titles)
 {Significância Estatística}
@@ -154,9 +155,66 @@
 
 % \section{O p-valor}
 
+\section{Discussão da aula passada}
+
+\subsection{Discussão da aula passada}
+
+\begin{frame}{Discussão da aula passada}
+  \begin{block}{}
+    Discussão da leitura obrigatória da aula passada
+  \end{block}
+\end{frame}
+
 \section{Testes de Hipóteses}
 
 \subsection{Hipóteses}
+
+\begin{frame}{Introdução}
+  \begin{block}{{\small Livro texto - Parte III - Introduction to p values}}
+    \footnotesize
+
+    {\em ``I've put it off for nine chapters, but I can't delay any
+      longer.
+
+      {\bf \em It's time to confront P values.} (...)
+
+
+      \bigskip
+
+      If you've had any exposure to statistics before, you've probably
+      already heard about P values and statistical significance.
+
+      It's time to learn what these phrases really mean. (...)
+
+      \bigskip
+
+      These chapters explain P values generally, without explaining
+      any particular statistical tests in any detail''}
+  \end{block}
+  \hfill {\small Motulsky, 1995}
+
+  \hfill {\scriptsize (grifos e quebras meus)}
+\end{frame}
+
+\begin{frame}{Introdução}
+  \begin{block}{Abertura de ``A Divina Comédia''}
+    \small
+    {\em ``A meio do caminho, ou seja, da duração expectável de sua vida, Dante, consciente de se haver desviado do reto procedimento, encontra-se perdido numa alegórica 'Selva Perdida'.
+
+      \bigskip
+      Encontra aí a figura de Virgílio, o poeta latino que (...) vem se lhe oferecer como guia para o Inferno e o Purgatório onde, pelo exemplo dos pecadores e de suas penas, Dante poderá encontrar o caminho da sua salvação.''}
+  \end{block}
+\hfill {\small Dante Alighieri, 1320}
+\end{frame}
+
+\begin{frame}{}
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{Cap10-11/its-time}
+
+    \vfill
+    {\footnotesize \em Laaaaadies aaaaand gentlemen...}
+  \end{center}
+\end{frame}
 
 \begin{frame}{Hipóteses científicas}
   \begin{itemize}
@@ -172,75 +230,234 @@
   \end{block}
 \end{frame}
 
-\begin{frame}[label=exemplo1]{Exemplo 1}
-  \begin{exampleblock}{Exemplo}
+\begin{frame}{Exemplo 1}
+  \begin{exampleblock}{Exemplo 1}
+    \footnotesize
     Um neurologista está testando o efeito de uma droga no tempo de
-    resposta de um certo estímulo neurológico. Para isto, ele injeta
-    uma dose da droga em \alert{100} ratos, cria os estímulos
-    neurológicos e observa o tempo de resposta em cada animal. O
-    neurologista sabe que o tempo de resposta médio de ratos que não
-    receberam a droga é de \alert{1.2 segundos}. O tempo de resposta
-    médio dos ratos injetados foi de \alert{1.05 segundos}, com desvio
-    padrão amostral de \alert{0.5 segundos}. Você acha que a droga tem
-    efeito no tempo de resposta do estímulo?
+    resposta de um certo estímulo neurológico.
+    Para isto, ele injeta uma dose da droga em 100 ratos, cria
+    os estímulos neurológicos e observa o tempo de resposta em cada
+    animal.
+
+    \smallskip
+    O neurologista sabe que o tempo de resposta médio de ratos que não
+    receberam a droga é de 1.2 segundos.
+
+    \smallskip
+    O tempo de resposta médio dos ratos injetados foi de
+    1.05 segundos, com desvio padrão amostral de
+    0.5 segundos.
   \end{exampleblock}
-Fonte: Khan Academy
+  \begin{block}{}
+    Você acha que a droga tem efeito no tempo de resposta do estímulo?
+  \end{block}
+  \hfill {\scriptsize Fonte: Khan Academy}
 \end{frame}
 
-\begin{frame}{Pergunta}
-  \begin{block}{Pense...}
-    Como você formularia a hipótese do exemplo anterior?
+\begin{frame}[label=exemplo1]{Exemplo 1}
+  \begin{exampleblock}{Exemplo 1}
+    \footnotesize
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico.
+    Para isto, ele injeta uma dose da droga em \alert{100} ratos, cria
+    os estímulos neurológicos e observa o tempo de resposta em cada
+    animal.
 
-    \bigskip
-    Que possíveis conclusões você pode chegar com esse experimento?
+    \smallskip
+    O neurologista sabe que o tempo de resposta médio de ratos que não
+    receberam a droga é de \alert{1.2 segundos}.
+
+    \smallskip
+    O tempo de resposta médio dos ratos injetados foi de
+    \alert{1.05 segundos}, com desvio padrão amostral de
+    \alert{0.5 segundos}.
+  \end{exampleblock}
+  \begin{block}{}
+    {\bf Você acha que a droga tem efeito no tempo de resposta do estímulo?}
   \end{block}
+  \hfill {\scriptsize Fonte: Khan Academy}
+\end{frame}
 
-  Vamos resolvê-lo mais à frente.
+\begin{frame}{Exemplo 1}
+  \begin{exampleblock}{Exemplo 1}
+    \footnotesize
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico.
+    Para isto, ele injeta uma dose da droga em \alert{100} ratos, cria
+    os estímulos neurológicos e observa o tempo de resposta em cada
+    animal.
+
+    \smallskip
+    O neurologista sabe que o tempo de resposta médio de ratos que não
+    receberam a droga é de \alert{1.2 segundos}.
+
+    \smallskip
+    O tempo de resposta médio dos ratos injetados foi de
+    \alert{1.05 segundos}, com desvio padrão amostral de
+    \alert{0.5 segundos}.
+  \end{exampleblock}
+  \begin{block}{}
+    Você tem informações suficientes para construir um IC em torno de $\bar{x}$?
+  \end{block}
+  \hfill {\scriptsize Fonte: Khan Academy}
+\end{frame}
+
+\begin{frame}{Análise Inferencial}
+  \begin{exampleblock}{Exemplo 1}
+    \scriptsize
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico.
+
+    \smallskip
+    Tempo de resposta típico = \alert<2->{1.2 s}.
+
+    \smallskip
+    $n$ = \alert{100}
+
+    $\bar{x}$ = \alert{1.05 s}
+
+    $s$ = \alert{0.5 s}
+
+  \end{exampleblock}
+  \uncover<1->{\begin{exampleblock}{IC da média}
+      \small
+      IC = 0.9508 até 1.1492
+   \end{exampleblock}}
+ \uncover<2>{\begin{exampleblock}{IC da diferença entre $\bar{x}$ e 1.2}
+      \small
+     $\bar{d}$ = -0.1500, IC = -0.2492 até -0.0508
+   \end{exampleblock}}
+ % \hfill{\scriptsize calculado em \url{https://www.graphpad.com/quickcalcs/oneSampleT2/}}
+\end{frame}
+
+\begin{frame}{Teste de Significância}
+  \begin{exampleblock}{Exemplo 1}
+    \scriptsize
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico.
+
+    \smallskip
+    Tempo de resposta típico = \alert{1.2 s}.
+
+    \smallskip
+    $n$ = \alert{100}
+
+    $\bar{x}$ = \alert{1.05 s}
+
+    $s$ = \alert{0.5 s}
+
+  \end{exampleblock}
+  \begin{exampleblock}{Teste de significância entre $\bar{x}$ e 1.2}
+      \small
+     p = 0.0034
+   \end{exampleblock}
+
+   \begin{center}
+     \small
+     É hoje!
+   \end{center}
+ % \hfill{\scriptsize calculado em \url{https://www.graphpad.com/quickcalcs/oneSampleT2/}}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap10-11/xkcd-p_values}
+
+    \scriptsize
+    \vfill
+    \hfill Fonte: \url{https://xkcd.com/1478/}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Hipóteses estatísticas}
-  \begin{definition}
+  \begin{block}{Definição}
+    \small
     Em Estatística, uma \alert{hipótese} é uma afirmação sobre uma
     característica de uma população, tipicamente o valor de um
     parâmetro.
-  \end{definition}
-  \begin{definition}
-    Um \alert{teste de hipótese} (ou teste de significância) é um
+  \end{block}
+  \begin{block}{Definição}
+    \small
+    Um \alert{teste de hipóteses} (ou teste de significância) é um
     procedimento sistemático para testar uma afirmação sobre uma
     característica de uma população.
-  \end{definition}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Pergunta}
+  \begin{exampleblock}{Exemplo 1}
+    \scriptsize
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico.
+
+    \smallskip
+    Tempo de resposta típico = \alert{1.2 s}.
+
+    \smallskip
+    $n$ = \alert{100}
+
+    $\bar{x}$ = \alert{1.05 s}
+
+    $s$ = \alert{0.5 s}
+  \end{exampleblock}
+  \begin{block}{Pense...}
+    \uncover<1>{Que possíveis conclusões você pode chegar com esse experimento?}
+
+    \bigskip
+    \uncover<2>{Como você formularia a hipótese do exemplo anterior?}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Identificando hipóteses}
-  \begin{itemize}
-  \item Uma hipótese estatística deve ser testável frente a dados
-    obtidos de um experimento.
-  \end{itemize}
-  \begin{exampleblock}{Exemplo}
+  \begin{block}{}
+    \small
+    Uma hipótese estatística deve ser testável frente a dados obtidos de um experimento.
+  \end{block}
+  \begin{exampleblock}{Exemplo 1}
+    \footnotesize
+    O tempo de resposta dos ratos que receberam a droga é menor que 1.2s.
+  \end{exampleblock}
+  \begin{exampleblock}{{\footnotesize Exemplo}}
+    \scriptsize
     Um jornalista alega que a maior parte dos motoristas atravessa o
     sinal vermelho.
   \end{exampleblock}
-  \begin{exampleblock}{Exemplo}
+  \begin{exampleblock}{{\footnotesize Exemplo}}
+    \scriptsize
     Pesquisadores afirmam que a temperatura corporal média de adultos
     sadios não ultrapassa 37$^o$C.
   \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Identificando hipóteses}
+  \begin{block}{1 teste = 2 hipóteses}
+    Um teste de hipóteses envolve a formulação de uma {\em hipótese nula} e uma {\em hipótese alternativa}.
+  \end{block}
   \begin{itemize}
-  \item Para efetuar um teste de hipóteses é necessária a formulação  de uma \alert{hipótese nula} e uma \alert{hipótese alternativa}.
+    \small
+    \bigskip
   \item A hipótese nula ($H_0$) é a hipótese que não há efeito real.
-  \item A hipótese alternativa ($H_1$ ou $H_a$) é a hipótese de interesse científico (há efeito).
+    \bigskip
+  \item A hipótese alternativa ($H_1$ ou $H_a$) é a de que há efeito real \alert{que pode ser detectado} com o experimento.
+    \begin{itemize}
+    \item Obs: (em geral) hipótese de interesse científico
+    \end{itemize}
+.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Identificando hipóteses}
-  \begin{block}{Atenção}
-    A lógica do teste de hipóteses é o \alert{inverso} do que se esperaria, ou seja, ao invés de testar a hipótese de interesse, vamos {\em testar a hipótese nula} -- e tentar rejeitá-la.
+\begin{frame}{Atenção}
+  \begin{block}{{\em Danger Will Robinson...}}
+    A lógica do teste de hipóteses é o \alert{inverso} do que se esperaria inuitivamente.
 
-\bigskip
-{\bf Mantenha isso em mente daqui a para a frente.}
+    \bigskip
+    Isto é, ao invés de testar a hipótese de interesse, vamos {\em testar a hipótese nula} -- e tentar rejeitá-la.
   \end{block}
+
+  \hfill
+  \begin{center}
+    {\bf Mantenha isso em mente daqui a para a frente.}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Identificando hipóteses}
@@ -254,6 +471,58 @@ Fonte: Khan Academy
     %   sinal de $<$, $>$ ou $\ne$.
     \end{enumerate}
   \end{block}
+\end{frame}
+
+\begin{frame}{{\footnotesize Quais são as variáveis?}}
+  \begin{exampleblock}{Exemplo 1}
+    \scriptsize
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico.
+
+    \smallskip
+    Tempo de resposta típico = \alert{1.2 s}.
+
+    \smallskip
+    $n$ = \alert{100}
+
+    $\bar{x}$ = \alert{1.05 s}
+
+    $s$ = \alert{0.5 s}
+  \end{exampleblock}
+  \begin{block}{Modelo}<2->
+    \begin{displaymath}
+      \text{variável dependente} \sim \text{variável independente}
+    \end{displaymath}
+    \begin{displaymath}
+      \text{tempo de resposta} \sim \text{ratos injetados com a droga}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{{\footnotesize Quais são as hipóteses estatísticas?}}
+  \begin{exampleblock}{Exemplo 1}
+    \scriptsize
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico.
+
+    \smallskip
+    Tempo de resposta típico = \alert{1.2 s}.
+
+    \smallskip
+    $n$ = \alert{100}
+
+    $\bar{x}$ = \alert{1.05 s}
+
+    $s$ = \alert{0.5 s}
+  \end{exampleblock}
+  \begin{exampleblock}{Hipóteses}<2->
+    \begin{displaymath}
+      H_0: \mu=1.2
+    \end{displaymath}
+    \begin{displaymath}
+      H_1: \mu \ne 1.2
+    \end{displaymath}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Identificando hipóteses}
@@ -294,15 +563,18 @@ Fonte: Khan Academy
     A dose média contida em um comprimido de paracetamol é de 750mg.\\
     \bigskip
     Formulação matemática:\\
-    \begin{displaymath}
+    \only<1>{\begin{displaymath}
       H_0: \mu = 750
-    \end{displaymath}
+    \end{displaymath}}
+    \only<2>{\alert{\begin{displaymath}
+      H_0: \mu = 750
+    \end{displaymath}}}
     \begin{displaymath}
       H_1: \mu \ne 750
     \end{displaymath}
   \end{exampleblock}
   \begin{center}
-      \only<2->{\includegraphics[height=2cm]{Jackie-Chan-WTF}}
+      \uncover<2->{\includegraphics[height=2cm]{Cap10-11/Jackie-Chan-WTF}}
   \end{center}
 \end{frame}
 
@@ -328,18 +600,31 @@ Fonte: Khan Academy
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Tipos de erros em testes de hipóteses}
-  \begin{definition}
-    Um \alert{erro do tipo I} ocorre se a hipótese nula for rejeitada
-    quando é verdadeira.
-  \end{definition}
-  \begin{definition}
-    Um \alert{erro do tipo II} ocorre se a hipótese não for rejeitada
-    quando for falsa.
-  \end{definition}
+\begin{frame}{{\small Cada tipo de erro pode ter um ``custo'' diferente}}
+  \begin{itemize}
+    \small
+  \item Dizer que um paciente não está infectado, quanto ele está.
+  \item Dizer que um paciente está infectado, quando ele não está.
+  \end{itemize}
+
+  \bigskip
+  \begin{block}{}
+    O custo de cada tipo de possível erro só pode ser avaliado caso a caso.
+  \end{block}
 \end{frame}
 
-\begin{frame}{Observe}
+\begin{frame}{Tipos de erros em testes de hipóteses}
+  \begin{block}{Definição}
+    Um \alert{erro do tipo I} ocorre se a hipótese nula for rejeitada
+    quando é verdadeira.
+  \end{block}
+  \begin{block}{Definição}
+    Um \alert{erro do tipo II} ocorre se a hipótese não for rejeitada
+    quando for falsa.
+  \end{block}
+\end{frame}
+
+\begin{frame}[label=observacao]{Observe}
   \begin{block}{A questão importante aqui é:}
     MESMO SE a hipótese nula {\bf for verdadeira}, ainda assim você pode observar (ao acaso) uma diferença como resultado do experimento.
 
@@ -369,20 +654,20 @@ Fonte: Khan Academy
 \end{frame}
 
 \begin{frame}{Nível de significância}
-  \begin{definition}
+  \begin{block}{Definição}
     O \alert{nível de significância} de um teste de hipótese é sua
     probabilidade máxima admissível para cometer um erro do tipo
     I. Ele é denotado por $\alpha$.
 
     \bigskip
     Está associado com o nível de confiança.
-  \end{definition}
-  \begin{definition}
+  \end{block}
+  \begin{block}{Definição}
     A probabilidade de se cometer um erro do tipo II é denotada por
     $\beta$.
 
-    \bigskip Está associado com o poder estatístico do teste (futuro).
-  \end{definition}
+    \bigskip Está associado com a capacidade do método estatístico em detectar uma diferença significativa (poder do teste).
+  \end{block}
   % \begin{itemize}
   % % \item O valor $1-\beta$ é chamado o \alert{poder do teste}.
   % % \item Devemos controlar o erro do tipo I, isto é, 
@@ -417,22 +702,23 @@ Fonte: Khan Academy
   \end{block}
 \end{frame}
 
-\subsection{O p-valor}
+\subsection{O p-valor é...}
 
 \begin{frame}{O p-valor}
-  \begin{definition}
-    Assumindo que a hipótese nula seja verdadeira, o \alert{p-valor}
-    de um teste de hipóteses é a probabilidade de se obter uma
-    estatística amostral com valores tão extremos, ou mais extremos
-    que aquele observado.
-  \end{definition}
+  \begin{block}{Definição}
+    Assumindo que a hipótese nula seja verdadeira, o {\bf p-valor} de
+    um teste de hipóteses é a probabilidade de se obter uma
+    estatística amostral com valores \alert{tão extremos, ou mais
+      extremos} que aquele observado.
+  \end{block}
 
-O p-valor \alert{é}:
+  O p-valor \alert{é}:
   \begin{itemize}
-  \item Uma estatística (i.e., depende da amostra - dados e tamanho)
+    \footnotesize
+  % \item Uma estatística (i.e., depende da amostra - dados e tamanho)
   \item A probabilidade (condicional) de se observar o resultado ao
     acaso \alert{dado que} a $H_0$ é verdadeira.
-  \item Uma medida da força da evidência contra a $H_0$.
+  \item Uma medida da força da evidência \alert{contra} a $H_0$.
   \end{itemize}
 \end{frame}
 
@@ -456,90 +742,304 @@ O p-valor \alert{é}:
 
 \againframe{exemplo1}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Exemplo 1}
   \begin{block}{Pense...}
     \begin{itemize}
-    \item A hipótese científica é que a droga diminui o tempo de resposta.
+    \item A hipótese científica é que a droga afeta o tempo de resposta.
     \item Como você formularia a hipótese estatística ($H_1$)?
       \begin{enumerate}
       \item $H_0: \mu = 1.2, H_1: \mu \ge 1.2$ (teste unicaudal à direita)
       \item $H_0: \mu = 1.2, H_1: \mu < 1.2$ (teste unicaudal à esquerda)
-      \item $H_0: \mu = 1.2, H_1: \mu \ne 1.2$ (teste bicaudal)
+      \item \alert<2>{$H_0: \mu = 1.2, H_1: \mu \ne 1.2$ (teste bicaudal)}
       \item $H_0: \mu \ge 1.2, H_1: \mu = 1.2$ (teste unicaudal à esquerda)
       \end{enumerate}
 
-      Resposta: \only<2->{\bf Opção 2}
+      Resposta: \only<2->{\bf Opção 3}
 %    \item Qual seria a hipótese nula ($H_0$) a ser rejeitada, caso a droga seja eficaz?
     \end{itemize}
   \end{block}
 \end{frame}
 
 \begin{frame}{Exemplo 1}
-  \begin{exampleblock}{Exemplo}
+  % \begin{exampleblock}{Exemplo 1}
     \begin{itemize}
+      \scriptsize
     \item Dados: $\mu = 1.2, \bar{x} = 1.05, s = 0.5, n=100$
-    \item $H_0: \mu = 1.2, H_1: \mu < 1.2$ (teste unicaudal à esquerda)
+    \item $\alert<2->{H_0: \mu = 1.2}, H_1: \mu \ne 1.2$ (teste bicaudal)
     % \item $n$ é grande ($n > 30$), então usamos $\sigma \approx s$ , e
     %   fazemos o teste Z:
     % \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
-    \item O teste Z aplicado a este problema retorna $p=0.0013$
-    \item<2-> Como $p < 0.05$, concluímos que há evidência para rejeitar
-      $H_0$.
-    \item<2-> {\bf Resultado: O tempo de resposta médio é \alert{significativamente} menor.}
-    \item<2-> {\bf Conclusão: \only<3->{há evidências que a droga diminui o tempo de resposta (...)}}
+      \begin{itemize}
+        \scriptsize
+      \item \sout{O teste Z retorna $p = 0.0027$}\footnote{Premissas fortes: Normal, N grande, $\sigma$ conhecido, etc.}
+      \item O teste t retorna $p = 0.0034$\footnote{Usado em geral, menos premissas}
+      \end{itemize}
+    \item<2-> Como $p < 0.05$, há evidências para rejeitar \alert<2->{$H_0$}.
     \end{itemize}
+  % \end{exampleblock}
+  \begin{exampleblock}{Resultado}<3->
+    \small
+    O tempo de resposta médio é \alert{significativamente} diferente de 1.2 s ({\footnotesize p = 0.0034}).
+  \end{exampleblock}
+  \begin{exampleblock}{Conclusão}<4->
+    \small
+    (...) há evidências que a droga altera o tempo (...)  de resposta (...).
+  \end{exampleblock}
+
+   % \hfill{\scriptsize teste Z calculado em \url{https://mathcracker.com/z-test-for-one-mean.php}
+\end{frame}
+
+\subsection{O p-valor não é...}
+
+\begin{frame}{{\small Como a Ciência Médica é vista na mídia}}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[height=.8\textheight]{Cap10-11/xkcd-significant1}
+      \end{center}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[height=.8\textheight]{Cap10-11/xkcd-significant2}
+      \end{center}
+    \end{column}
+  \end{columns}
+  \vfill
+  \begin{center}
+    \scriptsize
+    Fonte: \url{https://xkcd.com/882/}
+  \end{center}
+\end{frame}
+
+\begin{frame}{{\small O problema não é a mídia}}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap10-11/Ioannidis}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Cuidados com o p-valor}
+    \begin{block}{{\small DOREY, F. 2010 Clin Orthop Relat Res.}}
+    \small
+    {\em ``The concept of a p value is not simple and any statements
+    associated with it must be considered cautiously.''}
+  \end{block}
+\end{frame}
+
+\begin{frame}{{\small Estes são erros comuns de interpretação}}
+  \small
+  \begin{block}{O p-valor assume que...}
+    \small
+    \begin{enumerate}
+      \footnotesize
+    \item a hipótese nula é \alert<1>{verdadeira}
+    \item a \alert<1>{única} causa da diferença observada é devida ao acaso
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Portanto o p-valor \alert{não é}}<2->
+    \begin{itemize}
+      \footnotesize
+    \item a probabilidade de que a hipótese nula seja verdadeira
+    \item a probabilidade de que a diferença observada seja devido ao
+      acaso
+    \end{itemize}
+    \begin{block}{}<3->
+      \footnotesize
+      O p-valor não pode ser usado para concluir suas próprias
+      premissas.
+    \end{block}
+  \end{block}
+\end{frame}
+
+\againframe{observacao}
+
+\subsection{Exercício}
+
+\begin{frame}{Exercício}
+  \begin{exampleblock}{Exemplo 2}
+    \footnotesize
+    Uma indústria farmacêutica especifica que em certo analgésico a
+    quantidade média de ácido acetil salicílico deve ser 5.5 gramas
+    por comprimido. A indústria suspeita que houve problemas na
+    produção de um determinado lote e que, nesse lote, a quantidade
+    média dessa substância está diferente da especificada. Para
+    verificar essa suspeita, a indústria selecionou uma amostra
+    aleatória de 40 comprimidos desse lote, observando uma quantidade
+    média de ácido acetil salicílico igual a 5.2 gramas e um desvio
+    padrão de 0.7 gramas.
+  \end{exampleblock}
+  \begin{block}{Pergunta}<2>
+    Você tem informações suficientes para executar um teste formal de hipóteses?
+
+    Em caso afirmativo, formule a $H_0$ e a $H_1$.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Exemplo 2}
+  \begin{exampleblock}{Resposta}
+    \begin{itemize}
+    \footnotesize
+  \item Temos as informações necessárias para o teste
+  \item Hipóteses
+      \begin{displaymath}
+        H_0: \mu = 5.5
+      \end{displaymath}
+      \begin{displaymath}
+        H_1: \mu \ne 5.5
+      \end{displaymath}
+    % \item Região crítica: $z<-z_{0.025}$ ou $z>z_{0.025}$ (ou seja,
+    %   \alert{$z<-1.96$ ou $z>1.96$}).
+    \item Dados
+      \begin{displaymath}
+        n=40, \bar{x} = 5.2, s = 0.7
+      \end{displaymath}
+    % \item Estatística de teste
+    %   \begin{displaymath}
+    %     z = \frac{5.2 - 5.5}{\frac{0.7}{\sqrt{1000}}} = \alert{-2.71}
+    %   \end{displaymath}
+    \end{itemize}
+  \end{exampleblock}
+  \begin{exampleblock}{Resultado (bruto)}<2>
+    p = 0.0099
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{O p-valor}
-  Cuidado! O p-valor \alert{não é}:
-  \begin{itemize}
-  \item a probabilidade de que a hipótese nula seja verdadeira
-  \item a probabilidade de que a diferença observada seja devido ao
-    acaso
-  \end{itemize}
-  \begin{block}{}
-    Estes são erros comuns de interpretação.
+\begin{frame}{Exemplo 2}
+  \begin{block}{Interpretação}
+    \scriptsize
 
-    O p-valor assume que (1) a hipótese é verdadeira, e (2) que a
-    única causa da diferença é devida ao acaso, portanto não pode ser
-    usado para concluir suas próprias premissas.
+    A probabilidade de observarmos \alert{ao acaso} um valor {\bf tão
+      ou mais discrepante como 5.2 g} é 0.0099.
+
+    \bigskip
+
+    Como esta prob. é menor que o nível de significância estabelecido
+    $\alpha=0.05$, rejeitamos a hipótese de que a quantidade média é
+    igual a 5.5 g ao nível de significância de 5\%.
   \end{block}
-  \begin{block}{}
-    ``The concept of a p value is not simple and any statements
-    associated with it must be considered cautiously.''
+  \begin{exampleblock}{Resultado}
+    \footnotesize
 
-    Dorey, F. 2010 Clin Orthop Relat Res.
+    \uncover<2->{(...) a dose média de ácido acetil salicílico (...)
+      %  de certo analgésico
+      por comprimido é 5.2 g e é significativamente diferente de 5.5 g
+      (p = 0.0099).}
+  \end{exampleblock}
+  \begin{exampleblock}{Conclusão}<2->
+    \uncover<3->{O lote (...)
+    % deste medicamento
+      está fora da especificação de 5.5 g (...) por comprimido,
+      portanto o lote está reprovado.}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{{\small Outra hipótese, outra análise, outro resultado...}}
+  \begin{block}{Observe que...}
+    Se tivéssemos formulado as hipóteses que a média da amostra é diferente de 5.5 g, qual você acha que seria o resultado?
+
+    \bigskip
+    Qual seria a conclusão neste caso?
   \end{block}
 \end{frame}
 
-\section{Encerramento}
+\begin{frame}{Bônus: Intervalo de Confiança}
+  \begin{itemize}
+    \small
+  \item Nessa situação, podemos usar o intervalo de confiança para
+    realizar o teste de hipóteses.
+  \item Como queremos um teste a 5\% de significância, calcularemos um
+    intervalo de 95\% de confiança.
+  \end{itemize}
+  \begin{block}{Lembre-se}
+    \begin{center}
+      significância + confiança = 1
+    \end{center}
+  \end{block}
+\end{frame}
 
-\begin{frame}{Leitura pós-aula e exercícios selecionados}
-  \small
+\begin{frame}{Exemplo 2 (a revanche)}
+  \begin{exampleblock}{IC da média}
+    \begin{itemize}
+      \scriptsize
+    \item Dados: $n=40, \bar{x} = 5.2, s = 0.7$
+    \item IC: [4.976, 5.424] $\approx$ [5.0, 5.4]
+    \end{itemize}
+    % média p <  0.0001
+    % The difference between these two values is 5.200
+    % The   95% confidence interval of this difference:
+    % From 4.976 to 5.424
+  \end{exampleblock}
+  \begin{exampleblock}{Resultado}<2->
+    \footnotesize
+    A quantidade média neste lote (...)
+    % de ácido acetil salicílico, por comprimido,
+    está entre 5.0 e 5.4 gramas, com 95\% de confiança.
+  \end{exampleblock}
+  \begin{block}{Interpretação}<2->
+    \footnotesize
+    A ``meta'' 5.5 g não está contida no IC.
+  \end{block}
+  \begin{exampleblock}{Conclusão}<3->
+    (...), portanto o lote está reprovado.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Exemplo 2 (a revanche)}
+  \begin{exampleblock}{IC da diferença}
+    \begin{itemize}
+      \scriptsize
+    \item Dados: $n=40, \bar{x} = 5.2, s = 0.7, \mu = 5.5$
+    \item $\bar{d} = -0.300$, IC: [-0.524, -0.076] $\approx$ [-0.5, -0.1]
+    \end{itemize}
+    % Diferença
+    % The difference between these two values is -0.300
+    % The   95% confidence interval of this difference:
+    % From -0.524 to -0.076
+  \end{exampleblock}
+  \begin{exampleblock}{Resultado}
+    \footnotesize
+    A diferença média neste lote (...)
+    % de ácido acetil salicílico, por comprimido,
+    está entre -0.5 e -0.1 gramas, com 95\% de confiança.
+  \end{exampleblock}
+  \begin{block}{Interpretação}
+    \footnotesize
+    A ``meta de igualdade'' $d = 0$ g não está contida no IC.
+  \end{block}
+  \begin{exampleblock}{Conclusão}<2>
+    (...), portanto o lote está reprovado.
+  \end{exampleblock}
+\end{frame}
+
+\section{Aprofundamento}
+
+\subsection{Aprofundamento}
+
+\begin{frame}{Aprofundamento}
   \begin{block}{Leitura obrigatória}
-%    \small
+    \footnotesize
     \begin{itemize}
     \item Capítulo 10.
     \item Capítulo 11.
+    \item Motulsky, (2018) chap 19, {\bf Interpreting a Result That Is Not Statistically Significant} ({\scriptsize disponível grautitamente online})
     \end{itemize}
   \end{block}
   \begin{block}{Exercícios selecionados}
-%    \small
-  \begin{itemize}
-  \item Cap 10: todos.
-  \item Cap 11: todos.
-  \end{itemize}
+    \footnotesize
+    \begin{itemize}
+    \item Cap 10: todos.
+    \item Cap 11: todos.
+    \end{itemize}
+  \end{block}
+\end{frame}
 
-\end{block}
-\begin{block}{Leitura recomendada (links na página da disciplina)}
-\tiny
-  \begin{itemize}
-  \item Motulsky, (2014) chap 19, Interpreting a Result That Is Not Statistically Significant
-  \item Dorey, F (2010) In Brief: The P Value: What Is It and What Does It Tell You?
-  \item Gardner, MJ; Altman, DG (1986) Confidence intervals rather than P values: estimation rather than hypothesis testing.
-  \end{itemize}
-\end{block}
+\begin{frame}{Aprofundamento}
+  \begin{block}{Leitura recomendada (links na página da disciplina)}
+    \scriptsize
+    \begin{itemize}
+    \item Dorey, F (2010) In Brief: The P Value: What Is It and What Does It Tell You?
+    \item Gardner, MJ; Altman, DG (1986) Confidence intervals rather than P values: estimation rather than hypothesis testing.
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \end{document}

@@ -1,0 +1,29 @@
+== Artigo ==
+
+https://www.ncbi.nlm.nih.gov/pubmed/30179212
+
+== Contexto ==
+
+Vamos nos ater aos resultados das análises de correlação.
+Eles se encontram na seção entitulada "Correlation analyses of 24hndb and inflammatory cytokines(CRP, TNF-α, and IL-6) with BMD".
+As figuras 1 a 4 também podem ajudar na interpretação.
+A discussão do artigo será importante.
+
+O autor reporta correlações negativas sifnificativas entre o BMD e
+
+- 24hndb (r=-0.722, p<0.001)
+- CRP (r=-0.661, p<0.001)
+- TNF-alfa (r=-0.537, p<0.001)
+- IL-6 (r=-0.793, p<0.001)
+
+== Perguntas ==
+
+Com base no cap 17 e na discussão do artigo reflita:
+
+1) O autor apresenta argumentos de que o aumento de BMD causa a diminuição observada nas variáveis acima?
+
+2) O autor apresenta argumentos de que o aumento nas variáveis acima causa a diminuição no BMD?
+
+3) O autor apresenta argumentos de que algum fator externo influencie a observação desta correlação negativa?
+
+4) O autor considera a possibilidade deste resultado ser ao acaso?

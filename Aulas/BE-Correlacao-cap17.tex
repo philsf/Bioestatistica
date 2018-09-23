@@ -155,6 +155,16 @@
 %   \end{block}
 % \end{frame}
 
+\section{Discussão da aula passada}
+
+\subsection{Discussão da aula passada}
+
+\begin{frame}{Discussão da aula passada}
+  \begin{block}{}
+    Discussão da leitura obrigatória da aula passada
+  \end{block}
+\end{frame}
+
 \section{Covariância}
 
 \subsection[Covariância]{Covariância entre duas amostras}
@@ -284,7 +294,7 @@
 
 \section{Correlação}
 
-\subsection[Associação]{Associação entre duas variáveis}
+\subsection[Associação]{Associação entre duas variáveis contínuas}
 
 \begin{frame}{Tipos de variáveis envolvidas}
   \begin{itemize}
@@ -581,12 +591,26 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
     aferir a fração de ácidos graxos poli-insaturados que tem entre 20
     e 22 carbonos (\%C20-22). Como variável resposta, mediram o índice
     de sensibilidade à insulina.
-    % \begin{itemize}
-    % \item A variável independente (X) é a quantidade de ácidos graxos
-    % \item A variável dependente (Y) é o índice de insulina medido
-    % \end{itemize}
   \end{example}
-  Valores tabelados a seguir.
+  \begin{block}{Quais são as variáveis?}
+    \begin{itemize}
+    \item Qual é a variável independente (X)? %quantidade de ácidos graxos
+    \item Qual é a variável dependente (Y)? %o índice de insulina medido
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: insulina (contínua)
+  \item Independente: conteúdo lipídico (contínua)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{insulina} \sim \text{conteúdo lipídico}
+    \end{displaymath}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Exemplo}
@@ -636,7 +660,7 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \item Para este exemplo, teríamos $p=0.0021$.
   \item Interpretação: se não houver relação entre as variáveis
     ($H_0$), existe apenas 0.21\% de chance de observamos uma
-    correlação tão forte com um estudo deste tamanho
+    correlação tão (ou mais) forte com um estudo deste tamanho
   \end{itemize}
 \end{frame}
 
@@ -652,6 +676,14 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \item as duas variáveis não são correlacionados na população, e a
     estimativa observada nessa amostra é \alert<4>{mera coincidência}
   \end{enumerate}
+\end{frame}
+
+\begin{frame}[label=mantra]{{\small Mantra}}
+  \begin{block}{Repita várias vezes mentalmente}
+    \LARGE
+    \centering
+    Correlação não implica causalidade
+  \end{block}
 \end{frame}
 
 \begin{frame}{Interpretando o $r$}
@@ -738,9 +770,9 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \end{itemize}
 \end{frame}
 
-\section{Causalidade}
-% \subsection{Causalidade}
+\section{Resumo}
 
+\subsection{Causalidade}
 
 \begin{frame}{Causa x efeito}
   \begin{itemize}
@@ -762,16 +794,9 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \item Lembre-se: a significância do teste indica a probabilidade de
     se cometer um erro do tipo I (falso positivo).
   \end{itemize}
-  \begin{block}{Repita várias vezes mentalmente}
-    Correlação não implica em causalidade.
-  \end{block}
 \end{frame}
 
-% \begin{frame}{}
-%   \begin{itemize}
-%   \item 
-%   \end{itemize}
-% \end{frame}
+\againframe{mantra}
 
 \begin{frame}{Exemplo}
   Gasto com C\&T (EUA) x Suicídios por enforcamento
@@ -800,11 +825,16 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   (Fonte: Spurious correlations)
 \end{frame}
 
-\begin{frame}{Causa e efeito}
+\againframe{mantra}
 
-  Ao encontrar uma forte correlação, deve-se sempre se perguntar:
+\begin{frame}{Causa e efeito}
+  {\small
+
+    Ao encontrar uma forte correlação, deve-se sempre se perguntar:
+  }
 
   \begin{enumerate}
+    \footnotesize
   \item Há uma relação direta de causa e efeito entre as variáveis? (X
     causa Y?)
 
@@ -817,38 +847,56 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \item É possível que a relação entre duas variáveis seja uma
     coincidência?
   \end{enumerate}
+  \vfill
+  \begin{block}{}
+    \small
+    Estas perguntas estão fora do escopo da Bioestatística!
+
+    \bigskip
+    Cabe ao pesquisador investigar (e discutir) as possibilidades.
+  \end{block}
 \end{frame}
 
-\section{Resumo}
+\subsection{Resumo}
+
 \begin{frame}{Resumo}
   \begin{itemize}
   \item É necessário investigar a relação entre as variáveis!
   \item O que pode explicar a relação observada?
-  \item Qual proporção (porcentagem) da variabilidade pode ser
-    explicada pelas variáveis analisadas?
-  \item Quão bem a reta regressora se ajusta aos dados?
+  % \item Que porcentagem da variância pode ser explicada pela hipótese
+  %   de relação entre as variáveis?
+  % \item Quão bem a reta regressora se ajusta aos dados?
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Leitura pós-aula e exercícios selecionados}
+\section{Aprofundamento}
+
+\subsection{Aprofundamento}
+
+\begin{frame}{Aprofundamento}
   \begin{block}{Leitura obrigatória}
     \begin{itemize}
+      \small
     \item Capítulo 17, pular as seções:
       \begin{itemize}
+        \footnotesize
       \item cálculo do r, do IC, do p-valor
       \item correlação de Spearman, e seu cálculo
       \item Interpretação do $r^2$
       \end{itemize}
     \end{itemize}
   \end{block}
-  \begin{block}{Exercícios}
+  \begin{block}{Exercícios selecionados}
+    \scriptsize
     Capítulo 17, problemas {\bf 1}, {\bf 3} e {\bf 5}.
 
+    \medskip
     Problema {\bf 6}, usar:
 
-    $r=0.8868,\ IC95\%=[0.4856, 0.9794],\ p = 0.0033.$ \alert{$r^2$=?}
+    $$r=0.8868,\ IC95\%=[0.4856, 0.9794],\ p = 0.0033.\ \alert{r^2=?}$$ 
   \end{block}
   \begin{block}{Leitura recomendada}
+    \small
     Capítulo 17: Interpretação do $r^2$ e Correlação de Spearman
   \end{block}
 \end{frame}
