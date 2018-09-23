@@ -8,8 +8,8 @@ dev.off()
 
 png("Aulas/Cap23-25/obesidade-hist2.png", 600, 400)
 par(mfrow = c(1, 2))
-hist(ob$Grupo1, main = "Grupo 1", xlab = "Perda (lbs)", col = "gray")
-hist(ob$Grupo2, main = "Grupo 2", xlab = "Perda (lbs)", col = "gray")
+hist(ob$Grupo1, main = "Grupo 1", xlab = "Perda (lbs)", col = "gray", ylim = c(0, 50))
+hist(ob$Grupo2, main = "Grupo 2", xlab = "Perda (lbs)", col = "gray", ylim = c(0, 50))
 dev.off()
 
 t.test(Perda ~ Grupo, data = ob2, var.equal = TRUE)
