@@ -5,3 +5,16 @@ Artigo
 https://www.ncbi.nlm.nih.gov/pubmed/30179212
 
 Interpretar as 4 possibilidades do frame de causalidade
+
+Vamos nos ater aos resultados da seção entitulada "Correlation analyses of 24hndb and inflammatory cytokines(CRP, TNF-α, and IL-6) with BMD"
+
+O autor reporta correlações negativas sifnificativas entre o BMD e
+
+- 24hndb (r=-0.722, p<0.001)
+- CRP (r=-0.661, p<0.001)
+- TNF-alfa (r=-0.537, p<0.001)
+- IL-6 (r=-0.793, p<0.001)
+
+Ele apresenta argumentos
+
+Com base no cap 17 e na discussão do artigo reflita:
