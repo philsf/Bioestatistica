@@ -426,7 +426,7 @@ mean of the differences
 
 \againframe{perguntas}
 
-\begin{frame}[fragile]{Saída típica de um programa}
+\begin{frame}[fragile, label=t-indep]{Saída típica de um programa}
   \begin{block}{Teste t, amostras independentes}
     \footnotesize
     \begin{verbatim}
@@ -487,6 +487,27 @@ mean of the differences
 \begin{frame}
   \begin{block}{Caso de você tenha escolhido grupos independentes...}
     Os dois grupos tem variabilidades semelhantes?
+  \end{block}
+\end{frame}
+
+\againframe{t-indep}
+
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{block}{Teste t, amostras independentes, com correção de Welch}
+    \footnotesize
+\begin{verbatim}
+	Welch Two Sample t-test
+
+data:  Perda by Grupo
+t = 2.871, df = 191.12, p-value = 0.004554
+alternative hypothesis: true difference
+ in means is not equal to 0
+95 percent confidence interval:
+ 0.550416 2.967014
+sample estimates:
+mean in group Grupo1 mean in group Grupo2 
+            9.334005             7.575291
+\end{verbatim}
   \end{block}
 \end{frame}
 
