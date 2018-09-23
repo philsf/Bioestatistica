@@ -251,19 +251,56 @@ Testes estatísticos sempre seguem o mesmo roteiro
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Exemplo 1}
   \begin{exampleblock}{Exemplo 23.2}
+    \small
     Motulsky, {\em et al.} (1983) investigaram se pessoas com hipertensão tem alteração nos níveis de receptores adrenérgicos $\alpha_2$ em suas plaquetas.
-    Selecionaram 18 homens hipertensos, e 17 controles da mesma faixa etária.
 
-    As plaquetas dos hipertensos tiveram 257 $\pm$ 14 receptores por plaqueta (média $\pm$ SEM).
+    \bigskip
+    {\footnotesize
+      Selecionaram 18 homens hipertensos, e 17 controles da mesma faixa etária.
+      Os resultados estão descritos como média $\pm$ SEM.
+    }
 
-    As plaquetas dos controles tiveram 263 $\pm$ 21 receptores por plaqueta (média $\pm$ SEM).
+    \begin{exampleblock}{}
+      \footnotesize
+      As plaquetas dos hipertensos tiveram 257 $\pm$ 14 receptores por plaqueta.
 
+      As plaquetas dos controles tiveram 263 $\pm$ 21 receptores por plaqueta.
+    \end{exampleblock}
     \bigskip
     Os autores concluíram que não havia diferença significativa entre as médias dos grupos.
   \end{exampleblock}
 \end{frame}
+
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{exampleblock}{Teste t, amostras independentes}
+    \footnotesize
+\begin{verbatim}
+P value and statistical significance: 
+  The two-tailed P value equals 0.8116 
+  By conventional criteria, this difference
+ is considered to be not statistically significant. 
+
+Confidence interval: 
+  The mean of Controle minus Hipertensos equals 6.00 
+  95% confidence interval of this difference:
+ From -44.81 to 56.81 
+
+Intermediate values used in calculations: 
+  t = 0.2403 
+  df = 33 
+  standard error of difference = 24.973 
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+% Review your data: 
+%   Group	  Controle  	  Hipertensos  
+% Mean	263.00	257.00
+% SD	86.59	59.40
+% SEM	21.00	14.00
+% N	17    	18    
 
 \subsection{Dois grupos pareados}
 
@@ -300,20 +337,59 @@ Quando faz sentido parear indivíduos de dois grupos?
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Exemplo 2}
+  \begin{exampleblock}{Exercício 25.1}
+    \small
+    Os pesquisadores compararam o número de receptores beta-adrenérgicos nos linfócitos de um grupo de participantes, antes e após a administração de uma droga.
+
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{exampleblock}{Teste t, amostras pareadas}
+    \footnotesize
+\begin{verbatim}
+	Paired t-test
+
+data:  Receptors by Group
+t = 6.9636, df = 5, p-value = 0.000939
+alternative hypothesis: true difference
+ in means is not equal to 0
+95 percent confidence interval:
+ 145.7279 316.2721
+sample estimates:
+mean of the differences 
+                    231
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
 \subsection{Exercício}
 
 \begin{frame}{Exercício}
-  \begin{exampleblock}{Exercício}
+  \begin{exampleblock}{}
+    \small
     Queremos avaliar a eficiência de uma nova dieta reduzida em
-    gordura no tratamento de obesidade. Selecionamos aleatoriamente
-    100 pessoas obesas para o grupo 1, que receberão a dieta com pouca
-    gordura. Selecionamos outras 100 pessoas obesas para o grupo 2 que
-    receberão a mesma quantidade de comida, com proporção normal de
-    gordura. Após 4 meses, a perda de peso média no grupo 1 foi de
-    9.33 lbs (s=4.72) e no grupo 2 foi de 7.58 lbs (s=3.90). Você acha
-    que essa nova dieta é eficaz na perda de peso?
+    gordura no tratamento de obesidade.
+
+    \bigskip
+    {\footnotesize
+      Selecionamos aleatoriamente 100 pessoas obesas para o grupo 1, que receberão a dieta com pouca gordura.
+      Selecionamos outras 100 pessoas obesas para o grupo 2 que receberão a mesma quantidade de comida, com proporção normal de gordura.
+      O estudo durou 4 meses.
+    }
+
+    \bigskip
+    \begin{exampleblock}{}
+      \footnotesize
+      A perda de peso média no grupo 1 foi de 9.33 lbs
+      (s=4.72) e no grupo 2 foi de 7.58 lbs (s=3.90).
+    \end{exampleblock}
   \end{exampleblock}
-  Fonte: Khan Academy
+  \begin{block}{}
+    Essa nova dieta é eficaz na perda de peso?
+  \end{block}
+  \hfill {\footnotesize Fonte: Khan Academy}
 \end{frame}
 
 \begin{frame}[label=perguntas]{Perguntas}
@@ -340,6 +416,7 @@ Quando faz sentido parear indivíduos de dois grupos?
 
 \begin{frame}[fragile]{Saída típica de um programa}
   \begin{block}{Teste t, amostras independentes}
+    \footnotesize
     \begin{verbatim}
 	Two Sample t-test
 
@@ -358,6 +435,7 @@ mean of x mean of y
 
 \begin{frame}[fragile]{Saída típica de um programa}
   \begin{block}{Teste t, amostras pareadas}
+    \footnotesize
     \begin{verbatim}
 	Paired t-test
 
