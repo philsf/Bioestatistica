@@ -11,3 +11,5 @@ Vamos nos ater à tabela V, e aos resultados relacionados.
 1) Observe as variáveis enumeradas na coluna "Factor"
 a) Cada uma delas foi interpretada como variável dependente ou independente?
 b) Qual é a outra variável? Em outras palavras, se você respondeu independente acima, qual é a dependente (e vice versa)?
+
+2) Vasculhe os métodos e decida se o autor criou um modelo logístico com vários preditores ou vários modelos logísticos com um preditor.
