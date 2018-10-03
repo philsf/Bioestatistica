@@ -472,19 +472,27 @@ Observe que os totais esperados devem ser iguais aos observados!
 
 \begin{frame}{Teste de Hipótese}
   \begin{itemize}
-  \item $H_0$ não há relação entre o uso do AZT e a progressão da doença.
-  \item Determinamos as diferenças quadráticas entre o valor observado
-    e o esperado como fizemos anteriormente
+    \small
+  \item $H_0$: a progressão é independente do grupo de tratamento
+  \item ou: não há relação entre o uso do AZT e a progressão da doença.
+    \bigskip
+    \scriptsize
+  \item Somamos as diferenças quadráticas entre o valor observado
+    e o esperado
     \begin{displaymath}
       \chi^2 = \frac{\sum (\text{observado} - \text{esperado})^2 }{\text{esperado}}
     \end{displaymath}
-  \item Fazemos o teste $\chi^2$ e julgamos a hipótese $H_0$
+    \bigskip
+    \footnotesize
+  \item Quanto maior o valor de de $\chi^2$, maior a discrepância
+  \item Fazemos o teste $\chi^2$ e julgamos o p-valor
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Teste de Hipótese}
   \begin{exampleblock}{Exemplo}
     \begin{itemize}
+      \scriptsize
     \item AZT + P = $\frac{(76 - 104.0)^2}{104.0} = \frac{28^2}{104.0}
       \approx 7.54$
     \item AZT + NP = $\frac{(399 - 371.0)^2}{371.0} =
@@ -493,8 +501,12 @@ Observe que os totais esperados devem ser iguais aos observados!
       \frac{28^2}{101.0} \approx 7.76$
     \item Placebo + NP = $\frac{(332 - 360.0)^2}{360.0} =
       \frac{28^2}{360.0} \approx 2.18$
-    \item $\chi^2 = 7.54 + 2.11 + 7.76 + 2.18 = \alert{19.59}$
     \end{itemize}
+    \small
+    \bigskip
+    \begin{exampleblock}{}
+      $$\chi^2 = 7.54 + 2.11 + 7.76 + 2.18 = \alert{19.59}$$
+    \end{exampleblock}
   \end{exampleblock}
 \end{frame}
 
