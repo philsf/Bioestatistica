@@ -165,110 +165,122 @@
   \end{block}
 \end{frame}
 
-\section{Covariância}
+\section{Introdução}
 
-\subsection[Covariância]{Covariância entre duas amostras}
+\subsection[Intro]{Introdução}
 
-\begin{frame}{Variância (Revisão)}
+\begin{frame}{Dispersão (Revisão)}
   \begin{itemize}
-  \item Relembrando: a variância (assim como o desvio-padrão) é uma
-    medida da dispersão da amostra
-  \item Medida sumária que resume o quanto os dados se desviam da
-    média
-  \item Podemos usar um raciocínio análogo para comparar quanto uma
-    amostra se desvia em relação à outra
-  % \item Isto é, quanto uma 
+    \small
+  \item A variância (assim como o DP) é uma medida da dispersão da
+    amostra
+  \item P: o quanto os dados se desviam da média?
+  \item Medida sumária: um único número para a amostra
   \end{itemize}
+  \bigskip
   \begin{block}{Interpretação}
-    Quanto maior a variância, maior a dispersão em relação ao centro.
+    \small
+    Quanto maior a variância...
+
+  \bigskip
+    ... maior a dispersão em relação ao centro.
   \end{block}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``pequena''}
+\begin{frame}{\small Visualização - Dispersão ``pequena''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-P}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``média''}
+\begin{frame}{\small Visualização - Dispersão ``média''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-M}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``grande''}
+\begin{frame}{\small Visualização - Dispersão ``grande''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-G}
   \end{center}
 \end{frame}
 
-\begin{frame}{Variância em cada eixo}
+\begin{frame}{Dispersão em cada eixo}
   \begin{itemize}
-  \item Como vamos medir a variância {\bf entre} duas variáveis, devemos considerar a variância de cada uma delas
-  \item Exemplos anteriores, variância no eixo horizontal
-  \item Vamos rever, agora na vertical
+    \footnotesize
+  \item Para medir a associação {\bf entre} duas variáveis contínuas, devemos considerar a dispersão de cada uma delas
+    \bigskip
+    \small
+  \item Exemplos anteriores: dispersão no eixo horizontal
+  \item Vejamos agora no eixo vertical
+    \bigskip
+    \footnotesize
   \item (e aproveitar para incrementar a visualização de {\bf uma} variância)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``pequena'' - boxplot}
+\begin{frame}{\small Visualização - Dispersão ``pequena'' - boxplot}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-box-P}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``média'' - boxplot}
+\begin{frame}{\small Visualização - Dispersão ``média'' - boxplot}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-box-M}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``grande'' - boxplot}
+\begin{frame}{\small Visualização - Dispersão ``grande'' - boxplot}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-box-G}
   \end{center}
 \end{frame}
 
-\begin{frame}{Covariância entre duas amostras}
-  \begin{definition}
-    A covariância entre duas variáveis X e Y é uma medida de quanto
-    ambas variam juntas (uma em relação à outra).
-  \end{definition}
+% \begin{frame}{Covariância entre duas amostras}
+%   \begin{definition}
+%     A covariância entre duas variáveis X e Y é uma medida de quanto
+%     ambas variam juntas (uma em relação à outra).
+%   \end{definition}
+%   \begin{itemize}
+%   \item Um único número que representa a variação conjunta entre as duas variáveis
+%   \item Pode assumir qualquer valor (positivo, negativo, etc)
+%   \item Magnitude absoluta (desconsiderando o sinal) indica o grau de dependência
+%   \item Obs: duas variáveis independentes tem covariância igual a zero!
+%   \end{itemize}
+% \end{frame}
+
+\begin{frame}{Dispersão ``conjunta'' entre duas variáveis}
+  \small
   \begin{itemize}
-  \item Um único número que representa a variação conjunta entre as duas variáveis
-  \item Pode assumir qualquer valor (positivo, negativo, etc)
-  \item Magnitude absoluta (desconsiderando o sinal) indica o grau de dependência
-  \item Obs: duas variáveis independentes tem covariância igual a zero!
+  \item Podemos usar um raciocínio análogo para comparar quanto uma
+    amostra se desvia \alert{em relação à outra}
+
+  \item Pareando duas amostras, podemos tentar observar:
+    \begin{itemize}
+    \item a dispersão no eixo horizontal (difícil)
+    \item a dispersão no eixo vertical (difícil)
+      \medskip
+    \item a ``dispersão conjunta'' entre ambas (fácil)
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Covariância}
-  \begin{center}
-    \includegraphics[height=.8\textheight]{Cap17/anim-0}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Covariância}
+\begin{frame}{\small Visualização - Dispersão ``pequena''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-1}
   \end{center}
 \end{frame}
 
-\begin{frame}{Covariância}
+\begin{frame}{\small Visualização - Dispersão ``média''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-2}
   \end{center}
 \end{frame}
 
-\begin{frame}{Covariância}
+\begin{frame}{\small Visualização - Dispersão ``grande''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-3}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Covariância - amostras independentes}
-  \begin{center}
-    \includegraphics[height=.8\textheight]{Cap17/anim-n}
   \end{center}
 \end{frame}
 
@@ -278,19 +290,44 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Normalização}
-  \begin{block}{Teoria x Prática}
-    A covariância é útil para entender a força (e direção) da associação entre duas variáveis, mas {\em o fato de ela não ter uma escala definida a torna difícil de usar na prática}.
-
+\begin{frame}{\small Dispersão - casos extremos}
+  \begin{itemize}
+    \small
+  \item Esta dispersão conjunta é a base para entender a associação
     \bigskip
-    Precisamos de uma medida semelhante de associação, mas que fique em uma escala restrita (digamos, sempre entre -1 e 1).
-  \end{block}
-
-  \bigskip
-  O nome desta solução é \alert{coeficiente de correlação} $r$.
-  
+  \item Nos dois casos extremos temos:
+    \begin{itemize}
+    \item duas variáveis perfeitamente associadas
+    \item duas variáveis não associadas
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
+\begin{frame}{\small Visualização - Dispersão conjunta ``inexistente''}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-0}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Visualização - Dispersão amostras independentes}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-n}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Medida de associação entre duas variáveis contínuas}
+  \begin{itemize}
+    \small
+  \item O DP é uma medida a dispersão de uma variável contínua.
+    \bigskip
+  \item Existe um análogo para duas variáveis, simultaneamente.
+  \end{itemize}
+
+  \vfill
+  \begin{block}{}
+    O nome desta solução é \alert{coeficiente de correlação} $r$.
+  \end{block}
+\end{frame}
 
 \section{Correlação}
 
