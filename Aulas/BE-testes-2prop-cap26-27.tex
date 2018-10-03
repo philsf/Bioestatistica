@@ -512,21 +512,22 @@ Observe que os totais esperados devem ser iguais aos observados!
 
 \begin{frame}{O teste Qui-Quadrado}
   \begin{itemize}
+    \small
   \item Quanto \alert{maior} for o valor da estatística de teste,
-    \alert{menor} será o valor-p.
+    \alert{menor} será o p-valor.
   \item Calculamos a estatística de teste para a amostra e encontramos
     $\chi^2 = 19.59$
-  \item Qual é o p-valor desta análise?
+  \item O resultado deste teste é $p<0.0001$.
   \end{itemize}
 \end{frame}
 
 \begin{frame}{O teste Qui-Quadrado}
   \begin{itemize}
-  \item Consultando a tabela $\chi^2$, encontramos um $p<0.0001$
-  \item Interpretação: Se a $H_0$ for verdadeira, temos uma
-    chance menor que $0.01\%$ de observar uma discrepância tão grande
-    entre os valores observados e os esperados.
-  \item Conclusão: devemos \alert{rejeitar} a $H_0$
+    \small
+  \item Se a $H_0$ for verdadeira, temos uma chance menor que $0.01\%$
+    de observar ao acaso uma discrepância tão grande entre os valores
+    observados e os esperados.
+  \item Resultado: devemos \alert{rejeitar} a $H_0$
   \end{itemize}
   \begin{block}{Interpretação}
     Rejeitamos a hipótese de que o AZT não é mais eficiente que o
@@ -536,14 +537,17 @@ Observe que os totais esperados devem ser iguais aos observados!
 
 \begin{frame}{O teste Qui-Quadrado}
   \begin{itemize}
+    \small
   \item O teste $\chi^2$ é apenas uma aproximação da distribuição dos
     dados, que pode ser usado para amostras grandes.
-  \item Vantagem: simples de consultar na tabela
+  \item Vantagem: simples
   \item Desvantagem: a aproximação é ruim para amostras pequenas
   \item Nunca usar se alguma célula da tabela tiver valor \alert{$<5$}
-  \item O teste indicado para este tipo de cenário é o \alert{teste
-      exato de Fisher}
+    \bigskip
   \end{itemize}
+  \begin{block}{}
+    O teste indicado para este cenário é o \alert{teste exato de Fisher}
+  \end{block}
 \end{frame}
 
 \begin{frame}{O teste exato de Fisher}
