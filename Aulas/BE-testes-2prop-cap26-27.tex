@@ -345,7 +345,7 @@ Estatística de teste:
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Tabelas de contingência 2x2}
+\begin{frame}[label=exemplo8.1]{Tabelas de Contingência 2x2}
   \begin{exampleblock}{Exemplo}
     Frequências observadas:
     \begin{tabular}{c|c|c}
@@ -768,10 +768,13 @@ Observe que os totais esperados devem ser iguais aos observados!
 %   \end{itemize}
 % \end{frame}
 
-\subsection{Exercício}
+\subsection{Na prática}
+
+\againframe{exemplo8.1}
 
 \begin{frame}[fragile]{Saída típica de um programa}
   \begin{block}{Teste Qui-quadrado}
+    \footnotesize
 \begin{verbatim}
 	Pearson's Chi-squared test with Yates'
  continuity correction
@@ -785,6 +788,7 @@ X-squared = 18.944, df = 1,
 
 \begin{frame}[fragile]{Saída típica de um programa}
   \begin{block}{Teste exato de Fisher}
+    \footnotesize
 \begin{verbatim}
 	Fisher's Exact Test for Count Data
 
@@ -812,13 +816,16 @@ odds ratio
     NÃO use gráfico de pizza!
   \end{block}
   \begin{itemize}
+    \footnotesize
   \item É uma visualização ineficiente
   \item Nosso olho é ``bom'' para julgar distâncias/comprimentos
   \item Nosso olho é ruim para julgar áreas
   \item Indicado {\bf apenas} quando as categorias são muito discrepantes
   \end{itemize}
   \begin{block}{Cleveland (1985)}
+    \small
     {\em ``Data that can be shown by pie charts always can be shown by a dot chart.
+
       This means that judgements of position along a common scale can be made instead of the less accurate angle judgements.''}
   \end{block}
 \end{frame}
