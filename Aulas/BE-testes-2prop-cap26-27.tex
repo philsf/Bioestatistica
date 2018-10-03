@@ -577,13 +577,16 @@ Observe que os totais esperados devem ser iguais aos observados!
 \subsection{Tabelas maiores}
 
 \begin{frame}{Tabelas de Contingência maiores}
+  \small
   \begin{itemize}
-  \item E quando temos mais do que duas categorias complementares?
+  \item E quando temos mais do que duas categorias?
+    \bigskip
   \item Resposta: procedemos como no caso anterior, mas precisamos
     considerar os \alert{graus de liberdade} do teste $\chi^2$
     \begin{displaymath}
         gl = (l-1)(c-1) = (\text{linhas} -1)\times (\text{colunas}-1)
     \end{displaymath}
+    \bigskip
   \item Obs: no caso $2 \times 2$ temos $gl = (2-1) \times (2-1)=1
     \times 1 = 1$
   \end{itemize}
@@ -617,11 +620,14 @@ Observe que os totais esperados devem ser iguais aos observados!
 
 \begin{frame}{Tabelas de Contingência maiores}
   \begin{exampleblock}{Exemplo}
+    \footnotesize
     Em dois hospitais, os resultados de 575 autópsias
     foram comparados com as causas de morte listadas nos
     atestados. Um dos hospitais que participou do estudo era
     comunitário (A); o outro era universitário (B).
 
+    \bigskip
+    \scriptsize
     % \begin{tabular}{c|c{5cm}|c{5cm}|c{5cm}}%{\textwidth}{@{} Y c c c c @{}}
     \begin{tabular}{c|p{2cm}|p{2cm}|p{2cm}}
       Hospital & Precisão confirmada & Falta de informações &
@@ -631,11 +637,14 @@ Observe que os totais esperados devem ser iguais aos observados!
       \hline
       B & 268 & 44 & 34 \\
     \end{tabular}
-
+    \small
+    \bigskip
+    \bigskip
     Os resultados sugerem práticas diferentes no preenchimento de
     atestados de óbito nos dois hospitais?
   \end{exampleblock}
-  Fonte: Aula Hacker \& Simões (2008 - Fiocruz)
+  \vfill
+  {\hfill \footnotesize Fonte: Aula Hacker \& Simões (2008 - Fiocruz)}
 \end{frame}
 
 \begin{frame}{Quais são as variáveis?}
@@ -654,6 +663,7 @@ Observe que os totais esperados devem ser iguais aos observados!
 
 \begin{frame}{Tabelas de Contingência maiores}
   \begin{itemize}
+    \small
   \item $H_0$: Dentro de cada categoria do status do atestado, as
     proporções de atestados de óbitos no hospital A são idênticas ao
     hospital B.
@@ -699,14 +709,30 @@ Observe que os totais esperados devem ser iguais aos observados!
 \end{frame}
 
 \begin{frame}{Tabelas de Contingência maiores}
-
+  \small
   Calculando a estatística de teste $\chi^2$:
 
+  \bigskip
+  \begin{exampleblock}{Exemplo}
+    \begin{tabular}{c|c|c|c|c}
+      \footnotesize
+      Hospital & Confirmada & Incompleta &
+      Incorreta & total\\
+      \hline
+      A & 157 (169.3) & 18 (24.7) & 54 (35.0) & 229\\
+      \hline
+      B & 268 (255.7) & 44 (37.3) & 34 (53.0) & 346\\
+      \hline
+      total & 425 & 62 & 88 & 575\\
+    \end{tabular}
+  \end{exampleblock}
   \begin{itemize}
-  \item $\chi^2 = \frac{(157 - 169.3)^2}{169.3} +
-  \frac{(18-24.7)^2}{24.7}  + \ldots$
-\item $\chi^2 = 21.62$
-\end{itemize}
+    \scriptsize
+  \item $\chi^2 = \frac{(157 - 169.3)^2}{169.3} + \frac{(18-24.7)^2}{24.7}  + \ldots$
+    \bigskip
+    \small
+  \item $\chi^2 = 21.62,\ p<0.001$
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Tabelas de Contingência maiores}
