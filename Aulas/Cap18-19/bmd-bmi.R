@@ -8,6 +8,9 @@ BMD <- -3*BMI - scatter + 100
 dados <- data.frame(BMI,BMD)
 
 modelo <- lm(BMD ~ BMI, data = dados)
+format.interval(confint(modelo)[1, ]) # IC intercept
+format.interval(confint(modelo)[2, ]) # IC slope
+
 pred <- predict(modelo, interval = "conf")
 pred28 <- predict(modelo, newdata = data.frame(BMI=28))
 
