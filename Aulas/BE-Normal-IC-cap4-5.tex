@@ -369,6 +369,9 @@
     \item O IC do exemplo 5.2: 79,2 até 118,8 mmHg
     \end{itemize}
   \end{exampleblock}
+  \begin{block}{Relembre...}<2->
+    O que significa o IC?
+  \end{block}
   \begin{block}{Pense...}
     Observe os tamanhos dos ICs.
   \end{block}
@@ -402,13 +405,19 @@
 
 \begin{frame}{O Erro Padrão - definição}
   \begin{displaymath}
-    SEM = \frac{s}{\sqrt{N}}
+    SEM = \frac{s}{\sqrt{n}}
   \end{displaymath}
   \begin{itemize}
   \item SEM = Erro Padrão da Média (em inglês)
-  \item Conforme N aumenta, SEM diminui
-  \item Conforme N aumenta, $\bar{x}$ se aproxima média da população
+  \item Conforme $n$ aumenta $\Rightarrow$ SEM diminui
+  \item Conforme $n$ aumenta $\Rightarrow$ $\bar{x}$ ``próximo'' de $\mu$
   \end{itemize}
+  \begin{block}{Lembrete}
+    \begin{itemize}
+    \item $\bar{x}$ -- média da amostra (resultado/possível)
+    \item $\mu$ -- média da população (objetivo/inferência)
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}{O Erro Padrão - Interpretação}
@@ -425,14 +434,27 @@
     IC: \bar{x} \pm t^{*} \times SEM
   \end{displaymath}
   \begin{itemize}
-  \item M = média
+  \item $\bar{x}$ = média
   \item Para amostras {\bf grandes}, $t^{*} \approx$ 2.
   \end{itemize}
 \end{frame}
 
 \begin{frame}{O Erro Padrão - IC da média}
   \begin{displaymath}
-    IC: \bar{x} \pm 2 \times SEM
+    IC: \bar{x} \pm t^{*} \times SEM
+  \end{displaymath}
+  \begin{block}{Perguntas}
+    \begin{enumerate}
+    \item<1-> Se $s$ aumenta, o SEM aumenta ou diminui?
+    \item<2-> Se $s$ aumenta, o IC aumenta ou diminui?
+    \item<3-> Se $t^{*}$ aumenta, o IC aumenta ou diminui?
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{O Erro Padrão}
+  \begin{displaymath}
+    IC: \bar{x} \pm 2\footnote{$t^{*} \approx$ 2} \times SEM
   \end{displaymath}
   \begin{exampleblock}{Exemplo 5.1}
     \begin{itemize}
@@ -453,7 +475,7 @@
     \item {\bf Ex. 5.2:} $\bar{x}$ = 99,0 e $s$ = 15,97 mmHg ($N=5$)
     \end{itemize}
   \end{exampleblock}
-  \begin{block}{Pergunta - podemos reproduzir o mesmo método?}
+  \begin{block}{Podemos reproduzir o mesmo método do 5.1 no 5.2?}
   \begin{itemize}
   \item SEM do exemplo 5.1 = 1,4
   \item SEM do exemplo 5.2 = 6,3?
@@ -462,7 +484,7 @@
 \end{frame}
 
 \begin{frame}{}
-    \begin{block}{Pergunta - podemos reproduzir o mesmo método?}
+    \begin{block}{Podemos reproduzir o mesmo método do 5.1 no 5.2?}
   \begin{itemize}
   \item SEM do exemplo 5.1 = 1,4
   \item SEM do exemplo 5.2 = 6,3?
@@ -474,12 +496,52 @@
     \bigskip
     Isso faz com que o SEM do exemplo 5.2 seja muito maior (como vimos).
   \end{block}
-  \begin{exampleblock}{ICs dos exemplos}
+  \begin{exampleblock}{Lembrete -- ICs dos exemplos}
     \begin{itemize}
-    \item O IC do exemplo 5.1: 120,6 até 126,2 mmHg
-    \item O IC do exemplo 5.2: 79,2 até 118,8 mmHg
+    \item O IC do exemplo 5.1: 120,6 -- 126,2 mmHg
+    \item O IC do exemplo 5.2: 79,2 -- 118,8 mmHg
     \end{itemize}
   \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \begin{exampleblock}{Lembrete -- ICs dos exemplos}
+    \begin{itemize}
+    \item O IC do exemplo 5.1: 120,6 -- 126,2 mmHg
+    \item O IC do exemplo 5.2: \alert{79,2 -- 118,8 mmHg}
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{No caso do exemplo 5.2}
+    \begin{itemize}
+    \item $\bar{x} = 99$ mmHg
+    \item O SEM proposto no slide anterior é $\approx$ 6 mmHg
+    \item A margem de erro seria {\bf 2} $\times $ 6 $\approx$ 12 mmHg
+    \end{itemize}
+      $\Rightarrow$ O IC proposto seria \alert{87 -- 111 mmHg}
+  \end{block}
+  \begin{block}{Pense...}
+    Qual parece ser a margem de erro {\em real} do IC acima?
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{exampleblock}{Lembrete -- ICs dos exemplos}
+    \begin{itemize}
+    \item O IC do exemplo 5.1: 120,6 -- 126,2 mmHg
+    \item O IC do exemplo 5.2: \alert{79,2 -- 118,8 mmHg}
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{No caso do exemplo 5.2}
+    \begin{itemize}
+    \item O SEM veio da ``fórmula''
+    \item Ambos SEM (5.1 e 5.2) estão corretos
+    \item O IC proposto seria \alert{87 -- 111 mmHg}
+    \item $t^{*} \approx$ 2 -- erro no 5.2
+    \end{itemize}
+  \end{block}
+  \begin{block}{Pense...}
+    Qual é a sua conclusão sobre esse $t^{*}$ misterioso?
+  \end{block}
 \end{frame}
 
 \section{Aprofundamento}
