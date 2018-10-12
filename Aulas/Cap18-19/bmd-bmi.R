@@ -53,3 +53,19 @@ ggsave("Aulas/Cap18-19/pratica-plot-resid.png", h = 7, w = 7)
 png("Aulas/Cap18-19/pratica-hist-resid.png")
 hist(residuals(modelo), col = "gray", main = "Distribuição dos resíduos", xlab = "")
 dev.off()
+
+BMD2 <- -3*BMI -
+  c(
+    rnorm(50, 0, 10), # introduzir heterocedasticidade
+    rnorm(50, 0, 20),
+    rnorm(50, 0, 40),
+    rnorm(50, 0, 40)
+    ) + 100
+heterocedasticidade <-  data.frame(BMI, BMD2)
+
+b2 <- ggplot(heterocedasticidade, aes(BMI, BMD2)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
+  ggtitle("BMI x BMD")
+ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade.png", h = 7, w = 7)
