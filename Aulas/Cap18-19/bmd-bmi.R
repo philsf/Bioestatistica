@@ -49,3 +49,7 @@ ggplot(data.frame(Fitted = fitted(modelo), Residuals = residuals(modelo)), aes(F
   geom_point() +
   ggtitle("Valores ajustados x Resíduos")
 ggsave("Aulas/Cap18-19/pratica-plot-resid.png", h = 7, w = 7)
+
+png("Aulas/Cap18-19/pratica-hist-resid.png")
+hist(residuals(modelo), col = "gray", main = "Distribuição dos resíduos", xlab = "")
+dev.off()
