@@ -570,13 +570,15 @@
 \end{frame}
 
 \begin{frame}[fragile]{Diagnosticando a regressão}
-  \begin{exampleblock}{}
+  \begin{block}{Perguntas}
     \begin{itemize}
+      \footnotesize
     \item Os resíduos são aprox. normais?
     \item Quantos \% de variabilidade podem ser explicados pelo modelo?
+    \item Qual é o BMD predito para um hipotético BMI = 0?
     \item Quanto o BMD muda, para cada unidade de BMI?
     \end{itemize}
-  \end{exampleblock}
+  \end{block}
   \begin{exampleblock}{Saída típica de um programa de análise}
     \tiny
 \begin{verbatim}
@@ -690,6 +692,108 @@ Residuals:
       \end{center}
     \end{column}
   \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Diagnosticando a regressão}
+  \begin{block}{Perguntas}
+    \begin{itemize}
+      \footnotesize
+    \item Os resíduos são aprox. normais?
+    \end{itemize}
+  \end{block}
+  \bigskip
+  \begin{exampleblock}{Resposta}
+    \begin{itemize}
+    \item Sim \hfill \footnotesize (probably...)
+    \end{itemize}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \scriptsize
+\begin{verbatim}
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-52.097 -13.864   0.762  10.707  58.730 
+\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Diagnosticando a regressão}
+  \begin{block}{Perguntas}
+    \begin{itemize}
+      \footnotesize
+    \item Quantos \% de variabilidade podem ser explicados pelo modelo?
+    \end{itemize}
+  \end{block}
+  \bigskip
+  \begin{exampleblock}{Resposta}
+    \begin{itemize}
+      \footnotesize 
+    \item Podemos explicar R2 = 57\% da variância observada no BMD
+
+      \scriptsize(considerando \alert{apenas} o BMI)
+      \bigskip
+    \item \scriptsize 43\% são devidos a outros fatores
+    \end{itemize}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \scriptsize
+\begin{verbatim}
+Multiple R-squared:  0.5691,	Adjusted R-squared:  0.5669 
+\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Diagnosticando a regressão}
+  \begin{block}{Perguntas}
+    \begin{itemize}
+      \footnotesize
+    \item Qual é o BMD predito para um hipotético BMI = 0?
+    \end{itemize}
+  \end{block}
+  \bigskip
+  \begin{exampleblock}{Resposta}
+    \begin{itemize}
+    \item BMD = 99 unidades
+    \end{itemize}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \scriptsize
+\begin{verbatim}
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  98.8176     4.6281   21.35   <2e-16 ***
+\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Diagnosticando a regressão}
+  \begin{block}{Perguntas}
+    \begin{itemize}
+      \footnotesize
+    \item Quanto o BMD muda, para cada unidade de BMI?
+    \end{itemize}
+  \end{block}
+  \bigskip
+    \begin{exampleblock}{Resposta}
+      \begin{itemize}
+      \item Decréscimo de 3 unidades de BMD
+
+        \bigskip
+        \scriptsize (para cada aumento unitário de BMI)
+    \end{itemize}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \scriptsize
+\begin{verbatim}
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+BMI          -2.9845     0.1846  -16.17   <2e-16 ***
+\end{verbatim}
+\end{exampleblock}
 \end{frame}
 
 \begin{frame}
