@@ -527,25 +527,28 @@
   \begin{center}
       \includegraphics[height=0.6\textheight]{Cap18-19/residuos2}
   \end{center}
+  \begin{center}
+    \small
+    Uma forma \alert{simplista} de aferir a qualidade do ajuste do modelo\footnote{Também chamada de Goodness of Fit (GoF)} é o Coeficiente de Determinação $r^2$.
 
-  \small
-  Uma forma \alert{simplista} de aferir a qualidade do ajuste do modelo de regressão\footnote{Também chamado de Goodness of Fit} é o Coeficiente de Determinação $r^2$
-
-  {\scriptsize (que corresponde ao quadrado de $r$!)}.
+    \medskip
+    {\scriptsize ($r^2$ corresponde ao quadrado de $r$!)}
+  \end{center}
 \end{frame}
 
   % Encontrando a inclinação e o intercepto da reta, podemos estimar
   % $\hat{Y}$ para valores arbitrários de $X$.
 
-\subsection[$R^2$]{Coeficiente de Determinação $r^2$}
+\subsection[$r^2$]{Coeficiente de Determinação $r^2$}
 
 \begin{frame}{Coeficiente de Determinação $r^2$}
   \begin{block}{Definição}
-    O \alert{coeficiente de determinação} $r^2$ é a relação da
-    variação explicada com a variação total.
+    \small
+    O \alert{coeficiente de determinação} $r^2$ é a razão entre
+    variância explicada e a variância total observada.
   \end{block}
   \begin{displaymath}
-    r^2 = \frac{\text{variação explicada}}{\text{variação total}}
+    r^2 = \frac{\text{variância explicada}}{\text{variância total}}
   \end{displaymath}
   \begin{itemize}
   \item Lembrando: $r^2$ é o quadrado de $r$!
@@ -865,7 +868,7 @@ Residuals:
   \begin{exampleblock}{Resposta}
     \begin{itemize}
       \footnotesize 
-    \item Podemos explicar R2 = 57\% da variância observada no BMD
+    \item Podemos explicar $r^2$ = 57\% da variância observada no BMD
 
       \scriptsize(considerando \alert{apenas} o BMI)
       \bigskip
@@ -977,13 +980,13 @@ BMI          -2.9845     0.1846  -16.17   <2e-16 ***
   \hfill \footnotesize (casos extremos)
 \end{frame}
 
-\begin{frame}{\small Dispersão em torno da reta {\bf cresce} ao longo da faixa (R2 = 42\%)}
+\begin{frame}{\small Dispersão em torno da reta {\bf cresce} ao longo da faixa ($r^2$ = 42\%)}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap18-19/pratica-plot-heterocedasticidade}
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Dispersão em torno da reta {\bf varia} ao longo da faixa (R2 = 29\%)}
+\begin{frame}{\small Dispersão em torno da reta {\bf varia} ao longo da faixa ($r^2$ = 29\%)}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap18-19/pratica-plot-heterocedasticidade-sin}
   \end{center}
@@ -1000,19 +1003,19 @@ BMI          -2.9845     0.1846  -16.17   <2e-16 ***
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Regressão linear simples x múltipla}
+\begin{frame}{\small Regressão linear simples x múltipla\footnote{Ajustar para outros fatores: como visto no abstract do exercício!}}
   \begin{block}{Outros fatores}
+    \small
     Nesses casos, não podemos explicar a variância do BMD apenas com o BMI.
 
     \bigskip
-    \small
     É evidente que algum outro fator {\it deveria} ter sido considerado no modelo
 
     \bigskip
     Isto permite \alert{ajustar} a heterogeneidade da variância observada com outros cofatores (além do BMI).
   \end{block}
   \vfill
-  \hfill \footnotesize (sai a regressão linear {\bf simples} e entra a {\bf múltipla})
+  \hfill \footnotesize (sai a regressão linear {\bf simples} e entra a {\bf múltipla} -- Cap 31)
 \end{frame}
 
 \subsection{Bônus: preditor categórico}
@@ -1063,6 +1066,7 @@ Multiple R-squared:  0.03996,	Adjusted R-squared:  0.03512
 F-statistic: 8.242 on 1 and 198 DF,  p-value: 0.004537
 \end{verbatim}
   \end{exampleblock}
+  \vfill
   \begin{exampleblock}{\small Interpretação (assumindo pareamento)}
     \begin{itemize}
       \scriptsize
@@ -1117,7 +1121,7 @@ F-statistic: 8.242 on 1 and 198 DF,  p-value: 0.004537
     \small
     
     \begin{itemize}
-    \item {\bf Capítulo 31}.
+    \item {\bf Capítulo 31} -- {\footnotesize fortemente recomendado para a aula que vem!}
       \scriptsize
     \item Schneider A, Hommel G, Blettner M, 2010.
 
