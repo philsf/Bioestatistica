@@ -598,14 +598,35 @@ F-statistic: 261.5 on 1 and 198 DF,  p-value: < 2.2e-16
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Análise de resíduos}
+\begin{frame}[fragile]{Análise de resíduos}
   \begin{itemize}
-  \item Como vimos, os resíduos são erros aleatórios (em torno do centro)
+  \item Como vimos, os resíduos são erros aleatórios
+
+    ({\footnotesize em torno da reta})
     \bigskip
+  \item {\small Erros que não podem ser explicados pelo modelo}
+    \bigskip
+
   \item Devem ser normalmente distribuídos em torno de zero
-    \bigskip
-  \item Podemos verificar esta premissa visualmente
+
+    ({\footnotesize reta como referência})
   \end{itemize}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \footnotesize
+\begin{verbatim}
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-52.097 -13.864   0.762  10.707  58.730 
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Análise de resíduos}
+  \begin{center}
+    \Large
+    Podemos também verificar esta premissa visualmente
+  \end{center}
 \end{frame}
 
 \begin{frame}{\footnotesize Análise de resíduos - gráfico de regressão}
