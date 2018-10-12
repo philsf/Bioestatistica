@@ -47,7 +47,7 @@
 {Comparação de dois grupos (quantitativo)}
 
 \subtitle
-{Testes para médias} % (optional)
+{Testes paramétricos para médias} % (optional)
 
 \author%[] % (optional, use only with lots of authors)
 {Felipe Figueiredo}% \and S.~Another\inst{2}}
@@ -166,7 +166,7 @@
 
 \subsection{Revisão}
 
-\begin{frame}{Revisão: hipótese nula}
+\begin{frame}{Revisão: hipóteses}
   \begin{block}{Conceito da hipótese nula}
     \begin{center}
       {\bf A hipótese de que não há efeito no tratamento.}
@@ -199,38 +199,55 @@
 \begin{frame}{Revisão: p-valor}
 \begin{block}{Interpretação do p-valor}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Um valor pequeno para o p-valor (tipicamente $p \le 0.05$)
     representa forte evidência para rejeitar a hipótese nula, então
     deve-se rejeitá-la.
+    \medskip
   \item Um valor alto para o p-valor (tipicamente $p \ge 0.05$)
     representa pouca evidência contra a hipótese nula, então não se
     deve rejeitá-la
+    \medskip
   \item Um valor próximo do ponto de corte ($0.05$) é considerado
-    marginal, portanto ``qualquer decisão pode ser tomada''. Sempre
-    apresente seu p-valor para que o leitor possa tirar suas próprias
-    conclusões.
+    marginal, portanto ``qualquer decisão pode ser tomada''.
   \end{itemize}
+  \begin{block}{}
+    \small
+    \begin{center}
+      Sempre apresente seu p-valor para que o leitor possa tirar suas
+      próprias conclusões.
+    \end{center}
+  \end{block}
 \end{block}
-Fonte: Rumsey, D. (Statistics for Dummies, 2nd ed.)
+\vfill
+{\hfill \scriptsize Fonte: Rumsey, D. (Statistics for Dummies, 2nd ed.)}
 \end{frame}
 
-\section{Testes paramétricos para médias}
-
-\begin{frame}{Testes estatísticos}
-  Testes estatísticos sempre seguem o mesmo roteiro
+\begin{frame}{Revisão: Roteiro}
   \begin{enumerate}
-  \small
-  \item A região crítica é escolhida (bilateral ou unilateral)?
+    \small
+  \item Cada teste usa uma distribuição de probabilidades
+    \medskip
+  \item A região crítica é escolhida (bilateral ou unilateral?)
+    \medskip
   \item As estatísticas sumárias são calculadas a partir da amostra
+    \medskip
   \item Estas são usadas para calcular uma estatística de teste
-  \item O valor da estatística de teste é o critério de decisão:
+    \medskip
+  \item A estatística de teste é o critério de decisão:
     \begin{itemize}
-    \item Pode ser comparado com um valor crítico, da distribuição de probabilidades; OU
-    \item {\bf A estatística de teste é usada para o cálculo do p-valor, e este é usado como critério}
+      \footnotesize
+      \medskip
+    \item Ela é comparada com um valor crítico da distribuição do teste
+      \begin{center}
+        OU
+      \end{center}
+    \item {\bf Ela é usada para o cálculo do p-valor}
     \end{itemize}
   \end{enumerate}
 \end{frame}
+
+\section{Testes paramétricos para médias}
 
 \begin{frame}{Testes paramétricos}
   \begin{itemize}
@@ -250,6 +267,34 @@ Fonte: Rumsey, D. (Statistics for Dummies, 2nd ed.)
   \item Hoje veremos o {\bf teste t} (de Student), aplicado em duas formas/contextos
   % \item Ele pode ser usado para um ou dois grupos de medições.
   \end{itemize}
+\end{frame}
+
+\begin{frame}{O teste t: características}
+  \begin{itemize}
+  \item {\bf Distribuição:} t de Student
+  \item {\bf Hipótese:} não há diferença entre as duas médias
+  \item {\bf Estatística de teste:} $t = \frac{\bar{x_d}}{SE_d}$
+  \end{itemize}
+  \vfill
+  \begin{block}{Interpretação da estatística de teste}
+    \centering
+    Quanto maior o valor de $t$ ...
+
+    \bigskip
+    ... maior a \alert{discrepância} entre as médias observadas
+    ({\footnotesize considerando a variabilidade do experimento}).
+  \end{block}
+\end{frame}
+
+\begin{frame}{Teste t para uma amostra}
+  \begin{center}
+    \large
+    Já vimos o teste t para uma amostra.
+
+    \bigskip
+
+    Hoje veremos como usá-lo para duas amostras.
+  \end{center}
 \end{frame}
 
 \subsection{Dois grupos independentes}
@@ -449,16 +494,80 @@ mean of the differences
   \hfill {\footnotesize Fonte: Khan Academy}
 \end{frame}
 
+\begin{frame}[fragile]{Tabulação dos dados\footnote{Organizar os dados desta forma, permite usar os filtros do Excel.}}
+  \begin{block}{Tabela de dados brutos}
+\begin{verbatim}
+      Grupo     Perda
+  1: Grupo1 12.184783
+  2: Grupo1 15.403181
+  3: Grupo1  8.891328
+  4: Grupo1  6.763672
+  5: Grupo1 10.168379
+ ---                 
+196: Grupo2 12.985339
+197: Grupo2  8.586228
+198: Grupo2 11.353364
+199: Grupo2  4.003958
+200: Grupo2  9.542041
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Repetir é fixar}
+    {\small
+    O slide de perguntas a seguir será apresentado mais de uma vez.}
+
+    \begin{center}
+      Mas vamos ponderar nelas um pouco agora.
+    \end{center}
+  \end{block}
+\end{frame}
+
 \begin{frame}[label=perguntas]{Perguntas}
   \begin{enumerate}
-  \item Para este estudo, qual dos dois testes é o mais apropriado?
-  \item Qual é a hipótese nula?
-  \item Qual é a hipótese alternativa?
+  \item Para este estudo, qual é o teste mais apropriado?
+  \item Quais são as hipóteses do teste?
+  \item Quais são as variáveis envolvidas?
   \item O que você usaria como critério de decisão?
+  \item O que significam os valores negativos?
   \item Qual é o resultado?
   \item Qual é a conclusão?
-  \item O que significam valores negativos neste caso?
   \end{enumerate}
+\end{frame}
+
+\begin{frame}{EDA\footnote{\scriptsize \url{https://en.wikipedia.org/wiki/Exploratory_data_analysis}}}
+  \begin{block}{Análise Exploratória de Dados (EDA)}
+    \footnotesize
+    Precisamos decidir a melhor metodologia a partir da análise descritiva.
+
+    \bigskip
+    Vamos iniciar investigando os dados de forma exploratória.
+  \end{block}
+  \vfill
+  \begin{block}{Objetivo (lembre-se do Virgílio)}
+    Verificar que premissas são razoavelmente atendidas...
+
+    \bigskip
+    ... ou evidentemente violadas.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    {\LARGE
+
+      Os dois testes serão avaliados, independente da sua escolha.
+
+    }
+  \end{center}
+  \vfill
+  \uncover<2>{
+    \begin{center}{}
+      \small
+      Vamos começar com uma visualização descritiva dos dados.
+    \end{center}
+  }
 \end{frame}
 
 \begin{frame}{Visualização (independentes)}
@@ -474,6 +583,13 @@ mean of the differences
 \end{frame}
 
 \againframe{perguntas}
+
+\begin{frame}
+  \begin{center}
+    \LARGE
+    O que muda em cada um dos resultados a seguir?
+  \end{center}
+\end{frame}
 
 \begin{frame}[fragile, label=t-indep]{Saída típica de um programa}
   \begin{block}{Teste t, amostras independentes}
@@ -513,12 +629,20 @@ mean of the differences
   \end{block}
 \end{frame}
 
+\begin{frame}
+  \begin{center}
+    \LARGE
+    Você já pode escolher o teste?
+  \end{center}
+\end{frame}
+
 \againframe{perguntas}
 
 \begin{frame}{}
-  \begin{block}{Pergunta}
+  \begin{center}
+    \LARGE
     Todas as premissas do teste que você selecionou são satisfeitas?
-  \end{block}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Distribuição (independentes)}
@@ -533,10 +657,11 @@ mean of the differences
   \end{center}
 \end{frame}
 
-\begin{frame}
-  \begin{block}{Caso de você tenha escolhido grupos independentes...}
+\begin{frame}{\small Caso de você tenha escolhido grupos independentes...}
+  \begin{center}
+    \LARGE
     Os dois grupos tem variabilidades semelhantes?
-  \end{block}
+  \end{center}
 \end{frame}
 
 \againframe{t-indep}
@@ -575,15 +700,24 @@ mean in group Grupo1 mean in group Grupo2
   \end{block}
 \end{frame}
 
+\begin{frame}{EDA concluída}
+  \begin{center}
+    \LARGE
+    Agora vamos discutir as respostas.
+  \end{center}
+\end{frame}
+
+\againframe{perguntas}
+
 \subsection{Resumo}
 
 \begin{frame}{Resumo}
   \begin{itemize}
     \small
-  \item Teste paramétrico (assume dados Normalmente distribuídos)
+  \item Testes paramétricos ({\footnotesize requer dados Normalmente distribuídos})
   \item Para dois grupos independentes assume independência inter- e intra-grupo, e DPs semelhantes
   \item Para dois grupos pareados assume independência entre os pares
-  \item Esta decisão \alert{não} deve ser tomada após a coleta dos dados.
+  \item Esta decisão \alert{não deve} ser tomada após a coleta dos dados\footnote{\scriptsize As comparações dos testes que fizemos aqui foram meramente didáticas. A EDA real terminaria nas visualizações e tabelas.}.
   \item Variáveis:
     \begin{itemize}
     \item Dependente: contínua

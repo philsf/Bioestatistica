@@ -165,110 +165,122 @@
   \end{block}
 \end{frame}
 
-\section{Covariância}
+\section{Introdução}
 
-\subsection[Covariância]{Covariância entre duas amostras}
+\subsection[Intro]{Introdução}
 
-\begin{frame}{Variância (Revisão)}
+\begin{frame}{Dispersão (Revisão)}
   \begin{itemize}
-  \item Relembrando: a variância (assim como o desvio-padrão) é uma
-    medida da dispersão da amostra
-  \item Medida sumária que resume o quanto os dados se desviam da
-    média
-  \item Podemos usar um raciocínio análogo para comparar quanto uma
-    amostra se desvia em relação à outra
-  % \item Isto é, quanto uma 
+    \small
+  \item A variância (assim como o DP) é uma medida da dispersão da
+    amostra
+  \item P: o quanto os dados se desviam da média?
+  \item Medida sumária: um único número para a amostra
   \end{itemize}
+  \bigskip
   \begin{block}{Interpretação}
-    Quanto maior a variância, maior a dispersão em relação ao centro.
+    \small
+    Quanto maior a variância...
+
+  \bigskip
+    ... maior a dispersão em relação ao centro.
   \end{block}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``pequena''}
+\begin{frame}{\small Visualização - Dispersão ``pequena''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-P}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``média''}
+\begin{frame}{\small Visualização - Dispersão ``média''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-M}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``grande''}
+\begin{frame}{\small Visualização - Dispersão ``grande''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-G}
   \end{center}
 \end{frame}
 
-\begin{frame}{Variância em cada eixo}
+\begin{frame}{Dispersão em cada eixo}
   \begin{itemize}
-  \item Como vamos medir a variância {\bf entre} duas variáveis, devemos considerar a variância de cada uma delas
-  \item Exemplos anteriores, variância no eixo horizontal
-  \item Vamos rever, agora na vertical
+    \footnotesize
+  \item Para medir a associação {\bf entre} duas variáveis contínuas, devemos considerar a dispersão de cada uma delas
+    \bigskip
+    \small
+  \item Exemplos anteriores: dispersão no eixo horizontal
+  \item Vejamos agora no eixo vertical
+    \bigskip
+    \footnotesize
   \item (e aproveitar para incrementar a visualização de {\bf uma} variância)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``pequena'' - boxplot}
+\begin{frame}{\small Visualização - Dispersão ``pequena'' - boxplot}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-box-P}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``média'' - boxplot}
+\begin{frame}{\small Visualização - Dispersão ``média'' - boxplot}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-box-M}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - Variância ``grande'' - boxplot}
+\begin{frame}{\small Visualização - Dispersão ``grande'' - boxplot}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/dot-box-G}
   \end{center}
 \end{frame}
 
-\begin{frame}{Covariância entre duas amostras}
-  \begin{definition}
-    A covariância entre duas variáveis X e Y é uma medida de quanto
-    ambas variam juntas (uma em relação à outra).
-  \end{definition}
+% \begin{frame}{Covariância entre duas amostras}
+%   \begin{definition}
+%     A covariância entre duas variáveis X e Y é uma medida de quanto
+%     ambas variam juntas (uma em relação à outra).
+%   \end{definition}
+%   \begin{itemize}
+%   \item Um único número que representa a variação conjunta entre as duas variáveis
+%   \item Pode assumir qualquer valor (positivo, negativo, etc)
+%   \item Magnitude absoluta (desconsiderando o sinal) indica o grau de dependência
+%   \item Obs: duas variáveis independentes tem covariância igual a zero!
+%   \end{itemize}
+% \end{frame}
+
+\begin{frame}{Dispersão ``conjunta'' entre duas variáveis}
+  \small
   \begin{itemize}
-  \item Um único número que representa a variação conjunta entre as duas variáveis
-  \item Pode assumir qualquer valor (positivo, negativo, etc)
-  \item Magnitude absoluta (desconsiderando o sinal) indica o grau de dependência
-  \item Obs: duas variáveis independentes tem covariância igual a zero!
+  \item Podemos usar um raciocínio análogo para comparar quanto uma
+    amostra se desvia \alert{em relação à outra}
+
+  \item Pareando duas amostras, podemos tentar observar:
+    \begin{itemize}
+    \item a dispersão no eixo horizontal (difícil)
+    \item a dispersão no eixo vertical (difícil)
+      \medskip
+    \item a ``dispersão conjunta'' entre ambas (fácil)
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Covariância}
-  \begin{center}
-    \includegraphics[height=.8\textheight]{Cap17/anim-0}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Covariância}
+\begin{frame}{\small Visualização - Dispersão ``pequena''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-1}
   \end{center}
 \end{frame}
 
-\begin{frame}{Covariância}
+\begin{frame}{\small Visualização - Dispersão ``média''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-2}
   \end{center}
 \end{frame}
 
-\begin{frame}{Covariância}
+\begin{frame}{\small Visualização - Dispersão ``grande''}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-3}
-  \end{center}
-\end{frame}
-
-\begin{frame}{Covariância - amostras independentes}
-  \begin{center}
-    \includegraphics[height=.8\textheight]{Cap17/anim-n}
   \end{center}
 \end{frame}
 
@@ -278,19 +290,44 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Normalização}
-  \begin{block}{Teoria x Prática}
-    A covariância é útil para entender a força (e direção) da associação entre duas variáveis, mas {\em o fato de ela não ter uma escala definida a torna difícil de usar na prática}.
-
+\begin{frame}{\small Dispersão - casos extremos}
+  \begin{itemize}
+    \small
+  \item Esta dispersão conjunta é a base para entender a associação
     \bigskip
-    Precisamos de uma medida semelhante de associação, mas que fique em uma escala restrita (digamos, sempre entre -1 e 1).
-  \end{block}
-
-  \bigskip
-  O nome desta solução é \alert{coeficiente de correlação} $r$.
-  
+  \item Nos dois casos extremos temos:
+    \begin{itemize}
+    \item duas variáveis perfeitamente associadas
+    \item duas variáveis não associadas
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
+\begin{frame}{\small Visualização - Dispersão conjunta ``inexistente''}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-0}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Visualização - Dispersão amostras independentes}
+  \begin{center}
+    \includegraphics[height=.8\textheight]{Cap17/anim-n}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Medida de associação entre duas variáveis contínuas}
+  \begin{itemize}
+    \small
+  \item O DP é uma medida a dispersão de uma variável contínua.
+    \bigskip
+  \item Existe um análogo para duas variáveis, simultaneamente.
+  \end{itemize}
+
+  \vfill
+  \begin{block}{}
+    O nome desta solução é \alert{coeficiente de correlação} $r$.
+  \end{block}
+\end{frame}
 
 \section{Correlação}
 
@@ -629,45 +666,72 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-      \item O tamanho da amostra foi $n=13$
-      \item (Antigamente) consultáva-se o valor crítico de $r$ na tabela
-      \item $H_0$ : não há relação entre as variáveis na população ($H_0: \rho = 0$).
-      \item Observe: Quais são as informações necessárias para se consultar a tabela?
+        \footnotesize
+      \item Tamanho da amostra: $n=13$
+      \bigskip
+      \item {\bf Premissa:} ambas variáveis tem o mesmo $n$
+      \item {\bf Premissa:} mensurações vem da mesma população
+      \item {\bf Premissa:} população Normal
       \end{itemize}
+      \bigskip
+      \begin{block}{}
+        \footnotesize
+        $H_0$: Não há relação entre as variáveis na população:
+
+        \medskip
+        $H_0: \rho = 0$
+      \end{block}
     \end{column}
     \begin{column}{5cm}
-      \includegraphics[height=0.8\textheight]{Cap17/test}
+      \includegraphics[height=0.8\textheight]{Cap17/table}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{Exemplo}
-  \begin{itemize}
-  \item O valor crítico da tabela para uma amostra de tamanho 13 é
-    $r_c = 0.553$
-  \item A correlação calculada para esta amostra foi $r=0.77$
-  \item Como a correlação é maior que o valor crítico, a relação é
-    estatisticamente significativa
-  \item Conclusão: há evidências para rejeitar a $H_0$ que não há
-    relação entre as variáveis.
-  \end{itemize}
+\begin{frame}[fragile]{Saída típica de um programa}
+  \begin{exampleblock}{Resultados brutos do exemplo}
+    \footnotesize
+\begin{verbatim}
+	Pearson's product-moment correlation
+
+data:  Gordura and Insulina
+t = 4.0026, df = 11, p-value = 0.002077
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 0.3804100 0.9274906
+sample estimates:
+      cor
+0.7700025
+\end{verbatim}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Exemplo}
-  \begin{itemize}
-  \item Pode-se também calcular o p-valor para o coeficiente de
-    correlação $r$.
-  \item Para este exemplo, teríamos $p=0.0021$.
-  \item Interpretação: se não houver relação entre as variáveis
-    ($H_0$), existe apenas 0.21\% de chance de observamos uma
-    correlação tão (ou mais) forte com um estudo deste tamanho
-  \end{itemize}
+  \begin{exampleblock}{Resultados}
+    \begin{itemize}
+      \footnotesize
+    \item $r = 0.77,\ p=0.0021$.
+    \item Interpretação: se não houver relação entre as variáveis
+      ($H_0$), existe apenas 0.21\% de chance de observamos uma
+      correlação tão (ou mais) forte com um estudo deste tamanho
+
+      \bigskip
+      \bigskip
+    \item $IC = [0.38, 0.93]$
+    \item Interpretação: (...) temos 95\% de confiança que a correlação real está entre 0.38 e 0.93.
+    \item (...) e que ela é positiva!
+    \end{itemize}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Exemplo}
+  \small
   Por que as duas variáveis são tão correlacionadas? Considere 4
   possibilidades:
+  \bigskip
   \begin{enumerate}
+    \footnotesize
   \item o conteúdo lipídico das membranas \alert<1>{determina} a
     sensibilidade à insulina
   \item A sensibilidade à insulina de alguma forma \alert<2>{afeta} o conteúdo lipídico
@@ -686,8 +750,9 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \end{block}
 \end{frame}
 
-\begin{frame}{Interpretando o $r$}
+\begin{frame}{Interpretando o teste de correlação}
   \begin{itemize}
+    \small
   \item Nunca devemos ignorar a última possibilidade (erro tipo I)!
   \item o p-valor indica quão rara é essa coincidência
   \item neste caso, em apenas 0.21\% dos experimentos não haveria uma
@@ -745,7 +810,7 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \subsection{Interpretação}
 % \subsection{Interpretação}
 
-\begin{frame}{Interpretação}
+\begin{frame}{Interpretando o $r$}
   \begin{itemize}
   \item Se a correlação é 0, então X e Y não variam juntos (independentes)
   \item Se a correlação é positiva, então quando uma aumenta, a outra
@@ -756,18 +821,24 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{frame}
 
 
-\begin{frame}{Cuidado!}
-  \begin{itemize}
-  \item Duas variáveis podem \alert{parecer} correlacionadas pois são
+\begin{frame}{}
+  \begin{block}{Cuidado!}
+    Duas variáveis podem \alert{parecer} correlacionadas pois são
     influenciadas por uma terceira variável
-  \item Ex: em alguns países a mortalidade infantil é negativamente
-    correlacionada com o número de telefones per capita
-  \item Mas comprar mais telefones não vai salvar crianças!
-  \item Explicação alternativa: a melhoria da condições financeiras
-    pode afetar ambas as variáveis
-% tanto a quantidade de telefones, quanto a longevidade
-    % infantil
-  \end{itemize}
+  \end{block}
+  \begin{exampleblock}{Exemplo}
+    \begin{itemize}
+      \footnotesize
+    \item Em alguns países a mortalidade infantil é negativamente
+      correlacionada com o número de telefones per capita
+    \item Mas comprar mais telefones não vai salvar crianças!
+      \bigskip
+    \item Explicação alternativa: a melhoria da condições financeiras
+      pode afetar ambas as variáveis
+      % tanto a quantidade de telefones, quanto a longevidade
+      % infantil
+    \end{itemize}    
+  \end{exampleblock}
 \end{frame}
 
 \section{Resumo}
@@ -800,29 +871,38 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 
 \begin{frame}{Exemplo}
   Gasto com C\&T (EUA) x Suicídios por enforcamento
+  \bigskip
+
   \includegraphics[width=\textwidth]{Cap17/us-spending-on-science-space-and-technology_suicides-by-hanging-strangulation-and-suffocation}
 
+  \bigskip
   Correlação: 0.992082
 
-  (Fonte: Spurious correlations)
+  \hfill \scriptsize (Fonte: Spurious correlations)
 \end{frame}
 
 \begin{frame}{Exemplo}
   Produção de mel x Prisões por posse de maconha
+  \bigskip
+
   \includegraphics[width=\textwidth]{Cap17/honey-producing-bee-colonies-us_juvenile-arrests-for-possession-of-marijuana-us}
 
+  \bigskip
   Correlação: -0.933389
 
-  (Fonte: Spurious correlations)
+  \hfill \scriptsize (Fonte: Spurious correlations)
 \end{frame}
 
 \begin{frame}{Exemplo}
   Afogamentos em piscina x Filmes com Nicholas Cage
+  \bigskip
+
   \includegraphics[width=\textwidth]{Cap17/number-people-who-drowned-by-falling-into-a-swimming-pool_number-of-films-niclas-cage-appeared-in}
 
+  \bigskip
   Correlação: 0.666004
 
-  (Fonte: Spurious correlations)
+  \hfill \scriptsize (Fonte: Spurious correlations)
 \end{frame}
 
 \againframe{mantra}
