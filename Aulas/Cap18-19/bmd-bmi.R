@@ -38,3 +38,9 @@ ggsave("Aulas/Cap18-19/pratica-plot2.png", h = 7, w = 7)
 bsmooth + geom_vline(xintercept = 28, lty = 2, lwd =1, col = "red")
 ggsave("Aulas/Cap18-19/pratica-plot3.png", h = 7, w = 7)
 
+bsmooth.only <- ggplot(dados, aes(BMI, BMD)) +
+  geom_smooth(method = "lm") +
+  xlim(range(BMI)) + ylim(range(BMD)) +
+  xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
+  ggtitle("BMI x BMD")
+ggsave("Aulas/Cap18-19/pratica-plot4.png", h = 7, w = 7)
