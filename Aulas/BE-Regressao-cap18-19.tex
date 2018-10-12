@@ -48,7 +48,7 @@
 {Regressão Linear Simples}
 
 \subtitle
-{Modelos Estatísticos Aplicados} % (optional)
+{Modelos com desfecho contínuo} % (optional)
 
 \author%[] % (optional, use only with lots of authors)
 {Felipe Figueiredo}% \and S.~Another\inst{2}}
@@ -168,6 +168,22 @@
 \subsection{Modelos em geral}
 
 \begin{frame}{Modelos}
+  \begin{block}{Definição}
+    \small
+    Versão simplificada da realidade, adequada ao fim pretendido.
+  \end{block}
+  \bigskip
+  \small
+  Modelos servem para:
+  \begin{itemize}
+    \footnotesize
+  \item representar fenômenos, experimentos, dados, etc. de \alert{forma tratável};
+  \item avaliar cenários controlados, menos complexos que a realidade;
+  \item extrapolar resultados e conclusões.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Modelos}
   \centering
   \includegraphics[height=\textheight]{Cap18-19/gi}
 \end{frame}
@@ -182,32 +198,95 @@
   \includegraphics[width=\textwidth]{Cap18-19/GFP_hiir}
 \end{frame}
 
-\subsection{Modelos estatísticos}
+\subsection{Trailer}
 
 \begin{frame}{Modelos estatísticos}
-  Modelos servem para:
   \begin{itemize}
-  \item representar de forma simplificada fenômenos, experimentos,
-    dados, etc;
-  \item possibilitar análise em cenários controlados, menos complexos
-    que a realidade;
-  \item extrapolar resultados e conclusões.
+    \footnotesize
+  \item Distribuições de probabilidade servem como modelo para a distribuição dos dados (teórico x empírico)
+    \bigskip
+  \item Modelos de regressão servem como um {\it framework} para testar hipóteses {\bf específicas} sobre a relação presumida entre variáveis
   \end{itemize}
+  \vfill
+  \begin{block}{Modelo de regressão}
+    Formulação explícita de uma hipótese sobre a associação entre o desfecho (contínuo, neste contexto) e o preditor
+  \end{block}
 \end{frame}
 
 \begin{frame}{Modelos estatísticos}
-  Ao ajustar um modelo aos dados, podemos:
-  \begin{itemize}
-  \item fazer predições dentro do intervalo observado para dados que
-    não foram obtidos (interpolação)
-  \item fazer predições fora do intervalo observado (extrapolação)
-  \end{itemize}
+  \begin{block}{Modelo explicativo/explanatório}
+    \small
+    Verificação ou teste de hipóteses sobre a relação entre as variáveis avaliadas.
+  \end{block}
+  \bigskip
+  \begin{block}{Modelo preditivo}
+    \small
+    Estimativa do resultado esperado, mesmo para dados que não foram testados...
+
+    \bigskip
+    \footnotesize
+    ... restrito ao intervalo testado.
+  \end{block}
 \end{frame}
 
 \begin{frame}{Para todos os gostos...}
   \begin{center}
-    \includegraphics[height=.9\textheight]{Cap18-19/modelos-table1}
+    \includegraphics[height=\textheight]{Cap18-19/modelos-table1}
   \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Decaimento de anticorpos de neonatos recebidos da mãe}
+  \begin{block}{\scriptsize Modelo linear -- polinômio de grau 1}
+    \begin{center}
+      \includegraphics[width=.3\textwidth]{Cap18-19/cinetica-dengue2-poly1}
+    \end{center}
+  \end{block}
+  \begin{block}{\scriptsize Modelos polinomiais de grau 2 e 3}
+    \begin{center}
+      \includegraphics[width=.3\textwidth]{Cap18-19/cinetica-dengue2-poly2}
+      \includegraphics[width=.3\textwidth]{Cap18-19/cinetica-dengue2-poly3}
+    \end{center}
+  \end{block}
+  {\hfill \scriptsize Tese Doutorado Ana Claudia Duarte -- IOC/Fiocruz 2017}
+\end{frame}
+
+\begin{frame}{\small E você pensando...}
+    \begin{center}
+      \includegraphics[height=.8\textheight]{Cap18-19/bhaskara}
+    \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Modelos dose-resposta}
+  \begin{block}{\scriptsize Modelo de regressão logística 4 parâmetros}
+    \begin{columns}
+      \begin{column}{5cm}
+        \begin{center}
+          \includegraphics[width=.5\textwidth]{Cap18-19/Dose-response-Hill-eq}
+        \end{center}
+      \end{column}
+      \begin{column}{5cm}
+        \tiny
+
+        $$\hat{Y} = a + \frac{b-a}{\left[ 1 + \left(\frac{c}{X}\right)\right]}$$
+      \end{column}
+    \end{columns}
+    {\hfill \tiny Gadagkar, Call, 2015; J. Pharmacol. Toxicol. Methods}
+  \end{block}
+  \begin{block}{\scriptsize Aplicações (EC50, IC50, ED50, TD50, LD50, ...)}
+    \begin{center}
+      \includegraphics[width=.35\textwidth]{Cap18-19/Dose-response-curve-of-aqueous-garlic-extract-on-viability-of-Mus-musculus-colon}
+      \includegraphics[height=.3\textheight]{Cap18-19/Dose-response-curves-and-IC50-values-of-Src-kinase-inhibition-for-baicalin-and-baicalein}
+    \end{center}
+    {\hfill \tiny [1] Gupta, Lee, 2013;\ \ [2] Jelic, et al., 2016}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \Large Vamos começar pelo modelo mais simples
+  \end{center}
+  \vfill
+  \hfill \footnotesize (Hoje, apenas desfecho contínuo!)
 \end{frame}
 
 \section[Regressão]{Regressão Linear Simples}
@@ -216,12 +295,14 @@
 
 \begin{frame}{Modelo de regressão linear simples}
   \begin{block}{}
+    \small
       Quando os dados indicam uma relação linear, um modelo de regressão pode ser utilizado para quantificar esta relação com uma {\bf reta de regressão}.
     \end{block}
   \begin{exampleblock}{Exemplo: Algumas aplicações}
 %    Exemplos de perguntas que podem ser respondidas por tal modelo:
 
     \begin{itemize}
+      \footnotesize
     \item Tendência (``Níveis de insulina em jejum tendem a aumentar com a idade?'')
     \item Ajuste de curva (``Qual é o EC$_{50}$ de uma nova droga?'')
     \item Predição (``Como predizer o risco de infarto do miocárdio, sabendo-se a idade, pressão e nível de colesterol?'')
@@ -247,7 +328,7 @@
       \begin{itemize}
       \item Dados simulados, inspirados no paper.
       \item Existe uma tendência? Ela é linear?
-      \item Podemos predizer a osteoporose a partir do IMC?
+      \item Podemos estimar BMD sabendo o IMC?
       \end{itemize}
     \end{column}
     \begin{column}{5cm}
@@ -258,16 +339,85 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Reta de regressão}
-  \begin{definition}
-    Uma \alert{reta de regressão} (também chamada de reta de melhor
-    ajuste) é a reta para a qual a soma dos erros quadráticos dos
-    resíduos é o mínimo.
-  \end{definition}
+\begin{frame}{Quais são as variáveis?}
   \begin{itemize}
-  \item É a reta que melhor se ajusta aos dados
-  \item Minimiza os resíduos
+  \item Dependente: BMD (contínua)
+    \begin{itemize}
+      \scriptsize
+    \item Sinônimos: desfecho, resposta
+    \end{itemize}
+  \item Independente: BMI (contínua)
+    \begin{itemize}
+      \scriptsize
+    \item Sinônimos\footnote{\scriptsize Em alguns contextos também covariável/cofator (quando há mais de uma V.I.)}: preditor, fator
+    \end{itemize}
   \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Revisão: equação da reta}
+  \begin{itemize}
+    \small
+  \item A equação de uma reta é definida pela fórmula
+    \begin{displaymath}
+      \text{BMD} = \alert{a} \times \text{BMI} + \alert{b}
+    \end{displaymath}
+  \item Duas ``variáveis'' e dois parâmetros
+    \begin{itemize}
+      \scriptsize
+    \item BMD é a variável dependente (dados)
+    \item BMI é a variável independente (dados)
+    \item \alert{$b$} é o intercepto ({\it intercept})
+    \item \alert{$a$} é a inclinação ({\it slope})
+    \end{itemize}
+  \end{itemize}
+  \bigskip
+  \begin{block}{\footnotesize Inversão, em relação à matemática básica}<2>
+    \begin{itemize}
+    \item Note que aqui os ``dados'' já foram coletados (fixos)
+    \item Nosso objetivo é estimar os parâmetros da reta \alert{$b$} e \alert{$a$}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Interpretação dos parâmetros da reta}
+  \begin{itemize}
+    \small
+  \item O intercepto é o valor (hipotético) de BMD quando BMI = 0
+  \item A inclinação é quanto BMD altera\footnote{na média!} quando aumentamos o BMI em 1 unidade
+  \end{itemize}
+  \vfill
+  \begin{block}{Atenção}
+    Para estas interpretações serem válidas, a relação deve ser linear (proporcional).
+  \end{block}
+\end{frame}
+
+\begin{frame}{Reta de regressão}
+  \begin{block}{Definição}
+    \small Uma \alert{reta de regressão} é a reta para a qual a soma
+    dos erros quadráticos dos resíduos ($\varepsilon$) é o mínimo.
+  \end{block}
+  \bigskip
+  \uncover<2->{\begin{itemize}
+    \scriptsize
+  \item Também chamada de reta de melhor ajuste
+  \item Minimiza os resíduos (erros aleatórios $\varepsilon$)\footnote{Método dos mínimos quadrados}
+  \item Erros aleatórios $\varepsilon$ em torno de zero
+  \item Dados observados: Y (desfecho contínuo) e X (preditor)
+  \item Parâmetros estimados ($\beta_0$ e $\beta_1$)
+  \end{itemize}}
+  \vfill
+  \begin{block}{Formulação}
+    \footnotesize
+    \begin{displaymath}
+      Y = \beta_0 + \beta_1 X + \varepsilon
+    \end{displaymath}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Resíduos}
@@ -275,10 +425,10 @@
       \includegraphics[height=0.6\textheight]{Cap18-19/residuos}
   \end{center}
 
-  \begin{definition}
-    Resíduos são a distância entre o dado observado e a reta estimada
-    (modelo).
-  \end{definition}
+  \begin{block}{Definição}
+    \small
+    Resíduos são a distância entre o dado observado e a reta.
+  \end{block}
 \end{frame}
 
 \begin{frame}{Atenção}
@@ -289,27 +439,11 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Elementos da reta de regressão}
-  \begin{itemize}
-  \item Relembrando: a equação de uma reta é definida pela fórmula
-    \begin{displaymath}
-      \hat{y} = \alert{a} x + \alert{b}
-    \end{displaymath}
-  \item No caso da reta regressora:
-    \begin{itemize}
-    \item $y$ é a variável dependente
-    \item $x$ é a variável independente
-    \item $a$ é a inclinação
-    \item $b$ é o intercepto
-    \end{itemize}
-  \item Assim, o objetivo da análise de regressão é encontrar os
-    valores \alert{$a$} e \alert{$b$}
-  \end{itemize}
-\end{frame}
-
 \begin{frame}{Análise de Regressão}
   Para determinar a inclinação e o intercepto, usamos:
+  \bigskip
   \begin{itemize}
+    \scriptsize
   \item as médias de $X$ e $Y$
   \item as variâncias de $X$ e $Y$
   \item o coeficiente de correlação $r$ entre $X$ e $Y$
@@ -320,24 +454,56 @@
 
 \subsection{A regressão}
 
-\begin{frame}{Exemplo}
-  \begin{example}
+\begin{frame}{Exemplo 17.1}
+  \begin{exampleblock}{Exemplo 17.1}
     Voltemos ao exemplo de associar a composição lipídica com a sensibilidade a insulina.    
-  \end{example}
+  \end{exampleblock}
   \begin{block}{Pergunta}
-    Qual é o acréscimo na sensibilidade à insulina, para cada unidade aumentada na composição lipídica?
+    Podemos explicar o ``comportamento'' e a variabilidade da insulina sabendo a composição lipídica?
   \end{block}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: insulina (contínua)
+  \item Independente: conteúdo lipídico (contínua)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{insulina} \sim \text{conteúdo lipídico}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\small Componentes da regressão linear simples}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{insulina} \sim \text{conteúdo lipídico}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{insulina} =\beta_0 + \beta_1 \text{(conteúdo lipídico)} + \varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  \footnotesize
+  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+\end{frame}
+
+\begin{frame}{Exemplo 17.1}
   \centering
   \includegraphics[width=.9\textwidth]{Cap18-19/regressao1}
 
   \vfill
-  Fonte: Motulsky, 1995
+  \hfill \footnotesize Fonte: Motulsky, 1995
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{Exemplo 17.1}
   \centering
   \includegraphics[width=1.2\textwidth]{Cap18-19/regressao2}
 \end{frame}
@@ -348,8 +514,12 @@
   \item A inclinação é $\approx \alert{37.2}$
   \item Isto significa que:
   \end{itemize}
-  \begin{block}{}
-    para cada unidade aumentada no \%C20--22, teremos um aumento proporcional de aproximadamente 37.2 mg/m$^2$/min na sensibilidade à insulina
+  \begin{block}{Interpretação da inclinação}
+    \small
+    para cada unidade aumentada no \%C20--22...
+
+    \bigskip
+    ... teremos um aumento proporcional de aproximadamente 37.2 mg/m$^2$/min na sensibilidade à insulina
   \end{block}
 \end{frame}
 
@@ -357,27 +527,28 @@
   \begin{center}
       \includegraphics[height=0.6\textheight]{Cap18-19/residuos2}
   \end{center}
+  \begin{center}
+    \small
+    Uma forma \alert{simplista} de aferir a qualidade do ajuste do modelo\footnote{Também chamada de Goodness of Fit (GoF)} é o Coeficiente de Determinação $r^2$.
 
-  \begin{itemize}
-  \item A qualidade do ajuste do modelo de regressão é determinado
-    pelo \alert{coeficiente de determinação} $r^2$
-  % \item A semelhança de nomenclatura com o coeficiente $r$ não é mera
-  %   coincidência.
-  \end{itemize}
+    \medskip
+    {\scriptsize ($r^2$ corresponde ao quadrado de $r$!)}
+  \end{center}
 \end{frame}
 
   % Encontrando a inclinação e o intercepto da reta, podemos estimar
   % $\hat{Y}$ para valores arbitrários de $X$.
 
-\subsection[$R^2$]{Coeficiente de Determinação $r^2$}
+\subsection[$r^2$]{Coeficiente de Determinação $r^2$}
 
 \begin{frame}{Coeficiente de Determinação $r^2$}
-  \begin{definition}
-    O \alert{coeficiente de determinação} $r^2$ é a relação da
-    variação explicada com a variação total.
-  \end{definition}
+  \begin{block}{Definição}
+    \small
+    O \alert{coeficiente de determinação} $r^2$ é a razão entre
+    variância explicada e a variância total observada.
+  \end{block}
   \begin{displaymath}
-    r^2 = \frac{\text{variação explicada}}{\text{variação total}}
+    r^2 = \frac{\text{variância explicada}}{\text{variância total}}
   \end{displaymath}
   \begin{itemize}
   \item Lembrando: $r^2$ é o quadrado de $r$!
@@ -387,24 +558,41 @@
 \end{frame}
 
 \begin{frame}{Coeficiente de Determinação $r^2$}
-  \begin{itemize}
-  % \item A variância dos dados pode ser explicada de várias formas
-  \item Qual é a porcentagem da variação dos dados pode ser explicada
-    pela reta regressora?
-  \item O coeficiente $r^2$ é a fração da variância que é
-    compartilhada entre $X$ e $Y$.
-  \item Como $r$ está sempre entre -1 e 1, $r^2$ está sempre entre 0 e
-    1.
+  \begin{block}{}
+    \begin{itemize}
+      \small
+      % \item A variância dos dados pode ser explicada de várias formas
+    \item Qual é a porcentagem da variância dos dados pode ser explicada
+      pela reta regressora?
+      \medskip
+    \item O coeficiente $r^2$ é a fração da variância que é
+      compartilhada entre $X$ e $Y$.
+    \end{itemize}
+  \end{block}
+    \vfill
+    \begin{itemize}
+      \small
+    \item Obs: Como $r$ está sempre entre -1 e 1
+    \begin{itemize}
+      \scriptsize
+    \item $|r|$ está sempre entre 0 e 1
+      \medskip
+    \item $r^2$ está sempre entre 0 e 1
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Coeficiente de Determinação $r^2$}
-  \begin{itemize}
-  \item Além disso, $r^2 \le |r|$
-  \item Por que?
-  \end{itemize}
   \begin{block}{}
+    \centering
+    Além disso, $r^2 \le |r|$
+  \end{block}
+  \bigskip
+  \begin{exampleblock}{Por que?}
+    \small
     Compare os seguintes números entre 0 e 1:
+    \bigskip
+    \scriptsize
     \begin{displaymath}
       \frac{1}{2} \text{ e } \left(\frac{1}{2}\right)^2=\frac{1}{4} \Rightarrow
       \frac{1}{4} \le \frac{1}{2}
@@ -413,15 +601,22 @@
       \frac{1}{3} \text{ e } \left(\frac{1}{3}\right)^2=\frac{1}{9} \Rightarrow
       \frac{1}{9} \le \frac{1}{3}
     \end{displaymath}
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
-
-% \begin{frame}{Coeficiente de Determinação $r^2$}
-%   \begin{itemize}
-%   \item 
-%   \end{itemize}
-% \end{frame}
+\begin{frame}{Exemplo 17.1}
+  \begin{exampleblock}{Exemplo 17.1}
+    \small
+    Na aula de correlação linear produto-momento de Pearson, vimos que para o exemplo 17.1, $r=0.77$.
+    \begin{displaymath}
+      r^2 = 0.77^2 = 0.59
+    \end{displaymath}
+  \end{exampleblock}
+        \bigskip
+  \begin{exampleblock}{\small Interpretação do Coeficiente de Determinação $r^2$}
+    Podemos explicar 59\% da variância da insulina considerando apenas o conteúdo lipídico.
+  \end{exampleblock}
+\end{frame}
 
 \subsection{Exercício}
 
@@ -443,21 +638,87 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Na prática...}
+\begin{frame}[label=plot2]{Na prática...}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap18-19/pratica-plot2}
   \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{}
-  \begin{exampleblock}{}
+\begin{frame}{Na prática...}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+        \small
+      \item \alert{Se o modelo é adequado}, podemos substituir isto...
+        \bigskip
+      \item<0> ... por isto
+        \bigskip
+      \item<0> Como saber se o modelo representa bem os dados?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=1.1\textwidth]{Cap18-19/pratica-plot2}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Na prática...}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+        \small
+      \item \alert{Se o modelo é adequado}, podemos substituir isto...
+        \bigskip
+      \item ... por isto
+        \bigskip
+      \item<2> Como saber se o modelo representa bem os dados?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=1.1\textwidth]{Cap18-19/pratica-plot4}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Diagnosticando a regressão}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+        \small
+      \item \alert<2>{A dispersão em torno da reta é aprox. aleatória?}
+        \bigskip
+      \item Observe o formato faixa de confiança em torno da reta
+        \bigskip
+        \scriptsize
+      \item A dispersão do desfecho pode ser explicada pela variável independente?
+      \item Toda? Parte? Quanta?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=1.1\textwidth]{Cap18-19/pratica-plot2}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\againframe{plot2}
+
+\begin{frame}[fragile]{Diagnosticando a regressão}
+  \begin{block}{Perguntas}
     \begin{itemize}
+      \footnotesize
     \item Os resíduos são aprox. normais?
-    \item Quantos \% de variabilidade podem ser explicados pelo modelo?
+    \item Quantos \% de variância podem ser explicados pelo modelo?
+    \item Qual é o BMD predito para um hipotético BMI = 0?
     \item Quanto o BMD muda, para cada unidade de BMI?
     \end{itemize}
-  \end{exampleblock}
-  \begin{exampleblock}{Saída títpica de um programa de análise}
+  \end{block}
+  \begin{exampleblock}{Saída típica de um programa de análise}
     \tiny
 \begin{verbatim}
 Residuals:
@@ -478,6 +739,215 @@ F-statistic: 261.5 on 1 and 198 DF,  p-value: < 2.2e-16
 \end{exampleblock}
 \end{frame}
 
+\begin{frame}[fragile]{Análise de resíduos}
+  \begin{itemize}
+  \item Como vimos, os resíduos são erros aleatórios
+
+    ({\footnotesize em torno da reta})
+    \bigskip
+  \item {\small Erros que não podem ser explicados pelo modelo}
+    \bigskip
+
+  \item Devem ser normalmente distribuídos em torno de zero
+
+    ({\footnotesize reta como referência})
+  \end{itemize}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \footnotesize
+\begin{verbatim}
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-52.097 -13.864   0.762  10.707  58.730 
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{Análise de resíduos}
+  \begin{center}
+    \Large
+    Podemos também verificar esta premissa visualmente
+  \end{center}
+\end{frame}
+
+\begin{frame}{\footnotesize Análise de resíduos - gráfico de regressão}
+  \begin{columns}
+    \begin{column}{5cm}
+      A distribuição dos resíduos é aprox. Normal?
+      \bigskip
+      % \bigskip
+      \begin{itemize}
+        \footnotesize
+      \item A dispersão em torno da reta é aprox. aleatória?
+        \bigskip
+      \item A dispersão dos resíduos aumenta ou diminui ao longo da faixa considerada?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=1.1\textwidth]{Cap18-19/pratica-plot2}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{\footnotesize Análise de resíduos - gráfico de resíduos}
+  \begin{columns}
+    \begin{column}{5cm}
+      A distribuição dos resíduos é aprox. Normal?
+      \bigskip
+      % \bigskip
+      \begin{itemize}
+        \footnotesize
+      \item A dispersão em torno de 0 é aprox. aleatória?
+        \bigskip
+      \item A dispersão dos resíduos aumenta ou diminui ao longo da faixa considerada?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=1.1\textwidth]{Cap18-19/pratica-plot-resid}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{\footnotesize Análise de resíduos - distribuição dos resíduos}
+  \begin{columns}
+    \begin{column}{5cm}
+      A distribuição dos resíduos é aprox. Normal?
+      \bigskip
+      % \bigskip
+      \begin{itemize}
+        \footnotesize
+      \item A dispersão em torno de 0 é aprox. aleatória?
+        \bigskip
+      \item A dispersão dos resíduos aumenta ou diminui ao longo da faixa considerada?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=1.1\textwidth]{Cap18-19/pratica-hist-resid}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Diagnosticando a regressão}
+  \begin{block}{Perguntas}
+    \begin{itemize}
+      \footnotesize
+    \item Os resíduos são aprox. normais?
+    \end{itemize}
+  \end{block}
+  \bigskip
+  \begin{exampleblock}{Resposta}
+    \begin{itemize}
+    \item Sim \hfill \footnotesize (probably...)
+    \end{itemize}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \scriptsize
+\begin{verbatim}
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-52.097 -13.864   0.762  10.707  58.730 
+\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Diagnosticando a regressão}
+  \begin{block}{Perguntas}
+    \begin{itemize}
+      \footnotesize
+    \item Quantos \% de variância podem ser explicados pelo modelo?
+    \end{itemize}
+  \end{block}
+  \bigskip
+  \begin{exampleblock}{Resposta}
+    \begin{itemize}
+      \footnotesize 
+    \item Podemos explicar $r^2$ = 57\% da variância observada no BMD
+
+      \scriptsize(considerando \alert{apenas} o BMI)
+      \bigskip
+    \item \scriptsize 43\% são devidos a outros fatores
+    \end{itemize}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \scriptsize
+\begin{verbatim}
+Multiple R-squared:  0.5691,	Adjusted R-squared:  0.5669 
+\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    E os parâmetros da reta estimados a partir dos dados?
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{Diagnosticando a regressão\footnote{\scriptsize $H_a$: Intercepto não é igual a 0 (modelo nulo)}}
+  \begin{block}{Perguntas}
+    \begin{itemize}
+      \footnotesize
+    \item Qual é o BMD predito para um hipotético BMI = 0?
+    \end{itemize}
+  \end{block}
+  \bigskip
+  \begin{exampleblock}{Resposta}
+    \begin{itemize}
+    \item BMD = 99 unidades \footnotesize (IC = [89.69, 107.94])
+    \end{itemize}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \scriptsize
+\begin{verbatim}
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  98.8176     4.6281   21.35   <2e-16 ***
+\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Diagnosticando a regressão\footnote{\scriptsize $H_a$: Inclinação não é igual a 0 (modelo nulo)}}
+  \begin{block}{Perguntas}
+    \begin{itemize}
+      \footnotesize
+    \item Quanto o BMD muda, para cada unidade de BMI?
+    \end{itemize}
+  \end{block}
+  \bigskip
+    \begin{exampleblock}{Resposta}
+      \begin{itemize}
+      \item Decréscimo de 3 unidades de BMD \footnotesize (IC = [-3.35, -2.62])
+
+        \bigskip
+        \scriptsize (para cada incremento unitário de BMI)
+    \end{itemize}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{Saída típica de um programa de análise}
+    \scriptsize
+\begin{verbatim}
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+BMI          -2.9845     0.1846  -16.17   <2e-16 ***
+\end{verbatim}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \Large
+    Vamos agora fazer predições sobre valores não observados
+  \end{center}
+\end{frame}
+
 \begin{frame}{E o BMI = 28?}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap18-19/pratica-plot3}
@@ -485,21 +955,144 @@ F-statistic: 261.5 on 1 and 198 DF,  p-value: < 2.2e-16
 \end{frame}
 
 \begin{frame}{E o BMI = 28?}
-  \begin{itemize}
-  \item o valor predito pelo modelo é 15.25169
-  \item P: O que isto significa?
-  \end{itemize}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+        \small
+      \item o valor predito pelo modelo é 15.25169
+      \item P: O que isto significa?
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=1.1\textwidth]{Cap18-19/pratica-plot3}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \Large
+    E quando os resíduos não são aleatórios em torno da reta?
+  \end{center}
+  \vfill
+  \hfill \footnotesize (casos extremos)
+\end{frame}
+
+\begin{frame}{\small Dispersão em torno da reta {\bf cresce} ao longo da faixa ($r^2$ = 42\%)}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap18-19/pratica-plot-heterocedasticidade}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Dispersão em torno da reta {\bf varia} ao longo da faixa ($r^2$ = 29\%)}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap18-19/pratica-plot-heterocedasticidade-sin}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Análise de resíduos dos 2 últimos exemplos}
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap18-19/pratica-plot-heterocedasticidade-resid}
+    \includegraphics[height=.6\textheight]{Cap18-19/pratica-plot-heterocedasticidade-sin-resid}
+
+    \vfill
+    \scriptsize
+    Lembre-se: Ao ler um artigo, você não terá acesso a estas visualizações!
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Regressão linear simples x múltipla\footnote{Ajustar para outros fatores: como visto no abstract do exercício!}}
+  \begin{block}{Outros fatores}
+    \small
+    Nesses casos, não podemos explicar a variância do BMD apenas com o BMI.
+
+    \bigskip
+    É evidente que algum outro fator {\it deveria} ter sido considerado no modelo
+
+    \bigskip
+    Isto permite \alert{ajustar} a heterogeneidade da variância observada com outros cofatores (além do BMI).
+  \end{block}
+  \vfill
+  \hfill \footnotesize (sai a regressão linear {\bf simples} e entra a {\bf múltipla} -- Cap 31)
+\end{frame}
+
+\subsection{Bônus: preditor categórico}
+
+\begin{frame}{\small Exercício da aula de teste t}
+  \begin{exampleblock}{}
+    \small
+    Queremos avaliar a eficiência de uma nova dieta reduzida em
+    gordura no tratamento de obesidade.
+
+    \bigskip
+    {\footnotesize
+      Selecionamos aleatoriamente 100 pessoas obesas para o grupo 1, que receberão a dieta com pouca gordura.
+      Selecionamos outras 100 pessoas obesas para o grupo 2 que receberão a mesma quantidade de comida, com proporção normal de gordura.
+      O estudo durou 4 meses.
+    }
+
+    \bigskip
+    \begin{exampleblock}{}
+      \footnotesize
+      A perda de peso média no grupo 1 foi de 9.33 lbs
+      (s=4.72) e no grupo 2 foi de 7.58 lbs (s=3.90).
+    \end{exampleblock}
+  \end{exampleblock}
+  \begin{block}{}
+    Essa nova dieta é eficaz na perda de peso?
+  \end{block}
+  \hfill {\footnotesize Fonte: Khan Academy}
+\end{frame}
+
+\begin{frame}[fragile]{\small Resolução com Regressão linear simples}
+  \begin{exampleblock}{Saída típica de um programa}
+    \tiny
+\begin{verbatim}
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.7754  -3.1275  -0.2171   3.0112  11.9957 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   9.3340     0.4332  21.548  < 2e-16 ***
+GrupoGrupo2  -1.7587     0.6126  -2.871  0.00454 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.332 on 198 degrees of freedom
+Multiple R-squared:  0.03996,	Adjusted R-squared:  0.03512 
+F-statistic: 8.242 on 1 and 198 DF,  p-value: 0.004537
+\end{verbatim}
+  \end{exampleblock}
+  \vfill
+  \begin{exampleblock}{\small Interpretação (assumindo pareamento)}
+    \begin{itemize}
+      \scriptsize
+    \item Perda média do grupo 1 (referência): 9.33 lbs {\tiny (IC=[8.48, 10.19])}.
+    \item Perda média do grupo 2 em relação à referência: -1.76 lbs {\tiny (IC=[-2.97, -0.55])}.
+    \end{itemize}
+  \end{exampleblock}
 \end{frame}
 
 \subsection{Resumo}
 
 \begin{frame}{Resumo}
   \begin{itemize}
-  \item É necessário investigar a relação entre as variáveis!
-  \item O que pode explicar a relação observada?
-  \item Qual proporção (porcentagem) da variabilidade pode ser
-    explicada pelas variáveis analisadas?
   \item Quão bem a reta regressora se ajusta aos dados?
+    \medskip
+  \item O que pode explicar a relação observada?
+    \medskip
+  \item Qual proporção (porcentagem) da variância pode ser
+    explicada pelas variáveis analisadas?
+    \medskip
+  \item É necessário investigar a relação entre as variáveis!
+    \bigskip
+    \bigskip
+  \item O modelo de RLS permite preditor categórico
+
+    {\footnotesize (com qualquer número de níveis!)}
   \end{itemize}
 \end{frame}
 
@@ -528,7 +1121,7 @@ F-statistic: 261.5 on 1 and 198 DF,  p-value: < 2.2e-16
     \small
     
     \begin{itemize}
-    \item {\bf Capítulo 31}.
+    \item {\bf Capítulo 31} -- {\footnotesize fortemente recomendado para a aula que vem!}
       \scriptsize
     \item Schneider A, Hommel G, Blettner M, 2010.
 
