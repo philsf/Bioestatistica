@@ -42,8 +42,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [teste-2prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27_4em1.pdf
 [cor-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
 [cor-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17_4em1.pdf
-[lm-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
-[lm-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19_4em1.pdf
+[lm-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Linear-cap18-19.pdf
+[lm-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Linear-cap18-19_4em1.pdf
 [anova-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30.pdf
 [anova-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30_4em1.pdf
 [naopar-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
