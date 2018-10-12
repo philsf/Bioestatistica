@@ -993,6 +993,63 @@ BMI          -2.9845     0.1846  -16.17   <2e-16 ***
   \hfill \footnotesize (sai a regressão linear {\bf simples} e entra a {\bf múltipla})
 \end{frame}
 
+\subsection{Bônus: preditor categórico}
+
+\begin{frame}{\small Exercício da aula de teste t}
+  \begin{exampleblock}{}
+    \small
+    Queremos avaliar a eficiência de uma nova dieta reduzida em
+    gordura no tratamento de obesidade.
+
+    \bigskip
+    {\footnotesize
+      Selecionamos aleatoriamente 100 pessoas obesas para o grupo 1, que receberão a dieta com pouca gordura.
+      Selecionamos outras 100 pessoas obesas para o grupo 2 que receberão a mesma quantidade de comida, com proporção normal de gordura.
+      O estudo durou 4 meses.
+    }
+
+    \bigskip
+    \begin{exampleblock}{}
+      \footnotesize
+      A perda de peso média no grupo 1 foi de 9.33 lbs
+      (s=4.72) e no grupo 2 foi de 7.58 lbs (s=3.90).
+    \end{exampleblock}
+  \end{exampleblock}
+  \begin{block}{}
+    Essa nova dieta é eficaz na perda de peso?
+  \end{block}
+  \hfill {\footnotesize Fonte: Khan Academy}
+\end{frame}
+
+\begin{frame}[fragile]{\small Resolução com Regressão linear simples}
+  \begin{exampleblock}{Saída típica de um programa}
+    \tiny
+\begin{verbatim}
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.7754  -3.1275  -0.2171   3.0112  11.9957 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   9.3340     0.4332  21.548  < 2e-16 ***
+GrupoGrupo2  -1.7587     0.6126  -2.871  0.00454 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.332 on 198 degrees of freedom
+Multiple R-squared:  0.03996,	Adjusted R-squared:  0.03512 
+F-statistic: 8.242 on 1 and 198 DF,  p-value: 0.004537
+\end{verbatim}
+  \end{exampleblock}
+  \begin{exampleblock}{\small Interpretação (assumindo pareamento)}
+    \begin{itemize}
+      \scriptsize
+    \item Perda média do grupo 1 (referência): 9.33 lbs {\tiny (IC=[8.48, 10.19])}.
+    \item Perda média do grupo 2 em relação à referência: -1.76 lbs {\tiny (IC=[-2.97, -0.55])}.
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
 \subsection{Resumo}
 
 \begin{frame}{Resumo}
