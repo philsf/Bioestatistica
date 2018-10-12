@@ -340,14 +340,24 @@
 
 \begin{frame}{Reta de regressão}
   \begin{block}{Definição}
-    Uma \alert{reta de regressão} (também chamada de reta de melhor
-    ajuste) é a reta para a qual a soma dos erros quadráticos dos
-    resíduos é o mínimo.
+    \small Uma \alert{reta de regressão} é a reta para a qual a soma
+    dos erros quadráticos dos resíduos ($\varepsilon$) é o mínimo.
   \end{block}
-  \begin{itemize}
-  \item É a reta que melhor se ajusta aos dados
-  \item Minimiza os resíduos
-  \end{itemize}
+  \bigskip
+  \uncover<2->{\begin{itemize}
+    \footnotesize
+  \item Também chamada de reta de melhor ajuste
+  \item Minimiza os resíduos (erros aleatórios $\varepsilon$)\footnote{Método dos mínimos quadrados}
+  \item Dados observados: X (preditor) e Y (desfecho)
+  \item Parâmetros estimados (a e b)
+  \end{itemize}}
+  \vfill
+  \begin{block}{Formulação}
+    \footnotesize
+    \begin{displaymath}
+      Y = \beta_0 + \beta_1 X + \varepsilon
+    \end{displaymath}
+  \end{block}
 \end{frame}
 
 \begin{frame}{Resíduos}
