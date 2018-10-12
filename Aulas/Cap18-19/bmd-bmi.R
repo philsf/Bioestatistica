@@ -44,3 +44,8 @@ bsmooth.only <- ggplot(dados, aes(BMI, BMD)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-plot4.png", h = 7, w = 7)
+
+ggplot(data.frame(Fitted = fitted(modelo), Residuals = residuals(modelo)), aes(Fitted, Residuals)) +
+  geom_point() +
+  ggtitle("Valores ajustados x Resíduos")
+ggsave("Aulas/Cap18-19/pratica-plot-resid.png", h = 7, w = 7)
