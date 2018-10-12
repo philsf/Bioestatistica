@@ -30,11 +30,11 @@ b <- ggplot(dados, aes(BMI,BMD)) +
   geom_point() +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   ggtitle("BMI x BMD")
-ggsave("Aulas/modelos/pratica-plot1.png")
+ggsave("Aulas/Cap18-19/pratica-plot1.png", h = 7, w = 7)
 
 bsmooth <- b + geom_smooth(method = "lm")
-ggsave("Aulas/modelos/pratica-plot2.png")
+ggsave("Aulas/Cap18-19/pratica-plot2.png", h = 7, w = 7)
 
 bsmooth + geom_vline(xintercept = 28, lty = 2, lwd =1, col = "red")
-ggsave("Aulas/modelos/pratica-plot3.png")
-  
+ggsave("Aulas/Cap18-19/pratica-plot3.png", h = 7, w = 7)
+
