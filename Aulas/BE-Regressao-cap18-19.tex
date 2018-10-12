@@ -340,18 +340,39 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: BMD (contínua)
+    \begin{itemize}
+      \scriptsize
+    \item Sinônimos: desfecho, resposta
+    \end{itemize}
+  \item Independente: BMI (contínua)
+    \begin{itemize}
+      \scriptsize
+    \item Sinônimos\footnote{\scriptsize Em alguns contextos também covariável/cofator (quando há mais de uma V.I.)}: preditor, fator
+    \end{itemize}
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
 \begin{frame}{Revisão: equação da reta}
   \begin{itemize}
     \small
   \item A equação de uma reta é definida pela fórmula
     \begin{displaymath}
-      Y = \alert{a} X + \alert{b}
+      \text{BMD} = \alert{a} \times \text{BMI} + \alert{b}
     \end{displaymath}
   \item Duas ``variáveis'' e dois parâmetros
     \begin{itemize}
       \scriptsize
-    \item $Y$ é a variável dependente (dados)
-    \item $X$ é a variável independente (dados)
+    \item BMD é a variável dependente (dados)
+    \item BMI é a variável independente (dados)
     \item \alert{$b$} é o intercepto ({\it intercept})
     \item \alert{$a$} é a inclinação ({\it slope})
     \end{itemize}
@@ -362,6 +383,18 @@
     \item Note que aqui os ``dados'' já foram coletados (fixos)
     \item Nosso objetivo é estimar os parâmetros da reta \alert{$b$} e \alert{$a$}
     \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Interpretação dos parâmetros da reta}
+  \begin{itemize}
+    \small
+  \item O intercepto é o valor (hipotético) de BMD quando BMI = 0
+  \item A inclinação é quanto BMD altera\footnote{na média!} quando aumentamos o BMI em 1 unidade
+  \end{itemize}
+  \vfill
+  \begin{block}{Atenção}
+    Para estas interpretações serem válidas, a relação deve ser linear (proporcional).
   \end{block}
 \end{frame}
 
