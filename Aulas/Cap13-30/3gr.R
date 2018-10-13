@@ -115,8 +115,3 @@ anova22 <- update(anova21, . ~ . + Genero)
 # Tukey
 anova12.p.tukey <- TukeyHSD(anova12)
 anova22.p.tukey <- TukeyHSD(anova22)
-
-# com interacao
-summary(aov(y ~ Grupo + Genero, cenario2.long))
-summary(aov(y ~ Grupo * Genero, cenario2.long))
-TukeyHSD(aov(y ~ Grupo * Genero, cenario2.long))
