@@ -695,13 +695,47 @@
 %  \item O teste de Tukey tem mais especificidade, mas menos sensibilidade
     \bigskip
     \bigskip
- \item O ajuste de Bonferroni multiplica o p-valor pelo número de comparações, mas seus IC são muito grandes
+ \item O ajuste de Bonferroni multiplica o p-valor\footnote{ou, analogamente, divide o nível de significância} pelo número de comparações, mas seus IC são muito grandes
     \bigskip
  \item O ajuste de Tukey é mais conservador, mas pode acusar diferenças significativas com mais frequência
     \bigskip
     \bigskip
  \item Infelizmente não há consenso sobre critérios de escolha
   \end{itemize}
+\end{frame}
+
+\begin{frame}{\small Interpretando o método de Bonferroni\footnote{\tiny \url{http://www.biostathandbook.com/multiplecomparisons.html}}}
+  \begin{columns}
+    \begin{column}{6.5cm}
+      \begin{exampleblock}{\footnotesize Exemplo}
+        \scriptsize
+        García-Arenzana et al. (2014) testaram associação de 25 variáveis dietárias e a densidade mamográfica (relevante p/ câncer de mama).
+
+        \bigskip
+        5 das variáveis parecem significativas.
+      \end{exampleblock}
+      \medskip
+      \begin{block}{\footnotesize Bonferroni}
+        \scriptsize
+        Ao dividir 0.05 pelo número de comparações, obtemos $\alpha = 0.05/25 = 0.002$.
+      \end{block}
+      \bigskip
+      \bigskip
+      \begin{block}{\footnotesize Conclusão}
+        \footnotesize
+        {\bf Após o ajuste, apenas 1 significativo.}
+      \end{block}
+    \end{column}
+    \begin{column}{3.5cm}
+      \begin{center}
+        {\footnotesize p-valores não ajustados}
+
+        \medskip
+        \includegraphics[height=.8\textheight]{Cap13-30/ex-25-testes}
+        % \includegraphics[width=.8\textwidth]{Cap13-30/ex-25-testes}
+      \end{center}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \againframe{exemplo13.5-enunciado}
