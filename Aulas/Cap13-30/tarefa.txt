@@ -7,6 +7,8 @@ Os pesquisadores avaliaram o impacto de 3 agravos (Knee OA, DML e SONK) + contro
 == Perguntas ==
 
 1) A seção 3.1 (Gait assessment) inicia alegando que a variável velocity
+a) Classifique as variáveis dependente (VD) e independente (VI) do modelo ANOVA para a variável velocity (linhas 1-2, Tabela 3).
+b) Quais foram as comparações não significativas desta análise?
 
 2) A seção 3.2 (Clinical outcomes) inicia alegando que em cada sub escala WOMAC os 3 agravos avaliados são significativamente diferentes dos controles saudáveis, mas os agravos não diferem entre si.
 
