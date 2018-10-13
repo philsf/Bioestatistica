@@ -2,6 +2,16 @@
 
 https://www.sciencedirect.com/science/article/pii/S1877056817300774
 
+Os pesquisadores avaliaram o impacto de 3 agravos (Knee OA, DML e SONK) + controles saudáveis nos escores de WOMAC pain, stiffness e function.
+
+== Perguntas ==
+
+1) A seção 3.1 (Gait assessment) inicia alegando que a variável velocity
+
+2) A seção 3.2 (Clinical outcomes) inicia alegando que em cada sub escala WOMAC os 3 agravos avaliados são significativamente diferentes dos controles saudáveis, mas os agravos não diferem entre si.
+
+3) Por que os autores optaram por não controlar os desfechos por, por exemplo, BMI? Esta decisão é justificada?
+
 Ideia (ANOVA):
 
 1way - problema com mensuração de 2 tratamentos x controle
