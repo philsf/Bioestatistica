@@ -329,6 +329,28 @@
   \end{exampleblock}
 \end{frame}
 
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+    \small
+  \item Dependente:
+    \begin{itemize}
+      \footnotesize
+    \item numérica contínua
+    \end{itemize}
+  \item Independentes:
+    \begin{itemize}
+      \footnotesize
+    \item grupo (categórica nominal -- 3 níveis)
+    \end{itemize}
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{Área cicatrizada} \sim \text{Grupo de tratamento}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
 \begin{frame}[label=ident-visual]
   \begin{center}
     \large
@@ -541,13 +563,12 @@
   \item Dependente:
     \begin{itemize}
       \footnotesize
-    \item numérica discreta
     \item numérica contínua
     \end{itemize}
   \item Independente:
     \begin{itemize}
       \footnotesize
-    \item grupo (categórica nominal -- 2+ níveis)
+    \item grupo (categórica nominal -- 3 níveis)
     \end{itemize}
   \end{itemize}
   \vfill
@@ -801,19 +822,19 @@
   \item Dependente:
     \begin{itemize}
       \footnotesize
-    \item numérica discreta
     \item numérica contínua
     \end{itemize}
   \item Independentes:
     \begin{itemize}
       \footnotesize
-    \item grupo (categórica nominal -- 2+ níveis)
+    \item grupo (categórica nominal -- 3 níveis)
+    \item \alert{gênero (categórica nominal binária)}
     \end{itemize}
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
     \begin{displaymath}
-      \text{Mensuração} \sim \text{Grupo de tratamento} \alert{+ \text{Gênero}}
+      \text{Área cicatrizada} \sim \text{Grupo de tratamento} \alert{+ \text{Gênero}}
     \end{displaymath}
   \end{block}
 \end{frame}
@@ -1130,6 +1151,32 @@ M-F 0.3362835 -0.4663601 1.138927 0.3925159
   \item Considere usar {\bf desenhos balanceados}\footnote{Grupos com {\bf mesmo tamanho}} sempre que possível!
   \end{itemize}
 \end{frame}
+
+\begin{frame}{\small Modelo ANOVA em geral -- quais são as variáveis?}
+    \begin{itemize}
+    \small
+  \item Dependente (VD): {\bf numérica}
+    \begin{itemize}
+      \footnotesize
+    \item discreta
+    \item contínua
+    \end{itemize}
+  \item Independentes (VI):
+    \begin{itemize}
+      \footnotesize
+    \item categórica -- 2+ níveis
+    \item numérica discreta
+    \item numérica contínua
+    \end{itemize}
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{VD} \sim \text{VI}_1 + \text{VI}_2 +...
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
 % \section{Encerramento}
 
 % \subsection{Resumo}
