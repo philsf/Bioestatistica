@@ -810,6 +810,21 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 \end{frame}
 
 \begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 3 - ANOVA two-way}
+    \tiny
+\begin{verbatim}
+            Df Sum Sq Mean Sq F value Pr(>F)
+Grupo        2  3.085  1.5423   1.110  0.349
+Genero       1  0.434  0.4341   0.312  0.582
+Residuals   20 27.793  1.3897               
+\end{verbatim}
+    \begin{center}
+      \includegraphics[height=.5\textheight]{Cap13-30/cenario12}
+    \end{center}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Exercício}
   \begin{exampleblock}{Cenário 2 - ANOVA one-way}
     \tiny
 \begin{verbatim}
@@ -857,6 +872,28 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
     \begin{center}
       \includegraphics[height=.5\textheight]{Cap13-30/cenario22}
     \end{center}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 4 - Tukey}
+    \tiny
+\begin{verbatim}
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = y ~ Grupo + Genero, data = cenario2.long)
+
+$Grupo
+                    diff        lwr      upr     p adj
+Trat.A-Placebo 1.5514853  0.2467606 2.856210 0.0182189
+Trat.B-Placebo 2.1703237  0.8655990 3.475048 0.0012029
+Trat.B-Trat.A  0.6188384 -0.6858863 1.923563 0.4668634
+
+$Genero
+         diff         lwr      upr     p adj
+M-F 0.8071626 -0.09998278 1.714308 0.0782416
+\end{verbatim}
   \end{exampleblock}
 \end{frame}
 
