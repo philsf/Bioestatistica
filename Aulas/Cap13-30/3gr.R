@@ -1,17 +1,31 @@
 # setup -------------------------------------------------------------------
 
-set.seed(2)
+# seed  8 =  A x B  - M = 1
+# seed 55 =  ANOVA sig
+# seed 72 = Plac x A **
+# set.seed(72)
+
 library(ggplot2)
 library(tidyr)
+library(data.table)
 
 # dados -------------------------------------------------------------------
 
-cenario1 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 4, 1), Trat.B = rnorm(8, 4, 1))
-cenario2 <- data.frame(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 6, 1), Trat.B = rnorm(8, 6, 1))
-cenario1 <- cbind(cenario1, Genero = sample(c("M", "F"), 8, replace = T))
-cenario2 <- cbind(cenario2, Genero = sample(c("M", "F"), 8, replace = T))
+# cenario1 <- data.table(Placebo = rnorm(8, 5, 1), Trat.A = rnorm(8, 5, 1), Trat.B = rnorm(8, 5, 1))
+# cenario2 <- data.table(Placebo = rnorm(8, 4, 1), Trat.A = rnorm(8, 6, 1), Trat.B = rnorm(8, 6, 1))
+# cenario1 <- cbind(cenario1, Genero = sample(c("M", "F"), 8, replace = T))
+# cenario2 <- cbind(cenario2, Genero = sample(c("M", "F"), 8, replace = T))
+# fwrite(cenario1, "Aulas/Cap13-30/cenario1.csv")
+# fwrite(cenario2, "Aulas/Cap13-30/cenario2.csv")
+
+cenario1 <- fread("Aulas/Cap13-30/cenario1.csv")
+cenario2 <- fread("Aulas/Cap13-30/cenario2.csv")
+cenario1$Genero <- factor(cenario1$Genero)
+cenario2$Genero <- factor(cenario2$Genero)
 cenario1.long <- gather(cenario1, Grupo, y, -Genero)
 cenario2.long <- gather(cenario2, Grupo, y, -Genero)
+cenario1.long$Grupo <- factor(cenario1.long$Grupo)
+cenario2.long$Grupo <- factor(cenario2.long$Grupo)
 
 # DataViz -----------------------------------------------------------------
 
