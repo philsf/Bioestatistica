@@ -32,6 +32,45 @@ cenario2.long <- gather(cenario2, Grupo, y, -Genero)
 cenario1.long$Grupo <- factor(cenario1.long$Grupo)
 cenario2.long$Grupo <- factor(cenario2.long$Grupo)
 
+# testes t sem correcao ---------------------------------------------------
+
+# cenario 1
+format.pval(with(cenario1, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario1, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario1, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+
+# cenario 2
+format.pval(with(cenario2, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario2, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+format.pval(with(cenario2, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
+
+# 1-way -------------------------------------------------------------------
+
+anova11 <- aov(y ~ Grupo, cenario1.long)
+anova21 <- aov(y ~ Grupo, cenario2.long)
+
+# Bonferroni
+anova11.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, pool.sd = FALSE, p.adjust.method = "bonf"))
+anova21.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, pool.sd = FALSE, p.adjust.method = "bonf"))
+
+# Tukey
+anova11.p.tukey <- TukeyHSD(anova11)
+anova21.p.tukey <- TukeyHSD(anova21)
+
+# 2-way -------------------------------------------------------------------
+
+# sem interacao
+anova12 <- update(anova11, . ~ . + Genero)
+anova22 <- update(anova21, . ~ . + Genero)
+
+# Bonferroni
+# anova12.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+# anova22.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+
+# Tukey
+anova12.p.tukey <- TukeyHSD(anova12)
+anova22.p.tukey <- TukeyHSD(anova22)
+
 # DataViz -----------------------------------------------------------------
 
 baseplot11 <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
@@ -81,42 +120,3 @@ ggsave("Aulas/Cap13-30/cenario22.png", height = 7, width = 7)
 baseplot22 +
   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
 ggsave("Aulas/Cap13-30/cenario22_medias.png", height = 7, width = 7)
-
-# testes t sem correcao ---------------------------------------------------
-
-# cenario 1
-format.pval(with(cenario1, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-format.pval(with(cenario1, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-format.pval(with(cenario1, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-
-# cenario 2
-format.pval(with(cenario2, t.test(Placebo, Trat.A, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-format.pval(with(cenario2, t.test(Placebo, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-format.pval(with(cenario2, t.test(Trat.A, Trat.B, var.equal = T)$p.value), scientific = F, digits = 4, eps = 1e-4)
-
-# 1-way -------------------------------------------------------------------
-
-anova11 <- aov(y ~ Grupo, cenario1.long)
-anova21 <- aov(y ~ Grupo, cenario2.long)
-
-# Bonferroni
-anova11.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, pool.sd = FALSE, p.adjust.method = "bonf"))
-anova21.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, pool.sd = FALSE, p.adjust.method = "bonf"))
-
-# Tukey
-anova11.p.tukey <- TukeyHSD(anova11)
-anova21.p.tukey <- TukeyHSD(anova21)
-
-# 2-way -------------------------------------------------------------------
-
-# sem interacao
-anova12 <- update(anova11, . ~ . + Genero)
-anova22 <- update(anova21, . ~ . + Genero)
-
-# Bonferroni
-# anova12.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
-# anova22.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
-
-# Tukey
-anova12.p.tukey <- TukeyHSD(anova12)
-anova22.p.tukey <- TukeyHSD(anova22)
