@@ -11,6 +11,8 @@ a) Classifique as variáveis dependente (VD) e independente (VI) do modelo ANOVA
 b) Quais foram as comparações não significativas desta análise?
 
 2) A seção 3.2 (Clinical outcomes) inicia alegando que em cada sub escala WOMAC os 3 agravos avaliados são significativamente diferentes dos controles saudáveis, mas os agravos não diferem entre si.
+a) Classifique as variáveis VD e VI da análise de WOMAC pain score (linhas 1-2, Tabela 4).
+b) Os resultados apresentados na tabela permitem você concluir que não há significância entre os 3 agravos? Se sim, que informação você usaria para isto? Se não, o que falta?
 
 3) Por que os autores optaram por não controlar os desfechos por, por exemplo, BMI? Esta decisão é justificada?
 
