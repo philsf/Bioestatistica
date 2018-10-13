@@ -3,7 +3,12 @@
 # seed  8 =  A x B  - M = 1
 # seed 55 =  ANOVA sig
 # seed 72 = Plac x A **
-# set.seed(72)
+# seed 76 = A x B .024
+# seed 101 = Plac X B .047
+# seed 116 = Plac X B .039
+# seed 145 = Plac X A .025
+
+set.seed(145)
 
 library(ggplot2)
 library(tidyr)
