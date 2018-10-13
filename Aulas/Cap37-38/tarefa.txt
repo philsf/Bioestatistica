@@ -1,0 +1,13 @@
+== Artigo ==
+
+https://revistas.unc.edu.ar/index.php/med/article/view/14479
+
+== Perguntas ==
+
+1) Na tabela 2 os pesquisadores comparam o índice WOMACS em cada checkup, com o baseline com o teste de Wilcoxon.
+a) Eles poderiam usar o teste t? Por que?
+b) Eles poderiam usar o teste de Mann-Whitney? Por que?
+c) Que mudanças na metodologia seriam necessárias se houvesse um grupo controle para a análise do D-002?
+
+2) Eles compararam os tratamentos D-002 e GS/SC.
+a) Qual dos dois tratamentos se demonstrou mais eficaz? Que evidências são apresentadas para esta comparação?
