@@ -4,6 +4,10 @@ https://revistas.unc.edu.ar/index.php/med/article/view/14479
 
 == Perguntas ==
 
+1) Na tabela 2 os pesquisadores comparam o índice WOMACS em cada nova observação, com o baseline com o teste de Wilcoxon.
+a) Eles poderiam usar o teste t? Por que?
+b) Eles poderiam usar o teste de Mann-Whitney? Por que?
+
 Ideia: Apresentar histogramas e formular perguntas sobre usar método paramétrico ou não paramétrico.
 
 Criar um exemplo com dados simulados. Gerar um PDF.
