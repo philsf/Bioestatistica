@@ -300,13 +300,17 @@
   
 \begin{frame}[label=requisito]{Como comparar médias}
   \begin{itemize}
+    \footnotesize
   \item Vimos que o {\bf teste t} pode ser usado para comparar duas médias
-  \item Assumindo que atendemos às premissas do teste t, precisamos levar em conta:
+    \bigskip
+  \item Assumindo que atendemos às premissas do teste t, consideramos:
     \begin{itemize}
-    \item variabilidade dos grupos
-    \item tamanho do estudo (n)
+      \footnotesize
+    \item variabilidade dos grupos\footnote{\scriptsize Se possível, semelhantes. Caso contrário, correção de Welch.}
+    \item tamanho do estudo (n)\footnote{\scriptsize Componente do DP e do SEM. Usado como GL para o t crítico.}
     \end{itemize}
   \end{itemize}
+  \bigskip
   \begin{block}{Requisitos não óbvios (além das médias)}
     desvio padrão + n = erro padrão
   \end{block}
@@ -436,27 +440,38 @@
     \item No Cenário 2, os 2 tratamentos {\bf não são} diferentes entre si!
     \end{itemize}
   \end{block}
-  \medskip
   \bigskip
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item<3-> O teste t permite a avaliação de {\bf uma} hipótese
-  \item<3-> Testamos simultaneamente várias \footnote{Leia várias vezes o Cap 13!}
+  \item<3-> Testamos simultaneamente três\footnote{Leia várias vezes o Capítulo 13!}
   \item<3-> Isto aumenta a chance de cometermos um erro tipo I (falso positivo)
-  \item<3-> Múltiplos testes superestimam o p-valor do método
   \end{itemize}
+  \vfill
+  \begin{block}{}
+    Múltiplos testes superestimam o p-valor do método.
+  \end{block}
 \end{frame}
 
 \begin{frame}{\small Pensar é obrigatório}
+  \begin{block}{}
+    \small
+    Os testes estatísticos (e fórmulas) não ``sabem'' o que foi levado em conta no estudo.
+  \end{block}
+  \bigskip
+  \bigskip
   \begin{itemize}
     \small
-  \item Os testes estatísticos (e fórmulas) não ``sabem'' o que foi levado em conta no estudo.
-    \bigskip
-    \bigskip
-  \item {\em Só o pesquisador sabe}
+  \item {\em Só o pesquisador sabe.}
     % \smallskip
-  \item A metodologia da análise precisa levar em conta todo o planejamento do estudo.
+  \item A metodologia da análise precisa levar em conta todo o planejamento do estudo\footnote{Leia várias vezes o Capítulo 13!}.
   \end{itemize}
+  \bigskip
+  \bigskip
+  \bigskip
+  \begin{block}{}
+    Múltiplos testes superestimam o p-valor do método.
+  \end{block}
 \end{frame}
 
 \begin{frame}{E agora, José?}
