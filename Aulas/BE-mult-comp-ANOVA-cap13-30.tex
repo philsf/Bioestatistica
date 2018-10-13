@@ -737,11 +737,9 @@
   \begin{exampleblock}{Cenário 1 - ANOVA one-way}
     \tiny
 \begin{verbatim}
-            Df Sum Sq Mean Sq F value Pr(>F)  
-Grupo        2  3.753  1.8763   3.025 0.0701 .
-Residuals   21 13.026  0.6203                 
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+            Df Sum Sq Mean Sq F value Pr(>F)
+Grupo        2  4.124  2.0620   2.545  0.102
+Residuals   21 17.018  0.8104
 \end{verbatim}
     \begin{center}
       \includegraphics[height=.5\textheight]{Cap13-30/cenario1}
@@ -754,9 +752,9 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
     \tiny
 \begin{verbatim}
             Df Sum Sq Mean Sq F value Pr(>F)
-Grupo        2  3.085  1.5423   1.110  0.349
-Genero       1  0.434  0.4341   0.312  0.582
-Residuals   20 27.793  1.3897               
+Grupo        2  4.124  2.0620   2.426  0.114
+Genero       1  0.020  0.0198   0.023  0.880
+Residuals   20 16.998  0.8499
 \end{verbatim}
     \begin{center}
       \includegraphics[height=.5\textheight]{Cap13-30/cenario12}
@@ -768,9 +766,9 @@ Residuals   20 27.793  1.3897
   \begin{exampleblock}{Cenário 2 - ANOVA one-way}
     \tiny
 \begin{verbatim}
-            Df Sum Sq Mean Sq F value Pr(>F)  
-Grupo        2  9.499   4.749   4.775 0.0195 *
-Residuals   21 20.889   0.995                 
+            Df Sum Sq Mean Sq F value   Pr(>F)
+Grupo        2  32.99  16.496   25.04 2.75e-06 ***
+Residuals   21  13.83   0.659
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 \end{verbatim}
@@ -790,10 +788,10 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Fit: aov(formula = y ~ Grupo, data = cenario2.long)
 
 $Grupo
-                     diff        lwr      upr     p adj
-Trat.A-Placebo 1.29615978  0.0392117 2.553108 0.0424949
-Trat.B-Placebo 1.36988994  0.1129419 2.626838 0.0311078
-Trat.B-Trat.A  0.07373016 -1.1832179 1.330678 0.9880276
+                     diff        lwr       upr     p adj
+Trat.A-Placebo  2.8224313  1.7995273 3.8453353 0.0000021
+Trat.B-Placebo  1.8711918  0.8482877 2.8940958 0.0004262
+Trat.B-Trat.A  -0.9512395 -1.9741435 0.0716645 0.0713859
 \end{verbatim}
   \end{exampleblock}
 \end{frame}
@@ -802,10 +800,10 @@ Trat.B-Trat.A  0.07373016 -1.1832179 1.330678 0.9880276
   \begin{exampleblock}{Cenário 4 - ANOVA two-way}
     \tiny
 \begin{verbatim}
-            Df Sum Sq Mean Sq F value Pr(>F)  
-Grupo        2  9.499   4.749   4.548 0.0236 *
-Genero       1  0.002   0.002   0.002 0.9690  
-Residuals   20 20.887   1.044                 
+            Df Sum Sq Mean Sq F value   Pr(>F)
+Grupo        2  32.99  16.496  24.760 3.88e-06 ***
+Genero       1   0.51   0.509   0.764    0.393
+Residuals   20  13.33   0.666
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 \end{verbatim}
@@ -825,14 +823,14 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Fit: aov(formula = y ~ Grupo + Genero, data = cenario2.long)
 
 $Grupo
-                    diff        lwr      upr     p adj
-Trat.A-Placebo 1.5514853  0.2467606 2.856210 0.0182189
-Trat.B-Placebo 2.1703237  0.8655990 3.475048 0.0012029
-Trat.B-Trat.A  0.6188384 -0.6858863 1.923563 0.4668634
+                     diff       lwr        upr     p adj
+Trat.A-Placebo  2.8224313  1.789885 3.85497800 0.0000030
+Trat.B-Placebo  1.8711918  0.838645 2.90373849 0.0005050
+Trat.B-Trat.A  -0.9512395 -1.983786 0.08130722 0.0743628
 
 $Genero
-         diff         lwr      upr     p adj
-M-F 0.8071626 -0.09998278 1.714308 0.0782416
+         diff        lwr      upr     p adj
+M-F 0.3362835 -0.4663601 1.138927 0.3925159
 \end{verbatim}
   \end{exampleblock}
 \end{frame}
