@@ -16,6 +16,9 @@ b) Os resultados apresentados na tabela permitem você concluir que não há sig
 
 3) Por que os autores optaram por não controlar os desfechos por, por exemplo, BMI? Esta decisão é justificada?
 
+4) (Opcional: +20pts extras) Na seção 3.1, os autores apresentam diferença significativa do stance involved limb entre Knee OA e os controles (p=0.028, ajustado pelo método de Bonferroni).
+Com base na leitura do capítulo 13, qual é um valor aproximado para o p-valor não ajustado?
+
 Ideia (ANOVA):
 
 1way - problema com mensuração de 2 tratamentos x controle
