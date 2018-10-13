@@ -1,3 +1,9 @@
+== Artigo ==
+
+https://revistas.unc.edu.ar/index.php/med/article/view/14479
+
+== Perguntas ==
+
 Ideia: Apresentar histogramas e formular perguntas sobre usar método paramétrico ou não paramétrico.
 
 Criar um exemplo com dados simulados. Gerar um PDF.
