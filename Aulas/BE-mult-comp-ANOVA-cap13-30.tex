@@ -560,7 +560,7 @@
 \begin{frame}{One-way ANOVA}
   \begin{itemize}
     \small
-  \item Este método é chamado one-way (ou 1-way) ANOVA, pois tem um fator categórico
+  \item Este método é chamado One-way (ou 1-way) ANOVA, pois tem um fator categórico
     \bigskip
   \item A premissa é que pode-se {\em modelar} a relação entre um desfecho quantitativo e um preditor categórico + um erro aleatório
     \bigskip
@@ -607,7 +607,7 @@
     ... nesse caso a {\em razão} entre as variâncias deve ser próxima de 1
   \end{block}
 
-  $$F = \frac{\text{variância entre grupos}}{\text{variância intra grupos}}$$
+  $$F = \frac{\text{variância intergrupos}}{\text{variância intragrupos}}$$
 
   \begin{block}{Interpretação da estatística $F$}
     Uma razão muito maior que 1 indica que há mais variância entre os grupos do que o esperado
@@ -691,7 +691,7 @@
 %  \item O teste de Tukey tem mais especificidade, mas menos sensibilidade
     \bigskip
     \bigskip
- \item O ajuste de Bonferroni multiplica o p-valor pelo número de comparações, mas seus ICs são muito grandes
+ \item O ajuste de Bonferroni multiplica o p-valor pelo número de comparações, mas seus IC são muito grandes
     \bigskip
  \item O ajuste de Tukey é mais conservador, mas pode acusar diferenças significativas com mais frequência
     \bigskip
@@ -800,7 +800,7 @@
 \end{frame}
 
 \begin{frame}[fragile, label=cenario1-1way]
-  \begin{exampleblock}{Cenário 1 -- ANOVA one-way}
+  \begin{exampleblock}{Cenário 1 -- ANOVA One-way}
     \tiny
 \begin{verbatim}
             Df Sum Sq Mean Sq F value Pr(>F)
@@ -887,7 +887,7 @@ Trat.B-Trat.A   0.08315455 -1.051368 1.2176774 0.9813768
 \end{frame}
 
 \begin{frame}[fragile, label=cenario2-1way]
-  \begin{exampleblock}{Cenário 2 -- ANOVA one-way}
+  \begin{exampleblock}{Cenário 2 -- ANOVA One-way}
     \tiny
 \begin{verbatim}
             Df Sum Sq Mean Sq F value   Pr(>F)
@@ -963,7 +963,7 @@ Trat.B-Trat.A  -0.9512395 -1.9741435 0.0716645 0.0713859
 % \againframe{cenario1-1way}
 
 \begin{frame}[fragile]
-  \begin{exampleblock}{Cenário 3 -- ANOVA two-way}
+  \begin{exampleblock}{Cenário 3 -- ANOVA Two-way}
     \tiny
 \begin{verbatim}
             Df Sum Sq Mean Sq F value Pr(>F)
@@ -1003,7 +1003,7 @@ M-F 0.05741033 -0.7276764 0.8424971 0.8802907
 % \againframe{cenario2-1way}
 
 \begin{frame}[fragile]
-  \begin{exampleblock}{Cenário 4 -- ANOVA two-way}
+  \begin{exampleblock}{Cenário 4 -- ANOVA Two-way}
     \tiny
 \begin{verbatim}
             Df Sum Sq Mean Sq F value   Pr(>F)
