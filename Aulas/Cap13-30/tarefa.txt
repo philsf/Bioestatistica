@@ -1,3 +1,7 @@
+== Artigo ==
+
+https://www.sciencedirect.com/science/article/pii/S1877056817300774
+
 Ideia (ANOVA):
 
 1way - problema com mensuração de 2 tratamentos x controle
