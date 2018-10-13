@@ -27,10 +27,15 @@ cenario1 <- fread("Aulas/Cap13-30/cenario1.csv")
 cenario2 <- fread("Aulas/Cap13-30/cenario2.csv")
 cenario1$Genero <- factor(cenario1$Genero)
 cenario2$Genero <- factor(cenario2$Genero)
-cenario1.long <- gather(cenario1, Grupo, y, -Genero)
-cenario2.long <- gather(cenario2, Grupo, y, -Genero)
+cenario1.long <- data.table(gather(cenario1, Grupo, y, -Genero))
+cenario2.long <- data.table(gather(cenario2, Grupo, y, -Genero))
 cenario1.long$Grupo <- factor(cenario1.long$Grupo)
 cenario2.long$Grupo <- factor(cenario2.long$Grupo)
+
+# médias ------------------------------------------------------------------
+
+cenario1.long[, .(M= format.float(mean(y), 3)), by = Grupo]
+cenario2.long[, .(M= format.float(mean(y), 3)), by = Grupo]
 
 # testes t sem correcao ---------------------------------------------------
 
