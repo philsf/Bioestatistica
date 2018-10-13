@@ -42,8 +42,6 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
-\usepackage{ulem}
-
 \title%[] % (optional, use only with long paper titles)
 {Regressão Linear Simples}
 
@@ -102,6 +100,7 @@
 
 % \beamerdefaultoverlayspecification{<+->}
 
+\usepackage[normalem]{ulem}
 
 \begin{document}
 
@@ -205,7 +204,7 @@
     \footnotesize
   \item Distribuições de probabilidade servem como modelo para a distribuição dos dados (teórico x empírico)
     \bigskip
-  \item Modelos de regressão servem como um {\it framework} para testar hipóteses {\bf específicas} sobre a relação presumida entre variáveis
+  \item Modelos de regressão servem como um {\em framework} para testar hipóteses {\bf específicas} sobre a relação presumida entre variáveis
   \end{itemize}
   \vfill
   \begin{block}{Modelo de regressão}
@@ -372,8 +371,8 @@
       \scriptsize
     \item BMD é a variável dependente (dados)
     \item BMI é a variável independente (dados)
-    \item \alert{$b$} é o intercepto ({\it intercept})
-    \item \alert{$a$} é a inclinação ({\it slope})
+    \item \alert{$b$} é o intercepto ({\em intercept})
+    \item \alert{$a$} é a inclinação ({\em slope})
     \end{itemize}
   \end{itemize}
   \bigskip
@@ -1009,7 +1008,7 @@ BMI          -2.9845     0.1846  -16.17   <2e-16 ***
     Nesses casos, não podemos explicar a variância do BMD apenas com o BMI.
 
     \bigskip
-    É evidente que algum outro fator {\it deveria} ter sido considerado no modelo
+    É evidente que algum outro fator {\em deveria} ter sido considerado no modelo
 
     \bigskip
     Isto permite \alert{ajustar} a heterogeneidade da variância observada com outros cofatores (além do BMI).
