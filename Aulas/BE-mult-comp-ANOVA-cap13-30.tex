@@ -250,7 +250,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Cenário 1}
+\begin{frame}[label=cenario1-prob]{\small Cenário 1}
   \begin{columns}
     \begin{column}{5cm}
       \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
@@ -277,7 +277,7 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{\small Cenário 2}
+\begin{frame}[label=cenario2-prob]{\small Cenário 2}
   \begin{columns}
     \begin{column}{5cm}
       \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
@@ -733,6 +733,25 @@
 
 \subsection{Exercício}
 
+\againframe{cenario1}
+
+\againframe{cenario1-prob}
+
+\begin{frame}
+  \begin{center}
+    Por que este resultado está errado?
+  \end{center}
+
+  \vfill
+  \begin{block}{Resposta}<2>
+    Testamos simultaneamente {\bf 3} hipóteses...
+
+    \bigskip
+    \small
+    ... você foi levado ao engano: Placebo é diferente do trat. A
+  \end{block}
+\end{frame}
+
 \begin{frame}[fragile]{Exercício}
   \begin{exampleblock}{Cenário 1 - ANOVA one-way}
     \tiny
@@ -745,21 +764,79 @@ Residuals   21 17.018  0.8104
       \includegraphics[height=.5\textheight]{Cap13-30/cenario1}
     \end{center}
   \end{exampleblock}
+  \begin{block}{}<2>
+    \small
+    Os 3 tratamentos não diferem além da expectativa ($p=0.102$)
+  \end{block}
+\end{frame}
+
+\againframe{cenario1-prob}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 1 -- Bonferroni}
+    \scriptsize
+\begin{verbatim}
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  y and Grupo 
+
+       Placebo Trat.A
+Trat.A 0.076   -     
+Trat.B 0.299   1.000 
+
+P value adjustment method: bonferroni
+\end{verbatim}
+  \end{exampleblock}
+  \begin{block}{}
+    \small
+    Os p-valores de Bonferroni são 3x maiores...
+
+    \bigskip
+    ... o placebo não é diferente do tratamento A ($p=0.076$)
+  \end{block}
 \end{frame}
 
 \begin{frame}[fragile]{Exercício}
-  \begin{exampleblock}{Cenário 3 - ANOVA two-way}
-    \tiny
+  \begin{exampleblock}{Cenário 1 -- Tukey}
+    \scriptsize
 \begin{verbatim}
-            Df Sum Sq Mean Sq F value Pr(>F)
-Grupo        2  4.124  2.0620   2.426  0.114
-Genero       1  0.020  0.0198   0.023  0.880
-Residuals   20 16.998  0.8499
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = y ~ Grupo, data = cenario1.long)
+
+$Grupo
+                      diff       lwr       upr     p adj
+Trat.A-Placebo -0.91797498 -2.052498 0.2165479 0.1274511
+Trat.B-Placebo -0.83482042 -1.969343 0.2997025 0.1767378
+Trat.B-Trat.A   0.08315455 -1.051368 1.2176774 0.9813768
 \end{verbatim}
-    \begin{center}
-      \includegraphics[height=.5\textheight]{Cap13-30/cenario12}
-    \end{center}
   \end{exampleblock}
+  \begin{block}{}
+    \small
+    Os p-valores de Tukey são mais conservadores...
+
+    \bigskip
+    ... o placebo não é diferente do tratamento A ($p=0.12745$)
+  \end{block}
+\end{frame}
+
+\againframe{cenario2}
+\againframe{cenario2-prob}
+
+\begin{frame}
+  \begin{center}
+    Por que este resultado está errado?
+  \end{center}
+
+  \vfill
+  \begin{block}{Resposta}<2>
+    Testamos simultaneamente {\bf 3} hipóteses...
+
+    \bigskip
+    \small
+    ... você foi levado ao engano: trat. A é diferente do trat. B
+  \end{block}
 \end{frame}
 
 \begin{frame}[fragile]{Exercício}
@@ -778,6 +855,32 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
   \end{exampleblock}
 \end{frame}
 
+\againframe{cenario2-prob}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 2 -- Bonferroni}
+    \scriptsize
+\begin{verbatim}
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  y and Grupo 
+
+       Placebo Trat.A
+Trat.A 8.8e-05 -     
+Trat.B 0.0011  0.0883
+
+P value adjustment method: bonferroni
+\end{verbatim}
+  \end{exampleblock}
+  \begin{block}{}
+    \small
+    Os p-valores de Bonferroni são 3x maiores...
+
+    \bigskip
+    ... os tratamentos A e B não são diferentes entre si ($p=0.0883$)!
+  \end{block}
+\end{frame}
+
 \begin{frame}[fragile]{Exercício}
   \begin{exampleblock}{Cenário 2 - Tukey}
     \tiny
@@ -793,6 +896,28 @@ Trat.A-Placebo  2.8224313  1.7995273 3.8453353 0.0000021
 Trat.B-Placebo  1.8711918  0.8482877 2.8940958 0.0004262
 Trat.B-Trat.A  -0.9512395 -1.9741435 0.0716645 0.0713859
 \end{verbatim}
+  \end{exampleblock}
+  \begin{block}{}
+    \small
+    Os p-valores de Tukey são mais conservadores...
+
+    \bigskip
+    ... os tratamentos A e B não são diferentes ($p=0.0713859$)
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 3 - ANOVA two-way}
+    \tiny
+\begin{verbatim}
+            Df Sum Sq Mean Sq F value Pr(>F)
+Grupo        2  4.124  2.0620   2.426  0.114
+Genero       1  0.020  0.0198   0.023  0.880
+Residuals   20 16.998  0.8499
+\end{verbatim}
+    \begin{center}
+      \includegraphics[height=.5\textheight]{Cap13-30/cenario12}
+    \end{center}
   \end{exampleblock}
 \end{frame}
 
