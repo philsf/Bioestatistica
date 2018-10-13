@@ -752,7 +752,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Exercício}
+\begin{frame}[fragile, label=cenario1-1way]{Exercício}
   \begin{exampleblock}{Cenário 1 - ANOVA one-way}
     \tiny
 \begin{verbatim}
@@ -839,7 +839,7 @@ Trat.B-Trat.A   0.08315455 -1.051368 1.2176774 0.9813768
   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Exercício}
+\begin{frame}[fragile, label=cenario2-1way]{Exercício}
   \begin{exampleblock}{Cenário 2 - ANOVA one-way}
     \tiny
 \begin{verbatim}
@@ -906,6 +906,15 @@ Trat.B-Trat.A  -0.9512395 -1.9741435 0.0716645 0.0713859
   \end{block}
 \end{frame}
 
+\begin{frame}
+  \begin{center}
+    Agora interprete cada um dos dois fatores
+  \end{center}
+\end{frame}
+
+\againframe{cenario3}
+% \againframe{cenario1-1way}
+
 \begin{frame}[fragile]{Exercício}
   \begin{exampleblock}{Cenário 3 - ANOVA two-way}
     \tiny
@@ -920,6 +929,31 @@ Residuals   20 16.998  0.8499
     \end{center}
   \end{exampleblock}
 \end{frame}
+
+\begin{frame}[fragile]{Exercício}
+  \begin{exampleblock}{Cenário 3 - Tukey}
+    \tiny
+\begin{verbatim}
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = y ~ Grupo + Genero, data = cenario1.long)
+
+$Grupo
+                      diff       lwr       upr     p adj
+Trat.A-Placebo -0.91797498 -2.084178 0.2482277 0.1402196
+Trat.B-Placebo -0.83482042 -2.001023 0.3313822 0.1915255
+Trat.B-Trat.A   0.08315455 -1.083048 1.2493572 0.9822352
+
+$Genero
+          diff        lwr       upr     p adj
+M-F 0.05741033 -0.7276764 0.8424971 0.8802907
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\againframe{cenario4}
+% \againframe{cenario2-1way}
 
 \begin{frame}[fragile]{Exercício}
   \begin{exampleblock}{Cenário 4 - ANOVA two-way}
