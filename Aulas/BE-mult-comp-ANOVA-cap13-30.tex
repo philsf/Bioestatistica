@@ -445,9 +445,12 @@
 
 \begin{frame}[label=exemplo13.5-enunciado]{\small Exemplo 13.5}
   \begin{exampleblock}{Exemplo 13.5}
+    \small
     Hetland, et. al (1993) pesquisaram alterações hormonais em mulheres corredoras.
     Mediram o nível de hormônio luteinizante (LH) em três grupos:
+    \bigskip
     \begin{enumerate}
+      \small
     \item sedentárias
     \item corredoras recreacionais
     \item corredoras de elite
@@ -483,30 +486,38 @@
     \begin{center}
       \includegraphics[width=.6\textwidth]{Cap13-30/exemplo13_5-1}
     \end{center}
-  \begin{itemize}
-  \item Com estas informações, podemos construir uma tabela ANOVA
-  \item $H_0$: todas as médias são iguais
-  \end{itemize}
+    \begin{itemize}
+      \footnotesize
+    \item Com estas informações, podemos construir uma tabela ANOVA
+      \small
+    \item $H_0$: todas as médias são iguais
+    \end{itemize}
   \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\small Exemplo 13.5}
   \begin{exampleblock}{Exemplo 13.5}
     \begin{center}
-      \includegraphics[width=.6\textwidth]{Cap13-30/exemplo13_5-2}
+      \includegraphics[width=.8\textwidth]{Cap13-30/exemplo13_5-2}
     \end{center}
-  \begin{itemize}
-  \item A razão entre as Somas dos Quadrados: $0.93/17.38 = 5.3\%$
-  \item $5.3\%$ da variabilidade pode ser explicada pelas diferenças {\em entre os grupos}
-  \item (lembra do $r^2?)$
-  \end{itemize}
+    \bigskip
+    \begin{itemize}
+      \scriptsize
+    \item A razão entre as Somas dos Quadrados: $0.93/17.38 = 5.3\%$
+    \item $5.3\%$ da variabilidade pode ser explicada pelas diferenças {\em entre os grupos}
+    \item (lembra do $r^2$?)
+    \end{itemize}
   \end{exampleblock}
 \end{frame}
 
 \begin{frame}{One-way ANOVA}
   \begin{itemize}
+    \small
   \item Este método é chamado one-way (ou 1-way) ANOVA, pois tem um fator categórico
+    \bigskip
   \item A premissa é que pode-se {\em modelar} a relação entre um desfecho quantitativo e um preditor categórico + um erro aleatório
+    \bigskip
+    \bigskip
   \item A variável dependente do exemplo é o LH
   \item A (única) variável independente é o Grupo
   \end{itemize}
@@ -514,18 +525,26 @@
 
 \begin{frame}{A ideia básica}
   \begin{itemize}
+    \footnotesize
   \item Quando os grupos têm médias diferentes, parte da variabilidade total é devido a esta diferença
   \item O resto da variabilidade é devido apenas às variâncias intragrupos
   % \item Quando as médias são iguais, temos apenas as variâncias intra-grupos e inter-grupos.
+    \bigskip
+    \bigskip
   \item A ANOVA tenta {\em desembaraçar} esta decomposição, assumindo a hipótese nula.
   \end{itemize}
 \end{frame}
 
 \begin{frame}{A ideia básica}
   \begin{itemize}
+    \footnotesize
   \item O nome {\em Análise de Variância} vem do critério usado para comparar as médias
-  \item O teste de hipótese é baseado na comparação entre as variâncias intra- e inter grupos
+    \bigskip
+    \bigskip
+  \item O teste é baseado na razão entre as variâncias intra e inter grupos
   \item Estas variâncias aparecem na tabela como ``Média dos Quadrados''
+    \bigskip
+    \bigskip
   \item Lembrete: a variância é a média dos desvios elevados ao quadrado
   \end{itemize}
 \end{frame}
