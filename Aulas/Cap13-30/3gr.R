@@ -95,8 +95,8 @@ anova11 <- aov(y ~ Grupo, cenario1.long)
 anova21 <- aov(y ~ Grupo, cenario2.long)
 
 # Bonferroni
-anova11.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
-anova21.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, p.adjust.method = "bonf"))
+anova11.p.bonf <- with(cenario1.long, pairwise.t.test(y, Grupo, pool.sd = FALSE, p.adjust.method = "bonf"))
+anova21.p.bonf <- with(cenario2.long, pairwise.t.test(y, Grupo, pool.sd = FALSE, p.adjust.method = "bonf"))
 
 # Tukey
 anova11.p.tukey <- TukeyHSD(anova11)
