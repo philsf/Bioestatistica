@@ -28,10 +28,13 @@ print(summary(modelo))
 format.interval(confint(modelo)[1, ]) # IC intercept
 format.interval(confint(modelo)[2, ]) # IC slope
 
+# predicao ----------------------------------------------------------------
+
 pred39 <- predict(modelo, newdata = data.table(BMI=39), interval = "conf")
 format.float(pred39[1], 1)
 format.interval(pred39[2:3], 1)
 
+# graficos ----------------------------------------------------------------
 
 library(ggplot2)
 b <- ggplot(dados, aes(BMI,BMD)) +
@@ -68,6 +71,8 @@ b2 <- ggplot(heterocedasticidade, aes(BMI, BMD2)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade.png", h = 7, w = 7)
+
+# heterocedasticidade -----------------------------------------------------
 
 modelo2 <- lm(BMD2 ~ BMI, heterocedasticidade)
 b2.res <- ggplot(data.frame(Fitted = fitted(modelo2), Residuals = residuals(modelo2)), aes(Fitted, Residuals)) +
