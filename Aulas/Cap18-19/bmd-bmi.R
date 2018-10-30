@@ -8,8 +8,10 @@ dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv")
 
 modelo <- lm(BMD ~ BMI, data = dados.rls)
 summary(modelo)
-format.interval(confint(modelo)[1, ]) # IC intercept
-format.interval(confint(modelo)[2, ]) # IC slope
+round(coef(modelo)[1])
+format.interval(confint(modelo)[1, ], 1) # IC intercept
+round(coef(modelo)[2])
+format.interval(confint(modelo)[2, ], 1) # IC slope
 
 # predicao ----------------------------------------------------------------
 
