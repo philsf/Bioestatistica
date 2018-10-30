@@ -28,8 +28,9 @@ print(summary(modelo))
 format.interval(confint(modelo)[1, ]) # IC intercept
 format.interval(confint(modelo)[2, ]) # IC slope
 
-pred <- predict(modelo, interval = "conf")
-pred39 <- predict(modelo, newdata = data.table(BMI=39))
+pred39 <- predict(modelo, newdata = data.table(BMI=39), interval = "conf")
+format.float(pred39[1], 1)
+format.interval(pred39[2:3], 1)
 
 # png("Aulas/modelos/pratica-plot1.png")
 # with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
