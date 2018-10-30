@@ -1,12 +1,27 @@
 library(philsfmisc)
+library(data.table)
 
 # dados simulados ---------------------------------------------------------
 
 set.seed(1)
-BMI <- c(rnorm(50, 15, 1), rnorm(50, 20, 1), rnorm(50, 25, 1), rnorm(50, 35, 4))
+BMI <- c(rnorm(100, 30, 5), rnorm(100, 50, 5))
+idade <- rnorm(200, 60, 5)
+horm <- round(sin(BMI))
 scatter <- rnorm(200, 0, 20)
-BMD <- -3*BMI - scatter + 100
-dados <- data.frame(BMI,BMD)
+BMD <- -3*BMI - idade + 400 + scatter
+dados <- data.table(BMI, BMD, idade, horm)
+
+BMD2 <- -3*BMI -
+  c(
+    rnorm(50, 0, 10), # introduzir heterocedasticidade
+    rnorm(50, 0, 20),
+    rnorm(50, 0, 40),
+    rnorm(50, 0, 45)
+  ) + 300
+heterocedasticidade <-  data.table(BMI, BMD2)
+
+BMD3 <- -7*BMI - 10*idade - 100*horm + scatter + 1200
+heterocedasticidade2 <-  data.table(BMI, BMD3)
 
 modelo <- lm(BMD ~ BMI, data = dados)
 format.interval(confint(modelo)[1, ]) # IC intercept
@@ -59,15 +74,6 @@ png("Aulas/Cap18-19/pratica-hist-resid.png")
 hist(residuals(modelo), col = "gray", main = "Distribuição dos resíduos", xlab = "")
 dev.off()
 
-BMD2 <- -3*BMI -
-  c(
-    rnorm(50, 0, 5), # introduzir heterocedasticidade
-    rnorm(50, 0, 10),
-    rnorm(50, 0, 30),
-    rnorm(50, 0, 35)
-    ) + 100
-heterocedasticidade <-  data.frame(BMI, BMD2)
-
 b2 <- ggplot(heterocedasticidade, aes(BMI, BMD2)) +
   geom_point() +
   geom_smooth(method = "lm") +
@@ -80,9 +86,6 @@ b2.res <- ggplot(data.frame(Fitted = fitted(modelo2), Residuals = residuals(mode
   geom_point() +
   ggtitle("Valores ajustados x Resíduos")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-resid.png", h = 7, w = 7)
-
-BMD3 <- -3.3*BMI - scatter + 111 + mean(BMI)*sin(BMI/1.5)*2
-heterocedasticidade2 <-  data.frame(BMI, BMD3)
 
 b3 <- ggplot(heterocedasticidade2, aes(BMI, BMD3)) +
   geom_point() +
