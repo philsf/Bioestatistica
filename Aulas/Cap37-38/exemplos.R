@@ -51,3 +51,4 @@ m.ols <- lm(Ozone ~ Month, data = airquality)
 summary(m.p) # não significativo
 m.np # significativo
 summary(m.ols)
+with(airquality, pairwise.wilcox.test(Ozone, Month, p.adjust.method = "bonf"))
