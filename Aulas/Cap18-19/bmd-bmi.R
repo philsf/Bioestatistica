@@ -55,6 +55,8 @@ dev.off()
 bsmooth + geom_vline(xintercept = 39, lty = 2, lwd =1, col = "red")
 ggsave("Aulas/Cap18-19/pratica-plot4.png", h = 7, w = 7)
 
+# heterocedasticidade -----------------------------------------------------
+
 b2 <- ggplot(dados.rls.het, aes(BMI, BMD2)) +
   geom_point() +
   geom_smooth(method = "lm") +
@@ -64,34 +66,15 @@ b2 <- ggplot(dados.rls.het, aes(BMI, BMD2)) +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade.png", h = 7, w = 7)
 
-# heterocedasticidade -----------------------------------------------------
-
 modelo2 <- lm(BMD2 ~ BMI, dados.rls.het)
 summary(modelo2)
+
 b2.res <- ggplot(data.frame(Fitted = fitted(modelo2), Residuals = residuals(modelo2)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-150, 150)) +
   theme_bw() +
   ggtitle("Valores ajustados x Resíduos")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-resid.png", h = 7, w = 7)
-
-b3 <- ggplot(dados.rlm, aes(BMI, BMD)) +
-  geom_point() +
-  geom_smooth(method = "lm") +
-  xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
-  xlim(range(dados.rlm$BMI)) + ylim(range(dados.rlm$BMD)) +
-  theme_bw() +
-  ggtitle("BMI x BMD")
-ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-sin.png", h = 7, w = 7)
-
-modelo3 <- lm(BMD ~ BMI, dados.rlm)
-summary(modelo3)
-b3.res <- ggplot(data.frame(Fitted = fitted(modelo3), Residuals = residuals(modelo3)), aes(Fitted, Residuals)) +
-  geom_point() +
-  ylim(c(-300, 300)) +
-  theme_bw() +
-  ggtitle("Valores ajustados x Resíduos")
-ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-sin-resid.png", h = 7, w = 7)
 
 # obsoleto ----------------------------------------------------------------
 
