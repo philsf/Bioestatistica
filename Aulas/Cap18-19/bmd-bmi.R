@@ -24,6 +24,7 @@ BMD3 <- -7*BMI - 10*idade - 100*horm + scatter + 1200
 heterocedasticidade2 <-  data.table(BMI, BMD3)
 
 modelo <- lm(BMD ~ BMI, data = dados)
+print(summary(modelo))
 format.interval(confint(modelo)[1, ]) # IC intercept
 format.interval(confint(modelo)[2, ]) # IC slope
 
