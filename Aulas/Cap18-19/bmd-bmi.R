@@ -7,7 +7,7 @@ dados.rls.het <- fread("Aulas/Cap18-19/dados-rls-het.csv")
 dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv")
 
 modelo <- lm(BMD ~ BMI, data = dados.rls)
-print(summary(modelo))
+summary(modelo)
 format.interval(confint(modelo)[1, ]) # IC intercept
 format.interval(confint(modelo)[2, ]) # IC slope
 
@@ -63,7 +63,7 @@ ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade.png", h = 7, w = 7)
 # heterocedasticidade -----------------------------------------------------
 
 modelo2 <- lm(BMD2 ~ BMI, dados.rls.het)
-print(summary(modelo2))
+summary(modelo2)
 b2.res <- ggplot(data.frame(Fitted = fitted(modelo2), Residuals = residuals(modelo2)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-150, 150)) +
@@ -79,7 +79,7 @@ b3 <- ggplot(dados.rlm, aes(BMI, BMD)) +
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-sin.png", h = 7, w = 7)
 
 modelo3 <- lm(BMD ~ BMI, dados.rlm)
-print(summary(modelo3))
+summary(modelo3)
 b3.res <- ggplot(data.frame(Fitted = fitted(modelo3), Residuals = residuals(modelo3)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-300, 300)) +
