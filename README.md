@@ -17,8 +17,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 9. Testes 2 proporções ([PDF][teste-2prop-pdf], [Handout][teste-2prop-handout]) (cap 26 e 27)
 10. Correlação ([PDF][cor-pdf], [Handout][cor-handout]) (cap 17)
 11. Regressão Linear Simples ([PDF][lm-pdf], [Handout][lm-handout]) (cap 18, 19)
-12. Regressão Logística ([PDF][glm-pdf], [Handout][glm-handout]) (cap 31, 32)
-13. Comparações múltiplas e ANOVA ([PDF][anova-pdf], [Handout][anova-handout]) (cap 13, 30)
+12. Comparações múltiplas e ANOVA ([PDF][anova-pdf], [Handout][anova-handout]) (cap 13, 30)
+13. Regressão Logística ([PDF][glm-pdf], [Handout][glm-handout]) (cap 31, 32)
 14. Métodos não-paramétricos ([PDF][naopar-pdf], [Handout][naopar-handout]) (Cap 37, 38)
 15. Avaliação substitutiva
 
