@@ -28,10 +28,10 @@ b <- ggplot(dados.rls, aes(BMI, BMD)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   theme_bw() +
   ggtitle("BMI x BMD")
-ggsave("Aulas/Cap18-19/pratica-plot1.png", h = 7, w = 7)
+ggsave("Aulas/Cap18-19/pratica-rls1.png", h = 7, w = 7)
 
 bsmooth <- b + geom_smooth(method = "lm")
-ggsave("Aulas/Cap18-19/pratica-plot2.png", h = 7, w = 7)
+ggsave("Aulas/Cap18-19/pratica-rls2.png", h = 7, w = 7)
 
 bsmooth.only <- ggplot(dados.rls, aes(BMI, BMD)) +
   geom_smooth(method = "lm") +
@@ -39,21 +39,21 @@ bsmooth.only <- ggplot(dados.rls, aes(BMI, BMD)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   theme_bw() +
   ggtitle("BMI x BMD")
-ggsave("Aulas/Cap18-19/pratica-plot3.png", h = 7, w = 7)
+ggsave("Aulas/Cap18-19/pratica-rls3.png", h = 7, w = 7)
 
 ggplot(data.frame(Fitted = fitted(modelo), Residuals = residuals(modelo)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-100, 100)) +
   theme_bw() +
   ggtitle("Valores ajustados x Resíduos")
-ggsave("Aulas/Cap18-19/pratica-plot-resid.png", h = 7, w = 7)
+ggsave("Aulas/Cap18-19/pratica-rls-resid.png", h = 7, w = 7)
 
-png("Aulas/Cap18-19/pratica-hist-resid.png")
+png("Aulas/Cap18-19/pratica-rls-resid-hist.png")
 hist(residuals(modelo), col = "gray", main = "Distribuição dos resíduos", xlab = "")
 dev.off()
 
 bsmooth + geom_vline(xintercept = 39, lty = 2, lwd =1, col = "red")
-ggsave("Aulas/Cap18-19/pratica-plot4.png", h = 7, w = 7)
+ggsave("Aulas/Cap18-19/pratica-rls4.png", h = 7, w = 7)
 
 # heterocedasticidade -----------------------------------------------------
 
@@ -64,7 +64,7 @@ b2 <- ggplot(dados.rls.het, aes(BMI, BMD2)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   theme_bw() +
   ggtitle("BMI x BMD")
-ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade.png", h = 7, w = 7)
+ggsave("Aulas/Cap18-19/pratica-rls-het.png", h = 7, w = 7)
 
 modelo2 <- lm(BMD2 ~ BMI, dados.rls.het)
 summary(modelo2)
@@ -74,20 +74,20 @@ b2.res <- ggplot(data.frame(Fitted = fitted(modelo2), Residuals = residuals(mode
   ylim(c(-150, 150)) +
   theme_bw() +
   ggtitle("Valores ajustados x Resíduos")
-ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-resid.png", h = 7, w = 7)
+ggsave("Aulas/Cap18-19/pratica-rls-het-resid.png", h = 7, w = 7)
 
 # obsoleto ----------------------------------------------------------------
 
-# png("Aulas/modelos/pratica-plot1.png")
+# png("Aulas/modelos/pratica-rls1.png")
 # with(dados.rls, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
 # dev.off()
 # 
-# png("Aulas/modelos/pratica-plot2.png")
+# png("Aulas/modelos/pratica-rls2.png")
 # with(dados.rls, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
 # abline(modelo, col = "blue", lwd = 2)
 # dev.off()
 # 
-# png("Aulas/modelos/pratica-plot3.png")
+# png("Aulas/modelos/pratica-rls3.png")
 # with(dados.rls, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
 # abline(modelo, col = "blue", lwd = 2)
 # abline(v = 39, lty = 2, lwd = 2, col = "red")
