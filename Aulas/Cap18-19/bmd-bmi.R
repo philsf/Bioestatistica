@@ -28,7 +28,7 @@ format.interval(confint(modelo)[1, ]) # IC intercept
 format.interval(confint(modelo)[2, ]) # IC slope
 
 pred <- predict(modelo, interval = "conf")
-pred28 <- predict(modelo, newdata = data.frame(BMI=28))
+pred39 <- predict(modelo, newdata = data.table(BMI=39))
 
 # png("Aulas/modelos/pratica-plot1.png")
 # with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
@@ -42,7 +42,7 @@ pred28 <- predict(modelo, newdata = data.frame(BMI=28))
 # png("Aulas/modelos/pratica-plot3.png")
 # with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
 # abline(modelo, col = "blue", lwd = 2)
-# abline(v = 28, lty = 2, lwd = 2, col = "red")
+# abline(v = 39, lty = 2, lwd = 2, col = "red")
 # dev.off()
 
 library(ggplot2)
@@ -55,7 +55,7 @@ ggsave("Aulas/Cap18-19/pratica-plot1.png", h = 7, w = 7)
 bsmooth <- b + geom_smooth(method = "lm")
 ggsave("Aulas/Cap18-19/pratica-plot2.png", h = 7, w = 7)
 
-bsmooth + geom_vline(xintercept = 28, lty = 2, lwd =1, col = "red")
+bsmooth + geom_vline(xintercept = 39, lty = 2, lwd =1, col = "red")
 ggsave("Aulas/Cap18-19/pratica-plot3.png", h = 7, w = 7)
 
 bsmooth.only <- ggplot(dados, aes(BMI, BMD)) +
