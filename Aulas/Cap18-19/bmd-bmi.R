@@ -32,20 +32,6 @@ pred39 <- predict(modelo, newdata = data.table(BMI=39), interval = "conf")
 format.float(pred39[1], 1)
 format.interval(pred39[2:3], 1)
 
-# png("Aulas/modelos/pratica-plot1.png")
-# with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
-# dev.off()
-# 
-# png("Aulas/modelos/pratica-plot2.png")
-# with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
-# abline(modelo, col = "blue", lwd = 2)
-# dev.off()
-# 
-# png("Aulas/modelos/pratica-plot3.png")
-# with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
-# abline(modelo, col = "blue", lwd = 2)
-# abline(v = 39, lty = 2, lwd = 2, col = "red")
-# dev.off()
 
 library(ggplot2)
 b <- ggplot(dados, aes(BMI,BMD)) +
@@ -101,3 +87,20 @@ b3.res <- ggplot(data.frame(Fitted = fitted(modelo3), Residuals = residuals(mode
   geom_point() +
   ggtitle("Valores ajustados x Resíduos")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-sin-resid.png", h = 7, w = 7)
+
+# obsoleto ----------------------------------------------------------------
+
+# png("Aulas/modelos/pratica-plot1.png")
+# with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
+# dev.off()
+# 
+# png("Aulas/modelos/pratica-plot2.png")
+# with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
+# abline(modelo, col = "blue", lwd = 2)
+# dev.off()
+# 
+# png("Aulas/modelos/pratica-plot3.png")
+# with(dados, plot(BMI,BMD, main = "BMI x BMD", xlab = "BMI (kg/m2)", ylab = "BMD (escala ficitícia)"))
+# abline(modelo, col = "blue", lwd = 2)
+# abline(v = 39, lty = 2, lwd = 2, col = "red")
+# dev.off()
