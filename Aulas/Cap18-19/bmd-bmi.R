@@ -37,9 +37,11 @@ format.interval(pred39[2:3], 1)
 # graficos ----------------------------------------------------------------
 
 library(ggplot2)
-b <- ggplot(dados, aes(BMI,BMD)) +
+b <- ggplot(dados, aes(BMI, BMD)) +
   geom_point() +
+  xlim(range(BMI)) + ylim(range(BMD)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
+  theme_bw() +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-plot1.png", h = 7, w = 7)
 
@@ -53,11 +55,13 @@ bsmooth.only <- ggplot(dados, aes(BMI, BMD)) +
   geom_smooth(method = "lm") +
   xlim(range(BMI)) + ylim(range(BMD)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
+  theme_bw() +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-plot4.png", h = 7, w = 7)
 
 ggplot(data.frame(Fitted = fitted(modelo), Residuals = residuals(modelo)), aes(Fitted, Residuals)) +
   geom_point() +
+  ylim(c(-100, 100)) +
   ggtitle("Valores ajustados x Resíduos")
 ggsave("Aulas/Cap18-19/pratica-plot-resid.png", h = 7, w = 7)
 
@@ -68,6 +72,7 @@ dev.off()
 b2 <- ggplot(heterocedasticidade, aes(BMI, BMD2)) +
   geom_point() +
   geom_smooth(method = "lm") +
+  xlim(range(BMI)) + ylim(range(BMD2)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade.png", h = 7, w = 7)
@@ -77,6 +82,7 @@ ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade.png", h = 7, w = 7)
 modelo2 <- lm(BMD2 ~ BMI, heterocedasticidade)
 b2.res <- ggplot(data.frame(Fitted = fitted(modelo2), Residuals = residuals(modelo2)), aes(Fitted, Residuals)) +
   geom_point() +
+  ylim(c(-150, 150)) +
   ggtitle("Valores ajustados x Resíduos")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-resid.png", h = 7, w = 7)
 
@@ -84,12 +90,14 @@ b3 <- ggplot(heterocedasticidade2, aes(BMI, BMD3)) +
   geom_point() +
   geom_smooth(method = "lm") +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
+  xlim(range(BMI)) + ylim(range(BMD3)) +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-sin.png", h = 7, w = 7)
 
 modelo3 <- lm(BMD3 ~ BMI, heterocedasticidade2)
 b3.res <- ggplot(data.frame(Fitted = fitted(modelo3), Residuals = residuals(modelo3)), aes(Fitted, Residuals)) +
   geom_point() +
+  ylim(c(-300, 300)) +
   ggtitle("Valores ajustados x Resíduos")
 ggsave("Aulas/Cap18-19/pratica-plot-heterocedasticidade-sin-resid.png", h = 7, w = 7)
 
