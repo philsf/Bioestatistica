@@ -33,16 +33,13 @@ ggsave("Aulas/Cap18-19/pratica-plot1.png", h = 7, w = 7)
 bsmooth <- b + geom_smooth(method = "lm")
 ggsave("Aulas/Cap18-19/pratica-plot2.png", h = 7, w = 7)
 
-bsmooth + geom_vline(xintercept = 39, lty = 2, lwd =1, col = "red")
-ggsave("Aulas/Cap18-19/pratica-plot3.png", h = 7, w = 7)
-
 bsmooth.only <- ggplot(dados.rls, aes(BMI, BMD)) +
   geom_smooth(method = "lm") +
   xlim(range(dados.rls$BMI)) + ylim(range(dados.rls$BMD)) +
   xlab("BMI (kg/m2)") + ylab("BMD (escala ficitícia)") +
   theme_bw() +
   ggtitle("BMI x BMD")
-ggsave("Aulas/Cap18-19/pratica-plot4.png", h = 7, w = 7)
+ggsave("Aulas/Cap18-19/pratica-plot3.png", h = 7, w = 7)
 
 ggplot(data.frame(Fitted = fitted(modelo), Residuals = residuals(modelo)), aes(Fitted, Residuals)) +
   geom_point() +
@@ -53,6 +50,9 @@ ggsave("Aulas/Cap18-19/pratica-plot-resid.png", h = 7, w = 7)
 png("Aulas/Cap18-19/pratica-hist-resid.png")
 hist(residuals(modelo), col = "gray", main = "Distribuição dos resíduos", xlab = "")
 dev.off()
+
+bsmooth + geom_vline(xintercept = 39, lty = 2, lwd =1, col = "red")
+ggsave("Aulas/Cap18-19/pratica-plot4.png", h = 7, w = 7)
 
 b2 <- ggplot(dados.rls.het, aes(BMI, BMD2)) +
   geom_point() +
