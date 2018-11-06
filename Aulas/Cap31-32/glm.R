@@ -14,6 +14,8 @@ summary(dados.rlm)
 modelo4 <- glm(osteo ~ idoso, binomial, dados.rlm)
 summary(modelo4)
 
+c(format.float(exp(coef(modelo4)[2])), format.interval(exp(confint.default(modelo4)[2, ])))
+
 tc.idoso.osteo <- with(dados.rlm, table(idoso, osteo))
 fisher.test(tc.idoso.osteo)
 
