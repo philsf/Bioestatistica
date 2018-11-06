@@ -21,3 +21,17 @@ modelo5 <- glm(osteo ~ BMI + idade + horm, binomial, dados.rlm)
 summary(modelo5)
 
 # graficos ----------------------------------------------------------------
+
+baseplot +
+  geom_point(aes()) +
+  geom_hline(yintercept = 500, lwd = 1, col = "red", lty = 2) +
+  labs(subtitle = "Desfecho binário: [BMD < 500] -> Osteoporose ") +
+  annotate("text", x = min(dados.rlm$BMI)*1.2, y = 492.5, label = "Osteoporose", col = "red")
+ggsave("Aulas/Cap31-32/pratica-glm4.png", h = 7, w = 7)
+
+baseplot +
+  geom_point(aes(col = horm)) +
+  geom_hline(yintercept = 500, lwd = 1, col = "red", lty = 2) +
+  labs(subtitle = "Desfecho binário: [BMD < 500] -> Osteoporose ") +
+  annotate("text", x = min(dados.rlm$BMI)*1.2, y = 492.5, label = "Osteoporose", col = "red")
+ggsave("Aulas/Cap31-32/pratica-glm5.png", h = 7, w = 7)
