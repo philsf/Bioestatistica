@@ -166,6 +166,198 @@
 
 \subsection{Regressão Linear Múltipla}
 
+\begin{frame}{\small Modelo 1}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm1}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{center}
+    \begin{exampleblock}{Modelo 1}
+      \tiny
+\begin{verbatim}
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-50.770 -14.570  -2.449  14.357  58.778 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 607.3708     5.9857  101.47   <2e-16 ***
+BMI          -1.9848     0.1444  -13.75   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 20.71 on 198 degrees of freedom
+Multiple R-squared:  0.4884,	Adjusted R-squared:  0.4858 
+F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
+\end{verbatim}
+    \end{exampleblock}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 1}
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
+\end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 2}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_0}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{center}
+    \begin{exampleblock}{Modelo 2}
+      \tiny
+\begin{verbatim}
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-48.543 -14.299  -2.799  14.044  58.875 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  609.236      6.097  99.917   <2e-16 ***
+BMI           -1.977      0.144 -13.729   <2e-16 ***
+etniaparda    -4.351      2.922  -1.489    0.138    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 20.65 on 197 degrees of freedom
+Multiple R-squared:  0.4941,	Adjusted R-squared:  0.489 
+F-statistic: 96.21 on 2 and 197 DF,  p-value: < 2.2e-16
+\end{verbatim}
+    \end{exampleblock}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 2}
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm2_0-resid}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 2.1}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_1}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{center}
+    \begin{exampleblock}{Modelo 2.1}
+      \tiny
+\begin{verbatim}
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-30.484 -12.318   0.865  11.618  32.679 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 790.51012   12.57103   62.88   <2e-16 ***
+BMI          -2.02336    0.09757  -20.74   <2e-16 ***
+idade        -3.01619    0.19603  -15.39   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 14 on 197 degrees of freedom
+Multiple R-squared:  0.7676,	Adjusted R-squared:  0.7653 
+F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
+\end{verbatim}
+    \end{exampleblock}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 2.1}
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm2_1-resid}
+  \end{center}
+\end{frame}
+
+% \begin{frame}{\small Modelo 2.2}
+%   \begin{center}
+%     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_2}
+%   \end{center}
+% \end{frame}
+
+\begin{frame}{\small Modelo 2.2}
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm2_2-resid}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{center}
+    \begin{exampleblock}{Modelo 2.2}
+      \tiny
+\begin{verbatim}
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-35.757 -12.239  -0.626  10.176  45.081 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 589.6897     5.2782 111.722  < 2e-16 ***
+BMI          -1.9055     0.1187 -16.049  < 2e-16 ***
+hormmedio    28.9182     2.9694   9.739  < 2e-16 ***
+hormalto     17.7913     2.8720   6.195 3.37e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 16.98 on 196 degrees of freedom
+Multiple R-squared:  0.6595,	Adjusted R-squared:  0.6543 
+F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
+\end{verbatim}
+    \end{exampleblock}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 3}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm3}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{center}
+    \begin{exampleblock}{Modelo 3}
+      \tiny
+\begin{verbatim}
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-18.3964  -4.1337  -0.5398   4.4640  25.6025 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 774.02125    6.48702  119.32   <2e-16 ***
+BMI          -1.94720    0.04992  -39.00   <2e-16 ***
+idade        -3.02783    0.10013  -30.24   <2e-16 ***
+hormmedio    29.35318    1.24821   23.52   <2e-16 ***
+hormalto     16.32422    1.20813   13.51   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.139 on 195 degrees of freedom
+Multiple R-squared:  0.9402,	Adjusted R-squared:  0.9389 
+F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
+\end{verbatim}
+    \end{exampleblock}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 3}
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm3-resid}
+  \end{center}
+\end{frame}
+
 \section{Regressão Logística}
 
 \subsection{Regressão Logística}
