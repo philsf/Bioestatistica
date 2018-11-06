@@ -172,6 +172,38 @@
   \end{center}
 \end{frame}
 
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: BMD (contínua)
+  \item Independente: BMI (contínua)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\small Componentes do modelo 1}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  \footnotesize
+  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+\end{frame}
+
 \begin{frame}[fragile]{}
   \begin{center}
     \begin{exampleblock}{Modelo 1}
@@ -207,6 +239,39 @@ F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_0}
   \end{center}
+\end{frame}
+
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: BMD (contínua)
+  \item Independente: BMI (contínua)
+  \item Independente: etnia (categórica -- binária)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI} + \text{etnia}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\small Componentes do modelo 2}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI} + \text{etnia}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(etnia)} +\varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  % \footnotesize
+  % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
 \begin{frame}[fragile]{}
@@ -247,6 +312,39 @@ F-statistic: 96.21 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: BMD (contínua)
+  \item Independente: BMI (contínua)
+  \item Independente: idade (contínua)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI} + \text{idade}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\small Componentes do modelo 2.1}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI} + \text{idade}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} +\varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  % \footnotesize
+  % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+\end{frame}
+
 \begin{frame}[fragile]{}
   \begin{center}
     \begin{exampleblock}{Modelo 2.1}
@@ -285,6 +383,39 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item Dependente: BMD (contínua)
+  \item Independente: BMI (contínua)
+  \item Independente: hormônio (categórica -- 3 níveis)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI} + \text{hormônio}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\small Componentes do modelo 2.2}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI} + \text{hormônio}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(hormônio)} +\varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  % \footnotesize
+  % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+\end{frame}
+
 \begin{frame}{\small Modelo 2.2}
   \begin{center}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
@@ -316,6 +447,40 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
 \end{verbatim}
     \end{exampleblock}
   \end{center}
+\end{frame}
+
+% \begin{frame}{Quais são as variáveis?}
+%   \begin{itemize}
+%   \item Dependente: BMD (contínua)
+%   \item Independente: BMI (contínua)
+%   \item Independente: idade (contínua)
+%   \item Independente: hormônio (categórica -- 3 níveis)
+%   \end{itemize}
+%   \vfill
+%   \begin{block}{Esta relação pode ser expressa como}
+%     \begin{displaymath}
+%       \text{BMD} \sim \text{BMI} + \text{idade} +\text{hormônio}
+%     \end{displaymath}
+%   \end{block}
+% \end{frame}
+
+\begin{frame}{\small Componentes do modelo 3}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{BMD} \sim \text{BMI} + \text{idade} + \text{hormônio}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(hormônio)} +\varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  % \footnotesize
+  % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
 \begin{frame}[fragile]{}
@@ -362,6 +527,37 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item \alert{Dependente: Osteoporose (categórica -- binária)}
+  \item Independente: Idoso (categórica -- binária)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{Osteoporose} \sim \text{Idoso}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\small Componentes do modelo 4}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{Osteoporose} \sim \text{Idoso}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{Osteoporose} =\beta_0 + \beta_1 \text{(Idoso)} +\varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  % \footnotesize
+  % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+\end{frame}
 
 \begin{frame}[fragile]{}
   \begin{exampleblock}{\small Tabela de contingência Idoso x Osteoporose}
@@ -433,6 +629,40 @@ Number of Fisher Scoring iterations: 4
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-glm5}
   \end{center}
+\end{frame}
+
+\begin{frame}{Quais são as variáveis?}
+  \begin{itemize}
+  \item \alert{Dependente: Osteoporose (categórica -- binária)}
+  \item Independente: BMI (contínua)
+  \item Independente: idade (contínua)
+  \item Independente: hormônio (categórica -- 3 níveis)
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{Osteoporose} \sim \text{BMI} + \text{idade} +\text{hormônio}
+    \end{displaymath}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\small Componentes do modelo 5}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{Osteoporose} \sim \text{BMI} + \text{idade} + \text{hormônio}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{Osteoporose} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(hormônio)} +\varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  % \footnotesize
+  % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
 \begin{frame}[fragile]{}
