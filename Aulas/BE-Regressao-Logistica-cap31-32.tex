@@ -565,30 +565,33 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
 \begin{verbatim}
            osteo
 idoso       Sadio Osteoporose
-  Nao Idoso   165          28
-  Idoso         1           6
+  Nao Idoso    98           6
+  Idoso        68          28
 \end{verbatim}
   \end{exampleblock}
-  \begin{exampleblock}{\small Razão de chance Idoso x Osteoporose}<2->
-    \tiny
-\begin{verbatim}
-	Fisher's Exact Test for Count Data
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap31-32/pratica-glm4}
+  \end{center}
+%   \begin{exampleblock}{\small Razão de chance Idoso x Osteoporose}<2->
+%     \tiny
+% \begin{verbatim}
+% 	Fisher's Exact Test for Count Data
 
-data:  tc.idoso.osteo
-p-value = 0.0001001
-alternative hypothesis: true odds ratio is not equal to 1
-95 percent confidence interval:
-    3.94893 1619.54319
-sample estimates:
-odds ratio 
-  34.36342 
-\end{verbatim}
-  \end{exampleblock}
-  \begin{block}{\small OR}<2->
-    \begin{center}
-      OR $\approx 34$
-    \end{center}
-  \end{block}
+% data:  tc.idoso.osteo
+% p-value = 0.0001001
+% alternative hypothesis: true odds ratio is not equal to 1
+% 95 percent confidence interval:
+%     3.94893 1619.54319
+% sample estimates:
+% odds ratio 
+%   34.36342 
+% \end{verbatim}
+%   \end{exampleblock}
+%   \begin{block}{\small OR}<2->
+%     \begin{center}
+%       OR $\approx 34$
+%     \end{center}
+%   \end{block}
 \end{frame}
 
 \begin{frame}[fragile]{}
@@ -598,27 +601,27 @@ odds ratio
 \begin{verbatim}
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
--1.9728  -0.5599  -0.5599  -0.5599   1.9649  
+-0.8305  -0.8305  -0.3447  -0.3447   2.3886  
 
 Coefficients:
             Estimate Std. Error z value Pr(>|z|)    
-(Intercept)  -1.7737     0.2044  -8.678  < 2e-16 ***
-idosoIdoso    3.5655     1.0993   3.243  0.00118 ** 
+(Intercept)  -2.7932     0.4206  -6.642 3.10e-11 ***
+idosoIdoso    1.9059     0.4767   3.998 6.39e-05 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
     Null deviance: 182.35  on 199  degrees of freedom
-Residual deviance: 165.57  on 198  degrees of freedom
-AIC: 169.57
+Residual deviance: 161.78  on 198  degrees of freedom
+AIC: 165.78
 
-Number of Fisher Scoring iterations: 4
+Number of Fisher Scoring iterations: 5
 \end{verbatim}
     \end{exampleblock}
     \begin{block}{\small log da OR de um idoso x osteoporose}<2->
       \small
-      $$\log \left(\text{OR} \right) = 3.5655$$
+      $$\log \left(\text{OR} \right) = 1.9059$$
     \end{block}
   \end{center}
 \end{frame}
@@ -626,20 +629,20 @@ Number of Fisher Scoring iterations: 4
 \begin{frame}
   \begin{block}{\small Transformando o log da OR na OR }
     \footnotesize
-    $$\log \left(\text{OR} \right) \approx 3.56...$$
+    $$\log \left(\text{OR} \right) \approx 1.90...$$
     \begin{center}
       \small
       ... portanto...
     \end{center}
     \footnotesize
-    $$e^{3.56} \approx 35$$
+    $$e^{1.90} \approx 6.7$$
   \end{block}
 
   \bigskip
   \bigskip
   \begin{block}{Resultado}<2->
     \begin{itemize}
-    \item (Idoso) {\bf OR: 35.36, IC: [4.10, 304.93]}
+    \item (Idoso) {\bf OR: 6.73, IC: [2.64, 17.12]}
     \end{itemize}
   \end{block}
 \end{frame}
