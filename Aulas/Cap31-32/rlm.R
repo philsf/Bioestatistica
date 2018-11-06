@@ -71,17 +71,17 @@ ggplot(data.frame(Fitted = fitted(modelo2.1), Residuals = residuals(modelo2.1)),
   ggtitle("Modelo 2.1 - Valores ajustados x Resíduos", subtitle = "BMI ajustado por idade")
 ggsave("Aulas/Cap31-32/pratica-rlm2_1-resid.png", h = 7, w = 7)
 
+baseplot +
+  geom_point(aes(col = horm)) +
+  geom_smooth(method = "lm")
+ggsave("Aulas/Cap31-32/pratica-rlm2_2.png", h = 7, w = 7)
+
 ggplot(data.frame(Fitted = fitted(modelo2.2), Residuals = residuals(modelo2.2)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-resid.max, resid.max)) +
   theme_bw() +
   ggtitle("Modelo 2.2 - Valores ajustados x Resíduos", subtitle = "BMI ajustado por hormônio")
 ggsave("Aulas/Cap31-32/pratica-rlm2_2-resid.png", h = 7, w = 7)
-
-baseplot +
-  geom_point(aes(col = horm)) +
-  geom_smooth(method = "lm")
-ggsave("Aulas/Cap31-32/pratica-rlm3.png", h = 7, w = 7)
 
 ggplot(data.frame(Fitted = fitted(modelo3), Residuals = residuals(modelo3)), aes(Fitted, Residuals)) +
   geom_point() +
