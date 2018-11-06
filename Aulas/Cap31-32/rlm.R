@@ -3,7 +3,8 @@ library(data.table)
 
 # dados simulados ---------------------------------------------------------
 
-dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv")
+dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv", stringsAsFactors = TRUE)
+levels(dados.rlm$horm) <- c("baixo", "medio", "alto")
 summary(dados.rlm)
 
 # modelos -----------------------------------------------------------------
