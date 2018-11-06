@@ -174,7 +174,7 @@
 
 \begin{frame}
   \begin{center}
-    Hoje vamos investigar a primeira frase dos resultados do abstract
+    Hoje vamos interpretar os resultados do abstract
   \end{center}
 \end{frame}
 
@@ -182,6 +182,21 @@
   \begin{center}
     \includegraphics[width=1.175\textwidth]{Cap18-19/bmi-bmd-abstract}
   \end{center}
+\end{frame}
+
+\begin{frame}
+  \begin{exampleblock}{Enunciado 1}
+    \small
+    Os pesquisadores querem investigar se o grupo etnicidade das participantes tem algum efeito detectável na associação entre
+    a densidade mineral óssea (BMD) e o índice de massa corpórea (BMI).
+
+    \bigskip
+    \begin{exampleblock}{}
+    Para isto selecionaram 100 mulheres brancas e 100 mulheres pardas, de meia idade.
+    Mensuraram a BMD e calcularam o BMI delas.
+  \end{exampleblock}
+
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\small Modelo 1}
@@ -251,6 +266,12 @@ F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
 \end{center}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    Agora vamos ver se a etnia tem algum efeito
+  \end{center}
 \end{frame}
 
 \begin{frame}{\small Modelo 2}
@@ -324,7 +345,13 @@ F-statistic: 96.21 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 2.1}
+\begin{frame}
+  \begin{center}
+    Que outra variável os pesquisadores deveriam ter investigado?
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 2.1 -- idade}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_1}
   \end{center}
@@ -395,7 +422,13 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 2.2}
+\begin{frame}
+  \begin{center}
+    Que outra variável os pesquisadores deveriam ter investigado?
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 2.2 -- quantidade de hormônio}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_2}
   \end{center}
@@ -481,6 +514,12 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
 %     \end{displaymath}
 %   \end{block}
 % \end{frame}
+
+\begin{frame}
+  \begin{center}
+    Agora um modelo maior (ajustando para todas as variáveis relevantes)
+  \end{center}
+\end{frame}
 
 \begin{frame}{\small Componentes do modelo 3}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
