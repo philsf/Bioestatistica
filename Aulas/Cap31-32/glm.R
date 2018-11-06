@@ -22,6 +22,11 @@ fisher.test(tc.idoso.osteo)
 modelo5 <- glm(osteo ~ BMI + idade + horm, binomial, dados.rlm)
 summary(modelo5)
 
+c(format.float(exp(coef(modelo5)[2])), format.interval(exp(confint.default(modelo5)[2, ])))
+c(format.float(exp(coef(modelo5)[3])), format.interval(exp(confint.default(modelo5)[3, ])))
+c(format.float(exp(coef(modelo5)[4])), format.interval(exp(confint.default(modelo5)[4, ])))
+c(format.float(exp(coef(modelo5)[5])), format.interval(exp(confint.default(modelo5)[5, ])))
+
 # graficos ----------------------------------------------------------------
 
 baseplot +
