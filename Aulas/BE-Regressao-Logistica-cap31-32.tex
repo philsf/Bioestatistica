@@ -362,6 +362,116 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
 
 \subsection{Regressão Logística}
 
+\begin{frame}{\small Modelo 4}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap31-32/pratica-glm4}
+  \end{center}
+\end{frame}
+
+
+\begin{frame}[fragile]{}
+  \begin{exampleblock}{\small Tabela de contingência Idoso x Osteoporose}
+    \tiny
+\begin{verbatim}
+           osteo
+idoso       Sadio Osteoporose
+  Nao Idoso   165          28
+  Idoso         1           6
+\end{verbatim}
+  \end{exampleblock}
+  \begin{exampleblock}{\small Razão de chance Idoso x Osteoporose}<2->
+    \tiny
+\begin{verbatim}
+	Fisher's Exact Test for Count Data
+
+data:  tc.idoso.osteo
+p-value = 0.0001001
+alternative hypothesis: true odds ratio is not equal to 1
+95 percent confidence interval:
+    3.94893 1619.54319
+sample estimates:
+odds ratio 
+  34.36342 
+\end{verbatim}
+  \end{exampleblock}
+  \begin{block}{\small OR}<2->
+    \begin{center}
+      OR $\approx 34$
+    \end{center}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{center}
+    \begin{exampleblock}{Modelo 4}
+      \tiny
+\begin{verbatim}
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.9728  -0.5599  -0.5599  -0.5599   1.9649  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  -1.7737     0.2044  -8.678  < 2e-16 ***
+idosoIdoso    3.5655     1.0993   3.243  0.00118 ** 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 182.35  on 199  degrees of freedom
+Residual deviance: 165.57  on 198  degrees of freedom
+AIC: 169.57
+
+Number of Fisher Scoring iterations: 4
+\end{verbatim}
+    \end{exampleblock}
+    \begin{block}{\small log da OR}<2->
+      \begin{center}
+        \small
+        log da OR $\approx$ 3.56
+      \end{center}
+    \end{block}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\small Modelo 5}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap31-32/pratica-glm5}
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{}
+  \begin{center}
+    \begin{exampleblock}{Modelo 5}
+      \tiny
+\begin{verbatim}
+Deviance Residuals: 
+     Min        1Q    Median        3Q       Max  
+-1.85523  -0.08866  -0.01263  -0.00068   2.05724  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -77.4340    18.0040  -4.301 1.70e-05 ***
+BMI           0.4554     0.1089   4.183 2.88e-05 ***
+idade         0.8285     0.2086   3.972 7.13e-05 ***
+hormmedio     1.9614     1.4716   1.333 0.182590    
+hormalto      5.5205     1.5101   3.656 0.000257 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 182.354  on 199  degrees of freedom
+Residual deviance:  43.436  on 195  degrees of freedom
+AIC: 53.436
+
+Number of Fisher Scoring iterations: 9
+\end{verbatim}
+    \end{exampleblock}
+  \end{center}
+\end{frame}
+
 \section{Aprofundamento}
 
 \subsection{Aprofundamento}
