@@ -445,12 +445,17 @@ P: Estas amostras são significativamente diferentes?
     \item<1-> \alert<3>{normalmente distribuídas}, e
     \item<1-> independentes,
     \end{itemize}
-poderíamos fazer um teste t não pareado.
+    poderíamos fazer um teste t não pareado.
 
+    \bigskip
+    \bigskip
   \item<2-> Resultado: p-valor = \alert{0.259}
-  \begin{exampleblock}{Pergunta}
-    Isto significa que as amostras não são significativamente diferentes?
-  \end{exampleblock}
+    \bigskip
+    \bigskip
+    \begin{exampleblock}{Pergunta}
+      \small
+      Isto significa que as amostras não são significativamente diferentes?
+    \end{exampleblock}
   \end{itemize}
 \end{frame}
 
@@ -473,19 +478,24 @@ poderíamos fazer um teste t não pareado.
 
 \begin{frame}{Mann-Whitney}
   \begin{exampleblock}{Teste t}
+    \small
     p-valor = 0.259 (não significativo)
   \end{exampleblock}
   \begin{itemize}
+    \small
   \item<2-> Aplicando o teste de Shapiro-Wilk em x e y
     \begin{itemize}
+      \footnotesize
     \item<2-> x: p-valor = 5.515e-16
     \item<2-> y: p-valor = 5.274e-09
     \end{itemize}
-  \item Devemos rejeitar a hipótese de normalidade.
-  \item Então o teste t \alert{não é} apropriado!
-  \item Substituto: teste de Mann-Whitney
+    \bigskip
+  \item<3-> Devemos rejeitar a hipótese de normalidade.
+  \item<3-> Então o teste t \alert{não é} apropriado!
+  \item<3-> Substituto: teste de Mann-Whitney
   \end{itemize}
-  \begin{exampleblock}{Teste de Mann-Whitney}
+  \begin{exampleblock}{Teste de Mann-Whitney}<4->
+    \small
     p-value = \alert{0.0001346} (significativo)
   \end{exampleblock}
 \end{frame}
