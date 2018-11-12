@@ -346,12 +346,15 @@ Dados normais x dados log-transformados
 
 \begin{frame}{Teste para 1 amostra}
   \begin{itemize}
+    \small
   \item Desvios da normalidade severos impactam os testes paramétricos
-  \item Nesses casos, deve-se transformar os dados, se possível
-  \item Caso não seja, deve-se usar um teste não paramétrico
+    \bigskip
+  \item Nesses casos, tenta-se transformar os dados, se possível
+  \item Caso não seja, deve-se usar um teste não paramétrico\footnote{Sem transformação!}
   \end{itemize}
+  \bigskip
   \begin{block}{Teste para uma amostra}
-    Ao invés do teste t, usar o teste de Wilcoxon (Capítulo 25)
+    Ao invés do teste t, usar o teste de Wilcoxon {\footnotesize (Capítulo 25)}
   \end{block}
 \end{frame}
 
@@ -363,16 +366,22 @@ Dados normais x dados log-transformados
       \footnotesize
     \item categórica ordinal
     \item numérica discreta
-    \item numérica contínua
+    \item numérica contínua (não-normal)
     \end{itemize}
   \item Independente: parâmetro fixo
   \end{itemize}
   \vfill
-  \begin{block}{Esta relação pode ser expressa como}
+  \begin{exampleblock}{Exemplo}
     \begin{displaymath}
       \text{escore HHS mediano} \sim \text{70}
     \end{displaymath}
-  \end{block}
+  \end{exampleblock}
+  \begin{exampleblock}{Exemplo}
+    \begin{displaymath}
+      \text{escore ASA mediano} \sim \text{II}
+  \end{displaymath}
+
+  \end{exampleblock}
 \end{frame}
 
 \subsection[2 médias]{Testes para 2 amostras}
@@ -380,14 +389,17 @@ Dados normais x dados log-transformados
 \begin{frame}{Testes para 2 amostras}
   \begin{block}{Dados normais}
     \begin{itemize}
+    \small
     \item amostras independentes $\Rightarrow$ t-teste não pareado
     \item amostras pareadas $\Rightarrow$ t-teste pareado
     \end{itemize}
   \end{block}
+  \bigskip
   \begin{block}{Dados não normais}
     \begin{itemize}
-    \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} (Capítulo 24)%\footnote{Também conhecido como Wilcoxon (rank sum test)}
-    \item amostras pareadas $\Rightarrow$ Wilcoxon (Capítulo 25)
+    \small
+    \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} {\footnotesize (Capítulo 24)}%\footnote{Também conhecido como Wilcoxon (rank sum test)}
+    \item amostras pareadas $\Rightarrow$ Wilcoxon {\footnotesize (Capítulo 25)}
     \end{itemize}
   \end{block}
 \end{frame}
@@ -400,20 +412,21 @@ Dados normais x dados log-transformados
       \footnotesize
     \item categórica ordinal
     \item numérica discreta
-    \item numérica contínua
+    \item numérica contínua (não-normal)
     \end{itemize}
   \item Independente:
     \begin{itemize}
       \footnotesize
     \item categórica ordinal
     \item numérica discreta
-    \item numérica contínua
+    \item numérica contínua (não-normal)
     \end{itemize}
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \small
     \begin{displaymath}
-      \text{escore HHS} \sim \text{escore ASA}
+      \text{escore HHS tratamento} \sim \text{escore HHS controle}
     \end{displaymath}
   \end{block}
 \end{frame}
