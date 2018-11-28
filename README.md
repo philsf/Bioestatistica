@@ -54,17 +54,21 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 ## Exercícios selecionados por aula
 
 1. Cap 1: não há exercícios.
-2. Cap 2: 1,2 e 4.
-3. Cap 3: todos. 1. Para 3 e 4, no Excel use o commando `=DESVPAD()`.
+2. Cap 2: 1, 2 e 4.
+3. Cap 3: todos. 1. Para 3 e 4, você pode usar (por ex.) o [Excel][excel-var] para fazer os cálculos.
 4. Cap 4: Exercícios 1 e 2. Cap 5: Exercícios 1, 3, 7 e 9.
-5. Cap 7: Em breve
+5. Cap 5: 1, 2 (A: IC = [1200.7, 1205.3] e D: IC =[1201.1, 1204.9]). Cap 7: 1, 2 (IC = [5.3, 10.1]).
 6. Cap 8: Exercícios 1, 2, 4 e 5. Cap 9: Exercícios 1 e 2.
 7. Cap 10: todos. Cap 11: todos.
-8. Cap 23: . Cap 25: -
+8. Cap 23: -, Cap 25: -.
 9. Cap 26: 1. Cap 27: -.
-10. Cap 17: 1,3 e 5. Para o 6, usar r = 0:8868; IC95% = [0:4856; 0:9794]; p = 0:0033: r 2=?
-11. Cap 19: Todos menos o 5.
-12. Cap 13: 1. Cap 30: -
+10. Cap 17: 1, 3 e 5. Para o 6, usar r = 0:8868; IC95% = [0:4856; 0:9794]; p = 0:0033: r 2=?
+11. Cap 18: -. Cap 19: problemas: todos menos o problema 5.
+12. Cap 13: 1. Cap 30: -.
+13. Cap 31: -, Cap 32: -.
+14. Cap 37: -, Cap 38: -.
+
+[excel-var]: https://support.office.com/pt-br/article/var-a-fun%C3%A7%C3%A3o-var-a-913633de-136b-449d-813e-65a00b2b990b
 
 ## Licença
 Todo o material contido aqui é distribuído sob a licença [Creative Commons Atribuição](http://creativecommons.org/licenses/by/4.0/deed.pt_BR)
