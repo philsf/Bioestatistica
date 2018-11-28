@@ -55,7 +55,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 1. Cap 1: não há exercícios.
 2. Cap 2: 1, 2 e 4.
-3. Cap 3: todos. 1. Para 3 e 4: R: 34.64503 e 219.4131, respec.
+3. Cap 3: todos. 1. Para 3 e 4, você pode usar (por ex.) o Excel para fazer os cálculos.
 4. Cap 4: Exercícios 1 e 2. Cap 5: Exercícios 1, 3, 7 e 9.
 5. Cap 5: 1, 2 (A: IC = [1200.7, 1205.3] e D: IC =[1201.1, 1204.9]). Cap 7: 1, 2 (IC = [5.3, 10.1]).
 6. Cap 8: Exercícios 1, 2, 4 e 5. Cap 9: Exercícios 1 e 2.
