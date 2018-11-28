@@ -22,34 +22,34 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 14. Métodos não-paramétricos ([PDF][naopar-pdf], [Handout][naopar-handout]) (Cap 37, 38)
 15. Avaliação substitutiva
 
-[Intro-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1.pdf
-[Intro-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
-[IC-prop-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2.pdf
-[IC-prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-IC-prop-cap2_4em1.pdf
-[Var-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3.pdf
-[Var-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Variabilidade-cap3_4em1.pdf
-[IC-1m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5.pdf
-[IC-1m-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Normal-IC-cap4-5_4em1.pdf
-[IC-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7.pdf
-[IC-2m-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-diferenca-IC-media-cap5-7_4em1.pdf
-[OR-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9.pdf
-[OR-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-OR-RR-cap8-9_4em1.pdf
-[signif-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11.pdf
-[signif-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Significancia_cap10-11_4em1.pdf
-[teste-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25.pdf
-[teste-2m-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2medias-cap23-25_4em1.pdf
-[teste-2prop-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27.pdf
-[teste-2prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27_4em1.pdf
-[cor-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
-[cor-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17_4em1.pdf
-[lm-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Linear-cap18-19.pdf
-[lm-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Linear-cap18-19_4em1.pdf
-[glm-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Logistica-cap31-32.pdf
-[glm-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Logistica-cap31-32_4em1.pdf
-[anova-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30.pdf
-[anova-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30_4em1.pdf
-[naopar-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
-[naopar-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38_4em1.pdf
+[Intro-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Intro-cap1.pdf
+[Intro-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Intro-cap1_4em1.pdf
+[IC-prop-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-IC-prop-cap2.pdf
+[IC-prop-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-IC-prop-cap2_4em1.pdf
+[Var-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Variabilidade-cap3.pdf
+[Var-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Variabilidade-cap3_4em1.pdf
+[IC-1m-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Normal-IC-cap4-5.pdf
+[IC-1m-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Normal-IC-cap4-5_4em1.pdf
+[IC-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-diferenca-IC-media-cap5-7.pdf
+[IC-2m-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-diferenca-IC-media-cap5-7_4em1.pdf
+[OR-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-OR-RR-cap8-9.pdf
+[OR-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-OR-RR-cap8-9_4em1.pdf
+[signif-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Significancia_cap10-11.pdf
+[signif-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Significancia_cap10-11_4em1.pdf
+[teste-2m-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-testes-2medias-cap23-25.pdf
+[teste-2m-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-testes-2medias-cap23-25_4em1.pdf
+[teste-2prop-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-testes-2prop-cap26-27.pdf
+[teste-2prop-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-testes-2prop-cap26-27_4em1.pdf
+[cor-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Correlacao-cap17.pdf
+[cor-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Correlacao-cap17_4em1.pdf
+[lm-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Regressao-Linear-cap18-19.pdf
+[lm-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Regressao-Linear-cap18-19_4em1.pdf
+[glm-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Regressao-Logistica-cap31-32.pdf
+[glm-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Regressao-Logistica-cap31-32_4em1.pdf
+[anova-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-mult-comp-ANOVA-cap13-30.pdf
+[anova-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-mult-comp-ANOVA-cap13-30_4em1.pdf
+[naopar-pdf]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Nao_Param-cap37-38.pdf
+[naopar-handout]: https://github.com/philsf/Bioestatistica/raw/v2018.2-INTO/Aulas/BE-Nao_Param-cap37-38_4em1.pdf
 
 ## Exercícios selecionados por aula
 
