@@ -152,110 +152,137 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Proporções x mensurações}
+% \subsection{Proporções x mensurações}
 
-\begin{frame}{Amostras e populações}
+\begin{frame}{\scriptsize Discussão da aula passada}
+  \begin{block}{}
+    Discussão da leitura obrigatória da aula passada
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Amostras e populações}
   \begin{block}{Estudos clínicos}
     \begin{itemize}
+      \footnotesize
     \item a amostra de pacientes do estudo raramente é representativa da população global...
     \item ... mas pode ser representativa de uma população de pacientes semelhantes
     \end{itemize}
   \end{block}
+  \bigskip
   \begin{block}{Experimentos de laboratório}
     \begin{itemize}
+      \footnotesize
     \item Geralmente difícil de definir
     \item Reprodução de experimentos semelhantes
     \end{itemize}
   \end{block}
-\hfill Cap. 1
+
+  \vfill
+  \hfill \scriptsize Cap. 1
 \end{frame}
 
-\begin{frame}{Proporções x mensurações}
-  % \begin{block}{Definição}
-  %   Mensuração é a atribuição de um número a uma característica de um objeto ou evento, que por sua vez pode ser comparada com outros objetos ou eventos.
-  % \end{block}
+\begin{frame}{\scriptsize Mensurações}
+  \begin{block}{Definição}
+      \footnotesize
+    Mensuração é a atribuição de um número a uma característica de um objeto ou evento, que por sua vez pode ser comparada com outros objetos ou eventos.
+  \end{block}
+  \bigskip
   \begin{itemize}
-  \item Resultados de experimentos podem ser expressos de várias maneiras
-  \item As duas principais são a mensuração e a proporção
+    \footnotesize
+  \item Dados podem ser mensurados de várias maneiras
+    \smallskip
+  \item Quatro níveis de mensuração\footnote{nominal, ordinal, razão, intervalar}
+    \smallskip
+  \item Simplificando: dados \alert<2>{qualitativos} ou quantitativos
   \end{itemize}
+  \bigskip
+  \visible<2>{
   \begin{exampleblock}{Exemplo}
     \begin{itemize}
+      \scriptsize
     \item prop. de pacientes com infecção após um procedimento
     \item prop. de estudantes aprovados em um curso (de Bioestatística)
     \end{itemize}
   \end{exampleblock}
+  }
 \end{frame}
 
-\begin{frame}{Tarefa Google Sala de Aula}
-  \begin{itemize}
-  \item O que é uma proporção?
-  \item O que é uma ``porcentagem''?
-  \end{itemize}
-\end{frame}
+% \begin{frame}{\scriptsize Tarefa Google Sala de Aula}
+%   \begin{itemize}
+%   \item O que é uma proporção?
+%   \item O que é uma ``porcentagem''?
+%   \end{itemize}
+% \end{frame}
 
-\begin{frame}{Tarefa Google Sala de Aula}
-  \begin{block}{Prevalence 20-29}
-    \begin{itemize}
-    \item 22.4 ``por 100,000''
-    \item 22.4 / 100,000
-    \item = 0.000224 (proporção)
-    \item = 0.0224\%
-    \end{itemize}
-  \end{block}
-  \begin{block}{IC 95\% (??) 20-29}
-    \begin{itemize}
-    \item 0 -- 66.2 ``por 100,000''
-    \item 0/100,000 -- 66.2/100,000
-    \item = 0 -- 0.000662 (proporção)
-    \item = 0\% -- 0.0662\%
-    \end{itemize}
-  \end{block}
-  \end{frame}
+% \begin{frame}{\scriptsize Tarefa Google Sala de Aula}
+%   \begin{block}{Prevalence 20-29}
+%     \begin{itemize}
+%     \item 22.4 ``por 100,000''
+%     \item 22.4 / 100,000
+%     \item = 0.000224 (proporção)
+%     \item = 0.0224\%
+%     \end{itemize}
+%   \end{block}
+%   \begin{block}{IC 95\% (??) 20-29}
+%     \begin{itemize}
+%     \item 0 -- 66.2 ``por 100,000''
+%     \item 0/100,000 -- 66.2/100,000
+%     \item = 0 -- 0.000662 (proporção)
+%     \item = 0\% -- 0.0662\%
+%     \end{itemize}
+%   \end{block}
+%   \end{frame}
 
 \section{Intervalo de confiança de uma proporção}
 
 \subsection{Da população para a amostra}
 
-\begin{frame}{A distribuição Binomial}
+\begin{frame}{\scriptsize A distribuição Binomial}
   \begin{itemize}
+    \footnotesize
   \item Ao jogar uma moeda:
     \begin{itemize}
+    \scriptsize
     \item 50\% de dar cara
     \item 50\% de dar coroa
     \end{itemize}
   \item Se \alert{você} jogar uma moeda  algumas vezes:
     \begin{itemize}
+      \scriptsize
     \item você vai tirar cara {\em exatamente} 50\% das vezes?
     \item Por que?
     \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{A distribuição Binomial}
+\begin{frame}{\scriptsize A distribuição Binomial}
   \begin{exampleblock}{Exemplo}
+    \footnotesize
     Qual é a proporção de meninas entre 14 neonatos?
   \end{exampleblock}
   \begin{block}{Pense...}<2->
     \begin{itemize}
+    \footnotesize
     \item Esse grupo de neonatos é uma amostra ou uma população?
     \item<3-> Qual é a população?
     \item<4-> Essa amostra \alert{representa} a população?
-    \item<5
-      -> Se você observar {\em vários} grupos de 14 neonatos... quantas meninas devem nascer em cada amostra?
+      \bigskip
+    \item<5-> Se você observar {\em vários} grupos de 14 neonatos... quantas meninas devem nascer em cada amostra?
     \end{itemize}
   \end{block}
 
 \end{frame}
 
-\begin{frame}{A distribuição Binomial}
+\begin{frame}{\scriptsize A distribuição Binomial}
   \includegraphics[height=\textheight]{Cap2/discreta}
 \end{frame}
 
 
-\begin{frame}{A distribuição Binomial}
+\begin{frame}{\scriptsize A distribuição Binomial}
   \begin{block}{}
+    \footnotesize
     Amostras de populações com proporções diferentes
   \end{block}
 
@@ -264,31 +291,37 @@
 
 \subsection{Da amostra para a população}
 
-\begin{frame}{O Intervalo de Confiança de uma proporção}
-  \begin{exampleblock}{Exemplo}
+\begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
+  \begin{exampleblock}{Exemplo 1 (livro)}
+    \footnotesize
     De cada 14 pacientes tratados com um certo medicamento, 3 sofreram um evento adverso.
 
+    \bigskip
     A proporção é $\frac{3}{14} = 0.2143$.
   \end{exampleblock}
+  \bigskip
   \begin{block}{Pense...}<2->
     \begin{itemize}
-    \item Esta amostra representa toda a população de pacientes que receberá este medicamento?
+    \footnotesize
+    \item<2-> Esta amostra representa toda a população de pacientes que receberá este medicamento?
     \item<3-> Isto é... Quais foram os critérios de inclusão?
     \item<4-> A proporção desta amostra reflete a proporção da população?
     \end{itemize}
   \end{block}
-
 \end{frame}
 
-\begin{frame}{O Intervalo de Confiança de uma proporção}
-    \begin{exampleblock}{Exemplo}
+\begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
+    \begin{exampleblock}{Exemplo 2 (livro)}
+    \footnotesize
     Uma pesquisa de boca de urna entrevistou 100 pessoas, e apenas 33 declararam intenção de voto no canditado A.
 
     % A proporção é $\frac{33}{100} = $.
   \end{exampleblock}
+  \bigskip
   \begin{block}{}<2->
     \begin{itemize}
-    \item Esta amostra representa a população de eleitores?
+    \footnotesize
+    \item<2-> Esta amostra representa a população de eleitores?
     \item<3-> Os entrevistados falaram a verdade sobre em quem votarão?
     \item<4-> Assumindo representatividade...
     \item<4-> Os entrevistados representam a mesma proporção da população?
@@ -296,85 +329,122 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{O Intervalo de Confiança de uma proporção}
+\begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
   \begin{itemize}
-  \item Sabendo a prop. da amostra, não há como garantir que sabemos a prop. da população
-  \item Plano B: calcular um intervalo onde {\em acreditamos} que a prop. da população está.
-  \item P: Qual deveria ser o tamanho deste intervalo?
+    \footnotesize
+  \item<1> Sabendo a prop. da amostra, não há como garantir que sabemos a prop. da população
+    \bigskip
+  \item<2-> Plano B: calcular um intervalo onde {\em acreditamos} que a prop. da população está.
+    \bigskip
+  \item<3> P: Qual deveria ser o tamanho deste intervalo?
   \end{itemize}
 \end{frame}
 
-\begin{frame}{O Intervalo de Confiança de uma proporção}
+\begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
   \begin{itemize}
-  \item Se o intervalo for muito grande: a prop. da população deve estar contido
-  \item Se o intervalo for muito pequeno: a prop. da população pode não estar
-  \item {\bf P: Como saber?}
+    \footnotesize
+  \item<1,3> Se o intervalo for muito grande: a prop. da população deve estar contido
+    \bigskip
+  \item<2,3> Se o intervalo for muito pequeno: a prop. da população pode não estar
+    \bigskip
+  \item<3> {\bf P: Como saber?}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{O Intervalo de Confiança de uma proporção}
+\begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
   \begin{itemize}
+    \footnotesize
   \item {\bf P: Como saber?}
-  \item R: Geralmente aceitamos 5\% de que a prop. da população não está no intervalo criado
+    \bigskip
+  \item R: Geralmente aceitamos que em 5\% das vezes a prop. da população não está no intervalo criado\footnote{\scriptsize falso positivo}
+  \bigskip
   \item Ou seja: temos \alert{95\% de confiança} de que o intervalo cumpriu seu papel
   \end{itemize}
 \end{frame}
 
-\begin{frame}{O Intervalo de Confiança de uma proporção}
-  \begin{exampleblock}{Exemplo}
+\begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
+  \begin{exampleblock}{Exemplo 1 (livro)}
+    \footnotesize
     De cada 14 pacientes tratados com um certo medicamento, 3 sofreram um evento adverso.
 
+    \bigskip
     A proporção é $\frac{3}{14} = 0.2143$.
   \end{exampleblock}
-    \begin{exampleblock}{Exemplo}
+  \bigskip
+  \begin{exampleblock}{Exemplo 2 (livro)}
+    \footnotesize
     Uma pesquisa de boca de urna entrevistou 100 pessoas, e apenas 33 declararam intenção de voto no canditado A.
 
     % A proporção é $\frac{33}{100} = $.
   \end{exampleblock}
+  \bigskip
   \begin{itemize}
+    \footnotesize
     \item Tente {\em imaginar} um intervalo que \alert{provavelmente contém} a proporção desejada para estes exemplos
     \item (e anote num papel)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{O Intervalo de Confiança de uma proporção}
+\begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
   \begin{itemize}
+    \footnotesize
   \item Intuição: intervalos menores que o intervalo correto
+  \bigskip
   \item O \alert{Intervalo de Confiança} (IC) do primeiro exemplo é: [5\%, 51\%]
+  \bigskip
   \item O IC do segundo exemplo é: [24\%, 42\%]
-  \item<2-> Note os tamanhos dos dois ICs
+  \bigskip
+  \visible<2>{\item Note os tamanhos dos dois ICs}
   \end{itemize}
 \end{frame}
 
 
-\subsection{"95\% de confiança"?}
+\subsection{``95\% de confiança''?}
 
-\begin{frame}{"95\% de confiança"?}
+\begin{frame}{\scriptsize ``95\% de confiança''?}
   \begin{itemize}
+    \footnotesize
   \item Softwares: fácil calcular o IC de uma amostra
+  \bigskip
   \item Mas temos apenas \alert{uma} amostra
+  \bigskip
   \item E se obtivéssemos outra amostra?
   \end{itemize}
 \end{frame}
 
+\begin{frame}{\scriptsize ICs de vários estudos (mesma pergunta)}
+  \begin{center}
+    \includegraphics[width=.8\textwidth]{Cap2/IC-prop-n-amostras.png}
+  \end{center}
+
+  \vfill
+  \hfill \tiny EMMET et al., 2015
+\end{frame}
+
 \subsection{Premissas}
 
-\begin{frame}{Premissas}
+\begin{frame}{\scriptsize Premissas}
   \begin{itemize}
+    \footnotesize
   \item Amostra aleatória / amostra representativa
+  \bigskip
   \item Observações independentes
+  \bigskip
   \item Avaliações corretas
+  \bigskip
   \item Avaliar um evento {\bf relevante}
   \end{itemize}
 \end{frame}
 
 \subsection{Exercício(s)}
 
-\begin{frame}{Exercício (cap 2)}
+\begin{frame}{\scriptsize Exercício (cap 2)}
   \begin{block}{Exercício 1}
+    \footnotesize
     Dos 100 primeiros pacientes que passam por uma cirurgia, 6 morreram.
     Você pode calcular o IC da probabilidade de morrer neste procedimento?
 
+    \bigskip
     Caso sim, Encontre o IC (já tenho a cola).
 
     Caso não, que outras informações você precisa?
@@ -387,21 +457,23 @@
 
 \subsection{Aprofundamento}
 
-\begin{frame}{Aprofundamento}
+\begin{frame}{\scriptsize Aprofundamento}
   \begin{block}{Leitura pós-aula e exercícios selecionados}
     \footnotesize
     Capítulo 2. Pular as seções
     \begin{itemize}
+      \scriptsize
     \item Tabelas de ICs
     \item casos especiais 0\% e 100\%
     \item cálculo do IC
     \item Equação binomial
     \item Como os ICs são derivados
     \end{itemize}
+  \end{block}
 
-    Exercícios
-
+  \begin{block}{Exercícios de fixação}
     \begin{itemize}
+      \scriptsize
     \item Exercício 1 (caso precise do IC: [2\%, 13\%])
     \item Exercício 2 (caso precise do IC: [2\%, 13\%])
     \item Exercício 4 (caso precise do IC: [10\%, 24\%])
@@ -409,7 +481,7 @@
   \end{block}
 
   \begin{block}{Leitura recomendada}
-    \footnotesize
+    \scriptsize
     Livro texto: Cap {\bf 3} (passar os olhos)
   \end{block}
 \end{frame}
