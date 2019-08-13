@@ -189,16 +189,19 @@
   % \end{block}
   \begin{itemize}
     \footnotesize
-  \item Resultados de experimentos podem ser mensurados de várias maneiras
+  \item Dados podem ser mensurados de várias maneiras
   \item Quatro níveis de mensuração\footnote{nominal, ordinal, razão, intervalar}
+  \item Simplificando: dados \alert<2>{qualitativos} ou quantitativos
   \end{itemize}
+  \visible<2>{
   \begin{exampleblock}{Exemplo}
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item prop. de pacientes com infecção após um procedimento
     \item prop. de estudantes aprovados em um curso (de Bioestatística)
     \end{itemize}
   \end{exampleblock}
+  }
 \end{frame}
 
 % \begin{frame}{\scriptsize Tarefa Google Sala de Aula}
@@ -293,12 +296,11 @@
   \begin{block}{Pense...}<2->
     \begin{itemize}
     \footnotesize
-    \item Esta amostra representa toda a população de pacientes que receberá este medicamento?
+    \item<2-> Esta amostra representa toda a população de pacientes que receberá este medicamento?
     \item<3-> Isto é... Quais foram os critérios de inclusão?
     \item<4-> A proporção desta amostra reflete a proporção da população?
     \end{itemize}
   \end{block}
-
 \end{frame}
 
 \begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
@@ -311,7 +313,7 @@
   \begin{block}{}<2->
     \begin{itemize}
     \footnotesize
-    \item Esta amostra representa a população de eleitores?
+    \item<2-> Esta amostra representa a população de eleitores?
     \item<3-> Os entrevistados falaram a verdade sobre em quem votarão?
     \item<4-> Assumindo representatividade...
     \item<4-> Os entrevistados representam a mesma proporção da população?
@@ -322,9 +324,11 @@
 \begin{frame}{\scriptsize O Intervalo de Confiança de uma proporção}
   \begin{itemize}
     \footnotesize
-  \item Sabendo a prop. da amostra, não há como garantir que sabemos a prop. da população
-  \item Plano B: calcular um intervalo onde {\em acreditamos} que a prop. da população está.
-  \item P: Qual deveria ser o tamanho deste intervalo?
+  \item<1> Sabendo a prop. da amostra, não há como garantir que sabemos a prop. da população
+    \bigskip
+  \item<2-> Plano B: calcular um intervalo onde {\em acreditamos} que a prop. da população está.
+    \bigskip
+  \item<3> P: Qual deveria ser o tamanho deste intervalo?
   \end{itemize}
 \end{frame}
 
@@ -341,7 +345,8 @@
   \begin{itemize}
     \footnotesize
   \item {\bf P: Como saber?}
-  \item R: Geralmente aceitamos 5\% de que a prop. da população não está no intervalo criado\footnote{\scriptsize falso positivo}
+    \bigskip
+  \item R: Geralmente aceitamos que em 5\% das vezes a prop. da população não está no intervalo criado\footnote{\scriptsize falso positivo}
   \item Ou seja: temos \alert{95\% de confiança} de que o intervalo cumpriu seu papel
   \end{itemize}
 \end{frame}
