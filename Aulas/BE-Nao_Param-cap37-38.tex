@@ -153,11 +153,11 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Discussão da aula passada}
+% \subsection{Discussão da aula passada}
 
-\begin{frame}{Discussão da aula passada}
+\begin{frame}{\scriptsize Discussão da aula passada}
   \begin{block}{}
     Discussão da leitura obrigatória da aula passada
   \end{block}
@@ -165,9 +165,9 @@
 
 \section{Normalidade}
 
-\begin{frame}{A hipótese da normalidade}
+\begin{frame}{\scriptsize A hipótese da normalidade}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Todos os métodos que vimos até aqui presumem que os dados são normalmente distribuídos
   \item Desvios da normalidade precisam ser contornados\footnote{há controvérsias: {\tiny  \url{https://www.r-bloggers.com/normality-tests-don't-do-what-you-think-they-do/}}}
     \bigskip
@@ -175,47 +175,48 @@
   \end{itemize}
     \bigskip
   \begin{block}{Mas antes...}
+    \footnotesize
     ... como identificar essa necessidade?
   \end{block}
 \end{frame}
 
 \subsection{Visualização}
 
-\begin{frame}{Visualização - Histograma}
+\begin{frame}{\scriptsize Visualização -- Histograma}
   \centering
   \includegraphics[width=.7\textwidth]{Cap37-38/normal1-h}
 
   Dados normais
 \end{frame}
 
-\begin{frame}{Visualização - Histograma}
+\begin{frame}{\scriptsize Visualização -- Histograma}
   \centering
   \includegraphics[width=.7\textwidth]{Cap37-38/lognormal1-h}
 
   Dados não normais
 \end{frame}
 
-\begin{frame}{Visualização - Histograma}
+\begin{frame}{\scriptsize Visualização -- Histograma}
   \centering
   \includegraphics[width=.7\textwidth]{Cap37-38/normal2-h}
 
   Dados normais
 \end{frame}
 
-\begin{frame}{Visualização - Histograma}
+\begin{frame}{\scriptsize Visualização -- Histograma}
   \centering
   \includegraphics[width=.7\textwidth]{Cap37-38/lognormal2-h}
 
   Dados não normais
 \end{frame}
 
-\begin{frame}{Visualização - Histograma}
+\begin{frame}{\scriptsize Visualização -- Histograma}
   \centering
   \includegraphics[width=.5\textwidth]{Cap37-38/normal2-h}
   \includegraphics[width=.5\textwidth]{Cap37-38/lognormal2-h}
 \end{frame}
 
-\begin{frame}{Visualização - boxplot}
+\begin{frame}{\scriptsize Visualização -- boxplot}
   \centering
   \includegraphics[height=.5\textheight]{Cap37-38/normal2-h}
   \includegraphics[height=.5\textheight]{Cap37-38/lognormal2-h}
@@ -224,9 +225,9 @@
   \includegraphics[height=.5\textheight]{Cap37-38/lognormal-bp}
 \end{frame}
 
-\begin{frame}{O Q-Q plot}
+\begin{frame}{\scriptsize O Q-Q plot}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Gráfico que compara os quantis da amostra com os quantis teóricos
   \item Adicionalmente uma reta ``ideal'' é sobreposta, como referência
     \bigskip
@@ -234,6 +235,7 @@
   \end{itemize}
   \bigskip
   \begin{block}{Princípio}
+    \footnotesize
     Quanto maior o desvio da normalidade...
 
     \bigskip
@@ -241,7 +243,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Visualização - QQ plot}
+\begin{frame}{\scriptsize Visualização -- QQ plot}
   \centering
   \includegraphics[height=.5\textheight]{Cap37-38/normal2-h}
   \includegraphics[height=.5\textheight]{Cap37-38/lognormal2-h}
@@ -252,8 +254,9 @@
 
 \subsection[Normalidade]{Testes contra a normalidade}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{itemize}
+    \footnotesize
   \item Objetivo: é possível \alert{determinar} se uma amostra veio de uma população normalmente distribuída?
   \item<2-> Resposta curta: \alert<3->{NÃO}.
     \bigskip
@@ -262,8 +265,9 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Alguns testes contra a normalidade}
+\begin{frame}{\scriptsize Alguns testes contra a normalidade}
   \begin{itemize}
+    \footnotesize
   \item<1-> \alert<2>{Shapiro-Wilk}
     \bigskip
   \item<1-> Anderson-Darling
@@ -272,7 +276,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\small Shapiro-Wilk -- Rejeitamos a $H_0$ de normalidade?}
+\begin{frame}{\scriptsize Shapiro-Wilk -- Rejeitamos a $H_0$ de normalidade?}
   \centering
   \includegraphics[width=.8\textwidth]{Cap37-38/normal1-h}
 
@@ -281,7 +285,7 @@
 \end{frame}
 
 
-\begin{frame}{\small Shapiro-Wilk -- Rejeitamos a $H_0$ de normalidade?}
+\begin{frame}{\scriptsize Shapiro-Wilk -- Rejeitamos a $H_0$ de normalidade?}
   \centering
   \includegraphics[width=.8\textwidth]{Cap37-38/lognormal1-h}
 
@@ -293,14 +297,14 @@
 
 \subsection{Transformações}
 
-\begin{frame}{Transformações}
+\begin{frame}{\scriptsize Transformações}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Podemos aplicar uma transformação nos dados, para coagi-los a se aproximar das premissas requeridas
     \bigskip
   \item Transformações usuais incluem:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item logaritmo
     \item exponencial
     \item raiz quadrada
@@ -316,7 +320,7 @@
 
 % \subsection{Exemplo}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Exemplo}
   \centering
   \includegraphics[width=.8\textwidth]{Cap37-38/lognormal1-h}
 
@@ -324,7 +328,7 @@
 Transformação sugerida: logaritmo.
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Exemplo}
   \centering
   \includegraphics[width=\textwidth]{Cap37-38/transf-h}
 
@@ -332,7 +336,7 @@ Transformação sugerida: logaritmo.
 Dados normais x dados log-transformados
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Exemplo}
   \centering
   \includegraphics[width=\textwidth]{Cap37-38/transf-qq}
 
@@ -344,7 +348,7 @@ Dados normais x dados log-transformados
 
 \subsection[Intro]{Introdução}
 
-\begin{frame}{Introdução aos métodos não paramétricos}
+\begin{frame}{\scriptsize Introdução aos métodos não paramétricos}
   \begin{block}{Métodos paramétricos}
     \footnotesize
     usam a distribuição dos dados\footnote{\tiny Geralmente distribuição Normal}...
@@ -356,11 +360,12 @@ Dados normais x dados log-transformados
   \bigskip
   \bigskip
   \begin{block}{Métodos não paramétricos}
+    \footnotesize
     Não presumem nada sobre a distribuição dos dados.
   \end{block}
 \end{frame}
 
-\begin{frame}{Introdução aos métodos não paramétricos}
+\begin{frame}{\scriptsize Introdução aos métodos não paramétricos}
   \begin{center}
     Sem média e DP\footnote{tendência central e dispersão, respectivamente}, a única coisa que resta para comparar...
 
@@ -371,9 +376,9 @@ Dados normais x dados log-transformados
 
 \subsection[1 amostra]{Teste para 1 amostra}
 
-\begin{frame}{Teste para 1 amostra}
+\begin{frame}{\scriptsize Teste para 1 amostra}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Desvios da normalidade severos impactam os testes paramétricos
     \bigskip
   \item Nesses casos, tenta-se transformar os dados, se possível
@@ -381,16 +386,17 @@ Dados normais x dados log-transformados
   \end{itemize}
   \bigskip
   \begin{block}{Teste para uma amostra}
+    \footnotesize
     Ao invés do teste t, usar o teste de Wilcoxon {\footnotesize (Capítulo 25)}
   \end{block}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item categórica ordinal
     \item numérica discreta
     \item numérica contínua (não-normal)
@@ -399,11 +405,13 @@ Dados normais x dados log-transformados
   \end{itemize}
   \vfill
   \begin{exampleblock}{Exemplo}
+    \footnotesize
     \begin{displaymath}
       \text{escore HHS mediano} \sim \text{70}
     \end{displaymath}
   \end{exampleblock}
   \begin{exampleblock}{Exemplo}
+    \footnotesize
     \begin{displaymath}
       \text{escore ASA mediano} \sim \text{II}
   \end{displaymath}
@@ -413,37 +421,39 @@ Dados normais x dados log-transformados
 
 \subsection[2 médias]{Testes para 2 amostras}
 
-\begin{frame}{Testes para 2 amostras}
+\begin{frame}{\scriptsize Testes para 2 amostras}
   \begin{block}{Dados normais}
+    \footnotesize
     \begin{itemize}
-    \small
+      \footnotesize
     \item amostras independentes $\Rightarrow$ t-teste não pareado
     \item amostras pareadas $\Rightarrow$ t-teste pareado
     \end{itemize}
   \end{block}
   \bigskip
   \begin{block}{Dados não normais}
+    \footnotesize
     \begin{itemize}
-    \small
+      \footnotesize
     \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} {\footnotesize (Capítulo 24)}%\footnote{Também conhecido como Wilcoxon (rank sum test)}
     \item amostras pareadas $\Rightarrow$ Wilcoxon {\footnotesize (Capítulo 25)}
     \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item categórica ordinal
     \item numérica discreta
     \item numérica contínua (não-normal)
     \end{itemize}
   \item Independente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item categórica ordinal
     \item numérica discreta
     \item numérica contínua (não-normal)
@@ -451,24 +461,26 @@ Dados normais x dados log-transformados
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
-    \small
+    \footnotesize
     \begin{displaymath}
       \text{escore HHS tratamento} \sim \text{escore HHS controle}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{Em termos práticos...}
+\begin{frame}{\scriptsize Em termos práticos...}
 P: Estas amostras são significativamente diferentes?
 
   \centering
   \includegraphics[height=\textheight]{Cap37-38/2samples-bp}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Exemplo}
   \begin{itemize}
+    \footnotesize
   \item<1-> Assumindo\footnote{pelo desenho experimental} que elas são
     \begin{itemize}
+    \scriptsize
     \item<1-> \alert<3>{normalmente distribuídas}, e
     \item<1-> independentes,
     \end{itemize}
@@ -480,39 +492,39 @@ P: Estas amostras são significativamente diferentes?
     \bigskip
     \bigskip
     \begin{exampleblock}{Pergunta}
-      \small
+    \footnotesize
       Isto significa que as amostras não são significativamente diferentes?
     \end{exampleblock}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Novamente...}
+\begin{frame}{\scriptsize Novamente...}
   \centering
   \includegraphics[height=\textheight]{Cap37-38/2samples-bp}
 \end{frame}
 
-\begin{frame}{Histogramas}
+\begin{frame}{\scriptsize Histogramas}
   \includegraphics[width=\textwidth]{Cap37-38/2samples-h}
 
 %p-valores Shapiro-Wilk: (x) =  5.515e-16, (y) = 5.274e-09
 \end{frame}
 
-\begin{frame}{QQ-plots}
+\begin{frame}{\scriptsize QQ-plots}
  \includegraphics[width=\textwidth]{Cap37-38/2samples-qq}
 
 %p-valores Shapiro-Wilk: (x) =  5.515e-16, (y) = 5.274e-09
 \end{frame}
 
-\begin{frame}{Mann-Whitney}
+\begin{frame}{\scriptsize Mann-Whitney}
   \begin{exampleblock}{Teste t}
-    \small
+    \scriptsize
     p-valor = 0.259 (não significativo)
   \end{exampleblock}
   \begin{itemize}
-    \small
+    \footnotesize
   \item<2-> Aplicando o teste de Shapiro-Wilk em x e y
     \begin{itemize}
-      \scriptsize
+      \tiny
     \item<2-> x: p-valor = 5.515e-16
     \item<2-> y: p-valor = 5.274e-09
     \end{itemize}
@@ -522,17 +534,19 @@ P: Estas amostras são significativamente diferentes?
   \item<3-> Substituto: teste de Mann-Whitney
   \end{itemize}
   \begin{exampleblock}{Teste de Mann-Whitney}<4->
-    \small
+    \footnotesize
     p-value = \alert{0.0001346} (significativo)
   \end{exampleblock}
 \end{frame}
 
 \subsection[3+ amostras]{Teste para 3 ou mais amostras}
 
-\begin{frame}{Relembrando}
+\begin{frame}{\scriptsize Relembrando}
   \begin{itemize}
+    \footnotesize
   \item Para testar a diferença nas médias de 3 ou mais amostras
     \begin{itemize}
+      \scriptsize
     \item Análise de Variâncias (ANOVA)
       \bigskip
     \item Leva em conta as variâncias entre os grupos (\alert{inter})
@@ -545,65 +559,68 @@ P: Estas amostras são significativamente diferentes?
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Em termos práticos...}
+\begin{frame}{\scriptsize Em termos práticos...}
 P: Estas amostras são significativamente diferentes?
 
   \centering
   \includegraphics[height=.9\textheight]{Cap37-38/3samples-bp}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item categórica ordinal
     \item numérica discreta
     \item numérica contínua (não-normal)
     \end{itemize}
   \item Independente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item grupo (categórica nominal -- 3+ níveis)
     \end{itemize}
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{Ozônio} \sim \text{Mês}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{Kruskal-Wallis}
+\begin{frame}{\scriptsize Kruskal-Wallis}
   \begin{exampleblock}{ANOVA}
-    \small
+    \footnotesize
     p-valor = 0.0776 (não significativo)
   \end{exampleblock}
   \begin{itemize}
     \footnotesize
-  \item<2-> Shapiro-Wilk (Ozônio por mês (Maio -- Setembro): {\scriptsize $< 0.0001,\ 0.0628,\ 0.86689,\ 0.090325,\ < 0.0001$}
+  \item<2-> Shapiro-Wilk (Ozônio por mês (Maio -- Setembro): {\tiny $< 0.0001,\ 0.0628,\ 0.86689,\ 0.090325,\ < 0.0001$}
     \bigskip
   \item<3-> Devemos rejeitar a hipótese de normalidade.
   \item<3-> Então o ANOVA \alert{não é} apropriado!
+    \bigskip
   \item<3-> Substituto: teste de Kruskal-Wallis (Capítulo 30)
   \end{itemize}
   \bigskip
   \begin{exampleblock}{Teste de Kruskal-Wallis}<4->
-    \small
+    \footnotesize
     p-value = \alert{6.901e-06} (significativo)
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     Mais quais são os meses diferentes?
   \end{center}
 \end{frame}
 
-\begin{frame}{Pós-teste de Wilcoxon}
+\begin{frame}{\scriptsize Pós-teste de Wilcoxon}
   \begin{exampleblock}{Mês x Mês {\small (correção de Bonferroni)}}
+    \footnotesize
     \begin{columns}
       \begin{column}{3cm}
         \begin{itemize}
@@ -631,9 +648,9 @@ P: Estas amostras são significativamente diferentes?
 
 \subsection{Correlação}
 
-\begin{frame}{Correlação não-paramétrica}
+\begin{frame}{\scriptsize Correlação não-paramétrica}
   \begin{itemize}
-    \small
+    \footnotesize
   \item A correlação de Pearson
     \begin{itemize}
       \scriptsize
@@ -643,7 +660,7 @@ P: Estas amostras são significativamente diferentes?
   \end{itemize}
   \bigskip
   \begin{block}{Correlação de Spearman}
-    \small
+    \footnotesize
     Ao invés da correlação linear de Pearson...
 
     \bigskip
@@ -653,24 +670,34 @@ P: Estas amostras são significativamente diferentes?
 
 \section{Resumo}
 
-\begin{frame}{Número de resultados no PUBMED\footnote{\scriptsize Levantamento feito em 2017-11-30}}
+\begin{frame}{\scriptsize Número de resultados no PUBMED\footnote{\scriptsize Levantamento feito em 2017-11-30}}
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item t-test: 61488
+    \smallskip
   \item ANOVA: 431252
+    \smallskip
   \item Wilcoxon: 19881
+    \smallskip
   \item Mann-Whitney: 25571
+    \smallskip
   \item Kruskal-Wallis: 11943
+    \smallskip
   \item Shapiro-Wilk: 519
+    \smallskip
   \item Kolmongorov-Smirnoff: 0
+    \smallskip
   \item Anderson-Darling: 49
+    \smallskip
   \item Chi-square: 107277
+    \smallskip
   \item OR: 221034
+    \smallskip
   \item RR: 344996
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Resumo (teste oftálmico)}
+\begin{frame}{\scriptsize Resumo (teste oftálmico)}
   % \begin{block}{}
   %     \begin{tabular}{||l||l||}
   %   \hline
@@ -690,7 +717,7 @@ P: Estas amostras são significativamente diferentes?
   \includegraphics[width=1.2\textwidth]{Cap37-38/metodos1}
 \end{frame}
 
-\begin{frame}{Resumo (agora sim)}
+\begin{frame}{\scriptsize Resumo (agora sim)}
   \includegraphics[width=\textwidth]{Cap37-38/metodos2}
 \end{frame}
 
@@ -698,16 +725,18 @@ P: Estas amostras são significativamente diferentes?
 
 \subsection{Aprofundamento}
 
-\begin{frame}{Aprofundamento}
+\begin{frame}{\scriptsize Aprofundamento}
   \begin{block}{Leitura obrigatória}
+    \footnotesize
     \begin{itemize}
-      \small
+      \footnotesize
     \item Capítulo 37
     \item Capítulo 38
     \end{itemize}
   \end{block}
   \begin{block}{Leitura recomendada}
     \begin{itemize}
+      \scriptsize
     \item {\bf Parte VI -- Designing Clinical Trials}
     \scriptsize
     \item Trechos de testes não paramétricos que pulamos dos caps:

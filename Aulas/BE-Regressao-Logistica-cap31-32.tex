@@ -152,11 +152,11 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Discussão da aula passada}
+% \subsection{Discussão da aula passada}
 
-\begin{frame}{Discussão da aula passada}
+\begin{frame}{\scriptsize Discussão da aula passada}
   \begin{block}{}
     Discussão da leitura obrigatória da aula passada
   \end{block}
@@ -166,32 +166,33 @@
 
 \subsection{Regressão Linear Múltipla}
 
-\begin{frame}{}
+\begin{frame}{\scriptsize }
   \begin{center}
     \includegraphics[width=\textwidth]{Cap18-19/bmi-bmd-title}
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     Hoje vamos interpretar os resultados do abstract
   \end{center}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{\scriptsize }
   \begin{center}
     \includegraphics[width=1.175\textwidth]{Cap18-19/bmi-bmd-abstract}
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{exampleblock}{Enunciado 1}
-    \small
+    \footnotesize
     Os pesquisadores querem investigar se o grupo etnicidade das participantes tem algum efeito detectável na associação entre
     a densidade mineral óssea (BMD) e o índice de massa corpórea (BMI).
 
     \bigskip
     \begin{exampleblock}{}
+    \footnotesize
     Para isto selecionaram 100 mulheres brancas e 100 mulheres pardas, de meia idade.
     Mensuraram a BMD e calcularam o BMI delas.
   \end{exampleblock}
@@ -199,26 +200,28 @@
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{\small Modelo 1}
+\begin{frame}{\scriptsize Modelo 1}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm1}
   \end{center}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: BMD (contínua)
   \item Independente: BMI (contínua)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} \sim \text{BMI}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Componentes do modelo 1}
+\begin{frame}{\scriptsize Componentes do modelo 1}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
@@ -228,6 +231,7 @@
   \bigskip
   \bigskip
   \begin{block}{Modelo completo}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \varepsilon
     \end{displaymath}
@@ -237,7 +241,7 @@
   Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
-\begin{frame}[fragile]{}
+\begin{frame}[fragile]{\scriptsize }
   \begin{center}
     \begin{exampleblock}{Modelo 1}
       \tiny
@@ -261,15 +265,16 @@ F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 1}
+\begin{frame}{\scriptsize Modelo 1}
   \begin{center}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
 \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{block}{}
+    \footnotesize
     As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI.
 
     \bigskip
@@ -277,33 +282,35 @@ F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
   \end{block}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     Agora vamos ver se a etnia tem algum efeito
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 2}
+\begin{frame}{\scriptsize Modelo 2}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_0}
   \end{center}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: BMD (contínua)
   \item Independente: BMI (contínua)
   \item Independente: etnia (categórica -- binária)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} \sim \text{BMI} + \text{etnia}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Componentes do modelo 2}
+\begin{frame}{\scriptsize Componentes do modelo 2}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
@@ -322,7 +329,7 @@ F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
   % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
-\begin{frame}[fragile]{}
+\begin{frame}[fragile]{\scriptsize }
   \begin{center}
     \begin{exampleblock}{Modelo 2}
       \tiny
@@ -347,40 +354,42 @@ F-statistic: 96.21 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 2}
+\begin{frame}{\scriptsize Modelo 2}
   \begin{center}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm2_0-resid}
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     Que outra variável os pesquisadores deveriam ter investigado?
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 2.1 -- idade}
+\begin{frame}{\scriptsize Modelo 2.1 -- idade}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_1}
   \end{center}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: BMD (contínua)
   \item Independente: BMI (contínua)
   \item Independente: idade (contínua)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} \sim \text{BMI} + \text{idade}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Componentes do modelo 2.1}
+\begin{frame}{\scriptsize Componentes do modelo 2.1}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
@@ -390,6 +399,7 @@ F-statistic: 96.21 on 2 and 197 DF,  p-value: < 2.2e-16
   \bigskip
   \bigskip
   \begin{block}{Modelo completo}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} +\varepsilon
     \end{displaymath}
@@ -399,7 +409,7 @@ F-statistic: 96.21 on 2 and 197 DF,  p-value: < 2.2e-16
   % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
-\begin{frame}[fragile]{}
+\begin{frame}[fragile]{\scriptsize }
   \begin{center}
     \begin{exampleblock}{Modelo 2.1}
       \tiny
@@ -424,15 +434,16 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 2.1}
+\begin{frame}{\scriptsize Modelo 2.1}
   \begin{center}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm2_1-resid}
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{block}{}
+    \footnotesize
     As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
@@ -440,33 +451,35 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{block}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     Que outra variável os pesquisadores deveriam ter investigado?
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 2.2 -- quantidade de hormônio}
+\begin{frame}{\scriptsize Modelo 2.2 -- quantidade de hormônio}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_2}
   \end{center}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: BMD (contínua)
   \item Independente: BMI (contínua)
   \item Independente: hormônio (categórica -- 3 níveis)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} \sim \text{BMI} + \text{hormônio}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Componentes do modelo 2.2}
+\begin{frame}{\scriptsize Componentes do modelo 2.2}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
@@ -476,6 +489,7 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \bigskip
   \bigskip
   \begin{block}{Modelo completo}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(hormônio)} +\varepsilon
     \end{displaymath}
@@ -485,14 +499,14 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
-\begin{frame}{\small Modelo 2.2}
+\begin{frame}{\scriptsize Modelo 2.2}
   \begin{center}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm2_2-resid}
   \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{}
+\begin{frame}[fragile]{\scriptsize }
   \begin{center}
     \begin{exampleblock}{Modelo 2.2}
       \tiny
@@ -518,8 +532,9 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{block}{}
+    \footnotesize
     As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
@@ -527,7 +542,7 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
   \end{block}
 \end{frame}
 
-% \begin{frame}{Quais são as variáveis?}
+% \begin{frame}{\scriptsize Quais são as variáveis?}
 %   \begin{itemize}
 %   \item Dependente: BMD (contínua)
 %   \item Independente: BMI (contínua)
@@ -542,13 +557,13 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
 %   \end{block}
 % \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     Agora um modelo maior (ajustando para todas as variáveis relevantes)
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Componentes do modelo 3}
+\begin{frame}{\scriptsize Componentes do modelo 3}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
@@ -558,6 +573,7 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
   \bigskip
   \bigskip
   \begin{block}{Modelo completo}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(hormônio)} +\varepsilon
     \end{displaymath}
@@ -567,7 +583,7 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
   % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
-\begin{frame}[fragile]{}
+\begin{frame}[fragile]{\scriptsize }
   \begin{center}
     \begin{exampleblock}{Modelo 3}
       \tiny
@@ -594,15 +610,16 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Modelo 3}
+\begin{frame}{\scriptsize Modelo 3}
   \begin{center}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm3-resid}
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{block}{}
+    \footnotesize
     As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
@@ -614,26 +631,28 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
 
 \subsection{Regressão Logística}
 
-\begin{frame}{\small Modelo 4}
+\begin{frame}{\scriptsize Modelo 4}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-glm4}
   \end{center}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item \alert{Dependente: Osteoporose (categórica -- binária)}
   \item Independente: Idoso (categórica -- binária)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{Osteoporose} \sim \text{Idoso}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Componentes do modelo 4}
+\begin{frame}{\scriptsize Componentes do modelo 4}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
@@ -643,6 +662,7 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
   \bigskip
   \bigskip
   \begin{block}{Modelo completo}
+    \footnotesize
     \begin{displaymath}
       \text{Osteoporose} =\beta_0 + \beta_1 \text{(Idoso)} +\varepsilon
     \end{displaymath}
@@ -652,7 +672,7 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
   % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
-\begin{frame}[fragile]{}
+\begin{frame}[fragile]{\scriptsize }
   \begin{exampleblock}{\small Tabela de contingência Idoso x Osteoporose}
     \tiny
 \begin{verbatim}
@@ -687,7 +707,7 @@ idoso       Sadio Osteoporose
 %   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{}
+\begin{frame}[fragile]{\scriptsize }
   \begin{center}
     \begin{exampleblock}{Modelo 4}
       \tiny
@@ -713,13 +733,13 @@ Number of Fisher Scoring iterations: 5
 \end{verbatim}
     \end{exampleblock}
     \begin{block}{\small log da OR de um idoso x osteoporose}<2->
-      \small
+    \footnotesize
       $$\log \left(\text{OR} \right) = 1.9059$$
     \end{block}
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{block}{\small Transformando o log da OR na OR }
     \footnotesize
     $$\log \left(\text{OR} \right) \approx 1.90...$$
@@ -734,20 +754,23 @@ Number of Fisher Scoring iterations: 5
   \bigskip
   \bigskip
   \begin{block}{Resultado}<2->
+    \footnotesize
     \begin{itemize}
+    \footnotesize
     \item (Idoso) {\bf OR: 6.73, IC: [2.64, 17.12]}
     \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Modelo 5}
+\begin{frame}{\scriptsize Modelo 5}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-glm5}
   \end{center}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item \alert{Dependente: Osteoporose (categórica -- binária)}
   \item Independente: BMI (contínua)
   \item Independente: idade (contínua)
@@ -755,13 +778,14 @@ Number of Fisher Scoring iterations: 5
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{Osteoporose} \sim \text{BMI} + \text{idade} +\text{hormônio}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Componentes do modelo 5}
+\begin{frame}{\scriptsize Componentes do modelo 5}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
@@ -771,6 +795,7 @@ Number of Fisher Scoring iterations: 5
   \bigskip
   \bigskip
   \begin{block}{Modelo completo}
+    \footnotesize
     \begin{displaymath}
       \text{Osteoporose} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(hormônio)} +\varepsilon
     \end{displaymath}
@@ -780,7 +805,7 @@ Number of Fisher Scoring iterations: 5
   % Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
-\begin{frame}[fragile]{}
+\begin{frame}[fragile]{\scriptsize }
   \begin{center}
     \begin{exampleblock}{Modelo 5}
       \tiny
@@ -811,16 +836,22 @@ Number of Fisher Scoring iterations: 9
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{block}{Resultado}
+    \footnotesize
     \begin{itemize}
+      \scriptsize
     \item {\small (BMI)} {\bf OR: 1.58, IC: [1.27, 1.95]}
+      \medskip
     \item {\small (idade)} {\bf OR: 2.29, IC: [1.52, 3.45]}
+      \medskip
     \item {\small (hormônio médio x baixo)} {\bf OR: 7.11, IC: [0.40, 127.19]}
+      \medskip
     \item {\small (hormônio alto x baixo)} {\bf OR: 249.76, IC: [12.94, 4818.87]}
     \end{itemize}
   \end{block}
     \begin{block}{Interpretação}
+    \footnotesize
     Após ajustar pela idade e pelo hormônio, as participantes tem chance aumentada de desenvolver osteoporose para cada incremento unitário do BMI.
   \end{block}
 \end{frame}
@@ -829,7 +860,7 @@ Number of Fisher Scoring iterations: 9
 
 \subsection{Aprofundamento}
 
-\begin{frame}{Aprofundamento}
+\begin{frame}{\scriptsize Aprofundamento}
   \begin{block}{Leitura obrigatória}
     \begin{itemize}
       \footnotesize
@@ -838,8 +869,8 @@ Number of Fisher Scoring iterations: 9
     \end{itemize}
   \end{block}
   \begin{block}{Leitura recomendada}
-    \footnotesize
-    Capítulo 25: seção teste t de uma razão (sobre o uso do logaritmo)
+    \scriptsize
+    Capítulo 25: seção teste t de uma razão ({\tiny sobre o uso do logaritmo})
 
     % \begin{itemize}
 

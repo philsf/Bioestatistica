@@ -152,11 +152,11 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Discussão da aula passada}
+% \subsection{Discussão da aula passada}
 
-\begin{frame}{Discussão da aula passada}
+\begin{frame}{\scriptsize Discussão da aula passada}
   \begin{block}{}
     Discussão da leitura obrigatória da aula passada
   \end{block}
@@ -166,9 +166,9 @@
 
 \subsection{Modelos em geral}
 
-\begin{frame}{Modelos}
+\begin{frame}{\scriptsize Modelos}
   \begin{block}{Definição}
-    \small
+    \footnotesize
     Versão simplificada da realidade, adequada ao fim pretendido.
   \end{block}
   \bigskip
@@ -182,24 +182,24 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Modelos}
+\begin{frame}{\scriptsize Modelos}
   \centering
   \includegraphics[height=\textheight]{Cap18-19/gi}
 \end{frame}
 
-\begin{frame}{Modelos animais}
+\begin{frame}{\scriptsize Modelos animais}
   \centering
   \includegraphics[width=\textwidth]{Cap18-19/Fatmouse}
 \end{frame}
 
-\begin{frame}{Modelos animais}
+\begin{frame}{\scriptsize Modelos animais}
   \centering
   \includegraphics[width=\textwidth]{Cap18-19/GFP_hiir}
 \end{frame}
 
 \subsection{Trailer}
 
-\begin{frame}{Modelos estatísticos}
+\begin{frame}{\scriptsize Modelos estatísticos}
   \begin{itemize}
     \footnotesize
   \item Distribuições de probabilidade servem como modelo para a distribuição dos dados (teórico x empírico)
@@ -208,18 +208,19 @@
   \end{itemize}
   \vfill
   \begin{block}{Modelo de regressão}
+    \footnotesize
     Formulação explícita de uma hipótese sobre a associação entre o desfecho (contínuo, neste contexto) e o preditor
   \end{block}
 \end{frame}
 
-\begin{frame}{Modelos estatísticos}
+\begin{frame}{\scriptsize Modelos estatísticos}
   \begin{block}{Modelo explicativo/explanatório}
-    \small
+    \footnotesize
     Verificação ou teste de hipóteses sobre a relação entre as variáveis avaliadas.
   \end{block}
   \bigskip
   \begin{block}{Modelo preditivo}
-    \small
+    \footnotesize
     Estimativa do resultado esperado, mesmo para dados que não foram testados...
 
     \bigskip
@@ -228,7 +229,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Para todos os gostos...}
+\begin{frame}{\scriptsize Para todos os gostos...}
   \begin{center}
     \includegraphics[height=\textheight]{Cap18-19/modelos-table1}
   \end{center}
@@ -249,7 +250,7 @@
   {\hfill \scriptsize Tese Doutorado Ana Claudia Duarte -- IOC/Fiocruz 2017}
 \end{frame}
 
-\begin{frame}{\small E você pensando...}
+\begin{frame}{\scriptsize E você pensando...}
     \begin{center}
       \includegraphics[height=.8\textheight]{Cap18-19/bhaskara}
     \end{center}
@@ -272,6 +273,7 @@
     {\hfill \tiny Gadagkar, Call, 2015; J. Pharmacol. Toxicol. Methods}
   \end{block}
   \begin{block}{\scriptsize Aplicações (EC50, IC50, ED50, TD50, LD50, ...)}
+    \footnotesize
     \begin{center}
       \includegraphics[width=.35\textwidth]{Cap18-19/Dose-response-curve-of-aqueous-garlic-extract-on-viability-of-Mus-musculus-colon}
       \includegraphics[height=.3\textheight]{Cap18-19/Dose-response-curves-and-IC50-values-of-Src-kinase-inhibition-for-baicalin-and-baicalein}
@@ -280,7 +282,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     \Large Vamos começar pelo modelo mais simples
   \end{center}
@@ -292,16 +294,17 @@
 
 \subsection{Introdução}
 
-\begin{frame}{Modelo de regressão linear simples}
+\begin{frame}{\scriptsize Modelo de regressão linear simples}
   \begin{block}{}
-    \small
+    \footnotesize
       Quando os dados indicam uma relação linear, um modelo de regressão pode ser utilizado para quantificar esta relação com uma {\bf reta de regressão}.
     \end{block}
   \begin{exampleblock}{Exemplo: Algumas aplicações}
+    \footnotesize
 %    Exemplos de perguntas que podem ser respondidas por tal modelo:
 
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item Tendência (``Níveis de insulina em jejum tendem a aumentar com a idade?'')
     \item Ajuste de curva (``Qual é o EC$_{50}$ de uma nova droga?'')
     \item Predição (``Como predizer o risco de infarto do miocárdio, sabendo-se a idade, pressão e nível de colesterol?'')
@@ -309,22 +312,23 @@
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Depois dos comerciais...}
+\begin{frame}{\scriptsize Depois dos comerciais...}
   \begin{center}
     \includegraphics[width=\textwidth]{Cap18-19/bmi-bmd-title}
   \end{center}
 \end{frame}
 
-\begin{frame}{Depois dos comerciais...}
+\begin{frame}{\scriptsize Depois dos comerciais...}
   \begin{center}
     \includegraphics[width=1.175\textwidth]{Cap18-19/bmi-bmd-abstract}
   \end{center}
 \end{frame}
 
-\begin{frame}{Na prática...}
+\begin{frame}{\scriptsize Na prática...}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
+        \footnotesize
       \item Dados simulados, inspirados no paper.
       \item Existe uma tendência? Ela é linear?
       \item Podemos estimar BMD sabendo o IMC?
@@ -338,8 +342,9 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: BMD (contínua)
     \begin{itemize}
       \scriptsize
@@ -353,15 +358,16 @@
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{BMD} \sim \text{BMI}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{Revisão: equação da reta}
+\begin{frame}{\scriptsize Revisão: equação da reta}
   \begin{itemize}
-    \small
+    \footnotesize
   \item A equação de uma reta é definida pela fórmula
     \begin{displaymath}
       \text{BMD} = \alert{a} \times \text{BMI} + \alert{b}
@@ -377,28 +383,32 @@
   \end{itemize}
   \bigskip
   \begin{block}{\footnotesize Inversão, em relação à matemática básica}<2>
+    \footnotesize
     \begin{itemize}
+      \footnotesize
     \item Note que aqui os ``dados'' já foram coletados (fixos)
     \item Nosso objetivo é estimar os parâmetros da reta \alert{$b$} e \alert{$a$}
     \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{Interpretação dos parâmetros da reta}
+\begin{frame}{\scriptsize Interpretação dos parâmetros da reta}
   \begin{itemize}
-    \small
+    \footnotesize
   \item O intercepto é o valor (hipotético) de BMD quando BMI = 0
   \item A inclinação é quanto BMD altera\footnote{na média!} quando aumentamos o BMI em 1 unidade
   \end{itemize}
   \vfill
   \begin{block}{Atenção}
+    \footnotesize
     Para estas interpretações serem válidas, a relação deve ser linear (proporcional).
   \end{block}
 \end{frame}
 
-\begin{frame}{Reta de regressão}
+\begin{frame}{\scriptsize Reta de regressão}
   \begin{block}{Definição}
-    \small Uma \alert{reta de regressão} é a reta para a qual a soma
+    \footnotesize
+    Uma \alert{reta de regressão} é a reta para a qual a soma
     dos erros quadráticos dos resíduos ($\varepsilon$) é o mínimo.
   \end{block}
   \bigskip
@@ -419,26 +429,27 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Resíduos}
+\begin{frame}{\scriptsize Resíduos}
   \begin{center}
       \includegraphics[height=0.6\textheight]{Cap18-19/residuos}
   \end{center}
 
   \begin{block}{Definição}
-    \small
+    \footnotesize
     Resíduos são a distância entre o dado observado e a reta.
   \end{block}
 \end{frame}
 
-\begin{frame}{Atenção}
+\begin{frame}{\scriptsize Atenção}
   \begin{itemize}
+    \footnotesize
   \item Para muitos testes presume-se que os dados vem de uma distribuição normal
   \item Neste caso, não é necessário que os {\bf dados} sejam normais
   \item {\bf É necessário que os resíduos sejam normais}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Análise de Regressão}
+\begin{frame}{\scriptsize Análise de Regressão}
   Para determinar a inclinação e o intercepto, usamos:
   \bigskip
   \begin{itemize}
@@ -453,29 +464,33 @@
 
 \subsection{A regressão}
 
-\begin{frame}{Exemplo 17.1}
+\begin{frame}{\scriptsize Exemplo 17.1}
   \begin{exampleblock}{Exemplo 17.1}
+    \footnotesize
     Voltemos ao exemplo de associar a composição lipídica com a sensibilidade a insulina.    
   \end{exampleblock}
   \begin{block}{Pergunta}
+    \footnotesize
     Podemos explicar o ``comportamento'' e a variabilidade da insulina sabendo a composição lipídica?
   \end{block}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: insulina (contínua)
   \item Independente: conteúdo lipídico (contínua)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       \text{insulina} \sim \text{conteúdo lipídico}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{\small Componentes da regressão linear simples}
+\begin{frame}{\scriptsize Componentes da regressão linear simples}
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
@@ -485,6 +500,7 @@
   \bigskip
   \bigskip
   \begin{block}{Modelo completo}
+    \footnotesize
     \begin{displaymath}
       \text{insulina} =\beta_0 + \beta_1 \text{(conteúdo lipídico)} + \varepsilon
     \end{displaymath}
@@ -494,7 +510,7 @@
   Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
-\begin{frame}{Exemplo 17.1}
+\begin{frame}{\scriptsize Exemplo 17.1}
   \centering
   \includegraphics[width=.9\textwidth]{Cap18-19/regressao1}
 
@@ -502,19 +518,20 @@
   \hfill \footnotesize Fonte: Motulsky, 1995
 \end{frame}
 
-\begin{frame}{Exemplo 17.1}
+\begin{frame}{\scriptsize Exemplo 17.1}
   \centering
   \includegraphics[width=1.2\textwidth]{Cap18-19/regressao2}
 \end{frame}
 
-\begin{frame}{Interpretação}
+\begin{frame}{\scriptsize Interpretação}
   \begin{itemize}
+    \footnotesize
   \item O p-valor é significativo.
   \item A inclinação é $\approx \alert{37.2}$
   \item Isto significa que:
   \end{itemize}
   \begin{block}{Interpretação da inclinação}
-    \small
+    \footnotesize
     para cada unidade aumentada no \%C20--22...
 
     \bigskip
@@ -522,7 +539,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Análise de Regressão}
+\begin{frame}{\scriptsize Análise de Regressão}
   \begin{center}
       \includegraphics[height=0.6\textheight]{Cap18-19/residuos2}
   \end{center}
@@ -540,9 +557,9 @@
 
 \subsection[$r^2$]{Coeficiente de Determinação $r^2$}
 
-\begin{frame}{Coeficiente de Determinação $r^2$}
+\begin{frame}{\scriptsize Coeficiente de Determinação $r^2$}
   \begin{block}{Definição}
-    \small
+    \footnotesize
     O \alert{coeficiente de determinação} $r^2$ é a razão entre
     variância explicada e a variância total observada.
   \end{block}
@@ -550,16 +567,18 @@
     r^2 = \frac{\text{variância explicada}}{\text{variância total}}
   \end{displaymath}
   \begin{itemize}
+    \footnotesize
   \item Lembrando: $r^2$ é o quadrado de $r$!
   % \item Este valor tem uma interpretação prática mais fácil, que
   %   veremos em breve
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Coeficiente de Determinação $r^2$}
+\begin{frame}{\scriptsize Coeficiente de Determinação $r^2$}
   \begin{block}{}
+    \footnotesize
     \begin{itemize}
-      \small
+      \scriptsize
       % \item A variância dos dados pode ser explicada de várias formas
     \item Qual é a porcentagem da variância dos dados pode ser explicada
       pela reta regressora?
@@ -570,7 +589,7 @@
   \end{block}
     \vfill
     \begin{itemize}
-      \small
+      \footnotesize
     \item Obs: Como $r$ está sempre entre -1 e 1
     \begin{itemize}
       \scriptsize
@@ -581,14 +600,15 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Coeficiente de Determinação $r^2$}
+\begin{frame}{\scriptsize Coeficiente de Determinação $r^2$}
   \begin{block}{}
+    \footnotesize
     \centering
     Além disso, $r^2 \le |r|$
   \end{block}
   \bigskip
   \begin{exampleblock}{Por que?}
-    \small
+    \footnotesize
     Compare os seguintes números entre 0 e 1:
     \bigskip
     \scriptsize
@@ -603,9 +623,9 @@
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Exemplo 17.1}
+\begin{frame}{\scriptsize Exemplo 17.1}
   \begin{exampleblock}{Exemplo 17.1}
-    \small
+    \footnotesize
     Na aula de correlação linear produto-momento de Pearson, vimos que para o exemplo 17.1, $r=0.77$.
     \begin{displaymath}
       r^2 = 0.77^2 = 0.59
@@ -613,41 +633,42 @@
   \end{exampleblock}
         \bigskip
   \begin{exampleblock}{\small Interpretação do Coeficiente de Determinação $r^2$}
+    \footnotesize
     Podemos explicar 59\% da variância da insulina considerando apenas o conteúdo lipídico.
   \end{exampleblock}
 \end{frame}
 
 \subsection{Exercício}
 
-\begin{frame}{Na prática...}
+\begin{frame}{\scriptsize Na prática...}
   \begin{center}
     \includegraphics[width=\textwidth]{Cap18-19/bmi-bmd-title}
   \end{center}
 \end{frame}
 
-\begin{frame}{Na prática...}
+\begin{frame}{\scriptsize Na prática...}
   \begin{center}
     \includegraphics[width=1.175\textwidth]{Cap18-19/bmi-bmd-abstract}
   \end{center}
 \end{frame}
 
-\begin{frame}{Na prática...}
+\begin{frame}{\scriptsize Na prática...}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap18-19/pratica-rls1}
   \end{center}
 \end{frame}
 
-\begin{frame}[label=plot2]{Na prática...}
+\begin{frame}[label=plot2]{\scriptsize Na prática...}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap18-19/pratica-rls2}
   \end{center}
 \end{frame}
 
-\begin{frame}{Na prática...}
+\begin{frame}{\scriptsize Na prática...}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-        \small
+        \footnotesize
       \item \alert{Se o modelo é adequado}, podemos substituir isto...
         \bigskip
       \item<0> ... por isto
@@ -663,11 +684,11 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Na prática...}
+\begin{frame}{\scriptsize Na prática...}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-        \small
+        \footnotesize
       \item \alert{Se o modelo é adequado}, podemos substituir isto...
         \bigskip
       \item ... por isto
@@ -683,11 +704,11 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Diagnosticando a regressão}
+\begin{frame}{\scriptsize Diagnosticando a regressão}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-        \small
+        \footnotesize
       \item \alert<2>{A dispersão em torno da reta é aprox. aleatória?}
         \bigskip
       \item Observe o formato faixa de confiança em torno da reta
@@ -707,8 +728,9 @@
 
 \againframe{plot2}
 
-\begin{frame}[fragile]{Diagnosticando a regressão}
+\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão}
   \begin{block}{Perguntas}
+    \footnotesize
     \begin{itemize}
       \footnotesize
     \item Os resíduos são aprox. normais?
@@ -738,8 +760,9 @@ F-statistic: 403.2 on 1 and 198 DF,  p-value: < 2.2e-16
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{Análise de resíduos}
+\begin{frame}[fragile]{\scriptsize Análise de resíduos}
   \begin{itemize}
+    \footnotesize
   \item Como vimos, os resíduos são erros aleatórios
 
     ({\footnotesize em torno da reta})
@@ -762,14 +785,14 @@ Residuals:
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Análise de resíduos}
+\begin{frame}{\scriptsize Análise de resíduos}
   \begin{center}
     \Large
     Podemos também verificar esta premissa visualmente
   \end{center}
 \end{frame}
 
-\begin{frame}{\footnotesize Análise de resíduos - gráfico de regressão}
+\begin{frame}{\scriptsize Análise de resíduos - gráfico de regressão}
   \begin{columns}
     \begin{column}{5cm}
       A distribuição dos resíduos é aprox. Normal?
@@ -790,7 +813,7 @@ Residuals:
   \end{columns}
 \end{frame}
 
-\begin{frame}{\footnotesize Análise de resíduos - gráfico de resíduos}
+\begin{frame}{\scriptsize Análise de resíduos - gráfico de resíduos}
   \begin{columns}
     \begin{column}{5cm}
       A distribuição dos resíduos é aprox. Normal?
@@ -811,7 +834,7 @@ Residuals:
   \end{columns}
 \end{frame}
 
-\begin{frame}{\footnotesize Análise de resíduos - distribuição dos resíduos}
+\begin{frame}{\scriptsize Análise de resíduos - distribuição dos resíduos}
   \begin{columns}
     \begin{column}{5cm}
       A distribuição dos resíduos é aprox. Normal?
@@ -832,8 +855,9 @@ Residuals:
   \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Diagnosticando a regressão}
+\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão}
   \begin{block}{Perguntas}
+    \footnotesize
     \begin{itemize}
       \footnotesize
     \item Os resíduos são aprox. normais?
@@ -841,8 +865,10 @@ Residuals:
   \end{block}
   \bigskip
   \begin{exampleblock}{Resposta}
+    \footnotesize
     \begin{itemize}
-    \item Sim \hfill \footnotesize (probably...)
+      \footnotesize
+    \item Sim \hfill \tiny (probably...)
     \end{itemize}
   \end{exampleblock}
   \vfill
@@ -856,8 +882,9 @@ Residuals:
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{Diagnosticando a regressão}
+\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão}
   \begin{block}{Perguntas}
+    \footnotesize
     \begin{itemize}
       \footnotesize
     \item Quantos \% de variância podem ser explicados pelo modelo?
@@ -865,6 +892,7 @@ Residuals:
   \end{block}
   \bigskip
   \begin{exampleblock}{Resposta}
+    \footnotesize
     \begin{itemize}
       \footnotesize 
     \item Podemos explicar $r^2$ = 67\% da variância observada no BMD
@@ -883,14 +911,15 @@ Multiple R-squared:  0.6707,	Adjusted R-squared:  0.669
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     E os parâmetros da reta estimados a partir dos dados?
   \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Diagnosticando a regressão\footnote{\scriptsize $H_a$: Intercepto não é igual a 0 (modelo nulo)}}
+\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão\footnote{\scriptsize $H_a$: Intercepto não é igual a 0 (modelo nulo)}}
   \begin{block}{Perguntas}
+    \footnotesize
     \begin{itemize}
       \footnotesize
     \item Qual é o BMD predito para um hipotético BMI = 0?
@@ -898,7 +927,9 @@ Multiple R-squared:  0.6707,	Adjusted R-squared:  0.669
   \end{block}
   \bigskip
   \begin{exampleblock}{Resposta}
+    \footnotesize
     \begin{itemize}
+      \footnotesize
     \item BMD = 337 unidades \footnotesize (IC = [324.8, 348.8])
     \end{itemize}
   \end{exampleblock}
@@ -913,8 +944,9 @@ Coefficients:
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{Diagnosticando a regressão\footnote{\scriptsize $H_a$: Inclinação não é igual a 0 (modelo nulo)}}
+\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão\footnote{\scriptsize $H_a$: Inclinação não é igual a 0 (modelo nulo)}}
   \begin{block}{Perguntas}
+    \footnotesize
     \begin{itemize}
       \footnotesize
     \item Quanto o BMD muda, para cada unidade de BMI?
@@ -922,7 +954,9 @@ Coefficients:
   \end{block}
   \bigskip
     \begin{exampleblock}{Resposta}
+      \footnotesize
       \begin{itemize}
+        \footnotesize
       \item Decréscimo de 3 unidades de BMD \footnotesize (IC = [-3.2, -2.7])
 
         \bigskip
@@ -940,24 +974,24 @@ BMI          -2.9461     0.1467  -20.08   <2e-16 ***
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     \Large
     Vamos agora fazer predições sobre valores não observados
   \end{center}
 \end{frame}
 
-\begin{frame}{E o BMI = 39?}
+\begin{frame}{\scriptsize E o BMI = 39?}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap18-19/pratica-rls4}
   \end{center}
 \end{frame}
 
-\begin{frame}{E o BMI = 39?}
+\begin{frame}{\scriptsize E o BMI = 39?}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-        \small
+        \footnotesize
       \item o valor predito pelo modelo é 221.9 (IC: [218.8, 225.0])
       \item P: O que isto significa?
       \end{itemize}
@@ -970,7 +1004,7 @@ BMI          -2.9461     0.1467  -20.08   <2e-16 ***
   \end{columns}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{center}
     \Large
     E quando os resíduos não são aleatórios em torno da reta?
@@ -979,19 +1013,19 @@ BMI          -2.9461     0.1467  -20.08   <2e-16 ***
   \hfill \footnotesize (casos extremos)
 \end{frame}
 
-\begin{frame}{\small Dispersão em torno da reta {\bf cresce} ao longo da faixa ($r^2$ = 50\%)}
+\begin{frame}{\scriptsize Dispersão em torno da reta {\bf cresce} ao longo da faixa ($r^2$ = 50\%)}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap18-19/pratica-rls-het}
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Dispersão em torno da reta {\bf varia} ao longo da faixa ($r^2$ = 30\%)}
+\begin{frame}{\scriptsize Dispersão em torno da reta {\bf varia} ao longo da faixa ($r^2$ = 30\%)}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm1}
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Análise de resíduos dos 2 últimos exemplos}
+\begin{frame}{\scriptsize Análise de resíduos dos 2 últimos exemplos}
   \begin{center}
     \includegraphics[height=.6\textheight]{Cap18-19/pratica-rls-het-resid}
     \includegraphics[height=.6\textheight]{Cap31-32/pratica-rlm1-resid}
@@ -1002,9 +1036,9 @@ BMI          -2.9461     0.1467  -20.08   <2e-16 ***
   \end{center}
 \end{frame}
 
-\begin{frame}{\small Regressão linear simples x múltipla\footnote{Ajustar para outros fatores: como visto no abstract do exercício!}}
+\begin{frame}{\scriptsize Regressão linear simples x múltipla\footnote{Ajustar para outros fatores: como visto no abstract do exercício!}}
   \begin{block}{Outros fatores}
-    \small
+    \footnotesize
     Nesses casos, não podemos explicar a variância do BMD apenas com o BMI.
 
     \bigskip
@@ -1019,9 +1053,9 @@ BMI          -2.9461     0.1467  -20.08   <2e-16 ***
 
 \subsection{Bônus: preditor categórico}
 
-\begin{frame}{\small Exercício da aula de teste t}
+\begin{frame}{\scriptsize Exercício da aula de teste t}
   \begin{exampleblock}{}
-    \small
+    \footnotesize
     Queremos avaliar a eficiência de uma nova dieta reduzida em
     gordura no tratamento de obesidade.
 
@@ -1040,12 +1074,13 @@ BMI          -2.9461     0.1467  -20.08   <2e-16 ***
     \end{exampleblock}
   \end{exampleblock}
   \begin{block}{}
+    \footnotesize
     Essa nova dieta é eficaz na perda de peso?
   \end{block}
   \hfill {\footnotesize Fonte: Khan Academy}
 \end{frame}
 
-\begin{frame}[fragile]{\small Resolução com Regressão linear simples}
+\begin{frame}[fragile]{\scriptsize Resolução com Regressão linear simples}
   \begin{exampleblock}{Saída típica de um programa}
     \tiny
 \begin{verbatim}
@@ -1067,6 +1102,7 @@ F-statistic: 8.242 on 1 and 198 DF,  p-value: 0.004537
   \end{exampleblock}
   \vfill
   \begin{exampleblock}{\small Interpretação (assumindo pareamento)}
+    \footnotesize
     \begin{itemize}
       \scriptsize
     \item Perda média do grupo 1 (referência): 9.33 lbs {\tiny (IC=[8.48, 10.19])}.
@@ -1077,8 +1113,9 @@ F-statistic: 8.242 on 1 and 198 DF,  p-value: 0.004537
 
 \subsection{Resumo}
 
-\begin{frame}{Resumo}
+\begin{frame}{\scriptsize Resumo}
   \begin{itemize}
+    \footnotesize
   \item Quão bem a reta regressora se ajusta aos dados?
     \medskip
   \item O que pode explicar a relação observada?
@@ -1116,8 +1153,8 @@ F-statistic: 8.242 on 1 and 198 DF,  p-value: 0.004537
     \small
     
     \begin{itemize}
-    \item {\bf Capítulo 31} -- {\footnotesize fortemente recomendado para a aula que vem!}
       \scriptsize
+    \item {\bf Capítulo 31} -- {\tiny fortemente recomendado para a aula que vem!}
     \item Schneider A, Hommel G, Blettner M, 2010.
 
       \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2992018/}
