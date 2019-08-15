@@ -24,3 +24,7 @@ format.float(mad)
 format.float(var(musculo))
 format.float(sd(musculo))
 format.pct(RSD(musculo))
+
+png("Aulas/Cap3/histograma-musculo.png")
+hist(musculo, xlab = "", ylab = "", main = "")
+dev.off()
