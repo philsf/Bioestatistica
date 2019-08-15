@@ -173,7 +173,7 @@
 
 \begin{frame}{\scriptsize Dispersão (Revisão)}
   \begin{itemize}
-    \small
+    \footnotesize
   \item A variância (assim como o DP) é uma medida da dispersão da
     amostra
   \item P: o quanto os dados se desviam da média?
@@ -256,11 +256,13 @@
 \begin{frame}{\scriptsize Dispersão ``conjunta'' entre duas variáveis}
   \small
   \begin{itemize}
+    \footnotesize
   \item Podemos usar um raciocínio análogo para comparar quanto uma
     amostra se desvia \alert{em relação à outra}
 
   \item Pareando duas amostras, podemos tentar observar:
     \begin{itemize}
+      \footnotesize
     \item a dispersão no eixo horizontal (difícil)
     \item a dispersão no eixo vertical (difícil)
       \medskip
@@ -295,11 +297,12 @@
 
 \begin{frame}{\scriptsize Dispersão -- casos extremos}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Esta dispersão conjunta é a base para entender a associação
     \bigskip
   \item Nos dois casos extremos temos:
     \begin{itemize}
+      \scriptsize
     \item duas variáveis perfeitamente associadas
     \item duas variáveis não associadas
     \end{itemize}
@@ -320,7 +323,7 @@
 
 \begin{frame}{\scriptsize Medida de associação entre duas variáveis contínuas}
   \begin{itemize}
-    \small
+    \footnotesize
   \item O DP é uma medida a dispersão de uma variável contínua.
     \bigskip
   \item Existe um análogo para duas variáveis, simultaneamente.
@@ -339,9 +342,11 @@
 
 \begin{frame}{\scriptsize Tipos de variáveis envolvidas}
   \begin{itemize}
+    \footnotesize
   \item Considere duas amostras X e Y, de dados numéricos contínuos.
   \item Vamos representar os dados em pares ordenados (x,y) onde:
     \begin{itemize}
+      \scriptsize
     \item X: variável independente (ou variável explanatória)
     \item Y: variável dependente (ou variável resposta)
     \end{itemize}
@@ -350,6 +355,7 @@
 
 \begin{frame}{\scriptsize Medidas de associação}
   \begin{itemize}
+    \footnotesize
   \item Como definir (e mensurar!) o grau de associação entre duas amostras?
   \item Se uma amostra é dependente de outra, é razoável assumir que isso
     possa ser observável por estatísticas sumárias
@@ -359,6 +365,7 @@
 
 \begin{frame}{\scriptsize Medidas de associação}
   \begin{itemize}
+    \footnotesize
   \item Quando uma associação é forte, podemos identificá-la
     subjetivamente
   \item Para isto, analisamos o gráfico de dispersão dos pares (x,y)
@@ -400,9 +407,11 @@
   \end{definition}
   Propriedades:
   \begin{itemize}
+    \footnotesize
   \item É um número entre $-1$ e $1$.
   \item Mede a associação \alert{linear} entre duas variáveis.
     \begin{itemize}
+      \scriptsize
     \item Diretamente proporcional, inversamente proporcional, ou
       ausência de proporcionalidade.
     \end{itemize}
@@ -427,6 +436,7 @@
   \begin{block}{}
     \footnotesize
     \begin{itemize}
+    \footnotesize
     \item Uma forte associação \alert<2>{positiva} corresponde a uma correlação
       próxima de \alert<2>{1}.
     \item Uma forte associação \alert<3>{negativa} corresponde a uma correlação
@@ -439,6 +449,7 @@
 
 \begin{frame}{\scriptsize IC e Teste de significância}
   \begin{itemize}
+    \footnotesize
   \item Se tivéssemos os dados de toda a \alert<1>{população}, poderíamos
     calcular o \alert<1>{parâmetro} $\rho$
   \item Na prática, só podemos calcular a \alert<2>{estatística} $r$ da \alert<2>{amostra}
@@ -637,6 +648,7 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \begin{block}{Quais são as variáveis?}
     \footnotesize
     \begin{itemize}
+      \footnotesize
     \item Qual é a variável independente (X)? %quantidade de ácidos graxos
     \item Qual é a variável dependente (Y)? %o índice de insulina medido
     \end{itemize}
@@ -645,6 +657,7 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: insulina (contínua)
   \item Independente: conteúdo lipídico (contínua)
   \end{itemize}
@@ -697,7 +710,7 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 
 \begin{frame}[fragile]{Saída típica de um programa}
   \begin{exampleblock}{Resultados brutos do exemplo}
-    \footnotesize
+    \scriptsize
 \begin{verbatim}
 	Pearson's product-moment correlation
 
@@ -760,7 +773,7 @@ sample estimates:
 
 \begin{frame}{\scriptsize Interpretando o teste de correlação}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Nunca devemos ignorar a última possibilidade (erro tipo I)!
   \item o p-valor indica quão rara é essa coincidência
   \item neste caso, em apenas 0.21\% dos experimentos não haveria uma
@@ -820,6 +833,7 @@ sample estimates:
 
 \begin{frame}{\scriptsize Interpretando o $r$}
   \begin{itemize}
+    \footnotesize
   \item Se a correlação é 0, então X e Y não variam juntos (independentes)
   \item Se a correlação é positiva, então quando uma aumenta, a outra
     aumenta em proporção direta (linear)
@@ -857,6 +871,7 @@ sample estimates:
 
 \begin{frame}{\scriptsize Causa x efeito}
   \begin{itemize}
+    \footnotesize
   \item Se há uma relação de causalidade entre as duas variáveis, a
     correlação será não nula (positiva ou negativa)
   \item Quanto maior for a relação de dependência entre as variáveis,
@@ -867,6 +882,7 @@ sample estimates:
 
 \begin{frame}{\scriptsize Causalidade?}
   \begin{itemize}
+    \footnotesize
   \item Mas não podemos inverter a afirmativa lógica do slide
     anterior!
   \item Isto é, ao observar uma forte correlação, gostaríamos de
@@ -951,6 +967,7 @@ sample estimates:
 
 \begin{frame}{\scriptsize Resumo}
   \begin{itemize}
+    \footnotesize
   \item É necessário investigar a relação entre as variáveis!
   \item O que pode explicar a relação observada?
   % \item Que porcentagem da variância pode ser explicada pela hipótese

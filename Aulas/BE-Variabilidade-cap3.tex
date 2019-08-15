@@ -194,6 +194,7 @@
     A idade média $\pm$ desvio padrão do grupo DMD é 7.7 $\pm$ 3.0.
 
     \begin{itemize}
+      \footnotesize
     \item O que significa este 3.0?
     \item Como estas descrições se comparam com as do grupo controle?
     \item \alert{Os grupos têm medidas médias diferentes?}
@@ -205,6 +206,7 @@
 
 \begin{frame}{\scriptsize Medidas Sumárias}
   \begin{itemize}
+    \footnotesize
   \item Medidas sumárias resumem a informação contida nos dados em um
     pequeno conjunto de números.
   \item Medidas sumárias de \alert{populações} se chamam
@@ -219,6 +221,7 @@
     \footnotesize
     Os dois principais tipos de medidas sumárias utilizadas na literatura são:
     \begin{itemize}
+    \footnotesize
     \item Medidas de Tendência Central
     \item Medidas de Variabilidade (ou Dispersão)
     \end{itemize}
@@ -238,6 +241,7 @@
 
 \begin{frame}{\scriptsize Fontes comuns de variabilidade}
   \begin{itemize}
+    \footnotesize
   \item Imprecisão ou erro experimental
   \item Variabilidade biológica
   \item ``{\em Mancadas}'' experimentais
@@ -304,10 +308,11 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Percentis e a Mediana}
-  \begin{definition}
+  \begin{block}
     A mediana é o dado que ocupa o percentil de 50\% dados (\alert{posição central}).
-  \end{definition}
+  \end{block}
   \begin{itemize}
+    \footnotesize
   \item Para se calcular a mediana, deve-se ordenar os dados.
   \item Encontrar o valor do \alert{meio} se $n$ for ímpar.
   \item Encontrar a média dos dois valores do \alert{meio} se $n$ for par.
@@ -358,6 +363,7 @@ Conforme no exemplo anterior
     \footnotesize
     Considere o seguinte dataset $$\{ 1,1,2,4,7\}$$
   \begin{itemize}
+    \footnotesize
   \item $N=5$
   \item As medidas descritivas centrais para estes dados são:
   \item $\mu = \frac{1+1+2+4+7}{5} = \frac{15}{5}= 3$
@@ -372,6 +378,7 @@ Conforme no exemplo anterior
     Considere agora este outro dataset $$\{
     1,1,2,4,\alert{32} \}$$
   \begin{itemize}
+    \footnotesize
   \item $N=5$
   \item As medidas descritivas centrais para estes dados são:
   \item $\mu = \frac{1+1+2+4+32}{5} = \frac{40}{5}= 8$
@@ -415,11 +422,13 @@ Conforme no exemplo anterior
   \begin{columns}
     \begin{column}{7cm}
       \begin{itemize}
+        \footnotesize
       \item {\em ``Caixa e bigodes''}
       \item A caixa representa os percentis de 25\% e 75\%
       \item Barra interna que representa a mediana (percentil 50\%)
       \item Barras verticais {\em indicam} a amplitude dos dados
         \begin{itemize}
+          \scriptsize
         \item Mínimo e Máximo
         \item Regras para ``a maioria''
         \end{itemize}
@@ -444,6 +453,7 @@ Conforme no exemplo anterior
 
 \begin{frame}{\scriptsize Desvios em relação à média}
   \begin{itemize}
+    \footnotesize
   \item Uma maneira de entender a variabilidade do dataset é analisar
     os desvios em relação à média.
   \item Cada desvio é a diferença entre o valor do dado e a média.
@@ -453,6 +463,7 @@ Conforme no exemplo anterior
 
 \begin{frame}{\scriptsize A seguir, você verá...}
   \begin{itemize}
+    \footnotesize
   \item  uma cadência de ideias (todas relacionadas)
   \item o que uma significa em relação à próxima.
   \item prós e contras de cada uma
@@ -491,6 +502,7 @@ Conforme no exemplo anterior
   \begin{columns}
     \begin{column}{5cm}
   \begin{itemize}
+    \footnotesize
   \item $N=5$
   \item $\bar{x} = 3$
   \end{itemize}
@@ -561,6 +573,7 @@ Conforme no exemplo anterior
 
 \begin{frame}{\scriptsize Como proceder?}
   \begin{itemize}
+    \footnotesize
   \item Como extrair alguma informação útil (e sumária!) dos desvios?
   \item Problema: sinais
   \end{itemize}
@@ -574,11 +587,12 @@ Conforme no exemplo anterior
   Tomando-se o módulo dos desvios temos:
   % \item Idéia matemática de ``tamanho''
 
-  \begin{definition}
+  \begin{block}{Definição}
     Desvio médio absoluto (MAD) é a média dos desvios absolutos
-  \end{definition}
+  \end{block}
 
   \begin{itemize}
+    \footnotesize
   \item É uma medida de dispersão robusta (pouco influenciada por
     outliers)
   \item Módulo não tem boas propriedades matemáticas (analíticas e
@@ -619,6 +633,7 @@ Conforme no exemplo anterior
 
 \begin{frame}{\scriptsize Uma proposta ``melhor''}
   \begin{itemize}
+    \footnotesize
   \item Uma outra maneira de eliminar os sinais é elevar ao quadrado
     cada desvio.
   \item Preserva boas propriedades matemáticas
@@ -628,10 +643,11 @@ Conforme no exemplo anterior
 \end{frame}
 
 \begin{frame}{\scriptsize Variância}
-  \begin{definition}
+  \begin{block}{Definição}
     A variância é a média dos desvios quadráticos.
-  \end{definition}
+  \end{block}
   \begin{itemize}
+    \footnotesize
   \item Variância populacional
 $$\sigma^2 = \frac{\sum (x_j - \mu)^2}{N}$$
 \item Variância amostral
@@ -674,10 +690,11 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 \end{frame}
 
 \begin{frame}{\scriptsize Desvio Padrão}
-  \begin{definition}
+  \begin{block}{Definição}
     O desvio padrão é a raiz quadrada da variância.
-  \end{definition}
+  \end{block}
   \begin{itemize}
+    \footnotesize
   \item Desvio padrão populacional
     $$ \sigma = \sqrt{ \sigma^2 } = \sqrt{ \frac{\sum (x_i - \mu)^2}{N} } $$
   \item Desvio padrão amostral
@@ -687,6 +704,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 
 \begin{frame}{\scriptsize Desvio Padrão}
   \begin{itemize}
+    \footnotesize
   \item É a medida mais usada, por estar na mesma escala (unidade) dos
     dados.
   \item Boas propriedades matemáticas
@@ -735,6 +753,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
   \begin{exampleblock}{Sinônimos}
     \footnotesize
     \begin{itemize}
+    \footnotesize
     \item Desvio padrão relativo (DPR)
     \item Coeficiente de Variação (CV)
     \item {\em Relative Standard Deviation} (RSD)
@@ -781,6 +800,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
     {\em ``Quase todos'' os dados estão a 2 DP da média (considerando ambos os lados)}
   \end{block}
   \begin{itemize}
+    \footnotesize
   \item {\em Cenas dos próximos capítulos}
   \end{itemize}
 \end{frame}

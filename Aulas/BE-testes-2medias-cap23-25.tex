@@ -252,6 +252,7 @@
 
 \begin{frame}{\scriptsize Testes paramétricos}
   \begin{itemize}
+    \footnotesize
   \item Existe uma infinidade de testes estatísticos (cada qual com sua hipótese nula)
   \item São divididos em dois grandes grupos: paramétricos e não paramétricos
   \item Os testes paramétricos assumem que a amostra vem de uma \alert{distribuição Normal}
@@ -264,6 +265,7 @@
 
 \begin{frame}{\scriptsize Testes paramétricos}
   \begin{itemize}
+    \footnotesize
   \item Os testes paramétricos assumem que a amostra vem de uma \alert{distribuição Normal} \footnote{nunca é demais frisar}
   \item Hoje veremos o {\bf teste t} (de Student), aplicado em duas formas/contextos
   % \item Ele pode ser usado para um ou dois grupos de medições.
@@ -272,6 +274,7 @@
 
 \begin{frame}{\scriptsize O teste t: características}
   \begin{itemize}
+    \footnotesize
   \item {\bf Distribuição:} t de Student
   \item {\bf Hipótese:} não há diferença entre as duas médias
   \item {\bf Estatística de teste:} $t = \frac{\bar{x_d}}{SE_d}$
@@ -302,6 +305,7 @@
 
 \begin{frame}{\scriptsize Premissas}
   \begin{itemize}
+    \footnotesize
   \item Os dois grupos foram coletados independentemente (inter-grupo)
   \item Todas as observações em cada grupo são independentes entre si (intra-grupo)
   \item Todos os dados foram amostrados de populações Normalmente distribuídas (aprox.)
@@ -339,7 +343,7 @@
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{exampleblock}{Teste t, amostras independentes}
-    \footnotesize
+    \scriptsize
 \begin{verbatim}
 P value and statistical significance: 
   The two-tailed P value equals 0.8116 
@@ -369,6 +373,7 @@ Intermediate values used in calculations:
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{block}{Interpretação típica}
     \begin{itemize}
+    \footnotesize
     \item Grupo Hipertensos: contínua (mensuração)
     \item Grupo Controle: contínua (mensuração)
     \end{itemize}
@@ -381,6 +386,7 @@ Intermediate values used in calculations:
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: níveis de receptores (contínua)
   \item Independente: grupo (categórica binária)
   \end{itemize}
@@ -396,6 +402,7 @@ Intermediate values used in calculations:
 
 \begin{frame}{\scriptsize Grupos independentes x pareados}
   \begin{itemize}
+    \footnotesize
   \item Assim como no cálculo de ICs, os grupos de estudo podem ser independentes ou pareados
   \item Quando são independentes, a comparação é entre as médias de ambos os grupos
   \item Quando são pareados, a comparação é entre as diferenças dos pares
@@ -406,9 +413,11 @@ Intermediate values used in calculations:
 \begin{frame}{\scriptsize Grupos pareados (revisão)}
 Quando faz sentido parear indivíduos de dois grupos?
   \begin{itemize}
+    \footnotesize
   \item Mensurar o \alert{mesmo} indivíduo antes e depois do procedimento
   \item Recrutamento aos pares, quando o par tem a(o) mesma(o)
     \begin{itemize}
+    \footnotesize
     \item idade/faixas etária
     \item região demográfica
     \item diagnóstico
@@ -420,6 +429,7 @@ Quando faz sentido parear indivíduos de dois grupos?
 
 \begin{frame}{\scriptsize Premissas}
   \begin{itemize}
+    \footnotesize
   \item Os pares amostrados aleatoriamente de uma mesma população (ou representativa)
   \item Os participantes são pareados - o primeiro do grupo A com o primeiro do grupo B, etc.
   \item Cada par é independente de todos os outros
@@ -437,7 +447,7 @@ Quando faz sentido parear indivíduos de dois grupos?
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{exampleblock}{Teste t, amostras pareadas}
-    \footnotesize
+    \scriptsize
 \begin{verbatim}
 	Paired t-test
 
@@ -456,6 +466,7 @@ mean of the differences
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: número de receptores (contínua)
   \item Independente: grupo (categórica binária)
   \end{itemize}
@@ -497,6 +508,7 @@ mean of the differences
 
 \begin{frame}[fragile]{\scriptsize Tabulação dos dados\footnote{Organizar os dados desta forma, permite usar os filtros do Excel.}}
   \begin{block}{Tabela de dados brutos}
+    \scriptsize
 \begin{verbatim}
       Grupo     Perda
   1: Grupo1 12.184783
@@ -595,7 +607,7 @@ mean of the differences
 
 \begin{frame}[fragile, label=t-indep]{\scriptsize Saída típica de um programa}
   \begin{block}{Teste t, amostras independentes}
-    \footnotesize
+    \scriptsize
     \begin{verbatim}
 	Two Sample t-test
 
@@ -614,7 +626,7 @@ mean in group Grupo1 mean in group Grupo2
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{block}{Teste t, amostras pareadas}
-    \footnotesize
+    \scriptsize
     \begin{verbatim}
 	Paired t-test
 
@@ -670,7 +682,7 @@ mean of the differences
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{block}{Teste t, amostras independentes, com correção de Welch}
-    \footnotesize
+    \scriptsize
 \begin{verbatim}
 	Welch Two Sample t-test
 
@@ -692,6 +704,7 @@ mean in group Grupo1 mean in group Grupo2
     Escreva a relação entre
     \medskip
     \begin{itemize}
+    \footnotesize
     \item a variável dependente
     \item a variável independente
     \end{itemize}
@@ -715,13 +728,14 @@ mean in group Grupo1 mean in group Grupo2
 
 \begin{frame}{\scriptsize Resumo}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Testes paramétricos ({\footnotesize requer dados Normalmente distribuídos})
   \item Para dois grupos independentes assume independência inter- e intra-grupo, e DPs semelhantes
   \item Para dois grupos pareados assume independência entre os pares
   \item Esta decisão \alert{não deve} ser tomada após a coleta dos dados\footnote{\scriptsize As comparações dos testes que fizemos aqui foram meramente didáticas. A EDA real terminaria nas visualizações e tabelas.}.
   \item Variáveis:
     \begin{itemize}
+      \scriptsize
     \item Dependente: contínua
     \item Independente: categórica binária (2 grupos)
     \end{itemize}

@@ -304,7 +304,7 @@
 %    Exemplos de perguntas que podem ser respondidas por tal modelo:
 
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item Tendência (``Níveis de insulina em jejum tendem a aumentar com a idade?'')
     \item Ajuste de curva (``Qual é o EC$_{50}$ de uma nova droga?'')
     \item Predição (``Como predizer o risco de infarto do miocárdio, sabendo-se a idade, pressão e nível de colesterol?'')
@@ -328,6 +328,7 @@
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
+        \footnotesize
       \item Dados simulados, inspirados no paper.
       \item Existe uma tendência? Ela é linear?
       \item Podemos estimar BMD sabendo o IMC?
@@ -343,6 +344,7 @@
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: BMD (contínua)
     \begin{itemize}
       \scriptsize
@@ -365,7 +367,7 @@
 
 \begin{frame}{\scriptsize Revisão: equação da reta}
   \begin{itemize}
-    \small
+    \footnotesize
   \item A equação de uma reta é definida pela fórmula
     \begin{displaymath}
       \text{BMD} = \alert{a} \times \text{BMI} + \alert{b}
@@ -383,6 +385,7 @@
   \begin{block}{\footnotesize Inversão, em relação à matemática básica}<2>
     \footnotesize
     \begin{itemize}
+      \footnotesize
     \item Note que aqui os ``dados'' já foram coletados (fixos)
     \item Nosso objetivo é estimar os parâmetros da reta \alert{$b$} e \alert{$a$}
     \end{itemize}
@@ -391,7 +394,7 @@
 
 \begin{frame}{\scriptsize Interpretação dos parâmetros da reta}
   \begin{itemize}
-    \small
+    \footnotesize
   \item O intercepto é o valor (hipotético) de BMD quando BMI = 0
   \item A inclinação é quanto BMD altera\footnote{na média!} quando aumentamos o BMI em 1 unidade
   \end{itemize}
@@ -439,6 +442,7 @@
 
 \begin{frame}{\scriptsize Atenção}
   \begin{itemize}
+    \footnotesize
   \item Para muitos testes presume-se que os dados vem de uma distribuição normal
   \item Neste caso, não é necessário que os {\bf dados} sejam normais
   \item {\bf É necessário que os resíduos sejam normais}
@@ -473,6 +477,7 @@
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
+    \footnotesize
   \item Dependente: insulina (contínua)
   \item Independente: conteúdo lipídico (contínua)
   \end{itemize}
@@ -520,6 +525,7 @@
 
 \begin{frame}{\scriptsize Interpretação}
   \begin{itemize}
+    \footnotesize
   \item O p-valor é significativo.
   \item A inclinação é $\approx \alert{37.2}$
   \item Isto significa que:
@@ -561,6 +567,7 @@
     r^2 = \frac{\text{variância explicada}}{\text{variância total}}
   \end{displaymath}
   \begin{itemize}
+    \footnotesize
   \item Lembrando: $r^2$ é o quadrado de $r$!
   % \item Este valor tem uma interpretação prática mais fácil, que
   %   veremos em breve
@@ -571,7 +578,7 @@
   \begin{block}{}
     \footnotesize
     \begin{itemize}
-      \small
+      \scriptsize
       % \item A variância dos dados pode ser explicada de várias formas
     \item Qual é a porcentagem da variância dos dados pode ser explicada
       pela reta regressora?
@@ -582,7 +589,7 @@
   \end{block}
     \vfill
     \begin{itemize}
-      \small
+      \footnotesize
     \item Obs: Como $r$ está sempre entre -1 e 1
     \begin{itemize}
       \scriptsize
@@ -661,7 +668,7 @@
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-        \small
+        \footnotesize
       \item \alert{Se o modelo é adequado}, podemos substituir isto...
         \bigskip
       \item<0> ... por isto
@@ -681,7 +688,7 @@
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-        \small
+        \footnotesize
       \item \alert{Se o modelo é adequado}, podemos substituir isto...
         \bigskip
       \item ... por isto
@@ -701,7 +708,7 @@
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-        \small
+        \footnotesize
       \item \alert<2>{A dispersão em torno da reta é aprox. aleatória?}
         \bigskip
       \item Observe o formato faixa de confiança em torno da reta
@@ -755,6 +762,7 @@ F-statistic: 403.2 on 1 and 198 DF,  p-value: < 2.2e-16
 
 \begin{frame}[fragile]{\scriptsize Análise de resíduos}
   \begin{itemize}
+    \footnotesize
   \item Como vimos, os resíduos são erros aleatórios
 
     ({\footnotesize em torno da reta})
@@ -859,7 +867,8 @@ Residuals:
   \begin{exampleblock}{Resposta}
     \footnotesize
     \begin{itemize}
-    \item Sim \hfill \footnotesize (probably...)
+      \footnotesize
+    \item Sim \hfill \tiny (probably...)
     \end{itemize}
   \end{exampleblock}
   \vfill
@@ -920,6 +929,7 @@ Multiple R-squared:  0.6707,	Adjusted R-squared:  0.669
   \begin{exampleblock}{Resposta}
     \footnotesize
     \begin{itemize}
+      \footnotesize
     \item BMD = 337 unidades \footnotesize (IC = [324.8, 348.8])
     \end{itemize}
   \end{exampleblock}
@@ -946,6 +956,7 @@ Coefficients:
     \begin{exampleblock}{Resposta}
       \footnotesize
       \begin{itemize}
+        \footnotesize
       \item Decréscimo de 3 unidades de BMD \footnotesize (IC = [-3.2, -2.7])
 
         \bigskip
@@ -980,7 +991,7 @@ BMI          -2.9461     0.1467  -20.08   <2e-16 ***
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-        \small
+        \footnotesize
       \item o valor predito pelo modelo é 221.9 (IC: [218.8, 225.0])
       \item P: O que isto significa?
       \end{itemize}
@@ -1104,6 +1115,7 @@ F-statistic: 8.242 on 1 and 198 DF,  p-value: 0.004537
 
 \begin{frame}{\scriptsize Resumo}
   \begin{itemize}
+    \footnotesize
   \item Quão bem a reta regressora se ajusta aos dados?
     \medskip
   \item O que pode explicar a relação observada?

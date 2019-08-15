@@ -167,7 +167,7 @@
 
 \begin{frame}{\scriptsize A hipótese da normalidade}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Todos os métodos que vimos até aqui presumem que os dados são normalmente distribuídos
   \item Desvios da normalidade precisam ser contornados\footnote{há controvérsias: {\tiny  \url{https://www.r-bloggers.com/normality-tests-don't-do-what-you-think-they-do/}}}
     \bigskip
@@ -227,7 +227,7 @@
 
 \begin{frame}{\scriptsize O Q-Q plot}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Gráfico que compara os quantis da amostra com os quantis teóricos
   \item Adicionalmente uma reta ``ideal'' é sobreposta, como referência
     \bigskip
@@ -256,6 +256,7 @@
 
 \begin{frame}{\scriptsize }
   \begin{itemize}
+    \footnotesize
   \item Objetivo: é possível \alert{determinar} se uma amostra veio de uma população normalmente distribuída?
   \item<2-> Resposta curta: \alert<3->{NÃO}.
     \bigskip
@@ -266,6 +267,7 @@
 
 \begin{frame}{\scriptsize Alguns testes contra a normalidade}
   \begin{itemize}
+    \footnotesize
   \item<1-> \alert<2>{Shapiro-Wilk}
     \bigskip
   \item<1-> Anderson-Darling
@@ -297,12 +299,12 @@
 
 \begin{frame}{\scriptsize Transformações}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Podemos aplicar uma transformação nos dados, para coagi-los a se aproximar das premissas requeridas
     \bigskip
   \item Transformações usuais incluem:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item logaritmo
     \item exponencial
     \item raiz quadrada
@@ -376,7 +378,7 @@ Dados normais x dados log-transformados
 
 \begin{frame}{\scriptsize Teste para 1 amostra}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Desvios da normalidade severos impactam os testes paramétricos
     \bigskip
   \item Nesses casos, tenta-se transformar os dados, se possível
@@ -391,10 +393,10 @@ Dados normais x dados log-transformados
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item categórica ordinal
     \item numérica discreta
     \item numérica contínua (não-normal)
@@ -423,7 +425,7 @@ Dados normais x dados log-transformados
   \begin{block}{Dados normais}
     \footnotesize
     \begin{itemize}
-    \small
+      \footnotesize
     \item amostras independentes $\Rightarrow$ t-teste não pareado
     \item amostras pareadas $\Rightarrow$ t-teste pareado
     \end{itemize}
@@ -432,7 +434,7 @@ Dados normais x dados log-transformados
   \begin{block}{Dados não normais}
     \footnotesize
     \begin{itemize}
-    \small
+      \footnotesize
     \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} {\footnotesize (Capítulo 24)}%\footnote{Também conhecido como Wilcoxon (rank sum test)}
     \item amostras pareadas $\Rightarrow$ Wilcoxon {\footnotesize (Capítulo 25)}
     \end{itemize}
@@ -441,17 +443,17 @@ Dados normais x dados log-transformados
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item categórica ordinal
     \item numérica discreta
     \item numérica contínua (não-normal)
     \end{itemize}
   \item Independente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item categórica ordinal
     \item numérica discreta
     \item numérica contínua (não-normal)
@@ -475,8 +477,10 @@ P: Estas amostras são significativamente diferentes?
 
 \begin{frame}{\scriptsize Exemplo}
   \begin{itemize}
+    \footnotesize
   \item<1-> Assumindo\footnote{pelo desenho experimental} que elas são
     \begin{itemize}
+    \scriptsize
     \item<1-> \alert<3>{normalmente distribuídas}, e
     \item<1-> independentes,
     \end{itemize}
@@ -513,14 +517,14 @@ P: Estas amostras são significativamente diferentes?
 
 \begin{frame}{\scriptsize Mann-Whitney}
   \begin{exampleblock}{Teste t}
-    \footnotesize
+    \scriptsize
     p-valor = 0.259 (não significativo)
   \end{exampleblock}
   \begin{itemize}
-    \small
+    \footnotesize
   \item<2-> Aplicando o teste de Shapiro-Wilk em x e y
     \begin{itemize}
-      \scriptsize
+      \tiny
     \item<2-> x: p-valor = 5.515e-16
     \item<2-> y: p-valor = 5.274e-09
     \end{itemize}
@@ -539,8 +543,10 @@ P: Estas amostras são significativamente diferentes?
 
 \begin{frame}{\scriptsize Relembrando}
   \begin{itemize}
+    \footnotesize
   \item Para testar a diferença nas médias de 3 ou mais amostras
     \begin{itemize}
+      \scriptsize
     \item Análise de Variâncias (ANOVA)
       \bigskip
     \item Leva em conta as variâncias entre os grupos (\alert{inter})
@@ -562,17 +568,17 @@ P: Estas amostras são significativamente diferentes?
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item categórica ordinal
     \item numérica discreta
     \item numérica contínua (não-normal)
     \end{itemize}
   \item Independente:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item grupo (categórica nominal -- 3+ níveis)
     \end{itemize}
   \end{itemize}
@@ -592,10 +598,11 @@ P: Estas amostras são significativamente diferentes?
   \end{exampleblock}
   \begin{itemize}
     \footnotesize
-  \item<2-> Shapiro-Wilk (Ozônio por mês (Maio -- Setembro): {\scriptsize $< 0.0001,\ 0.0628,\ 0.86689,\ 0.090325,\ < 0.0001$}
+  \item<2-> Shapiro-Wilk (Ozônio por mês (Maio -- Setembro): {\tiny $< 0.0001,\ 0.0628,\ 0.86689,\ 0.090325,\ < 0.0001$}
     \bigskip
   \item<3-> Devemos rejeitar a hipótese de normalidade.
   \item<3-> Então o ANOVA \alert{não é} apropriado!
+    \bigskip
   \item<3-> Substituto: teste de Kruskal-Wallis (Capítulo 30)
   \end{itemize}
   \bigskip
@@ -643,7 +650,7 @@ P: Estas amostras são significativamente diferentes?
 
 \begin{frame}{\scriptsize Correlação não-paramétrica}
   \begin{itemize}
-    \small
+    \footnotesize
   \item A correlação de Pearson
     \begin{itemize}
       \scriptsize
@@ -665,17 +672,27 @@ P: Estas amostras são significativamente diferentes?
 
 \begin{frame}{\scriptsize Número de resultados no PUBMED\footnote{\scriptsize Levantamento feito em 2017-11-30}}
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item t-test: 61488
+    \smallskip
   \item ANOVA: 431252
+    \smallskip
   \item Wilcoxon: 19881
+    \smallskip
   \item Mann-Whitney: 25571
+    \smallskip
   \item Kruskal-Wallis: 11943
+    \smallskip
   \item Shapiro-Wilk: 519
+    \smallskip
   \item Kolmongorov-Smirnoff: 0
+    \smallskip
   \item Anderson-Darling: 49
+    \smallskip
   \item Chi-square: 107277
+    \smallskip
   \item OR: 221034
+    \smallskip
   \item RR: 344996
   \end{itemize}
 \end{frame}
