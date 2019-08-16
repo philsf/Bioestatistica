@@ -298,8 +298,10 @@
     Foram observados os seguintes níveis de colesterol de uma amostra
     de pacientes. Qual é o nível médio de colesterol nestes pacientes?
 
+    \bigskip
     \begin{columns}<1>
       \begin{column}{5cm}<1>
+        {\tiny
         \begin{tabular}{ccc}
           $x_1$ &=&144\\
           $x_2$ &=&146\\
@@ -308,8 +310,10 @@
           $x_5$ &=&144\\
           $x_6$ &=&148\\
         \end{tabular}
+        }
       \end{column}
       \begin{column}{5cm}<1>
+        \scriptsize
         $\bar{x} = \frac{876}{6} = 146 $
       \end{column}
     \end{columns}
@@ -342,6 +346,8 @@
   \begin{exampleblock}{Exemplo 1}
     \footnotesize
     Conforme no exemplo (colesterol)
+    \bigskip
+    \tiny
     \begin{columns}
       \begin{column}{5cm}
         \begin{tabular}{ccc}
@@ -354,6 +360,7 @@
         \end{tabular}
       \end{column}
       \begin{column}{5cm}
+        \scriptsize
         $M_d = \frac{144+146}{2}=145$
       \end{column}
     \end{columns}
@@ -378,6 +385,8 @@
   \end{block}
   \visible<2->{
   \begin{exampleblock}{Exemplo 1 (colesterol)}
+    \bigskip
+    \tiny
     \begin{columns}
       \begin{column}{5cm}
         \begin{tabular}{ccc}
@@ -582,22 +591,22 @@
 
 \begin{frame}{\scriptsize Desvios em relação à média}
 \begin{exampleblock}{Exemplo}
-    \footnotesize
+    \scriptsize
   \begin{displaymath}
     \{144, 146, 139, 155, 144, 148\}
   \end{displaymath}
-
+  \bigskip
   \begin{columns}
     \begin{column}{5cm}
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item $N=6$
   \item $\bar{x} = 146$
   \end{itemize}
 \end{column}
 \begin{column}{5cm}
   \begin{enumerate}
-    \scriptsize
+    \tiny
   \item $D_1 = 144 - 146 = -2$
   \item $D_2 = 146 - 146 = 0$
   \item $D_3 = 139 - 146 = -7$
@@ -711,7 +720,7 @@
   \begin{columns}
     \begin{column}{5cm}<1->
       \begin{enumerate}
-        \footnotesize
+        \tiny
       \item $|D_1| = |144 - 146| = 2$
       \item $|D_2| = |146 - 146| = 0$
       \item $|D_3| = |139 - 146| = 7$
@@ -763,14 +772,16 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 
 \begin{frame}{\scriptsize Variância}
   \begin{exampleblock}{Exemplo}
-    \footnotesize
+    \scriptsize
       \begin{displaymath}
     \{144, 146, 139, 155, 144, 148\}, \bar{x} = 146
   \end{displaymath}
+    \bigskip
+    \tiny
   \begin{columns}
     \begin{column}{6cm}<1->
       \begin{enumerate}
-        \footnotesize
+        \tiny
       \item $(D_1)^2 = (144-146)^2 = (-2)^2 = 4$
       \item $(D_2)^2 = (146-146)^2 = 0^2 = 0$
       \item $(D_3)^2 = (139-146)^2 = (-7)^2 = 49$
@@ -780,6 +791,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
       \end{enumerate}
     \end{column}
     \begin{column}{4cm}
+      \footnotesize
       \begin{displaymath}
         s^2 = \frac{\sum D_i^2}{5} = 28.4
       \end{displaymath}
@@ -787,7 +799,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
   \end{columns}
   \end{exampleblock}
   \begin{block}{No exemplo do paper}
-    \footnotesize
+    \scriptsize
     VAR = 18.14
   \end{block}
 \end{frame}
@@ -816,17 +828,20 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 \end{frame}
 
 \begin{frame}{\scriptsize Desvio Padrão}
-  \begin{example}
+  \begin{exampleblock}{Exemplo}
+    \scriptsize
       \begin{displaymath}
         \{144, 146, 139, 155, 144, 148\}, \bar{x} = 146
       \end{displaymath}
+      \medskip
       \begin{displaymath}
         s^2 = 28.4
       \end{displaymath}
+      \medskip
       \begin{displaymath}
         s = \sqrt{s^2} = \sqrt{28.4} = 5.3
     \end{displaymath}
-  \end{example}
+  \end{exampleblock}
   \begin{block}{No exemplo do paper}
     \footnotesize
     DP = 4.26
