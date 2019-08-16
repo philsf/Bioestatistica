@@ -565,21 +565,32 @@
   \begin{columns}
     \begin{column}{7cm}
       \begin{itemize}
-        \footnotesize
+        \scriptsize
       \item {\em ``Caixa e bigodes''}
-      \item A caixa representa os percentis de 25\% e 75\%
-      \item Barra interna que representa a mediana (percentil 50\%)
+        \medskip
+      \item A caixa delimita os quartis de $Q_1$ e $Q_3$ ({\bf IQR})
+        \begin{itemize}
+          \scriptsize
+        \item Percentis 25\% e 75\%
+        \item O tamanho da caixa representa a {\bf AIQ}
+        \end{itemize}
+      \item Barra interna que representa a mediana
+        \begin{itemize}
+          \scriptsize
+        \item Segundo quartil ($Q_2$) ou percentil de 50\%
+        \end{itemize}
+        \medskip
       \item Barras verticais {\em indicam} a amplitude dos dados
         \begin{itemize}
           \scriptsize
-        \item Mínimo e Máximo
+        \item Mínimo e Máximo ``razoáveis''
         \item Regras para ``a maioria''
         \end{itemize}
       \end{itemize}
-      \end{column}
-      \begin{column}{5cm}
-          \includegraphics[height=\textheight]{Cap3/boxplot}
-      \end{column}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[height=\textheight]{Cap3/boxplot}
+    \end{column}
   \end{columns}
 \end{frame}
 
