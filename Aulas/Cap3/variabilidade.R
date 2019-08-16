@@ -3,9 +3,9 @@ RSD <- function(x) sd(x)/mean(x)
 
 ## dados
 bp <- c(144, 146, 139, 155, 144, 148)
-round(mean(bp)); median(bp)
+mean(bp); median(bp)
 bp2 <- bp; bp2[3] <- 13
-round(mean(bp2)) ; median(bp2)
+mean(bp2) ; median(bp2)
 
 D <- bp - round(mean(bp)) # desvios
 sum(D) # soma dos desvios
