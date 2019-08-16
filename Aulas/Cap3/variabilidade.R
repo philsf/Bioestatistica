@@ -29,9 +29,9 @@ png("Aulas/Cap3/histograma-musculo.png")
 hist(musculo, xlab = "", ylab = "", main = "")
 dev.off()
 
-bp <- c(144, 146, 139, 155, 144, 146)
+bp <- c(144, 146, 139, 155, 144, 148)
 round(mean(bp)); median(bp)
-bp2 <- bp; bp2[3] <- 19
+bp2 <- bp; bp2[3] <- 13
 round(mean(bp2)) ; median(bp2)
 
 bp - round(mean(bp)) # desvios
@@ -40,7 +40,7 @@ bp - round(mean(bp)) # desvios
 # plot(bp2, ylim = (c(0, 200)), ylab = "BP*", xlab = "")
 png("Aulas/Cap3/histograma-bp.png")
 hist(bp, main = "BP")
-abline(v=c(mean(bp), median(bp)), lty = 2, lwd =2, col = c("blue", "red"))
+abline(v=c(round(mean(bp)), median(bp)), lty = 2, lwd =2, col = c("blue", "red"))
 dev.off()
 png("Aulas/Cap3/histograma-bp2.png")
 hist(bp2, main = "BP*")
