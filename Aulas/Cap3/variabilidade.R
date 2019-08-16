@@ -28,3 +28,13 @@ format.pct(RSD(musculo))
 png("Aulas/Cap3/histograma-musculo.png")
 hist(musculo, xlab = "", ylab = "", main = "")
 dev.off()
+
+bp <- c(142, 144, 176, 203, 134, 191)
+sort(bp)
+bp2 <- bp
+bp2[1] <- 14
+
+plot(bp, ylim = (c(0, 200)), ylab = "BP", xlab = "")
+hist(bp, main = "BP")
+plot(bp2, ylim = (c(0, 200)), ylab = "BP*", xlab = "")
+hist(bp2, main = "BP*")
