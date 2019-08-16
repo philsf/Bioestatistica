@@ -376,40 +376,71 @@
     \footnotesize
     O que acontece com a média, na presença de um valor extremo (muito grande, ou muito pequeno em relação aos outros)?
   \end{block}
+  \visible<2->{
   \begin{exampleblock}{Exemplo}
-    \footnotesize
-    O que acontece se você digitar {\bf 20} ao invés de {\bf 203}?
+    \begin{columns}
+      \begin{column}{5cm}
+        \begin{tabular}{ccc}
+          $x_1$ &=&\alert{\sout{142} 14}\\
+          $x_2$ &=&144\\
+          $x_3$ &=&176\\
+          $x_4$ &=&203\\
+          $x_5$ &=&134\\
+          $x_6$ &=&191\\
+        \end{tabular}
+      \end{column}
+      \begin{column}{5cm}
+        \scriptsize
+        O que acontece se você digitar
+
+        \alert{\bf 14} ao invés de \alert{\bf 142}?
+
+        \bigskip
+        \begin{itemize}
+          \scriptsize
+        \item \sout{$\bar{x} = 165, M_d= 160$}
+          \medskip
+        \item {\bf $\bar{x} = 144, M_d = 160$}
+        \end{itemize}
+      \end{column}
+    \end{columns}
   \end{exampleblock}
+  }\visible<3->{
+  \begin{block}{Pense...}
+    \scriptsize
+    {\bf Qual é a implicação disso em seu projeto?}
+  \end{block}
+  }
 \end{frame}
 
-\begin{frame}{\scriptsize Comparação entre as Medidas Centrais}
-  \begin{exampleblock}{Exemplo}
-    \footnotesize
-    Considere o seguinte dataset $$\{ 1,1,2,4,7\}$$
-  \begin{itemize}
-    \footnotesize
-  \item $N=5$
-  \item As medidas descritivas centrais para estes dados são:
-  \item $\bar{x} = \frac{1+1+2+4+7}{5} = \frac{15}{5}= 3$
-  \item $M_d = 2$
-  \end{itemize}
-\end{exampleblock}
-\end{frame}
+% \begin{frame}{\scriptsize Comparação entre as Medidas Centrais}
+%   \begin{exampleblock}{Exemplo}
+%     \footnotesize
+%     Considere o seguinte dataset $$\{ 1,1,2,4,7\}$$
+%   \begin{itemize}
+%     \footnotesize
+%   \item $N=5$
+%   \item As medidas descritivas centrais para estes dados são:
+%   \item $\bar{x} = \frac{1+1+2+4+7}{5} = \frac{15}{5}= 3$
+%   \item $M_d = 2$
+%   \end{itemize}
+% \end{exampleblock}
+% \end{frame}
 
-\begin{frame}{\scriptsize Comparação entre as Medidas Centrais}
-  \begin{exampleblock}{Exemplo}
-    \footnotesize
-    Considere agora este outro dataset $$\{
-    1,1,2,4,\alert{32} \}$$
-  \begin{itemize}
-    \footnotesize
-  \item $N=5$
-  \item As medidas descritivas centrais para estes dados são:
-  \item $\bar{x} = \frac{1+1+2+4+32}{5} = \frac{40}{5}= 8$
-  \item $M_d = 2$
-  \end{itemize}
-\end{exampleblock}
-\end{frame}
+% \begin{frame}{\scriptsize Comparação entre as Medidas Centrais}
+%   \begin{exampleblock}{Exemplo}
+%     \footnotesize
+%     Considere agora este outro dataset $$\{
+%     1,1,2,4,\alert{32} \}$$
+%   \begin{itemize}
+%     \footnotesize
+%   \item $N=5$
+%   \item As medidas descritivas centrais para estes dados são:
+%   \item $\bar{x} = \frac{1+1+2+4+32}{5} = \frac{40}{5}= 8$
+%   \item $M_d = 2$
+%   \end{itemize}
+% \end{exampleblock}
+% \end{frame}
 
 \subsection{Quantificando com percentis}
 
