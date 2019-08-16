@@ -34,6 +34,8 @@ round(mean(bp)); median(bp)
 bp2 <- bp; bp2[3] <- 19
 round(mean(bp2)) ; median(bp2)
 
+bp - round(mean(bp)) # desvios
+
 # plot(bp, ylim = (c(0, 200)), ylab = "BP", xlab = "")
 # plot(bp2, ylim = (c(0, 200)), ylab = "BP*", xlab = "")
 png("Aulas/Cap3/histograma-bp.png")
