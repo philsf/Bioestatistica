@@ -29,7 +29,7 @@ png("Aulas/Cap3/histograma-musculo.png")
 hist(musculo, xlab = "", ylab = "", main = "")
 dev.off()
 
-bp <- c(144, 146, 132, 155, 144, 151)
+bp <- c(144, 146, 139, 155, 144, 146)
 round(mean(bp)); median(bp)
-bp2 <- bp; bp2[3] <- 12
+bp2 <- bp; bp2[3] <- 19
 round(mean(bp2)) ; median(bp2)
