@@ -30,9 +30,9 @@ hist(musculo, xlab = "", ylab = "", main = "")
 dev.off()
 
 bp <- c(142, 144, 176, 203, 134, 191)
-sort(bp)
-bp2 <- bp
-bp2[1] <- 14
+mean(bp); median(bp)
+bp2 <- bp; bp2[1] <- 14
+round(mean(bp2)) ; median(bp2)
 
 plot(bp, ylim = (c(0, 200)), ylab = "BP", xlab = "")
 hist(bp, main = "BP")
