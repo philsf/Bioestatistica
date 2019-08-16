@@ -9,7 +9,7 @@ mean(bp2) ; median(bp2)
 
 D <- bp - round(mean(bp)) # desvios
 sum(D) # soma dos desvios
-MAD <- format.float(mean(abs(bp - mean(bp))), 0) # MAD
+MAD <- format.float(mean(abs(bp - mean(bp))), 1) # MAD
 format.float(var(bp), 1)
 format.float(sd(bp), 1)
 format.pct(RSD(bp), 0)
