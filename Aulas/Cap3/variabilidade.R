@@ -2,25 +2,25 @@ library(philsfmisc)
 RSD <- function(x) sd(x)/mean(x)
 
 ## dados
-bp <- c(144, 146, 139, 155, 144, 148)
-mean(bp); median(bp)
-bp2 <- bp; bp2[3] <- 13
-mean(bp2) ; median(bp2)
+colesterol <- c(144, 146, 139, 155, 144, 148)
+mean(colesterol); median(colesterol)
+colesterol2 <- colesterol; colesterol2[3] <- 13
+mean(colesterol2) ; median(colesterol2)
 
-D <- bp - round(mean(bp)) # desvios
+D <- colesterol - round(mean(colesterol)) # desvios
 sum(D) # soma dos desvios
-MAD <- format.float(mean(abs(bp - mean(bp))), 1) # MAD
-format.float(var(bp), 1)
-format.float(sd(bp), 1)
-format.pct(RSD(bp), 0)
+MAD <- format.float(mean(abs(colesterol - mean(colesterol))), 1) # MAD
+format.float(var(colesterol), 1)
+format.float(sd(colesterol), 1)
+format.pct(RSD(colesterol), 0)
 
-# plot(bp, ylim = (c(0, 200)), ylab = "BP", xlab = "")
-# plot(bp2, ylim = (c(0, 200)), ylab = "BP*", xlab = "")
-png("Aulas/Cap3/histograma-bp.png")
-hist(bp, main = "BP")
-abline(v=c(round(mean(bp)), median(bp)), lty = 2, lwd =2, col = c("blue", "red"))
+# plot(colesterol, ylim = (c(0, 200)), ylab = "colesterol", xlab = "")
+# plot(colesterol2, ylim = (c(0, 200)), ylab = "colesterol*", xlab = "")
+png("Aulas/Cap3/histograma-colesterol.png")
+hist(colesterol, main = "Colesterol")
+abline(v=c(round(mean(colesterol)), median(colesterol)), lty = 2, lwd =2, col = c("blue", "red"))
 dev.off()
-png("Aulas/Cap3/histograma-bp2.png")
-hist(bp2, main = "BP*")
-abline(v=c(mean(bp2), median(bp2)), lty = 2, lwd =2, col = c("blue", "red"))
+png("Aulas/Cap3/histograma-colesterol2.png")
+hist(colesterol2, main = "Colesterol*")
+abline(v=c(mean(colesterol2), median(colesterol2)), lty = 2, lwd =2, col = c("blue", "red"))
 dev.off()

@@ -434,11 +434,11 @@
   }
 \end{frame}
 
-\begin{frame}{\scriptsize Dados corretos vs dados com outlier}
+\begin{frame}{\scriptsize Efeito do outlier nas medidas centrais}
   \begin{columns}
     \begin{column}{5cm}
       \begin{center}
-        \includegraphics[width=\textwidth]{Cap3/histograma-bp}
+        \includegraphics[width=\textwidth]{Cap3/histograma-colesterol}
 
         \scriptsize
         \bigskip
@@ -448,7 +448,7 @@
     \end{column}
     \begin{column}{5cm}
       \begin{center}
-        \includegraphics[width=\textwidth]{Cap3/histograma-bp2}
+        \includegraphics[width=\textwidth]{Cap3/histograma-colesterol2}
 
         \scriptsize
         \bigskip
@@ -661,14 +661,14 @@
 \end{frame}
 
 \begin{frame}[fragile]{\scriptsize Dados}
-  \begin{exampleblock}{\scriptsize Colesterol (N = 6, média 146)}
+  \begin{exampleblock}{Colesterol (N = 6, média 146)}
     \begin{center}
     \tiny
 \begin{verbatim}
 144 146 139 155 144 148
 \end{verbatim}
     \bigskip
-    \includegraphics[height=.5\textheight]{Cap3/histograma-bp}
+    \includegraphics[height=.5\textheight]{Cap3/histograma-colesterol}
   \end{center}
 \end{exampleblock}
   % \begin{exampleblock}{\scriptsize Distribuição dos dados}
@@ -678,7 +678,7 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Desvios em relação à média}
-\begin{exampleblock}{Exemplo}
+\begin{exampleblock}{Colesterol}
     \scriptsize
   \begin{displaymath}
     \{144, 146, 139, 155, 144, 148\}
@@ -743,7 +743,7 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Soma dos desvios}
-  \begin{exampleblock}{Exemplo}
+  \begin{exampleblock}{Colesterol}
     \footnotesize
     Somando tudo:
     \begin{displaymath}
@@ -809,7 +809,7 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Desvio médio absoluto (MAD)}
-  \begin{exampleblock}{Exemplo}
+  \begin{exampleblock}{Colesterol}
     \footnotesize
   \begin{displaymath}
     \{144, 146, 139, 155, 144, 148\}, \bar{x} = 146
@@ -870,7 +870,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 \end{frame}
 
 \begin{frame}{\scriptsize Variância}
-  \begin{exampleblock}{Exemplo}
+  \begin{exampleblock}{Colesterol}
     \scriptsize
       \begin{displaymath}
     \{144, 146, 139, 155, 144, 148\}, \bar{x} = 146
@@ -897,10 +897,10 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
     \end{column}
   \end{columns}
   \end{exampleblock}
-  \begin{block}{No exemplo do paper}
-    \scriptsize
-    VAR = 18.14
-  \end{block}
+  % \begin{block}{No exemplo do paper}
+  %   \scriptsize
+  %   VAR = 18.14
+  % \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize Desvio Padrão}
@@ -930,7 +930,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 \end{frame}
 
 \begin{frame}{\scriptsize Desvio Padrão}
-  \begin{exampleblock}{Exemplo}
+  \begin{exampleblock}{Colesterol}
     \scriptsize
       \begin{displaymath}
         \{144, 146, 139, 155, 144, 148\}, \bar{x} = 146
@@ -944,10 +944,10 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
         s = \sqrt{s^2} = \sqrt{28.4} = 5.3
     \end{displaymath}
   \end{exampleblock}
-  \begin{block}{No exemplo do paper}
-    \footnotesize
-    s = 4.26
-  \end{block}
+  % \begin{block}{No exemplo do paper}
+  %   \footnotesize
+  %   s = 4.26
+  % \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize}
@@ -1002,9 +1002,9 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
   \begin{center}
     \includegraphics[width=\textwidth]{Cap3/RSD1}
   \end{center}
-  \begin{exampleblock}{Dos nossos dados}
+  \begin{exampleblock}{Colesterol}
     \footnotesize
-    CV = 4\%
+    $$\text{CV} = \frac{5.3}{146} = 4\%$$
   \end{exampleblock}
 \end{frame}
 
@@ -1019,7 +1019,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
     \footnotesize
     Usada para cálculos com dados de uma amostra.
   \end{block}
-  \begin{block}{Pense...}
+  \begin{block}{Pense...}<2>
     \footnotesize
       Você tem acesso a toda a população, ou apenas a uma amostra?
   \end{block}
@@ -1055,7 +1055,7 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
       \scriptsize
     \item \alert<2>{Média ($\bar{x}$)}
     \item Variância ($s^2$)
-    \item Percentis
+    \item Intervalo Interquartílico
     \item \alert<2>{Mediana}
     \end{enumerate}
   \end{block}
