@@ -571,10 +571,10 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Pense...}
-  \begin{exampleblock}{ICs dos exemplos}
+  \begin{exampleblock}{Dados dos exemplos}
     \footnotesize
     \begin{itemize}
-      \footnotesize
+      \tiny
     \item {\bf Ex. 5.1:} $\bar{x}$ = 123,4 e $s$ = 14,0 mmHg ($N=100$)
     \item {\bf Ex. 5.2:} $\bar{x}$ = 99,0 e $s$ = 15,97 mmHg ($N=5$)
     \end{itemize}
@@ -585,7 +585,7 @@
   \begin{itemize}
     \footnotesize
   \item SEM do exemplo 5.1 = 1,4
-  \item SEM do exemplo 5.2 = 6,3?
+  \item<2-> SEM do exemplo 5.2 = 6,3?
   \end{itemize}
   \end{block}
 \end{frame}
@@ -600,13 +600,17 @@
   \end{itemize}
   \end{block}
   \bigskip
+  \visible<2->{
   \begin{block}{Resposta}
     \footnotesize
-    Não! Pois N=5 não é grande!
+    {\bf Não!} \visible<3->{Pois N=5 não é grande!} \visible<4>{\hfill {\tiny E daí?}}
 
     \medskip
-    Isso faz com que o SEM do exemplo 5.2 seja muito maior (como vimos).
+    \visible<5->{
+    Isso faz com que a aproximação $t^{*} \approx 2$ não seja válida.
+    }
   \end{block}
+  }
   \begin{exampleblock}{Lembrete -- ICs dos exemplos}
     \footnotesize
     \begin{itemize}
@@ -621,20 +625,20 @@
   \begin{exampleblock}{Lembrete -- ICs dos exemplos}
     \footnotesize
     \begin{itemize}
-      \footnotesize
+      \tiny
     \item O IC do exemplo 5.1: 120,6 -- 126,2 mmHg
-    \item O IC do exemplo 5.2: \alert{79,2 -- 118,8 mmHg}
+    \item O IC do exemplo 5.2: \alert{\footnotesize 79,2 -- 118,8 mmHg}
     \end{itemize}
   \end{exampleblock}
   \begin{block}{No caso do exemplo 5.2}
     \footnotesize
     \begin{itemize}
-      \footnotesize
-    \item $\bar{x} = 99$ mmHg
-    \item O SEM proposto no slide anterior é $\approx$ 6 mmHg
-    \item A margem de erro seria {\bf 2} $\times $ 6 $\approx$ 12 mmHg
+      \tiny
+    \item {\bf $\bar{x}$ = 99 mmHg}, SEM $\approx$ 6 mmHg
+    \item A margem de erro seria {\footnotesize {\bf 2} $\times $ 6 $\approx$ 12 mmHg}
     \end{itemize}
-      $\Rightarrow$ O IC proposto seria \alert{87 -- 111 mmHg}
+    \medskip
+    $\Rightarrow$ O IC proposto seria \alert{87 -- 111 mmHg}
   \end{block}
   \begin{block}{Pense...}
     \footnotesize
@@ -646,20 +650,21 @@
   \begin{exampleblock}{Lembrete -- ICs dos exemplos}
     \footnotesize
     \begin{itemize}
-      \footnotesize
+      \tiny
     \item O IC do exemplo 5.1: 120,6 -- 126,2 mmHg
-    \item O IC do exemplo 5.2: \alert{79,2 -- 118,8 mmHg}
+    \item O IC do exemplo 5.2: \alert{\footnotesize 79,2 -- 118,8 mmHg}
     \end{itemize}
   \end{exampleblock}
   \begin{block}{No caso do exemplo 5.2}
     \footnotesize
     \begin{itemize}
-      \footnotesize
-    \item O SEM veio da ``fórmula''
+      \tiny
+    % \item O SEM veio da ``fórmula''
     \item Ambos SEM (5.1 e 5.2) estão corretos
-    \item O IC proposto seria \alert{87 -- 111 mmHg}
-    \item $t^{*} \approx$ 2 -- erro no 5.2
+    \item O IC proposto seria \alert{\footnotesize 87 -- 111 mmHg}
     \end{itemize}
+    \medskip
+    $t^{*} \approx$ 2 $\Rightarrow$ erro no 5.2
   \end{block}
   \begin{block}{Pense...}
     \footnotesize
