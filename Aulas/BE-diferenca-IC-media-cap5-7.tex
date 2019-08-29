@@ -244,6 +244,7 @@
     Quanto mais graus de liberdade, mais a distribuição $t$ se parece com a distribuição Normal ($Z$)
   \end{block}
   \begin{block}{Pense...}<2->
+    \footnotesize
     O que deve acontecer com \alert{menos} graus de liberdade?
   \end{block}
 \end{frame}
@@ -293,6 +294,7 @@
   \item $n = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Pense...}
+    \footnotesize
     Qual é a relação entre $n$ e o tamanho do IC?
 
     % \begin{displaymath}
@@ -314,18 +316,20 @@
   \item $n = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Observe que...}
+    \footnotesize
     \begin{itemize}
       \scriptsize
     \item $df = n - 1$
     \item Para $n$ grande, $t^{*} \rightarrow 1.960$
     \end{itemize}
+    \scriptsize
     {\em Por isso} usamos o valor aproximado $2$ no primeiro exemplo.
   \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize Na prática...}
   \begin{block}{Distribuição Normal - Z}
-    \small
+    \footnotesize
     {\em Gostaríamos} de poder usar sempre Z como \alert{modelo} para o formato dos nossos dados experimentais.
   \end{block}
   \begin{block}{Distribuição t de Student}
@@ -354,11 +358,13 @@
     {\bf O fator Y médio é diferente em mulheres grávidas e não grávidas?}
   \end{exampleblock}
   \begin{block}{Requisito}<2->
+    \footnotesize
     Pelas premissas do IC da média, você tem informações suficientes para calcular/interpretar cada um destes ICs?
   \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize Pense}
+    \footnotesize
   \begin{exampleblock}{Exercício 5.4}
     \footnotesize
     \begin{itemize}
@@ -497,10 +503,10 @@
 \begin{frame}{\scriptsize 2 grupos {\em for dummies} \textregistered}
   \begin{block}{Diferença entre 2 médias}
     \begin{itemize}
-      \footnotesize
     \item Comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença média $\bar{x_d} = \bar{x_2} - \bar{x_1}$
     \item Se $\bar{x_2}$ for maior que $\bar{x_1}$  $\Rightarrow$ diferença média é positiva
     \item Se $\bar{x_2}$ for menor que $\bar{x_1}$  $\Rightarrow$ a diferença média é negativa
+      \scriptsize
     \end{itemize}
   \end{block}
   \begin{block}{Intuição}
@@ -509,6 +515,7 @@
   \end{block}
   \begin{center}
     {\em Pense em \alert{saldo}}
+    \footnotesize
   \end{center}
 \end{frame}
 
@@ -520,10 +527,11 @@
   \item $d = x_2 - x _1$ (uma variável)
   \end{itemize}
   \begin{block}{Segunda alternativa (método da aula passada)}
-    \small
+    \footnotesize
     ``Explicar'' a ``relação'' entre a diferença $d$ e a referência ({\bf zero})
   \end{block}
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       d \sim 0
     \end{displaymath}
@@ -532,6 +540,7 @@
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{block}{Estratégia proposta}
+    \footnotesize
     Temos duas variáveis.
 
     \bigskip
@@ -542,6 +551,7 @@
     \end{center}
   \end{block}
   \begin{center}
+    \footnotesize
     O que falta?
   \end{center}
   \begin{block}{O que falta?}<2->
@@ -646,7 +656,6 @@
   \begin{exampleblock}{Bastidores: Exercício 5.4 (e 7.1)}
     \tiny
     \begin{itemize}
-      \footnotesize
     \item Média grávidas: $\bar{x_1} = 110$ unidades/ml
     \item Média não grávidas: $\bar{x_2} = 93$ unidades/ml
     \item Diferença entre as médias: $\bar{x_d} = \alert{17}$ unidades/ml
@@ -662,7 +671,7 @@
     {\bf [11.6, 22.4] unidades/ml}
   \end{exampleblock}
   \begin{center}
-    \small
+    \scriptsize
     {\em E o que isso significa?}
   \end{center}
 \end{frame}
@@ -673,16 +682,17 @@
   %   [11.6, 22.4] unidades/ml
   % \end{exampleblock}
   \begin{exampleblock}{Interpretação}
-    \footnotesize
     Estamos 95\% {\em confiantes} que a diferença \alert{real} entre os grupos está entre 11,6 e 22,4.
+    \scriptsize
   \end{exampleblock}
 
   \bigskip
   \begin{exampleblock}{Conclusão {(\em ``nossos dados indicam que...'')}}
-    \footnotesize
+    \small
     o (...) fator Y de uma (...) grávida é (...) 17 unidades/ml maior que uma (...) não grávida (variando entre 11,6 e 22,4 unidades/ml).
   \end{exampleblock}
   \begin{block}{Pense...}<2->
+    \scriptsize
     Preencha as lacunas acima.
   \end{block}
 \end{frame}
@@ -709,13 +719,14 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Grupos pareados}
+  \scriptsize
 Quando faz sentido parear indivíduos de dois grupos?
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item Mensurar o \alert{mesmo} individuo antes e depois do procedimento ({\em baseline} x intervenção)
   \item Recrutamento aos pares, quando o par tem a(o) mesma(o)
     \begin{itemize}
-      \scriptsize
+      \tiny
     \item idade/faixas etária
     \item região demográfica
     \item diagnóstico
@@ -727,7 +738,7 @@ Quando faz sentido parear indivíduos de dois grupos?
 
 \begin{frame}{\scriptsize Qual das estimativas é mais precisa?}
   \begin{exampleblock}{Exemplo 7.2}
-    \footnotesize
+    \scriptsize
     Ye e Grantham (1993) estudaram o mecanismo de absorção de fluido em cistos renais removidos de pacientes com doença renal policística.
     Incubaram os cistos em meio de cultura celular e mediram a diferença de peso em cada cisto (antes e depois da incubação).
 
