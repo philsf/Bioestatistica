@@ -185,7 +185,7 @@
   \end{block}
   \begin{block}{Nomenclatura}<2->
     \small
-    A {\em Normal Padrão} também é chamada de {\bf distribuição Z}.
+    A distribuição {\em Normal Padrão} também é chamada de {\bf distribuição Z}.
   \end{block}
 \end{frame}
 
@@ -222,10 +222,14 @@
     \footnotesize
   \item Student (pseudônimo de W. S. Gossett [1876-1937]\footnote{trabalhando
     para a cervejaria Guiness})
-  \item Distribuição {\bf t} ({\footnotesize baseada na distribuição Normal})
+    \bigskip
+  \item Distribuição {\bf t} ({\tiny baseada na distribuição Normal})
+    \bigskip
   \item Melhor se aproxima dos dados de {\em amostras pequenas}
-%  \item É semelhante à Normal padrão, mas tem variância maior
-  \item 3$^o$ parâmetro \alert{graus de liberdade}\footnote{df em inglês} {\footnotesize vinculado ao tamanho da amostra $n$}.
+    \bigskip
+ % \item Semelhante à Normal padrão (Z), mas tem variância maior
+ %    \bigskip
+  \item 3$^o$ parâmetro \alert{graus de liberdade}\footnote{df em inglês} {\tiny vinculado ao tamanho da amostra $n$}.
     % \begin{displaymath}
     %   gl = n-1
     % \end{displaymath}
@@ -239,11 +243,14 @@
   \item Reflete a maior variabilidade \alert{inerente} às amostras pequenas\footnote{graus de liberdade (df) $\approx$ $n$}
   \item Formato {\em depende} do tamanho da amostra ($n$) %\footnote{A distr. Normal depende apenas de $\mu$ e $\sigma$}
   \end{itemize}
+    \bigskip
   \begin{block}{Isto é}
     \footnotesize
-    Quanto mais graus de liberdade, mais a distribuição $t$ se parece com a distribuição Normal ($Z$)
+    Quanto mais graus de liberdade, mais a distribuição $t$ se parece com a distribuição Normal padrão ($Z$)
   \end{block}
+    \bigskip
   \begin{block}{Pense...}<2->
+    \footnotesize
     O que deve acontecer com \alert{menos} graus de liberdade?
   \end{block}
 \end{frame}
@@ -293,6 +300,7 @@
   \item $n = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Pense...}
+    \footnotesize
     Qual é a relação entre $n$ e o tamanho do IC?
 
     % \begin{displaymath}
@@ -314,29 +322,33 @@
   \item $n = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Observe que...}
+    \footnotesize
     \begin{itemize}
       \scriptsize
     \item $df = n - 1$
     \item Para $n$ grande, $t^{*} \rightarrow 1.960$
     \end{itemize}
+    \bigskip
+    \scriptsize
     {\em Por isso} usamos o valor aproximado $2$ no primeiro exemplo.
   \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize Na prática...}
   \begin{block}{Distribuição Normal - Z}
-    \small
+    \footnotesize
     {\em Gostaríamos} de poder usar sempre Z como \alert{modelo} para o formato dos nossos dados experimentais.
   \end{block}
   \begin{block}{Distribuição t de Student}
     \begin{itemize}
       \footnotesize
     \item t é uma aproximação da Normal (Z)
-    \item apropriada para $n$ pequeno
+      \medskip
+    \item idealizada para $n$ pequeno
+      \medskip
     \item Com $n$ grande (df $\ge 30$) ela {\em se confunde} com Z.
     \end{itemize}
   \end{block}
-
 \end{frame}
 
 \begin{frame}[label=exercicio5.4]{\scriptsize Exercício 4 (cap 5)}
@@ -354,11 +366,13 @@
     {\bf O fator Y médio é diferente em mulheres grávidas e não grávidas?}
   \end{exampleblock}
   \begin{block}{Requisito}<2->
+    \footnotesize
     Pelas premissas do IC da média, você tem informações suficientes para calcular/interpretar cada um destes ICs?
   \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize Pense}
+    \footnotesize
   \begin{exampleblock}{Exercício 5.4}
     \footnotesize
     \begin{itemize}
@@ -367,12 +381,14 @@
     \item Grávidas: [105.4, 114.6]
     \end{itemize}
   \end{exampleblock}
+  \bigskip
   Observações:
   \begin{itemize}
     \footnotesize
-  \item {\small O SEM informa {\em quão bem você estimou a média} de cada grupo}
-  \item {\small Os ICs não tem sobreposição $\Rightarrow$ 2 populações diferentes}
+  \item O SEM informa {\em quão bem você estimou a média} de cada grupo
+  \item Os ICs não tem sobreposição $\Rightarrow$ 2 populações diferentes
   \end{itemize}
+  \bigskip
   \begin{block}{Pense...}
     \begin{center}
       Como comparar estes dois grupos?
@@ -404,21 +420,21 @@
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
     \footnotesize
-  \item $x_1$ Hormônio não grávidas
-  \item $x_2$ Hormônio grávidas (até 3 meses)
+  \item $x_C$ Hormônio não grávidas
+  \item $x_T$ Hormônio grávidas (até 3 meses)
   \item Duas variáveis explícitas
   \end{itemize}
   \begin{block}{Primeira alternativa}
     \small
     \begin{enumerate}
       \footnotesize
-    \item``Explicar'' a ``relação'' entre o hormônio $x_2$ e o hormônio $x_1$% como ``referência''
-    \item Comparar $x_2$ (grupo de interesse) com $x_1$ (referência)%\footnote{valor médio!}
+    \item``Explicar'' a ``relação'' entre o hormônio $x_T$ e o hormônio $x_C$% como ``referência''
+    \item Comparar $x_T$ (grupo de teste) com $x_C$ (referência)%\footnote{valor médio!}
     \end{enumerate}
   \end{block}
   \begin{block}{Esta relação pode ser expressa como}
     \begin{displaymath}
-      x_2 \sim x _1
+      x_T \sim x _C
     \end{displaymath}
   \end{block}
 \end{frame}
@@ -448,7 +464,7 @@
   \end{block}
   \begin{block}{Mais precisamente}
     \begin{displaymath}
-      \text{horm. grávid.} = \text{horm. não grávid.} + \alert{\text{Erro}_1 + \text{Erro}_2}
+      \text{horm. grávid.} = \text{horm. não grávid.} + \alert{\text{Erro}_C + \text{Erro}_T}
     \end{displaymath}
   \end{block}
 \end{frame}
@@ -474,7 +490,7 @@
     \end{itemize}
   \end{exampleblock}
   \begin{block}{Difícil}
-    Calcular os dois ICs ($x_1$ e $x_2$), e compará-los diretamente
+    Calcular os dois ICs ($x_C$ e $x_T$), e compará-los diretamente
   \end{block}
   \begin{block}{Moleza}
     \only<1>{Calcular o IC da diferença ($x_d$) usando o método da aula passada}
@@ -497,33 +513,38 @@
 \begin{frame}{\scriptsize 2 grupos {\em for dummies} \textregistered}
   \begin{block}{Diferença entre 2 médias}
     \begin{itemize}
-      \footnotesize
-    \item Comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença média $\bar{x_d} = \bar{x_2} - \bar{x_1}$
-    \item Se $\bar{x_2}$ for maior que $\bar{x_1}$  $\Rightarrow$ diferença média é positiva
-    \item Se $\bar{x_2}$ for menor que $\bar{x_1}$  $\Rightarrow$ a diferença média é negativa
+      \scriptsize
+    \item Comparar duas médias $\bar{x_C}$ e $\bar{x_T}$, consideramos a diferença média $\bar{x_d} = \bar{x_T} - \bar{x_C}$
+    \item<2-> Se $\bar{x_T}$ for maior que $\bar{x_C}$  $\Rightarrow$ diferença média é positiva
+    \item<2-> Se $\bar{x_T}$ for menor que $\bar{x_C}$  $\Rightarrow$ a diferença média é negativa
     \end{itemize}
   \end{block}
-  \begin{block}{Intuição}
-    Raciocínio: se as médias forem aproximadamente iguais, {\bf a
-    diferença média ($\bar{x_d}$) será próxima de zero}
+  \begin{block}{Intuição}<3->
+    Raciocínio: se as médias forem aproximadamente iguais...
+
+    \bigskip
+    ... {\bf a diferença média ($\bar{x_d}$) será próxima de zero}
   \end{block}
+  \bigskip
   \begin{center}
-    {\em Pense em \alert{saldo}}
+    \footnotesize
+    {\em Pense em \alert{\bf saldo}}
   \end{center}
 \end{frame}
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
     \footnotesize
-  \item $x_1$ Hormônio não grávidas
-  \item $x_2$ Hormônio grávidas (até 3 meses)
-  \item $d = x_2 - x _1$ (uma variável)
+  \item $x_C$ Hormônio não grávidas
+  \item $x_T$ Hormônio grávidas (até 3 meses)
+  \item $d = x_T - x _C$ (uma variável)
   \end{itemize}
   \begin{block}{Segunda alternativa (método da aula passada)}
-    \small
+    \footnotesize
     ``Explicar'' a ``relação'' entre a diferença $d$ e a referência ({\bf zero})
   \end{block}
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       d \sim 0
     \end{displaymath}
@@ -532,6 +553,7 @@
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{block}{Estratégia proposta}
+    \footnotesize
     Temos duas variáveis.
 
     \bigskip
@@ -542,6 +564,7 @@
     \end{center}
   \end{block}
   \begin{center}
+    \footnotesize
     O que falta?
   \end{center}
   \begin{block}{O que falta?}<2->
@@ -576,7 +599,7 @@
   \end{itemize}
   \begin{block}{}
       \begin{displaymath}
-    SE = \sqrt{SEM_1^2 + SEM_2^2}
+    SEM_d = \sqrt{(SEM_C)^2 + (SEM_T)^2}
   \end{displaymath}
   \end{block}
 \end{frame}
@@ -612,8 +635,8 @@
     \footnotesize
       \begin{itemize}
         \footnotesize
-      \item {\scriptsize Média grávidas: $\bar{x_1} = 110$ unidades/ml}
-      \item {\scriptsize Média não grávidas: $\bar{x_2} = 93$ unidades/ml}
+      \item {\scriptsize Média grávidas: $\bar{x_C} = 110$ unidades/ml}
+      \item {\scriptsize Média não grávidas: $\bar{x_T} = 93$ unidades/ml}
       \item Diferença entre as médias: $\bar{x_d} = \alert{17}$ unidades/ml
       \end{itemize}
     \end{exampleblock}
@@ -628,7 +651,7 @@
     \footnotesize
       \begin{itemize}
         \footnotesize
-      \item {\scriptsize $n_1$ = 100, $n_2$ = 100}
+      \item {\scriptsize $n_C$ = 100, $n_T$ = 100}
       \item df = (100 -1) + (100 - 1) = \alert{198}
       \end{itemize}
     \end{exampleblock}
@@ -646,12 +669,11 @@
   \begin{exampleblock}{Bastidores: Exercício 5.4 (e 7.1)}
     \tiny
     \begin{itemize}
-      \footnotesize
-    \item Média grávidas: $\bar{x_1} = 110$ unidades/ml
-    \item Média não grávidas: $\bar{x_2} = 93$ unidades/ml
+    \item Média grávidas: $\bar{x_C} = 110$ unidades/ml
+    \item Média não grávidas: $\bar{x_T} = 93$ unidades/ml
     \item Diferença entre as médias: $\bar{x_d} = \alert{17}$ unidades/ml
     \item SEM da diferença: \alert{2.75} unidades/ml
-    \item $n_1$ = 100, $n_2$ = 100
+    \item $n_C$ = 100, $n_T$ = 100
     \item df = (100 -1) + (100 - 1) = \alert{198}
     \item $t^{*} = \alert{1.97}$ {\tiny(valor crítico tabelado)}
     \end{itemize}
@@ -662,27 +684,28 @@
     {\bf [11.6, 22.4] unidades/ml}
   \end{exampleblock}
   \begin{center}
-    \small
+    \scriptsize
     {\em E o que isso significa?}
   \end{center}
 \end{frame}
 
-\begin{frame}{\scriptsize Solução}
+\begin{frame}{\scriptsize Solução do exercício 5.4/7.1}
   %   \begin{exampleblock}{IC}
   %   \centering
   %   [11.6, 22.4] unidades/ml
   % \end{exampleblock}
   \begin{exampleblock}{Interpretação}
-    \footnotesize
-    Estamos 95\% {\em confiantes} que a diferença \alert{real} entre os grupos está entre 11,6 e 22,4.
+    \scriptsize
+    Estamos 95\% {\em confiantes} que a diferença \alert{real} entre os grupos está entre 11.6 e 22.4.
   \end{exampleblock}
 
   \bigskip
   \begin{exampleblock}{Conclusão {(\em ``nossos dados indicam que...'')}}
-    \footnotesize
+    \small
     o (...) fator Y de uma (...) grávida é (...) 17 unidades/ml maior que uma (...) não grávida (variando entre 11,6 e 22,4 unidades/ml).
   \end{exampleblock}
   \begin{block}{Pense...}<2->
+    \scriptsize
     Preencha as lacunas acima.
   \end{block}
 \end{frame}
@@ -709,25 +732,30 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Grupos pareados}
+  \scriptsize
 Quando faz sentido parear indivíduos de dois grupos?
+  \bigskip
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item Mensurar o \alert{mesmo} individuo antes e depois do procedimento ({\em baseline} x intervenção)
+    \medskip
   \item Recrutamento aos pares, quando o par tem a(o) mesma(o)
     \begin{itemize}
-      \scriptsize
+      \tiny
     \item idade/faixas etária
     \item região demográfica
     \item diagnóstico
     \end{itemize}
+    \medskip
   \item irmãos, pai/filho
+    \medskip
   \item lateralidade (tratamento = lado E, controle = lado D)
   \end{itemize}
 \end{frame}
 
 \begin{frame}{\scriptsize Qual das estimativas é mais precisa?}
   \begin{exampleblock}{Exemplo 7.2}
-    \footnotesize
+    \scriptsize
     Ye e Grantham (1993) estudaram o mecanismo de absorção de fluido em cistos renais removidos de pacientes com doença renal policística.
     Incubaram os cistos em meio de cultura celular e mediram a diferença de peso em cada cisto (antes e depois da incubação).
 
@@ -738,7 +766,7 @@ Quando faz sentido parear indivíduos de dois grupos?
         \footnotesize
       \item<2,4> peso médio (todos, antes) = 6.51g (SEM 2.26g)
       \item<2,4> peso médio (todos, depois) = 7.02g (SEM 2.40g)
-      \item<2,4> IC 95\% [-6.48, 7.50]
+      \item<2,4> IC 95\% da diferença [-6.48, 7.50]
       \end{enumerate}
     \end{exampleblock}
     \begin{exampleblock}{Pareado}
@@ -747,7 +775,7 @@ Quando faz sentido parear indivíduos de dois grupos?
         \footnotesize
       \item<3,4> ganho em {\bf cada} cisto $\Rightarrow$ depois - antes
       \item<3,4> ganho médio dos cistos = 0.50g (SEM 0.23g).
-      \item<3,4> IC 95\% [-0.03, 1.04]
+      \item<3,4> IC 95\% da diferença [-0.03, 1.04]
       \end{enumerate}
     \end{exampleblock}
   \end{exampleblock}
