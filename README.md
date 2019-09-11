@@ -54,7 +54,15 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [naopar-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38_4em1.pdf
 [projeto2019]: https://github.com/philsf/Bioestatistica/projects/5
 
-## Exercícios selecionados por aula
+## Listas de exercícios
+
+Após cada aula você deve ler as seções do livro texto determinadas.
+Para fixação dos conceitos, foram selecionados alguns exercícios de cada capítulo, de acordo com os tópicos das aulas.
+Esses exercícios foram selecionados para a prática na interpretação de resultados e análises, bem como seleção de métodos apropriados para cada tipo de problema. 
+
+Esses exercícios tem respostas no final do livro texto.
+É muito importante que você se esforce nesta fixação dos conteúdos - isso servirá como preparação para as avaliações e te auxiliará em seu projeto de mestrado.
+Não deixe de tirar suas dúvidas comigo, eu estou aqui para isso!
 
 Os exercícios foram incorporados na plataforma Google Sala de Aula, de acordo com os Módulos 1, 2 e 3.
 
