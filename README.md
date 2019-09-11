@@ -6,6 +6,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 ## Planejamento de aulas de conteúdo
 
+[Planejamento][projeto2019]
+
 1. Introdução ([PDF][Intro-pdf], [Handout][Intro-handout]) (cap 1)
 2. IC de uma proporção ([PDF][IC-prop-pdf], [Handout][IC-prop-handout]) (cap 2)
 3. Variabilidade ([PDF][Var-pdf], [Handout][Var-handout]) (cap 3)
@@ -50,6 +52,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [anova-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30_4em1.pdf
 [naopar-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
 [naopar-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38_4em1.pdf
+[projeto2019]: https://github.com/philsf/Bioestatistica/projects/5
 
 ## Exercícios selecionados por aula
 
