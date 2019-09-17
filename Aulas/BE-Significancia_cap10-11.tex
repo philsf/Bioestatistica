@@ -46,7 +46,7 @@
 {Significância e Poder}
 
 \subtitle
- {Testes de Hipóteses e o p-valor} % (optional)
+ {Testes de Hipóteses, cálculo amostral e p-valor} % (optional)
 
 \author%[] % (optional, use only with lots of authors)
 {Felipe Figueiredo}% \and S.~Another\inst{2}}
@@ -206,56 +206,21 @@
 \hfill {\small Dante Alighieri, 1320}
 \end{frame}
 
-\begin{frame}{\scriptsize }
+\begin{frame}[label=mensagem]{\scriptsize Moral da história}
   \begin{center}
-    \includegraphics[width=.9\textwidth]{Cap10-11/its-time}
+    Sempre que mensuramos algo... observamos diferenças
 
-    \vfill
-    {\footnotesize \em Laaaaadies aaaaand gentlemen...}
+    \bigskip
+    \bigskip
+    \bigskip
+    \bigskip
+    Estas são {\bf devidas ao efeito estudado}?
+
+    \bigskip
+    Ou são causadas pela variabilidade,
+
+    erros metrológicos, etc?
   \end{center}
-\end{frame}
-
-\begin{frame}{\scriptsize Hipóteses científicas}
-  \begin{itemize}
-    \footnotesize
-  \item Podemos tomar decisões baseado nos dados de um experimento
-    (amostra).
-    \medskip
-  \item Para isto, precisamos de um critério sistemático e rigoroso
-    que possa aferir o quanto os dados suportam esta decisão.
-    \medskip
-  \item Usando os conceitos de probabilidades, poderemos ainda
-    calcular a probabilidade de que esta decisão esteja errada.
-  \end{itemize}
-  \begin{block}{}
-    \scriptsize
-    {\bf Hipóteses devem ser falseáveis, portanto formuladas como afirmações}.
-  \end{block}
-\end{frame}
-
-\begin{frame}{\scriptsize Exemplo 1}
-  \begin{exampleblock}{Exemplo 1}
-    \scriptsize
-    Um neurologista está testando o efeito de uma droga no tempo de
-    resposta de um certo estímulo neurológico.
-    Para isto, ele injeta uma dose da droga em 100 ratos, cria
-    os estímulos neurológicos e observa o tempo de resposta em cada
-    animal.
-
-    \medskip
-    O neurologista sabe que o tempo de resposta médio de ratos que não
-    receberam a droga é de 1.2 segundos.
-
-    \medskip
-    O tempo de resposta médio dos ratos injetados foi de
-    1.05 segundos, com desvio padrão amostral de
-    0.5 segundos.
-  \end{exampleblock}
-  \begin{block}{}
-    \scriptsize
-    Você acha que a droga tem efeito no tempo de resposta do estímulo?
-  \end{block}
-  \hfill {\scriptsize Fonte: Khan Academy}
 \end{frame}
 
 \begin{frame}[label=exemplo1]{\scriptsize Exemplo 1}
@@ -285,7 +250,7 @@
 
 \begin{frame}{\scriptsize Exemplo 1}
   \begin{exampleblock}{Exemplo 1}
-    \scriptsize
+    \tiny
     Um neurologista está testando o efeito de uma droga no tempo de
     resposta de um certo estímulo neurológico.
     Para isto, ele injeta uma dose da droga em \alert{100} ratos, cria
@@ -310,7 +275,7 @@
 
 \begin{frame}{\scriptsize Análise Inferencial}
   \begin{exampleblock}{Exemplo 1}
-    \scriptsize
+    \tiny
     Um neurologista está testando o efeito de uma droga no tempo de
     resposta de um certo estímulo neurológico.
 
@@ -338,7 +303,7 @@
 
 \begin{frame}{\scriptsize Teste de Significância}
   \begin{exampleblock}{Exemplo 1}
-    \footnotesize
+    \tiny
     Um neurologista está testando o efeito de uma droga no tempo de
     resposta de um certo estímulo neurológico.
 
@@ -363,13 +328,55 @@
   % \hfill{\scriptsize calculado em \url{https://www.graphpad.com/quickcalcs/oneSampleT2/}}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\scriptsize }
+  \begin{center}
+    \includegraphics[width=.9\textwidth]{Cap10-11/its-time}
+
+    \vfill
+    {\footnotesize \em Laaaaadies aaaaand gentlemen...}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Hipóteses científicas}
+  \begin{itemize}
+    \footnotesize
+  \item Podemos tomar decisões baseado nos dados de um experimento
+    (amostra).
+    \medskip
+  \item Para isto, precisamos de um critério sistemático e rigoroso
+    que possa aferir o quanto os dados suportam esta decisão.
+    \medskip
+  \item Usando os conceitos de probabilidades, poderemos ainda
+    calcular a probabilidade de que esta decisão esteja errada.
+  \end{itemize}
+  \begin{block}{}
+    \scriptsize
+    {\bf Hipóteses devem ser falseáveis, portanto formuladas como afirmações}.
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Atenção}
+  \begin{center}
+    Hipóteses estatísticas podem ser verdadeiras ou falsas...
+
+    \bigskip
+    ... não existe ``mais ou menos'' significativo!
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Não existe ``mais ou menos'' significativo...}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap10-11/xkcd-p_values}
 
     \scriptsize
     \vfill
     \hfill Fonte: \url{https://xkcd.com/1478/}
+  \end{center}
+\end{frame}
+
+\begin{frame}[label=analogia-erros]{\scriptsize ... assim como não existe ``mais ou menos'' grávido!}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap10-11/Type-I-and-II-errors}
   \end{center}
 \end{frame}
 
@@ -388,9 +395,34 @@
   \end{block}
 \end{frame}
 
+\begin{frame}{\scriptsize Exemplo 1}
+  \begin{exampleblock}{Exemplo 1}
+    \tiny
+    Um neurologista está testando o efeito de uma droga no tempo de
+    resposta de um certo estímulo neurológico.
+    Para isto, ele injeta uma dose da droga em 100 ratos, cria
+    os estímulos neurológicos e observa o tempo de resposta em cada
+    animal.
+
+    \medskip
+    O neurologista sabe que o tempo de resposta médio de ratos que não
+    receberam a droga é de 1.2 segundos.
+
+    \medskip
+    O tempo de resposta médio dos ratos injetados foi de
+    1.05 segundos, com desvio padrão amostral de
+    0.5 segundos.
+  \end{exampleblock}
+  \begin{block}{}
+    \scriptsize
+    Você acha que a droga tem efeito no tempo de resposta do estímulo?
+  \end{block}
+  \hfill {\scriptsize Fonte: Khan Academy}
+\end{frame}
+
 \begin{frame}{\scriptsize Pergunta}
   \begin{exampleblock}{Exemplo 1}
-    \footnotesize
+    \tiny
     Um neurologista está testando o efeito de uma droga no tempo de
     resposta de um certo estímulo neurológico.
 
@@ -418,21 +450,38 @@
     \footnotesize
     Uma hipótese estatística deve ser testável frente a dados obtidos de um experimento.
   \end{block}
-  \begin{exampleblock}{Exemplo 1}
-    \footnotesize
-    O tempo de resposta dos ratos que receberam a droga é menor que 1.2s.
-  \end{exampleblock}
-  \begin{exampleblock}{{\footnotesize Exemplo}}
+  \bigskip
+  \begin{exampleblock}{Pergunta}
     \scriptsize
-    Um jornalista alega que a maior parte dos motoristas atravessa o
-    sinal vermelho.
+    A droga tem efeito no tempo de resposta do estímulo?
   \end{exampleblock}
-  \begin{exampleblock}{{\footnotesize Exemplo}}
+  \bigskip
+  \begin{exampleblock}{Hipótese}
     \scriptsize
-    Pesquisadores afirmam que a temperatura corporal média de adultos
-    sadios não ultrapassa 37$^o$C.
+    A droga influencia ({\tiny altera/afeta}) o tempo de resposta do estímulo.
   \end{exampleblock}
 \end{frame}
+
+% \begin{frame}{\scriptsize Identificando hipóteses}
+%   \begin{block}{}
+%     \footnotesize
+%     Uma hipótese estatística deve ser testável frente a dados obtidos de um experimento.
+%   \end{block}
+%   \begin{exampleblock}{Exemplo 1}
+%     \footnotesize
+%     O tempo de resposta dos ratos que receberam a droga é menor que 1.2s.
+%   \end{exampleblock}
+%   \begin{exampleblock}{{\footnotesize Exemplo}}
+%     \scriptsize
+%     Um jornalista alega que a maior parte dos motoristas atravessa o
+%     sinal vermelho.
+%   \end{exampleblock}
+%   \begin{exampleblock}{{\footnotesize Exemplo}}
+%     \scriptsize
+%     Pesquisadores afirmam que a temperatura corporal média de adultos
+%     sadios não ultrapassa 37$^o$C.
+%   \end{exampleblock}
+% \end{frame}
 
 \begin{frame}{\scriptsize Identificando hipóteses}
   \begin{block}{1 teste = 2 hipóteses}
@@ -485,7 +534,7 @@
 
 \begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{exampleblock}{Exemplo 1}
-    \scriptsize
+    \tiny
     Um neurologista está testando o efeito de uma droga no tempo de
     resposta de um certo estímulo neurológico.
 
@@ -504,15 +553,17 @@
     \begin{displaymath}
       \text{variável dependente} \sim \text{variável independente}
     \end{displaymath}
+    \alert{
     \begin{displaymath}
-      \text{tempo de resposta} \sim \text{ratos injetados com a droga}
+      \text{tempo de resposta} \sim \text{ratos (grupo)}
     \end{displaymath}
+    }
   \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize Quais são as hipóteses estatísticas?}
   \begin{exampleblock}{Exemplo 1}
-    \scriptsize
+    \tiny
     Um neurologista está testando o efeito de uma droga no tempo de
     resposta de um certo estímulo neurológico.
 
@@ -536,61 +587,61 @@
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{\scriptsize Identificando hipóteses}
-  \begin{exampleblock}{Exemplo}
-    \footnotesize
-    Formulação verbal:\\
-    A proporção de motoristas que admitem atravessar o sinal vermelho
-    é maior que 50\%.\\
-    \bigskip
-    Formulação matemática:\\
-    \begin{displaymath}
-      H_0: p=0.5
-    \end{displaymath}
-    \begin{displaymath}
-      H_1: p>0.5
-    \end{displaymath}
-  \end{exampleblock}
-\end{frame}
+% \begin{frame}{\scriptsize Identificando hipóteses}
+%   \begin{exampleblock}{Exemplo}
+%     \footnotesize
+%     Formulação verbal:\\
+%     A proporção de motoristas que admitem atravessar o sinal vermelho
+%     é maior que 50\%.\\
+%     \bigskip
+%     Formulação matemática:\\
+%     \begin{displaymath}
+%       H_0: p=0.5
+%     \end{displaymath}
+%     \begin{displaymath}
+%       H_1: p>0.5
+%     \end{displaymath}
+%   \end{exampleblock}
+% \end{frame}
 
-\begin{frame}{\scriptsize Identificando hipóteses}
-  \begin{exampleblock}{Exemplo}
-    \footnotesize
-    Formulação verbal:\\
-    A altura média de jogadores profissionais de basquete é de no
-    máximo 2.20m.\\
-    \bigskip
-    Formulação matemática:\\
-    \begin{displaymath}
-      H_0: \mu = 2.20
-    \end{displaymath}
-    \begin{displaymath}
-      H_1: \mu < 2.20
-    \end{displaymath}
-  \end{exampleblock}
-\end{frame}
+% \begin{frame}{\scriptsize Identificando hipóteses}
+%   \begin{exampleblock}{Exemplo}
+%     \footnotesize
+%     Formulação verbal:\\
+%     A altura média de jogadores profissionais de basquete é de no
+%     máximo 2.20m.\\
+%     \bigskip
+%     Formulação matemática:\\
+%     \begin{displaymath}
+%       H_0: \mu = 2.20
+%     \end{displaymath}
+%     \begin{displaymath}
+%       H_1: \mu < 2.20
+%     \end{displaymath}
+%   \end{exampleblock}
+% \end{frame}
 
-\begin{frame}{\scriptsize Identificando hipóteses}
-  \begin{exampleblock}{Exemplo}
-    \footnotesize
-    Formulação verbal:\\
-    A dose média contida em um comprimido de paracetamol é de 750mg.\\
-    \bigskip
-    Formulação matemática:\\
-    \only<1>{\begin{displaymath}
-      H_0: \mu = 750
-    \end{displaymath}}
-    \only<2>{\alert{\begin{displaymath}
-      H_0: \mu = 750
-    \end{displaymath}}}
-    \begin{displaymath}
-      H_1: \mu \ne 750
-    \end{displaymath}
-  \end{exampleblock}
-  \begin{center}
-      \uncover<2->{\includegraphics[height=2cm]{Cap10-11/Jackie-Chan-WTF}}
-  \end{center}
-\end{frame}
+% \begin{frame}{\scriptsize Identificando hipóteses}
+%   \begin{exampleblock}{Exemplo}
+%     \footnotesize
+%     Formulação verbal:\\
+%     A dose média contida em um comprimido de paracetamol é de 750mg.\\
+%     \bigskip
+%     Formulação matemática:\\
+%     \only<1>{\begin{displaymath}
+%       H_0: \mu = 750
+%     \end{displaymath}}
+%     \only<2>{\alert{\begin{displaymath}
+%       H_0: \mu = 750
+%     \end{displaymath}}}
+%     \begin{displaymath}
+%       H_1: \mu \ne 750
+%     \end{displaymath}
+%   \end{exampleblock}
+%   \begin{center}
+%       \uncover<2->{\includegraphics[height=2cm]{Cap10-11/Jackie-Chan-WTF}}
+%   \end{center}
+% \end{frame}
 
 \begin{frame}{\scriptsize Identificando a região crítica}
   \footnotesize
@@ -690,11 +741,9 @@
       \end{exampleblock}
     \end{column}
     \begin{column}{5cm}
-      \visible<2>{
-        \begin{exampleblock}{\scriptsize Efeito grande}
-          \centering
-          \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var100}
-        }
+      \begin{exampleblock}{\scriptsize Efeito grande}
+        \centering
+        \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var100}
       \end{exampleblock}
     \end{column}
   \end{columns}
@@ -730,15 +779,13 @@
     \begin{column}{5cm}
       \begin{exampleblock}{\scriptsize Muita variabilidade}
         \centering
-        \visible<1->{
-          \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var100}}
+        \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var100}
       \end{exampleblock}
     \end{column}
     \begin{column}{5cm}
-      \visible<2>{
-        \begin{exampleblock}{\scriptsize Menos variabilidade}
-          \centering
-          \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var085}}
+      \begin{exampleblock}{\scriptsize Menos variabilidade}
+        \centering
+        \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var085}
       \end{exampleblock}
     \end{column}
   \end{columns}
@@ -760,15 +807,13 @@
     \begin{column}{5cm}
       \begin{exampleblock}{\scriptsize Muita variabilidade}
         \centering
-        \visible<1->{
-          \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var100}}
-        \end{exampleblock}
-      \end{column}
-      \begin{column}{5cm}
-      \visible<1->{
-        \begin{exampleblock}{\scriptsize Pouca variabilidade}
-          \centering
-          \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var050}}
+        \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var100}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{exampleblock}{\scriptsize Pouca variabilidade}
+        \centering
+        \includegraphics[width=\textwidth]{Cap10-11/analogia-var-poder-var050}
       \end{exampleblock}
     \end{column}
   \end{columns}
@@ -784,6 +829,8 @@
   \end{center}
 \end{frame}
 
+\againframe{mensagem}
+
 \begin{frame}{\scriptsize }
   \begin{itemize}
     \footnotesize
@@ -796,7 +843,7 @@
       \scriptsize
     \item<3-> da variabilidade presente \visible<4>{$(s)$ \hfill({\tiny aula 3})}
       \smallskip
-    \item<3-> do tamanho do efeito \visible<4>{$(\bar{d})$ \hfill({\tiny aula 5})}
+    \item<3-> do tamanho do efeito relevante \visible<4>{$(d)$ \hfill({\tiny aula 5})}
       \smallskip
     \item<3-> do tamanho do estudo \visible<4>{$(N)$}
     \end{itemize}
@@ -804,7 +851,7 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Na prática...}
-    \begin{block}{}
+    \begin{block}{\scriptsize Análise de poder / cálculo amostral}
     \scriptsize
     Para que o estudo seja capaz de detectar o efeito desejado
     \medskip
@@ -822,30 +869,40 @@
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}[label=poder-analogia]{\scriptsize Tipos de erros em testes de hipóteses}
-  \begin{center}
-    \includegraphics[width=.8\textwidth]{Cap10-11/tab15_1-falses_diag}
+\begin{frame}{\scriptsize Requisitos do cálculo amostral}
+  \begin{block}{Diferença em...}
+  \begin{block}{\scriptsize Desfecho qualitativo}
+    \begin{itemize}
+      \footnotesize
+    \item Proporção na população
 
-    \begin{block}{\scriptsize Lab}
-      \tiny
-      Se o paciente realmente tem a doença, qual é a chance do teste diagnóstico retornar corretamente um resultado positivo?
-      {\bf A resposta é a sensibilidade}.
-      Se o teste pode detectar várias doenças, a sensibilidade depende de \alert{qual doença} está sendo investigada.
-    \end{block}
-    \begin{block}{\scriptsize Stats}<2->
-      \tiny
-      Se realmente existe uma diferença ($\Delta$) entre as médias das populações qual é a chance que a análise de uma amostragem aleatória ser capaz de diferença estatística?
-      {\bf A resposta é o poder}.
-      O poder depende do \alert{tamanho do efeito} ($\Delta$) presumido.
-    \end{block}
-    \bigskip
-    \visible<2->{
-    \includegraphics[width=.8\textwidth]{Cap10-11/tab15_2-falses_stat}
-    }
-  \end{center}
+      {\tiny ex. $P = 80\%$}
+    \item Tamanho do efeito relevante
 
-  \vfill
-  \hfill \tiny Cap 15
+      {\tiny diminuir de 80\% para 70\% \hfill $d=10\%$}
+    \end{itemize}
+    % \begin{displaymath}
+    %   n = 293.1513
+    % \end{displaymath}
+  \end{block}
+  \begin{block}{\scriptsize Desfecho quantitativo}
+    \begin{itemize}
+      \footnotesize
+    \item Média da população
+
+      {\tiny $\mu = 1.2$ segundos}
+    \item Variabilidade da população
+
+      {\tiny $\sigma = 0.3$ segundos}
+    \item Tamanho do efeito relevante
+
+      {\tiny diminuir de 1.2 para 1.1 segundos \hfill $d = 0.1$ segundos}
+    \end{itemize}
+    % \begin{displaymath}
+    %   n = 142.2466
+    % \end{displaymath}
+  \end{block}
+\end{block}
 \end{frame}
 
 \subsection[Significância]{Significância Estatística}
@@ -899,7 +956,9 @@
     (ex., muita variabilidade, amostras pequenas, etc.).
 
     \bigskip
-    {\bf Isso} é o erro tipo I. Trabalhamos para que isso seja raro (não mais que 5\% das vezes).
+    {\bf Isso} é o erro tipo I.
+    \tiny
+    Trabalhamos para que isso seja raro (não mais que 5\% das vezes).
   \end{block}
 \end{frame}
 
@@ -921,7 +980,31 @@
 %   \end{itemize}
 % \end{frame}
 
-\againframe{poder-analogia}
+\begin{frame}{\scriptsize Tipos de erros em testes de hipóteses}
+  \begin{center}
+    \includegraphics[width=.8\textwidth]{Cap10-11/tab15_1-falses_diag}
+
+    \begin{block}{\scriptsize Lab}
+      \tiny
+      Se o paciente realmente tem a doença, qual é a chance do teste diagnóstico retornar corretamente um resultado positivo?
+      {\bf A resposta é a sensibilidade}.
+      Se o teste pode detectar várias doenças, a sensibilidade depende de \alert{qual doença} está sendo investigada.
+    \end{block}
+    \begin{block}{\scriptsize Stats}<2->
+      \tiny
+      Se realmente existe uma diferença ($\Delta$) entre as médias das populações qual é a chance que a análise de uma amostragem aleatória ser capaz de diferença estatística?
+      {\bf A resposta é o poder}.
+      O poder depende do \alert{tamanho do efeito} ($\Delta$) presumido.
+    \end{block}
+    \bigskip
+    \visible<2->{
+    \includegraphics[width=.8\textwidth]{Cap10-11/tab15_2-falses_stat}
+    }
+  \end{center}
+
+  \vfill
+  \hfill \tiny Cap 15
+\end{frame}
 
 \begin{frame}{\scriptsize Nível de significância}
   \begin{block}{Definição}
@@ -930,15 +1013,18 @@
     probabilidade máxima admissível para cometer um erro do tipo
     I. Ele é denotado por $\alpha$.
 
-    \bigskip
-    Está associado com o nível de confiança.
+    \begin{displaymath}
+      \text{confiança} = 1 - \alpha
+    \end{displaymath}
   \end{block}
   \begin{block}{Definição}
     \scriptsize
     A probabilidade de se cometer um erro do tipo II é denotada por
     $\beta$.
 
-    \bigskip Está associado com a capacidade do método estatístico em detectar uma diferença significativa (poder do teste).
+    \begin{displaymath}
+      \text{poder} = 1 - \beta
+    \end{displaymath}
   \end{block}
   % \begin{itemize}
   % % \item O valor $1-\beta$ é chamado o \alert{poder do teste}.
@@ -1061,8 +1147,8 @@
     % \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
       \begin{itemize}
         \scriptsize
-      \item \sout{O teste Z retorna $p = 0.0027$}\footnote{\scriptsize Premissas fortes: Normal, N grande, $\sigma$ conhecido, etc.}
-      \item O teste t retorna $p = 0.0034$\footnote{\scriptsize Usado em geral, menos premissas}
+      \item \sout{O teste Z retorna $p = 0.0027$}\footnote{\tiny Premissas fortes: Normal, N grande, $\sigma$ conhecido, etc.}
+      \item O teste t retorna $p = 0.0034$\footnote{\tiny Usado em geral, menos premissas}
       \end{itemize}
     \item<2-> Como $p < 0.05$, há evidências para rejeitar \alert<2->{$H_0$}.
     \end{itemize}
@@ -1079,69 +1165,7 @@
    % \hfill{\scriptsize teste Z calculado em \url{https://mathcracker.com/z-test-for-one-mean.php}
 \end{frame}
 
-\subsection{O p-valor não é...}
-
-\begin{frame}{\scriptsize Como a Ciência Médica é vista na mídia}
-  \begin{columns}
-    \begin{column}{5cm}
-      \begin{center}
-        \includegraphics[height=.8\textheight]{Cap10-11/xkcd-significant1}
-      \end{center}
-    \end{column}
-    \begin{column}{5cm}
-      \begin{center}
-        \includegraphics[height=.8\textheight]{Cap10-11/xkcd-significant2}
-      \end{center}
-    \end{column}
-  \end{columns}
-  \vfill
-  \begin{center}
-    \scriptsize
-    Fonte: \url{https://xkcd.com/882/}
-  \end{center}
-\end{frame}
-
-\begin{frame}{\scriptsize O problema não é a mídia}
-  \begin{center}
-    \includegraphics[height=.9\textheight]{Cap10-11/Ioannidis}
-  \end{center}
-\end{frame}
-
-\begin{frame}{\scriptsize Cuidados com o p-valor}
-    \begin{block}{{\small DOREY, F. 2010 Clin Orthop Relat Res.}}
-    \footnotesize
-    {\em ``The concept of a p value is not simple and any statements
-    associated with it must be considered cautiously.''}
-  \end{block}
-\end{frame}
-
-\begin{frame}{\scriptsize Estes são erros comuns de interpretação}
-  \small
-  \begin{block}{O p-valor assume que...}
-    \footnotesize
-    \begin{enumerate}
-      \footnotesize
-    \item a hipótese nula é \alert<1>{verdadeira}
-    \item a \alert<1>{única} causa da diferença observada é devida ao acaso
-    \end{enumerate}
-  \end{block}
-  \begin{block}{Portanto o p-valor \alert{não é}}<2->
-    \footnotesize
-    \begin{itemize}
-      \footnotesize
-    \item a probabilidade de que a hipótese nula seja verdadeira
-    \item a probabilidade de que a diferença observada seja devido ao
-      acaso
-    \end{itemize}
-    \begin{block}{}<3->
-      \footnotesize
-      O p-valor não pode ser usado para concluir suas próprias
-      premissas.
-    \end{block}
-  \end{block}
-\end{frame}
-
-\againframe{observacao}
+\againframe{mensagem}
 
 \subsection{Exercício}
 
@@ -1224,7 +1248,7 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo 2}
-  \begin{block}{Interpretação}
+  \begin{exampleblock}{Interpretação}
     \scriptsize
 
     A probabilidade de observarmos \alert{ao acaso} um valor {\bf tão
@@ -1235,7 +1259,7 @@
     Como esta prob. é menor que o nível de significância estabelecido
     $\alpha=0.05$, rejeitamos a hipótese de que a quantidade média é
     igual a 5.5 g ao nível de significância de 5\%.
-  \end{block}
+  \end{exampleblock}
   \begin{exampleblock}{Resultado}
     \footnotesize
 
@@ -1256,7 +1280,7 @@
 \begin{frame}{\scriptsize Outra hipótese, outra análise, outro resultado...}
   \begin{block}{Observe que...}
     \footnotesize
-    Se tivéssemos formulado as hipóteses que a média da amostra é diferente de 5.5 g, qual você acha que seria o resultado?
+    Se tivéssemos formulado as hipóteses que a média da amostra é maior que 5.5 g, qual você acha que seria o resultado?
 
     \bigskip
     Qual seria a conclusão neste caso?
@@ -1265,12 +1289,14 @@
 
 \begin{frame}{\scriptsize Bônus: Intervalo de Confiança}
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item Nessa situação, podemos usar o intervalo de confiança para
     realizar o teste de hipóteses.
+    \medskip
   \item Como queremos um teste a 5\% de significância, calcularemos um
     intervalo de 95\% de confiança.
   \end{itemize}
+  \bigskip
   \begin{block}{Lembre-se}
     \footnotesize
     \begin{center}
@@ -1298,10 +1324,10 @@
     % de ácido acetil salicílico, por comprimido,
     está entre 5.0 e 5.4 gramas, com 95\% de confiança.
   \end{exampleblock}
-  \begin{block}{Interpretação}<2->
+  \begin{exampleblock}{Interpretação}<2->
     \footnotesize
     A ``meta'' 5.5 g não está contida no IC.
-  \end{block}
+  \end{exampleblock}
   \begin{exampleblock}{Conclusão}<3->
     \footnotesize
     (...), portanto o lote está reprovado.
@@ -1323,19 +1349,83 @@
   \end{exampleblock}
   \begin{exampleblock}{Resultado}
     \footnotesize
-    A diferença média neste lote (...)
+    A diferença entre a média desta amostra e a meta (...)
     % de ácido acetil salicílico, por comprimido,
     está entre -0.5 e -0.1 gramas, com 95\% de confiança.
   \end{exampleblock}
-  \begin{block}{Interpretação}
+  \begin{exampleblock}{Interpretação}
     \footnotesize
     A ``meta de igualdade'' $d = 0$ g não está contida no IC.
-  \end{block}
+  \end{exampleblock}
   \begin{exampleblock}{Conclusão}<2>
     \footnotesize
     (...), portanto o lote está reprovado.
   \end{exampleblock}
 \end{frame}
+
+\subsection{O p-valor não é...}
+
+\begin{frame}{\scriptsize Como a Ciência Médica é vista na mídia}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[height=.8\textheight]{Cap10-11/xkcd-significant1}
+      \end{center}
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[height=.8\textheight]{Cap10-11/xkcd-significant2}
+      \end{center}
+    \end{column}
+  \end{columns}
+  \vfill
+  \begin{center}
+    \scriptsize
+    Fonte: \url{https://xkcd.com/882/}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize O problema não é a mídia}
+  \begin{center}
+    \includegraphics[height=.9\textheight]{Cap10-11/Ioannidis}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Cuidados com o p-valor}
+    \begin{block}{{\small DOREY, F. 2010 Clin Orthop Relat Res.}}
+    \footnotesize
+    {\em ``The concept of a p value is not simple and any statements
+    associated with it must be considered cautiously.''}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Estes são erros comuns de interpretação}
+  \small
+  \begin{block}{O p-valor assume que...}
+    \footnotesize
+    \begin{enumerate}
+      \footnotesize
+    \item a hipótese nula é \alert<1>{verdadeira}
+    \item a \alert<1>{única} causa da diferença observada é devida ao acaso
+    \end{enumerate}
+  \end{block}
+  \begin{block}{Portanto o p-valor \alert{não é}}<2->
+    \footnotesize
+    \begin{itemize}
+      \footnotesize
+    \item a probabilidade de que a hipótese nula seja verdadeira
+    \item a probabilidade de que a diferença observada seja devido ao
+      acaso
+    \end{itemize}
+    \begin{block}{}<3->
+      \footnotesize
+      O p-valor não pode ser usado para concluir suas próprias
+      premissas.
+    \end{block}
+  \end{block}
+\end{frame}
+
+\againframe{observacao}
 
 \section{Aprofundamento}
 
