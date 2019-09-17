@@ -220,8 +220,10 @@
     \footnotesize
   \item Podemos tomar decisões baseado nos dados de um experimento
     (amostra).
+    \medskip
   \item Para isto, precisamos de um critério sistemático e rigoroso
     que possa aferir o quanto os dados suportam esta decisão.
+    \medskip
   \item Usando os conceitos de probabilidades, poderemos ainda
     calcular a probabilidade de que esta decisão esteja errada.
   \end{itemize}
@@ -444,7 +446,7 @@
     \bigskip
   \item A hipótese alternativa ($H_1$ ou $H_a$) é a de que há efeito real \alert{que pode ser detectado} com o experimento.
     \begin{itemize}
-    \footnotesize
+    \tiny
     \item Obs: (em geral) hipótese de interesse científico
     \end{itemize}
 .
@@ -471,6 +473,7 @@
     \begin{enumerate}
       \footnotesize
     \item Identificar a afirmação a ser testada e expressá-la em forma simbólica
+    \bigskip
     \item Expressar em forma simbólica a afirmação que deve ser
       verdadeira, caso a afirmação de interesse seja falsa
     % \item Das duas expressões obtidas, a hipótese $H_0$ será a que
@@ -590,14 +593,19 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Identificando a região crítica}
+  \footnotesize
   Em geral...
+  \bigskip
+  \bigskip
+  \bigskip
   \begin{itemize}
-    \footnotesize
   % \item Para identificar a região crítica (ou região de rejeição) do
   %   teste, devemos observar se o teste é unicaudal (à esquerda ou à
   %   direita) ou bicaudal.
   \item Se $H_1$ é do tipo $\ne$, o teste é bicaudal (ou bilateral).
+    \medskip
   \item Se $H_1$ é do tipo $<$, o teste é unicaudal (ou unilateral) à esquerda.
+    \medskip
   \item Se $H_1$ é do tipo $>$, o teste é unicaudal à direita.
   \end{itemize}
 \end{frame}
@@ -609,8 +617,11 @@
   \begin{itemize}
     \footnotesize
   \item A {\bf significância} do estudo deve ser arbitrada antes do experimento (planejamento)
+    \medskip
   \item Está associada aos erros induzidos pela variabilidade experimental
+    \medskip
   \item Ou seja, mesmo fazendo tudo certo, você pode ser induzido a chegar numa conclusão errada ao acaso!
+    \medskip
   \item Isso pode ocorrer de duas maneiras diferentes...
   \end{itemize}
 \end{frame}
@@ -619,6 +630,7 @@
   \begin{itemize}
     \footnotesize
   \item Dizer que um paciente não está infectado, quanto ele está.
+    \medskip
   \item Dizer que um paciente está infectado, quando ele não está.
   \end{itemize}
 
@@ -698,7 +710,9 @@
 \end{frame}
 
 \begin{frame}{\scriptsize Componentes de um teste de hipóteses}
+  \scriptsize
   São necessários para um teste de hipóteses:
+  \bigskip
   \begin{itemize}
     \footnotesize
   \item As hipóteses nula e alternativa
@@ -707,15 +721,18 @@
   \item A estatística de teste (softwares especializados)
 %  \item 
   \end{itemize}
+  \bigskip
   \begin{block}{Observação}
-    \footnotesize
+    \scriptsize
     O teste unicaudal {\bf divide} a probabilidade de erro à esquerda (valores menores) e à direita (valores maiores).
 
     \bigskip
+    \scriptsize
     Assim, 5\% de significância num teste unicaudal corresponde à 2.5\% (metade) da significância bicaudal.
 
     \bigskip
-    Mais detalhes no cap 10.
+    \tiny
+    \hfill Mais detalhes no cap 10.
   \end{block}
 \end{frame}
 
@@ -738,7 +755,11 @@
       extremos} que aquele observado.
   \end{block}
 
+  \bigskip
+  \bigskip
+  \scriptsize
   O p-valor \alert{é}:
+  \smallskip
   \begin{itemize}
     \footnotesize
   % \item Uma estatística (i.e., depende da amostra - dados e tamanho)
@@ -778,7 +799,7 @@
     \item A hipótese científica é que a droga afeta o tempo de resposta.
     \item Como você formularia a hipótese estatística ($H_1$)?
       \begin{enumerate}
-        \footnotesize
+        \scriptsize
       \item $H_0: \mu = 1.2, H_1: \mu \ge 1.2$ (teste unicaudal à direita)
       \item $H_0: \mu = 1.2, H_1: \mu < 1.2$ (teste unicaudal à esquerda)
       \item \alert<2>{$H_0: \mu = 1.2, H_1: \mu \ne 1.2$ (teste bicaudal)}
@@ -802,8 +823,8 @@
     % \item $Z = \frac{1.05 - 1.2}{\frac{0.5}{\sqrt{100}}} = -3$
       \begin{itemize}
         \scriptsize
-      \item \sout{O teste Z retorna $p = 0.0027$}\footnote{Premissas fortes: Normal, N grande, $\sigma$ conhecido, etc.}
-      \item O teste t retorna $p = 0.0034$\footnote{Usado em geral, menos premissas}
+      \item \sout{O teste Z retorna $p = 0.0027$}\footnote{\scriptsize Premissas fortes: Normal, N grande, $\sigma$ conhecido, etc.}
+      \item O teste t retorna $p = 0.0034$\footnote{\scriptsize Usado em geral, menos premissas}
       \end{itemize}
     \item<2-> Como $p < 0.05$, há evidências para rejeitar \alert<2->{$H_0$}.
     \end{itemize}
@@ -888,7 +909,7 @@
 
 \begin{frame}{\scriptsize Exercício}
   \begin{exampleblock}{Exemplo 2}
-    \footnotesize
+    \scriptsize
     Uma indústria farmacêutica especifica que em certo analgésico a
     quantidade média de ácido acetil salicílico deve ser 5.5 gramas
     por comprimido. A indústria suspeita que houve problemas na
