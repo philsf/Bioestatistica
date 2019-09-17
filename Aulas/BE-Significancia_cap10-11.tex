@@ -869,32 +869,6 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label=poder-analogia]{\scriptsize Tipos de erros em testes de hipóteses}
-  \begin{center}
-    \includegraphics[width=.8\textwidth]{Cap10-11/tab15_1-falses_diag}
-
-    \begin{block}{\scriptsize Lab}
-      \tiny
-      Se o paciente realmente tem a doença, qual é a chance do teste diagnóstico retornar corretamente um resultado positivo?
-      {\bf A resposta é a sensibilidade}.
-      Se o teste pode detectar várias doenças, a sensibilidade depende de \alert{qual doença} está sendo investigada.
-    \end{block}
-    \begin{block}{\scriptsize Stats}<2->
-      \tiny
-      Se realmente existe uma diferença ($\Delta$) entre as médias das populações qual é a chance que a análise de uma amostragem aleatória ser capaz de diferença estatística?
-      {\bf A resposta é o poder}.
-      O poder depende do \alert{tamanho do efeito} ($\Delta$) presumido.
-    \end{block}
-    \bigskip
-    \visible<2->{
-    \includegraphics[width=.8\textwidth]{Cap10-11/tab15_2-falses_stat}
-    }
-  \end{center}
-
-  \vfill
-  \hfill \tiny Cap 15
-\end{frame}
-
 \subsection[Significância]{Significância Estatística}
 \begin{frame}{\scriptsize Significância}
   \begin{itemize}
@@ -970,7 +944,31 @@
 %   \end{itemize}
 % \end{frame}
 
-\againframe{poder-analogia}
+\begin{frame}{\scriptsize Tipos de erros em testes de hipóteses}
+  \begin{center}
+    \includegraphics[width=.8\textwidth]{Cap10-11/tab15_1-falses_diag}
+
+    \begin{block}{\scriptsize Lab}
+      \tiny
+      Se o paciente realmente tem a doença, qual é a chance do teste diagnóstico retornar corretamente um resultado positivo?
+      {\bf A resposta é a sensibilidade}.
+      Se o teste pode detectar várias doenças, a sensibilidade depende de \alert{qual doença} está sendo investigada.
+    \end{block}
+    \begin{block}{\scriptsize Stats}<2->
+      \tiny
+      Se realmente existe uma diferença ($\Delta$) entre as médias das populações qual é a chance que a análise de uma amostragem aleatória ser capaz de diferença estatística?
+      {\bf A resposta é o poder}.
+      O poder depende do \alert{tamanho do efeito} ($\Delta$) presumido.
+    \end{block}
+    \bigskip
+    \visible<2->{
+    \includegraphics[width=.8\textwidth]{Cap10-11/tab15_2-falses_stat}
+    }
+  \end{center}
+
+  \vfill
+  \hfill \tiny Cap 15
+\end{frame}
 
 \begin{frame}{\scriptsize Nível de significância}
   \begin{block}{Definição}
