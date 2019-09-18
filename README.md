@@ -14,13 +14,13 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 4. Distribuição Normal + IC da média ([PDF][IC-1m-pdf], [Handout][IC-1m-handout]) (cap 4, 5)
 5. IC da diferença entre médias ([PDF][IC-2m-pdf], [Handout][IC-2m-handout]) (cap 5, 7)
 6. Comparando ICs de proporções ([PDF][OR-pdf], [Handout][OR-handout]) (cap 8, 9)
-7. Significância ([PDF][signif-pdf], [Handout][signif-handout]) (cap 10, 11)
+7. Significância e Poder ([PDF][signif-pdf], [Handout][signif-handout]) (cap 10, 11)
 8. Testes 2 médias ([PDF][teste-2m-pdf], [Handout][teste-2m-handout]) (cap 23 e 25)
 9. Testes 2 proporções ([PDF][teste-2prop-pdf], [Handout][teste-2prop-handout]) (cap 26 e 27)
 10. Correlação ([PDF][cor-pdf], [Handout][cor-handout]) (cap 17)
 11. Regressão Linear Simples ([PDF][lm-pdf], [Handout][lm-handout]) (cap 18, 19)
 12. Comparações múltiplas e ANOVA ([PDF][anova-pdf], [Handout][anova-handout]) (cap 13, 30)
-13. Regressão Logística ([PDF][glm-pdf], [Handout][glm-handout]) (cap 31, 32)
+13. Tópicos em Regressão Logística ([PDF][glm-pdf], [Handout][glm-handout]) (cap 31, 32)
 14. Métodos não-paramétricos ([PDF][naopar-pdf], [Handout][naopar-handout]) (Cap 37, 38)
 15. Avaliação substitutiva
 
