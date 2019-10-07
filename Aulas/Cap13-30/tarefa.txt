@@ -1,0 +1,20 @@
+== Artigo ==
+
+https://www.sciencedirect.com/science/article/pii/S1877056817300774
+
+Os pesquisadores avaliaram o impacto de 3 agravos (Knee OA, DML e SONK) + controles saudáveis nos escores de WOMAC pain, stiffness e function.
+
+== Perguntas ==
+
+1) A seção 3.1 (Gait assessment) inicia alegando que a variável velocity
+a) Classifique as variáveis dependente (VD) e independente (VI) do modelo ANOVA para a variável velocity (linhas 1-2, Tabela 3).
+b) Quais foram as comparações não significativas desta análise?
+
+2) A seção 3.2 (Clinical outcomes) inicia alegando que em cada sub escala WOMAC os 3 agravos avaliados são significativamente diferentes dos controles saudáveis, mas os agravos não diferem entre si.
+a) Classifique as variáveis VD e VI da análise de WOMAC pain score (linhas 1-2, Tabela 4).
+b) Os resultados apresentados na tabela permitem você concluir que não há significância entre os 3 agravos? Se sim, que informação você usaria para isto? Se não, o que falta?
+
+3) Por que os autores optaram por não controlar os desfechos por, por exemplo, BMI? Esta decisão é justificada?
+
+4) (Opcional: +20pts extras) Na seção 3.1, os autores apresentam diferença significativa do stance involved limb entre Knee OA e os controles (p=0.028, ajustado pelo método de Bonferroni).
+Com base na leitura do capítulo 13, qual é um valor aproximado para o p-valor não ajustado?

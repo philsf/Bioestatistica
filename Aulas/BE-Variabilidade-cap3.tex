@@ -20,6 +20,7 @@
   \useinnertheme[shadow]{rounded}
 
   \setbeamercovered{transparent}
+  % \setbeamercovered{invisible}
   % or whatever (possibly just delete it)
 }
 
@@ -100,6 +101,7 @@
 
 % \beamerdefaultoverlayspecification{<+->}
 
+\usepackage[normalem]{ulem}
 
 \begin{document}
 
@@ -151,93 +153,117 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Discussão da aula passada}
+% \subsection{Discussão da aula passada}
 
-\begin{frame}{Discussão da aula passada}
+\begin{frame}{\scriptsize Discussão da aula passada}
   \begin{block}{}
+    \footnotesize
     Discussão da leitura obrigatória da aula passada
   \end{block}
 \end{frame}
 
 \section{Variabilidade de dados numéricos}
 
-\begin{frame}{Exemplo}
+\begin{frame}[label=oquee]{\scriptsize Pergunta central da aula}
+  \begin{block}{}
+    \Large\centering
+    O que é o desvio padrão de uma amostra?
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Exemplo}
   \begin{center}
     \includegraphics[width=1.2\textwidth]{Cap3/DP1}
   \end{center}
 \end{frame}
 
-% \begin{frame}{Abstract}
+% \begin{frame}{\scriptsize Abstract}
 %   \begin{center}
 %     \includegraphics[width=1.2\textwidth]{Cap3/RSD-abs}
 %   \end{center}
 % \end{frame}
 
-\begin{frame}{Objetivo}
+\begin{frame}{\scriptsize Objetivo}
   \begin{center}
     \includegraphics[width=1.2\textwidth]{Cap3/RSD0}
   \end{center}
 \end{frame}
 
-\begin{frame}{Desvio padrão?}
+\begin{frame}{\scriptsize Desvio padrão?}
   \begin{center}
     \includegraphics[width=1\textwidth]{Cap3/DP2}
   \end{center}
 
   \begin{block}{}
+    \footnotesize
     A idade média $\pm$ desvio padrão do grupo DMD é 7.7 $\pm$ 3.0.
-
+    \bigskip
     \begin{itemize}
+      \scriptsize
     \item O que significa este 3.0?
+      \medskip
     \item Como estas descrições se comparam com as do grupo controle?
-    \item \alert{Os grupos têm medidas médias diferentes?}
+      \medskip
+    \item \alert{Os grupos têm idades diferentes?}
+      \medskip
     \item \alert{Os grupos têm variabilidades diferentes?}
+      \medskip
     \item Que outras informações você precisa para responder?
     \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{Medidas Sumárias}
+\begin{frame}{\scriptsize Medidas Sumárias}
   \begin{itemize}
-  \item Medidas sumárias resumem a informação contida nos dados em um
+    \footnotesize
+  \item<1,4> Medidas sumárias resumem a informação contida nos dados em um
     pequeno conjunto de números.
-  \item Medidas sumárias de \alert{populações} se chamam
+    \bigskip
+  \item<2,3> Medidas sumárias de \alert{populações} se chamam
     \alert{parâmetros}, e são representadas por letras gregas ($\mu$, $\sigma^2$, $\sigma$, etc).
-  \item Medidas sumárias de \alert{amostras} se chamam \alert{estatísticas} e são representadas por letras comuns ($\bar{x}$, $s^2$, $s$, etc).
-  \item {\em Geralmente trabalhamos com estatísticas descritivas.}
+    \bigskip
+  \item<3> Medidas sumárias de \alert{amostras} se chamam \alert{estatísticas} e são representadas por letras comuns ($\bar{x}$, $s^2$, $s$, etc).
+    \bigskip
+  \item<4> {\em Geralmente trabalhamos com estatísticas descritivas.}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Medidas Sumárias}
+\begin{frame}{\scriptsize Medidas Sumárias}
   \begin{block}{Tipos de medidas sumárias}
+    \footnotesize
     Os dois principais tipos de medidas sumárias utilizadas na literatura são:
     \begin{itemize}
+    \footnotesize
     \item Medidas de Tendência Central
     \item Medidas de Variabilidade (ou Dispersão)
     \end{itemize}
+    \bigskip
+    \hfill \scriptsize Veremos hoje ambas, com foco na Variabilidade
   \end{block}
 \end{frame}
 
 \subsection{Fontes de Variabilidade}
 
-\begin{frame}{Variabilidade em Medições}
+\begin{frame}{\scriptsize Variabilidade em Medições}
   \begin{figure}
     \includegraphics[height=0.7\textheight]{Cap3/variancia}
-    \caption{Variabilidade da medição de uma esfera metálica de
+    \caption{\scriptsize Variabilidade da medição de uma esfera metálica de
       1000g. Balança A, ``imprecisão'' de 50g, balança B,
       ``imprecisão'' de 100g (Fonte: Reis, Reis, 2002)}
   \end{figure}
 \end{frame}
 
-\begin{frame}{Fontes comuns de variabilidade}
+\begin{frame}{\scriptsize Fontes comuns de variabilidade}
   \begin{itemize}
+    \footnotesize
   \item Imprecisão ou erro experimental
   \item Variabilidade biológica
   \item ``{\em Mancadas}'' experimentais
   \end{itemize}
   \begin{block}{Conceito de Erro na Estatística}
+    \footnotesize
     No contexto acadêmico, {\bf erro} não tem o mesmo significado do cotidiano.
 
     \bigskip
@@ -252,53 +278,65 @@
 
 \begin{frame}
   \begin{exampleblock}{Exemplo}
+    \footnotesize
     100 estudantes de [{\em insira aqui um curso da área da saúde}] trabalharam em pares, e mediram a pressão sistólica de seu parceiro(a).
 
     Ao final do exercício, a turma obteve 100 valores de pressão sistólica.
   \end{exampleblock}
   \begin{block}{Pergunta}
+    \footnotesize
     Como ``entender'' essa listagem de 100 números?
   \end{block}
 \end{frame}
 
-\begin{frame}{O histograma}
+\begin{frame}{\scriptsize O histograma}
   \includegraphics[height=\textheight]{Cap3/histograma1}
 \end{frame}
 
-\begin{frame}{Quantas barras?}
+\begin{frame}{\scriptsize Quantas barras?}
   \includegraphics[width=\textwidth]{Cap3/histograma2}
 \end{frame}
 
 \subsection{Média e a mediana}
 
-\begin{frame}{Média}
-  \begin{exampleblock}{Exemplo}
+\begin{frame}{\scriptsize Média}
+  \begin{exampleblock}{Exemplo -- Colesterol}
+    \footnotesize
     Foram observados os seguintes níveis de colesterol de uma amostra
     de pacientes. Qual é o nível médio de colesterol nestes pacientes?
 
+    \bigskip
     \begin{columns}<1>
       \begin{column}{5cm}<1>
+        {\tiny
         \begin{tabular}{ccc}
-          $x_1$ &=&142\\
-          $x_2$ &=&144\\
-          $x_3$ &=&176\\
-          $x_4$ &=&203\\
-          $x_5$ &=&134\\
-          $x_6$ &=&191\\
+          $x_1$ &=&144\\
+          $x_2$ &=&146\\
+          $x_3$ &=&139\\
+          $x_4$ &=&155\\
+          $x_5$ &=&144\\
+          $x_6$ &=&148\\
         \end{tabular}
+        }
       \end{column}
       \begin{column}{5cm}<1>
-        $\bar{x} = \frac{990}{6} = 165$
+        \scriptsize
+        $\bar{x} = \frac{876}{6} = 146 $
       \end{column}
     \end{columns}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Percentis e a Mediana}
-  \begin{definition}
-    A mediana é o dado que ocupa o percentil de 50\% dados (\alert{posição central}).
-  \end{definition}
+\begin{frame}{\scriptsize Percentis e a Mediana}
+  \begin{block}{}
+    \footnotesize
+    A mediana é o dado que ocupa o percentil de 50\% dados
+
+    (\alert{posição central}).
+  \end{block}
+  \bigskip
   \begin{itemize}
+    \footnotesize
   \item Para se calcular a mediana, deve-se ordenar os dados.
   \item Encontrar o valor do \alert{meio} se $n$ for ímpar.
   \item Encontrar a média dos dois valores do \alert{meio} se $n$ for par.
@@ -311,80 +349,207 @@
   % \end{itemize}
 \end{frame}
 
-\begin{frame}{Mediana}
-  \begin{exampleblock}{Exemplo}
-Conforme no exemplo anterior
+\begin{frame}{\scriptsize Mediana}
+  \begin{exampleblock}{Colesterol}
+    \footnotesize
+    Conforme no exemplo (colesterol)
+    \bigskip
+    \tiny
     \begin{columns}
       \begin{column}{5cm}
         \begin{tabular}{ccc}
-          $x_5$ &=&134\\
-          $x_1$ &=&142\\
-          $x_2$ &=&\alert{144}\\
-          $x_3$ &=&\alert{176}\\
-          $x_6$ &=&191\\
-          $x_4$ &=&203\\
+          $x_3$ &=&139\\
+          $x_1$ &=&144\\
+          $x_5$ &=&\alert{144}\\
+          $x_2$ &=&\alert{146}\\
+          $x_6$ &=&148\\
+          $x_4$ &=&155\\
         \end{tabular}
       \end{column}
       \begin{column}{5cm}
-        $M_d = \frac{144+176}{2}=160$
+        \scriptsize
+        $M_d = \frac{144+146}{2}=145$
       \end{column}
     \end{columns}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Qual é a diferença?}
+\begin{frame}{\scriptsize }
   \begin{block}{}
-    O que acontece com a média, na presença de um valor extremo (muito grande, ou muito pequeno em relação aos outros)?
+    \begin{center}
+      O que acontece...
+
+      \bigskip
+      ... na presença de valores extremos?
+    \end{center}
   \end{block}
-  \begin{exampleblock}{Exemplo}
-    O que acontece se você digitar {\bf 20} ao invés de {\bf 203}?
+\end{frame}
+
+\begin{frame}[fragile]{\scriptsize Qual é a diferença?}
+  \begin{block}{}
+    \footnotesize
+    \centering
+    O que acontece com a média, na presença de um valor extremo?
+
+    ({\tiny muito grande, ou muito pequeno em relação aos outros})
+  \end{block}
+  \visible<2->{
+  \begin{exampleblock}{Colesterol}
+    \bigskip
+    \tiny
+    \begin{columns}
+      \begin{column}{5cm}
+        \begin{tabular}{ccc}
+          $x_1$ &=&144\\
+          $x_2$ &=&146\\
+          $x_3$ &=&\alert{\sout{139} = 13}\\
+          $x_4$ &=&155\\
+          $x_5$ &=&144\\
+          $x_6$ &=&148\\
+        \end{tabular}
+      \end{column}
+      \begin{column}{5cm}
+        \scriptsize
+        O que acontece se você digitar
+
+        \alert{\bf 13} ao invés de \alert{\bf 139}?
+
+        \bigskip
+        \visible<3->{
+        \begin{itemize}
+          \scriptsize
+        \item \sout{$\bar{x} = 146, M_d= 145$}
+          \medskip
+        \item {\bf $\bar{x} = 125, M_d = 145$}
+        \end{itemize}
+        }
+      \end{column}
+    \end{columns}
   \end{exampleblock}
+  }\visible<3->{
+  \begin{block}{Pense...}
+    \scriptsize
+    {\bf Qual é a implicação disso em seu projeto?}
+  \end{block}
+  }
 \end{frame}
 
-\begin{frame}{Comparação entre as Medidas Centrais}
-  \begin{exampleblock}{Exemplo}
-    Considere o seguinte dataset $$\{ 1,1,2,4,7\}$$
-  \begin{itemize}
-  \item $N=5$
-  \item As medidas descritivas centrais para estes dados são:
-  \item $\mu = \frac{1+1+2+4+7}{5} = \frac{15}{5}= 3$
-  \item $M_d = 2$
-  \end{itemize}
-\end{exampleblock}
+\begin{frame}{\scriptsize Efeito do outlier nas medidas centrais}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=\textwidth]{Cap3/histograma-colesterol}
+
+        \scriptsize
+        \bigskip
+        $\bar{x} = 146 ; M_d= 145$
+      \end{center}
+
+    \end{column}
+    \begin{column}{5cm}
+      \begin{center}
+        \includegraphics[width=\textwidth]{Cap3/histograma-colesterol2}
+
+        \scriptsize
+        \bigskip
+        $\bar{x} = 125 ; M_d= 145$
+      \end{center}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}{Comparação entre as Medidas Centrais}
-  \begin{exampleblock}{Exemplo}
-    Considere agora este outro dataset $$\{
-    1,1,2,4,\alert{32} \}$$
+\begin{frame}{\scriptsize Atenção!}
+  \footnotesize
+  Valores extremos podem ser:
+
+  \bigskip
   \begin{itemize}
-  \item $N=5$
-  \item As medidas descritivas centrais para estes dados são:
-  \item $\mu = \frac{1+1+2+4+32}{5} = \frac{40}{5}= 8$
-  \item $M_d = 2$
+    \footnotesize
+  \item erros de digitação/tabulação
+    \medskip
+  \item erros de mensuração/instrumentais
+    \medskip
+  \item valores legítimos, porém raros
+    \medskip
+  \item valores legítimos.
+
+    ({\tiny i.e., apenas {\em parecem} extremos, mas não são})
   \end{itemize}
-\end{exampleblock}
 \end{frame}
+
+\begin{frame}{\scriptsize Medida central de dados numéricos}
+  \begin{block}{Descrição de dados amostrais}
+    \scriptsize
+    Dados numéricos são minimamente descritos pelo seu Centro
+
+    \bigskip
+    \begin{itemize}
+      \footnotesize
+    \item Dados ``bem comportados''\footnote{\scriptsize paramétricos: veremos o que isso significa em aulas futuras}
+      \begin{itemize}
+        \scriptsize
+      \item Média $\left( \bar{x} \right)$
+      \end{itemize}
+      \bigskip
+    \item Dados ``mal comportados''
+      \begin{itemize}
+        \scriptsize
+      \item Mediana $\left( M_d \right)$
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% \begin{frame}{\scriptsize Comparação entre as Medidas Centrais}
+%   \begin{exampleblock}{Exemplo}
+%     \footnotesize
+%     Considere o seguinte dataset $$\{ 1,1,2,4,7\}$$
+%   \begin{itemize}
+%     \footnotesize
+%   \item $N=5$
+%   \item As medidas descritivas centrais para estes dados são:
+%   \item $\bar{x} = \frac{1+1+2+4+7}{5} = \frac{15}{5}= 3$
+%   \item $M_d = 2$
+%   \end{itemize}
+% \end{exampleblock}
+% \end{frame}
+
+% \begin{frame}{\scriptsize Comparação entre as Medidas Centrais}
+%   \begin{exampleblock}{Exemplo}
+%     \footnotesize
+%     Considere agora este outro dataset $$\{
+%     1,1,2,4,\alert{32} \}$$
+%   \begin{itemize}
+%     \footnotesize
+%   \item $N=5$
+%   \item As medidas descritivas centrais para estes dados são:
+%   \item $\bar{x} = \frac{1+1+2+4+32}{5} = \frac{40}{5}= 8$
+%   \item $M_d = 2$
+%   \end{itemize}
+% \end{exampleblock}
+% \end{frame}
 
 \subsection{Quantificando com percentis}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Exemplo}
   \begin{center}
     \includegraphics[height=\textheight]{Cap3/percentil0}
   \end{center}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Exemplo}
   \begin{center}
     \includegraphics[height=\textheight]{Cap3/percentil1}
   \end{center}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Exemplo}
   \begin{exampleblock}{}
+    \footnotesize
     Uma criança (9 anos) faz o sprint de 50m em 10s.
 
     \begin{enumerate}
+      \footnotesize
     \item Qual é o percentil de um menino com este tempo?
     \item Qual é o percentil de uma menina com este tempo?
     \item O que isto significa?
@@ -395,214 +560,334 @@ Conforme no exemplo anterior
   \end{center}
 \end{frame}
 
-\begin{frame}{O boxplot}
+\begin{frame}{\scriptsize Medida de dispersão de dados não paramétricos}
+  \begin{block}{Descrição de dados amostrais}
+    \scriptsize
+    Dados numéricos são suficientemente descritos por: Centro e Dispersão
+
+    \bigskip
+    \begin{itemize}
+      \footnotesize
+    \item Dados ``bem comportados''\footnote{\tiny Paramétricos: veremos o que isso significa em aulas futuras}
+      \begin{itemize}
+        \scriptsize
+      \item Média (DP)
+      % \item Média (Erro Padrão da Média) $\Rightarrow \bar{x} \pm$ SEM\footnote{\tiny Obs: SEM (em inglês) é uma medida inferencial e não descritiva}
+      \end{itemize}
+      \bigskip
+    \item Dados ``mal comportados''
+      \begin{itemize}
+        \scriptsize
+      \item Mediana e Amplitude Interquartil ($M_d$ e AIQ {\tiny IQR em inglês})
+      \item Mediana e Intervalo Interquartil ($M_d$ e IIQ)
+      \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Na prática}
+  \begin{center}
+    \includegraphics[width=\textwidth]{Cap3/exemplo-desc}
+  \end{center}
+
+  \vfill
+  \hfill \scriptsize Preisig et al., 2014
+
+  \hfill \tiny (Ventilação não Invasiva após Cirurgia Cardiovascular: um Ensaio Clínico Randomizado)
+\end{frame}
+
+\begin{frame}{\scriptsize O boxplot}
   \begin{columns}
     \begin{column}{7cm}
       \begin{itemize}
+        \scriptsize
       \item {\em ``Caixa e bigodes''}
-      \item A caixa representa os percentis de 25\% e 75\%
-      \item Barra interna que representa a mediana (percentil 50\%)
+        \medskip
+      \item A caixa delimita os quartis de $Q_1$ e $Q_3$ ({\bf IIQ})
+        \begin{itemize}
+          \scriptsize
+        \item Percentis 25\% e 75\%
+        \item O tamanho da caixa representa a {\bf AIQ}
+        \end{itemize}
+      \item Barra interna que representa a mediana
+        \begin{itemize}
+          \scriptsize
+        \item Segundo quartil ($Q_2$) ou percentil de 50\%
+        \end{itemize}
+        \medskip
       \item Barras verticais {\em indicam} a amplitude dos dados
         \begin{itemize}
-        \item Mínimo e Máximo
+          \scriptsize
+        \item Mínimo e Máximo ``razoáveis''
         \item Regras para ``a maioria''
         \end{itemize}
       \end{itemize}
-      \end{column}
-      \begin{column}{5cm}
-          \includegraphics[height=\textheight]{Cap3/boxplot}
-      \end{column}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[height=\textheight]{Cap3/boxplot}
+    \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{``Regras para a maioria''}
+\begin{frame}{\scriptsize ``Regras para a maioria''}
   \begin{figure}
     \centering
     \includegraphics[height=0.7\textheight]{Cap3/boxplot3}
-    \caption{Boxplots para dois grupos de dados (Fonte: Reis, Reis,
+    \caption{\scriptsize Boxplots para dois grupos de dados (Fonte: Reis, Reis,
       2002)}
   \end{figure}
 \end{frame}
 
 \subsection{Quantificando com variância e DP}
 
-\begin{frame}{Desvios em relação à média}
-  \begin{itemize}
-  \item Uma maneira de entender a variabilidade do dataset é analisar
-    os desvios em relação à média.
-  \item Cada desvio é a diferença entre o valor do dado e a média.
-  % \item $D_j = x_j - \mu$ ou $D_i = x_i - \bar{x}$
-  \end{itemize}
+\begin{frame}{\scriptsize A seguir, você verá...}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{itemize}
+        \scriptsize
+      \item uma cadência de ideias
+
+        (todas relacionadas)
+        \bigskip
+      \item o que uma significa...
+
+        ... em relação à próxima.
+        \bigskip
+      \item prós e contras de cada uma
+        \bigskip
+      \item do mais \alert{simples}...
+
+        ... ao mais \alert{aplicado}.
+      \end{itemize}
+    \end{column}
+    \begin{column}{5cm}
+      \visible<2>{
+        \includegraphics[width=\textwidth]{Cap3/meme-calculos2}
+      }
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}{A seguir, você verá...}
-  \begin{itemize}
-  \item  uma cadência de ideias (todas relacionadas)
-  \item o que uma significa em relação à próxima.
-  \item prós e contras de cada uma
-  \item do mais \alert{simples}, ao mais \alert{aplicado}.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{De volta ao exemplo}
+\begin{frame}[label=objetivo]{\scriptsize Tenha em mente...}
   \begin{center}
-    \includegraphics[width=1.2\textwidth]{Cap3/DP1}
+    Nosso objetivo é {\bf entender}...
+
+    \bigskip
+    {\footnotesize
+      ... uma medida que descreva a variabilidade de uma amostra
+    }
   \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{Dados}
-  \begin{block}{medida do músculo (N = 32, média = 90)}
-\begin{verbatim}
-"91.84" "89.33" "88.99" "83.59" "91.71"
-"90.30" "81.25" "93.80" "93.33" "90.65"
-"90.30" "87.10" "90.83" "99.40" "91.84"
-"83.74" "85.85" "85.87" "89.03" "89.40"
-"89.35" "96.48" "97.20" "91.00" "90.04"
-"86.98" "93.12" "93.72" "85.37" "96.26"
-"91.33" "83.32"
-\end{verbatim}
-  \end{block}
+\begin{frame}{\scriptsize Desvios em relação à média}
+  \begin{itemize}
+    \footnotesize
+  \item Uma maneira de entender a variabilidade do dataset é analisar
+    os desvios em relação à média.
+    \bigskip
+  \item Cada desvio é a diferença entre o valor do dado e a média.
+  % \item $D_j = x_j - \bar{x}$ ou $D_i = x_i - \bar{x}$
+  \end{itemize}
 \end{frame}
 
-\begin{frame}{Desvios em relação à média}
-\begin{exampleblock}{Exemplo}
-  \begin{displaymath}
-    \{1,2,3,4,5\}
-  \end{displaymath}
+\begin{frame}[fragile]{\scriptsize Dados}
+  \begin{exampleblock}{Colesterol (N = 6, média 146)}
+    \begin{center}
+    \tiny
+\begin{verbatim}
+144 146 139 155 144 148
+\end{verbatim}
+    \bigskip
+    \includegraphics[height=.5\textheight]{Cap3/histograma-colesterol}
+  \end{center}
+\end{exampleblock}
+  % \begin{exampleblock}{\scriptsize Distribuição dos dados}
+  %   \begin{center}
+  %   \end{center}
+  % \end{exampleblock}
+\end{frame}
 
+\begin{frame}{\scriptsize Desvios em relação à média}
+\begin{exampleblock}{Colesterol}
+    \scriptsize
+  \begin{displaymath}
+    \{144, 146, 139, 155, 144, 148\}
+  \end{displaymath}
+  \bigskip
   \begin{columns}
     \begin{column}{5cm}
   \begin{itemize}
-  \item $N=5$
-  \item $\bar{x} = 3$
+    \scriptsize
+  \item $N=6$
+  \item $\bar{x} = 146$
   \end{itemize}
 \end{column}
 \begin{column}{5cm}
   \begin{enumerate}
-  \item $D_1 = 1-3 = -2$
-  \item $D_2 = 2-3 = -1$
-  \item $D_3 = 3-3 = 0$
-  \item $D_4 = 4-3 = 1$
-  \item $D_5 = 5-3 = 2$
+    \tiny
+  \item $D_1 = 144 - 146 = -2$
+  \item $D_2 = 146 - 146 = 0$
+  \item $D_3 = 139 - 146 = -7$
+  \item $D_4 = 155 - 146 = 9$
+  \item $D_5 = 144 - 146 = -2$
+  \item $D_6 = 148 - 146 = 2$
   \end{enumerate}
 \end{column}
 \end{columns}
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{Desvios em relação à média}
-  \begin{block}{medida do músculo (N = 32, média = 90)}
+\begin{frame}[fragile]{\scriptsize Desvios em relação à média}
+  \begin{block}{Colesterol (N = 6, média 146)}
+    \footnotesize
 \begin{verbatim}
-"91.84" "89.33" "88.99" "83.59" "91.71"
-"90.30" "81.25" "93.80" "93.33" "90.65"
-...
+144 146 139 155 144 148
 \end{verbatim}
   \end{block}
   \begin{block}{Desvios em relação à média}
+    \footnotesize
 \begin{verbatim}
-"1.77"  "-0.74" "-1.08" "-6.49" "1.63"
-"0.23"  "-8.83" "3.73"  "3.25"  "0.58"
-...
+-2  0 -7  9 -2  2
 \end{verbatim}
   \end{block}
 \end{frame}
 
-\begin{frame}{Desvios em relação à média}
+\begin{frame}{\scriptsize Desvios em relação à média}
+  \footnotesize
   Mas os desvios...
+  \bigskip
   \begin{enumerate}
+    \footnotesize
   \item são tão numerosos quanto os dados
+    \bigskip
   \item têm sinal (direção do desvio)
+    \bigskip
   \item SEMPRE têm soma \alert{nula}, portanto o desvio médio é sempre 0
   \end{enumerate}
+  \bigskip
+  \vfill
   \begin{block}{Pense...}
+    \footnotesize
     Uma fórmula que dá o mesmo resultado para qualquer dataset... serve para resumir seus dados?
   \end{block}
 \end{frame}
 
-\begin{frame}{Soma dos desvios}
-  \begin{exampleblock}{Exemplo}
+\begin{frame}{\scriptsize Soma dos desvios}
+  \begin{exampleblock}{Colesterol}
+    \footnotesize
     Somando tudo:
     \begin{displaymath}
-    \sum D = D_1 + D_2 + D_3 + D_4 + D_5 =
+    \sum D = D_1 + D_2 + D_3 + D_4 + D_5 + D_6 =
   \end{displaymath}
   \begin{displaymath}
-    (-2) + (-1) + 0 + 1 + 2 = \alert{0}
+    (-2) + 0 + (-7) + 9 + (-2) + 2 = \alert{0}
   \end{displaymath}
   \end{exampleblock}
+  \bigskip
+  \vfill
   \begin{block}{Pense...}
+    \footnotesize
     Uma fórmula que dá o mesmo resultado para qualquer dataset... serve para resumir seus dados?
   \end{block}
 \end{frame}
 
-\begin{frame}{Como proceder?}
+\begin{frame}{\scriptsize Como proceder?}
   \begin{itemize}
+    \footnotesize
   \item Como extrair alguma informação útil (e sumária!) dos desvios?
   \item Problema: sinais
   \end{itemize}
+  \bigskip
+  \vfill
   \begin{block}{Pergunta}
+    \footnotesize
     Como tirar os sinais dos desvios?
+    \visible<2>{
+    \begin{block}{}
+      \begin{enumerate}
+        \scriptsize
+      \item Tirar o módulo (valor absoluto)
+      \item Elevar ao quadrado
+      \end{enumerate}
+    \end{block}
+    }
   \end{block}
 \end{frame}
 
-\begin{frame}{Desvios absolutos}
+\begin{frame}{\scriptsize Desvios absolutos}
+  \scriptsize
   Tomando-se o módulo dos desvios temos:
   % \item Idéia matemática de ``tamanho''
 
-  \begin{definition}
+  \bigskip
+  \begin{block}{Definição}
+    \footnotesize
     Desvio médio absoluto (MAD) é a média dos desvios absolutos
-  \end{definition}
+  \end{block}
 
+  \bigskip
   \begin{itemize}
+    \scriptsize
   \item É uma medida de dispersão robusta (pouco influenciada por
     outliers)
+    \medskip
   \item Módulo não tem boas propriedades matemáticas (analíticas e
     algébricas).
+    \medskip
   \item Pouco usado para inferência (apesar da robustez)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Desvio médio absoluto (MAD)}
-  \begin{exampleblock}{Exemplo}
+\begin{frame}{\scriptsize Desvio médio absoluto (MAD)}
+  \begin{exampleblock}{Colesterol}
+    \footnotesize
   \begin{displaymath}
-    \{1,2,3,4,5\}, \bar{x} = 3
+    \{144, 146, 139, 155, 144, 148\}, \bar{x} = 146
   \end{displaymath}
   \begin{columns}
     \begin{column}{5cm}<1->
       \begin{enumerate}
-      \item $|D_1| = |1-3| = 2$
-      \item $|D_2| = |2-3| = 1$
-      \item $|D_3| = |3-3| = 0$
-      \item $|D_4| = |4-3| = 1$
-      \item $|D_5| = |5-3| = 2$
+        \tiny
+      \item $|D_1| = |144 - 146| = 2$
+      \item $|D_2| = |146 - 146| = 0$
+      \item $|D_3| = |139 - 146| = 7$
+      \item $|D_4| = |155 - 146| = 9$
+      \item $|D_5| = |144 - 146| = 2$
+      \item $|D_6| = |148 - 146| = 2$
       \end{enumerate}
     \end{column}
     \begin{column}{5cm}
       \begin{displaymath}
-        \mathrm{MAD } = \frac{\sum |D_i|}{5} = \frac{6}{5} = 1.2
+        \mathrm{MAD} = \frac{\sum |D_i|}{6} = 3.7
       \end{displaymath}
     \end{column}
   \end{columns}
 \end{exampleblock}
-\begin{block}{No exemplo do paper}
-  MAD = 3.24
-\end{block}
+% \begin{block}{No exemplo do paper}
+%     \footnotesize
+%   MAD = 3.24
+% \end{block}
 \end{frame}
 
-\begin{frame}{Uma proposta ``melhor''}
+\begin{frame}{\scriptsize Uma proposta ``melhor''}
   \begin{itemize}
+    \footnotesize
   \item Uma outra maneira de eliminar os sinais é elevar ao quadrado
     cada desvio.
+    \bigskip
   \item Preserva boas propriedades matemáticas
+    \bigskip
   \item Calculando a média dos quadrados dos desvios (desvios
     quadráticos) temos \ldots
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Variância}
-  \begin{definition}
+\begin{frame}{\scriptsize Variância}
+  \begin{block}{Definição}
     A variância é a média dos desvios quadráticos.
-  \end{definition}
+  \end{block}
   \begin{itemize}
+    \footnotesize
   \item Variância populacional
 $$\sigma^2 = \frac{\sum (x_j - \mu)^2}{N}$$
 \item Variância amostral
@@ -614,73 +899,107 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Variância}
-  \begin{exampleblock}{Exemplo}
+\begin{frame}{\scriptsize Variância}
+  \begin{exampleblock}{Colesterol}
+    \scriptsize
       \begin{displaymath}
-    \{1,2,3,4,5\}, \bar{x} = 3
+    \{144, 146, 139, 155, 144, 148\}, \bar{x} = 146
   \end{displaymath}
+    \bigskip
+    \tiny
   \begin{columns}
     \begin{column}{6cm}<1->
       \begin{enumerate}
-      \item $D_1^2 = (1-3)^2 = (-2)^2 = 4$
-      \item $D_2^2 = (2-3)^2 = (-1)^2 = 1$
-      \item $D_3^2 = (3-3)^2 = 0^2 =0$
-      \item $D_4^2 = (4-3)^2 = 1^2 = 1$
-      \item $D_5^2 = (5-3)^2 = 2^2 = 4 $
+        \tiny
+      \item $(D_1)^2 = (144-146)^2 = (-2)^2 = 4$
+      \item $(D_2)^2 = (146-146)^2 = 0^2 = 0$
+      \item $(D_3)^2 = (139-146)^2 = (-7)^2 = 49$
+      \item $(D_4)^2 = (155-146)^2 = 9^2 = 81$
+      \item $(D_5)^2 = (144-146)^2 = (-2)^2 = 4$
+      \item $(D_6)^2 = (148-146)^2 = 2^2 = 4$
       \end{enumerate}
     \end{column}
     \begin{column}{4cm}
+      \footnotesize
       \begin{displaymath}
-        s^2 = \frac{\sum D_i^2}{4} = 2.5
+        s^2 = \frac{\sum D_i^2}{5} = 28.4
       \end{displaymath}
     \end{column}
   \end{columns}
   \end{exampleblock}
-  \begin{block}{No exemplo do paper}
-    VAR = 18.14
-  \end{block}
+  % \begin{block}{No exemplo do paper}
+  %   \scriptsize
+  %   VAR = 18.14
+  % \end{block}
 \end{frame}
 
-\begin{frame}{Desvio Padrão}
-  \begin{definition}
+\begin{frame}{\scriptsize Desvio Padrão}
+  \begin{block}{Definição}
     O desvio padrão é a raiz quadrada da variância.
-  \end{definition}
+  \end{block}
   \begin{itemize}
+    \footnotesize
   \item Desvio padrão populacional
     $$ \sigma = \sqrt{ \sigma^2 } = \sqrt{ \frac{\sum (x_i - \mu)^2}{N} } $$
+    \bigskip
   \item Desvio padrão amostral
     $$ s = \sqrt{s^2 } = \sqrt{ \frac{\sum (x_i - \bar{x})^2}{n-1} } $$
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Desvio Padrão}
+\begin{frame}{\scriptsize Desvio Padrão}
   \begin{itemize}
+    \footnotesize
   \item É a medida mais usada, por estar na mesma escala (unidade) dos
     dados.
+    \bigskip
   \item Boas propriedades matemáticas
+    \bigskip
   \item Boas propriedades como estimador (Inferência)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Desvio Padrão}
-  \begin{example}
+\begin{frame}{\scriptsize Desvio Padrão}
+  \begin{exampleblock}{Colesterol}
+    \scriptsize
       \begin{displaymath}
-    \{1,2,3,4,5\}, \bar{x} = 3
-  \end{displaymath}
-      \begin{displaymath}
-        s^2 = 2.5
+        \{144, 146, 139, 155, 144, 148\}, \bar{x} = 146
       \end{displaymath}
-    \begin{displaymath}
-        s = \sqrt{s^2} = \sqrt{2.5} = 1.58
+      \medskip
+      \begin{displaymath}
+        s^2 = 28.4
+      \end{displaymath}
+      \medskip
+      \begin{displaymath}
+        s = \sqrt{s^2} = \sqrt{28.4} = 5.3
     \end{displaymath}
-  \end{example}
-  \begin{block}{No exemplo do paper}
-    DP = 4.26
-  \end{block}
+  \end{exampleblock}
+  % \begin{block}{No exemplo do paper}
+  %   \footnotesize
+  %   s = 4.26
+  % \end{block}
 \end{frame}
 
-\begin{frame}{Como comparar o DP de dois grupos?}
+\begin{frame}{\scriptsize}
+  \begin{block}{Lembre-se}
+    \footnotesize
+    Você não precisa {\bf saber fazer} esses cálculos!
+
+    \bigskip
+    Eles são feitos instantaneamente por máquinas!
+  \end{block}
+  \bigskip
+  \vfill
+  \begin{center}
+    \includegraphics[height=.5\textheight]{Cap3/meme-rivis}
+  \end{center}
+\end{frame}
+
+\againframe{objetivo}
+
+\begin{frame}{\scriptsize Como comparar o DP de dois grupos?}
   \begin{block}{}
+    \footnotesize
     Não podemos comparar diretamente o \alert{valor} do DP de dois grupos.
 
     \bigskip
@@ -688,17 +1007,20 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
   \end{block}
 \end{frame}
 
-\begin{frame}{O Desvio Padrão Relativo}
+\begin{frame}{\scriptsize O Desvio Padrão Relativo}
   \begin{block}{Desvio Padrão Relativo}
+    \footnotesize
     O desvio padrão relativo é uma medida de dispersão \alert{normalizada}.
 
     \bigskip
     Ela ignora a escala da mensuração.
 
-    $$DPR = \frac{DP}{\bar{x}}$$
+    $$DPR = \frac{s}{\bar{x}}\times 100$$
   \end{block}
   \begin{exampleblock}{Sinônimos}
+    \footnotesize
     \begin{itemize}
+    \footnotesize
     \item Desvio padrão relativo (DPR)
     \item Coeficiente de Variação (CV)
     \item {\em Relative Standard Deviation} (RSD)
@@ -706,39 +1028,105 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{O Desvio Padrão Relativo}
+\begin{frame}{\scriptsize O Desvio Padrão Relativo}
   \begin{center}
     \includegraphics[width=\textwidth]{Cap3/RSD1}
   \end{center}
-  \begin{exampleblock}{Dos nossos dados}
-    CV = 4.7\%
+  \begin{exampleblock}{Colesterol}
+    \footnotesize
+    $$\text{CV} = \frac{5.3}{146} = 4\%$$
   \end{exampleblock}
 \end{frame}
 
 \subsection{N ou N-1?}
 
-\begin{frame}{N ou N-1?}
+\begin{frame}{\scriptsize N ou N-1?}
   \begin{block}{Fórmula com N}
+    \footnotesize
     Usada apenas para cálculos com dados de toda a população.
   \end{block}
   \begin{block}{Fórmula com N-1}
+    \footnotesize
     Usada para cálculos com dados de uma amostra.
   \end{block}
-  \begin{block}{Pense...}
+  \begin{block}{Pense...}<2>
+    \footnotesize
       Você tem acesso a toda a população, ou apenas a uma amostra?
+  \end{block}
+\end{frame}
+
+\againframe{oquee}
+
+\begin{frame}
+  \begin{center}
+    \LARGE
+    Quiz!
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Quiz}
+  \begin{block}{Pergunta}
+    \footnotesize
+    O desvio dos dados em relação à média é uma medida de dispersão:
+
+    \bigskip
+    \begin{enumerate}
+      \scriptsize
+    \item Verdadeiro
+    \item \alert<2>{Falso}
+      \invisible{
+    \item 1
+    \item 1
+      }
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Quiz}
+  \begin{block}{Pergunta}
+    \footnotesize
+    São medidas adequadas para descrever o centro dos dados:
+
+    \bigskip
+    \begin{enumerate}
+      \scriptsize
+    \item \alert<2>{Média ($\bar{x}$)}
+    \item Variância ($s^2$)
+    \item Intervalo Interquartil
+    \item \alert<2>{Mediana}
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Quiz}
+  \begin{block}{Pergunta}
+    \footnotesize
+    A medida de dispersão mais utilizada na prática é:
+
+    \bigskip
+    \begin{enumerate}
+      \scriptsize
+    \item Variância ($s^2$)
+    \item Desvio Médio absoluto (MAD)
+    \item \alert<2>{Desvio padrão ($s$)}
+    \item Desvio padrão relativo (DPR)
+    \end{enumerate}
   \end{block}
 \end{frame}
 
 \subsection{Interpretação do DP}
 
-\begin{frame}{Interpretação do DP}
+\begin{frame}{\scriptsize Interpretação do DP}
   \begin{block}{}
-    {\em ``Um pouco mais da metade'' dos valores está a 1 DP da média (considerando amdos os lados)}
+    \footnotesize
+    {\em ``Um pouco mais da metade'' dos valores está a 1 DP da média (considerando ambos os lados)}
   \end{block}
   \begin{block}{}
+    \footnotesize
     {\em ``Quase todos'' os dados estão a 2 DP da média (considerando ambos os lados)}
   \end{block}
   \begin{itemize}
+    \footnotesize
   \item {\em Cenas dos próximos capítulos}
   \end{itemize}
 \end{frame}
@@ -747,24 +1135,20 @@ $$s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1}$$
 
 \subsection{Aprofundamento}
 
-\begin{frame}{Aprofundamento}
+\begin{frame}{\scriptsize Aprofundamento}
   \begin{block}{Leitura obrigatória}
-    Capítulo 3.
-
-    Pular as seções:
+    \footnotesize
+    Capítulo 3. Pular as seções:
     \begin{itemize}
+      \footnotesize
     \item Calculando o DP numa calculadora
     % \item Coeficiente de Variação (CV)
     \end{itemize}
-
   \end{block}
-  \begin{itemize}
-  \item Exercício 1
-  \item Exercício 2
-  \item Exercício 3 (R: 34.64503)
-  \item Exercício 4 (R: 219.4131)
-  \item Exercício 5
-  \end{itemize}
+  \begin{block}{Leitura recomendada}
+    \scriptsize
+    Não há
+  \end{block}
 \end{frame}
 
 \end{document}

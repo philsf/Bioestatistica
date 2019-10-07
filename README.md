@@ -6,21 +6,23 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 
 ## Planejamento de aulas de conteúdo
 
+[Planejamento][projeto2019]
+
 1. Introdução ([PDF][Intro-pdf], [Handout][Intro-handout]) (cap 1)
 2. IC de uma proporção ([PDF][IC-prop-pdf], [Handout][IC-prop-handout]) (cap 2)
 3. Variabilidade ([PDF][Var-pdf], [Handout][Var-handout]) (cap 3)
 4. Distribuição Normal + IC da média ([PDF][IC-1m-pdf], [Handout][IC-1m-handout]) (cap 4, 5)
 5. IC da diferença entre médias ([PDF][IC-2m-pdf], [Handout][IC-2m-handout]) (cap 5, 7)
 6. Comparando ICs de proporções ([PDF][OR-pdf], [Handout][OR-handout]) (cap 8, 9)
-7. Significância ([PDF][signif-pdf], [Handout][signif-handout]) (cap 10, 11)
+7. Significância e Poder ([PDF][signif-pdf], [Handout][signif-handout]) (cap 10, 11)
 8. Testes 2 médias ([PDF][teste-2m-pdf], [Handout][teste-2m-handout]) (cap 23 e 25)
 9. Testes 2 proporções ([PDF][teste-2prop-pdf], [Handout][teste-2prop-handout]) (cap 26 e 27)
 10. Correlação ([PDF][cor-pdf], [Handout][cor-handout]) (cap 17)
-11. Regressão linear simples ([PDF][lm-pdf], [Handout][lm-handout]) (cap 18, 19)
+11. Regressão Linear Simples ([PDF][lm-pdf], [Handout][lm-handout]) (cap 18, 19)
 12. Comparações múltiplas e ANOVA ([PDF][anova-pdf], [Handout][anova-handout]) (cap 13, 30)
-13. Métodos não-paramétricos ([PDF][naopar-pdf], [Handout][naopar-handout]) (Cap 37, 38)
-14. Avaliações
-15. Avaliações
+13. Tópicos em Regressão Logística ([PDF][glm-pdf], [Handout][glm-handout]) (cap 31, 32)
+14. Métodos não-paramétricos ([PDF][naopar-pdf], [Handout][naopar-handout]) (Cap 37, 38)
+15. Avaliação substitutiva
 
 [Intro-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1.pdf
 [Intro-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
@@ -42,27 +44,27 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [teste-2prop-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-testes-2prop-cap26-27_4em1.pdf
 [cor-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17.pdf
 [cor-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Correlacao-cap17_4em1.pdf
-[lm-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19.pdf
-[lm-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-cap18-19_4em1.pdf
+[lm-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Linear-cap18-19.pdf
+[lm-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Linear-cap18-19_4em1.pdf
+[glm-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Logistica-cap31-32.pdf
+[glm-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Regressao-Logistica-cap31-32_4em1.pdf
 [anova-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30.pdf
 [anova-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30_4em1.pdf
 [naopar-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
 [naopar-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38_4em1.pdf
+[projeto2019]: https://github.com/philsf/Bioestatistica/projects/5
 
-## Exercícios selecionados por aula
+## Listas de exercícios
 
-1. Cap 1: não há exercícios.
-2. Cap 2: 1,2 e 4.
-3. Cap 3: todos. 1. Para 3 e 4, no Excel use o commando `=DESVPAD()`.
-4. Cap 4: Exercícios 1 e 2. Cap 5: Exercícios 1, 3, 7 e 9.
-5. Cap 7: Em breve
-6. Cap 8: Exercícios 1, 2, 4 e 5. Cap 9: Exercícios 1 e 2.
-7. Cap 10: todos. Cap 11: todos.
-8. Cap 23: . Cap 25: -
-9. Cap 26: 1. Cap 27: -.
-10. Cap 17: 1,3 e 5. Para o 6, usar r = 0:8868; IC95% = [0:4856; 0:9794]; p = 0:0033: r 2=?
-11. Cap 19: Todos menos o 5.
-12. Cap 13: 1. Cap 30: -
+Após cada aula você deve ler as seções do livro texto determinadas.
+Para fixação dos conceitos, foram selecionados alguns exercícios de cada capítulo, de acordo com os tópicos das aulas.
+Esses exercícios foram selecionados para a prática na interpretação de resultados e análises, bem como seleção de métodos apropriados para cada tipo de problema. 
+
+Esses exercícios tem respostas no final do livro texto.
+É muito importante que você se esforce nesta fixação dos conteúdos - isso servirá como preparação para as avaliações e te auxiliará em seu projeto de mestrado.
+Não deixe de tirar suas dúvidas comigo, eu estou aqui para isso!
+
+Os exercícios foram incorporados na plataforma Google Sala de Aula, de acordo com os Módulos 1, 2 e 3.
 
 ## Licença
 Todo o material contido aqui é distribuído sob a licença [Creative Commons Atribuição](http://creativecommons.org/licenses/by/4.0/deed.pt_BR)

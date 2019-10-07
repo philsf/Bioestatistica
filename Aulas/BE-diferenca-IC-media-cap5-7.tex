@@ -19,7 +19,8 @@
 
   \useinnertheme[shadow]{rounded}
 
-  \setbeamercovered{transparent}
+  % \setbeamercovered{transparent}
+  \setbeamercovered{invisible}
   % or whatever (possibly just delete it)
 }
 
@@ -100,6 +101,7 @@
 
 % \beamerdefaultoverlayspecification{<+->}
 
+\usepackage[normalem]{ulem}
 
 \begin{document}
 
@@ -151,11 +153,11 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Discussão da aula passada}
+% \subsection{Discussão da aula passada}
 
-\begin{frame}{Discussão da aula passada}
+\begin{frame}{\scriptsize Discussão da aula passada}
   \begin{block}{}
     Discussão da leitura obrigatória da aula passada
   \end{block}
@@ -165,12 +167,14 @@
 
 \subsection{A distribuição t de Student}
 
-\begin{frame}{Recapitulando}
+\begin{frame}{\scriptsize Recapitulando}
   \begin{block}{\em Não vá se perder por aí...}
     \begin{itemize}
+      \footnotesize
     \item A distribuição Normal tem {\bf dois} parâmetros
     \item Seu formato é absolutamente definido por
       \begin{itemize}
+        \scriptsize
       \item $\bar{x}$ = Média {\tiny (tendência central)}
       \item $s^2$/$s$ = Variância/DP {\tiny (tendência de dispersão)}
       \end{itemize}
@@ -181,14 +185,16 @@
   \end{block}
   \begin{block}{Nomenclatura}<2->
     \small
-    A {\em Normal Padrão} também é chamada de {\bf distribuição Z}.
+    A distribuição {\em Normal Padrão} também é chamada de {\bf distribuição Z}.
   \end{block}
 \end{frame}
 
-\begin{frame}{Recapitulando}
+\begin{frame}{\scriptsize Recapitulando}
   \begin{itemize}
+    \footnotesize
   \item Vimos que o IC {\tiny(da média)} é composto por 3 componentes
     \begin{itemize}
+      \scriptsize
     \item a média $\bar{x}$ {\tiny(centro)}
     \item o erro padrão da média -- SEM {\tiny(incerteza)}
     \item {\em um tal} de t$^{*}$, que depende de $n$
@@ -199,63 +205,75 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{A distribuição t de Student}
+\begin{frame}{\scriptsize A distribuição t de Student}
   \begin{center}
     \includegraphics[height=\textheight]{Cap5/Guinness}
   \end{center}
 \end{frame}
 
-\begin{frame}{A distribuição t de Student}
+\begin{frame}{\scriptsize A distribuição t de Student}
   \begin{center}
     \includegraphics[height=\textheight]{Cap5/Student-Guinness}
   \end{center}
 \end{frame}
 
-\begin{frame}{A distribuição t de Student}
+\begin{frame}{\scriptsize A distribuição t de Student}
   \begin{itemize}
+    \footnotesize
   \item Student (pseudônimo de W. S. Gossett [1876-1937]\footnote{trabalhando
     para a cervejaria Guiness})
-  \item Distribuição {\bf t} ({\footnotesize baseada na distribuição Normal})
+    \bigskip
+  \item Distribuição {\bf t} ({\tiny baseada na distribuição Normal})
+    \bigskip
   \item Melhor se aproxima dos dados de {\em amostras pequenas}
-%  \item É semelhante à Normal padrão, mas tem variância maior
-  \item 3$^o$ parâmetro \alert{graus de liberdade}\footnote{df em inglês} {\footnotesize vinculado ao tamanho da amostra $n$}.
+    \bigskip
+ % \item Semelhante à Normal padrão (Z), mas tem variância maior
+ %    \bigskip
+  \item 3$^o$ parâmetro \alert{graus de liberdade}\footnote{df em inglês} {\tiny vinculado ao tamanho da amostra $n$}.
     % \begin{displaymath}
     %   gl = n-1
     % \end{displaymath}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Propriedades da distribuição t}
+\begin{frame}{\scriptsize Propriedades da distribuição t}
   \begin{itemize}
+    \footnotesize
   \item A distribuição tem forma de sino {\footnotesize(simétrica, como a Normal)}
   \item Reflete a maior variabilidade \alert{inerente} às amostras pequenas\footnote{graus de liberdade (df) $\approx$ $n$}
   \item Formato {\em depende} do tamanho da amostra ($n$) %\footnote{A distr. Normal depende apenas de $\mu$ e $\sigma$}
   \end{itemize}
+    \bigskip
   \begin{block}{Isto é}
-    Quanto mais graus de liberdade, mais a distribuição $t$ se parece com a distribuição Normal ($Z$)
+    \footnotesize
+    Quanto mais graus de liberdade, mais a distribuição $t$ se parece com a distribuição Normal padrão ($Z$)
   \end{block}
+    \bigskip
   \begin{block}{Pense...}<2->
+    \footnotesize
     O que deve acontecer com \alert{menos} graus de liberdade?
   \end{block}
 \end{frame}
 
-\begin{frame}{A distribuição t de Student}
+\begin{frame}{\scriptsize A distribuição t de Student}
   \begin{figure}
     \includegraphics[height=0.7\textheight]{Cap7/t_graph}
     \caption{\footnotesize Duas distribuições t de Student, e a Normal padrão}
   \end{figure}
 \end{frame}
 
-% \begin{frame}{A tabela t}
+% \begin{frame}{\scriptsize A tabela t}
 %   \begin{center}
 %     \includegraphics[height=0.9\textheight]{Cap7/t_table}
 %   \end{center}
 % \end{frame}
 
 
-\begin{frame}{IC da média (aula passada)}
+\begin{frame}{\scriptsize IC da média (aula passada)}
   \begin{exampleblock}{ICs dos exemplos}
+    \footnotesize
     \begin{itemize}
+      \footnotesize
     \item IC do ex. 5.1 (PS de 100 alunos): [120.6, 126.2] mmHg
     \item IC do ex. 5.2 (PS de   5 alunos): [79.2, 118.8] mmHg
     \end{itemize}
@@ -272,8 +290,9 @@
 
 \end{frame}
 
-\begin{frame}{Alguns valores de $t^{*}$, para diferentes graus de liberdade}
+\begin{frame}{\scriptsize Alguns valores de $t^{*}$, para diferentes graus de liberdade}
   \begin{itemize}
+    \footnotesize
   \item $n = 5\ (df = 4) \Rightarrow t^{*} = 2.776$
   \item $n = 10\ (df = 9) \Rightarrow t^{*} = 2.262$
   \item $n = 15\ (df = 14) \Rightarrow t^{*} = 2.145$
@@ -281,6 +300,7 @@
   \item $n = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Pense...}
+    \footnotesize
     Qual é a relação entre $n$ e o tamanho do IC?
 
     % \begin{displaymath}
@@ -292,8 +312,9 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Alguns valores de $t^{*}$, para diferentes graus de liberdade}
+\begin{frame}{\scriptsize Alguns valores de $t^{*}$, para diferentes graus de liberdade}
   \begin{itemize}
+    \footnotesize
   \item $n = 5\ (df = 4) \Rightarrow t^{*} = 2.776$
   \item $n = 10\ (df = 9) \Rightarrow t^{*} = 2.262$
   \item $n = 15\ (df = 14) \Rightarrow t^{*} = 2.145$
@@ -301,36 +322,42 @@
   \item $n = 30\ (df = 29) \Rightarrow t^{*} = 2.045$
   \end{itemize}
   \begin{block}{Observe que...}
+    \footnotesize
     \begin{itemize}
+      \scriptsize
     \item $df = n - 1$
     \item Para $n$ grande, $t^{*} \rightarrow 1.960$
     \end{itemize}
+    \bigskip
+    \scriptsize
     {\em Por isso} usamos o valor aproximado $2$ no primeiro exemplo.
   \end{block}
 \end{frame}
 
-\begin{frame}{Na prática...}
+\begin{frame}{\scriptsize Na prática...}
   \begin{block}{Distribuição Normal - Z}
-    \small
+    \footnotesize
     {\em Gostaríamos} de poder usar sempre Z como \alert{modelo} para o formato dos nossos dados experimentais.
   \end{block}
   \begin{block}{Distribuição t de Student}
-    \small
     \begin{itemize}
+      \footnotesize
     \item t é uma aproximação da Normal (Z)
-    \item apropriada para $n$ pequeno
+      \medskip
+    \item idealizada para $n$ pequeno
+      \medskip
     \item Com $n$ grande (df $\ge 30$) ela {\em se confunde} com Z.
     \end{itemize}
   \end{block}
-
 \end{frame}
 
-\begin{frame}[label=exercicio5.4]{Exercício 4 (cap 5)}
+\begin{frame}[label=exercicio5.4]{\scriptsize Exercício 4 (cap 5)}
   \begin{exampleblock}{Exercício 4 do cap 5}
-    \small
+    \footnotesize
     Os níveis séricos de um hormônio (fator Y) foram medidos em 100 mulheres não grávidas, e em 100 mulheres com até 3 meses de gravidez.
     Os ICs dos valores dos soros em ambos os grupos são:
     \begin{itemize}
+      \footnotesize
     \item Grávidas: [105.4, 114.6]
     \item Não grávidas: [90.0, 96.0]
     \end{itemize}
@@ -339,22 +366,29 @@
     {\bf O fator Y médio é diferente em mulheres grávidas e não grávidas?}
   \end{exampleblock}
   \begin{block}{Requisito}<2->
+    \footnotesize
     Pelas premissas do IC da média, você tem informações suficientes para calcular/interpretar cada um destes ICs?
   \end{block}
 \end{frame}
 
-\begin{frame}{Pense}
+\begin{frame}{\scriptsize Pense}
+    \footnotesize
   \begin{exampleblock}{Exercício 5.4}
+    \footnotesize
     \begin{itemize}
+      \footnotesize
     \item Não grávidas: [90.0, 96.0]
     \item Grávidas: [105.4, 114.6]
     \end{itemize}
   \end{exampleblock}
+  \bigskip
   Observações:
   \begin{itemize}
-  \item {\small O SEM informa {\em quão bem você estimou a média} de cada grupo}
-  \item {\small Os ICs não tem sobreposição $\Rightarrow$ 2 populações diferentes}
+    \footnotesize
+  \item O SEM informa {\em quão bem você estimou a média} de cada grupo
+  \item Os ICs não tem sobreposição $\Rightarrow$ 2 populações diferentes
   \end{itemize}
+  \bigskip
   \begin{block}{Pense...}
     \begin{center}
       Como comparar estes dois grupos?
@@ -366,8 +400,9 @@
 
 \subsection{Interpretação}
 
-\begin{frame}{Comparações entre 2 médias}
+\begin{frame}{\scriptsize Comparações entre 2 médias}
   \begin{itemize}
+    \footnotesize
   \item Frequentemente precisamos dividir os dados em dois grupos e
     comparar as médias.
 
@@ -382,27 +417,29 @@
 
 \againframe{exercicio5.4}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-  \item $x_1$ Hormônio não grávidas
-  \item $x_2$ Hormônio grávidas (até 3 meses)
+    \footnotesize
+  \item $x_C$ Hormônio não grávidas
+  \item $x_T$ Hormônio grávidas (até 3 meses)
   \item Duas variáveis explícitas
   \end{itemize}
   \begin{block}{Primeira alternativa}
     \small
     \begin{enumerate}
-    \item``Explicar'' a ``relação'' entre o hormônio $x_2$ e o hormônio $x_1$% como ``referência''
-    \item Comparar $x_2$ (grupo de interesse) com $x_1$ (referência)%\footnote{valor médio!}
+      \footnotesize
+    \item``Explicar'' a ``relação'' entre o hormônio $x_T$ e o hormônio $x_C$% como ``referência''
+    \item Comparar $x_T$ (grupo de teste) com $x_C$ (referência)%\footnote{valor médio!}
     \end{enumerate}
   \end{block}
   \begin{block}{Esta relação pode ser expressa como}
     \begin{displaymath}
-      x_2 \sim x _1
+      x_T \sim x _C
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{Uma breve interrupção para mini-pânico}
+\begin{frame}{\scriptsize Uma breve interrupção para mini-pânico}
   \vfill
   \vfill
   \vfill
@@ -411,7 +448,7 @@
   \hfill \small Suspense dramático...
 \end{frame}
 
-\begin{frame}{Uma breve interrupção para mini-pânico}
+\begin{frame}{\scriptsize Uma breve interrupção para mini-pânico}
   \begin{block}{Se você prestou atenção até aqui...}
     Temos \alert{duas} variáveis.
 
@@ -427,12 +464,12 @@
   \end{block}
   \begin{block}{Mais precisamente}
     \begin{displaymath}
-      \text{horm. grávid.} = \text{horm. não grávid.} + \alert{\text{Erro}_1 + \text{Erro}_2}
+      \text{horm. grávid.} = \text{horm. não grávid.} + \alert{\text{Erro}_C + \text{Erro}_T}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{Uma breve interrupção para mini-pânico}
+\begin{frame}{\scriptsize Uma breve interrupção para mini-pânico}
   \begin{center}
     \includegraphics[height=.7\textheight]{Cap7/ogrito}
   \end{center}
@@ -443,15 +480,17 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Duas opções}
+\begin{frame}{\scriptsize Duas opções}
   \begin{exampleblock}{Exercício 5.4}
+    \footnotesize
     \begin{itemize}
+      \footnotesize
     \item Não grávidas: [90.0, 96.0]
     \item Grávidas: [105.4, 114.6]
     \end{itemize}
   \end{exampleblock}
   \begin{block}{Difícil}
-    Calcular os dois ICs ($x_1$ e $x_2$), e compará-los diretamente
+    Calcular os dois ICs ($x_C$ e $x_T$), e compará-los diretamente
   \end{block}
   \begin{block}{Moleza}
     \only<1>{Calcular o IC da diferença ($x_d$) usando o método da aula passada}
@@ -459,7 +498,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{\scriptsize }
   \begin{block}{}
     \large
     Neste caso podemos usar um truque para \alert{trocar} um problema de 2 variáveis por outro de 1 variável.
@@ -471,43 +510,60 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{2 grupos {\em for dummies} \textregistered}
+\begin{frame}{\scriptsize 2 grupos {\em for dummies} \textregistered}
   \begin{block}{Diferença entre 2 médias}
-    \small
     \begin{itemize}
-    \item Comparar duas médias $\bar{x_1}$ e $\bar{x_2}$, consideramos a diferença média $\bar{x_d} = \bar{x_2} - \bar{x_1}$
-    \item Se $\bar{x_2}$ for maior que $\bar{x_1}$  $\Rightarrow$ diferença média é positiva
-    \item Se $\bar{x_2}$ for menor que $\bar{x_1}$  $\Rightarrow$ a diferença média é negativa
+      \scriptsize
+    \item Comparar duas médias $\bar{x_C}$ e $\bar{x_T}$, consideramos a diferença média $\bar{x_d} = \bar{x_T} - \bar{x_C}$
+    \item<2-> Se $\bar{x_T}$ for maior que $\bar{x_C}$  $\Rightarrow$ diferença média é positiva
+    \item<2-> Se $\bar{x_T}$ for menor que $\bar{x_C}$  $\Rightarrow$ a diferença média é negativa
     \end{itemize}
   \end{block}
-  \begin{block}{Intuição}
-    Raciocínio: se as médias forem aproximadamente iguais, {\bf a
-    diferença média ($\bar{x_d}$) será próxima de zero}
+  \begin{block}{Intuição}<3->
+    Raciocínio: se as médias forem aproximadamente iguais...
+
+    \bigskip
+    ... {\bf a diferença média ($\bar{x_d}$) será próxima de zero}
   \end{block}
+  \bigskip
   \begin{center}
-    {\em Pense em \alert{saldo}}
+    \footnotesize
+    {\em Pense em \alert{\bf saldo}}
   \end{center}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Tamanho do efeito}
+  \begin{center}
+    \footnotesize
+    Nesse caso a diferença média ($\bar{x_d}$) é o \alert{efeito observado}
+
+    \bigskip
+    \uncover<2->{Efeitos grandes são mais fáceis de ser detectados}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-  \item $x_1$ Hormônio não grávidas
-  \item $x_2$ Hormônio grávidas (até 3 meses)
-  \item $d = x_2 - x _1$ (uma variável)
+    \footnotesize
+  \item $x_C$ Hormônio não grávidas
+  \item $x_T$ Hormônio grávidas (até 3 meses)
+  \item $d = x_T - x _C$ (uma variável)
   \end{itemize}
   \begin{block}{Segunda alternativa (método da aula passada)}
-    \small
+    \footnotesize
     ``Explicar'' a ``relação'' entre a diferença $d$ e a referência ({\bf zero})
   \end{block}
   \begin{block}{Esta relação pode ser expressa como}
+    \footnotesize
     \begin{displaymath}
       d \sim 0
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{block}{Estratégia proposta}
+    \footnotesize
     Temos duas variáveis.
 
     \bigskip
@@ -518,6 +574,7 @@
     \end{center}
   \end{block}
   \begin{center}
+    \footnotesize
     O que falta?
   \end{center}
   \begin{block}{O que falta?}<2->
@@ -531,7 +588,7 @@
 
 \end{frame}
 
-\begin{frame}{Uma breve interrupção para mini-pânico}
+\begin{frame}{\scriptsize Uma breve interrupção para mini-pânico}
   \begin{center}
     \includegraphics[height=.7\textheight]{Cap7/ogrito}
   \end{center}
@@ -542,21 +599,26 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Erro padrão da diferença}
+\begin{frame}{\scriptsize Erro padrão da diferença}
   \begin{itemize}
+    \footnotesize
   \item Lembre-se que para cada grupo: $SEM = \frac{s}{\sqrt{n}}$
+    \medskip
   \item Para a diferença entre 2 grupos, ``somamos'' os SEM
+    \medskip
   \item Mas esta ``soma'' não é direta!
+    \medskip
   \item É preciso levar em conta o uso do quadrado/raiz quadrada do DP (aula de variabilidade\footnote{não podemos somar DPs, mas podemos somar variâncias})
   \end{itemize}
+  \bigskip
   \begin{block}{}
       \begin{displaymath}
-    SE = \sqrt{SEM_1^2 + SEM_2^2}
+    SEM_d = \sqrt{(SEM_C)^2 + (SEM_T)^2}
   \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{De volta à programação normal}
+\begin{frame}{\scriptsize De volta à programação normal}
   \begin{center}
     \includegraphics[height=.7\textheight]{Cap7/naoentreempanico}
   \end{center}
@@ -567,8 +629,9 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Premissas}
+\begin{frame}{\scriptsize Premissas}
   \begin{itemize}
+    \footnotesize
   \item As amostras foram selecionadas aleatoriamente das respectivas populações
   \item As populações são Normais (Gaussianas)
   \item As duas populações possuem DP idênticos
@@ -579,64 +642,75 @@
 
 \againframe{exercicio5.4}
 
-\begin{frame}{{\small Bastidores do exercício 5.4/7.1}}
+\begin{frame}{\scriptsize Bastidores do exercício 5.4/7.1}
   \begin{exampleblock}{Diferenças: Exercício 5.4 (e 7.1)}
+    \footnotesize
     \begin{exampleblock}{}
+    \footnotesize
       \begin{itemize}
-      \item {\scriptsize Média grávidas: $\bar{x_1} = 110$ unidades/ml}
-      \item {\scriptsize Média não grávidas: $\bar{x_2} = 93$ unidades/ml}
+        \footnotesize
+      \item {\scriptsize Média grávidas: $\bar{x_C} = 110$ unidades/ml}
+      \item {\scriptsize Média não grávidas: $\bar{x_T} = 93$ unidades/ml}
       \item Diferença entre as médias: $\bar{x_d} = \alert{17}$ unidades/ml
       \end{itemize}
     \end{exampleblock}
     \begin{exampleblock}{}
+    \footnotesize
       \begin{itemize}
+        \footnotesize
       \item SEM da diferença: \alert{2.75} unidades/ml
       \end{itemize}
     \end{exampleblock}
     \begin{exampleblock}{}
+    \footnotesize
       \begin{itemize}
-      \item {\scriptsize $n_1$ = 100, $n_2$ = 100}
+        \footnotesize
+      \item {\scriptsize $n_C$ = 100, $n_T$ = 100}
       \item df = (100 -1) + (100 - 1) = \alert{198}
       \end{itemize}
     \end{exampleblock}
     \begin{exampleblock}{}
+    \footnotesize
       \begin{itemize}
+        \footnotesize
       \item $t^{*} = \alert{1.97}$ {\tiny(valor crítico tabelado)}
       \end{itemize}
     \end{exampleblock}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{{\small Solução do exercício 5.4/7.1}}
+\begin{frame}{\scriptsize Solução do exercício 5.4/7.1}
   \begin{exampleblock}{Bastidores: Exercício 5.4 (e 7.1)}
     \tiny
     \begin{itemize}
-    \item Média grávidas: $\bar{x_1} = 110$ unidades/ml
-    \item Média não grávidas: $\bar{x_2} = 93$ unidades/ml
+    \item Média grávidas: $\bar{x_C} = 110$ unidades/ml
+    \item Média não grávidas: $\bar{x_T} = 93$ unidades/ml
     \item Diferença entre as médias: $\bar{x_d} = \alert{17}$ unidades/ml
     \item SEM da diferença: \alert{2.75} unidades/ml
-    \item $n_1$ = 100, $n_2$ = 100
+    \item $n_C$ = 100, $n_T$ = 100
     \item df = (100 -1) + (100 - 1) = \alert{198}
     \item $t^{*} = \alert{1.97}$ {\tiny(valor crítico tabelado)}
     \end{itemize}
   \end{exampleblock}
   \begin{exampleblock}{Resultado: IC da diferença}
+    \footnotesize
     \centering
     {\bf [11.6, 22.4] unidades/ml}
   \end{exampleblock}
   \begin{center}
-    \small
+    \scriptsize
     {\em E o que isso significa?}
   \end{center}
 \end{frame}
 
-\begin{frame}{Solução}
+\begin{frame}{\scriptsize Solução do exercício 5.4/7.1}
   %   \begin{exampleblock}{IC}
   %   \centering
   %   [11.6, 22.4] unidades/ml
   % \end{exampleblock}
   \begin{exampleblock}{Interpretação}
-    Estamos 95\% {\em confiantes} que a diferença \alert{real} entre os grupos está entre 11,6 e 22,4.
+    \scriptsize
+    Estamos 95\% {\em confiantes} que a diferença \alert{real} entre os grupos está entre 11.6 e 22.4.
   \end{exampleblock}
 
   \bigskip
@@ -645,15 +719,17 @@
     o (...) fator Y de uma (...) grávida é (...) 17 unidades/ml maior que uma (...) não grávida (variando entre 11,6 e 22,4 unidades/ml).
   \end{exampleblock}
   \begin{block}{Pense...}<2->
+    \scriptsize
     Preencha as lacunas acima.
   \end{block}
 \end{frame}
 
 \subsection{Participantes: pareados ou não pareados?}
 
-\begin{frame}{Grupos não pareados x pareados}
+\begin{frame}{\scriptsize Grupos não pareados x pareados}
   \begin{block}{Grupos não pareados}
     \begin{itemize}
+      \footnotesize
     \item Até agora assumimos que os grupos e participantes são {\bf independentes}
     \item A única coisa que podemos fazer: {\bf comparação global}
     \item ... a média do grupo A $\times$ a média do grupo B
@@ -661,6 +737,7 @@
   \end{block}
   \begin{block}{Grupos pareados}
     \begin{itemize}
+      \footnotesize
     \item Existe um caso importante em que pode-se considerar que eles são dependentes: quando são pareados
     \item Isto é: cada participante de um grupo tem um correspondente no outro
     \item ... diferença entre cada par $\Rightarrow$ média das diferenças
@@ -668,46 +745,57 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Grupos pareados}
+\begin{frame}{\scriptsize Grupos pareados}
+  \scriptsize
 Quando faz sentido parear indivíduos de dois grupos?
+  \bigskip
   \begin{itemize}
+    \scriptsize
   \item Mensurar o \alert{mesmo} individuo antes e depois do procedimento ({\em baseline} x intervenção)
+    \medskip
   \item Recrutamento aos pares, quando o par tem a(o) mesma(o)
     \begin{itemize}
+      \tiny
     \item idade/faixas etária
     \item região demográfica
     \item diagnóstico
     \end{itemize}
+    \medskip
   \item irmãos, pai/filho
+    \medskip
   \item lateralidade (tratamento = lado E, controle = lado D)
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Qual das estimativas é mais precisa?}
+\begin{frame}{\scriptsize Qual das estimativas é mais precisa?}
   \begin{exampleblock}{Exemplo 7.2}
-    \footnotesize
+    \scriptsize
     Ye e Grantham (1993) estudaram o mecanismo de absorção de fluido em cistos renais removidos de pacientes com doença renal policística.
     Incubaram os cistos em meio de cultura celular e mediram a diferença de peso em cada cisto (antes e depois da incubação).
 
     \scriptsize
     \begin{exampleblock}{Não pareado}
+      \footnotesize
       \begin{enumerate}
+        \footnotesize
       \item<2,4> peso médio (todos, antes) = 6.51g (SEM 2.26g)
       \item<2,4> peso médio (todos, depois) = 7.02g (SEM 2.40g)
-      \item<2,4> IC 95\% [-6.48, 7.50]
+      \item<2,4> IC 95\% da diferença [-6.48, 7.50]
       \end{enumerate}
     \end{exampleblock}
     \begin{exampleblock}{Pareado}
+      \footnotesize
       \begin{enumerate}
+        \footnotesize
       \item<3,4> ganho em {\bf cada} cisto $\Rightarrow$ depois - antes
       \item<3,4> ganho médio dos cistos = 0.50g (SEM 0.23g).
-      \item<3,4> IC 95\% [-0.03, 1.04]
+      \item<3,4> IC 95\% da diferença [-0.03, 1.04]
       \end{enumerate}
     \end{exampleblock}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{IPC}
+\begin{frame}{\scriptsize IPC}
   \begin{block}{}
     A escolha entre grupos pareados e grupos não pareados é estratégica (planejamento do estudo), e não uma questão de ``preferência''.
   \end{block}
@@ -716,44 +804,31 @@ Quando faz sentido parear indivíduos de dois grupos?
 
 \subsection{Aprofundamento}
 
-\begin{frame}{Aprofundamento}
-  \begin{block}{Leitura recomendada}
-    {\bf ICH} - {\bf E10} Choice of Control Group in Clinical Trials
-    \begin{itemize}
-    \item Seção {\bf 2.1} ({\em\footnotesize Placebo Control})
-    \item Cap. {\bf 3} ({\em\footnotesize CHOOSING THE CONCURRENT CONTROL GROUP})
-    \end{itemize}
-
-    \bigskip
-    \href{http://www.ich.org/products/guidelines/efficacy/efficacy-single/article/choice-of-control-group-and-related-issues-in-clinical-trials.html}{http://www.ich.org} {\tiny (este link é clicável)}
-  \end{block}
-\end{frame}
-
-\begin{frame}{Aprofundamento}
+\begin{frame}{\scriptsize Aprofundamento}
   \begin{block}{Leitura obrigatória}
-    \small
-    Capítulo 5. Seção: A distribuição {\em t}
-
-    Capítulo 7: Pular as seções
-    \footnotesize
     \begin{itemize}
-    \item Cálculo do IC de grupos independentes
-    \item Cálculo do IC de grupos pareados
+      \footnotesize
+    \item Capítulo 5. Seção: A distribuição {\em t}
+    \item Capítulo 7: Pular as seções
+      \begin{itemize}
+        \scriptsize
+      \item Cálculo do IC de grupos independentes
+      \item Cálculo do IC de grupos pareados
+      \end{itemize}
     \end{itemize}
   \end{block}
-  \begin{block}{Exercícios de fixação}
-    \small
-    Interprete explicitamente todas as suas respostas.
-    \footnotesize
+  \begin{block}{Leitura recomendada}
     \begin{itemize}
-    \item Cap 5: Exercício 4, 5 itens:
-      \begin{itemize}
-        \footnotesize
-      \item A (IC = [1200.7, 1205.3])
-      \item D (IC =[1201.1, 1204.9]).
-      \end{itemize}
-    \item Cap 7: exercícios 1, 2 (IC = [5.271, 10.129]).
+    \scriptsize
+    \item {\bf ICH} - {\bf E10} Choice of Control Group in Clinical
+      Trials
+    \begin{itemize}
+      \tiny
+    \item Seção {\bf 2.1} ({\em Placebo Control})
+    \item Cap. {\bf 3} ({\em CHOOSING THE CONCURRENT CONTROL GROUP})
     \end{itemize}
+  \end{itemize}
+    \hfill \scriptsize \href{http://www.ich.org/products/guidelines/efficacy/efficacy-single/article/choice-of-control-group-and-related-issues-in-clinical-trials.html}{http://www.ich.org} {\tiny (este link é clicável)}
   \end{block}
 \end{frame}
 

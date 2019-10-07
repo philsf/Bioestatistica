@@ -19,7 +19,8 @@
 
   \useinnertheme[shadow]{rounded}
 
-  \setbeamercovered{transparent}
+  % \setbeamercovered{transparent}
+  \setbeamercovered{invisible}
   % or whatever (possibly just delete it)
 }
 
@@ -100,6 +101,7 @@
 
 % \beamerdefaultoverlayspecification{<+->}
 
+\usepackage[normalem]{ulem}
 
 \begin{document}
 
@@ -151,11 +153,11 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Discussão da aula passada}
+% \subsection{Discussão da aula passada}
 
-\begin{frame}{Discussão da aula passada}
+\begin{frame}{\scriptsize Discussão da aula passada}
   \begin{block}{}
     Discussão da leitura obrigatória da aula passada
   \end{block}
@@ -163,14 +165,24 @@
 
 \section{A distribuição Normal}
 
+\begin{frame}[label=oquee]{\scriptsize Pergunta central da aula}
+  \begin{block}{}
+    \Large\centering
+    O que é o IC em torno da média?
+  \end{block}
+\end{frame}
+
 \subsection{Distribuições de probabilidade}
 
-\begin{frame}{Recapitulando}
+\begin{frame}{\scriptsize Recapitulando}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
-      \item (aula passada)
+        \scriptsize
+      \item ({\tiny aula passada})
+        \bigskip
       \item Pressão sanguínea (PS) de todos os 100 alunos de uma sala
+        \medskip
       \item Visualização da média e variabilidade dos dados
       \end{itemize}
     \end{column}
@@ -180,43 +192,53 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Distribuições de probabilidade - Por que?}
+\begin{frame}{\scriptsize Distribuições de probabilidade - Por que?}
   \begin{itemize}
+    \footnotesize
   \item Distribuições teóricas = \alert{modelos} da realidade
   \item Aprender com os modelos $\Rightarrow$ ferramenta
   \end{itemize}
   \begin{block}{Na vida real}
+    \footnotesize
     Distribuição ``próxima'' de um modelo $\Rightarrow$ metodologia
   \end{block}
 \end{frame}
 
-\begin{frame}[label=exemplo5.1]{Distribuições de dados ``reais''}
+\begin{frame}[label=exemplo5.1]{\scriptsize Distribuições de dados ``reais''}
   \begin{exampleblock}{Exemplo 5.1}
+    \scriptsize
     No exemplo, a PS dos 100 alunos (a turma inteira) foi visualizada em um histograma.
 
+    \bigskip
     Calculando a média, encontramos $\bar{x}$ = 123,4 mmHg.
 
     Calculando o DP, encontramos $s$ = 14,0 mmHg.
   \end{exampleblock}
   \begin{block}{Pense...}
+    \footnotesize
     \begin{itemize}
+      \scriptsize
     \item Se a população for a turma, sabemos a média e o DP {\bf com certeza}
     \item Se a turma é uma amostra de uma população maior, como podemos {\em inferir} os parâmetros da população (digamos, com 95\% de confiança)?
     \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{Distribuições de dados ``reais''}
+\begin{frame}{\scriptsize Distribuições de dados ``reais''}
   \begin{columns}
     \begin{column}{5cm}
       \begin{exampleblock}{Exemplo 5.1}
+        \footnotesize
         \begin{itemize}
+          \scriptsize
         \item $\bar{x}$ = 123,4 mmHg
         \item $s$ = 14,0 mmHg
         \end{itemize}
       \end{exampleblock}
       \begin{block}{}
+        \footnotesize
         \begin{itemize}
+          \scriptsize
         \item Você  {\em vê} a média?
         \item Você  {\em vê} o DP?
         \end{itemize}
@@ -228,13 +250,17 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Observações importantes}
+\begin{frame}{\scriptsize Observações importantes}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
+        \tiny
       \item Muitas medições próximas da média
+        \medskip
       \item Poucas medições de PS muito baixas
+        \medskip
       \item Poucas medições de PS muito altas
+        \medskip
       \item Aprox. simétrica em torno da média
       \end{itemize}
     \end{column}
@@ -247,25 +273,29 @@
 \subsection{A distribuição Normal}
 
 
-\begin{frame}{Distribuição Normal}
+\begin{frame}{\scriptsize Distribuição Normal}
   \begin{center}
     \includegraphics[height=\textheight]{Cap4/normal2}
   \end{center}
 \end{frame}
 
-\begin{frame}{Distribuição Normal, com DP}
+\begin{frame}{\scriptsize Distribuição Normal, com DP}
   \begin{center}
     \includegraphics[height=\textheight]{Cap4/normal4}
   \end{center}
 \end{frame}
 
-\begin{frame}{E esta?}
+\begin{frame}{\scriptsize E esta?}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
+        \tiny
       \item Muitas medições próximas da média?
+        \medskip
       \item Poucas medições de PS muito baixas?
+        \medskip
       \item Poucas medições de PS muito altas?
+        \medskip
       \item Aprox. simétrica em torno da média?
       \end{itemize}
     \end{column}
@@ -275,13 +305,17 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{E esta?}
+\begin{frame}{\scriptsize E esta?}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
+        \tiny
       \item Muitas medições próximas da média?
+        \medskip
       \item Poucas medições de PS muito baixas?
+        \medskip
       \item Poucas medições de PS muito altas?
+        \medskip
       \item Aprox. simétrica em torno da média?
       \end{itemize}
     \end{column}
@@ -291,13 +325,17 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{E esta?}
+\begin{frame}{\scriptsize E esta?}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
+        \tiny
       \item Muitas medições próximas da média?
+        \medskip
       \item Poucas medições de PS muito baixas?
+        \medskip
       \item Poucas medições de PS muito altas?
+        \medskip
       \item Aprox. simétrica em torno da média?
       \end{itemize}
     \end{column}
@@ -309,20 +347,26 @@
 
 \subsection{Inferências}
 
-\begin{frame}{A regra empírica}
+\begin{frame}{\scriptsize A regra empírica}
   \begin{itemize}
-  \item (aula passada)
+    \footnotesize
+  \item ({\tiny aula passada})
+        \bigskip
   \item ``mais da metade'' dos dados estão a 1 DP da média
+        \bigskip
   \item ``quase todos'' os dados estão a 2 DPs da média
   \end{itemize}
 \end{frame}
 
-\begin{frame}{A regra empírica}
+\begin{frame}{\scriptsize A regra empírica}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
+        \footnotesize
       \item 68\% a até 1 DP da média
+        \medskip
       \item 95\% a até 2 DP da média
+        \medskip
       \item 99,7\% a até 3 DP da média
       \end{itemize}
     \end{column}
@@ -332,11 +376,23 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}{\scriptsize Atenção}
+  \begin{block}{}
+    \begin{center}
+      \Large
+      A regra empírica assume que...
+
+      \bigskip
+      ... os dados são normalmente distribuídos.
+    \end{center}
+  \end{block}
+\end{frame}
+
 \section{IC da média}
 
 \subsection{Interpretação}
 
-\begin{frame}{Exemplos}
+\begin{frame}{\scriptsize Exemplos}
   \begin{center}
     Vamos recapitular o exemplo 5.1, antes de introduzir outro.
   \end{center}
@@ -344,167 +400,378 @@
 
 \againframe{exemplo5.1}
 
-\begin{frame}{Distribuições de dados ``reais''}
+\begin{frame}{\scriptsize Distribuições de dados ``reais''}
   \begin{exampleblock}{Exemplo 5.2}
+    \scriptsize
     Das 100 medições de PS, você amostrou aleatoriamente 5 medições.
 
     Valores aproximados: 120, 80, 90, 110 e 95 mmHg.
 
+    \bigskip
     Calculando a média, encontramos $\bar{x}$ = 99,0 mmHg.
 
     Calculando o DP, encontramos $s$ = 15,97 mmHg.
   \end{exampleblock}
   \begin{block}{Pense...}
+    \footnotesize
     \begin{itemize}
+      \scriptsize
     \item Se a população for a turma, podemos estimar a média e o DP da turma com os valores desta amostra?
     \item Se a turma é uma amostra de uma população maior, esta estimativa nos dá ``mais confiança'' sobre a população, ou menos?
     \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{IC da média}
+\begin{frame}{\scriptsize IC da média}
   \begin{exampleblock}{ICs dos exemplos}
+    \footnotesize
     \begin{itemize}
-    \item O IC do exemplo 5.1: 120,6 até 126,2 mmHg
-    \item O IC do exemplo 5.2: 79,2 até 118,8 mmHg
+      \footnotesize
+    \item IC do exemplo 5.1: 120,6 até 126,2 mmHg
+        \medskip
+    \item IC do exemplo 5.2: 79,2 até 118,8 mmHg
     \end{itemize}
   \end{exampleblock}
+  \begin{block}{Relembre...}<2->
+    \footnotesize
+    O que significa o IC?
+  \end{block}
   \begin{block}{Pense...}
+    \footnotesize
     Observe os tamanhos dos ICs.
   \end{block}
 \end{frame}
 
 \subsection{Premissas}
 
-\begin{frame}{Premissas}
+\begin{frame}{\scriptsize Premissas}
+  \scriptsize
   Assumimos que estas coisas são verdadeiras para calcular/interpretar um IC
+  \bigskip
+  \bigskip
   \begin{itemize}
+    \scriptsize
   \item A amostra foi selecionada aleatoriamente da população (sem reposição)
+  \medskip
   \item A população é Normal (Gaussiana)
+  \medskip
   \item Os indivíduos são independentes, uns dos outros
   \end{itemize}
 \end{frame}
 
 \subsection{O Erro Padrão}
 
-\begin{frame}{Teorema do Limite Central}
+\begin{frame}{\scriptsize Teorema do Limite Central}
   Vídeo
 \end{frame}
 
-\begin{frame}{ Variabilidade x Erro Padrão}
+\begin{frame}{\scriptsize Variabilidade x Erro Padrão}
   \begin{block}{Variabilidade}
+    \footnotesize
     A variabilidade nos informa sobre a dispersão da amostra/população.
   \end{block}
   \begin{block}{O erro padrão}
+    \footnotesize
     O Erro Padrão nos informa quão boa é nossa \alert{estimativa} da média.
   \end{block}
 \end{frame}
 
-\begin{frame}{O Erro Padrão - definição}
+\begin{frame}{\scriptsize O Erro Padrão - definição}
   \begin{displaymath}
-    SEM = \frac{s}{\sqrt{N}}
+    SEM = \frac{s}{\sqrt{n}}
   \end{displaymath}
+  \bigskip
   \begin{itemize}
-  \item SEM = Erro Padrão da Média (em inglês)
-  \item Conforme N aumenta, SEM diminui
-  \item Conforme N aumenta, $\bar{x}$ se aproxima média da população
+    \scriptsize
+  \item SEM = Erro Padrão da Média ({\tiny em inglês})
+    \medskip
+  \item Conforme $n$ aumenta $\Rightarrow$ SEM diminui
+    \medskip
+  \item Conforme $n$ aumenta $\Rightarrow$ $\bar{x}$ ``próximo'' de $\mu$
   \end{itemize}
+  \bigskip
+  \begin{block}{Lembrete}
+    \tiny
+    \begin{itemize}
+    \footnotesize
+    \item $\bar{x}$ -- média da amostra (resultado/possível)
+    \item $\mu$ -- média da população (objetivo/inferência)
+    \end{itemize}
+  \end{block}
 \end{frame}
 
-\begin{frame}{O Erro Padrão - Interpretação}
+\begin{frame}{\scriptsize O Erro Padrão - Interpretação}
   \begin{block}{Interpretação}
+    \footnotesize
     Quando queremos {\bf inferir} a média da população a partir de uma amostra, qual é a incerteza associada a esta estimativa?
   \end{block}
   \begin{block}{Pense...}<2->
+    \footnotesize
     E o desvio-padrão $s$?
   \end{block}
 \end{frame}
 
-\begin{frame}{O Erro Padrão}
+\begin{frame}{\scriptsize O Erro Padrão -- IC da média}
   \begin{displaymath}
     IC: \bar{x} \pm t^{*} \times SEM
   \end{displaymath}
   \begin{itemize}
-  \item M = média
+    \footnotesize
+  \item $\bar{x}$ = média
+    \medskip
+  \item $t^{*}$ é fixo ({\tiny constante})
+    \medskip
   \item Para amostras {\bf grandes}, $t^{*} \approx$ 2.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{O Erro Padrão - IC da média}
+\begin{frame}{\scriptsize O Erro Padrão -- IC da média}
   \begin{displaymath}
-    IC: \bar{x} \pm 2 \times SEM
+    IC: \bar{x} \pm t^{*} \times SEM
   \end{displaymath}
+  \begin{block}{Perguntas}
+    \begin{enumerate}
+      \footnotesize
+    \item<1-> Se $s$ aumenta, o SEM aumenta ou diminui?
+    \item<2-> Se $s$ aumenta, o IC aumenta ou diminui?
+    \item<3-> Se $t^{*}$ aumenta, o IC aumenta ou diminui?
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    De onde vem o IC apresentado no exemplo?
+
+    \bigskip
+    O que é necessário para seu cálculo?
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize O Erro Padrão -- IC da média}
   \begin{exampleblock}{Exemplo 5.1}
-    \begin{itemize}
-    \item $s$ = 14,0 e N = 100
-    \item $SEM = \frac{14}{\sqrt{100}} = 1.4$
-    \item IC =  $123.4 \pm 2 \times 1.4$
-    \item IC =  $123.4 \pm 2.8$
+    \scriptsize
+    \begin{displaymath}
+      IC: \bar{x} \pm t^{*} \times SEM
+    \end{displaymath}
+    \begin{exampleblock}{}
+      \begin{itemize}
+        \tiny
+      \item $\bar{x} = 123.4$ mmHg, $s = 14.0$ mmHg e $N = 100$
+      \item $SEM = \frac{14}{\sqrt{100}} = 1.4$ mmHg
+      \item $t^{*} \approx$ 2
+      \end{itemize}
+    \end{exampleblock}
+    \begin{exampleblock}{}
+      \begin{itemize}
+        \tiny
+      \item IC =  $123.4 \pm 2 \times 1.4$ mmHg
+      \item IC =  $123.4 \pm 2.8$ mmHg
+      \end{itemize}
+    \end{exampleblock}
     \bigskip
-    \item IC $\approx$ [120.6, 126.2]
-    \end{itemize}
+    \begin{exampleblock}{}
+      \footnotesize
+      \centering
+      {\bf IC $\approx$ [120.6, 126.2] mmHg}
+    \end{exampleblock}
+    \medskip
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Pense...}
-  \begin{exampleblock}{}
+\begin{frame}{\scriptsize Pense...}
+  \begin{exampleblock}{Dados dos exemplos}
+    \footnotesize
     \begin{itemize}
-    \item {\bf Ex. 5.1:} $\bar{x}$ = 123,4 e $s$ = 14,0 mmHg ($N=100$)
-    \item {\bf Ex. 5.2:} $\bar{x}$ = 99,0 e $s$ = 15,97 mmHg ($N=5$)
+      \tiny
+    \item {\bf Ex. 5.1:} $\bar{x}$ = 123,4 mmHg e $s$ = 14,0 mmHg ($N=100$)
+    \item {\bf Ex. 5.2:} $\bar{x}$ = 99,0 mmHg e $s$ = 15,97 mmHg ($N=5$)
     \end{itemize}
   \end{exampleblock}
-  \begin{block}{Pergunta - podemos reproduzir o mesmo método?}
+    \bigskip
+  \begin{block}{Podemos reproduzir o mesmo método do 5.1 no 5.2?}
+    \footnotesize
   \begin{itemize}
-  \item SEM do exemplo 5.1 = 1,4
-  \item SEM do exemplo 5.2 = 6,3?
+    \footnotesize
+  \item SEM do exemplo 5.1 = 1,4 mmHg $\Rightarrow$ IC: 120,6 -- 126,2 mmHg
+  \item<2-> SEM do exemplo 5.2 = 6,3 mmHg? $\Rightarrow$ IC?
   \end{itemize}
   \end{block}
 \end{frame}
 
-\begin{frame}{}
-    \begin{block}{Pergunta - podemos reproduzir o mesmo método?}
+\begin{frame}{\scriptsize }
+    \begin{block}{Podemos reproduzir o mesmo método do 5.1 no 5.2?}
+    \footnotesize
   \begin{itemize}
-  \item SEM do exemplo 5.1 = 1,4
-  \item SEM do exemplo 5.2 = 6,3?
+    \footnotesize
+  \item SEM do exemplo 5.1 = 1,4 mmHg
+  \item SEM do exemplo 5.2 = 6,3 mmHg
   \end{itemize}
   \end{block}
+  \bigskip
+  \visible<2->{
   \begin{block}{Resposta}
-    Não! Pois N=5 não é grande!
+    \footnotesize
+    {\bf Não!} \visible<3->{Pois N=5 não é grande!} \visible<4>{\hfill {\tiny E daí?}}
 
-    \bigskip
-    Isso faz com que o SEM do exemplo 5.2 seja muito maior (como vimos).
+    \medskip
+    \visible<5->{
+    Isso faz com que a aproximação $t^{*} \approx 2$ não seja válida.
+    }
   \end{block}
-  \begin{exampleblock}{ICs dos exemplos}
+  }
+  \begin{exampleblock}{Lembrete -- ICs dos exemplos}
+    \footnotesize
     \begin{itemize}
-    \item O IC do exemplo 5.1: 120,6 até 126,2 mmHg
-    \item O IC do exemplo 5.2: 79,2 até 118,8 mmHg
+      \scriptsize
+    \item O IC do exemplo 5.1: 120,6 -- 126,2 mmHg
+    \item O IC do exemplo 5.2: 79,2 -- 118,8 mmHg
     \end{itemize}
   \end{exampleblock}
 \end{frame}
+
+\begin{frame}{\scriptsize }
+  \begin{exampleblock}{Lembrete -- ICs dos exemplos}
+    \footnotesize
+    \begin{itemize}
+      \tiny
+    \item O IC do exemplo 5.1: 120,6 -- 126,2 mmHg
+    \item O IC do exemplo 5.2: \alert{\footnotesize 79,2 -- 118,8 mmHg}
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{No caso do exemplo 5.2}
+    \footnotesize
+    \begin{itemize}
+      \tiny
+    \item {\bf $\bar{x}$ = 99 mmHg}, SEM $\approx$ 6 mmHg
+    \item A margem de erro seria {\footnotesize {\bf 2} $\times $ 6 $\approx$ 12 mmHg}
+    \end{itemize}
+    \medskip
+    $\Rightarrow$ O IC proposto seria \alert{87 -- 111 mmHg}
+  \end{block}
+  \begin{block}{Pense...}
+    \footnotesize
+    Qual parece ser a margem de erro {\em real} do IC acima?
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize }
+  \begin{exampleblock}{Lembrete -- ICs dos exemplos}
+    \footnotesize
+    \begin{itemize}
+      \tiny
+    \item O IC do exemplo 5.1: 120,6 -- 126,2 mmHg
+    \item O IC do exemplo 5.2: \alert{\footnotesize 79,2 -- 118,8 mmHg}
+    \end{itemize}
+  \end{exampleblock}
+  \begin{block}{No caso do exemplo 5.2}
+    \footnotesize
+    \begin{itemize}
+      \tiny
+    % \item O SEM veio da ``fórmula''
+    \item Ambos SEM (5.1 e 5.2) estão corretos
+    \item O IC proposto seria \alert{\footnotesize 87 -- 111 mmHg}
+    \end{itemize}
+    \medskip
+    $t^{*} \approx$ 2 $\Rightarrow$ erro no 5.2
+  \end{block}
+  \begin{block}{Pense...}
+    \footnotesize
+    Qual é a sua conclusão sobre esse $t^{*}$ misterioso?
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize A estatística t}
+  \begin{block}{}
+    Esse $t^{*}$ é uma {\em estatística}...
+
+    \bigskip
+    ... que veremos na próxima aula.
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \LARGE
+    Quiz!
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Quiz}
+  \begin{block}{Pergunta}
+    \footnotesize
+    O erro padrão, assim como o desvio padrão, é uma medida descritiva de dispersão:
+
+    \bigskip
+    \begin{enumerate}
+      \scriptsize
+    \item Verdadeiro
+    \item \alert<2>{Falso}
+      \invisible{
+    \item 1
+    \item 1
+      }
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Quiz}
+  \begin{block}{Pergunta}
+    \footnotesize
+    São necessários para p cálculo do IC em torno da média:
+
+    \bigskip
+    \begin{enumerate}
+      \scriptsize
+    \item \alert<2>{Desvio padrão ($s$)}
+    \item \alert<2>{Observações independentes}
+    \item \alert<2>{Média ($\bar{x}$)}
+    \item \alert<2>{N}
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Quiz}
+  \begin{block}{Pergunta}
+    \footnotesize
+    Existem infinitas distribuições Normais.
+
+    \bigskip
+    \begin{enumerate}
+      \scriptsize
+    \item \alert<2>{Verdadeiro}
+    \item Falso
+      \invisible{
+    \item 1
+    \item 1
+      }
+    \end{enumerate}
+  \end{block}
+\end{frame}
+
+\againframe{oquee}
 
 \section{Aprofundamento}
 
 \subsection{Aprofundamento}
 
-\begin{frame}{Aprofundamento}
+\begin{frame}{\scriptsize Aprofundamento}
   \begin{block}{Leitura obrigatória}
-    Capítulo 4. Pular a seção {\bf Intervalo de Predição}.
-
-    Capítulo 5. Pular as seções:
     \begin{itemize}
-    \item Calculando o IC da média
-    \item A distribuição {\em t} (será abordado na próxima aula)
+      \footnotesize
+    \item Capítulo 4. Pular a seção {\bf Intervalo de Predição}.
+    \item Capítulo 5. Pular as seções:
+      \begin{itemize}
+        \scriptsize
+      \item Calculando o IC da média
+      \item A distribuição {\em t} ({\tiny será abordado na próxima aula})
+      \end{itemize}
     \end{itemize}
-
   \end{block}
   \begin{block}{Leitura recomendada}
+    \scriptsize
     Capítulo 4. seção {\bf Intervalo de Predição}.
   \end{block}
-  \begin{itemize}
-  \item Cap 4: Exercícios 1 e 2.
-  \item Cap 5: exercícios 1, 3, 7 e 9.
-  % \item Cap 5: exercício 5, item A. Use $t^{*}$ = 2.
-  \end{itemize}
 \end{frame}
 
 \end{document}

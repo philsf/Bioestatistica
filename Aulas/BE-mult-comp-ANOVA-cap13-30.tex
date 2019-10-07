@@ -44,10 +44,10 @@
 
 
 \title%[] % (optional, use only with long paper titles)
-{Tópicos Avançados}
+{Comparações múltiplas e ANOVA}
 
 \subtitle
-{Comparação de 3 ou mais grupos - ANOVA e afins} % (optional)
+{\small Teste paramétrico para vários grupos (desfecho quantitativo)} % (optional)
 
 \author%[] % (optional, use only with lots of authors)
 {Felipe Figueiredo}% \and S.~Another\inst{2}}
@@ -101,6 +101,7 @@
 
 % \beamerdefaultoverlayspecification{<+->}
 
+\usepackage[normalem]{ulem}
 
 \begin{document}
 
@@ -152,11 +153,11 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Discussão da aula passada}
+% \subsection{Discussão da aula passada}
 
-\begin{frame}{Discussão da aula passada}
+\begin{frame}{\scriptsize Discussão da aula passada}
   \begin{block}{}
     Discussão da leitura obrigatória da aula passada
   \end{block}
@@ -164,51 +165,218 @@
 
 \section{Comparações múltiplas}
 
+\subsection[Coincidências]{O acaso prega peças}
+
+\begin{frame}{\scriptsize }
+  \begin{exampleblock}{Exemplo 13.2}
+    \footnotesize
+    5 crianças de uma escola tiveram leucemia, ano passado.
+
+    \begin{itemize}
+      \footnotesize
+    \item Isto é uma coincidência?
+    \item Esse agrupamento de casos sugere a presença de toxina ou efeito ambiental que causou a doença?
+
+      \bigskip
+      \begin{exampleblock}{}
+        \footnotesize
+        Qual é a probabilidade de se observar 5 casos {\em nesta} escola, em um ano?
+      \end{exampleblock}
+    \end{itemize}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{\scriptsize }
+  \begin{itemize}
+    \footnotesize
+  \item Considerando a incidência de leucemia, isto parece ser um dado extraordinário
+    \bigskip
+    \bigskip
+  \item Esta é a pergunta errada, {\em após} observar os casos nesta escola
+  \item Se escola não é especial, é preciso considerar outras escolas
+    \bigskip
+    \bigskip
+  \item Além disso, outras doenças (por ex., asma é um fator?)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\scriptsize Coincidências podem não ser tão raras assim}
+  \begin{enumerate}
+    \footnotesize
+  \item Você formulou a hipótese após observar o agrupamento de casos
+    \bigskip
+  \item Você só destacou a escola por causa do agrupamento
+    \bigskip
+  \item Agrupamentos ocorrem ao acaso
+    \bigskip
+  \item Definir população:
+    \begin{itemize}
+      \footnotesize
+    \item População de escolas (cidade, estado...?)
+    \item Tempo de observação (mês, ano, década...?)
+    \end{itemize}
+  \end{enumerate}
+  \begin{block}{}
+    \small
+    Considerando o tempo, e o número de escolas da população...
+
+    \bigskip
+    ... um agrupamento deste tamanho é realmente improvável?
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize }
+  \begin{exampleblock}{Exemplo 13.2}
+    \footnotesize
+    5 crianças de uma escola tiveram leucemia, ano passado.
+
+    \begin{itemize}
+      \footnotesize
+    \item Isto é uma coincidência?
+    \item Esse agrupamento de casos sugere a presença de toxina ou efeito ambiental que causou a doença?
+
+      \bigskip
+      \begin{exampleblock}{}
+        \footnotesize
+      \sout{Qual é a probabilidade de se observar 5 casos {\em nesta} escola, em um ano?}
+    \end{exampleblock}
+
+    \end{itemize}
+  \end{exampleblock}
+  \begin{exampleblock}{Pergunta correta}
+    \footnotesize
+    {\bf Qual é a probabilidade de se observar 5 casos {\em em alguma} escola, em um ano?}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{\scriptsize }
+  \begin{center}
+    Coincidências podem ocorrer ao testar múltiplas hipóteses
+  \end{center}
+\end{frame}
+
 \subsection{Comparações múltiplas}
 
-\begin{frame}{Como comparar três ou mais grupos?}
-  \begin{itemize}
-  \item ``Comparar'' é um termo vago - precisamos de um critério bem definido!
-  \end{itemize}
+\begin{frame}{\scriptsize Como comparar dois grupos?}
+  \begin{center}
+    \small
+    ``Comparar'' é um termo vago...
+
+    \bigskip
+    ... precisamos de um critério bem definido!
+  \end{center}
+  \bigskip
   \begin{block}{Para comparar quanto às variâncias dos grupos}
+    \footnotesize
     Podemos usar
     \begin{itemize}
+      \footnotesize
+    \item Teste F
+    \item<0>
+    \end{itemize}
+  \end{block}
+  \bigskip
+  \begin{block}{Para comparar quanto às médias dos grupos}
+    \footnotesize
+    Teste t
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Como comparar três ou mais grupos?}
+  \begin{center}
+    \small
+    ``Comparar'' é um termo vago...
+
+    \bigskip
+    ... precisamos de um critério bem definido!
+  \end{center}
+  \bigskip
+  \begin{block}{Para comparar quanto às variâncias dos grupos}
+    \footnotesize
+    Podemos usar
+    \begin{itemize}
+      \footnotesize
     \item Teste de Levene
     \item Teste de Bartlett
     \end{itemize}
   \end{block}
+  \bigskip
   \begin{block}{Para comparar quanto às médias dos grupos}
-    {\em Pay attention}
+    \footnotesize
+    Teste ...
   \end{block}
 \end{frame}
   
-\begin{frame}[label=requisito]{Como comparar médias}
+\begin{frame}[label=requisito]{\scriptsize Como comparar médias}
   \begin{itemize}
+    \footnotesize
   \item Vimos que o {\bf teste t} pode ser usado para comparar duas médias
-  \item Assumindo que atendemos às premissas do teste t, precisamos levar em conta:
+    \bigskip
+  \item Assumindo que atendemos às premissas do teste t, consideramos:
     \begin{itemize}
-    \item variabilidade dos grupos
-    \item tamanho do estudo (n)
+      \footnotesize
+    \item variabilidade dos grupos\footnote{\scriptsize Se possível, semelhantes. Caso contrário, correção de Welch.}
+    \item tamanho do estudo (n)\footnote{\scriptsize Componente do DP e do SEM. Usado como GL para o t crítico.}
     \end{itemize}
   \end{itemize}
+  \bigskip
   \begin{block}{Requisitos não óbvios (além das médias)}
     desvio padrão + n = erro padrão
   \end{block}
 \end{frame}
 
-\begin{frame}
-  \begin{block}{}
-    O que é necessário para decidir se 3 (ou mais) grupos possuem médias diferentes?
+\begin{frame}[label=exercicio-enunciado]{\scriptsize Exercício}
+  \begin{exampleblock}{Exercício}
+    \footnotesize
+    Um cirurgião testa duas drogas para auxiliar a recuperação pós cirúrgica, e mensura a área cicatrizada ($y$) em uma semana.
+
+    \bigskip
+    São considerados os tratamentos A e B e um Placebo.
+
+    \bigskip
+    Foram selecionados 8 participantes para cada um dos três grupos.
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{\scriptsize Quais são as variáveis?}
+  \begin{itemize}
+    \footnotesize
+  \item Dependente:
+    \begin{itemize}
+      \scriptsize
+    \item numérica contínua
+    \end{itemize}
+  \item Independentes:
+    \begin{itemize}
+      \scriptsize
+    \item grupo (categórica nominal -- 3 níveis)
+    \end{itemize}
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{Área cicatrizada} \sim \text{Grupo de tratamento}
+    \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{Esses 3 grupos têm médias diferentes?}
+\begin{frame}[label=ident-visual]{\scriptsize }
+  \begin{center}
+    \large
+    Você consegue decidir {\bf visualmente}...
+
+    \bigskip
+    ... se 3 grupos têm médias diferentes?
+  \end{center}
+\end{frame}
+
+\begin{frame}[label=cenario1]{\scriptsize Cenário 1 -- esses 3 grupos têm médias diferentes?}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap13-30/cenario1}
   \end{center}
 \end{frame}
 
-\begin{frame}{Médias: Placebo: 4.210, Tratamento A: 3.250, Tratamento B: 3.845}
+\begin{frame}{\scriptsize Médias: Placebo: 5.945, Tratamento A: 5.027, Tratamento B: 5.110}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap13-30/cenario1_medias}
 
@@ -216,13 +384,13 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{E estes 3 grupos?}
+\begin{frame}[label=cenario2]{\scriptsize Cenário 2 -- esses 3 grupos têm médias diferentes?}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap13-30/cenario2}
   \end{center}
 \end{frame}
 
-\begin{frame}{Médias: Placebo: 4.559, Tratamento A: 5.855, Tratamento B: 5.928}
+\begin{frame}{\scriptsize Médias: Placebo: 3.928, Tratamento A: 6.751, Tratamento B: 5.799}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap13-30/cenario2_medias}
 
@@ -230,37 +398,45 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Comparação entre 3 (ou mais) grupos}
+\begin{frame}{\scriptsize Comparação entre 3 (ou mais) grupos}
   \begin{block}{Abordagem mais simples}
-    Uma ideia seria usar o teste t três vezes, comparando os grupos aos pares.
+    \small
+    Uma ideia seria usar o teste t três vezes...
 
     \bigskip
-    Testar se há diferenças significativas, e seus respectivos tamanhos.
+    ... comparando os grupos, dois a dois.
   \end{block}
-
-  \begin{exampleblock}{Exemplo}
+  \vfill
+  \begin{block}{Proposta}
     \begin{enumerate}
+      \footnotesize
     \item Placebo x Tratamento A
     \item Placebo x Tratamento B
     \item Tratamento A x Tratamento B
     \end{enumerate}
-  \end{exampleblock}
+  \end{block}
 \end{frame}
 
-\begin{frame}{Exemplo 1}
+\begin{frame}[label=cenario1-prob]{\scriptsize Cenário 1}
   \begin{columns}
     \begin{column}{5cm}
-      \begin{exampleblock}{P-valores dos 3 testes t}
-        \tiny
+      \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
+        \footnotesize
         \begin{enumerate}
-        \item Placebo x Trat. A $\Rightarrow p=0.02652$
-        \item Placebo x Trat. B $\Rightarrow p=0.4331$
-        \item Trat. A x Trat. B $\Rightarrow p=0.09686$
+          \tiny
+        \item Placebo x Trat. A $\Rightarrow p=0.025$
+        \item Placebo x Trat. B $\Rightarrow p=0.100$
+        \item Trat. A x Trat. B $\Rightarrow p=0.876$
         \end{enumerate}
       \end{exampleblock}
-      \begin{exampleblock}{Pergunta}
-        \small
-        Qual é a conclusão correta quanto à comparação destes grupos?
+      \bigskip
+      \bigskip
+      \begin{exampleblock}{\footnotesize Pergunta}
+        \footnotesize
+        Os tratamentos são diferentes do placebo?
+
+        \bigskip
+        E entre si?
       \end{exampleblock}
     \end{column}
     \begin{column}{5cm}
@@ -269,22 +445,24 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{Exemplo 2}
+\begin{frame}[label=cenario2-prob]{\scriptsize Cenário 2}
   \begin{columns}
     \begin{column}{5cm}
-      \begin{exampleblock}{P-valores dos 3 testes t}
-        \tiny
+      \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
         \begin{enumerate}
-        \item Placebo x Trat. A $\Rightarrow p=0.0399$
-        \item Placebo x Trat. B $\Rightarrow p=0.02235$
-        \item Trat. A x Trat. B $\Rightarrow p=0.8432$
+          \tiny
+        \item Placebo x Trat. A $\Rightarrow p< 0.0001$
+        \item Placebo x Trat. B $\Rightarrow p=0.00037$
+        \item Trat. A x Trat. B $\Rightarrow p=0.02943$
         \end{enumerate}
       \end{exampleblock}
-      \begin{exampleblock}{Pergunta}
-        \small
-        E no segundo cenário?
-
+      \bigskip
+      \bigskip
+      \begin{exampleblock}{\footnotesize Pergunta}
+        \footnotesize
         Os tratamentos são diferentes do placebo?
+
+        \bigskip
         E entre si?
       \end{exampleblock}
     \end{column}
@@ -294,78 +472,71 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{\scriptsize }
   \begin{center}
     Existe um problema oculto aí.
   \end{center}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{\scriptsize }
   \begin{center}
     O problema é...
   \end{center}
-
-  % \uncover<2>
   \begin{block}{}<2->
-    A conclusão de que no Exemplo 1 os 3 grupos são diferentes está {\bf errada}!
-      \end{block}
+    \begin{itemize}
+      \footnotesize
+    \item A conclusão de que no Cenário 1 os 3 grupos são diferentes está {\bf errada}!
+    \item No Cenário 2, os 2 tratamentos {\bf não são} diferentes entre si!
+    \end{itemize}
+  \end{block}
+  \bigskip
   \begin{itemize}
+    \scriptsize
   \item<3-> O teste t permite a avaliação de {\bf uma} hipótese
-  \item<3-> Testamos simultaneamente várias \footnote{Leia várias vezes o Cap 13!}
+  \item<3-> Testamos simultaneamente três\footnote{Leia várias vezes o Capítulo 13!}
   \item<3-> Isto aumenta a chance de cometermos um erro tipo I (falso positivo)
-  \item<3-> Múltiplos testes superestimam o p-valor do método
   \end{itemize}
+  \vfill
+  \begin{block}{}
+    \footnotesize
+    {\bf Nível de significância de cada teste $\ne$ nível de significância global.}
+  \end{block}
 \end{frame}
 
-\begin{frame}{Pensar é obrigatório}
+\begin{frame}{\scriptsize Pensar é obrigatório}
+  \begin{block}{}
+    \small
+    Os testes estatísticos (e fórmulas) não ``sabem'' o que foi levado em conta no estudo.
+  \end{block}
+  \bigskip
+  \bigskip
   \begin{itemize}
-  \item Os testes estatísticos (e fórmulas) não ``sabem'' o que foi levado em conta no estudo.
-  \item {\em Só o pesquisador sabe}
-  \item A metodologia da análise precisa levar em conta todo o planejamento do estudo.
+    \footnotesize
+  \item {\em Só o pesquisador sabe.}
+    % \smallskip
+  \item A metodologia da análise precisa levar em conta todo o planejamento do estudo\footnote{Leia várias vezes o Capítulo 13!}.
   \end{itemize}
+  \bigskip
+  \bigskip
+  \bigskip
+  \begin{block}{}
+    \footnotesize
+    {\bf Nível de significância de cada teste $\ne$ nível de significância global.}
+  \end{block}
 \end{frame}
 
-\begin{frame}
-  \begin{exampleblock}{Exemplo 13.2}
-    5 crianças de uma escola tiveram leucemia, ano passado.
-
-    \begin{itemize}
-    \item Isto é uma coincidência?
-    \item Esse agrupamento de casos sugere a presença de toxina ou efeito ambiental que causou a doença?
-
-      \bigskip
-      {\bf Qual é a probabilidade de se observar 5 casos {\em nesta} escola, em um ano?}
-    \end{itemize}
-  \end{exampleblock}
-\end{frame}
-
-\begin{frame}
+\begin{frame}{\scriptsize }
   \begin{itemize}
-  \item Considerando a incidência de leucemia, isto parece ser um dado extraordinário
-  \item Esta é a pergunta errada, {\em após} observar os casos nesta escola.
-  \item Se escola não é especial, é preciso considerar outras escolas
-  \item Além disso, outras doenças (por ex., asma é um fator?).
+    \footnotesize
+  \item Ao testar uma hipótese, assumimos 5\% de erro tipo I
+    \bigskip
+    \bigskip
+  \item Mas se testarmos 100 hipóteses, o número esperado de falsos positivos é 5!
+  \item Se os testes forem independentes, a probabilidade de {\bf pelo menos 1} erro tipo I é 99.4\%.\footnote{\tiny \url{https://en.wikipedia.org/wiki/Multiple_comparisons_problem}}
   \end{itemize}
-
-\end{frame}
-\begin{frame}
-  \begin{exampleblock}{Exemplo 13.2}
-    5 crianças de uma escola tiveram leucemia, ano passado.
-
-    \begin{itemize}
-    \item Isto é uma coincidência?
-    \item Esse agrupamento de casos sugere a presença de toxina ou efeito ambiental que causou a doença?
-
-      \bigskip
-      {\bf Qual é a probabilidade de se observar 5 casos {\em nesta} escola, em um ano?}
-    \end{itemize}
-  \end{exampleblock}
-  \begin{exampleblock}{Pergunta correta}
-    {\bf Qual é a probabilidade de se observar 5 casos {\em em alguma} escola, em um ano?}
-  \end{exampleblock}
 \end{frame}
 
-\begin{frame}{E agora, José?}
+\begin{frame}{\scriptsize E agora, José?}
   \begin{block}{}
     Como levar em conta as comparações múltiplas sem ser induzido ao erro, pelo teste t?
   \end{block}
@@ -381,11 +552,14 @@
 
 \subsection{ANOVA um fator (One-way ANOVA)}
 
-\begin{frame}[label=exemplo13.5]{Exemplo}
+\begin{frame}[label=exemplo13.5-enunciado]{\scriptsize Exemplo 13.5}
   \begin{exampleblock}{Exemplo 13.5}
+    \footnotesize
     Hetland, et. al (1993) pesquisaram alterações hormonais em mulheres corredoras.
     Mediram o nível de hormônio luteinizante (LH) em três grupos:
+    \bigskip
     \begin{enumerate}
+      \footnotesize
     \item sedentárias
     \item corredoras recreacionais
     \item corredoras de elite
@@ -393,19 +567,18 @@
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente:
     \begin{itemize}
-      \footnotesize
-    \item numérica discreta
+      \scriptsize
     \item numérica contínua
     \end{itemize}
   \item Independente:
     \begin{itemize}
-      \footnotesize
-    \item grupo (categórica nominal -- 2+ níveis)
+      \scriptsize
+    \item grupo (categórica nominal -- 3 níveis)
     \end{itemize}
   \end{itemize}
   \vfill
@@ -416,268 +589,130 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Componentes da One-Way ANOVA}
+  \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
+    \footnotesize
+    \begin{displaymath}
+      \text{LH} \sim \text{Grupo}
+    \end{displaymath}
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{block}{Modelo completo}
+    \begin{displaymath}
+      \text{LH} = \text{média global} + \text{efeito do fator grupo} + \varepsilon
+    \end{displaymath}
+  \end{block}
+  \vfill
+  \footnotesize
+  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+\end{frame}
+
+\begin{frame}[label=exemplo13.5-tabela]{\scriptsize Exemplo 13.5}
   \begin{exampleblock}{Exemplo 13.5}
+    \footnotesize
     \begin{center}
       \includegraphics[width=.6\textwidth]{Cap13-30/exemplo13_5-1}
     \end{center}
-  \begin{itemize}
-  \item Com estas informações, podemos construir uma tabela ANOVA
-  \item $H_0$: todas as médias são iguais
-  \end{itemize}
+    \begin{itemize}
+      \footnotesize
+    \item Com estas informações, podemos construir uma tabela ANOVA
+      \small
+    \item $H_0$: todas as médias são iguais
+    \end{itemize}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Exemplo 13.5}
   \begin{exampleblock}{Exemplo 13.5}
+    \footnotesize
     \begin{center}
-      \includegraphics[width=.6\textwidth]{Cap13-30/exemplo13_5-2}
+      \includegraphics[width=.8\textwidth]{Cap13-30/exemplo13_5-2}
     \end{center}
-  \begin{itemize}
-  \item A razão entre as Somas dos Quadrados: $0.93/17.38 = 5.3\%$
-  \item $5.3\%$ da variabilidade pode ser explicada pelas diferenças {\em entre os grupos}
-  \item (lembra do $r^2?)$
-  \end{itemize}
+    \bigskip
+    \begin{itemize}
+      \scriptsize
+    \item A razão entre as Somas dos Quadrados: $0.93/17.38 = 5.3\%$
+    \item $5.3\%$ da variabilidade pode ser explicada pelas diferenças {\em entre os grupos}
+    \item (lembra do $r^2$?)
+    \end{itemize}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{One-way ANOVA}
+\begin{frame}{\scriptsize One-way ANOVA}
   \begin{itemize}
-  \item Este método é chamado one-way (ou 1-way) ANOVA, pois tem um fator categórico
+    \footnotesize
+  \item Este método é chamado One-way (ou 1-way) ANOVA, pois tem um fator categórico
+    \bigskip
   \item A premissa é que pode-se {\em modelar} a relação entre um desfecho quantitativo e um preditor categórico + um erro aleatório
+    \bigskip
+    \bigskip
   \item A variável dependente do exemplo é o LH
   \item A (única) variável independente é o Grupo
   \end{itemize}
 \end{frame}
 
-\begin{frame}{A ideia básica}
+\begin{frame}{\scriptsize A ideia básica}
   \begin{itemize}
+    \footnotesize
   \item Quando os grupos têm médias diferentes, parte da variabilidade total é devido a esta diferença
-  \item O resto da variabilidade é devido apenas às variâncias intra-grupos
+  \item O resto da variabilidade é devido apenas às variâncias intragrupos
   % \item Quando as médias são iguais, temos apenas as variâncias intra-grupos e inter-grupos.
+    \bigskip
+    \bigskip
   \item A ANOVA tenta {\em desembaraçar} esta decomposição, assumindo a hipótese nula.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{A ideia básica}
+\begin{frame}{\scriptsize A ideia básica}
   \begin{itemize}
+    \footnotesize
   \item O nome {\em Análise de Variância} vem do critério usado para comparar as médias
-  \item O teste de hipótese é baseado na comparação entre as variâncias intra- e inter grupos
+    \bigskip
+    \bigskip
+  \item O teste é baseado na razão entre as variâncias intra e inter grupos
   \item Estas variâncias aparecem na tabela como ``Média dos Quadrados''
+    \bigskip
+    \bigskip
   \item Lembrete: a variância é a média dos desvios elevados ao quadrado
   \end{itemize}
 \end{frame}
 
-% > summary(anova1)
-%             Df Sum Sq Mean Sq F value Pr(>F)  
-% Grupo        2  3.753  1.8763   3.025 0.0701 .
-% Residuals   21 13.026  0.6203                 
-% ---
-% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-% > summary(anova12)
-%             Df Sum Sq Mean Sq F value Pr(>F)  
-% Grupo        2  3.753  1.8763   3.064 0.0691 .
-% Genero       1  0.779  0.7792   1.272 0.2727  
-% Residuals   20 12.247  0.6123                 
-% ---
-% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-% > summary(anova2)
-%             Df Sum Sq Mean Sq F value Pr(>F)  
-% Grupo        2  9.499   4.749   4.775 0.0195 *
-% Residuals   21 20.889   0.995                 
-% ---
-% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-% > summary(anova22)
-%             Df Sum Sq Mean Sq F value Pr(>F)  
-% Grupo        2  9.499   4.749   4.548 0.0236 *
-% Genero       1  0.002   0.002   0.002 0.9690  
-% Residuals   20 20.887   1.044                 
-% ---
-% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-% > TukeyHSD(anova1)
-%   Tukey multiple comparisons of means
-%     95% family-wise confidence level
-
-% Fit: aov(formula = y ~ Grupo, data = cenario1.long)
-
-% $Grupo
-%                      diff       lwr        upr     p adj
-% Trat.A-Placebo -0.9593453 -1.951928 0.03323713 0.0593745
-% Trat.B-Placebo -0.3641649 -1.356747 0.62841756 0.6310533
-% Trat.B-Trat.A   0.5951804 -0.397402 1.58776285 0.3059643
-
-% > TukeyHSD(anova12)
-%   Tukey multiple comparisons of means
-%     95% family-wise confidence level
-
-% Fit: aov(formula = y ~ Grupo + Genero, data = cenario1.long)
-
-% $Grupo
-%                      diff        lwr        upr     p adj
-% Trat.A-Placebo -0.9593453 -1.9492340 0.03054344 0.0585261
-% Trat.B-Placebo -0.3641649 -1.3540536 0.62572388 0.6277051
-% Trat.B-Trat.A   0.5951804 -0.3947083 1.58506917 0.3025618
-
-% $Genero
-%          diff       lwr      upr     p adj
-% M-F 0.4161096 -0.353374 1.185593 0.2726642
-
-% > TukeyHSD(anova2)
-%   Tukey multiple comparisons of means
-%     95% family-wise confidence level
-
-% Fit: aov(formula = y ~ Grupo, data = cenario2.long)
-
-% $Grupo
-%                      diff        lwr      upr     p adj
-% Trat.A-Placebo 1.29615978  0.0392117 2.553108 0.0424949
-% Trat.B-Placebo 1.36988994  0.1129419 2.626838 0.0311078
-% Trat.B-Trat.A  0.07373016 -1.1832179 1.330678 0.9880276
-
-% > TukeyHSD(anova22)
-%   Tukey multiple comparisons of means
-%     95% family-wise confidence level
-
-% Fit: aov(formula = y ~ Grupo + Genero, data = cenario2.long)
-
-% $Grupo
-%                      diff          lwr      upr     p adj
-% Trat.A-Placebo 1.29615978  0.003412143 2.588907 0.0493258
-% Trat.B-Placebo 1.36988994  0.077142303 2.662638 0.0366413
-% Trat.B-Trat.A  0.07373016 -1.219017478 1.366478 0.9885936
-
-% $Genero
-%            diff        lwr       upr     p adj
-% M-F -0.01696485 -0.9157828 0.8818531 0.9689844
-
-% > anova1.p.bonf
-
-% 	Pairwise comparisons using t tests with pooled SD 
-
-% data:  y and Grupo 
-
-%        Placebo Trat.A
-% Trat.A 0.072   -     
-% Trat.B 1.000   0.437 
-
-% P value adjustment method: bonferroni 
-% > anova2.p.bonf
-
-% 	Pairwise comparisons using t tests with pooled SD 
-
-% data:  y and Grupo 
-
-%        Placebo Trat.A
-% Trat.A 0.050   -     
-% Trat.B 0.036   1.000 
-
-% P value adjustment method: bonferroni 
-
-% > summary(aov(y ~ Grupo + Genero, cenario2.long))
-%             Df Sum Sq Mean Sq F value Pr(>F)  
-% Grupo        2  9.499   4.749   4.548 0.0236 *
-% Genero       1  0.002   0.002   0.002 0.9690  
-% Residuals   20 20.887   1.044                 
-% ---
-% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-% > summary(aov(y ~ Grupo * Genero, cenario2.long))
-%              Df Sum Sq Mean Sq F value Pr(>F)  
-% Grupo         2  9.499   4.749   4.707 0.0227 *
-% Genero        1  0.002   0.002   0.002 0.9685  
-% Grupo:Genero  2  2.725   1.362   1.350 0.2842  
-% Residuals    18 18.163   1.009                 
-% ---
-% Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-% > TukeyHSD(aov(y ~ Grupo * Genero, cenario2.long))
-%   Tukey multiple comparisons of means
-%     95% family-wise confidence level
-
-% Fit: aov(formula = y ~ Grupo * Genero, data = cenario2.long)
-
-% $Grupo
-%                     diff        lwr      upr     p adj
-% Trat.A-Placebo 1.5514853  0.2712011 2.831770 0.0164455
-% Trat.B-Placebo 2.1703237  0.8900395 3.450608 0.0011265
-% Trat.B-Trat.A  0.6188384 -0.6614458 1.899123 0.4494538
-
-% $Genero
-%          diff         lwr      upr     p adj
-% M-F 0.8071626 -0.08158125 1.695906 0.0724633
-
-% $`Grupo:Genero`
-%                           diff        lwr      upr     p adj
-% Trat.A:F-Placebo:F   2.1160544 -0.4873461 4.719455 0.1523427
-% Trat.B:F-Placebo:F   1.5879521 -1.0154484 4.191353 0.4122593
-% Placebo:M-Placebo:F  0.7976679 -1.5308843 3.126220 0.8795976
-% Trat.A:M-Placebo:F   2.0104118 -0.3181404 4.338964 0.1143524
-% Trat.B:M-Placebo:F   3.3174146  0.9888624 5.645967 0.0030192
-% Trat.B:F-Trat.A:F   -0.5281023 -3.1315028 2.075298 0.9857698
-% Placebo:M-Trat.A:F  -1.3183865 -3.6469387 1.010166 0.4902167
-% Trat.A:M-Trat.A:F   -0.1056426 -2.4341948 2.222910 0.9999896
-% Trat.B:M-Trat.A:F    1.2013602 -1.1271920 3.529912 0.5849474
-% Placebo:M-Trat.B:F  -0.7902842 -3.1188364 1.538268 0.8835616
-% Trat.A:M-Trat.B:F    0.4224597 -1.9060925 2.751012 0.9913898
-% Trat.B:M-Trat.B:F    1.7294625 -0.5990897 4.058015 0.2216761
-% Trat.A:M-Placebo:M   1.2127439 -0.8038415 3.229329 0.4270508
-% Trat.B:M-Placebo:M   2.5197467  0.5031614 4.536332 0.0098078
-% Trat.B:M-Trat.A:M    1.3070028 -0.7095825 3.323588 0.3496917
-
-% \begin{frame}{3 grupos - cenário 1}
-%   \begin{center}
-%     \includegraphics[height=.9\textheight]{Cap13-30/cenario1}
-%   \end{center}
-% \end{frame}
-
-% \begin{frame}{Médias: Placebo: 4.210, Tratamento A: 3.250, Tratamento B: 3.845}
-%   \begin{center}
-%     \includegraphics[height=.9\textheight]{Cap13-30/cenario1_medias}
-
-% %    {\tiny Médias: Placebo: 4.210, Tratamento A: 3.250, Tratamento B: 3.845}
-%   \end{center}
-% \end{frame}
-
-% \begin{frame}{3 grupos - cenário 2}
-%   \begin{center}
-%     \includegraphics[height=.9\textheight]{Cap13-30/cenario2}
-%   \end{center}
-% \end{frame}
-
-% \begin{frame}{Médias: Placebo: 4.559, Tratamento A: 5.855, Tratamento B: 5.928}
-%   \begin{center}
-%     \includegraphics[height=.9\textheight]{Cap13-30/cenario2_medias}
-
-% %    {\tiny Médias: Placebo: 4.559, Tratamento A: 5.855, Tratamento B: 5.928}
-%   \end{center}
-% \end{frame}
-
 \subsection{O teste F}
 
-\begin{frame}{O teste F}
-  \begin{itemize}
-  \item Se as médias forem iguais, a variância intra-grupo deve ser ``igual'' à variância inter-grupo
-  \item Calculando-se a {\em razão} entre a variância, esperamos que seja próximo de 1
-  \item razão = $F = \frac{\text{Entre grupos}}{\text{Intra grupos}}$
-  \item Uma razão muito maior que 1 indica que há mais variância entre os grupos do que o esperado
-  \item Obs: o teste leva em conta os graus de liberdade do numerador e denominador
-  \end{itemize}
+\begin{frame}{\scriptsize Expectativa x realidade\footnote{\scriptsize Mesma ideia do qui-quadrado.} -- O teste F\footnote{\scriptsize O teste leva em conta dois graus de liberdade: numerador e denominador}}
+  \begin{block}{}
+    \small
+    Se as médias forem iguais, a variância intragrupo deve ser ``igual'' à variância intergrupo...
+
+    \bigskip
+    ... nesse caso a {\em razão} entre as variâncias deve ser próxima de 1
+  \end{block}
+
+  $$F = \frac{\text{variância intergrupos}}{\text{variância intragrupos}}$$
+
+  \begin{block}{Interpretação da estatística $F$}
+    Uma razão muito maior que 1 indica que há mais variância entre os grupos do que o esperado
+  \end{block}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}[label=exemplo13.5-anova]{\scriptsize Exemplo 13.5}
   \begin{exampleblock}{Exemplo 13.5}
+    \footnotesize
     \begin{center}
-      \includegraphics[width=.6\textwidth]{Cap13-30/exemplo13_5-3}
+      \includegraphics[width=\textwidth]{Cap13-30/exemplo13_5-3}
     \end{center}
-  \begin{itemize}
-  \item Razão entre as variâncias: $F = 0.4634/0.0814 = 5.69 >> 1$ {\tiny (mesmo considerando o $n$ de cada grupo)}
-  \item $p=0.0039$
-  \item Pergunta:  Como você redigiria este resultado?
-  \end{itemize}
+    \begin{itemize}
+      \scriptsize
+    \item Razão entre as variâncias: $F = 0.4634/0.0814 = 5.69 >> 1$
+
+      {\tiny (mesmo considerando o $n$ de cada grupo)}
+    \item $p=0.0039$
+    \end{itemize}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{\scriptsize }
   \begin{block}{Resposta}
     Sabemos apenas que pelo menos um dos grupos é diferente dos outros.
     Mas qual(is)?
@@ -689,140 +724,297 @@
 
 \subsection{Pós teste}
 
-\begin{frame}{Testes {\em post-hoc}}
+\begin{frame}{\scriptsize Testes {\em post-hoc}}
   \begin{itemize}
+    \footnotesize
   \item O teste de ANOVA é apenas a primeira parte!\footnote{Está com saudade do teste t?}
-  \item O p-valor do teste F indica o quão raro é encontrar uma discrepância tão grande (ou maior) entre as médias dos grupos, ao acaso
-  \item Mas isso não nos ajuda a saber qual grupo é diferente dos outros.
+    \bigskip
+    \bigskip
+    \begin{block}{}
+      O p-valor do teste F indica o quão raro é encontrar uma discrepância tão grande (ou maior) entre as médias dos grupos, ao acaso
+    \end{block}
+    \bigskip
+    \bigskip
+  \item Mas isso não nos ajuda a saber {\bf qual} é o grupo discrepante
   \item Para esta outra pergunta, precisamos de outro método
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Testes {\em post-hoc}}
+\begin{frame}{\scriptsize Testes {\em post-hoc}}
   \begin{itemize}
+    \footnotesize
   \item Como vimos, não podemos simplesmente fazer vários testes t
+    \bigskip
+    \bigskip
   \item Mas podemos {\em ajustar} os p-valores destes testes, para compensar a {\em inflação} destes resultados
+    \bigskip
+    \bigskip
   \item Isso pode ser feito de várias maneiras
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Testes {\em post-hoc}}
+\begin{frame}{\scriptsize Testes {\em post-hoc}}
   \begin{itemize}
+    \footnotesize
   \item {\bf Correção de Bonferroni}
   \item Correção para tendências
   \item {\bf Teste ``honesto'' das diferenças, de Tukey (HSD)}
   \item Método de Scheffe
   \item Teste de Dunnet
+  \item etc.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Testes {\em post-hoc}}
+\begin{frame}{\scriptsize Ajustando os p-valores}
   \begin{itemize}
+    \footnotesize
+  \item Faremos os múltiplos testes t, com ajuste de p-valor
   \item Os dois mais usados são Bonferroni e Tukey
 %  \item O teste de Bonferroni é mais simples, e tem mais sensibilidade (com menos especificidade)
 %  \item O teste de Tukey tem mais especificidade, mas menos sensibilidade
- \item O teste de Bonferroni ajusta o p-valor dividindo pelo número de comparações, mas seus ICs são muito grandes
- \item O teste de Tukey é mais conservador, mas pode acusar diferenças significativas com mais frequência
+    \bigskip
+    \bigskip
+ \item O ajuste de Bonferroni multiplica o p-valor\footnote{ou, analogamente, divide o nível de significância} pelo número de comparações, mas seus IC são muito grandes
+    \bigskip
+ \item O ajuste de Tukey é mais conservador, mas pode acusar diferenças significativas com mais frequência
+    \bigskip
+    \bigskip
  \item Infelizmente não há consenso sobre critérios de escolha
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Exemplo}
+\begin{frame}{\scriptsize Interpretando o método de Bonferroni\footnote{\tiny \url{http://www.biostathandbook.com/multiplecomparisons.html}}}
+  \begin{columns}
+    \begin{column}{6.5cm}
+      \begin{exampleblock}{\footnotesize Exemplo}
+        \scriptsize
+        García-Arenzana et al. (2014) testaram associação de 25 variáveis dietárias e a densidade mamográfica (relevante p/ câncer de mama).
+
+        \bigskip
+        5 das variáveis parecem significativas.
+      \end{exampleblock}
+      \medskip
+      \begin{block}{\footnotesize Bonferroni}
+        \scriptsize
+        Ao dividir 0.05 pelo número de comparações, obtemos $\alpha = 0.05/25 = 0.002$.
+      \end{block}
+      \bigskip
+      \bigskip
+      \begin{block}{\footnotesize Conclusão}
+        \footnotesize
+        {\bf Após o ajuste, apenas 1 significativo.}
+      \end{block}
+    \end{column}
+    \begin{column}{3.5cm}
+      \begin{center}
+        {\footnotesize p-valores não ajustados}
+
+        \medskip
+        \includegraphics[height=.8\textheight]{Cap13-30/ex-25-testes}
+        % \includegraphics[width=.8\textwidth]{Cap13-30/ex-25-testes}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\againframe{exemplo13.5-enunciado}
+\againframe{exemplo13.5-tabela}
+\againframe{exemplo13.5-anova}
+
+\begin{frame}{\scriptsize \small Exemplo 13.5 -- testes t com ajuste de Tukey}
   \begin{exampleblock}{Exemplo 13.5}
     \includegraphics[width=\textwidth]{Cap13-30/exemplo13_5-4}
-    \begin{itemize}
-    \item Pergunta: Como você redigiria este resultado?
-    \end{itemize}
   \end{exampleblock}
+  \begin{block}{Pergunta}
+    \footnotesize
+    Como você redigiria este resultado?
+  \end{block}
 \end{frame}
 
 \subsection{Two-way ANOVA}
 
-\begin{frame}{ANOVA dois parâmetros}
+\begin{frame}{\scriptsize ANOVA dois parâmetros}
   \begin{itemize}
-  \item Nas seções anteriores vimos como executar o ANOVA com uma var. independente categórica
-  \item O teste ANOVA permite qualquer quantidade de variáveis independentes!
-  \item Vejamos o exemplo inicial da aula, com duas: incluindo o Gênero
-  \item Agora a pergunta é dupla: as médias são diferentes, quando estratificamos por uma segunda var. categórica?
+    \footnotesize
+  \item Vimos como usar o ANOVA com {\bf uma} var. independente categórica
+    \bigskip
+  \item O teste ANOVA permite qualquer quantidade de variáveis independentes! E de qualquer tipo\footnote{\scriptsize Na verdade, ANOVA e Regressão Linear são Múltipla são siameses}
+    \bigskip
+    \bigskip
+  \item Vejamos o exemplo inicial da aula, com duas var. independentes
   \end{itemize}
+  \begin{block}{Nova pergunta}
+    \small
+    Os tratamentos são diferentes, mesmo controlando pelo Gênero?
+  \end{block}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente:
     \begin{itemize}
-      \footnotesize
-    \item numérica discreta
+      \scriptsize
     \item numérica contínua
     \end{itemize}
   \item Independentes:
     \begin{itemize}
-      \footnotesize
-    \item grupo (categórica nominal -- 2+ níveis)
+      \scriptsize
+    \item grupo (categórica nominal -- 3 níveis)
+    \item \alert{gênero (categórica nominal binária)}
     \end{itemize}
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
     \begin{displaymath}
-      \text{Mensuração} \sim \text{Grupo de tratamento} \alert{+ \text{Gênero}}
+      \text{Área cicatrizada} \sim \text{Grupo de tratamento} \alert{+ \text{Gênero}}
     \end{displaymath}
   \end{block}
 \end{frame}
 
-\begin{frame}{Esses 3 grupos têm médias diferentes, controlando por Gênero?}
+\againframe{ident-visual}
+
+\againframe{cenario1}
+
+\begin{frame}[label=cenario3]{\scriptsize Cenário 3 = cenário 1 ajustando pelo Gênero}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap13-30/cenario12}
   \end{center}
 \end{frame}
 
-\begin{frame}{Esses 3 grupos têm médias diferentes, controlando por Gênero?}
-  \begin{center}
-    \includegraphics[height=.9\textheight]{Cap13-30/cenario12_medias}
+\againframe{cenario2}
 
-%    {\tiny Médias: Placebo: 4.210, Tratamento A: 3.250, Tratamento B: 3.845}
-  \end{center}
-\end{frame}
-
-\begin{frame}
+\begin{frame}[label=cenario4]{\scriptsize Cenário 4 = cenário 2 ajustando pelo Gênero}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap13-30/cenario22}
   \end{center}
 \end{frame}
 
-\begin{frame}{E estes 3 grupos?}
+\begin{frame}{\scriptsize }
   \begin{center}
-    \includegraphics[height=.9\textheight]{Cap13-30/cenario22_medias}
-
-%    {\tiny Médias: Placebo: 4.559, Tratamento A: 5.855, Tratamento B: 5.928}
+    Hora de testar seus conhecimentos
   \end{center}
 \end{frame}
 
 \section{Exercício}
 
-\begin{frame}[fragile]{Exercício}
-  \begin{exampleblock}{Cenário 1 - ANOVA one-way}
+\subsection{Exercício}
+
+\againframe{exercicio-enunciado}
+
+\againframe{cenario1}
+
+\againframe{cenario1-prob}
+
+\begin{frame}{\scriptsize }
+  \begin{center}
+    Por que este resultado está errado?
+  \end{center}
+
+  \vfill
+  \begin{block}{Resposta}<2>
+    Testamos simultaneamente {\bf 3} hipóteses...
+
+    \bigskip
+    \small
+    ... você foi levado ao engano: Placebo é diferente do trat. A
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile, label=cenario1-1way]{\scriptsize }
+  \begin{exampleblock}{Cenário 1 -- ANOVA One-way}
     \tiny
 \begin{verbatim}
-            Df Sum Sq Mean Sq F value Pr(>F)  
-Grupo        2  3.753  1.8763   3.025 0.0701 .
-Residuals   21 13.026  0.6203                 
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+            Df Sum Sq Mean Sq F value Pr(>F)
+Grupo        2  4.124  2.0620   2.545  0.102
+Residuals   21 17.018  0.8104
 \end{verbatim}
     \begin{center}
       \includegraphics[height=.5\textheight]{Cap13-30/cenario1}
     \end{center}
   \end{exampleblock}
+  \begin{block}{}<2>
+    \small
+    Os 3 tratamentos não diferem além da expectativa ($p=0.102$)
+  \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Exercício}
-  \begin{exampleblock}{Cenário 2 - ANOVA one-way}
+\againframe{cenario1-prob}
+
+\begin{frame}[fragile]{\scriptsize }
+  \begin{exampleblock}{Cenário 1 -- Bonferroni}
+    \scriptsize
+\begin{verbatim}
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  y and Grupo 
+
+       Placebo Trat.A
+Trat.A 0.076   -     
+Trat.B 0.299   1.000 
+
+P value adjustment method: bonferroni
+\end{verbatim}
+  \end{exampleblock}
+  \begin{block}{}
+    \small
+    Os p-valores de Bonferroni são 3x maiores...
+
+    \bigskip
+    ... o placebo não é diferente do tratamento A ($p=0.076$)
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{\scriptsize }
+  \begin{exampleblock}{Cenário 1 -- Tukey}
+    \scriptsize
+\begin{verbatim}
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = y ~ Grupo, data = cenario1.long)
+
+$Grupo
+                      diff       lwr       upr     p adj
+Trat.A-Placebo -0.91797498 -2.052498 0.2165479 0.1274511
+Trat.B-Placebo -0.83482042 -1.969343 0.2997025 0.1767378
+Trat.B-Trat.A   0.08315455 -1.051368 1.2176774 0.9813768
+\end{verbatim}
+  \end{exampleblock}
+  \begin{block}{}
+    \small
+    Os p-valores de Tukey são mais conservadores...
+
+    \bigskip
+    ... o placebo não é diferente do tratamento A ($p=0.12745$)
+  \end{block}
+\end{frame}
+
+\againframe{cenario2}
+\againframe{cenario2-prob}
+
+\begin{frame}{\scriptsize }
+  \begin{center}
+    Por que este resultado está errado?
+  \end{center}
+
+  \vfill
+  \begin{block}{Resposta}<2>
+    Testamos simultaneamente {\bf 3} hipóteses...
+
+    \bigskip
+    \small
+    ... você foi levado ao engano: trat. A é diferente do trat. B
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile, label=cenario2-1way]{\scriptsize }
+  \begin{exampleblock}{Cenário 2 -- ANOVA One-way}
     \tiny
 \begin{verbatim}
-            Df Sum Sq Mean Sq F value Pr(>F)  
-Grupo        2  9.499   4.749   4.775 0.0195 *
-Residuals   21 20.889   0.995                 
+            Df Sum Sq Mean Sq F value   Pr(>F)
+Grupo        2  32.99  16.496   25.04 2.75e-06 ***
+Residuals   21  13.83   0.659
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 \end{verbatim}
@@ -832,8 +1024,34 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{Exercício}
-  \begin{exampleblock}{Cenário 2 - Tukey}
+\againframe{cenario2-prob}
+
+\begin{frame}[fragile]{\scriptsize }
+  \begin{exampleblock}{Cenário 2 -- Bonferroni}
+    \scriptsize
+\begin{verbatim}
+	Pairwise comparisons using t tests with non-pooled SD 
+
+data:  y and Grupo 
+
+       Placebo Trat.A
+Trat.A 8.8e-05 -     
+Trat.B 0.0011  0.0883
+
+P value adjustment method: bonferroni
+\end{verbatim}
+  \end{exampleblock}
+  \begin{block}{}
+    \small
+    Os p-valores de Bonferroni são 3x maiores...
+
+    \bigskip
+    ... os tratamentos A e B não são diferentes entre si ($p=0.0883$)
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{\scriptsize }
+  \begin{exampleblock}{Cenário 2 -- Tukey}
     \tiny
 \begin{verbatim}
   Tukey multiple comparisons of means
@@ -842,87 +1060,154 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Fit: aov(formula = y ~ Grupo, data = cenario2.long)
 
 $Grupo
-                     diff        lwr      upr     p adj
-Trat.A-Placebo 1.29615978  0.0392117 2.553108 0.0424949
-Trat.B-Placebo 1.36988994  0.1129419 2.626838 0.0311078
-Trat.B-Trat.A  0.07373016 -1.1832179 1.330678 0.9880276
+                     diff        lwr       upr     p adj
+Trat.A-Placebo  2.8224313  1.7995273 3.8453353 0.0000021
+Trat.B-Placebo  1.8711918  0.8482877 2.8940958 0.0004262
+Trat.B-Trat.A  -0.9512395 -1.9741435 0.0716645 0.0713859
 \end{verbatim}
   \end{exampleblock}
+  \begin{block}{}
+    \small
+    Os p-valores de Tukey são mais conservadores...
+
+    \bigskip
+    ... os tratamentos A e B não são diferentes ($p=0.0713859$)
+  \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Exercício}
-  \begin{exampleblock}{Cenário 4 - ANOVA two-way (sem interações)}
+\begin{frame}{\scriptsize }
+  \begin{center}
+    Agora interprete cada um dos dois fatores
+  \end{center}
+\end{frame}
+
+\againframe{cenario3}
+% \againframe{cenario1-1way}
+
+\begin{frame}[fragile]{\scriptsize }
+  \begin{exampleblock}{Cenário 3 -- ANOVA Two-way}
     \tiny
 \begin{verbatim}
-            Df Sum Sq Mean Sq F value Pr(>F)  
-Grupo        2  9.499   4.749   4.548 0.0236 *
-Genero       1  0.002   0.002   0.002 0.9690  
-Residuals   20 20.887   1.044                 
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+            Df Sum Sq Mean Sq F value Pr(>F)
+Grupo        2  4.124  2.0620   2.426  0.114
+Genero       1  0.020  0.0198   0.023  0.880
+Residuals   20 16.998  0.8499
 \end{verbatim}
     \begin{center}
-      \includegraphics[height=.5\textheight]{Cap13-30/cenario22}
+      \includegraphics[height=.5\textheight]{Cap13-30/cenario12}
     \end{center}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{Exercício}
-  \begin{exampleblock}{Cenário 4 - ANOVA two-way (com interações)}
-    \tiny
-\begin{verbatim}
-             Df Sum Sq Mean Sq F value  Pr(>F)   
-Grupo         2 20.001  10.000   9.935 0.00124 **
-Genero        1  3.665   3.665   3.641 0.07246 . 
-Grupo:Genero  2  3.157   1.579   1.568 0.23557   
-Residuals    18 18.119   1.007                   
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-\end{verbatim}
-    \begin{center}
-      \includegraphics[height=.5\textheight]{Cap13-30/cenario22}
-    \end{center}
-  \end{exampleblock}
-\end{frame}
-
-\begin{frame}[fragile]{Exercício}
-  \begin{exampleblock}{Cenário 4 - ANOVA two-way (com interações)}
+\begin{frame}[fragile]{\scriptsize }
+  \begin{exampleblock}{Cenário 3 -- Tukey}
     \tiny
 \begin{verbatim}
   Tukey multiple comparisons of means
     95% family-wise confidence level
 
-Fit: aov(formula = y ~ Grupo * Genero, data = cenario2.long)
+Fit: aov(formula = y ~ Grupo + Genero, data = cenario1.long)
 
 $Grupo
-                    diff        lwr      upr     p adj
-Trat.A-Placebo 1.5514853  0.2712011 2.831770 0.0164455
-Trat.B-Placebo 2.1703237  0.8900395 3.450608 0.0011265
-Trat.B-Trat.A  0.6188384 -0.6614458 1.899123 0.4494538
+                      diff       lwr       upr     p adj
+Trat.A-Placebo -0.91797498 -2.084178 0.2482277 0.1402196
+Trat.B-Placebo -0.83482042 -2.001023 0.3313822 0.1915255
+Trat.B-Trat.A   0.08315455 -1.083048 1.2493572 0.9822352
 
 $Genero
-         diff         lwr      upr     p adj
-M-F 0.8071626 -0.08158125 1.695906 0.0724633
-
-$`Grupo:Genero`
-                          diff        lwr      upr     p adj
-Trat.A:F-Placebo:F   2.1160544 -0.4873461 4.719455 0.1523427
-Trat.B:F-Placebo:F   1.5879521 -1.0154484 4.191353 0.4122593
-Placebo:M-Placebo:F  0.7976679 -1.5308843 3.126220 0.8795976
-Trat.A:M-Placebo:F   2.0104118 -0.3181404 4.338964 0.1143524
-Trat.B:M-Placebo:F   3.3174146  0.9888624 5.645967 0.0030192
-Trat.B:F-Trat.A:F   -0.5281023 -3.1315028 2.075298 0.9857698
-Placebo:M-Trat.A:F  -1.3183865 -3.6469387 1.010166 0.4902167
-Trat.A:M-Trat.A:F   -0.1056426 -2.4341948 2.222910 0.9999896
-Trat.B:M-Trat.A:F    1.2013602 -1.1271920 3.529912 0.5849474
-Placebo:M-Trat.B:F  -0.7902842 -3.1188364 1.538268 0.8835616
-Trat.A:M-Trat.B:F    0.4224597 -1.9060925 2.751012 0.9913898
-Trat.B:M-Trat.B:F    1.7294625 -0.5990897 4.058015 0.2216761
-Trat.A:M-Placebo:M   1.2127439 -0.8038415 3.229329 0.4270508
-Trat.B:M-Placebo:M   2.5197467  0.5031614 4.536332 0.0098078
-Trat.B:M-Trat.A:M    1.3070028 -0.7095825 3.323588 0.3496917
+          diff        lwr       upr     p adj
+M-F 0.05741033 -0.7276764 0.8424971 0.8802907
 \end{verbatim}
   \end{exampleblock}
+\end{frame}
+
+\againframe{cenario4}
+% \againframe{cenario2-1way}
+
+\begin{frame}[fragile]{\scriptsize }
+  \begin{exampleblock}{Cenário 4 -- ANOVA Two-way}
+    \tiny
+\begin{verbatim}
+            Df Sum Sq Mean Sq F value   Pr(>F)
+Grupo        2  32.99  16.496  24.760 3.88e-06 ***
+Genero       1   0.51   0.509   0.764    0.393
+Residuals   20  13.33   0.666
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+\end{verbatim}
+    \begin{center}
+      \includegraphics[height=.5\textheight]{Cap13-30/cenario22}
+    \end{center}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]{\scriptsize }
+  \begin{exampleblock}{Cenário 4 -- Tukey}
+    \tiny
+\begin{verbatim}
+  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = y ~ Grupo + Genero, data = cenario2.long)
+
+$Grupo
+                     diff       lwr        upr     p adj
+Trat.A-Placebo  2.8224313  1.789885 3.85497800 0.0000030
+Trat.B-Placebo  1.8711918  0.838645 2.90373849 0.0005050
+Trat.B-Trat.A  -0.9512395 -1.983786 0.08130722 0.0743628
+
+$Genero
+         diff        lwr      upr     p adj
+M-F 0.3362835 -0.4663601 1.138927 0.3925159
+\end{verbatim}
+  \end{exampleblock}
+\end{frame}
+
+\begin{frame}{\scriptsize Resumo}
+  \begin{itemize}
+    \footnotesize
+  \item Vimos o modelo {\bf ANOVA com fatores fixos} para comparar médias
+    \bigskip
+  \item Há também\footnote{\scriptsize Todos fora do escopo, RM ANOVA mencionado no livro}
+    \begin{itemize}
+      \scriptsize
+    \item {\bf ANOVA com interações entre os fatores}
+    \item {\bf ANOVA com Medidas Repetidas} quando você mensura do participante em vários momentos diferentes
+
+      (ex: baseline, pré-op imediato, pós-op imediato, e após 1 ano)
+    \item {\bf ANOVA com fatores aleatórios} permite decompor as variâncias -- contribuição de cada fator para a variância total
+    \item {\bf ANOVA com fatores mistos} -- fatores fixos E aleatórios
+    \end{itemize}
+    \bigskip
+  \item ANOVA é a base para (livros de) Design of Experiments (DoE)
+    \bigskip
+  \item Considere usar {\bf desenhos balanceados}\footnote{Grupos com {\bf mesmo tamanho}} sempre que possível!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\scriptsize Modelo ANOVA em geral -- quais são as variáveis?}
+  \begin{itemize}
+    \footnotesize
+  \item Dependente (VD): {\bf numérica}
+    \begin{itemize}
+      \scriptsize
+    \item discreta
+    \item contínua
+    \end{itemize}
+  \item Independentes (VI):
+    \begin{itemize}
+      \scriptsize
+    \item categórica -- 2+ níveis
+    \item numérica discreta
+    \item numérica contínua
+    \end{itemize}
+  \end{itemize}
+  \vfill
+  \begin{block}{Esta relação pode ser expressa como}
+    \begin{displaymath}
+      \text{VD} \sim \text{VI}_1 + \text{VI}_2 +...
+    \end{displaymath}
+  \end{block}
 \end{frame}
 
 % \section{Encerramento}
@@ -939,20 +1224,17 @@ Trat.B:M-Trat.A:M    1.3070028 -0.7095825 3.323588 0.3496917
 
 \subsection{Aprofundamento}
 
-\begin{frame}{Aprofundamento}
+\begin{frame}{\scriptsize Aprofundamento}
   \begin{block}{Leitura obrigatória}
     \begin{itemize}
+      \footnotesize
     \item Capítulo 13
-    \item Capítulo 30
+    \item Capítulo 30 (atenção às premissas!)
     \end{itemize}
   \end{block}
-  \begin{block}{Exercícios selecionados}
-    \small
-    Capítulo 13, problema: 1
-  \end{block}
   \begin{block}{Leitura recomendada}
-    \small
-    Não há.
+    \scriptsize
+    \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5042133/}{Kim, Bang, 2016, Dent. Hypotheses. (editorial)} {\tiny (este link é clicável)}
   \end{block}
 \end{frame}
 

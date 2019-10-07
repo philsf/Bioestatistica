@@ -101,6 +101,7 @@
 
 % \beamerdefaultoverlayspecification{<+->}
 
+\usepackage[normalem]{ulem}
 
 \begin{document}
 
@@ -152,11 +153,11 @@
 %   \end{block}
 % \end{frame}
 
-\section{Discussão da aula passada}
+% \section{Discussão da aula passada}
 
-\subsection{Discussão da aula passada}
+% \subsection{Discussão da aula passada}
 
-\begin{frame}{Discussão da aula passada}
+\begin{frame}{\scriptsize Discussão da aula passada}
   \begin{block}{}
     Discussão da leitura obrigatória da aula passada
   \end{block}
@@ -166,20 +167,22 @@
 
 \subsection{Objetivo da aula}
 
-\begin{frame}{Dados categóricos}
+\begin{frame}{\scriptsize Dados categóricos}
   \begin{itemize}
+    \footnotesize
   \item Vamos analisar contagens de dados categóricos (ou nominais)
   \item Para estas variáveis qualitativas não existe ordenação interente
   \item Observamos apenas as contagens e frequências destes dados em
     uma amostra.
   \end{itemize}
   \begin{exampleblock}{Exemplo}
+    \footnotesize
     doente/sadio, fumante/não fumante, masculino/feminino, olhos
     castanhos/olhos azuis/olhos verdes, etc.
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Objetivo da aula}
+\begin{frame}{\scriptsize Objetivo da aula}
   \small
   Considere a seguinte tabela:
   \begin{block}{}
@@ -205,9 +208,9 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente: desfecho (categórica)
   \item Independente: exposição (categórica)
   \end{itemize}
@@ -219,7 +222,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{\scriptsize }
   \begin{center}
     Mas antes vamos ver o caso de uma única variável.
   \end{center}
@@ -227,9 +230,9 @@
 
 \subsection{Teste qui-quadrado para 1 proporção}
 
-\begin{frame}{Exemplo 1}
+\begin{frame}{\scriptsize Exemplo 1}
   \begin{exampleblock}{Exemplo 1}
-    \small
+    \footnotesize
     Considere que 10\% dos pacientes morrem após uma operação
     arriscada. Em uma amostra de 75 pacientes, observou-se que 16
     pacientes morreram após a operação.
@@ -242,9 +245,9 @@
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente: mortalidade (categórica)
   \item Independente: parâmetro fixo
   \end{itemize}
@@ -290,8 +293,9 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Questões}
+\begin{frame}{\scriptsize Questões}
   \begin{itemize}
+    \footnotesize
   \item Esse aumento reflete uma mudança real na mortalidade?
   \item Em uma amostra qualquer com 75 pacientes esperaríamos observar $7.5$ óbitos
   \item Em uma amostra específica poderíamos observar mais ou menos
@@ -305,9 +309,9 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Roteiro}
+\begin{frame}{\scriptsize Roteiro}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Podemos representar as contagens observadas e esperadas em uma tabela
   \item $H_0$: \alert{observamos uma amostra de uma população com
       $10\%$ de mortalidade}.
@@ -342,8 +346,9 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Tabela de frequências}
+\begin{frame}{\scriptsize Tabela de frequências}
   \begin{exampleblock}{Exemplo 1}
+    \footnotesize
     \begin{tabular}{c|c|c}
       & Observado & Esperado\\
       \hline
@@ -365,7 +370,7 @@
   \end{displaymath}
 \end{frame}
 
-\begin{frame}{Comparando as frequências}
+\begin{frame}{\scriptsize Comparando as frequências}
   \begin{itemize}
     \footnotesize
   \item $H_0$: não houve alteração da mortalidade do procedimento.
@@ -384,7 +389,7 @@
 
 \subsection{Tabelas 2x2}
 
-\begin{frame}{Tabelas de Contingência}
+\begin{frame}{\scriptsize Tabelas de Contingência}
   \begin{block}{Definição}
     Uma \alert{tabela de contingência} mostra as frequências
     observadas para duas variáveis categóricas.
@@ -398,14 +403,22 @@
     \item na $H_0$
     \end{itemize}
   \item Comparação: frequência observada $\times$ frequência esperada
+    \footnotesize
+  \item Podemos calcular as frequências esperadas, baseado no tamanho
+    das amostras
+  \item Comparamos assim a frequência observada com a frequência
+    esperada
+  \item Obs: a tabela do exemplo anterior (óbitos) \alert{não é} uma
+    tabela de contingência! (Por que?)
   \end{itemize}
   \begin{block}{}
     A tabela do exemplo 1 (óbitos) \alert{não é} uma tabela de contingência! (Por que?)
   \end{block}
 \end{frame}
 
-\begin{frame}[label=exemplo8.1]{Exemplo 2 (8.1)}
+\begin{frame}[label=exemplo8.1]{\scriptsize Exemplo 2 (8.1)}
   \begin{exampleblock}{Exemplo 8.1}
+    \footnotesize
     Frequências observadas:
     \begin{tabular}{c|c|c}
       & doença progrediu & doença não progrediu\\
@@ -417,16 +430,16 @@
   \end{exampleblock}
   \vfill
   \begin{itemize}
-    \small
+    \footnotesize
   \item Existe relação entre o uso do AZT e a progressão da doença?
   \item Ou: nessa amostra o AZT foi mais eficiente que o placebo
     (rejeitar $H_0$)?
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente: desfecho (categórica)
   \item Independente: tratamento (categórica)
   \end{itemize}
@@ -438,8 +451,9 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Exemplo 8.1}
+\begin{frame}{\scriptsize Exemplo 8.1}
   \begin{itemize}
+    \footnotesize
   \item $H_0$: o AZT não é mais eficaz que o placebo
   \item Pergunta: assumindo a $H_0$, qual seria a frequência esperada
     para a progressão da doença?
@@ -454,8 +468,9 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Tabelas de contingência 2x2}
+\begin{frame}{\scriptsize Tabelas de contingência 2x2}
   \begin{exampleblock}{Exemplo 8.1}
+    \footnotesize
     Frequências observadas:
     \begin{tabular}{c|c|c|c}
       & progrediu & não progrediu & total\\
@@ -475,9 +490,9 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Tabelas de contingência 2x2}
+\begin{frame}{\scriptsize Tabelas de contingência 2x2}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Se a $H_0$ fosse verdadeira, esperaríamos que $104.0$
     pacientes tivessem a progressão da doença, usando o AZT.
     \bigskip
@@ -497,8 +512,9 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Tabelas de contingência 2x2}
+\begin{frame}{\scriptsize Tabelas de contingência 2x2}
   \begin{exampleblock}{Exemplo 8.1}
+    \footnotesize
     Frequências observadas:
     \begin{tabular}{c|c|c|c}
       & progrediu & não progrediu & total\\
@@ -520,9 +536,10 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Observação}
+\begin{frame}{\scriptsize Observação}
 Colocando os valores em uma tabela semelhante:
   \begin{exampleblock}{Exemplo 8.1}
+    \footnotesize
     Frequências esperadas:
     \begin{tabular}{c|c|c|c}
       & progrediu & não progrediu & total\\
@@ -539,9 +556,9 @@ Colocando os valores em uma tabela semelhante:
 Observe que os totais esperados devem ser iguais aos observados!
 \end{frame}
 
-\begin{frame}{Teste de Hipótese}
+\begin{frame}{\scriptsize Teste de Hipótese}
   \begin{itemize}
-    \small
+    \footnotesize
   \item $H_0$: a progressão é independente do grupo de tratamento
   \item ou: não há relação entre o uso do AZT e a progressão da doença.
     \bigskip
@@ -574,14 +591,15 @@ Observe que os totais esperados devem ser iguais aos observados!
     \small
     \bigskip
     \begin{exampleblock}{}
+    \footnotesize
       $$\chi^2 = 7.54 + 2.11 + 7.76 + 2.18 = \alert{19.59}$$
     \end{exampleblock}
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{O teste Qui-Quadrado}
+\begin{frame}{\scriptsize O teste Qui-Quadrado}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Quanto \alert{maior} for o valor da estatística de teste,
     \alert{menor} será o p-valor.
   \item Calculamos a estatística de teste para a amostra e encontramos
@@ -590,9 +608,9 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{itemize}
 \end{frame}
 
-\begin{frame}{O teste Qui-Quadrado}
+\begin{frame}{\scriptsize O teste Qui-Quadrado}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Se a $H_0$ for verdadeira, temos uma chance menor que $0.01\%$
     de observar ao acaso uma discrepância tão grande entre os valores
     observados e os esperados.
@@ -604,9 +622,9 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{block}
 \end{frame}
 
-\begin{frame}{O teste Qui-Quadrado}
+\begin{frame}{\scriptsize O teste Qui-Quadrado}
   \begin{itemize}
-    \small
+    \footnotesize
   \item O teste $\chi^2$ é apenas uma aproximação da distribuição dos
     dados, que pode ser usado para amostras grandes.
   \item Vantagem: simples
@@ -619,11 +637,13 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{block}
 \end{frame}
 
-\begin{frame}{O teste exato de Fisher}
+\begin{frame}{\scriptsize O teste exato de Fisher}
   \begin{itemize}
+    \footnotesize
   \item Para as seguintes situações deve-se usar o teste exato de
     Fisher:
     \begin{enumerate}
+      \footnotesize
     \item Quando se tem amostras pequenas
     \item Quanto se tem amostras de tamanho moderado, e se tiver uma
       ferramenta computacional disponível
@@ -631,6 +651,7 @@ Observe que os totais esperados devem ser iguais aos observados!
   \item Se sua amostra for enorme (milhares de dados), prefira o teste
     $\chi^2$, pois:
     \begin{enumerate}
+      \footnotesize
     \item o cálculo do teste exato de Fisher pode ser lento
     \item a aproximação será boa
     \end{enumerate}
@@ -639,9 +660,10 @@ Observe que os totais esperados devem ser iguais aos observados!
 
 \subsection{Tabelas maiores}
 
-\begin{frame}{Tabelas de Contingência maiores}
+\begin{frame}{\scriptsize Tabelas de Contingência maiores}
   \small
   \begin{itemize}
+    \footnotesize
   \item E quando temos mais do que duas categorias?
     \bigskip
   \item Resposta: procedemos como no caso anterior, mas precisamos
@@ -655,7 +677,7 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{itemize}
 \end{frame}
 
-% \begin{frame}{Tabelas de Contingência maiores}
+% \begin{frame}{\scriptsize Tabelas de Contingência maiores}
 %   \begin{exampleblock}{Exemplo}
 %     Comparação entre tratamentos com medicamento de marca, medicamento
 %     genérico e placebo.
@@ -681,7 +703,7 @@ Observe que os totais esperados devem ser iguais aos observados!
 %   \end{itemize}
 % \end{frame}
 
-\begin{frame}{Tabelas de Contingência maiores}
+\begin{frame}{\scriptsize Tabelas de Contingência maiores}
   \begin{exampleblock}{Exemplo 3}
     \footnotesize
     Em dois hospitais, os resultados de 575 autópsias
@@ -710,9 +732,9 @@ Observe que os totais esperados devem ser iguais aos observados!
   {\hfill \footnotesize Fonte: Aula Hacker \& Simões (2008 - Fiocruz)}
 \end{frame}
 
-\begin{frame}{Quais são as variáveis?}
+\begin{frame}{\scriptsize Quais são as variáveis?}
   \begin{itemize}
-    \small
+    \footnotesize
   \item Dependente: qualidade do preenchimento (categórica)
   \item Independente: hospital (categórica)
   \end{itemize}
@@ -724,9 +746,9 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{block}
 \end{frame}
 
-\begin{frame}{Tabelas de Contingência maiores}
+\begin{frame}{\scriptsize Tabelas de Contingência maiores}
   \begin{itemize}
-    \small
+    \footnotesize
   \item $H_0$: Dentro de cada categoria do status do atestado, as
     proporções de atestados de óbitos no hospital A são idênticas ao
     hospital B.
@@ -739,9 +761,10 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Tabelas de contingência maiores}
+\begin{frame}{\scriptsize Tabelas de contingência maiores}
   Preenchendo os totais por linha e coluna:
   \begin{exampleblock}{Exemplo 3}
+    \footnotesize
     \begin{tabular}{c|c|c|c|c}
       Hospital & Confirmada & Incompleta &
       Incorreta & total\\
@@ -755,9 +778,10 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Tabelas de contingência maiores}
+\begin{frame}{\scriptsize Tabelas de contingência maiores}
   Incluindo os valores esperados em parênteses temos:
   \begin{exampleblock}{Exemplo 3}
+    \footnotesize
     \begin{tabular}{c|c|c|c|c}
       Hospital & Confirmada & Incompleta &
       Incorreta & total\\
@@ -771,12 +795,13 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Tabelas de Contingência maiores}
+\begin{frame}{\scriptsize Tabelas de Contingência maiores}
   \small
   Calculando a estatística de teste $\chi^2$:
 
   \bigskip
   \begin{exampleblock}{Exemplo 3}
+    \footnotesize
     \begin{tabular}{c|c|c|c|c}
       \footnotesize
       Hospital & Confirmada & Incompleta &
@@ -798,8 +823,9 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Tabelas de Contingência maiores}
+\begin{frame}{\scriptsize Tabelas de Contingência maiores}
   \begin{itemize}
+    \footnotesize
   \item Calculamos a estatística de teste $\chi^2 = 21.62$
   \item Encontramos um p-valor $p<0.001$ (valor fora da tabela)
   \item Rejeitamos $H_0$ ao nível de significância de $\alpha = 0.05$.
@@ -808,7 +834,7 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{itemize}
 \end{frame}
 
-% \begin{frame}{Tabelas de Contingência maiores}
+% \begin{frame}{\scriptsize Tabelas de Contingência maiores}
 %   \begin{exampleblock}{Exemplo}
 %     Comparação entre tratamentos com medicamento de marca, medicamento
 %     genérico e placebo.
@@ -835,9 +861,9 @@ Observe que os totais esperados devem ser iguais aos observados!
 
 \againframe{exemplo8.1}
 
-\begin{frame}[fragile]{Saída típica de um programa}
+\begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{block}{Teste Qui-quadrado}
-    \footnotesize
+    \scriptsize
 \begin{verbatim}
 	Pearson's Chi-squared test with Yates'
  continuity correction
@@ -849,9 +875,9 @@ X-squared = 18.944, df = 1,
   \end{block}
 \end{frame}
 
-\begin{frame}[fragile]{Saída típica de um programa}
+\begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{block}{Teste exato de Fisher}
-    \footnotesize
+    \scriptsize
 \begin{verbatim}
 	Fisher's Exact Test for Count Data
 
@@ -868,13 +894,13 @@ odds ratio
   \end{block}
 \end{frame}
 
-\begin{frame}{Visualização - gráfico de barra}
+\begin{frame}{\scriptsize Visualização - gráfico de barra}
   \begin{center}
     \includegraphics[height=\textheight]{Cap26-27/barplot}
   \end{center}
 \end{frame}
 
-\begin{frame}{Visualização - pizza}
+\begin{frame}{\scriptsize Visualização - pizza}
   \begin{block}{Atenção}
     NÃO use gráfico de pizza!
   \end{block}
@@ -889,14 +915,16 @@ odds ratio
     \small
     {\em ``Data that can be shown by pie charts always can be shown by a dot chart.
 
+      \bigskip
       This means that judgements of position along a common scale can be made instead of the less accurate angle judgements.''}
   \end{block}
 \end{frame}
 
 \subsection{Resumo}
 
-\begin{frame}{Resumo}
+\begin{frame}{\scriptsize Resumo}
   \begin{itemize}
+    \footnotesize
   \item O teste exato de fisher é um teste de independência entre os grupos
   \item O teste Qui-quadrado é uma boa aproximação, para N grande
   \end{itemize}
@@ -906,21 +934,20 @@ odds ratio
 
 \subsection{Aprofundamento}
 
-\begin{frame}{Aprofundamento}
+\begin{frame}{\scriptsize Aprofundamento}
   \begin{block}{Leitura obrigatória}
     \begin{itemize}
-      \small
+      \footnotesize
     \item Capítulo 26.
     \item Capítulo 27, pular a seção: Calculando o poder
     \end{itemize}
   \end{block}
-  \begin{block}{Exercícios selecionados}
-    \footnotesize
-    Capítulo 26, problema 1
-  \end{block}
   \begin{block}{Leitura recomendada}
-    \small
-    Capítulo 29: Outros testes de tabelas de contingência
+    \begin{itemize}
+      \scriptsize
+    \item Capítulo 29: Outros testes de tabelas de contingência
+    \item Capítulo 27, seção: Calculando o poder
+    \end{itemize}
   \end{block}
 \end{frame}
 
