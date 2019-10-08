@@ -391,10 +391,10 @@
   % \item Como $p=0.0011 < 0.05$, decidimos \alert{rejeitar} $H_0$.
   \end{itemize}
   \bigskip
-  \begin{block}{Resultado}
+  \begin{exampleblock}{Resultado}
     \small
     (...) a mortalidade observada foi diferente de 10\% ($p=0.0011$).
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \section[2 amostras]{Testes de independência para 2 proporções}
@@ -625,10 +625,10 @@ Observe que os totais esperados devem ser iguais aos observados!
     observados e os esperados.
   \item Resultado: devemos \alert{rejeitar} a $H_0$
   \end{itemize}
-  \begin{block}{Interpretação}
+  \begin{exampleblock}{Interpretação}
     Rejeitamos a hipótese de que o AZT não é mais eficiente que o
     placebo.
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\scriptsize O teste Qui-Quadrado}
@@ -657,6 +657,8 @@ Observe que os totais esperados devem ser iguais aos observados!
     \item Quanto se tem amostras de tamanho moderado, e se tiver uma
       ferramenta computacional disponível
     \end{enumerate}
+    \bigskip
+    \bigskip
   \item Se sua amostra for enorme (milhares de dados), prefira o teste
     $\chi^2$, pois:
     \begin{enumerate}
@@ -672,7 +674,7 @@ Observe que os totais esperados devem ser iguais aos observados!
 \againframe{exemplo8.1}
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
-  \begin{block}{Teste Qui-quadrado}
+  \begin{exampleblock}{Teste Qui-quadrado}
     \scriptsize
 \begin{verbatim}
 	Pearson's Chi-squared test with Yates'
@@ -682,11 +684,11 @@ data:  exemplo8.1
 X-squared = 18.944, df = 1,
  p-value = 1.346e-05
 \end{verbatim}
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
-  \begin{block}{Teste exato de Fisher}
+  \begin{exampleblock}{Teste exato de Fisher}
     \scriptsize
 \begin{verbatim}
 	Fisher's Exact Test for Count Data
@@ -701,7 +703,7 @@ sample estimates:
 odds ratio
  0.4905877
 \end{verbatim}
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\scriptsize Visualização - gráfico de barra}
@@ -715,14 +717,14 @@ odds ratio
     NÃO use gráfico de pizza!
   \end{block}
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item É uma visualização ineficiente
   \item Nosso olho é ``bom'' para julgar distâncias/comprimentos
   \item Nosso olho é ruim para julgar áreas
   \item Indicado {\bf apenas} quando as categorias são muito discrepantes
   \end{itemize}
   \begin{block}{Cleveland (1985)}
-    \small
+    \scriptsize
     {\em ``Data that can be shown by pie charts always can be shown by a dot chart.
 
       \bigskip
