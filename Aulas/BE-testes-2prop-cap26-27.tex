@@ -817,79 +817,102 @@ odds ratio
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\scriptsize Tabelas de contingência maiores}
-  \footnotesize
-  Preenchendo os totais por linha e coluna:
-
-  \bigskip
-  \begin{exampleblock}{Exemplo 3}
-    \footnotesize
-    \begin{tabular}{c|c|c|c|c}
-      Hospital & Confirmada & Incompleta &
-      Incorreta & total\\
-      \hline
-      A & 157 & 18 & 54 & 229\\
-      \hline
-      B & 268 & 44 & 34 & 346\\
-      \hline
-      total & 425 & 62 & 88 & 575\\
-    \end{tabular}
-  \end{exampleblock}
-\end{frame}
-
-\begin{frame}{\scriptsize Tabelas de contingência maiores}
-  \footnotesize
-  Incluindo os valores esperados em parênteses temos:
-
-  \bigskip
-  \begin{exampleblock}{Exemplo 3}
-    \footnotesize
-    \begin{tabular}{c|c|c|c|c}
-      Hospital & Confirmada & Incompleta &
-      Incorreta & total\\
-      \hline
-      A & 157 (169.3) & 18 (24.7) & 54 (35.0) & 229\\
-      \hline
-      B & 268 (255.7) & 44 (37.3) & 34 (53.0) & 346\\
-      \hline
-      total & 425 & 62 & 88 & 575\\
-    \end{tabular}
-  \end{exampleblock}
-\end{frame}
-
-\begin{frame}{\scriptsize Tabelas de contingência maiores}
-  \footnotesize
-  Calculando a estatística de teste $\chi^2$:
-
-  \bigskip
-  \begin{exampleblock}{Exemplo 3}
-    \footnotesize
-    \begin{tabular}{c|c|c|c|c}
-      \footnotesize
-      Hospital & Confirmada & Incompleta &
-      Incorreta & total\\
-      \hline
-      A & 157 (169.3) & 18 (24.7) & 54 (35.0) & 229\\
-      \hline
-      B & 268 (255.7) & 44 (37.3) & 34 (53.0) & 346\\
-      \hline
-      total & 425 & 62 & 88 & 575\\
-    \end{tabular}
-  \end{exampleblock}
-  \begin{itemize}
+\begin{frame}[fragile]{\scriptsize Tabelas de contingência maiores}
+  \begin{exampleblock}{Teste exato de Fisher}
     \scriptsize
-  \item $\chi^2 = \frac{(157 - 169.3)^2}{169.3} + \frac{(18-24.7)^2}{24.7}  + \ldots$
-    \bigskip
-    \small
-  \item $\chi^2 = 21.52,\ p<0.001$
-  \end{itemize}
+\begin{verbatim}
+	Fisher's Exact Test for Count Data
+
+data:  exemplo3
+p-value = 2.575e-05
+alternative hypothesis: two.sided
+\end{verbatim}
+
+  \end{exampleblock}
+  \begin{exampleblock}{Teste Qui-quadrado}
+    \scriptsize
+\begin{verbatim}
+	Pearson's Chi-squared test
+
+data:  exemplo3
+X-squared = 21.523, df = 2, p-value = 2.12e-05
+\end{verbatim}
+  \end{exampleblock}
 \end{frame}
+
+% \begin{frame}{\scriptsize Tabelas de contingência maiores}
+%   \footnotesize
+%   Preenchendo os totais por linha e coluna:
+
+%   \bigskip
+%   \begin{exampleblock}{Exemplo 3}
+%     \footnotesize
+%     \begin{tabular}{c|c|c|c|c}
+%       Hospital & Confirmada & Incompleta &
+%       Incorreta & total\\
+%       \hline
+%       A & 157 & 18 & 54 & 229\\
+%       \hline
+%       B & 268 & 44 & 34 & 346\\
+%       \hline
+%       total & 425 & 62 & 88 & 575\\
+%     \end{tabular}
+%   \end{exampleblock}
+% \end{frame}
+
+% \begin{frame}{\scriptsize Tabelas de contingência maiores}
+%   \footnotesize
+%   Incluindo os valores esperados em parênteses temos:
+
+%   \bigskip
+%   \begin{exampleblock}{Exemplo 3}
+%     \footnotesize
+%     \begin{tabular}{c|c|c|c|c}
+%       Hospital & Confirmada & Incompleta &
+%       Incorreta & total\\
+%       \hline
+%       A & 157 (169.3) & 18 (24.7) & 54 (35.0) & 229\\
+%       \hline
+%       B & 268 (255.7) & 44 (37.3) & 34 (53.0) & 346\\
+%       \hline
+%       total & 425 & 62 & 88 & 575\\
+%     \end{tabular}
+%   \end{exampleblock}
+% \end{frame}
+
+% \begin{frame}{\scriptsize Tabelas de contingência maiores}
+%   \footnotesize
+%   Calculando a estatística de teste $\chi^2$:
+
+%   \bigskip
+%   \begin{exampleblock}{Exemplo 3}
+%     \footnotesize
+%     \begin{tabular}{c|c|c|c|c}
+%       \footnotesize
+%       Hospital & Confirmada & Incompleta &
+%       Incorreta & total\\
+%       \hline
+%       A & 157 (169.3) & 18 (24.7) & 54 (35.0) & 229\\
+%       \hline
+%       B & 268 (255.7) & 44 (37.3) & 34 (53.0) & 346\\
+%       \hline
+%       total & 425 & 62 & 88 & 575\\
+%     \end{tabular}
+%   \end{exampleblock}
+%   \begin{itemize}
+%     \scriptsize
+%   \item $\chi^2 = \frac{(157 - 169.3)^2}{169.3} + \frac{(18-24.7)^2}{24.7}  + \ldots$
+%     \bigskip
+%     \small
+%   \item $\chi^2 = 21.52,\ p<0.001$
+%   \end{itemize}
+% \end{frame}
 
 \begin{frame}{\scriptsize Tabelas de contingência maiores}
   \begin{itemize}
     \scriptsize
   \item Estatística de teste $\chi^2 = 21.52$
-  \item p-valor $p<0.001$ %(valor fora da tabela)
+  \item p-valor: $p<0.001$ %(valor fora da tabela)
   \item Rejeitamos $H_0$ ao nível de significância de $\alpha = 0.05$.
   \end{itemize}
   \bigskip
