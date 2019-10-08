@@ -167,20 +167,20 @@
 
 \subsection{Objetivo da aula}
 
-\begin{frame}{\scriptsize Dados categóricos}
-  \begin{itemize}
-    \footnotesize
-  \item Vamos analisar contagens de dados categóricos (ou nominais)
-  \item Para estas variáveis qualitativas não existe ordenação interente
-  \item Observamos apenas as contagens e frequências destes dados em
-    uma amostra.
-  \end{itemize}
-  \begin{exampleblock}{Exemplo}
-    \footnotesize
-    doente/sadio, fumante/não fumante, masculino/feminino, olhos
-    castanhos/olhos azuis/olhos verdes, etc.
-  \end{exampleblock}
-\end{frame}
+% \begin{frame}{\scriptsize Dados categóricos}
+%   \begin{itemize}
+%     \footnotesize
+%   \item Vamos analisar contagens de dados categóricos (ou nominais)
+%   \item Para estas variáveis qualitativas não existe ordenação interente
+%   \item Observamos apenas as contagens e frequências destes dados em
+%     uma amostra.
+%   \end{itemize}
+%   \begin{exampleblock}{Exemplo}
+%     \footnotesize
+%     doente/sadio, fumante/não fumante, masculino/feminino, olhos
+%     castanhos/olhos azuis/olhos verdes, etc.
+%   \end{exampleblock}
+% \end{frame}
 
 \begin{frame}{\scriptsize Objetivo da aula}
   \footnotesize
@@ -198,7 +198,7 @@
     \end{tabular}
 
     \bigskip
-    {\hfill \tiny (Fonte: Larson \& Farber 2013)}
+    {\hfill \tiny Fonte: Larson \& Farber 2013}
   \end{block}
   \vfill
   \begin{block}{Pergunta}
@@ -393,20 +393,24 @@
 
 \begin{frame}{\scriptsize Tabelas de Contingência}
   \begin{block}{Definição}
+    \footnotesize
     Uma \alert{tabela de contingência} mostra as frequências
     observadas para duas variáveis categóricas.
   \end{block}
-  \vfill
+  \bigskip
   \begin{itemize}
-    \small
+    \footnotesize
   \item Podemos calcular as frequências esperadas, baseado
     \begin{itemize}
+      \scriptsize
     \item no tamanho das amostras
     \item na $H_0$
     \end{itemize}
   \item Comparação: frequência observada $\times$ frequência esperada
   \end{itemize}
+  \bigskip
   \begin{block}{}
+    \footnotesize
     A tabela do exemplo 1 (óbitos) \alert{não é} uma tabela de contingência! (Por que?)
   \end{block}
 \end{frame}
@@ -750,7 +754,7 @@ odds ratio
 %       Não melhora & 12 & 13 & 45\\
 %     \end{tabular}
 
-%     (Fonte: Larson \& Farber 2013)
+%     {\hfill \tiny Fonte: Larson \& Farber 2013}
 %   \end{exampleblock}
 %   \begin{itemize}
 %   \item Graus de liberdade:
@@ -916,14 +920,14 @@ X-squared = 21.523, df = 2, p-value = 2.12e-05
   \item Rejeitamos $H_0$ ao nível de significância de $\alpha = 0.05$.
   \end{itemize}
   \bigskip
-  \begin{block}{Resultado}
+  \begin{exampleblock}{Resultado}
     \footnotesize
     Há associação entre o hospital e o status do atestado.
-  \end{block}
-  \begin{block}{Conclusão}
+  \end{exampleblock}
+  \begin{exampleblock}{Conclusão}
     \footnotesize
     Parece que o hospital A tem maior proporção de atestados incorretos.
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 % \begin{frame}{\scriptsize Tabelas de contingência maiores}
@@ -954,7 +958,8 @@ X-squared = 21.523, df = 2, p-value = 2.12e-05
 \begin{frame}{\scriptsize Resumo}
   \begin{itemize}
     \footnotesize
-  \item O teste exato de fisher é um teste de independência entre os grupos
+  \item O teste de Fisher é um teste de independência entre os grupos
+    \bigskip
   \item O teste Qui-quadrado é uma boa aproximação, para N grande
   \end{itemize}
 \end{frame}
