@@ -653,6 +653,69 @@ Observe que os totais esperados devem ser iguais aos observados!
   \end{itemize}
 \end{frame}
 
+\subsection{Na prática}
+
+\againframe{exemplo8.1}
+
+\begin{frame}[fragile]{\scriptsize Saída típica de um programa}
+  \begin{block}{Teste Qui-quadrado}
+    \scriptsize
+\begin{verbatim}
+	Pearson's Chi-squared test with Yates'
+ continuity correction
+
+data:  exemplo8.1
+X-squared = 18.944, df = 1,
+ p-value = 1.346e-05
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}[fragile]{\scriptsize Saída típica de um programa}
+  \begin{block}{Teste exato de Fisher}
+    \scriptsize
+\begin{verbatim}
+	Fisher's Exact Test for Count Data
+
+data:  exemplo8.1
+p-value = 9.24e-06
+alternative hypothesis: true odds ratio
+ is not equal to 1
+95 percent confidence interval:
+ 0.3512693 0.6818650
+sample estimates:
+odds ratio
+ 0.4905877
+\end{verbatim}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Visualização - gráfico de barra}
+  \begin{center}
+    \includegraphics[height=\textheight]{Cap26-27/barplot}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Visualização - pizza}
+  \begin{block}{Atenção}
+    NÃO use gráfico de pizza!
+  \end{block}
+  \begin{itemize}
+    \footnotesize
+  \item É uma visualização ineficiente
+  \item Nosso olho é ``bom'' para julgar distâncias/comprimentos
+  \item Nosso olho é ruim para julgar áreas
+  \item Indicado {\bf apenas} quando as categorias são muito discrepantes
+  \end{itemize}
+  \begin{block}{Cleveland (1985)}
+    \small
+    {\em ``Data that can be shown by pie charts always can be shown by a dot chart.
+
+      \bigskip
+      This means that judgements of position along a common scale can be made instead of the less accurate angle judgements.''}
+  \end{block}
+\end{frame}
+
 \subsection{Tabelas maiores}
 
 \begin{frame}{\scriptsize Tabelas de contingência maiores}
@@ -862,69 +925,6 @@ Observe que os totais esperados devem ser iguais aos observados!
 %   \item Estatística de teste: $\chi^2 = $
 %   \end{itemize}
 % \end{frame}
-
-\subsection{Na prática}
-
-\againframe{exemplo8.1}
-
-\begin{frame}[fragile]{\scriptsize Saída típica de um programa}
-  \begin{block}{Teste Qui-quadrado}
-    \scriptsize
-\begin{verbatim}
-	Pearson's Chi-squared test with Yates'
- continuity correction
-
-data:  exemplo8.1
-X-squared = 18.944, df = 1,
- p-value = 1.346e-05
-\end{verbatim}
-  \end{block}
-\end{frame}
-
-\begin{frame}[fragile]{\scriptsize Saída típica de um programa}
-  \begin{block}{Teste exato de Fisher}
-    \scriptsize
-\begin{verbatim}
-	Fisher's Exact Test for Count Data
-
-data:  exemplo8.1
-p-value = 9.24e-06
-alternative hypothesis: true odds ratio
- is not equal to 1
-95 percent confidence interval:
- 0.3512693 0.6818650
-sample estimates:
-odds ratio
- 0.4905877
-\end{verbatim}
-  \end{block}
-\end{frame}
-
-\begin{frame}{\scriptsize Visualização - gráfico de barra}
-  \begin{center}
-    \includegraphics[height=\textheight]{Cap26-27/barplot}
-  \end{center}
-\end{frame}
-
-\begin{frame}{\scriptsize Visualização - pizza}
-  \begin{block}{Atenção}
-    NÃO use gráfico de pizza!
-  \end{block}
-  \begin{itemize}
-    \footnotesize
-  \item É uma visualização ineficiente
-  \item Nosso olho é ``bom'' para julgar distâncias/comprimentos
-  \item Nosso olho é ruim para julgar áreas
-  \item Indicado {\bf apenas} quando as categorias são muito discrepantes
-  \end{itemize}
-  \begin{block}{Cleveland (1985)}
-    \small
-    {\em ``Data that can be shown by pie charts always can be shown by a dot chart.
-
-      \bigskip
-      This means that judgements of position along a common scale can be made instead of the less accurate angle judgements.''}
-  \end{block}
-\end{frame}
 
 \subsection{Resumo}
 
