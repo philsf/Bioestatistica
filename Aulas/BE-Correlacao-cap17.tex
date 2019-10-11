@@ -447,7 +447,7 @@
 % \end{frame}
 
 \begin{frame}{\scriptsize Correlação}
-  \begin{block}{}
+  \begin{block}{Interpretação}
     \footnotesize
     \begin{itemize}
     \footnotesize
@@ -473,6 +473,8 @@
       \bigskip
   \item Utilizamos $r$ como estimador para $\rho$, e testamos a
     significância estatística da forma usual
+
+    {\scriptsize \bf Podemos apresentar o Intervalo de Confiança em torno de $r$}
   \end{itemize}
 \end{frame}
 
@@ -749,9 +751,10 @@ sample estimates:
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo}
-  \small
-  Por que as duas variáveis são tão correlacionadas? Considere 4
-  possibilidades:
+  \scriptsize
+  Por que estas variáveis parecem correlacionadas?
+  Considere 4 possibilidades:
+  \bigskip
   \bigskip
   \begin{enumerate}
     \footnotesize
@@ -841,11 +844,19 @@ sample estimates:
 \begin{frame}{\scriptsize Interpretando o $r$}
   \begin{itemize}
     \footnotesize
-  \item Se a correlação é 0, então X e Y não variam juntos (independentes)
-  \item Se a correlação é positiva, então quando uma aumenta, a outra
-    aumenta em proporção direta (linear)
-  \item Se a correlação é negativa, então quando uma aumenta, a outra
-    diminui em proporção inversa (linear)
+  \item Se $r \approx 0$, então X e Y não variam juntos
+
+    {\tiny (independentes, i.e., não têm associação linear)}
+    \bigskip
+  \item Se $r>0$, então quando uma aumenta, a outra
+    aumenta em proporção direta
+
+    {\tiny (associação linear positiva)}
+    \bigskip
+  \item Se $r<0$, então quando uma aumenta, a outra
+    diminui em proporção inversa
+
+    {\tiny (associação linear negativa)}
   \end{itemize}
 \end{frame}
 
@@ -864,7 +875,7 @@ sample estimates:
       correlacionada com o número de telefones per capita
     \item Mas comprar mais telefones não vai salvar crianças!
       \bigskip
-    \item Explicação alternativa: a melhoria da condições financeiras
+    \item {\bf Explicação alternativa:} a melhoria da condições financeiras
       pode afetar ambas as variáveis
       % tanto a quantidade de telefones, quanto a longevidade
       % infantil
@@ -955,36 +966,39 @@ sample estimates:
 \againframe{mantra}
 
 \begin{frame}{\scriptsize Causa e efeito}
-  {\small
 
+  {\scriptsize
     Ao encontrar uma forte correlação, deve-se sempre se perguntar:
   }
   \bigskip
 
   \begin{enumerate}
-    \footnotesize
-  \item Há uma relação direta de causa e efeito entre as variáveis? (X
-    causa Y?)
+    \scriptsize
+  \item Há uma relação direta de causa e efeito entre as variáveis?
 
+    {\tiny (X causa Y?)}
     \bigskip
   \item Há uma relação inversa de causa e efeito entre as variáveis?
-    (Y causa X?)
 
+    {\tiny (Y causa X?)}
     \bigskip
   \item É possível que a relação entre as variáveis possa ser causada
     por uma terceira variável (ou mais) que não foi analisada?
 
+    {\tiny (variável de confundimento)}
     \bigskip
   \item É possível que a relação entre duas variáveis seja uma
     coincidência?
+
+    {\tiny (erro tipo I)}
   \end{enumerate}
   \vfill
   \begin{block}{}
-    \footnotesize
+    \scriptsize
     Estas perguntas estão fora do escopo da Bioestatística!
 
     \bigskip
-    Cabe ao pesquisador investigar (e discutir) as possibilidades.
+    Só o especialista pode investigar (e discutir) estas possibilidades.
   \end{block}
 \end{frame}
 
@@ -997,6 +1011,9 @@ sample estimates:
     \bigskip
     \bigskip
   \item O que pode explicar a relação observada?
+
+    \tiny
+    (pense nas quatro perguntas anteriores)
   % \item Que porcentagem da variância pode ser explicada pela hipótese
   %   de relação entre as variáveis?
   % \item Quão bem a reta regressora se ajusta aos dados?
