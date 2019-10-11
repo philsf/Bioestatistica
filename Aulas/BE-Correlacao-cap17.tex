@@ -458,31 +458,27 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}[fragile]{\scriptsize Exemplo}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
-              \tiny
-      	Pearson's product-moment correlation
+    \begin{column}{6cm}
+      \begin{exampleblock}{Correlação perfeita}
+        \tiny
+\begin{verbatim}
+	Pearson's product-moment correlation
 
-        data:  G and G
-        
-        t = 355110000, df = 28, p-value $<$ 2.2e-16
-        
-        alternative hypothesis: true correlation is not equal to 0
-        
-        95 percent confidence interval:
-        
-        1 1
-        
-        sample estimates:
-        
-        cor
-
-        1 
-      \end{block}
-   \end{column}
-    \begin{column}{5cm}
+data:  G and G
+t = 355106730, df = 28, p-value < 2.2e-16
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 1 1
+sample estimates:
+cor 
+  1
+\end{verbatim}
+      \end{exampleblock}
+\end{column}
+    \begin{column}{4cm}
       \begin{center}
         \includegraphics[height=.8\textheight]{Cap17/anim-0}
       \end{center}
@@ -490,31 +486,27 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}[fragile]{\scriptsize Exemplo}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
+    \begin{column}{6cm}
+      \begin{exampleblock}{Correlação ``forte''}
         \tiny
-        Pearson's product-moment correlation
-       
-         data:  G and GP
-                
-t = 28.803, df = 28, p-value $<$ 2.2e-16
-                
-                alternative hypothesis: true correlation is not equal to 0
-                
-                95 percent confidence interval:
-                
-                0.9653236 0.992e2253
-                
-                sample estimates:
-                
-                cor
-                
-0.9835406 
-      \end{block}
+\begin{verbatim}
+	Pearson's product-moment correlation
+
+data:  G and GP
+t = 28.803, df = 28, p-value < 2.2e-16
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 0.9653236 0.9922253
+sample estimates:
+      cor 
+0.9835406
+\end{verbatim}
+    \end{exampleblock}
    \end{column}
-    \begin{column}{5cm}
+    \begin{column}{4cm}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-1}
   \end{center}
@@ -522,31 +514,27 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{columns}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}[fragile]{\scriptsize Exemplo}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
+    \begin{column}{6cm}
+      \begin{exampleblock}{Correlação ``moderada''}
         \tiny
-        Pearson's product-moment correlation
+\begin{verbatim}
+	Pearson's product-moment correlation
 
-        data:  G and GM
-        
-        t = 5.6488, df = 28, p-value = 4.727e-06
-        
-        alternative hypothesis: true correlation is not equal to 0
-        
-        95 percent confidence interval:
-        
-        0.5013686 0.8631382
-        
-        sample estimates:
-        
-        cor
-        
-        0.7298133
-      \end{block}
+data:  G and GM
+t = 5.6488, df = 28, p-value = 4.727e-06
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 0.5013686 0.8631382
+sample estimates:
+      cor 
+0.7298133
+\end{verbatim}
+    \end{exampleblock}
    \end{column}
-    \begin{column}{5cm}
+    \begin{column}{4cm}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-2}
   \end{center}
@@ -554,32 +542,27 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{columns}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}[fragile]{\scriptsize Exemplo}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
+    \begin{column}{6cm}
+      \begin{exampleblock}{Correlação ``fraca''}
         \tiny
-        Pearson's product-moment correlation
+\begin{verbatim}
+	Pearson's product-moment correlation
 
-        data:  G and GG
-        
-        t = 2.6943, df = 28, p-value = 0.01179
-        
-        alternative hypothesis: true correlation is not equal to 0
-        
-        95 percent confidence interval:
-        
-        0.1117472 0.6996458
-        
-        sample estimates:
-        
-        cor
-        
-        0.4537489
-        
-      \end{block}
+data:  G and GG
+t = 2.6943, df = 28, p-value = 0.01179
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 0.1117472 0.6996458
+sample estimates:
+      cor 
+0.4537489
+\end{verbatim}
+    \end{exampleblock}
    \end{column}
-    \begin{column}{5cm}
+    \begin{column}{4cm}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-3}
   \end{center}
@@ -587,31 +570,27 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{columns}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo -- amostras independentes}
+\begin{frame}[fragile]{\scriptsize Exemplo -- amostras independentes}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
+    \begin{column}{6cm}
+      \begin{exampleblock}{Correlação inexistente}
         \tiny
-      Pearson's product-moment correlation
+\begin{verbatim}
+	Pearson's product-moment correlation
 
-        data:  G and seq(1, 30)
-        
-        t = -0.64301, df = 28, p-value = 0.5254
-        
-        alternative hypothesis: true correlation is not equal to 0
-        
-        95 percent confidence interval:
-        
-        -0.4608704  0.2505266
-        
-        sample estimates:
-        
-        cor
-        
--0.1206304 
-      \end{block}
+data:  G and seq(1, 30)
+t = -0.64301, df = 28, p-value = 0.5254
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ -0.4608704  0.2505266
+sample estimates:
+       cor 
+-0.1206304
+\end{verbatim}
+    \end{exampleblock}
    \end{column}
-    \begin{column}{5cm}
+    \begin{column}{4cm}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-n}
   \end{center}
@@ -619,9 +598,8 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{columns}
 \end{frame}
 
-
 \begin{frame}{\scriptsize Exemplo}
- \begin{example}
+ \begin{exampleblock}{Exemplo}
    Pesquisadores queriam entender por que a insulina varia tanto entre
    indivíduos. Imaginaram que a \alert<2>{composição lipídica} das células do
    músculo afetam a \alert<3>{sensibilidade do músculo para a insulina}. Para
@@ -635,16 +613,16 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
    % muita glicose quando o músculo era muito sensível à insulina.
 
     (Fonte: Motulsky, 1995)
-  \end{example}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo}
-  \begin{example}
+  \begin{exampleblock}{Exemplo}
     Os pesquisadores fizeram uma pequena biópsia nos músculos para
     aferir a fração de ácidos graxos poli-insaturados que tem entre 20
     e 22 carbonos (\%C20-22). Como variável resposta, mediram o índice
     de sensibilidade à insulina.
-  \end{example}
+  \end{exampleblock}
   \begin{block}{Quais são as variáveis?}
     \footnotesize
     \begin{itemize}
