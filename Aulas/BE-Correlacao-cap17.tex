@@ -185,7 +185,7 @@
     \small
     Quanto maior a variância...
 
-  \bigskip
+    \bigskip
     ... maior a dispersão em relação ao centro.
   \end{block}
 \end{frame}
@@ -212,10 +212,12 @@
   \begin{itemize}
     \footnotesize
   \item Para medir a associação {\bf entre} duas variáveis contínuas, devemos considerar a dispersão de cada uma delas
-    \bigskip
     \small
+    \bigskip
+    \bigskip
   \item Exemplos anteriores: dispersão no eixo horizontal
   \item Vejamos agora no eixo vertical
+    \bigskip
     \bigskip
     \footnotesize
   \item (e aproveitar para incrementar a visualização de {\bf uma} variância)
@@ -260,12 +262,15 @@
   \item Podemos usar um raciocínio análogo para comparar quanto uma
     amostra se desvia \alert{em relação à outra}
 
+    \bigskip
+    \bigskip
   \item Pareando duas amostras, podemos tentar observar:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item a dispersão no eixo horizontal (difícil)
     \item a dispersão no eixo vertical (difícil)
       \medskip
+      \footnotesize
     \item a ``dispersão conjunta'' entre ambas (fácil)
     \end{itemize}
   \end{itemize}
@@ -344,6 +349,7 @@
   \begin{itemize}
     \footnotesize
   \item Considere duas amostras X e Y, de dados numéricos contínuos.
+    \bigskip
   \item Vamos representar os dados em pares ordenados (x,y) onde:
     \begin{itemize}
       \scriptsize
@@ -357,8 +363,10 @@
   \begin{itemize}
     \footnotesize
   \item Como definir (e mensurar!) o grau de associação entre duas amostras?
+    \bigskip
   \item Se uma amostra é dependente de outra, é razoável assumir que isso
     possa ser observável por estatísticas sumárias
+    \bigskip
   \item Como resumir esta informação em uma única grandeza numérica?
   \end{itemize}
 \end{frame}
@@ -368,7 +376,9 @@
     \footnotesize
   \item Quando uma associação é forte, podemos identificá-la
     subjetivamente
+    \bigskip
   \item Para isto, analisamos o gráfico de dispersão dos pares (x,y)
+    \bigskip
   \item Um gráfico deste tipo é feito simplesmente plotando os pontos
     no plano cartesiano
   \end{itemize}
@@ -409,6 +419,7 @@
   \begin{itemize}
     \footnotesize
   \item É um número entre $-1$ e $1$.
+    \bigskip
   \item Mede a associação \alert{linear} entre duas variáveis.
     \begin{itemize}
       \scriptsize
@@ -439,8 +450,10 @@
     \footnotesize
     \item Uma forte associação \alert<2>{positiva} corresponde a uma correlação
       próxima de \alert<2>{1}.
+      \bigskip
     \item Uma forte associação \alert<3>{negativa} corresponde a uma correlação
       próxima de \alert<3>{-1}.
+      \bigskip
     \item A \alert<4>{ausência} de associação corresponde a uma
       correlação próxima de \alert<4>{0}.
     \end{itemize}
@@ -452,7 +465,9 @@
     \footnotesize
   \item Se tivéssemos os dados de toda a \alert<1>{população}, poderíamos
     calcular o \alert<1>{parâmetro} $\rho$
+      \bigskip
   \item Na prática, só podemos calcular a \alert<2>{estatística} $r$ da \alert<2>{amostra}
+      \bigskip
   \item Utilizamos $r$ como estimador para $\rho$, e testamos a
     significância estatística da forma usual
   \end{itemize}
@@ -599,15 +614,18 @@ sample estimates:
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo}
- \begin{exampleblock}{Exemplo}
+  \begin{exampleblock}{Exemplo}
+    \scriptsize
    Pesquisadores queriam entender por que a insulina varia tanto entre
    indivíduos. Imaginaram que a \alert<2>{composição lipídica} das células do
-   músculo afetam a \alert<3>{sensibilidade do músculo para a insulina}. Para
-   isto, eles injetaram insulina em 13 jovens adultos, e determinaram
-   quanta glicose eles precisariam injetar nos sujeitos para manter o
-   nível de glicose sanguínea constante. A quantidade de glicose
-   injetada para manter o nível sanguíneo constante é, então, uma
-   medida da sensibilidade à insulina.
+   músculo afetam a \alert<3>{sensibilidade do músculo para a insulina}.
+
+   \bigskip
+   Para isto, eles injetaram insulina em 13 jovens adultos, e
+   determinaram quanta glicose eles precisariam injetar nos sujeitos
+   para manter o nível de glicose sanguínea constante. A quantidade de
+   glicose injetada para manter o nível sanguíneo constante é, então,
+   uma medida da sensibilidade à insulina.
 
  % Eles só precisavam injetar
    % muita glicose quando o músculo era muito sensível à insulina.
@@ -618,11 +636,13 @@ sample estimates:
 
 \begin{frame}{\scriptsize Exemplo}
   \begin{exampleblock}{Exemplo}
+    \footnotesize
     Os pesquisadores fizeram uma pequena biópsia nos músculos para
     aferir a fração de ácidos graxos poli-insaturados que tem entre 20
     e 22 carbonos (\%C20-22). Como variável resposta, mediram o índice
     de sensibilidade à insulina.
   \end{exampleblock}
+  \vfill
   \begin{block}{Quais são as variáveis?}
     \footnotesize
     \begin{itemize}
@@ -733,9 +753,12 @@ sample estimates:
     \footnotesize
   \item o conteúdo lipídico das membranas \alert<1>{determina} a
     sensibilidade à insulina
+    \bigskip
   \item A sensibilidade à insulina de alguma forma \alert<2>{afeta} o conteúdo lipídico
+    \bigskip
   \item tanto o conteúdo lipídico quanto a sensibilidade à insulina
     estão sob o efeito de \alert<3>{algum outro} fator (talvez algum hormônio)
+    \bigskip
   \item as duas variáveis não são correlacionados na população, e a
     estimativa observada nessa amostra é \alert<4>{mera coincidência}
   \end{enumerate}
@@ -753,7 +776,9 @@ sample estimates:
   \begin{itemize}
     \footnotesize
   \item Nunca devemos ignorar a última possibilidade (erro tipo I)!
+    \bigskip
   \item o p-valor indica quão rara é essa coincidência
+    \bigskip
   \item neste caso, em apenas 0.21\% dos experimentos não haveria uma
     correlação real, e estaríamos cometendo um erro de interpretação
   \end{itemize}
@@ -852,8 +877,10 @@ sample estimates:
     \footnotesize
   \item Se há uma relação de causalidade entre as duas variáveis, a
     correlação será não nula (positiva ou negativa)
+    \bigskip
   \item Quanto maior for a relação de dependência entre as variáveis,
     maior será o módulo da correlação.
+    \bigskip
   \item Se as variáveis não são relacionadas, a correlação será nula.
   \end{itemize}
 \end{frame}
@@ -863,9 +890,12 @@ sample estimates:
     \footnotesize
   \item Mas não podemos inverter a afirmativa lógica do slide
     anterior!
+    \bigskip
   \item Isto é, ao observar uma forte correlação, gostaríamos de
     concluir que uma variável \alert{causa} este efeito na outra
+    \bigskip
   \item Infelizmente isto não é possível!
+    \bigskip
   \item Lembre-se: a significância do teste indica a probabilidade de
     se cometer um erro do tipo I (falso positivo).
   \end{itemize}
@@ -916,18 +946,22 @@ sample estimates:
 
     Ao encontrar uma forte correlação, deve-se sempre se perguntar:
   }
+  \bigskip
 
   \begin{enumerate}
     \footnotesize
   \item Há uma relação direta de causa e efeito entre as variáveis? (X
     causa Y?)
 
+    \bigskip
   \item Há uma relação inversa de causa e efeito entre as variáveis?
     (Y causa X?)
 
+    \bigskip
   \item É possível que a relação entre as variáveis possa ser causada
     por uma terceira variável (ou mais) que não foi analisada?
 
+    \bigskip
   \item É possível que a relação entre duas variáveis seja uma
     coincidência?
   \end{enumerate}
@@ -947,6 +981,8 @@ sample estimates:
   \begin{itemize}
     \footnotesize
   \item É necessário investigar a relação entre as variáveis!
+    \bigskip
+    \bigskip
   \item O que pode explicar a relação observada?
   % \item Que porcentagem da variância pode ser explicada pela hipótese
   %   de relação entre as variáveis?
