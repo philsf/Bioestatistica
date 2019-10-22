@@ -6,7 +6,7 @@ idade <- rnorm(200, 60, 5)
 horm <- round(sin(BMI))
 scatter <- rnorm(200, 0, 20)
 BMD <- -3*BMI - idade + 400 + scatter
-dados <- data.table(BMI, BMD, idade, horm)
+dados.rls <- data.table(BMI, BMD, idade, vitD)
 
 BMD2 <- -3*BMI -
   c(
@@ -15,7 +15,7 @@ BMD2 <- -3*BMI -
     rnorm(50, 0, 20),
     rnorm(50, 0, 35)
   ) + 300
-dados.het <- data.table(BMI, BMD2)
+dados.rls.het <- data.table(BMI, BMD2)
 
-fwrite(dados, "Aulas/Cap18-19/dados-rls.csv")
-fwrite(dados.het, "Aulas/Cap18-19/dados-rls-het.csv")
+fwrite(dados.rls, "Aulas/Cap18-19/dados-rls.csv")
+fwrite(dados.rls.het, "Aulas/Cap18-19/dados-rls-het.csv")
