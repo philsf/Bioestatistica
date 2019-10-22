@@ -14,4 +14,4 @@ dados.rlm$osteo <- cut(dados.rlm$BMD, c(-Inf, 500, Inf), c("Osteoporose", "Sadio
 dados.rlm$osteo <- relevel(dados.rlm$osteo, "Sadio")
 
 fwrite(dados.rlm, "Aulas/Cap31-32/dados-rlm.csv")
-rm(BMD, BMD2, BMI, etnia, idade, scatter, vitD)
+rm(BMD, BMI, etnia, idade, scatter, vitD)
