@@ -37,7 +37,7 @@ baseplot + geom_point() +
   ggtitle("Modelo 1 - BMI x BMD")
 ggsave("Aulas/Cap31-32/pratica-rlm1.png", h = 7, w = 7)
 
-resid.max <- ceiling(max(abs(range(c(resid(rlm.modelo1), resid(rlm.modelo2))))))
+resid.max <- ceiling(max(abs(range(c(resid(rlm.modelo1), resid(rlm.modelo2), resid(rlm.modelo3))))))
 
 ggplot(data.frame(Fitted = fitted(rlm.modelo1), Residuals = residuals(rlm.modelo1)), aes(Fitted, Residuals)) +
   geom_point() +
