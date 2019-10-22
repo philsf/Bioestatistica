@@ -172,12 +172,14 @@
     Versão simplificada da realidade, adequada ao fim pretendido.
   \end{block}
   \bigskip
-  \small
+  \footnotesize
   Modelos servem para:
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item representar fenômenos, experimentos, dados, etc. de \alert{forma tratável};
+    \medskip
   \item avaliar cenários controlados, menos complexos que a realidade;
+    \medskip
   \item extrapolar resultados e conclusões.
   \end{itemize}
 \end{frame}
@@ -201,7 +203,7 @@
 
 \begin{frame}{\scriptsize Modelos estatísticos}
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item Distribuições de probabilidade servem como modelo para a distribuição dos dados (teórico x empírico)
     \bigskip
   \item Modelos de regressão servem como um {\em framework} para testar hipóteses {\bf específicas} sobre a relação presumida entre variáveis
@@ -305,9 +307,17 @@
 
     \begin{itemize}
       \scriptsize
-    \item Tendência (``Níveis de insulina em jejum tendem a aumentar com a idade?'')
-    \item Ajuste de curva (``Qual é o EC$_{50}$ de uma nova droga?'')
-    \item Predição (``Como predizer o risco de infarto do miocárdio, sabendo-se a idade, pressão e nível de colesterol?'')
+    \item Tendência
+
+      {\tiny ``Níveis de insulina em jejum tendem a aumentar com a idade?''}
+      \medskip
+    \item Ajuste de curva
+
+      {\tiny ``Qual é o EC$_{50}$ de uma nova droga?''}
+      \medskip
+    \item Predição
+
+      {\tiny ``Como predizer o risco de infarto do miocárdio, sabendo-se a idade, pressão e nível de colesterol?''}
     \end{itemize}
   \end{exampleblock}
 \end{frame}
@@ -353,7 +363,7 @@
   \item Independente: BMI (contínua)
     \begin{itemize}
       \scriptsize
-    \item Sinônimos\footnote{\scriptsize Em alguns contextos também covariável/cofator (quando há mais de uma V.I.)}: preditor, fator
+    \item Sinônimos\footnote{\tiny Em alguns contextos também covariável/cofator (quando há mais de uma V.I.)}: preditor, fator
     \end{itemize}
   \end{itemize}
   \vfill
@@ -396,7 +406,7 @@
   \begin{itemize}
     \footnotesize
   \item O intercepto é o valor (hipotético) de BMD quando BMI = 0
-  \item A inclinação é quanto BMD altera\footnote{na média!} quando aumentamos o BMI em 1 unidade
+  \item A inclinação é quanto BMD altera\footnote{\scriptsize na média!} quando aumentamos o BMI em 1 unidade
   \end{itemize}
   \vfill
   \begin{block}{Atenção}
@@ -415,7 +425,7 @@
   \uncover<2->{\begin{itemize}
     \scriptsize
   \item Também chamada de reta de melhor ajuste
-  \item Minimiza os resíduos (erros aleatórios $\varepsilon$)\footnote{Método dos mínimos quadrados}
+  \item Minimiza os resíduos (erros aleatórios $\varepsilon$)\footnote{\tiny Método dos mínimos quadrados}
   \item Erros aleatórios $\varepsilon$ em torno de zero
   \item Dados observados: Y (desfecho contínuo) e X (preditor)
   \item Parâmetros estimados ($\beta_0$ e $\beta_1$)
@@ -444,12 +454,15 @@
   \begin{itemize}
     \footnotesize
   \item Para muitos testes presume-se que os dados vem de uma distribuição normal
+    \bigskip
   \item Neste caso, não é necessário que os {\bf dados} sejam normais
+    \bigskip
   \item {\bf É necessário que os resíduos sejam normais}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{\scriptsize Análise de Regressão}
+  \footnotesize
   Para determinar a inclinação e o intercepto, usamos:
   \bigskip
   \begin{itemize}
@@ -507,7 +520,7 @@
   \end{block}
   \vfill
   \footnotesize
-  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\tiny residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo 17.1}
@@ -544,8 +557,8 @@
       \includegraphics[height=0.6\textheight]{Cap18-19/residuos2}
   \end{center}
   \begin{center}
-    \small
-    Uma forma \alert{simplista} de aferir a qualidade do ajuste do modelo\footnote{Também chamada de Goodness of Fit (GoF)} é o Coeficiente de Determinação $r^2$.
+    \footnotesize
+    Uma forma \alert{simplista} de aferir a qualidade do ajuste do modelo\footnote{\tiny Também chamada de Goodness of Fit (GoF)} é o Coeficiente de Determinação $r^2$.
 
     \medskip
     {\scriptsize ($r^2$ corresponde ao quadrado de $r$!)}
@@ -765,14 +778,14 @@ F-statistic: 403.2 on 1 and 198 DF,  p-value: < 2.2e-16
     \footnotesize
   \item Como vimos, os resíduos são erros aleatórios
 
-    ({\footnotesize em torno da reta})
+    {\tiny (em torno da reta)}
     \bigskip
-  \item {\small Erros que não podem ser explicados pelo modelo}
+  \item {\normalsize Erros que não podem ser explicados pelo modelo}
     \bigskip
 
   \item Devem ser normalmente distribuídos em torno de zero
 
-    ({\footnotesize reta como referência})
+    {\tiny (reta como referência)}
   \end{itemize}
   \vfill
   \begin{exampleblock}{Saída típica de um programa de análise}
@@ -917,7 +930,7 @@ Multiple R-squared:  0.6707,	Adjusted R-squared:  0.669
   \end{center}
 \end{frame}
 
-\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão\footnote{\scriptsize $H_a$: Intercepto não é igual a 0 (modelo nulo)}}
+\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão\footnote{\tiny $H_a$: Intercepto não é igual a 0 (modelo nulo)}}
   \begin{block}{Perguntas}
     \footnotesize
     \begin{itemize}
@@ -944,7 +957,7 @@ Coefficients:
 \end{exampleblock}
 \end{frame}
 
-\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão\footnote{\scriptsize $H_a$: Inclinação não é igual a 0 (modelo nulo)}}
+\begin{frame}[fragile]{\scriptsize Diagnosticando a regressão\footnote{\tiny $H_a$: Inclinação não é igual a 0 (modelo nulo)}}
   \begin{block}{Perguntas}
     \footnotesize
     \begin{itemize}
@@ -1047,7 +1060,7 @@ BMI          -2.9461     0.1467  -20.08   <2e-16 ***
   \end{center}
 \end{frame}
 
-\begin{frame}{\scriptsize Regressão linear simples x múltipla\footnote{Ajustar para outros fatores: como visto no abstract do exercício!}}
+\begin{frame}{\scriptsize Regressão linear simples x múltipla\footnote{\tiny Ajustar para outros fatores: como visto no abstract do exercício!}}
   \begin{block}{Outros fatores}
     \footnotesize
     Nesses casos, não podemos explicar a variância do BMD apenas com o BMI.
