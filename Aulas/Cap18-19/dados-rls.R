@@ -3,7 +3,7 @@ library(data.table)
 set.seed(1)
 BMI <- c(rnorm(100, 30, 5), rnorm(100, 50, 5))
 idade <- rnorm(200, 60, 5)
-horm <- round(sin(BMI))
+vitD <- round(sin(BMI))
 scatter <- rnorm(200, 0, 20)
 BMD <- -3*BMI - idade + 400 + scatter
 dados.rls <- data.table(BMI, BMD, idade, vitD)

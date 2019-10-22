@@ -3,7 +3,7 @@ library(philsfmisc)
 # dados simulados ---------------------------------------------------------
 
 dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv", stringsAsFactors = TRUE)
-dados.rlm$horm <- factor(dados.rlm$horm, levels = c("baixo", "medio", "alto"))
+dados.rlm$vitD <- factor(dados.rlm$vitD, levels = c("baixa", "media", "alta"))
 dados.rlm$osteo <- relevel(dados.rlm$osteo, "Sadio")
 dados.rlm$obeso <- cut(dados.rlm$BMI, c(-Inf, 30, Inf), c("Nao Obeso", "Obeso"))
 dados.rlm$idoso <- cut(dados.rlm$idade, c(-Inf, 60, Inf), right = FALSE, c("Nao Idoso", "Idoso"))
@@ -19,7 +19,7 @@ c(format.float(exp(coef(glm.modelo4)[2])), format.interval(exp(confint.default(g
 tc.idoso.osteo <- with(dados.rlm, table(idoso, osteo))
 fisher.test(tc.idoso.osteo)
 
-glm.modelo5 <- glm(osteo ~ BMI + idade + horm, binomial, dados.rlm)
+glm.modelo5 <- glm(osteo ~ BMI + idade + vitD, binomial, dados.rlm)
 summary(glm.modelo5)
 
 c(format.float(exp(coef(glm.modelo5)[2])), format.interval(exp(confint.default(glm.modelo5)[2, ])))
@@ -44,7 +44,7 @@ ggplot(dados.rlm, aes(idade, BMD)) +
 ggsave("Aulas/Cap31-32/pratica-glm4.png", h = 7, w = 7)
 
 baseplot +
-  geom_point(aes(col = horm)) +
+  geom_point(aes(col = vitD)) +
   labs(subtitle = "Desfecho binário: [BMD < 500] -> Osteoporose ") +
   geom_hline(yintercept = 500, lwd = 1, col = "red", lty = 2) +
   annotate("text", x = min(dados.rlm$BMI)*1.2, y = 492.5, label = "Osteoporose", col = "red") +
