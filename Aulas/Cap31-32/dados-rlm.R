@@ -6,7 +6,8 @@ idade <- round(rnorm(200, 60, 5))
 scatter <- rnorm(200, 0, 20)
 etnia <- sample(gl(2, 100, labels = c("branca", "parda")))
 horm <- round(sin(BMI*2*pi/20))
-BMD <- - 2*BMI - 3*idade - 30*horm + scatter/3 + 790
+BMD <- - 2*BMI - 3*idade - 30*horm + scatter/3 + 770
+# intercepto 770 selecionado para ter casos positivos/negativos de osteoporose com BMD<500 (GLM)
 dados.rlm <- data.table(BMI, BMD, etnia, idade, horm=factor(horm))
 levels(dados.rlm$horm) <- c("baixo", "medio", "alto")
 dados.rlm$osteo <- cut(dados.rlm$BMD, c(-Inf, 500, Inf), c("Osteoporose", "Sadio"))
