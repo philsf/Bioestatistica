@@ -2,9 +2,7 @@ library(philsfmisc)
 
 # dados simulados ---------------------------------------------------------
 
-dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv", stringsAsFactors = TRUE)
-dados.rlm$vitD <- factor(dados.rlm$vitD, levels = c("baixa", "media", "alta"))
-dados.rlm$osteo <- relevel(dados.rlm$osteo, "Sadio")
+source('~/Documents/Docencia/Bioestatistica/Aulas/Cap31-32/rlm.R')
 dados.rlm$obeso <- cut(dados.rlm$BMI, c(-Inf, 30, Inf), right = FALSE, c("Nao Obeso", "Obeso"))
 dados.rlm$idoso <- cut(dados.rlm$idade, c(-Inf, 60, Inf), right = FALSE, c("Nao Idoso", "Idoso"))
 summary(dados.rlm)
