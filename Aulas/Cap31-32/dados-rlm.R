@@ -13,5 +13,9 @@ levels(dados.rlm$vitD) <- c("baixa", "media", "alta")
 dados.rlm$osteo <- cut(dados.rlm$BMD, c(-Inf, 500, Inf), c("Osteoporose", "Sadio"))
 dados.rlm$osteo <- relevel(dados.rlm$osteo, "Sadio")
 
+# dados discretizados para GLM
+dados.rlm$obeso <- cut(dados.rlm$BMI, c(-Inf, 30, Inf), right = FALSE, c("Nao Obeso", "Obeso"))
+dados.rlm$idoso <- cut(dados.rlm$idade, c(-Inf, 60, Inf), right = FALSE, c("Nao Idoso", "Idoso"))
+
 fwrite(dados.rlm, "Aulas/Cap31-32/dados-rlm.csv")
 rm(BMD, BMI, etnia, idade, scatter, vitD)

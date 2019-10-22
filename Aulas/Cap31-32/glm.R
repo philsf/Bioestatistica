@@ -3,8 +3,6 @@ library(philsfmisc)
 # dados simulados ---------------------------------------------------------
 
 source('~/Documents/Docencia/Bioestatistica/Aulas/Cap31-32/rlm.R')
-dados.rlm$obeso <- cut(dados.rlm$BMI, c(-Inf, 30, Inf), right = FALSE, c("Nao Obeso", "Obeso"))
-dados.rlm$idoso <- cut(dados.rlm$idade, c(-Inf, 60, Inf), right = FALSE, c("Nao Idoso", "Idoso"))
 summary(dados.rlm)
 
 # modelos -----------------------------------------------------------------
