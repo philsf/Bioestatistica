@@ -10,10 +10,10 @@ dados <- data.table(BMI, BMD, idade, horm)
 
 BMD2 <- -3*BMI -
   c(
-    rnorm(50, 0, 10), # introduzir heterocedasticidade
+    rnorm(50, 0, 05), # introduzir heterocedasticidade
+    rnorm(50, 0, 15),
     rnorm(50, 0, 20),
-    rnorm(50, 0, 40),
-    rnorm(50, 0, 45)
+    rnorm(50, 0, 35)
   ) + 300
 dados.het <- data.table(BMI, BMD2)
 
