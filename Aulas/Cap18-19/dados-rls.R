@@ -19,3 +19,4 @@ dados.rls.het <- data.table(BMI, BMD2)
 
 fwrite(dados.rls, "Aulas/Cap18-19/dados-rls.csv")
 fwrite(dados.rls.het, "Aulas/Cap18-19/dados-rls-het.csv")
+rm(BMD, BMD2, BMI, idade, scatter, vitD)
