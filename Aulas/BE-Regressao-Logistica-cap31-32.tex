@@ -880,23 +880,25 @@ Number of Fisher Scoring iterations: 4
 \begin{verbatim}
 Deviance Residuals: 
      Min        1Q    Median        3Q       Max  
--1.85523  -0.08866  -0.01263  -0.00068   2.05724  
+-2.61379  -0.07713  -0.00244   0.08301   1.89523  
 
 Coefficients:
-            Estimate Std. Error z value Pr(>|z|)    
-(Intercept) -77.4340    18.0040  -4.301 1.70e-05 ***
-BMI           0.4554     0.1089   4.183 2.88e-05 ***
-idade         0.8285     0.2086   3.972 7.13e-05 ***
-hormmedio     1.9614     1.4716   1.333 0.182590    
-hormalto      5.5205     1.5101   3.656 0.000257 ***
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -53.07482   10.80588  -4.912 9.03e-07 ***
+BMI           0.43097    0.08301   5.191 2.09e-07 ***
+idade         0.67277    0.14175   4.746 2.07e-06 ***
+vitDmedia    -6.13676    1.28900  -4.761 1.93e-06 ***
+vitDalta    -12.59502    2.38905  -5.272 1.35e-07 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 182.354  on 199  degrees of freedom
-Residual deviance:  43.436  on 195  degrees of freedom
-AIC: 53.436
+    Null deviance: 273.869  on 199  degrees of freedom
+Residual deviance:  69.365  on 195  degrees of freedom
+AIC: 79.365
+
+Number of Fisher Scoring iterations: 8
 \end{verbatim}
     \end{exampleblock}
   \begin{exampleblock}{Modelo 5 completo}
@@ -919,13 +921,13 @@ AIC: 53.436
     \footnotesize
     \begin{itemize}
       \scriptsize
-    \item {\small (BMI)} {\bf OR: 1.58, IC: [1.27, 1.95]}
+    \item {\small (BMI)} {\bf OR: 1.54, IC: [1.31, 1.81]}
       \medskip
-    \item {\small (idade)} {\bf OR: 2.29, IC: [1.52, 3.45]}
+    \item {\small (idade)} {\bf OR: 1.96, IC: [1.48, 2.59]}
       \medskip
-    \item {\small (vitD média x baixa)} {\bf OR: 7.11, IC: [0.40, 127.19]}
+    \item {\small (vitD média x baixa)} {\bf OR: 0.002161, IC: [0.0001728, 0.0270419]}
       \medskip
-    \item {\small (vitD alta x baixa)} {\bf OR: 249.76, IC: [12.94, 4818.87]}
+    \item {\small (vitD alta x baixa)} {\bf OR: 3.388847e-06, IC: [3.13678e-08, 3.66116e-04]}
     \end{itemize}
   \end{block}
     \begin{block}{Interpretação}
