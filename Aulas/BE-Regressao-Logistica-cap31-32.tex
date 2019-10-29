@@ -479,7 +479,7 @@ F-statistic: 107.7 on 2 and 197 DF,  p-value: < 2.2e-16
     As participantes perdem, na média, 1.99 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
-    Após ajustar pela idade, o resultado é 2.02.
+    Após ajustar pela idade, o resultado é 2.04.
   \end{exampleblock}
 \end{frame}
 
@@ -583,13 +583,13 @@ F-statistic: 225.5 on 3 and 196 DF,  p-value: < 2.2e-16
       \text{BMD} =555.45 -1.91 \times\text{BMI} + \beta_2 \times\text{vitD}
     \end{displaymath}
   \end{exampleblock}
-  \begin{block}{}
+  \begin{exampleblock}{Interpretação}
     \footnotesize
     As participantes perdem, na média, 1.99 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
     Após ajustar pelo nível sérico de vitamina D, o resultado é 1.91.
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 % \begin{frame}{\scriptsize Quais são as variáveis?}
@@ -686,13 +686,13 @@ F-statistic:  1218 on 4 and 195 DF,  p-value: < 2.2e-16
       \text{BMD} =740.47 -1.95 \times\text{BMI} -3.04 \times\text{idade} + \beta_3 \times\text{vitD}
     \end{displaymath}
   \end{exampleblock}
-  \begin{block}{}
+  \begin{exampleblock}{Interpretação}
     \footnotesize
     As participantes perdem, na média, 1.99 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
     Após ajustar pela idade e pelo nível sérico de vitamina D, o resultado é 1.95.
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \section{Regressão Logística}
@@ -812,22 +812,22 @@ Number of Fisher Scoring iterations: 4
     \footnotesize
     $$\log \left(\text{OR} \right) \approx 0.87...$$
     \begin{center}
-      \small
+      \scriptsize
       ... portanto...
     \end{center}
     \footnotesize
-    $$e^{0.87} \approx 2.4$$
+    $$\text{OR} = e^{0.87} \approx 2.4$$
   \end{block}
 
   \bigskip
   \bigskip
-  \begin{block}{Resultado}<2->
+  \begin{exampleblock}{Resultado}<2->
     \footnotesize
     \begin{itemize}
     \footnotesize
     \item (Idoso) {\bf OR: 2.39, IC: [1.33, 4.27]}
     \end{itemize}
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\scriptsize Modelo 5}
@@ -897,12 +897,10 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
     Null deviance: 273.869  on 199  degrees of freedom
 Residual deviance:  69.365  on 195  degrees of freedom
 AIC: 79.365
-
-Number of Fisher Scoring iterations: 8
 \end{verbatim}
     \end{exampleblock}
   \begin{exampleblock}{Modelo 5 completo}
-    \footnotesize
+    \scriptsize
     \begin{displaymath}
       \text{log(Osteoporose)} =-77.43 + 0.46 \times\text{BMI} + 0.83 \times\text{idade} + \beta_3 \times\text{vitD}
     \end{displaymath}
@@ -917,7 +915,7 @@ Number of Fisher Scoring iterations: 8
       \text{log(Osteoporose)} =-77.43 + 0.46 \times\text{BMI} + 0.83 \times\text{idade} + \beta_3 \times\text{vitD}
     \end{displaymath}
   \end{exampleblock}
-  \begin{block}{Resultado}
+  \begin{exampleblock}{Resultado}
     \footnotesize
     \begin{itemize}
       \scriptsize
@@ -929,11 +927,11 @@ Number of Fisher Scoring iterations: 8
       \medskip
     \item {\small (vitD alta x baixa)} {\bf OR: 3.388847e-06, IC: [3.13678e-08, 3.66116e-04]}
     \end{itemize}
-  \end{block}
-    \begin{block}{Interpretação}
+  \end{exampleblock}
+    \begin{exampleblock}{Interpretação}
     \footnotesize
     Após ajustar pela idade e pelo nível sérico de vitamina D, as participantes tem chance aumentada de desenvolver osteoporose para cada incremento unitário do BMI.
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \againframe{abstract}
