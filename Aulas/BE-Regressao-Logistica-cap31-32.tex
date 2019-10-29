@@ -782,27 +782,27 @@ idoso       Sadio Osteoporose
 \begin{verbatim}
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
--0.8305  -0.8305  -0.3447  -0.3447   2.3886  
+-1.2233  -1.2233  -0.8752   1.1322   1.5134  
 
 Coefficients:
             Estimate Std. Error z value Pr(>|z|)    
-(Intercept)  -2.7932     0.4206  -6.642 3.10e-11 ***
-idosoIdoso    1.9059     0.4767   3.998 6.39e-05 ***
+(Intercept)  -0.7621     0.2289  -3.330 0.000868 ***
+idosoIdoso    0.8694     0.2970   2.927 0.003418 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 182.35  on 199  degrees of freedom
-Residual deviance: 161.78  on 198  degrees of freedom
-AIC: 165.78
+    Null deviance: 273.87  on 199  degrees of freedom
+Residual deviance: 265.03  on 198  degrees of freedom
+AIC: 269.03
 
-Number of Fisher Scoring iterations: 5
+Number of Fisher Scoring iterations: 4
 \end{verbatim}
     \end{exampleblock}
     \begin{block}{\small log da OR de um idoso x osteoporose}<2->
     \footnotesize
-      $$\log \left(\text{OR} \right) = 1.9059$$
+      $$\log \left(\text{OR} \right) = 0.8694$$
     \end{block}
   \end{center}
 \end{frame}
@@ -810,13 +810,13 @@ Number of Fisher Scoring iterations: 5
 \begin{frame}{\scriptsize }
   \begin{block}{\small Transformando o log da OR na OR }
     \footnotesize
-    $$\log \left(\text{OR} \right) \approx 1.90...$$
+    $$\log \left(\text{OR} \right) \approx 0.87...$$
     \begin{center}
       \small
       ... portanto...
     \end{center}
     \footnotesize
-    $$e^{1.90} \approx 6.7$$
+    $$e^{0.87} \approx 2.4$$
   \end{block}
 
   \bigskip
@@ -825,7 +825,7 @@ Number of Fisher Scoring iterations: 5
     \footnotesize
     \begin{itemize}
     \footnotesize
-    \item (Idoso) {\bf OR: 6.73, IC: [2.64, 17.12]}
+    \item (Idoso) {\bf OR: 2.39, IC: [1.33, 4.27]}
     \end{itemize}
   \end{block}
 \end{frame}
