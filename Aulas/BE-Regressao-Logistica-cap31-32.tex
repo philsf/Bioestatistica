@@ -489,7 +489,7 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}{\scriptsize Modelo 2.2 -- quantidade de hormônio}
+\begin{frame}{\scriptsize Modelo 2.2 -- vitamina D sérica}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_2}
   \end{center}
@@ -500,13 +500,13 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
     \footnotesize
   \item Dependente: BMD (contínua)
   \item Independente: BMI (contínua)
-  \item Independente: hormônio (categórica -- 3 níveis)
+  \item Independente: vitamina D sérica (categórica -- 3 níveis)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} \sim \text{BMI} + \text{hormônio}
+      \text{BMD} \sim \text{BMI} + \text{vitD}
     \end{displaymath}
   \end{block}
 \end{frame}
@@ -515,7 +515,7 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} \sim \text{BMI} + \text{hormônio}
+      \text{BMD} \sim \text{BMI} + \text{vitD}
     \end{displaymath}
   \end{block}
   \bigskip
@@ -523,7 +523,7 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \begin{block}{Modelo completo}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(hormônio)} +\varepsilon
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(vitD)} +\varepsilon
     \end{displaymath}
   \end{block}
   \vfill
@@ -588,7 +588,7 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
     As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
-    Após ajustar pelo hormônio, o resultado é 1.90.
+    Após ajustar pelo nível sérico de vitamina D, o resultado é 1.91.
   \end{block}
 \end{frame}
 
@@ -597,12 +597,12 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
 %   \item Dependente: BMD (contínua)
 %   \item Independente: BMI (contínua)
 %   \item Independente: idade (contínua)
-%   \item Independente: hormônio (categórica -- 3 níveis)
+%   \item Independente: vitamina D sérica (categórica -- 3 níveis)
 %   \end{itemize}
 %   \vfill
 %   \begin{block}{Esta relação pode ser expressa como}
 %     \begin{displaymath}
-%       \text{BMD} \sim \text{BMI} + \text{idade} +\text{hormônio}
+%       \text{BMD} \sim \text{BMI} + \text{idade} +\text{vitD}
 %     \end{displaymath}
 %   \end{block}
 % \end{frame}
@@ -617,7 +617,7 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} \sim \text{BMI} + \text{idade} + \text{hormônio}
+      \text{BMD} \sim \text{BMI} + \text{idade} + \text{vitD}
     \end{displaymath}
   \end{block}
   \bigskip
@@ -625,7 +625,7 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
   \begin{block}{Modelo completo}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(hormônio)} +\varepsilon
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(vitD)} +\varepsilon
     \end{displaymath}
   \end{block}
   \vfill
@@ -660,7 +660,7 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
   \begin{exampleblock}{Modelo 3 completo}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} =774.02 -1.95 \times\text{BMI} + -3.03 \times\text{idade} + \beta_3 \text{(vitD)}
+      \text{BMD} =774.02 -1.95 \times\text{BMI} + -3.03 \times\text{idade} + \beta_3 \times\text{vitD}
     \end{displaymath}
   \end{exampleblock}
   \end{center}
@@ -683,7 +683,7 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
   \begin{exampleblock}{Modelo 3 completo}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} =774.02 -1.95 \times\text{BMI} + -3.03 \times\text{idade} + \beta_3 \text{(vitD)}
+      \text{BMD} =774.02 -1.95 \times\text{BMI} + -3.03 \times\text{idade} + \beta_3 \times\text{vitD}
     \end{displaymath}
   \end{exampleblock}
   \begin{block}{}
@@ -691,7 +691,7 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
     As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
-    Após ajustar pela idade e pelo hormônio, o resultado é 1.95.
+    Após ajustar pela idade e pelo nível sérico de vitamina D, o resultado é 1.95.
   \end{block}
 \end{frame}
 
@@ -842,13 +842,13 @@ Number of Fisher Scoring iterations: 5
   \item \alert{Dependente: Osteoporose (categórica -- binária)}
   \item Independente: BMI (contínua)
   \item Independente: idade (contínua)
-  \item Independente: hormônio (categórica -- 3 níveis)
+  \item Independente: vitamina D sérica (categórica -- 3 níveis)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
     \footnotesize
     \begin{displaymath}
-      \text{Osteoporose} \sim \text{BMI} + \text{idade} +\text{hormônio}
+      \text{Osteoporose} \sim \text{BMI} + \text{idade} +\text{vitD}
     \end{displaymath}
   \end{block}
 \end{frame}
@@ -857,7 +857,7 @@ Number of Fisher Scoring iterations: 5
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
-      \text{Osteoporose} \sim \text{BMI} + \text{idade} + \text{hormônio}
+      \text{Osteoporose} \sim \text{BMI} + \text{idade} + \text{vitD}
     \end{displaymath}
   \end{block}
   \bigskip
@@ -865,7 +865,7 @@ Number of Fisher Scoring iterations: 5
   \begin{block}{Modelo completo}
     \footnotesize
     \begin{displaymath}
-      \text{Osteoporose} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(hormônio)} +\varepsilon
+      \text{Osteoporose} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(vitD)} +\varepsilon
     \end{displaymath}
   \end{block}
   \vfill
@@ -923,14 +923,14 @@ AIC: 53.436
       \medskip
     \item {\small (idade)} {\bf OR: 2.29, IC: [1.52, 3.45]}
       \medskip
-    \item {\small (hormônio médio x baixo)} {\bf OR: 7.11, IC: [0.40, 127.19]}
+    \item {\small (vitD média x baixa)} {\bf OR: 7.11, IC: [0.40, 127.19]}
       \medskip
-    \item {\small (hormônio alto x baixo)} {\bf OR: 249.76, IC: [12.94, 4818.87]}
+    \item {\small (vitD alta x baixa)} {\bf OR: 249.76, IC: [12.94, 4818.87]}
     \end{itemize}
   \end{block}
     \begin{block}{Interpretação}
     \footnotesize
-    Após ajustar pela idade e pelo hormônio, as participantes tem chance aumentada de desenvolver osteoporose para cada incremento unitário do BMI.
+    Após ajustar pela idade e pelo nível sérico de vitamina D, as participantes tem chance aumentada de desenvolver osteoporose para cada incremento unitário do BMI.
   \end{block}
 \end{frame}
 
