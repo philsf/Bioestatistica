@@ -934,6 +934,36 @@ AIC: 53.436
   \end{block}
 \end{frame}
 
+\begin{frame}[fragile]{\scriptsize Bônus}
+  \begin{exampleblock}{Como tabular os dados necessários para esta análise?}
+    \tiny
+% \begin{verbatim}
+%           BMI      BMD  etnia idade  vitD       osteo     obeso     idoso
+%   1: 26.24128 508.6804 branca    62 baixa       Sadio Nao Obeso     Idoso
+%   2: 31.10186 516.4340  parda    68 media       Sadio     Obeso     Idoso
+%   3: 24.98623 482.0076 branca    68 baixa Osteoporose Nao Obeso     Idoso
+%   4: 39.57168 514.2508 branca    58 media       Sadio     Obeso Nao Idoso
+%   5: 31.97705 586.2711  parda    49  alta       Sadio     Obeso Nao Idoso
+%  ---                                                                     
+% 196: 42.66411 494.7936  parda    55 baixa Osteoporose     Obeso Nao Idoso
+% 197: 60.08810 440.3827 branca    68 media Osteoporose     Obeso     Idoso
+% 198: 42.88907 471.3145 branca    60 baixa Osteoporose     Obeso     Idoso
+% 199: 52.88382 532.2637  parda    56  alta       Sadio     Obeso Nao Idoso
+% 200: 47.33247 448.2478 branca    64 baixa Osteoporose     Obeso     Idoso
+% \end{verbatim}
+    \begin{center}
+      \includegraphics[width=\textwidth]{Cap31-32/pratica-glm-dados}
+    \end{center}
+    \begin{exampleblock}{Dados coletados}
+      BMI, BMD, etnia, idade, vitD
+    \end{exampleblock}
+    \begin{exampleblock}{Dados calculados}
+      osteo = BMD $<$ 500; obeso = BMI $>$ 30; idoso = idade $>$ 60
+    \end{exampleblock}
+
+  \end{exampleblock}
+\end{frame}
+
 \section{Aprofundamento}
 
 \subsection{Aprofundamento}
