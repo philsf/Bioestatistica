@@ -9,7 +9,7 @@ vitD <- round(sin(BMI*2*pi/20))
 BMD <- - 2*BMI - 3*idade - 30*vitD + scatter/3 + 770
 # intercepto 770 selecionado para ter casos positivos/negativos de osteoporose com BMD<500 (GLM)
 dados.rlm <- data.table(BMI, BMD, etnia, idade, vitD=factor(vitD))
-levels(dados.rlm$vitD) <- c("baixa", "media", "alta")
+levels(dados.rlm$vitD) <- c("alta", "media", "baixa")
 dados.rlm$osteo <- cut(dados.rlm$BMD, c(-Inf, 500, Inf), c("Osteoporose", "Sadio"))
 dados.rlm$osteo <- relevel(dados.rlm$osteo, "Sadio")
 
