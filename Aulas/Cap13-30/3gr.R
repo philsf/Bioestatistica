@@ -35,8 +35,8 @@ cenario2.long$Grupo <- factor(cenario2.long$Grupo)
 
 # médias ------------------------------------------------------------------
 
-cenario1.long[, .(M= format.float(mean(y), 3)), by = Grupo]
-cenario2.long[, .(M= format.float(mean(y), 3)), by = Grupo]
+medias11 <- cenario1.long[, .(M= mean(y)), by = Grupo]
+medias21 <- cenario2.long[, .(M= mean(y)), by = Grupo]
 
 # testes t sem correcao ---------------------------------------------------
 
@@ -90,7 +90,9 @@ baseplot11 <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
 ggsave("Aulas/Cap13-30/cenario1.png", height = 7, width = 7)
 
 baseplot11 +
-  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
+  geom_point(aes(y = M), data = medias11, size = 3)
+# baseplot11 +
+#   geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
 ggsave("Aulas/Cap13-30/cenario1_medias.png", height = 7, width = 7)
 
 baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
@@ -102,7 +104,9 @@ baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
 ggsave("Aulas/Cap13-30/cenario2.png", height = 7, width = 7)
 
 baseplot21 +
-  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
+  geom_point(aes(y = M), data = medias21, size = 3)
+# baseplot21 +
+#   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
 ggsave("Aulas/Cap13-30/cenario2_medias.png", height = 7, width = 7)
 
 baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
@@ -114,7 +118,9 @@ baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
 ggsave("Aulas/Cap13-30/cenario12.png", height = 7, width = 7)
 
 baseplot12 +
-  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
+  geom_point(aes(y = M, col = Grupo), data = medias11, size = 3)
+# baseplot12 +
+#   geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
 ggsave("Aulas/Cap13-30/cenario12_medias.png", height = 7, width = 7)
 
 baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
@@ -126,5 +132,7 @@ baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
 ggsave("Aulas/Cap13-30/cenario22.png", height = 7, width = 7)
 
 baseplot22 +
-  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
+  geom_point(aes(y = M, col = Grupo), data = medias21, size = 3)
+# baseplot22 +
+#   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
 ggsave("Aulas/Cap13-30/cenario22_medias.png", height = 7, width = 7)
