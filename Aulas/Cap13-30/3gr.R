@@ -82,21 +82,25 @@ anova22.p.tukey <- TukeyHSD(anova22)
 # DataViz -----------------------------------------------------------------
 
 # The colorblind palette with black:
-cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+cbbPalette <- c("#984ea3", "#a65628", "#ff7f00", "#377eb8", "#e41a1c", "#4daf4a")
+
+grupos.color <- cbbPalette[1:3] # c("#1b9e77", "#d95f02", "#7570b3")
+generos.color <- cbbPalette[4:5]
+grupos.axis.label.color <- element_text(color = grupos.color, face = "bold")
 
 baseplot11 <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
   scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 1") +
-  # scale_colour_manual(values=cbbPalette) +
+  scale_colour_manual(values=grupos.color) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Cap13-30/cenario11.png", height = 7, width = 7)
 
-baseplot11 +
-  geom_point(aes(y = M), data = medias11, size = 3)
 # baseplot11 +
-#   geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
+#   geom_point(aes(y = M, fill = Grupo), data = medias11, size = 4, shape = 23)
+baseplot11 +
+  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = grupos.color)
 ggsave("Aulas/Cap13-30/cenario11_medias.png", height = 7, width = 7)
 
 baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
@@ -104,29 +108,29 @@ baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 2") +
-  # scale_colour_manual(values=cbbPalette) +
+  scale_colour_manual(values=grupos.color) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Cap13-30/cenario21.png", height = 7, width = 7)
 
-baseplot21 +
-  geom_point(aes(y = M), data = medias21, size = 3)
 # baseplot21 +
-#   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
+#   geom_point(aes(y = M, col = Grupo, fill = Grupo), data = medias21, size = 4, shape = 23)
+baseplot21 +
+  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = grupos.color)
 ggsave("Aulas/Cap13-30/cenario21_medias.png", height = 7, width = 7)
 
 baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
-  # scale_colour_manual(values=cbbPalette) +
   ggtitle("Cenário 3") +
+  scale_colour_manual(values=generos.color) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Cap13-30/cenario12.png", height = 7, width = 7)
 
-baseplot12 +
-  geom_point(aes(y = M, col = Grupo), data = medias11, size = 3)
 # baseplot12 +
-#   geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
+#   geom_point(aes(y = M, col = Grupo, fill = Grupo), data = medias11, size = 4, shape = 23)
+baseplot12 +
+  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = grupos.color)
 ggsave("Aulas/Cap13-30/cenario12_medias.png", height = 7, width = 7)
 
 baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
@@ -134,12 +138,12 @@ baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 4") +
-  # scale_colour_manual(values=cbbPalette) +
+  scale_colour_manual(values=generos.color) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Cap13-30/cenario22.png", height = 7, width = 7)
 
-baseplot22 +
-  geom_point(aes(y = M, col = Grupo), data = medias21, size = 3)
 # baseplot22 +
-#   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
+#   geom_point(aes(y = M, col = Grupo), data = medias21, size = 4, shape = 23)
+baseplot22 +
+  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = grupos.color)
 ggsave("Aulas/Cap13-30/cenario22_medias.png", height = 7, width = 7)
