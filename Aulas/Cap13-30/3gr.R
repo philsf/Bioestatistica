@@ -81,11 +81,15 @@ anova22.p.tukey <- TukeyHSD(anova22)
 
 # DataViz -----------------------------------------------------------------
 
+# The colorblind palette with black:
+cbbPalette <- c("#000000", "#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
 baseplot11 <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
   scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 1") +
+  # scale_colour_manual(values=cbbPalette) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Cap13-30/cenario11.png", height = 7, width = 7)
 
@@ -100,6 +104,7 @@ baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 2") +
+  # scale_colour_manual(values=cbbPalette) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Cap13-30/cenario21.png", height = 7, width = 7)
 
@@ -113,6 +118,7 @@ baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
+  # scale_colour_manual(values=cbbPalette) +
   ggtitle("Cenário 3") +
   theme(legend.position = "bottom")
 ggsave("Aulas/Cap13-30/cenario12.png", height = 7, width = 7)
@@ -128,6 +134,7 @@ baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 4") +
+  # scale_colour_manual(values=cbbPalette) +
   theme(legend.position = "bottom")
 ggsave("Aulas/Cap13-30/cenario22.png", height = 7, width = 7)
 
