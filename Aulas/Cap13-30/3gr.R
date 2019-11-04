@@ -90,11 +90,12 @@ grupos.axis.label.color <- element_text(color = grupos.color, face = "bold")
 
 baseplot11 <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
-  scale_x_discrete(labels = NULL) +
+  # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 1") +
+  xlab("") +
   scale_colour_manual(values=grupos.color) +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
 ggsave("Aulas/Cap13-30/cenario11.png", height = 7, width = 7)
 
 # baseplot11 +
@@ -105,11 +106,12 @@ ggsave("Aulas/Cap13-30/cenario11_medias.png", height = 7, width = 7)
 
 baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
-  scale_x_discrete(labels = NULL) +
+  # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 2") +
+  xlab("") +
   scale_colour_manual(values=grupos.color) +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
 ggsave("Aulas/Cap13-30/cenario21.png", height = 7, width = 7)
 
 # baseplot21 +
@@ -123,8 +125,9 @@ baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 3") +
+  xlab("") +
   scale_colour_manual(values=generos.color) +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
 ggsave("Aulas/Cap13-30/cenario12.png", height = 7, width = 7)
 
 # baseplot12 +
@@ -138,8 +141,9 @@ baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 4") +
+  xlab("") +
   scale_colour_manual(values=generos.color) +
-  theme(legend.position = "bottom")
+  theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
 ggsave("Aulas/Cap13-30/cenario22.png", height = 7, width = 7)
 
 # baseplot22 +
