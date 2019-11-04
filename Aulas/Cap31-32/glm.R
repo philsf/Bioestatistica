@@ -2,7 +2,9 @@ library(philsfmisc)
 
 # dados simulados ---------------------------------------------------------
 
-source('~/Documents/Docencia/Bioestatistica/Aulas/Cap31-32/rlm.R')
+dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv", stringsAsFactors = TRUE)
+dados.rlm$vitD <- factor(dados.rlm$vitD, levels = c("baixa", "media", "alta"))
+dados.rlm$osteo <- relevel(dados.rlm$osteo, "Sadio")
 summary(dados.rlm)
 
 # modelos -----------------------------------------------------------------
