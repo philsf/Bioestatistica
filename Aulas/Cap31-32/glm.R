@@ -14,6 +14,7 @@ paste0("OR: ", format.float(exp(coef(glm.modelo4)[2])), ", IC: ", format.interva
 
 tc.idoso.osteo <- with(dados.rlm, table(idoso, osteo))
 fisher.test(tc.idoso.osteo)
+paste0("OR: ", format.float(fisher.test(tc.idoso.osteo)$estimate), ", IC: ", format.interval(fisher.test(tc.idoso.osteo)$conf.int))
 
 glm.modelo5 <- glm(osteo ~ BMI + idade + vitD, binomial, dados.rlm)
 summary(glm.modelo5)
