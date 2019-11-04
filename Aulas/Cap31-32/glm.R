@@ -18,10 +18,10 @@ fisher.test(tc.idoso.osteo)
 glm.modelo5 <- glm(osteo ~ BMI + idade + vitD, binomial, dados.rlm)
 summary(glm.modelo5)
 
-c(format.float(exp(coef(glm.modelo5)[2])), format.interval(exp(confint.default(glm.modelo5)[2, ])))
-c(format.float(exp(coef(glm.modelo5)[3])), format.interval(exp(confint.default(glm.modelo5)[3, ])))
-c(format.float(exp(coef(glm.modelo5)[4])), format.interval(exp(confint.default(glm.modelo5)[4, ])))
-c(format.float(exp(coef(glm.modelo5)[5])), format.interval(exp(confint.default(glm.modelo5)[5, ])))
+paste0("OR: ", format.float(exp(coef(glm.modelo5)[2])), ", IC: ", format.interval(exp(confint.default(glm.modelo5)[2, ])))
+paste0("OR: ", format.float(exp(coef(glm.modelo5)[3])), ", IC: ", format.interval(exp(confint.default(glm.modelo5)[3, ])))
+paste0("OR: ", format.float(exp(coef(glm.modelo5)[4]), 7), ", IC: ", format.interval(exp(confint.default(glm.modelo5)[4, ]), 7))
+paste0("OR: ", format.float(exp(coef(glm.modelo5)[5]), 7), ", IC: ", format.interval(exp(confint.default(glm.modelo5)[5, ]), 7))
 
 # graficos ----------------------------------------------------------------
 
