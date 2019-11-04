@@ -17,10 +17,14 @@ rlm.modelo2.2 <- lm(BMD ~ BMI + vitD, data = dados.rlm)
 rlm.modelo3 <- lm(BMD ~ BMI + idade + vitD, data = dados.rlm)
 
 print(summary(rlm.modelo1))
+paste0(format.float(coef(rlm.modelo1)[2]), ", IC: ", format.interval(confint.default(rlm.modelo1)[2, ]))
 print(summary(rlm.modelo2))
 print(summary(rlm.modelo2.1))
+paste0(format.float(coef(rlm.modelo2.1)[2]), ", IC: ", format.interval(confint.default(rlm.modelo2.1)[2, ]))
 print(summary(rlm.modelo2.2))
+paste0(format.float(coef(rlm.modelo2.2)[2]), ", IC: ", format.interval(confint.default(rlm.modelo2.2)[2, ]))
 print(summary(rlm.modelo3))
+paste0(format.float(coef(rlm.modelo3)[2]), ", IC: ", format.interval(confint.default(rlm.modelo3)[2, ]))
 
 # graficos ----------------------------------------------------------------
 
