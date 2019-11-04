@@ -87,13 +87,13 @@ baseplot11 <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 1") +
   theme(legend.position = "bottom")
-ggsave("Aulas/Cap13-30/cenario1.png", height = 7, width = 7)
+ggsave("Aulas/Cap13-30/cenario11.png", height = 7, width = 7)
 
 baseplot11 +
   geom_point(aes(y = M), data = medias11, size = 3)
 # baseplot11 +
 #   geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
-ggsave("Aulas/Cap13-30/cenario1_medias.png", height = 7, width = 7)
+ggsave("Aulas/Cap13-30/cenario11_medias.png", height = 7, width = 7)
 
 baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
@@ -101,13 +101,13 @@ baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 2") +
   theme(legend.position = "bottom")
-ggsave("Aulas/Cap13-30/cenario2.png", height = 7, width = 7)
+ggsave("Aulas/Cap13-30/cenario21.png", height = 7, width = 7)
 
 baseplot21 +
   geom_point(aes(y = M), data = medias21, size = 3)
 # baseplot21 +
 #   geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = c("#000000", "#E69F00", "#56B4E9"))
-ggsave("Aulas/Cap13-30/cenario2_medias.png", height = 7, width = 7)
+ggsave("Aulas/Cap13-30/cenario21_medias.png", height = 7, width = 7)
 
 baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
