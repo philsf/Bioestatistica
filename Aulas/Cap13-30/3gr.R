@@ -10,6 +10,7 @@
 
 set.seed(145)
 
+library(philsfmisc)
 library(ggplot2)
 library(tidyr)
 library(data.table)
@@ -34,8 +35,8 @@ cenario2.long$Grupo <- factor(cenario2.long$Grupo)
 
 # médias ------------------------------------------------------------------
 
-cenario1.long[, .(M= format.float(mean(y), 3)), by = Grupo]
-cenario2.long[, .(M= format.float(mean(y), 3)), by = Grupo]
+medias11 <- cenario1.long[, .(M= mean(y)), by = Grupo]
+medias21 <- cenario2.long[, .(M= mean(y)), by = Grupo]
 
 # testes t sem correcao ---------------------------------------------------
 
@@ -80,50 +81,73 @@ anova22.p.tukey <- TukeyHSD(anova22)
 
 # DataViz -----------------------------------------------------------------
 
+# The Set1 colorbrewer palette:
+cbbPalette <- c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00")
+
+grupos.color <- cbbPalette[1:3] # c("#1b9e77", "#d95f02", "#7570b3")
+generos.color <- cbbPalette[4:5]
+grupos.axis.label.color <- element_text(color = grupos.color, face = "bold")
+
 baseplot11 <- ggplot(cenario1.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
-  scale_x_discrete(labels = NULL) +
+  # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 1") +
-  theme(legend.position = "bottom")
-ggsave("Aulas/Cap13-30/cenario1.png", height = 7, width = 7)
+  xlab("") +
+  scale_colour_manual(values=grupos.color) +
+  theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
+ggsave("Aulas/Cap13-30/cenario11.png", height = 7, width = 7)
 
+# baseplot11 +
+#   geom_point(aes(y = M, fill = Grupo), data = medias11, size = 4, shape = 23)
 baseplot11 +
-  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
-ggsave("Aulas/Cap13-30/cenario1_medias.png", height = 7, width = 7)
+  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = grupos.color)
+ggsave("Aulas/Cap13-30/cenario11_medias.png", height = 7, width = 7)
 
 baseplot21 <- ggplot(cenario2.long, aes(Grupo, y, col = Grupo)) +
   geom_point() +
-  scale_x_discrete(labels = NULL) +
+  # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
   ggtitle("Cenário 2") +
-  theme(legend.position = "bottom")
-ggsave("Aulas/Cap13-30/cenario2.png", height = 7, width = 7)
+  xlab("") +
+  scale_colour_manual(values=grupos.color) +
+  theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
+ggsave("Aulas/Cap13-30/cenario21.png", height = 7, width = 7)
 
+# baseplot21 +
+#   geom_point(aes(y = M, col = Grupo, fill = Grupo), data = medias21, size = 4, shape = 23)
 baseplot21 +
-  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
-ggsave("Aulas/Cap13-30/cenario2_medias.png", height = 7, width = 7)
+  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = grupos.color)
+ggsave("Aulas/Cap13-30/cenario21_medias.png", height = 7, width = 7)
 
 baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
-  ggtitle("Cenário 3") +
-  theme(legend.position = "bottom")
+  ggtitle("Cenário 3 - Cenário 1 ajustado pelo gênero") +
+  xlab("") +
+  scale_colour_manual(values=generos.color) +
+  theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
 ggsave("Aulas/Cap13-30/cenario12.png", height = 7, width = 7)
 
+# baseplot12 +
+#   geom_point(aes(y = M, col = Grupo, fill = Grupo), data = medias11, size = 4, shape = 23)
 baseplot12 +
-  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .3)
+  geom_hline(yintercept = apply(cenario1[,1:3], 2, mean), lty = 2, lwd = .6, col = grupos.color)
 ggsave("Aulas/Cap13-30/cenario12_medias.png", height = 7, width = 7)
 
 baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
-  ggtitle("Cenário 4") +
-  theme(legend.position = "bottom")
+  ggtitle("Cenário 4 - Cenário 2 ajustado pelo gênero") +
+  xlab("") +
+  scale_colour_manual(values=generos.color) +
+  theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
 ggsave("Aulas/Cap13-30/cenario22.png", height = 7, width = 7)
 
+# baseplot22 +
+#   geom_point(aes(y = M, col = Grupo), data = medias21, size = 4, shape = 23)
 baseplot22 +
-  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .3)
+  geom_hline(yintercept = apply(cenario2[,1:3], 2, mean), lty = 2, lwd = .6, col = grupos.color)
 ggsave("Aulas/Cap13-30/cenario22_medias.png", height = 7, width = 7)
