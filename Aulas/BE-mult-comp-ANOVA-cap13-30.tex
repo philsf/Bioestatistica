@@ -1020,6 +1020,34 @@ Trat.B-Trat.A   0.08315455 -1.051368 1.2176774 0.9813768
   \end{block}
 \end{frame}
 
+\begin{frame}{\scriptsize Cenário 1 -- Solução}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
+        \begin{enumerate}
+          \tiny
+        \item \sout{Placebo x Trat. A $\Rightarrow p=0.025$}
+        \item \sout{Placebo x Trat. B $\Rightarrow p=0.100$}
+        \item \sout{Trat. A x Trat. B $\Rightarrow p=0.876$}
+        \end{enumerate}
+      \end{exampleblock}
+      \bigskip
+      \bigskip
+      \begin{exampleblock}{\footnotesize P-valores ajustados (Bonferroni)}
+        \begin{enumerate}
+          \tiny
+        \item \alert{Placebo x Trat. A $\Rightarrow p=0.076$}
+        \item Placebo x Trat. B $\Rightarrow p=0.299$
+        \item Trat. A x Trat. B $\Rightarrow p=1.000$
+        \end{enumerate}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap13-30/cenario11}
+    \end{column}
+  \end{columns}
+\end{frame}
+
 \againframe{cenario2}
 \againframe{cenario2-prob}
 
@@ -1103,6 +1131,34 @@ Trat.B-Trat.A  -0.9512395 -1.9741435 0.0716645 0.0713859
     \bigskip
     ... os tratamentos A e B não são diferentes ($p=0.0713859$)
   \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Cenário 2 -- Solução}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
+        \begin{enumerate}
+          \tiny
+        \item \sout{Placebo x Trat. A $\Rightarrow p< 0.0001$}
+        \item \sout{Placebo x Trat. B $\Rightarrow p=0.00037$}
+        \item \sout{Trat. A x Trat. B $\Rightarrow p=0.02943$}
+        \end{enumerate}
+      \end{exampleblock}
+      \bigskip
+      \bigskip
+      \begin{exampleblock}{\footnotesize  P-valores ajustados (Bonferroni)}
+        \begin{enumerate}
+          \tiny
+        \item Placebo x Trat. A $\Rightarrow p< 0.0001$
+        \item Placebo x Trat. B $\Rightarrow p=0.0011$
+        \item \alert{Trat. A x Trat. B $\Rightarrow p=0.0883$}
+        \end{enumerate}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap13-30/cenario21}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{\scriptsize }
