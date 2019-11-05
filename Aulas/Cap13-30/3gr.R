@@ -81,8 +81,8 @@ anova22.p.tukey <- TukeyHSD(anova22)
 
 # DataViz -----------------------------------------------------------------
 
-# The colorblind palette with black:
-cbbPalette <- c("#984ea3", "#a65628", "#ff7f00", "#377eb8", "#e41a1c", "#4daf4a")
+# The Set1 colorbrewer palette:
+cbbPalette <- c("#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00")
 
 grupos.color <- cbbPalette[1:3] # c("#1b9e77", "#d95f02", "#7570b3")
 generos.color <- cbbPalette[4:5]
