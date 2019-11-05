@@ -124,7 +124,7 @@ baseplot12 <- ggplot(cenario1.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
-  ggtitle("Cenário 3") +
+  ggtitle("Cenário 3 - Cenário 1 ajustado pelo gênero") +
   xlab("") +
   scale_colour_manual(values=generos.color) +
   theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
@@ -140,7 +140,7 @@ baseplot22 <- ggplot(cenario2.long, aes(Grupo, y, col = Genero)) +
   geom_point() +
   # scale_x_discrete(labels = NULL) +
   scale_y_continuous(limits = c(0,10), breaks = seq(0, 10)) +
-  ggtitle("Cenário 4") +
+  ggtitle("Cenário 4 - Cenário 2 ajustado pelo gênero") +
   xlab("") +
   scale_colour_manual(values=generos.color) +
   theme(legend.position = "bottom", axis.text.x = grupos.axis.label.color)
