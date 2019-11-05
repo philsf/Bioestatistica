@@ -333,8 +333,8 @@
   \item Assumindo que atendemos às premissas do teste t, consideramos:
     \begin{itemize}
       \footnotesize
-    \item variabilidade dos grupos\footnote{\scriptsize Se possível, semelhantes. Caso contrário, correção de Welch.}
-    \item tamanho do estudo (n)\footnote{\scriptsize Componente do DP e do SEM. Usado como GL para o t crítico.}
+    \item variabilidade dos grupos\footnote{\tiny Se possível, semelhantes. Caso contrário, correção de Welch.}
+    \item tamanho do estudo (n)\footnote{\tiny Componente do DP e do SEM. Usado como GL para o t crítico.}
     \end{itemize}
   \end{itemize}
   \bigskip
@@ -511,7 +511,7 @@
   \begin{itemize}
     \scriptsize
   \item<3-> O teste t permite a avaliação de {\bf uma} hipótese
-  \item<3-> Testamos simultaneamente três\footnote{Leia várias vezes o Capítulo 13!}
+  \item<3-> Testamos simultaneamente três\footnote{\tiny Leia várias vezes o Capítulo 13!}
   \item<3-> Isto aumenta a chance de cometermos um erro tipo I (falso positivo)
   \end{itemize}
   \vfill
@@ -532,7 +532,7 @@
     \footnotesize
   \item {\em Só o pesquisador sabe.}
     % \smallskip
-  \item A metodologia da análise precisa levar em conta todo o planejamento do estudo\footnote{Leia várias vezes o Capítulo 13!}.
+  \item A metodologia da análise precisa levar em conta todo o planejamento do estudo\footnote{\tiny Leia várias vezes o Capítulo 13!}.
   \end{itemize}
   \bigskip
   \bigskip
@@ -623,7 +623,7 @@
   \end{block}
   \vfill
   \footnotesize
-  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\tiny residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
 \begin{frame}[label=exemplo13.5-tabela]{\scriptsize Exemplo 13.5}
@@ -698,7 +698,7 @@
 
 \subsection{O teste F}
 
-\begin{frame}{\scriptsize Expectativa x realidade\footnote{\scriptsize Mesma ideia do qui-quadrado.} -- O teste F\footnote{\scriptsize O teste leva em conta dois graus de liberdade: numerador e denominador}}
+\begin{frame}{\scriptsize Expectativa x realidade\footnote{\tiny Mesma ideia do qui-quadrado.} -- O teste F\footnote{\tiny O teste leva em conta dois graus de liberdade: numerador e denominador}}
   \begin{block}{}
     \small
     Se as médias forem iguais, a variância intragrupo deve ser ``igual'' à variância intergrupo...
@@ -745,7 +745,7 @@
 \begin{frame}{\scriptsize Testes {\em post-hoc}}
   \begin{itemize}
     \footnotesize
-  \item O teste de ANOVA é apenas a primeira parte!\footnote{Está com saudade do teste t?}
+  \item O teste de ANOVA é apenas a primeira parte!\footnote{\tiny Está com saudade do teste t?}
     \bigskip
     \bigskip
     \begin{block}{}
@@ -792,7 +792,7 @@
 %  \item O teste de Tukey tem mais especificidade, mas menos sensibilidade
     \bigskip
     \bigskip
- \item O ajuste de Bonferroni multiplica o p-valor\footnote{ou, analogamente, divide o nível de significância} pelo número de comparações, mas seus IC são muito grandes
+ \item O ajuste de Bonferroni multiplica o p-valor\footnote{\tiny ou, analogamente, divide o nível de significância} pelo número de comparações, mas seus IC são muito grandes
     \bigskip
  \item O ajuste de Tukey é mais conservador, mas pode acusar diferenças significativas com mais frequência
     \bigskip
@@ -856,7 +856,7 @@
     \footnotesize
   \item Vimos como usar o ANOVA com {\bf uma} var. independente categórica
     \bigskip
-  \item O teste ANOVA permite qualquer quantidade de variáveis independentes! E de qualquer tipo\footnote{\scriptsize Na verdade, ANOVA e Regressão Linear são Múltipla são siameses}
+  \item O teste ANOVA permite qualquer quantidade de variáveis independentes! E de qualquer tipo\footnote{\tiny Na verdade, ANOVA e Regressão Linear são Múltipla são siameses}
     \bigskip
     \bigskip
   \item Vejamos o exemplo inicial da aula, com duas var. independentes
@@ -1186,11 +1186,11 @@ M-F 0.3362835 -0.4663601 1.138927 0.3925159
     \footnotesize
   \item Vimos o modelo {\bf ANOVA com fatores fixos} para comparar médias
     \bigskip
-  \item Há também\footnote{\scriptsize Todos fora do escopo, RM ANOVA mencionado no livro}
+  \item Há também...\footnote{\tiny Todos fora do escopo deste curso}
     \begin{itemize}
       \scriptsize
     \item<2-> {\bf ANOVA com interações entre os fatores}
-    \item<2-> {\bf ANOVA com Medidas Repetidas} quando você mensura do participante em vários momentos diferentes
+    \item<2-> {\bf ANOVA com Medidas Repetidas} quando você mensura do participante em vários momentos diferentes\footnote{\tiny RM ANOVA é mencionado no livro-texto}
 
       (ex: baseline, pré-op imediato, pós-op imediato, e após 1 ano)
     \item<2-> {\bf ANOVA com fatores aleatórios} permite decompor as variâncias -- contribuição de cada fator para a variância total
@@ -1199,7 +1199,7 @@ M-F 0.3362835 -0.4663601 1.138927 0.3925159
     \bigskip
   \item<2-> ANOVA é a base para (livros de) Design of Experiments (DoE)
     \bigskip
-  \item<2-> Considere usar {\bf desenhos balanceados}\footnote{Grupos com {\bf mesmo tamanho}} sempre que possível!
+  \item<2-> Considere sempre usar {\bf desenhos balanceados}\footnote{\tiny Grupos com {\bf mesmo tamanho}}!
   \end{itemize}
 \end{frame}
 
