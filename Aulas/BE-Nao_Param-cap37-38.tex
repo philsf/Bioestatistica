@@ -163,13 +163,19 @@
   \end{block}
 \end{frame}
 
+\begin{frame}[label=exemplo-varios]{\scriptsize Na prática...}
+  \begin{center}
+    \includegraphics[width=\textwidth]{Cap37-38/exemplo-varios}
+  \end{center}
+\end{frame}
+
 \section{Normalidade}
 
 \begin{frame}{\scriptsize A hipótese da normalidade}
   \begin{itemize}
     \footnotesize
   \item Todos os métodos que vimos até aqui presumem que os dados são normalmente distribuídos
-  \item Desvios da normalidade precisam ser contornados\footnote{há controvérsias: {\tiny  \url{https://www.r-bloggers.com/normality-tests-don't-do-what-you-think-they-do/}}}
+  \item Desvios da normalidade precisam ser contornados\footnote{\tiny há controvérsias: {\tiny  \url{https://www.r-bloggers.com/normality-tests-don’t-do-what-you-think-they-do/}}}
     \bigskip
   \item Veremos duas maneiras: transformações e alternativas
   \end{itemize}
@@ -216,7 +222,7 @@
   \includegraphics[width=.5\textwidth]{Cap37-38/lognormal2-h}
 \end{frame}
 
-\begin{frame}{\scriptsize Visualização -- boxplot}
+\begin{frame}{\scriptsize Visualização -- Boxplot}
   \centering
   \includegraphics[height=.5\textheight]{Cap37-38/normal2-h}
   \includegraphics[height=.5\textheight]{Cap37-38/lognormal2-h}
@@ -261,7 +267,7 @@
   \item<2-> Resposta curta: \alert<3->{NÃO}.
     \bigskip
     \bigskip
-  \item<4-> Resposta longa: podemos examinar se há evidências para ``aceitar'' esta hipótese\footnote{\scriptsize Lembre: {\bf nunca} aceitamos uma hipótese -- apenas deixamos de rejeitar $H_0$.}
+  \item<4-> Resposta longa: podemos examinar se há evidências para ``aceitar'' esta hipótese\footnote{\tiny Lembre: {\bf nunca} aceitamos uma hipótese -- apenas deixamos de rejeitar $H_0$.}
   \end{itemize}
 \end{frame}
 
@@ -311,7 +317,7 @@
     \item potências
     \end{itemize}
     \bigskip
-  \item Geralmente envolve tentativa e erro \footnote{\scriptsize Mas a transformação de Box-Cox pode ajudar!}
+  \item Geralmente envolve tentativa e erro \footnote{\tiny Mas a transformação de Box-Cox pode ajudar!}
     \bigskip
     \footnotesize
   \item {\bf Hipóteses sobre o problema ou desenho experimental ajudam}
@@ -367,7 +373,7 @@ Dados normais x dados log-transformados
 
 \begin{frame}{\scriptsize Introdução aos métodos não paramétricos}
   \begin{center}
-    Sem média e DP\footnote{tendência central e dispersão, respectivamente}, a única coisa que resta para comparar...
+    Sem média e DP\footnote{\tiny tendência central e dispersão, respectivamente}, a única coisa que resta para comparar...
 
     \bigskip
     ... é a {\bf ordem} dos dados ({\em ranks}).
@@ -382,7 +388,7 @@ Dados normais x dados log-transformados
   \item Desvios da normalidade severos impactam os testes paramétricos
     \bigskip
   \item Nesses casos, tenta-se transformar os dados, se possível
-  \item Caso não seja, deve-se usar um teste não paramétrico\footnote{Sem transformação!}
+  \item Caso não seja, deve-se usar um teste não paramétrico\footnote{\tiny Sem transformação!}
   \end{itemize}
   \bigskip
   \begin{block}{Teste para uma amostra}
@@ -419,7 +425,7 @@ Dados normais x dados log-transformados
   \end{exampleblock}
 \end{frame}
 
-\subsection[2 médias]{Testes para 2 amostras}
+\subsection[2 amostras]{Testes para 2 amostras}
 
 \begin{frame}{\scriptsize Testes para 2 amostras}
   \begin{block}{Dados normais}
@@ -435,7 +441,7 @@ Dados normais x dados log-transformados
     \footnotesize
     \begin{itemize}
       \footnotesize
-    \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} {\footnotesize (Capítulo 24)}%\footnote{Também conhecido como Wilcoxon (rank sum test)}
+    \item amostras independentes $\Rightarrow$ \alert{Mann-Whitney} {\footnotesize (Capítulo 24)}%\footnote{\tiny Também conhecido como Wilcoxon (rank sum test)}
     \item amostras pareadas $\Rightarrow$ Wilcoxon {\footnotesize (Capítulo 25)}
     \end{itemize}
   \end{block}
@@ -469,6 +475,7 @@ Dados normais x dados log-transformados
 \end{frame}
 
 \begin{frame}{\scriptsize Em termos práticos...}
+  \footnotesize
 P: Estas amostras são significativamente diferentes?
 
   \centering
@@ -478,7 +485,7 @@ P: Estas amostras são significativamente diferentes?
 \begin{frame}{\scriptsize Exemplo}
   \begin{itemize}
     \footnotesize
-  \item<1-> Assumindo\footnote{pelo desenho experimental} que elas são
+  \item<1-> Assumindo\footnote{\tiny pelo desenho experimental} que elas são
     \begin{itemize}
     \scriptsize
     \item<1-> \alert<3>{normalmente distribuídas}, e
@@ -503,13 +510,13 @@ P: Estas amostras são significativamente diferentes?
   \includegraphics[height=\textheight]{Cap37-38/2samples-bp}
 \end{frame}
 
-\begin{frame}{\scriptsize Histogramas}
+\begin{frame}{\scriptsize Histograma}
   \includegraphics[width=\textwidth]{Cap37-38/2samples-h}
 
 %p-valores Shapiro-Wilk: (x) =  5.515e-16, (y) = 5.274e-09
 \end{frame}
 
-\begin{frame}{\scriptsize QQ-plots}
+\begin{frame}{\scriptsize QQ plot}
  \includegraphics[width=\textwidth]{Cap37-38/2samples-qq}
 
 %p-valores Shapiro-Wilk: (x) =  5.515e-16, (y) = 5.274e-09
@@ -539,6 +546,12 @@ P: Estas amostras são significativamente diferentes?
   \end{exampleblock}
 \end{frame}
 
+\begin{frame}{\scriptsize Na prática...}
+  \begin{center}
+    \includegraphics[width=\textwidth]{Cap37-38/exemplo-wilcoxon}
+  \end{center}
+\end{frame}
+
 \subsection[3+ amostras]{Teste para 3 ou mais amostras}
 
 \begin{frame}{\scriptsize Relembrando}
@@ -560,6 +573,7 @@ P: Estas amostras são significativamente diferentes?
 \end{frame}
 
 \begin{frame}{\scriptsize Em termos práticos...}
+  \footnotesize
 P: Estas amostras são significativamente diferentes?
 
   \centering
@@ -646,9 +660,15 @@ P: Estas amostras são significativamente diferentes?
   \end{exampleblock}
 \end{frame}
 
+\begin{frame}{\scriptsize Na prática...}
+  \begin{center}
+    \includegraphics[width=\textwidth]{Cap37-38/exemplo-kw}
+  \end{center}
+\end{frame}
+
 \subsection{Correlação}
 
-\begin{frame}{\scriptsize Correlação não-paramétrica}
+\begin{frame}{\scriptsize Correlação não paramétrica}
   \begin{itemize}
     \footnotesize
   \item A correlação de Pearson
@@ -668,9 +688,15 @@ P: Estas amostras são significativamente diferentes?
   \end{block}
 \end{frame}
 
+\begin{frame}{\scriptsize Na prática...}
+  \begin{center}
+    \includegraphics[width=\textwidth]{Cap37-38/exemplo-spearman-rho}
+  \end{center}
+\end{frame}
+
 \section{Resumo}
 
-\begin{frame}{\scriptsize Número de resultados no PUBMED\footnote{\scriptsize Levantamento feito em 2017-11-30}}
+\begin{frame}{\scriptsize Número de resultados no PUBMED\footnote{\tiny Levantamento feito em 2017-11-30}}
   \begin{itemize}
     \scriptsize
   \item t-test: 61488
@@ -696,6 +722,8 @@ P: Estas amostras são significativamente diferentes?
   \item RR: 344996
   \end{itemize}
 \end{frame}
+
+\againframe{exemplo-varios}
 
 \begin{frame}{\scriptsize Resumo (teste oftálmico)}
   % \begin{block}{}
