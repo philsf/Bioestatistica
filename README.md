@@ -22,7 +22,7 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 12. Tópicos em Regressão Logística ([PDF][glm-pdf], [Handout][glm-handout]) (cap 31, 32)
 13. Comparações múltiplas e ANOVA ([PDF][anova-pdf], [Handout][anova-handout]) (cap 13, 30)
 14. Métodos não-paramétricos ([PDF][naopar-pdf], [Handout][naopar-handout]) (Cap 37, 38)
-15. Avaliação substitutiva
+15. Encerramento ([PDF][encerramento-pdf], [Handout][encerramento-handout])
 
 [Intro-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1.pdf
 [Intro-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Intro-cap1_4em1.pdf
@@ -52,6 +52,8 @@ A digulgação do material para os alunos é feita pelo endereço: https://sites
 [anova-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-mult-comp-ANOVA-cap13-30_4em1.pdf
 [naopar-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38.pdf
 [naopar-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Nao_Param-cap37-38_4em1.pdf
+[encerramento-pdf]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Encerramento.pdf
+[encerramento-handout]: https://github.com/philsf/Bioestatistica/raw/master/Aulas/BE-Encerramento_4em1.pdf
 [projeto2019]: https://github.com/philsf/Bioestatistica/projects/5
 
 ## Listas de exercícios
