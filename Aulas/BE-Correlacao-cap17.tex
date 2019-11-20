@@ -185,7 +185,7 @@
     \small
     Quanto maior a variância...
 
-  \bigskip
+    \bigskip
     ... maior a dispersão em relação ao centro.
   \end{block}
 \end{frame}
@@ -212,10 +212,12 @@
   \begin{itemize}
     \footnotesize
   \item Para medir a associação {\bf entre} duas variáveis contínuas, devemos considerar a dispersão de cada uma delas
-    \bigskip
     \small
+    \bigskip
+    \bigskip
   \item Exemplos anteriores: dispersão no eixo horizontal
   \item Vejamos agora no eixo vertical
+    \bigskip
     \bigskip
     \footnotesize
   \item (e aproveitar para incrementar a visualização de {\bf uma} variância)
@@ -260,12 +262,15 @@
   \item Podemos usar um raciocínio análogo para comparar quanto uma
     amostra se desvia \alert{em relação à outra}
 
+    \bigskip
+    \bigskip
   \item Pareando duas amostras, podemos tentar observar:
     \begin{itemize}
-      \footnotesize
+      \scriptsize
     \item a dispersão no eixo horizontal (difícil)
     \item a dispersão no eixo vertical (difícil)
       \medskip
+      \footnotesize
     \item a ``dispersão conjunta'' entre ambas (fácil)
     \end{itemize}
   \end{itemize}
@@ -344,6 +349,7 @@
   \begin{itemize}
     \footnotesize
   \item Considere duas amostras X e Y, de dados numéricos contínuos.
+    \bigskip
   \item Vamos representar os dados em pares ordenados (x,y) onde:
     \begin{itemize}
       \scriptsize
@@ -357,8 +363,10 @@
   \begin{itemize}
     \footnotesize
   \item Como definir (e mensurar!) o grau de associação entre duas amostras?
+    \bigskip
   \item Se uma amostra é dependente de outra, é razoável assumir que isso
     possa ser observável por estatísticas sumárias
+    \bigskip
   \item Como resumir esta informação em uma única grandeza numérica?
   \end{itemize}
 \end{frame}
@@ -368,7 +376,9 @@
     \footnotesize
   \item Quando uma associação é forte, podemos identificá-la
     subjetivamente
+    \bigskip
   \item Para isto, analisamos o gráfico de dispersão dos pares (x,y)
+    \bigskip
   \item Um gráfico deste tipo é feito simplesmente plotando os pontos
     no plano cartesiano
   \end{itemize}
@@ -377,19 +387,22 @@
 \begin{frame}{\scriptsize Exemplo}
   \includegraphics[height=0.6\textheight]{Cap17/positive}
 
-  (Fonte: Triola)
+  \vfill
+  \hfill \tiny Fonte: \href{https://www.amazon.com/Elementary-Statistics-Ninth-Mario-Triola/dp/0201775700}{Triola, 2004}
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo}
   \includegraphics[height=0.6\textheight]{Cap17/negative}
 
-  (Fonte: Triola)
+  \vfill
+  \hfill \tiny Fonte: \href{https://www.amazon.com/Elementary-Statistics-Ninth-Mario-Triola/dp/0201775700}{Triola, 2004}
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo}
   \includegraphics[height=0.6\textheight]{Cap17/other}
 
-  (Fonte: Triola)
+  \vfill
+  \hfill \tiny Fonte: \href{https://www.amazon.com/Elementary-Statistics-Ninth-Mario-Triola/dp/0201775700}{Triola, 2004}
 \end{frame}
 
 % \begin{frame}{\scriptsize }
@@ -400,20 +413,33 @@
 
 \subsection[Pearson]{Coeficiente de correlação de Pearson}
 
+\begin{frame}{\scriptsize}
+  \begin{center}
+    Vamos começar considerando que há associação.
+
+    \bigskip
+    O que é a correlação neste caso?
+  \end{center}
+\end{frame}
+
 \begin{frame}{\scriptsize Coeficiente de correlação}
-  \begin{definition}
+  \begin{block}{Definição}
+    \small
     O coeficiente de correlação $r$ é a medida da direção e força da
     associação entre duas variáveis.
-  \end{definition}
-  Propriedades:
+  \end{block}
+  \bigskip
+  \bigskip
   \begin{itemize}
     \footnotesize
   \item É um número entre $-1$ e $1$.
+    \bigskip
   \item Mede a associação \alert{linear} entre duas variáveis.
     \begin{itemize}
-      \scriptsize
-    \item Diretamente proporcional, inversamente proporcional, ou
-      ausência de proporcionalidade.
+      \tiny
+    \item Diretamente proporcional
+    \item Inversamente proporcional
+    \item ausência de proporcionalidade
     \end{itemize}
   \end{itemize}
 \end{frame}
@@ -433,14 +459,16 @@
 % \end{frame}
 
 \begin{frame}{\scriptsize Correlação}
-  \begin{block}{}
+  \begin{block}{Interpretação}
     \footnotesize
     \begin{itemize}
     \footnotesize
     \item Uma forte associação \alert<2>{positiva} corresponde a uma correlação
       próxima de \alert<2>{1}.
+      \bigskip
     \item Uma forte associação \alert<3>{negativa} corresponde a uma correlação
       próxima de \alert<3>{-1}.
+      \bigskip
     \item A \alert<4>{ausência} de associação corresponde a uma
       correlação próxima de \alert<4>{0}.
     \end{itemize}
@@ -452,37 +480,37 @@
     \footnotesize
   \item Se tivéssemos os dados de toda a \alert<1>{população}, poderíamos
     calcular o \alert<1>{parâmetro} $\rho$
+      \bigskip
   \item Na prática, só podemos calcular a \alert<2>{estatística} $r$ da \alert<2>{amostra}
+      \bigskip
   \item Utilizamos $r$ como estimador para $\rho$, e testamos a
     significância estatística da forma usual
+
+    {\scriptsize \bf Podemos apresentar o Intervalo de Confiança em torno de $r$}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}[fragile]{\scriptsize Exemplo}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
-              \tiny
-      	Pearson's product-moment correlation
+    \begin{column}{6cm}
+      \begin{exampleblock}{Associação perfeita}
+        \tiny
+\begin{verbatim}
+	Pearson's product-moment correlation
 
-        data:  G and G
-        
-        t = 355110000, df = 28, p-value $<$ 2.2e-16
-        
-        alternative hypothesis: true correlation is not equal to 0
-        
-        95 percent confidence interval:
-        
-        1 1
-        
-        sample estimates:
-        
-        cor
-
-        1 
-      \end{block}
-   \end{column}
-    \begin{column}{5cm}
+data:  G and G
+t = 355106730, df = 28, p-value < 2.2e-16
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 1 1
+sample estimates:
+cor 
+  1
+\end{verbatim}
+      \end{exampleblock}
+\end{column}
+    \begin{column}{4cm}
       \begin{center}
         \includegraphics[height=.8\textheight]{Cap17/anim-0}
       \end{center}
@@ -490,31 +518,27 @@
 \end{columns}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}[fragile]{\scriptsize Exemplo}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
+    \begin{column}{6cm}
+      \begin{exampleblock}{Associação ``forte''}
         \tiny
-        Pearson's product-moment correlation
-       
-         data:  G and GP
-                
-t = 28.803, df = 28, p-value $<$ 2.2e-16
-                
-                alternative hypothesis: true correlation is not equal to 0
-                
-                95 percent confidence interval:
-                
-                0.9653236 0.992e2253
-                
-                sample estimates:
-                
-                cor
-                
-0.9835406 
-      \end{block}
+\begin{verbatim}
+	Pearson's product-moment correlation
+
+data:  G and GP
+t = 28.803, df = 28, p-value < 2.2e-16
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 0.9653236 0.9922253
+sample estimates:
+      cor 
+0.9835406
+\end{verbatim}
+    \end{exampleblock}
    \end{column}
-    \begin{column}{5cm}
+    \begin{column}{4cm}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-1}
   \end{center}
@@ -522,31 +546,27 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{columns}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}[fragile]{\scriptsize Exemplo}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
+    \begin{column}{6cm}
+      \begin{exampleblock}{Associação ``moderada''}
         \tiny
-        Pearson's product-moment correlation
+\begin{verbatim}
+	Pearson's product-moment correlation
 
-        data:  G and GM
-        
-        t = 5.6488, df = 28, p-value = 4.727e-06
-        
-        alternative hypothesis: true correlation is not equal to 0
-        
-        95 percent confidence interval:
-        
-        0.5013686 0.8631382
-        
-        sample estimates:
-        
-        cor
-        
-        0.7298133
-      \end{block}
+data:  G and GM
+t = 5.6488, df = 28, p-value = 4.727e-06
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 0.5013686 0.8631382
+sample estimates:
+      cor 
+0.7298133
+\end{verbatim}
+    \end{exampleblock}
    \end{column}
-    \begin{column}{5cm}
+    \begin{column}{4cm}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-2}
   \end{center}
@@ -554,32 +574,27 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{columns}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}[fragile]{\scriptsize Exemplo}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
+    \begin{column}{6cm}
+      \begin{exampleblock}{Associação ``fraca''}
         \tiny
-        Pearson's product-moment correlation
+\begin{verbatim}
+	Pearson's product-moment correlation
 
-        data:  G and GG
-        
-        t = 2.6943, df = 28, p-value = 0.01179
-        
-        alternative hypothesis: true correlation is not equal to 0
-        
-        95 percent confidence interval:
-        
-        0.1117472 0.6996458
-        
-        sample estimates:
-        
-        cor
-        
-        0.4537489
-        
-      \end{block}
+data:  G and GG
+t = 2.6943, df = 28, p-value = 0.01179
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ 0.1117472 0.6996458
+sample estimates:
+      cor 
+0.4537489
+\end{verbatim}
+    \end{exampleblock}
    \end{column}
-    \begin{column}{5cm}
+    \begin{column}{4cm}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-3}
   \end{center}
@@ -587,31 +602,27 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{columns}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo -- amostras independentes}
+\begin{frame}[fragile]{\scriptsize Exemplo -- amostras independentes}
   \begin{columns}
-    \begin{column}{5cm}
-      \begin{block}{}
+    \begin{column}{6cm}
+      \begin{exampleblock}{Associação inexistente}
         \tiny
-      Pearson's product-moment correlation
+\begin{verbatim}
+	Pearson's product-moment correlation
 
-        data:  G and seq(1, 30)
-        
-        t = -0.64301, df = 28, p-value = 0.5254
-        
-        alternative hypothesis: true correlation is not equal to 0
-        
-        95 percent confidence interval:
-        
-        -0.4608704  0.2505266
-        
-        sample estimates:
-        
-        cor
-        
--0.1206304 
-      \end{block}
+data:  G and seq(1, 30)
+t = -0.64301, df = 28, p-value = 0.5254
+alternative hypothesis: true correlation
+ is not equal to 0
+95 percent confidence interval:
+ -0.4608704  0.2505266
+sample estimates:
+       cor 
+-0.1206304
+\end{verbatim}
+    \end{exampleblock}
    \end{column}
-    \begin{column}{5cm}
+    \begin{column}{4cm}
   \begin{center}
     \includegraphics[height=.8\textheight]{Cap17/anim-n}
   \end{center}
@@ -619,32 +630,34 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
 \end{columns}
 \end{frame}
 
-
 \begin{frame}{\scriptsize Exemplo}
- \begin{example}
+  \begin{exampleblock}{Exemplo 17.1}
+    \scriptsize
    Pesquisadores queriam entender por que a insulina varia tanto entre
    indivíduos. Imaginaram que a \alert<2>{composição lipídica} das células do
-   músculo afetam a \alert<3>{sensibilidade do músculo para a insulina}. Para
-   isto, eles injetaram insulina em 13 jovens adultos, e determinaram
-   quanta glicose eles precisariam injetar nos sujeitos para manter o
-   nível de glicose sanguínea constante. A quantidade de glicose
-   injetada para manter o nível sanguíneo constante é, então, uma
-   medida da sensibilidade à insulina.
+   músculo afetam a \alert<3>{sensibilidade do músculo para a insulina}.
+
+   \bigskip
+   Para isto, eles injetaram insulina em 13 jovens adultos, e
+   determinaram quanta glicose eles precisariam injetar nos sujeitos
+   para manter o nível de glicose sanguínea constante. A quantidade de
+   glicose injetada para manter o nível sanguíneo constante é, então,
+   uma medida da sensibilidade à insulina.
 
  % Eles só precisavam injetar
    % muita glicose quando o músculo era muito sensível à insulina.
-
-    (Fonte: Motulsky, 1995)
-  \end{example}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo}
-  \begin{example}
+  \begin{exampleblock}{Exemplo 17.1}
+    \footnotesize
     Os pesquisadores fizeram uma pequena biópsia nos músculos para
     aferir a fração de ácidos graxos poli-insaturados que tem entre 20
     e 22 carbonos (\%C20-22). Como variável resposta, mediram o índice
     de sensibilidade à insulina.
-  \end{example}
+  \end{exampleblock}
+  \vfill
   \begin{block}{Quais são as variáveis?}
     \footnotesize
     \begin{itemize}
@@ -670,19 +683,19 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \end{block}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}{\scriptsize Exemplo 17.1}
   \begin{center}
       \includegraphics[height=0.8\textheight]{Cap17/table}
   \end{center}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo: Diagrama de dispersão dos dados}
+\begin{frame}{\scriptsize Exemplo 17.1: Diagrama de dispersão dos dados}
   \includegraphics[width=\textwidth]{Cap17/scatter}
 
   Obs: na verdade, $r=0.77$.
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}{\scriptsize Exemplo 17.1}
   \begin{columns}
     \begin{column}{5cm}
       \begin{itemize}
@@ -708,7 +721,7 @@ t = 28.803, df = 28, p-value $<$ 2.2e-16
   \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Saída típica de um programa}
+\begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{exampleblock}{Resultados brutos do exemplo}
     \scriptsize
 \begin{verbatim}
@@ -727,7 +740,7 @@ sample estimates:
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
+\begin{frame}{\scriptsize Exemplo 17.1}
   \begin{exampleblock}{Resultados}
     \footnotesize
     \begin{itemize}
@@ -746,18 +759,22 @@ sample estimates:
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{\scriptsize Exemplo}
-  \small
-  Por que as duas variáveis são tão correlacionadas? Considere 4
-  possibilidades:
+\begin{frame}{\scriptsize Exemplo 17.1}
+  \scriptsize
+  Por que estas variáveis parecem correlacionadas?
+  Considere 4 possibilidades:
+  \bigskip
   \bigskip
   \begin{enumerate}
     \footnotesize
   \item o conteúdo lipídico das membranas \alert<1>{determina} a
     sensibilidade à insulina
+    \bigskip
   \item A sensibilidade à insulina de alguma forma \alert<2>{afeta} o conteúdo lipídico
+    \bigskip
   \item tanto o conteúdo lipídico quanto a sensibilidade à insulina
     estão sob o efeito de \alert<3>{algum outro} fator (talvez algum hormônio)
+    \bigskip
   \item as duas variáveis não são correlacionados na população, e a
     estimativa observada nessa amostra é \alert<4>{mera coincidência}
   \end{enumerate}
@@ -775,7 +792,9 @@ sample estimates:
   \begin{itemize}
     \footnotesize
   \item Nunca devemos ignorar a última possibilidade (erro tipo I)!
+    \bigskip
   \item o p-valor indica quão rara é essa coincidência
+    \bigskip
   \item neste caso, em apenas 0.21\% dos experimentos não haveria uma
     correlação real, e estaríamos cometendo um erro de interpretação
   \end{itemize}
@@ -834,14 +853,44 @@ sample estimates:
 \begin{frame}{\scriptsize Interpretando o $r$}
   \begin{itemize}
     \footnotesize
-  \item Se a correlação é 0, então X e Y não variam juntos (independentes)
-  \item Se a correlação é positiva, então quando uma aumenta, a outra
-    aumenta em proporção direta (linear)
-  \item Se a correlação é negativa, então quando uma aumenta, a outra
-    diminui em proporção inversa (linear)
+  \item Se $r \approx 0$, então X e Y não variam juntos
+
+    {\tiny (independentes, i.e., não têm associação linear)}
+    \bigskip
+  \item Se $r>0$, então quando uma aumenta, a outra
+    aumenta em proporção direta
+
+    {\tiny (associação linear positiva)}
+    \bigskip
+  \item Se $r<0$, então quando uma aumenta, a outra
+    diminui em proporção inversa
+
+    {\tiny (associação linear negativa)}
   \end{itemize}
 \end{frame}
 
+\begin{frame}{\scriptsize }
+  \begin{center}
+    Porém...
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize }
+  \begin{exampleblock}{Exemplo \visible<2->{-- correlação sem causalidade}}
+    \footnotesize
+    \begin{itemize}
+      \footnotesize
+    \item<1-> Em alguns países a mortalidade infantil é negativamente
+      correlacionada com o número de telefones per capita
+    \item<2-> Mas comprar mais telefones não vai salvar crianças!
+      \bigskip
+    \item<2-> {\bf Explicação alternativa:} \visible<3->{a melhoria da condições financeiras
+        pode afetar ambas as variáveis}
+      % tanto a quantidade de telefones, quanto a longevidade
+      % infantil
+    \end{itemize}    
+  \end{exampleblock}
+\end{frame}
 
 \begin{frame}{\scriptsize }
   \begin{block}{Cuidado!}
@@ -849,20 +898,6 @@ sample estimates:
     Duas variáveis podem \alert{parecer} correlacionadas pois são
     influenciadas por uma terceira variável
   \end{block}
-  \begin{exampleblock}{Exemplo}
-    \footnotesize
-    \begin{itemize}
-      \footnotesize
-    \item Em alguns países a mortalidade infantil é negativamente
-      correlacionada com o número de telefones per capita
-    \item Mas comprar mais telefones não vai salvar crianças!
-      \bigskip
-    \item Explicação alternativa: a melhoria da condições financeiras
-      pode afetar ambas as variáveis
-      % tanto a quantidade de telefones, quanto a longevidade
-      % infantil
-    \end{itemize}    
-  \end{exampleblock}
 \end{frame}
 
 \section{Resumo}
@@ -874,8 +909,10 @@ sample estimates:
     \footnotesize
   \item Se há uma relação de causalidade entre as duas variáveis, a
     correlação será não nula (positiva ou negativa)
+    \bigskip
   \item Quanto maior for a relação de dependência entre as variáveis,
     maior será o módulo da correlação.
+    \bigskip
   \item Se as variáveis não são relacionadas, a correlação será nula.
   \end{itemize}
 \end{frame}
@@ -885,17 +922,24 @@ sample estimates:
     \footnotesize
   \item Mas não podemos inverter a afirmativa lógica do slide
     anterior!
+    \bigskip
   \item Isto é, ao observar uma forte correlação, gostaríamos de
     concluir que uma variável \alert{causa} este efeito na outra
+    \bigskip
   \item Infelizmente isto não é possível!
-  \item Lembre-se: a significância do teste indica a probabilidade de
-    se cometer um erro do tipo I (falso positivo).
   \end{itemize}
+  \vfill
+  \begin{block}{Lembre-se}
+    \scriptsize
+    A significância do teste indica a probabilidade de se cometer um
+    erro do tipo I (falso positivo).
+  \end{block}
 \end{frame}
 
 \againframe{mantra}
 
 \begin{frame}{\scriptsize Exemplo}
+  \scriptsize
   Gasto com C\&T (EUA) x Suicídios por enforcamento
   \bigskip
 
@@ -904,10 +948,12 @@ sample estimates:
   \bigskip
   Correlação: 0.992082
 
-  \hfill \scriptsize (Fonte: Spurious correlations)
+  \vfill
+  \hfill \tiny Fonte: \href{https://www.tylervigen.com/spurious-correlations}{Spurious correlations}
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo}
+  \scriptsize
   Produção de mel x Prisões por posse de maconha
   \bigskip
 
@@ -916,10 +962,12 @@ sample estimates:
   \bigskip
   Correlação: -0.933389
 
-  \hfill \scriptsize (Fonte: Spurious correlations)
+  \vfill
+  \hfill \tiny Fonte: \href{https://www.tylervigen.com/spurious-correlations}{Spurious correlations}
 \end{frame}
 
 \begin{frame}{\scriptsize Exemplo}
+  \scriptsize
   Afogamentos em piscina x Filmes com Nicholas Cage
   \bigskip
 
@@ -928,38 +976,46 @@ sample estimates:
   \bigskip
   Correlação: 0.666004
 
-  \hfill \scriptsize (Fonte: Spurious correlations)
+  \vfill
+  \hfill \tiny Fonte: \href{https://www.tylervigen.com/spurious-correlations}{Spurious correlations}
 \end{frame}
 
 \againframe{mantra}
 
 \begin{frame}{\scriptsize Causa e efeito}
-  {\small
 
+  {\scriptsize
     Ao encontrar uma forte correlação, deve-se sempre se perguntar:
   }
+  \bigskip
 
   \begin{enumerate}
-    \footnotesize
-  \item Há uma relação direta de causa e efeito entre as variáveis? (X
-    causa Y?)
+    \scriptsize
+  \item Há uma relação direta de causa e efeito entre as variáveis?
 
+    {\tiny (X causa Y?)}
+    \bigskip
   \item Há uma relação inversa de causa e efeito entre as variáveis?
-    (Y causa X?)
 
+    {\tiny (Y causa X?)}
+    \bigskip
   \item É possível que a relação entre as variáveis possa ser causada
     por uma terceira variável (ou mais) que não foi analisada?
 
+    {\tiny (variável de confundimento)}
+    \bigskip
   \item É possível que a relação entre duas variáveis seja uma
     coincidência?
+
+    {\tiny (erro tipo I)}
   \end{enumerate}
   \vfill
   \begin{block}{}
-    \footnotesize
+    \scriptsize
     Estas perguntas estão fora do escopo da Bioestatística!
 
     \bigskip
-    Cabe ao pesquisador investigar (e discutir) as possibilidades.
+    Só o especialista pode investigar (e discutir) estas possibilidades.
   \end{block}
 \end{frame}
 
@@ -969,7 +1025,12 @@ sample estimates:
   \begin{itemize}
     \footnotesize
   \item É necessário investigar a relação entre as variáveis!
+    \bigskip
+    \bigskip
   \item O que pode explicar a relação observada?
+
+    \tiny
+    (pense nas quatro perguntas anteriores)
   % \item Que porcentagem da variância pode ser explicada pela hipótese
   %   de relação entre as variáveis?
   % \item Quão bem a reta regressora se ajusta aos dados?
