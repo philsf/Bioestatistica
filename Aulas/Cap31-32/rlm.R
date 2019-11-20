@@ -4,23 +4,23 @@ library(data.table)
 # dados simulados ---------------------------------------------------------
 
 dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv", stringsAsFactors = TRUE)
-dados.rlm$horm <- factor(dados.rlm$horm, levels = c("baixo", "medio", "alto"))
+dados.rlm$vitD <- factor(dados.rlm$vitD, levels = c("baixa", "media", "alta"))
 dados.rlm$osteo <- relevel(dados.rlm$osteo, "Sadio")
 summary(dados.rlm)
 
 # modelos -----------------------------------------------------------------
 
-modelo1 <- lm(BMD ~ BMI, data = dados.rlm)
-modelo2 <- lm(BMD ~ BMI + etnia, dados.rlm)
-modelo2.1 <- lm(BMD ~ BMI + idade, data = dados.rlm)
-modelo2.2 <- lm(BMD ~ BMI + horm, data = dados.rlm)
-modelo3 <- lm(BMD ~ BMI + idade + horm, data = dados.rlm)
+rlm.modelo1 <- lm(BMD ~ BMI, data = dados.rlm)
+rlm.modelo2 <- lm(BMD ~ BMI + etnia, dados.rlm)
+rlm.modelo2.1 <- lm(BMD ~ BMI + idade, data = dados.rlm)
+rlm.modelo2.2 <- lm(BMD ~ BMI + vitD, data = dados.rlm)
+rlm.modelo3 <- lm(BMD ~ BMI + idade + vitD, data = dados.rlm)
 
-print(summary(modelo1))
-print(summary(modelo2))
-print(summary(modelo2.1))
-print(summary(modelo2.2))
-print(summary(modelo3))
+print(summary(rlm.modelo1))
+print(summary(rlm.modelo2))
+print(summary(rlm.modelo2.1))
+print(summary(rlm.modelo2.2))
+print(summary(rlm.modelo3))
 
 # graficos ----------------------------------------------------------------
 
@@ -37,9 +37,9 @@ baseplot + geom_point() +
   ggtitle("Modelo 1 - BMI x BMD")
 ggsave("Aulas/Cap31-32/pratica-rlm1.png", h = 7, w = 7)
 
-resid.max <- ceiling(max(abs(range(c(resid(modelo1), resid(modelo2))))))
+resid.max <- ceiling(max(abs(range(c(resid(rlm.modelo1), resid(rlm.modelo2), resid(rlm.modelo3))))))
 
-ggplot(data.frame(Fitted = fitted(modelo1), Residuals = residuals(modelo1)), aes(Fitted, Residuals)) +
+ggplot(data.frame(Fitted = fitted(rlm.modelo1), Residuals = residuals(rlm.modelo1)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-resid.max, resid.max)) +
   theme_bw() +
@@ -52,7 +52,7 @@ baseplot +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap31-32/pratica-rlm2_0.png", h = 7, w = 7)
 
-ggplot(data.frame(Fitted = fitted(modelo2), Residuals = residuals(modelo2)), aes(Fitted, Residuals)) +
+ggplot(data.frame(Fitted = fitted(rlm.modelo2), Residuals = residuals(rlm.modelo2)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-resid.max, resid.max)) +
   theme_bw() +
@@ -64,7 +64,7 @@ baseplot +
   geom_smooth(method = "lm")
 ggsave("Aulas/Cap31-32/pratica-rlm2_1.png", h = 7, w = 7)
 
-ggplot(data.frame(Fitted = fitted(modelo2.1), Residuals = residuals(modelo2.1)), aes(Fitted, Residuals)) +
+ggplot(data.frame(Fitted = fitted(rlm.modelo2.1), Residuals = residuals(rlm.modelo2.1)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-resid.max, resid.max)) +
   theme_bw() +
@@ -72,27 +72,27 @@ ggplot(data.frame(Fitted = fitted(modelo2.1), Residuals = residuals(modelo2.1)),
 ggsave("Aulas/Cap31-32/pratica-rlm2_1-resid.png", h = 7, w = 7)
 
 baseplot +
-  geom_point(aes(col = horm)) +
+  geom_point(aes(col = vitD)) +
   geom_smooth(method = "lm")
 ggsave("Aulas/Cap31-32/pratica-rlm2_2.png", h = 7, w = 7)
 
-ggplot(data.frame(Fitted = fitted(modelo2.2), Residuals = residuals(modelo2.2)), aes(Fitted, Residuals)) +
+ggplot(data.frame(Fitted = fitted(rlm.modelo2.2), Residuals = residuals(rlm.modelo2.2)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-resid.max, resid.max)) +
   theme_bw() +
-  ggtitle("Modelo 2.2 - Valores ajustados x Resíduos", subtitle = "BMI ajustado por hormônio")
+  ggtitle("Modelo 2.2 - Valores ajustados x Resíduos", subtitle = "BMI ajustado por vitamina D sérica")
 ggsave("Aulas/Cap31-32/pratica-rlm2_2-resid.png", h = 7, w = 7)
 
-ggplot(data.frame(Fitted = fitted(modelo3), Residuals = residuals(modelo3)), aes(Fitted, Residuals)) +
+ggplot(data.frame(Fitted = fitted(rlm.modelo3), Residuals = residuals(rlm.modelo3)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-resid.max, resid.max)) +
   theme_bw() +
-  ggtitle("Modelo 3 - Valores ajustados x Resíduos", subtitle = "BMI ajustado por idade e hormônio")
+  ggtitle("Modelo 3 - Valores ajustados x Resíduos", subtitle = "BMI ajustado por idade e vitamina D sérica")
 ggsave("Aulas/Cap31-32/pratica-rlm3-resid.png", h = 7, w = 7)
 
-ggplot(data.frame(Fitted = fitted(modelo3), Residuals = residuals(modelo3)), aes(Fitted, Residuals)) +
+ggplot(data.frame(Fitted = fitted(rlm.modelo3), Residuals = residuals(rlm.modelo3)), aes(Fitted, Residuals)) +
   geom_point() +
   # ylim(c(-resid.max, resid.max)) +
   theme_bw() +
-  ggtitle("Modelo 3 - Valores ajustados x Resíduos", subtitle = "BMI ajustado por idade e hormônio")
+  ggtitle("Modelo 3 - Valores ajustados x Resíduos", subtitle = "BMI ajustado por idade e vitamina D sérica")
 ggsave("Aulas/Cap31-32/pratica-rlm3-resid-zoom.png", h = 7, w = 7)

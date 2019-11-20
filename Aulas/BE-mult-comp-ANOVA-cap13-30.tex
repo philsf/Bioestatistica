@@ -168,6 +168,24 @@
 \subsection[Coincidências]{O acaso prega peças}
 
 \begin{frame}{\scriptsize }
+  \begin{center}
+    A probabilidade de {\em você} acertar na Mega Sena...
+
+    \bigskip
+    ... é grande ou pequena?
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize }
+  \begin{center}
+    A probabilidade de {\em alguém} acertar na Mega Sena...
+
+    \bigskip
+    ... é grande ou pequena?
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize }
   \begin{exampleblock}{Exemplo 13.2}
     \footnotesize
     5 crianças de uma escola tiveram leucemia, ano passado.
@@ -192,7 +210,7 @@
   \item Considerando a incidência de leucemia, isto parece ser um dado extraordinário
     \bigskip
     \bigskip
-  \item Esta é a pergunta errada, {\em após} observar os casos nesta escola
+  \item Esta é a pergunta errada, {\bf após} observar os casos nesta escola
   \item Se escola não é especial, é preciso considerar outras escolas
     \bigskip
     \bigskip
@@ -203,7 +221,7 @@
 \begin{frame}{\scriptsize Coincidências podem não ser tão raras assim}
   \begin{enumerate}
     \footnotesize
-  \item Você formulou a hipótese após observar o agrupamento de casos
+  \item Você formulou a hipótese {\bf após} observar o agrupamento de casos
     \bigskip
   \item Você só destacou a escola por causa do agrupamento
     \bigskip
@@ -315,8 +333,8 @@
   \item Assumindo que atendemos às premissas do teste t, consideramos:
     \begin{itemize}
       \footnotesize
-    \item variabilidade dos grupos\footnote{\scriptsize Se possível, semelhantes. Caso contrário, correção de Welch.}
-    \item tamanho do estudo (n)\footnote{\scriptsize Componente do DP e do SEM. Usado como GL para o t crítico.}
+    \item variabilidade dos grupos\footnote{\tiny Se possível, semelhantes. Caso contrário, correção de Welch.}
+    \item tamanho do estudo (n)\footnote{\tiny Componente do DP e do SEM. Usado como GL para o t crítico.}
     \end{itemize}
   \end{itemize}
   \bigskip
@@ -372,13 +390,13 @@
 
 \begin{frame}[label=cenario1]{\scriptsize Cenário 1 -- esses 3 grupos têm médias diferentes?}
   \begin{center}
-    \includegraphics[height=.9\textheight]{Cap13-30/cenario1}
+    \includegraphics[height=.9\textheight]{Cap13-30/cenario11}
   \end{center}
 \end{frame}
 
 \begin{frame}{\scriptsize Médias: Placebo: 5.945, Tratamento A: 5.027, Tratamento B: 5.110}
   \begin{center}
-    \includegraphics[height=.9\textheight]{Cap13-30/cenario1_medias}
+    \includegraphics[height=.9\textheight]{Cap13-30/cenario11_medias}
 
 %    {\tiny Médias: Placebo: 4.210, Tratamento A: 3.250, Tratamento B: 3.845}
   \end{center}
@@ -386,13 +404,13 @@
 
 \begin{frame}[label=cenario2]{\scriptsize Cenário 2 -- esses 3 grupos têm médias diferentes?}
   \begin{center}
-    \includegraphics[height=.9\textheight]{Cap13-30/cenario2}
+    \includegraphics[height=.9\textheight]{Cap13-30/cenario21}
   \end{center}
 \end{frame}
 
 \begin{frame}{\scriptsize Médias: Placebo: 3.928, Tratamento A: 6.751, Tratamento B: 5.799}
   \begin{center}
-    \includegraphics[height=.9\textheight]{Cap13-30/cenario2_medias}
+    \includegraphics[height=.9\textheight]{Cap13-30/cenario21_medias}
 
 %    {\tiny Médias: Placebo: 4.559, Tratamento A: 5.855, Tratamento B: 5.928}
   \end{center}
@@ -421,7 +439,6 @@
   \begin{columns}
     \begin{column}{5cm}
       \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
-        \footnotesize
         \begin{enumerate}
           \tiny
         \item Placebo x Trat. A $\Rightarrow p=0.025$
@@ -440,7 +457,7 @@
       \end{exampleblock}
     \end{column}
     \begin{column}{5cm}
-      \includegraphics[width=\textwidth]{Cap13-30/cenario1}
+      \includegraphics[width=\textwidth]{Cap13-30/cenario11}
     \end{column}
   \end{columns}
 \end{frame}
@@ -467,7 +484,7 @@
       \end{exampleblock}
     \end{column}
     \begin{column}{5cm}
-      \includegraphics[width=\textwidth]{Cap13-30/cenario2}
+      \includegraphics[width=\textwidth]{Cap13-30/cenario21}
     \end{column}
   \end{columns}
 \end{frame}
@@ -493,35 +510,13 @@
   \begin{itemize}
     \scriptsize
   \item<3-> O teste t permite a avaliação de {\bf uma} hipótese
-  \item<3-> Testamos simultaneamente três\footnote{Leia várias vezes o Capítulo 13!}
+  \item<3-> Testamos simultaneamente três\footnote{\tiny Leia várias vezes o Capítulo 13!}
   \item<3-> Isto aumenta a chance de cometermos um erro tipo I (falso positivo)
   \end{itemize}
   \vfill
   \begin{block}{}
     \footnotesize
-    {\bf Nível de significância de cada teste $\ne$ nível de significância global.}
-  \end{block}
-\end{frame}
-
-\begin{frame}{\scriptsize Pensar é obrigatório}
-  \begin{block}{}
-    \small
-    Os testes estatísticos (e fórmulas) não ``sabem'' o que foi levado em conta no estudo.
-  \end{block}
-  \bigskip
-  \bigskip
-  \begin{itemize}
-    \footnotesize
-  \item {\em Só o pesquisador sabe.}
-    % \smallskip
-  \item A metodologia da análise precisa levar em conta todo o planejamento do estudo\footnote{Leia várias vezes o Capítulo 13!}.
-  \end{itemize}
-  \bigskip
-  \bigskip
-  \bigskip
-  \begin{block}{}
-    \footnotesize
-    {\bf Nível de significância de cada teste $\ne$ nível de significância global.}
+    { Nível de significância de cada teste $\ne$ nível de significância global.}
   \end{block}
 \end{frame}
 
@@ -534,6 +529,28 @@
   \item Mas se testarmos 100 hipóteses, o número esperado de falsos positivos é 5!
   \item Se os testes forem independentes, a probabilidade de {\bf pelo menos 1} erro tipo I é 99.4\%.\footnote{\tiny \url{https://en.wikipedia.org/wiki/Multiple_comparisons_problem}}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{\scriptsize Pensar é obrigatório}
+  \begin{block}{}
+    \footnotesize
+    Os testes estatísticos (e fórmulas) não ``sabem'' o que foi levado em conta no estudo.
+  \end{block}
+  \bigskip
+  \bigskip
+  \begin{itemize}
+    \footnotesize
+  \item {\em Só o pesquisador sabe.}
+    % \smallskip
+  \item A metodologia da análise precisa levar em conta todo o planejamento do estudo\footnote{\tiny Leia várias vezes o Capítulo 13!}.
+  \end{itemize}
+  \bigskip
+  \bigskip
+  \bigskip
+  \begin{block}{}
+    \footnotesize
+    {Nível de significância de cada teste $\ne$ nível de significância global.}
+  \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize E agora, José?}
@@ -605,7 +622,7 @@
   \end{block}
   \vfill
   \footnotesize
-  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\scriptsize residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
+  Hipótese: $\varepsilon$ é um erro aleatório \footnote{\tiny residual -- não é explicado pela relação entre as variáveis do modelo} normalmente distribuído e centrado em zero -- a incerteza que não pode ser controlada.
 \end{frame}
 
 \begin{frame}[label=exemplo13.5-tabela]{\scriptsize Exemplo 13.5}
@@ -680,9 +697,9 @@
 
 \subsection{O teste F}
 
-\begin{frame}{\scriptsize Expectativa x realidade\footnote{\scriptsize Mesma ideia do qui-quadrado.} -- O teste F\footnote{\scriptsize O teste leva em conta dois graus de liberdade: numerador e denominador}}
+\begin{frame}{\scriptsize Expectativa x realidade\footnote{\tiny Mesma ideia do qui-quadrado.} -- O teste F\footnote{\tiny O teste leva em conta dois graus de liberdade: numerador e denominador}}
   \begin{block}{}
-    \small
+    \footnotesize
     Se as médias forem iguais, a variância intragrupo deve ser ``igual'' à variância intergrupo...
 
     \bigskip
@@ -727,7 +744,7 @@
 \begin{frame}{\scriptsize Testes {\em post-hoc}}
   \begin{itemize}
     \footnotesize
-  \item O teste de ANOVA é apenas a primeira parte!\footnote{Está com saudade do teste t?}
+  \item O teste de ANOVA é apenas a primeira parte!\footnote{\tiny Está com saudade do teste t?}
     \bigskip
     \bigskip
     \begin{block}{}
@@ -774,7 +791,7 @@
 %  \item O teste de Tukey tem mais especificidade, mas menos sensibilidade
     \bigskip
     \bigskip
- \item O ajuste de Bonferroni multiplica o p-valor\footnote{ou, analogamente, divide o nível de significância} pelo número de comparações, mas seus IC são muito grandes
+ \item O ajuste de Bonferroni multiplica o p-valor\footnote{\tiny ou, analogamente, divide o nível de significância} pelo número de comparações, mas seus IC são muito grandes
     \bigskip
  \item O ajuste de Tukey é mais conservador, mas pode acusar diferenças significativas com mais frequência
     \bigskip
@@ -821,7 +838,7 @@
 \againframe{exemplo13.5-tabela}
 \againframe{exemplo13.5-anova}
 
-\begin{frame}{\scriptsize \small Exemplo 13.5 -- testes t com ajuste de Tukey}
+\begin{frame}{\scriptsize Exemplo 13.5 -- testes t com ajuste de Tukey}
   \begin{exampleblock}{Exemplo 13.5}
     \includegraphics[width=\textwidth]{Cap13-30/exemplo13_5-4}
   \end{exampleblock}
@@ -838,13 +855,13 @@
     \footnotesize
   \item Vimos como usar o ANOVA com {\bf uma} var. independente categórica
     \bigskip
-  \item O teste ANOVA permite qualquer quantidade de variáveis independentes! E de qualquer tipo\footnote{\scriptsize Na verdade, ANOVA e Regressão Linear são Múltipla são siameses}
+  \item O teste ANOVA permite qualquer quantidade de variáveis independentes! E de qualquer tipo\footnote{\tiny Na verdade, ANOVA e Regressão Linear são Múltipla são siameses}
     \bigskip
     \bigskip
   \item Vejamos o exemplo inicial da aula, com duas var. independentes
   \end{itemize}
   \begin{block}{Nova pergunta}
-    \small
+    \footnotesize
     Os tratamentos são diferentes, mesmo controlando pelo Gênero?
   \end{block}
 \end{frame}
@@ -876,17 +893,30 @@
 
 \againframe{cenario1}
 
-\begin{frame}[label=cenario3]{\scriptsize Cenário 3 = cenário 1 ajustando pelo Gênero}
+\begin{frame}[label=cenario3]{\scriptsize Cenário 3 -- esses 3 grupos têm médias diferentes?}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap13-30/cenario12}
   \end{center}
 \end{frame}
 
+\begin{frame}{\scriptsize Cenário 3 -- esses 3 grupos têm médias diferentes?}
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap13-30/cenario11_medias}
+    \includegraphics[height=.6\textheight]{Cap13-30/cenario12_medias}
+  \end{center}
+\end{frame}
 \againframe{cenario2}
 
-\begin{frame}[label=cenario4]{\scriptsize Cenário 4 = cenário 2 ajustando pelo Gênero}
+\begin{frame}[label=cenario4]{\scriptsize Cenário 4 -- esses 3 grupos têm médias diferentes?}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap13-30/cenario22}
+  \end{center}
+\end{frame}
+
+\begin{frame}{\scriptsize Cenário 4 -- esses 3 grupos têm médias diferentes?}
+  \begin{center}
+    \includegraphics[height=.6\textheight]{Cap13-30/cenario21_medias}
+    \includegraphics[height=.6\textheight]{Cap13-30/cenario22_medias}
   \end{center}
 \end{frame}
 
@@ -930,11 +960,11 @@ Grupo        2  4.124  2.0620   2.545  0.102
 Residuals   21 17.018  0.8104
 \end{verbatim}
     \begin{center}
-      \includegraphics[height=.5\textheight]{Cap13-30/cenario1}
+      \includegraphics[height=.5\textheight]{Cap13-30/cenario11}
     \end{center}
   \end{exampleblock}
   \begin{block}{}<2>
-    \small
+    \footnotesize
     Os 3 tratamentos não diferem além da expectativa ($p=0.102$)
   \end{block}
 \end{frame}
@@ -957,7 +987,7 @@ P value adjustment method: bonferroni
 \end{verbatim}
   \end{exampleblock}
   \begin{block}{}
-    \small
+    \footnotesize
     Os p-valores de Bonferroni são 3x maiores...
 
     \bigskip
@@ -982,12 +1012,40 @@ Trat.B-Trat.A   0.08315455 -1.051368 1.2176774 0.9813768
 \end{verbatim}
   \end{exampleblock}
   \begin{block}{}
-    \small
+    \footnotesize
     Os p-valores de Tukey são mais conservadores...
 
     \bigskip
     ... o placebo não é diferente do tratamento A ($p=0.12745$)
   \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Cenário 1 -- Solução}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
+        \begin{enumerate}
+          \tiny
+        \item \sout{Placebo x Trat. A $\Rightarrow p=0.025$}
+        \item \sout{Placebo x Trat. B $\Rightarrow p=0.100$}
+        \item \sout{Trat. A x Trat. B $\Rightarrow p=0.876$}
+        \end{enumerate}
+      \end{exampleblock}
+      \bigskip
+      \bigskip
+      \begin{exampleblock}{\footnotesize P-valores ajustados (Bonferroni)}
+        \begin{enumerate}
+          \tiny
+        \item \alert{Placebo x Trat. A $\Rightarrow p=0.076$}
+        \item Placebo x Trat. B $\Rightarrow p=0.299$
+        \item Trat. A x Trat. B $\Rightarrow p=1.000$
+        \end{enumerate}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap13-30/cenario11}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \againframe{cenario2}
@@ -1019,7 +1077,7 @@ Residuals   21  13.83   0.659
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 \end{verbatim}
     \begin{center}
-      \includegraphics[height=.5\textheight]{Cap13-30/cenario2}
+      \includegraphics[height=.5\textheight]{Cap13-30/cenario21}
     \end{center}
   \end{exampleblock}
 \end{frame}
@@ -1042,7 +1100,7 @@ P value adjustment method: bonferroni
 \end{verbatim}
   \end{exampleblock}
   \begin{block}{}
-    \small
+    \footnotesize
     Os p-valores de Bonferroni são 3x maiores...
 
     \bigskip
@@ -1067,12 +1125,40 @@ Trat.B-Trat.A  -0.9512395 -1.9741435 0.0716645 0.0713859
 \end{verbatim}
   \end{exampleblock}
   \begin{block}{}
-    \small
+    \footnotesize
     Os p-valores de Tukey são mais conservadores...
 
     \bigskip
     ... os tratamentos A e B não são diferentes ($p=0.0713859$)
   \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Cenário 2 -- Solução}
+  \begin{columns}
+    \begin{column}{5cm}
+      \begin{exampleblock}{\footnotesize P-valores dos 3 testes t}
+        \begin{enumerate}
+          \tiny
+        \item \sout{Placebo x Trat. A $\Rightarrow p< 0.0001$}
+        \item \sout{Placebo x Trat. B $\Rightarrow p=0.00037$}
+        \item \sout{Trat. A x Trat. B $\Rightarrow p=0.02943$}
+        \end{enumerate}
+      \end{exampleblock}
+      \bigskip
+      \bigskip
+      \begin{exampleblock}{\footnotesize  P-valores ajustados (Bonferroni)}
+        \begin{enumerate}
+          \tiny
+        \item Placebo x Trat. A $\Rightarrow p< 0.0001$
+        \item Placebo x Trat. B $\Rightarrow p=0.0011$
+        \item \alert{Trat. A x Trat. B $\Rightarrow p=0.0883$}
+        \end{enumerate}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{5cm}
+      \includegraphics[width=\textwidth]{Cap13-30/cenario21}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}{\scriptsize }
@@ -1168,20 +1254,20 @@ M-F 0.3362835 -0.4663601 1.138927 0.3925159
     \footnotesize
   \item Vimos o modelo {\bf ANOVA com fatores fixos} para comparar médias
     \bigskip
-  \item Há também\footnote{\scriptsize Todos fora do escopo, RM ANOVA mencionado no livro}
+  \item Há também...\footnote{\tiny Todos fora do escopo deste curso}
     \begin{itemize}
       \scriptsize
-    \item {\bf ANOVA com interações entre os fatores}
-    \item {\bf ANOVA com Medidas Repetidas} quando você mensura do participante em vários momentos diferentes
+    \item<2-> {\bf ANOVA com interações entre os fatores}
+    \item<2-> {\bf ANOVA com Medidas Repetidas} quando você mensura do participante em vários momentos diferentes\footnote{\tiny RM ANOVA é mencionado no livro-texto}
 
       (ex: baseline, pré-op imediato, pós-op imediato, e após 1 ano)
-    \item {\bf ANOVA com fatores aleatórios} permite decompor as variâncias -- contribuição de cada fator para a variância total
-    \item {\bf ANOVA com fatores mistos} -- fatores fixos E aleatórios
+    \item<2-> {\bf ANOVA com fatores aleatórios} permite decompor as variâncias -- contribuição de cada fator para a variância total
+    \item<2-> {\bf ANOVA com fatores mistos} -- fatores fixos E aleatórios
     \end{itemize}
     \bigskip
-  \item ANOVA é a base para (livros de) Design of Experiments (DoE)
+  \item<2-> ANOVA é a base para (livros de) Design of Experiments (DoE)
     \bigskip
-  \item Considere usar {\bf desenhos balanceados}\footnote{Grupos com {\bf mesmo tamanho}} sempre que possível!
+  \item<2-> Considere sempre usar {\bf desenhos balanceados}\footnote{\tiny Grupos com {\bf mesmo tamanho}}!
   \end{itemize}
 \end{frame}
 
@@ -1234,7 +1320,7 @@ M-F 0.3362835 -0.4663601 1.138927 0.3925159
   \end{block}
   \begin{block}{Leitura recomendada}
     \scriptsize
-    \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5042133/}{Kim, Bang, 2016, Dent. Hypotheses. (editorial)} {\tiny (este link é clicável)}
+    \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5042133/}{Kim, Bang, 2016, {\em Three common misuses of P values}, Dent. Hypotheses. (editorial)}
   \end{block}
 \end{frame}
 

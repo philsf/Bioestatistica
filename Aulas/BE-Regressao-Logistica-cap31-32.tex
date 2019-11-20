@@ -178,7 +178,7 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{\scriptsize }
+\begin{frame}[label=abstract]{\scriptsize }
   \begin{center}
     \includegraphics[width=1.175\textwidth]{Cap18-19/bmi-bmd-abstract}
   \end{center}
@@ -187,7 +187,7 @@
 \begin{frame}{\scriptsize }
   \begin{exampleblock}{Enunciado 1}
     \footnotesize
-    Os pesquisadores querem investigar se o grupo etnicidade das participantes tem algum efeito detectável na associação entre
+    Os pesquisadores querem investigar se a etnicidade das participantes tem algum efeito detectável na associação entre
     a densidade mineral óssea (BMD) e o índice de massa corpórea (BMI).
 
     \bigskip
@@ -248,20 +248,26 @@
 \begin{verbatim}
 Residuals:
     Min      1Q  Median      3Q     Max 
--50.770 -14.570  -2.449  14.357  58.778 
+-67.833 -21.767   2.178  20.743  67.185
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 607.3708     5.9857  101.47   <2e-16 ***
-BMI          -1.9848     0.1444  -13.75   <2e-16 ***
+(Intercept)  589.199      8.499  69.322   <2e-16 ***
+BMI           -1.995      0.205  -9.732   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 20.71 on 198 degrees of freedom
-Multiple R-squared:  0.4884,	Adjusted R-squared:  0.4858 
-F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
+Residual standard error: 29.41 on 198 degrees of freedom
+Multiple R-squared:  0.3236,	Adjusted R-squared:  0.3201
+F-statistic: 94.71 on 1 and 198 DF,  p-value: < 2.2e-16
 \end{verbatim}
     \end{exampleblock}
+  \begin{exampleblock}{Modelo 1 completo}
+    \footnotesize
+    \begin{displaymath}
+      \text{BMD} =589.20 -1.99 \times\text{BMI}
+    \end{displaymath}
+  \end{exampleblock}
   \end{center}
 \end{frame}
 
@@ -273,13 +279,21 @@ F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
 \end{frame}
 
 \begin{frame}{\scriptsize }
-  \begin{block}{}
+  \begin{exampleblock}{Modelo 1 completo}
     \footnotesize
-    As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI.
+    \begin{displaymath}
+      \text{BMD} =589.20 -1.99 \times\text{BMI}
+    \end{displaymath}
+  \end{exampleblock}
+
+  \bigskip
+  \begin{exampleblock}{Interpretação}
+    \footnotesize
+    As participantes perdem, na média, 1.99 unidades de BMD para cada incremento unitário do BMI.
 
     \bigskip
     Este é o chamado resultado bruto. Agora vamos ajustá-lo com outros preditores.
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\scriptsize }
@@ -336,19 +350,19 @@ F-statistic:   189 on 1 and 198 DF,  p-value: < 2.2e-16
 \begin{verbatim}
 Residuals:
     Min      1Q  Median      3Q     Max 
--48.543 -14.299  -2.799  14.044  58.875 
+-67.357 -22.005   1.801  20.785  67.616
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept)  609.236      6.097  99.917   <2e-16 ***
-BMI           -1.977      0.144 -13.729   <2e-16 ***
-etniaparda    -4.351      2.922  -1.489    0.138    
+(Intercept) 589.4360     8.6055  68.495   <2e-16 ***
+BMI          -1.9905     0.2067  -9.632   <2e-16 ***
+etniaparda   -0.8206     4.1938  -0.196    0.845
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 20.65 on 197 degrees of freedom
-Multiple R-squared:  0.4941,	Adjusted R-squared:  0.489 
-F-statistic: 96.21 on 2 and 197 DF,  p-value: < 2.2e-16
+Residual standard error: 29.49 on 197 degrees of freedom
+Multiple R-squared:  0.3237,	Adjusted R-squared:  0.3168
+F-statistic: 47.14 on 2 and 197 DF,  p-value: < 2.2e-16
 \end{verbatim}
     \end{exampleblock}
   \end{center}
@@ -416,21 +430,27 @@ F-statistic: 96.21 on 2 and 197 DF,  p-value: < 2.2e-16
 \begin{verbatim}
 Residuals:
     Min      1Q  Median      3Q     Max 
--30.484 -12.318   0.865  11.618  32.679 
+-52.039 -24.688  -0.058  23.599  42.146 
 
 Coefficients:
-             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 790.51012   12.57103   62.88   <2e-16 ***
-BMI          -2.02336    0.09757  -20.74   <2e-16 ***
-idade        -3.01619    0.19603  -15.39   <2e-16 ***
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 780.0347    22.2560  35.048   <2e-16 ***
+BMI          -2.0350     0.1727 -11.781   <2e-16 ***
+idade        -3.1429     0.3471  -9.056   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 14 on 197 degrees of freedom
-Multiple R-squared:  0.7676,	Adjusted R-squared:  0.7653 
-F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
+Residual standard error: 24.78 on 197 degrees of freedom
+Multiple R-squared:  0.5224,	Adjusted R-squared:  0.5175 
+F-statistic: 107.7 on 2 and 197 DF,  p-value: < 2.2e-16
 \end{verbatim}
     \end{exampleblock}
+  \begin{exampleblock}{Modelo 2.1 completo}
+    \footnotesize
+    \begin{displaymath}
+      \text{BMD} =780.03 -2.04 \times\text{BMI} -3.02 \times\text{idade}
+    \end{displaymath}
+  \end{exampleblock}
   \end{center}
 \end{frame}
 
@@ -442,13 +462,25 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
 \end{frame}
 
 \begin{frame}{\scriptsize }
-  \begin{block}{}
+  \begin{exampleblock}{Modelo 1 completo}
+    \tiny
+    \begin{displaymath}
+      \text{BMD} =589.20 -1.99 \times\text{BMI}
+    \end{displaymath}
+  \end{exampleblock}
+  \begin{exampleblock}{Modelo 2.1 completo}
     \footnotesize
-    As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
+    \begin{displaymath}
+      \text{BMD} =780.03 -2.04 \times\text{BMI} -3.02 \times\text{idade}
+    \end{displaymath}
+  \end{exampleblock}
+  \begin{exampleblock}{Interpretação}
+    \footnotesize
+    As participantes perdem, na média, 1.99 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
-    Após ajustar pela idade, o resultado é 2.02.
-  \end{block}
+    Após ajustar pela idade, o resultado é 2.04.
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\scriptsize }
@@ -457,7 +489,7 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \end{center}
 \end{frame}
 
-\begin{frame}{\scriptsize Modelo 2.2 -- quantidade de hormônio}
+\begin{frame}{\scriptsize Modelo 2.2 -- vitamina D sérica}
   \begin{center}
     \includegraphics[height=.9\textheight]{Cap31-32/pratica-rlm2_2}
   \end{center}
@@ -468,13 +500,13 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
     \footnotesize
   \item Dependente: BMD (contínua)
   \item Independente: BMI (contínua)
-  \item Independente: hormônio (categórica -- 3 níveis)
+  \item Independente: vitamina D sérica (categórica -- 3 níveis)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} \sim \text{BMI} + \text{hormônio}
+      \text{BMD} \sim \text{BMI} + \text{vitD}
     \end{displaymath}
   \end{block}
 \end{frame}
@@ -483,7 +515,7 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} \sim \text{BMI} + \text{hormônio}
+      \text{BMD} \sim \text{BMI} + \text{vitD}
     \end{displaymath}
   \end{block}
   \bigskip
@@ -491,7 +523,7 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
   \begin{block}{Modelo completo}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(hormônio)} +\varepsilon
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(vitD)} +\varepsilon
     \end{displaymath}
   \end{block}
   \vfill
@@ -513,33 +545,51 @@ F-statistic: 325.4 on 2 and 197 DF,  p-value: < 2.2e-16
 \begin{verbatim}
 Residuals:
     Min      1Q  Median      3Q     Max 
--35.757 -12.239  -0.626  10.176  45.081 
+-36.661 -12.444  -0.798  10.351  46.059 
 
 Coefficients:
             Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 589.6897     5.2782 111.722  < 2e-16 ***
-BMI          -1.9055     0.1187 -16.049  < 2e-16 ***
-hormmedio    28.9182     2.9694   9.739  < 2e-16 ***
-hormalto     17.7913     2.8720   6.195 3.37e-09 ***
+(Intercept) 555.4532     5.2964  104.87   <2e-16 ***
+BMI          -1.9101     0.1188  -16.07   <2e-16 ***
+vitDmedia    31.1849     2.9578   10.54   <2e-16 ***
+vitDalta     58.9095     2.9676   19.85   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 16.98 on 196 degrees of freedom
-Multiple R-squared:  0.6595,	Adjusted R-squared:  0.6543 
-F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
+Residual standard error: 17.04 on 196 degrees of freedom
+Multiple R-squared:  0.7754,	Adjusted R-squared:  0.772 
+F-statistic: 225.5 on 3 and 196 DF,  p-value: < 2.2e-16
 \end{verbatim}
     \end{exampleblock}
+  \begin{exampleblock}{Modelo 2.2 completo}
+    \scriptsize
+    \begin{displaymath}
+      \text{BMD} =555.45 -1.91 \times\text{BMI} + \beta_2 \times\text{vitD}
+    \end{displaymath}
+  \end{exampleblock}
   \end{center}
 \end{frame}
 
 \begin{frame}{\scriptsize }
-  \begin{block}{}
+  \begin{exampleblock}{Modelo 1 completo}
+    \tiny
+    \begin{displaymath}
+      \text{BMD} =589.20 -1.99 \times\text{BMI}
+    \end{displaymath}
+  \end{exampleblock}
+  \begin{exampleblock}{Modelo 2.2 completo}
+    \scriptsize
+    \begin{displaymath}
+      \text{BMD} =555.45 -1.91 \times\text{BMI} + \beta_2 \times\text{vitD}
+    \end{displaymath}
+  \end{exampleblock}
+  \begin{exampleblock}{Interpretação}
     \footnotesize
-    As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
+    As participantes perdem, na média, 1.99 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
-    Após ajustar pelo hormônio, o resultado é 1.90.
-  \end{block}
+    Após ajustar pelo nível sérico de vitamina D, o resultado é 1.91.
+  \end{exampleblock}
 \end{frame}
 
 % \begin{frame}{\scriptsize Quais são as variáveis?}
@@ -547,12 +597,12 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
 %   \item Dependente: BMD (contínua)
 %   \item Independente: BMI (contínua)
 %   \item Independente: idade (contínua)
-%   \item Independente: hormônio (categórica -- 3 níveis)
+%   \item Independente: vitamina D sérica (categórica -- 3 níveis)
 %   \end{itemize}
 %   \vfill
 %   \begin{block}{Esta relação pode ser expressa como}
 %     \begin{displaymath}
-%       \text{BMD} \sim \text{BMI} + \text{idade} +\text{hormônio}
+%       \text{BMD} \sim \text{BMI} + \text{idade} +\text{vitD}
 %     \end{displaymath}
 %   \end{block}
 % \end{frame}
@@ -567,7 +617,7 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} \sim \text{BMI} + \text{idade} + \text{hormônio}
+      \text{BMD} \sim \text{BMI} + \text{idade} + \text{vitD}
     \end{displaymath}
   \end{block}
   \bigskip
@@ -575,7 +625,7 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
   \begin{block}{Modelo completo}
     \footnotesize
     \begin{displaymath}
-      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(hormônio)} +\varepsilon
+      \text{BMD} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(vitD)} +\varepsilon
     \end{displaymath}
   \end{block}
   \vfill
@@ -590,23 +640,29 @@ F-statistic: 126.6 on 3 and 196 DF,  p-value: < 2.2e-16
 \begin{verbatim}
 Residuals:
      Min       1Q   Median       3Q      Max 
--18.3964  -4.1337  -0.5398   4.4640  25.6025 
+-19.7284  -4.4059  -0.3755   4.7776  24.0977 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)    
-(Intercept) 774.02125    6.48702  119.32   <2e-16 ***
-BMI          -1.94720    0.04992  -39.00   <2e-16 ***
-idade        -3.02783    0.10013  -30.24   <2e-16 ***
-hormmedio    29.35318    1.24821   23.52   <2e-16 ***
-hormalto     16.32422    1.20813   13.51   <2e-16 ***
+(Intercept) 740.47234    6.41200  115.48   <2e-16 ***
+BMI          -1.94958    0.04933  -39.52   <2e-16 ***
+idade        -3.04192    0.09904  -30.72   <2e-16 ***
+vitDmedia    31.14768    1.22729   25.38   <2e-16 ***
+vitDalta     58.07642    1.23165   47.15   <2e-16 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 7.139 on 195 degrees of freedom
-Multiple R-squared:  0.9402,	Adjusted R-squared:  0.9389 
-F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
+Residual standard error: 7.068 on 195 degrees of freedom
+Multiple R-squared:  0.9615,	Adjusted R-squared:  0.9607 
+F-statistic:  1218 on 4 and 195 DF,  p-value: < 2.2e-16
 \end{verbatim}
     \end{exampleblock}
+  \begin{exampleblock}{Modelo 3 completo}
+    \footnotesize
+    \begin{displaymath}
+      \text{BMD} =740.47 -1.95 \times\text{BMI} -3.04 \times\text{idade} + \beta_3 \times\text{vitD}
+    \end{displaymath}
+  \end{exampleblock}
   \end{center}
 \end{frame}
 
@@ -618,18 +674,59 @@ F-statistic: 765.9 on 4 and 195 DF,  p-value: < 2.2e-16
 \end{frame}
 
 \begin{frame}{\scriptsize }
-  \begin{block}{}
+  \begin{exampleblock}{Modelo 1 completo}
+    \tiny
+    \begin{displaymath}
+      \text{BMD} =589.20 -1.99 \times\text{BMI}
+    \end{displaymath}
+  \end{exampleblock}
+  \begin{exampleblock}{Modelo 3 completo}
     \footnotesize
-    As participantes perdem, na média, 1.98 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
+    \begin{displaymath}
+      \text{BMD} =740.47 -1.95 \times\text{BMI} -3.04 \times\text{idade} + \beta_3 \times\text{vitD}
+    \end{displaymath}
+  \end{exampleblock}
+  \begin{exampleblock}{Interpretação}
+    \footnotesize
+    As participantes perdem, na média, 1.99 unidades de BMD para cada incremento unitário do BMI (resultado bruto).
 
     \bigskip
-    Após ajustar pela idade e pelo hormônio, o resultado é 1.95.
-  \end{block}
+    Após ajustar pela idade e pelo nível sérico de vitamina D, o resultado é 1.95.
+  \end{exampleblock}
 \end{frame}
 
 \section{Regressão Logística}
 
 \subsection{Regressão Logística}
+
+\begin{frame}{\scriptsize Desfecho binário}
+  \scriptsize
+  Vamos discretizar os dados em duas categorias
+  \bigskip
+  \begin{itemize}
+    \footnotesize
+  \item Osteoporose
+    \begin{itemize}
+      \scriptsize
+    \item Sadio: BMD $>=$ 500
+    \item Osteoporose: BMD $<$ 500
+    \end{itemize}
+  \bigskip
+  \item Idoso
+    \begin{itemize}
+      \scriptsize
+    \item Não idoso: idade $<$ 60
+    \item Idoso: idade $>=$ 60
+    \end{itemize}
+  \bigskip
+  \item Obeso
+    \begin{itemize}
+      \scriptsize
+    \item Não obeso: BMI $<$ 30
+    \item Obeso: BMI $>=$ 30
+    \end{itemize}
+  \end{itemize}
+\end{frame}
 
 \begin{frame}{\scriptsize Modelo 4}
   \begin{center}
@@ -714,27 +811,27 @@ idoso       Sadio Osteoporose
 \begin{verbatim}
 Deviance Residuals: 
     Min       1Q   Median       3Q      Max  
--0.8305  -0.8305  -0.3447  -0.3447   2.3886  
+-1.2233  -1.2233  -0.8752   1.1322   1.5134  
 
 Coefficients:
             Estimate Std. Error z value Pr(>|z|)    
-(Intercept)  -2.7932     0.4206  -6.642 3.10e-11 ***
-idosoIdoso    1.9059     0.4767   3.998 6.39e-05 ***
+(Intercept)  -0.7621     0.2289  -3.330 0.000868 ***
+idosoIdoso    0.8694     0.2970   2.927 0.003418 ** 
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 182.35  on 199  degrees of freedom
-Residual deviance: 161.78  on 198  degrees of freedom
-AIC: 165.78
+    Null deviance: 273.87  on 199  degrees of freedom
+Residual deviance: 265.03  on 198  degrees of freedom
+AIC: 269.03
 
-Number of Fisher Scoring iterations: 5
+Number of Fisher Scoring iterations: 4
 \end{verbatim}
     \end{exampleblock}
     \begin{block}{\small log da OR de um idoso x osteoporose}<2->
     \footnotesize
-      $$\log \left(\text{OR} \right) = 1.9059$$
+      $$\log \left(\text{OR} \right) = 0.8694$$
     \end{block}
   \end{center}
 \end{frame}
@@ -742,24 +839,24 @@ Number of Fisher Scoring iterations: 5
 \begin{frame}{\scriptsize }
   \begin{block}{\small Transformando o log da OR na OR }
     \footnotesize
-    $$\log \left(\text{OR} \right) \approx 1.90...$$
+    $$\log \left(\text{OR} \right) \approx 0.87...$$
     \begin{center}
-      \small
+      \scriptsize
       ... portanto...
     \end{center}
     \footnotesize
-    $$e^{1.90} \approx 6.7$$
+    $$\text{OR} = e^{0.87} \approx 2.4$$
   \end{block}
 
   \bigskip
   \bigskip
-  \begin{block}{Resultado}<2->
+  \begin{exampleblock}{Resultado}<2->
     \footnotesize
     \begin{itemize}
     \footnotesize
-    \item (Idoso) {\bf OR: 6.73, IC: [2.64, 17.12]}
+    \item (Idoso) {\bf OR: 2.39, IC: [1.33, 4.27]}
     \end{itemize}
-  \end{block}
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{\scriptsize Modelo 5}
@@ -774,13 +871,13 @@ Number of Fisher Scoring iterations: 5
   \item \alert{Dependente: Osteoporose (categórica -- binária)}
   \item Independente: BMI (contínua)
   \item Independente: idade (contínua)
-  \item Independente: hormônio (categórica -- 3 níveis)
+  \item Independente: vitamina D sérica (categórica -- 3 níveis)
   \end{itemize}
   \vfill
   \begin{block}{Esta relação pode ser expressa como}
     \footnotesize
     \begin{displaymath}
-      \text{Osteoporose} \sim \text{BMI} + \text{idade} +\text{hormônio}
+      \text{Osteoporose} \sim \text{BMI} + \text{idade} +\text{vitD}
     \end{displaymath}
   \end{block}
 \end{frame}
@@ -789,7 +886,7 @@ Number of Fisher Scoring iterations: 5
   \begin{block}{\footnotesize Versão simplificada (apenas variáveis)}
     \footnotesize
     \begin{displaymath}
-      \text{Osteoporose} \sim \text{BMI} + \text{idade} + \text{hormônio}
+      \text{Osteoporose} \sim \text{BMI} + \text{idade} + \text{vitD}
     \end{displaymath}
   \end{block}
   \bigskip
@@ -797,7 +894,7 @@ Number of Fisher Scoring iterations: 5
   \begin{block}{Modelo completo}
     \footnotesize
     \begin{displaymath}
-      \text{Osteoporose} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(hormônio)} +\varepsilon
+      \text{Osteoporose} =\beta_0 + \beta_1 \text{(BMI)} + \beta_2 \text{(idade)} + \beta_3 \text{(vitD)} +\varepsilon
     \end{displaymath}
   \end{block}
   \vfill
@@ -812,49 +909,121 @@ Number of Fisher Scoring iterations: 5
 \begin{verbatim}
 Deviance Residuals: 
      Min        1Q    Median        3Q       Max  
--1.85523  -0.08866  -0.01263  -0.00068   2.05724  
+-2.61379  -0.07713  -0.00244   0.08301   1.89523  
 
 Coefficients:
-            Estimate Std. Error z value Pr(>|z|)    
-(Intercept) -77.4340    18.0040  -4.301 1.70e-05 ***
-BMI           0.4554     0.1089   4.183 2.88e-05 ***
-idade         0.8285     0.2086   3.972 7.13e-05 ***
-hormmedio     1.9614     1.4716   1.333 0.182590    
-hormalto      5.5205     1.5101   3.656 0.000257 ***
+             Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -53.07482   10.80588  -4.912 9.03e-07 ***
+BMI           0.43097    0.08301   5.191 2.09e-07 ***
+idade         0.67277    0.14175   4.746 2.07e-06 ***
+vitDmedia    -6.13676    1.28900  -4.761 1.93e-06 ***
+vitDalta    -12.59502    2.38905  -5.272 1.35e-07 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 182.354  on 199  degrees of freedom
-Residual deviance:  43.436  on 195  degrees of freedom
-AIC: 53.436
-
-Number of Fisher Scoring iterations: 9
+    Null deviance: 273.869  on 199  degrees of freedom
+Residual deviance:  69.365  on 195  degrees of freedom
+AIC: 79.365
 \end{verbatim}
     \end{exampleblock}
+  \begin{exampleblock}{Modelo 5 completo}
+    \scriptsize
+    \begin{displaymath}
+      \text{log(Osteoporose)} =-77.43 + 0.46 \times\text{BMI} + 0.83 \times\text{idade} + \beta_3 \times\text{vitD}
+    \end{displaymath}
+  \end{exampleblock}
   \end{center}
 \end{frame}
 
 \begin{frame}{\scriptsize }
-  \begin{block}{Resultado}
+  \begin{exampleblock}{Modelo 5 completo}
+    \tiny
+    \begin{displaymath}
+      \text{log(Osteoporose)} =-77.43 + 0.46 \times\text{BMI} + 0.83 \times\text{idade} + \beta_3 \times\text{vitD}
+    \end{displaymath}
+  \end{exampleblock}
+  \begin{exampleblock}{Resultado}
     \footnotesize
     \begin{itemize}
       \scriptsize
-    \item {\small (BMI)} {\bf OR: 1.58, IC: [1.27, 1.95]}
+    \item {\small (BMI)} {\bf OR: 1.54, IC: [1.31, 1.81]}
       \medskip
-    \item {\small (idade)} {\bf OR: 2.29, IC: [1.52, 3.45]}
+    \item {\small (idade)} {\bf OR: 1.96, IC: [1.48, 2.59]}
       \medskip
-    \item {\small (hormônio médio x baixo)} {\bf OR: 7.11, IC: [0.40, 127.19]}
+    \item {\small (vitD média x baixa)} {\bf OR: 0.002161, IC: [0.0001728, 0.0270419]}
       \medskip
-    \item {\small (hormônio alto x baixo)} {\bf OR: 249.76, IC: [12.94, 4818.87]}
+    \item {\small (vitD alta x baixa)} {\bf OR: 3.388847e-06, IC: [3.13678e-08, 3.66116e-04]}
     \end{itemize}
-  \end{block}
-    \begin{block}{Interpretação}
+  \end{exampleblock}
+    \begin{exampleblock}{Interpretação}
     \footnotesize
-    Após ajustar pela idade e pelo hormônio, as participantes tem chance aumentada de desenvolver osteoporose para cada incremento unitário do BMI.
-  \end{block}
+    Após ajustar pela idade e pelo nível sérico de vitamina D, as participantes tem chance aumentada de desenvolver osteoporose para cada incremento unitário do BMI.
+  \end{exampleblock}
 \end{frame}
+
+\againframe{abstract}
+
+\begin{frame}{\scriptsize Bônus}
+  \begin{center}
+    Como tabular os dados necessários para esta análise?
+  \end{center}
+\end{frame}
+
+\begin{frame}[fragile]{\scriptsize Bônus}
+  \begin{exampleblock}{Como tabular os dados necessários para esta análise?}
+    \tiny
+% \begin{verbatim}
+%           BMI      BMD  etnia idade  vitD       osteo     obeso     idoso
+%   1: 26.24128 508.6804 branca    62 baixa       Sadio Nao Obeso     Idoso
+%   2: 31.10186 516.4340  parda    68 media       Sadio     Obeso     Idoso
+%   3: 24.98623 482.0076 branca    68 baixa Osteoporose Nao Obeso     Idoso
+%   4: 39.57168 514.2508 branca    58 media       Sadio     Obeso Nao Idoso
+%   5: 31.97705 586.2711  parda    49  alta       Sadio     Obeso Nao Idoso
+%  ---                                                                     
+% 196: 42.66411 494.7936  parda    55 baixa Osteoporose     Obeso Nao Idoso
+% 197: 60.08810 440.3827 branca    68 media Osteoporose     Obeso     Idoso
+% 198: 42.88907 471.3145 branca    60 baixa Osteoporose     Obeso     Idoso
+% 199: 52.88382 532.2637  parda    56  alta       Sadio     Obeso Nao Idoso
+% 200: 47.33247 448.2478 branca    64 baixa Osteoporose     Obeso     Idoso
+% \end{verbatim}
+    \begin{center}
+      \includegraphics[width=\textwidth]{Cap31-32/pratica-glm-dados}
+    \end{center}
+    \begin{exampleblock}{Dados coletados}
+      BMI, BMD, etnia, idade, vitD
+    \end{exampleblock}
+    \begin{exampleblock}{Dados calculados}
+      osteo = BMD $<$ 500; obeso = BMI $>$ 30; idoso = idade $>$ 60
+    \end{exampleblock}
+
+  \end{exampleblock}
+\end{frame}
+
+% \begin{frame}{\scriptsize Resumo}
+%   \begin{itemize}
+%     \footnotesize
+%   \item Vimos o modelo de {\bf Regressão Logística múltipla}
+
+%     {\tiny (onde os múltiplos fatores foram selecionados com justificativa teórica)}
+%     \bigskip
+%   \item Há também\footnote{\scriptsize Todos fora do escopo, RM ANOVA mencionado no livro}
+%     \begin{itemize}
+%       \scriptsize
+%     \item {\bf ANOVA com interações entre os fatores}
+%     \item {\bf ANOVA com Medidas Repetidas} quando você mensura do participante em vários momentos diferentes
+
+%       (ex: baseline, pré-op imediato, pós-op imediato, e após 1 ano)
+%     \item {\bf ANOVA com fatores aleatórios} permite decompor as variâncias -- contribuição de cada fator para a variância total
+%     \item {\bf ANOVA com fatores mistos} -- fatores fixos E aleatórios
+%     \end{itemize}
+%     \bigskip
+%   \item ANOVA é a base para (livros de) Design of Experiments (DoE)
+%     \bigskip
+%   \item Considere usar {\bf desenhos balanceados}\footnote{Grupos com {\bf mesmo tamanho}} sempre que possível!
+%   \end{itemize}
+% \end{frame}
 
 \section{Aprofundamento}
 

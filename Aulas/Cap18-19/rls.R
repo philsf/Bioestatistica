@@ -6,16 +6,16 @@ dados.rls <- fread("Aulas/Cap18-19/dados-rls.csv")
 dados.rls.het <- fread("Aulas/Cap18-19/dados-rls-het.csv")
 dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv")
 
-modelo <- lm(BMD ~ BMI, data = dados.rls)
-summary(modelo)
-round(coef(modelo)[1])
-format.interval(confint(modelo)[1, ], 1) # IC intercept
-round(coef(modelo)[2])
-format.interval(confint(modelo)[2, ], 1) # IC slope
+rls.modelo1 <- lm(BMD ~ BMI, data = dados.rls)
+summary(rls.modelo1)
+round(coef(rls.modelo1)[1])
+format.interval(confint(rls.modelo1)[1, ], 1) # IC intercept
+round(coef(rls.modelo1)[2])
+format.interval(confint(rls.modelo1)[2, ], 1) # IC slope
 
 # predicao ----------------------------------------------------------------
 
-pred39 <- predict(modelo, newdata = data.table(BMI=39), interval = "conf")
+pred39 <- predict(rls.modelo1, newdata = data.table(BMI=39), interval = "conf")
 format.float(pred39[1], 1)
 format.interval(pred39[2:3], 1)
 
@@ -41,7 +41,7 @@ bsmooth.only <- ggplot(dados.rls, aes(BMI, BMD)) +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-rls3.png", h = 7, w = 7)
 
-ggplot(data.frame(Fitted = fitted(modelo), Residuals = residuals(modelo)), aes(Fitted, Residuals)) +
+ggplot(data.frame(Fitted = fitted(rls.modelo1), Residuals = residuals(rls.modelo1)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-100, 100)) +
   theme_bw() +
@@ -49,7 +49,7 @@ ggplot(data.frame(Fitted = fitted(modelo), Residuals = residuals(modelo)), aes(F
 ggsave("Aulas/Cap18-19/pratica-rls-resid.png", h = 7, w = 7)
 
 png("Aulas/Cap18-19/pratica-rls-resid-hist.png")
-hist(residuals(modelo), col = "gray", main = "Distribuição dos resíduos", xlab = "")
+hist(residuals(rls.modelo1), col = "gray", main = "Distribuição dos resíduos", xlab = "")
 dev.off()
 
 bsmooth + geom_vline(xintercept = 39, lty = 2, lwd =1, col = "red")
@@ -66,10 +66,10 @@ b2 <- ggplot(dados.rls.het, aes(BMI, BMD2)) +
   ggtitle("BMI x BMD")
 ggsave("Aulas/Cap18-19/pratica-rls-het.png", h = 7, w = 7)
 
-modelo2 <- lm(BMD2 ~ BMI, dados.rls.het)
-summary(modelo2)
+rls.modelo.het <- lm(BMD2 ~ BMI, dados.rls.het)
+summary(rls.modelo.het)
 
-b2.res <- ggplot(data.frame(Fitted = fitted(modelo2), Residuals = residuals(modelo2)), aes(Fitted, Residuals)) +
+b2.res <- ggplot(data.frame(Fitted = fitted(rls.modelo.het), Residuals = residuals(rls.modelo.het)), aes(Fitted, Residuals)) +
   geom_point() +
   ylim(c(-150, 150)) +
   theme_bw() +

@@ -174,11 +174,12 @@
     \end{center}
 
     \bigskip
-    \small
+    \footnotesize
     O objetivo do estudo é providenciar evidências suficientes para rejeitar esta hipótese, ``provando'' assim a eficácia do tratamento.
   \end{block}
+  \bigskip
   \begin{exampleblock}{Exemplo}
-    \footnotesize
+    \scriptsize
     {\bf Hipótese do estudo:} um certo tratamento de fisioterapia diminui o tempo de recuperação após uma artroplastia total do joelho.
 
     \bigskip
@@ -188,11 +189,15 @@
 
 \begin{frame}{\scriptsize Revisão: p-valor}
   \begin{block}{Conceito do p-valor}
+    \footnotesize
     Assumindo que não há efeito real (hipótese nula), e você observou uma aparente diferença...
 
     \bigskip
     \begin{block}{}
-      ... qual é a probabilidade de você ter observado essa diferença ao acaso?
+    \footnotesize
+    ... qual é a probabilidade de você ter observado essa diferença
+
+    {\bf ao acaso}?
     \end{block}
   \end{block}
 \end{frame}
@@ -200,7 +205,7 @@
 \begin{frame}{\scriptsize Revisão: p-valor}
 \begin{block}{Interpretação do p-valor}
   \begin{itemize}
-    \footnotesize
+    \scriptsize
   \item Um valor pequeno para o p-valor (tipicamente $p \le 0.05$)
     representa forte evidência para rejeitar a hipótese nula, então
     deve-se rejeitá-la.
@@ -215,8 +220,9 @@
   \begin{block}{}
     \small
     \begin{center}
-      Sempre apresente seu p-valor para que o leitor possa tirar suas
-      próprias conclusões.
+      Sempre apresente seu p-valor para que o leitor possa
+
+      tirar suas próprias conclusões.
     \end{center}
   \end{block}
 \end{block}
@@ -224,49 +230,94 @@
 {\hfill \scriptsize Fonte: Rumsey, D. (Statistics for Dummies, 2nd ed.)}
 \end{frame}
 
-\begin{frame}{\scriptsize Revisão: Roteiro}
+\begin{frame}{\scriptsize Roteiro}
   \begin{enumerate}
-    \footnotesize
+    \scriptsize
   \item Cada teste usa uma distribuição de probabilidades
-    \medskip
+    \bigskip
   \item A região crítica é escolhida (bilateral ou unilateral?)
-    \medskip
+    \bigskip
   \item As estatísticas sumárias são calculadas a partir da amostra
-    \medskip
-  \item Estas são usadas para calcular uma estatística de teste
-    \medskip
-  \item A estatística de teste é o critério de decisão:
-    \begin{itemize}
-      \footnotesize
-      \medskip
-    \item Ela é comparada com um valor crítico da distribuição do teste
-      \begin{center}
-        OU
-      \end{center}
-    \item {\bf Ela é usada para o cálculo do p-valor}
-    \end{itemize}
+    \bigskip
+  \item Estas são usadas para calcular uma {estatística de teste}
+    \bigskip
   \end{enumerate}
+  \begin{block}{\scriptsize Estatística de teste = critério de decisão}
+    \begin{center}
+      \footnotesize
+      Comparada com um valor crítico da distribuição do teste
+
+      \medskip
+      OU
+
+      \medskip
+      {\bf Usada para o cálculo do p-valor}
+    \end{center}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\scriptsize Estatística crítica vs estatística de teste}
+  \begin{itemize}
+    \footnotesize
+  \item A estatística crítica: quão extremo o valor observado é?
+
+    \smallskip
+    {\tiny Determinada pela formulação das hipóteses nula e alternativa}
+
+    \bigskip
+  \item A estatística de teste: qual é o valor observado a ser testado?
+
+    \smallskip
+    {\tiny Determinada pela amostra de estudo}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{\scriptsize Região crítica}
+  \begin{center}
+    \includegraphics[width=.8\textwidth]{Cap23-25/s-3-1_ex_two_tail}
+  \end{center}
+  % https://onlinecourses.science.psu.edu/statprogram/book/export/html/528
+
+  \begin{itemize}
+    \tiny
+%  \item $\alpha = 0.05$ (dividido em cada cauda da distribuição)
+  \item t crítico: $t^{*} = \pm 2.14479$ (bicaudal)
+  \item região crítica: $t < -2.14479$ ou $t > 2.14479$
+  % \item definidos pelas hipóteses nula e alternativa
+  \end{itemize}
 \end{frame}
 
 \section{Testes paramétricos para médias}
 
 \begin{frame}{\scriptsize Testes paramétricos}
   \begin{itemize}
-    \footnotesize
-  \item Existe uma infinidade de testes estatísticos (cada qual com sua hipótese nula)
+    \scriptsize
+  \item Existe uma infinidade de testes estatísticos
+
+    {\tiny (cada qual com sua hipótese nula)}
   \item São divididos em dois grandes grupos: paramétricos e não paramétricos
-  \item Os testes paramétricos assumem que a amostra vem de uma \alert{distribuição Normal}
-  \item Os testes não-paramétricos não presumem nenhuma forma para a distribuição dos dados
+    \bigskip
+  \item Os testes paramétricos assumem que a amostra
+
+    vem de uma \alert{distribuição Normal}
+  \item Os testes não-paramétricos não presumem nenhuma forma
+
+    para a distribuição dos dados
   \end{itemize}
+  \bigskip
   \begin{block}{Atenção}
-    Esta é uma escolha metodológica fundamental na análise, como veremos no futuro.
+    \footnotesize
+    Esta é uma escolha metodológica fundamental para a análise,
+
+    como veremos mais adiante.
   \end{block}
 \end{frame}
 
 \begin{frame}{\scriptsize Testes paramétricos}
   \begin{itemize}
     \footnotesize
-  \item Os testes paramétricos assumem que a amostra vem de uma \alert{distribuição Normal} \footnote{nunca é demais frisar}
+  \item Os testes paramétricos assumem que a amostra vem de uma \alert{distribuição Normal} \footnote{\tiny nunca é demais frisar}
+    \bigskip
   \item Hoje veremos o {\bf teste t} (de Student), aplicado em duas formas/contextos
   % \item Ele pode ser usado para um ou dois grupos de medições.
   \end{itemize}
@@ -296,6 +347,7 @@
     Já vimos o teste t para uma amostra.
 
     \bigskip
+    \bigskip
 
     Hoje veremos como usá-lo para duas amostras.
   \end{center}
@@ -305,11 +357,14 @@
 
 \begin{frame}{\scriptsize Premissas}
   \begin{itemize}
-    \footnotesize
-  \item Os dois grupos foram coletados independentemente (inter-grupo)
-  \item Todas as observações em cada grupo são independentes entre si (intra-grupo)
+    \scriptsize
+  \item Os dois grupos foram coletados independentemente (intergrupo)
+    \bigskip
+  \item Todas as observações em cada grupo são independentes entre si (intragrupo)
+    \bigskip
   \item Todos os dados foram amostrados de populações Normalmente distribuídas (aprox.)
-  \item O DP das duas populações são idênticos \footnote{uma violação desta premissa não é grave - buscar aproximação de Welch.}
+    \bigskip
+  \item O DP das duas populações são idênticos \footnote{\tiny uma violação desta premissa não é grave -- buscar aproximação de Welch.}
   \end{itemize}
 \end{frame}
 
@@ -321,19 +376,18 @@
 
 \begin{frame}{\scriptsize Exemplo 1}
   \begin{exampleblock}{Exemplo 23.2}
-    \footnotesize
+    \scriptsize
     Motulsky, {\em et al.} (1983) investigaram se pessoas com hipertensão tem alteração nos níveis de receptores adrenérgicos $\alpha_2$ em suas plaquetas.
 
     \bigskip
-    {\footnotesize
-      Selecionaram 18 homens hipertensos, e 17 controles da mesma faixa etária.
-      Os resultados estão descritos como média $\pm$ SEM.
-    }
+    Selecionaram 18 homens hipertensos, e 17 controles da mesma faixa etária.
+    Os resultados estão descritos como média $\pm$ SEM.
 
     \begin{exampleblock}{}
       \footnotesize
       As plaquetas dos hipertensos tiveram 257 $\pm$ 14 receptores por plaqueta.
 
+      \smallskip
       As plaquetas dos controles tiveram 263 $\pm$ 21 receptores por plaqueta.
     \end{exampleblock}
     \bigskip
@@ -343,7 +397,7 @@
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{exampleblock}{Teste t, amostras independentes}
-    \scriptsize
+    \tiny
 \begin{verbatim}
 P value and statistical significance: 
   The two-tailed P value equals 0.8116 
@@ -375,6 +429,7 @@ Intermediate values used in calculations:
     \begin{itemize}
     \footnotesize
     \item Grupo Hipertensos: contínua (mensuração)
+    \smallskip
     \item Grupo Controle: contínua (mensuração)
     \end{itemize}
   \end{block}
@@ -388,6 +443,7 @@ Intermediate values used in calculations:
   \begin{itemize}
     \footnotesize
   \item Dependente: níveis de receptores (contínua)
+    \smallskip
   \item Independente: grupo (categórica binária)
   \end{itemize}
   \vfill
@@ -431,7 +487,7 @@ Quando faz sentido parear indivíduos de dois grupos?
   \begin{itemize}
     \footnotesize
   \item Os pares amostrados aleatoriamente de uma mesma população (ou representativa)
-  \item Os participantes são pareados - o primeiro do grupo A com o primeiro do grupo B, etc.
+  \item Os participantes são pareados -- o primeiro do grupo A com o primeiro do grupo B, etc.
   \item Cada par é independente de todos os outros
   \item A distribuição das diferenças, na população, é Normalmente distribuída (aprox.)
   \end{itemize}
@@ -447,7 +503,7 @@ Quando faz sentido parear indivíduos de dois grupos?
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{exampleblock}{Teste t, amostras pareadas}
-    \scriptsize
+    \tiny
 \begin{verbatim}
 	Paired t-test
 
@@ -506,9 +562,9 @@ mean of the differences
   \hfill {\footnotesize Fonte: Khan Academy}
 \end{frame}
 
-\begin{frame}[fragile]{\scriptsize Tabulação dos dados\footnote{Organizar os dados desta forma, permite usar os filtros do Excel.}}
+\begin{frame}[fragile]{\scriptsize Tabulação dos dados\footnote{\tiny Organizar os dados desta forma, permite usar os filtros do Excel.}}
   \begin{block}{Tabela de dados brutos}
-    \scriptsize
+    \tiny
 \begin{verbatim}
       Grupo     Perda
   1: Grupo1 12.184783
@@ -550,7 +606,7 @@ mean of the differences
   \end{enumerate}
 \end{frame}
 
-\begin{frame}{\scriptsize EDA\footnote{\scriptsize \url{https://en.wikipedia.org/wiki/Exploratory_data_analysis}}}
+\begin{frame}{\scriptsize EDA\footnote{\tiny \url{https://en.wikipedia.org/wiki/Exploratory_data_analysis}}}
   \begin{block}{Análise Exploratória de Dados (EDA)}
     \footnotesize
     Precisamos decidir a melhor metodologia a partir da análise descritiva.
@@ -607,8 +663,8 @@ mean of the differences
 
 \begin{frame}[fragile, label=t-indep]{\scriptsize Saída típica de um programa}
   \begin{block}{Teste t, amostras independentes}
-    \scriptsize
-    \begin{verbatim}
+    \tiny
+\begin{verbatim}
 	Two Sample t-test
 
 data:  Perda by Grupo
@@ -626,7 +682,7 @@ mean in group Grupo1 mean in group Grupo2
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{block}{Teste t, amostras pareadas}
-    \scriptsize
+    \tiny
     \begin{verbatim}
 	Paired t-test
 
@@ -682,7 +738,7 @@ mean of the differences
 
 \begin{frame}[fragile]{\scriptsize Saída típica de um programa}
   \begin{block}{Teste t, amostras independentes, com correção de Welch}
-    \scriptsize
+    \tiny
 \begin{verbatim}
 	Welch Two Sample t-test
 
@@ -730,9 +786,9 @@ mean in group Grupo1 mean in group Grupo2
   \begin{itemize}
     \footnotesize
   \item Testes paramétricos ({\footnotesize requer dados Normalmente distribuídos})
-  \item Para dois grupos independentes assume independência inter- e intra-grupo, e DPs semelhantes
+  \item Para dois grupos independentes assume independência inter e intragrupo, e DPs semelhantes
   \item Para dois grupos pareados assume independência entre os pares
-  \item Esta decisão \alert{não deve} ser tomada após a coleta dos dados\footnote{\scriptsize As comparações dos testes que fizemos aqui foram meramente didáticas. A EDA real terminaria nas visualizações e tabelas.}.
+  \item Esta decisão \alert{não deve} ser tomada após a coleta dos dados\footnote{\tiny As comparações dos testes que fizemos aqui foram meramente didáticas. A EDA real terminaria nas visualizações e tabelas.}.
   \item Variáveis:
     \begin{itemize}
       \scriptsize
