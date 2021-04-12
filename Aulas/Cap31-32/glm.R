@@ -2,7 +2,9 @@ library(philsfmisc)
 
 # dados simulados ---------------------------------------------------------
 
-source('~/Documents/Docencia/Bioestatistica/Aulas/Cap31-32/rlm.R')
+dados.rlm <- fread("Aulas/Cap31-32/dados-rlm.csv", stringsAsFactors = TRUE)
+dados.rlm$vitD <- factor(dados.rlm$vitD, levels = c("baixa", "media", "alta"))
+dados.rlm$osteo <- relevel(dados.rlm$osteo, "Sadio")
 summary(dados.rlm)
 
 # modelos -----------------------------------------------------------------
@@ -10,18 +12,19 @@ summary(dados.rlm)
 glm.modelo4 <- glm(osteo ~ idoso, binomial, dados.rlm)
 summary(glm.modelo4)
 
-c(format.float(exp(coef(glm.modelo4)[2])), format.interval(exp(confint.default(glm.modelo4)[2, ])))
+paste0("OR: ", format.float(exp(coef(glm.modelo4)[2])), ", IC: ", format.interval(exp(confint.default(glm.modelo4)[2, ])))
 
 tc.idoso.osteo <- with(dados.rlm, table(idoso, osteo))
 fisher.test(tc.idoso.osteo)
+paste0("OR: ", format.float(fisher.test(tc.idoso.osteo)$estimate), ", IC: ", format.interval(fisher.test(tc.idoso.osteo)$conf.int))
 
 glm.modelo5 <- glm(osteo ~ BMI + idade + vitD, binomial, dados.rlm)
 summary(glm.modelo5)
 
-c(format.float(exp(coef(glm.modelo5)[2])), format.interval(exp(confint.default(glm.modelo5)[2, ])))
-c(format.float(exp(coef(glm.modelo5)[3])), format.interval(exp(confint.default(glm.modelo5)[3, ])))
-c(format.float(exp(coef(glm.modelo5)[4])), format.interval(exp(confint.default(glm.modelo5)[4, ])))
-c(format.float(exp(coef(glm.modelo5)[5])), format.interval(exp(confint.default(glm.modelo5)[5, ])))
+paste0("OR: ", format.float(exp(coef(glm.modelo5)[2])), ", IC: ", format.interval(exp(confint.default(glm.modelo5)[2, ])))
+paste0("OR: ", format.float(exp(coef(glm.modelo5)[3])), ", IC: ", format.interval(exp(confint.default(glm.modelo5)[3, ])))
+paste0("OR: ", format.float(exp(coef(glm.modelo5)[4]), 7), ", IC: ", format.interval(exp(confint.default(glm.modelo5)[4, ]), 7))
+paste0("OR: ", format.float(exp(coef(glm.modelo5)[5]), 7), ", IC: ", format.interval(exp(confint.default(glm.modelo5)[5, ]), 7))
 
 # graficos ----------------------------------------------------------------
 
